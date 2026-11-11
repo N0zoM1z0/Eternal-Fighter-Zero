@@ -531,23 +531,24 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 
 ### Active second large boss: Character04::Slot06 (NOT full Exact)
 
-`workbench/character04-state/Character04State.cpp` now reconstructs
-native default plus **91 live states**, including original 213–215
-and 216. Original 213–215 spend 1000 from private resource field
-`0x3148`, emit three distinct pose2 hit effects with authentic
-facing-dependent offsets, and restore collision state. Original
-216 uses **strict x87 `velocityX>0.0`** drag by 0.08, clamps at zero,
-and frame3 moves at 3.0 while granting meter25.
-`check_prefix.py` strictly binds **36,008 native code bytes /
-9,866 original x86 instruction positions/widths/forms**, **911
-internal + 119 original shared-return jump targets**, **803 native
-COFF call/IEEE-754 operands**, and two original switch-local pointers.
-Only original-width provisional stack (`0x158` vs native `0x2E8`),
-original-bound COFF operands and incomplete shared-return JMP
-distances differ. Next original case220 at `0x006105D8`;
-47 native live cases and full frame/table/return remain OPEN.
-**Selected prefix evidence, not whole Exact.** No cold all-unit
-replay or push.
+The authored `workbench/character04-state/Character04State.cpp`
+now covers original default plus **96 genuine native live states**,
+most recently full C++ for states220–221 two-character grab/throw
+and 230–232 aerial attack tiers. The original-bound strict checker
+caught and corrected state220's subtle reset: when animation
+advances outside pose1, it must set `remainingHitCount=0`, not
+leave it unchanged. Native 221 applies 1200/750.0 damage and places
+both fighters at four distinct pose-specific coordinates.
+`check_prefix.py` proves **38,058 continuous native code bytes /
+10,439 original x86 instruction locations/widths/forms**, **950
+native internal and 128 original shared-return branch targets**,
+**840 exact original-bound direct call/float operands** and 2
+canonical native-local dispatch pointers. Only the original-width
+provisional stack immediate (`0x170` vs native `0x2E8`), unclosed
+shared return and independently target-bound COFF fields differ.
+**Next native case240 at `0x00610DDA`**; other 42 live cases, full
+frame, switch/data and return still OPEN. Partial prefix evidence
+only, **NOT whole-function Exact**; no cold all-unit replay/push.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is
 now a complete **11-byte native Exact** virtual passive hook,

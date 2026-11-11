@@ -2,7 +2,8 @@
 """Canonical original-bound opening of Character04's 59kB Slot06 boss.
 
 Only native default plus authored cases 1-9, 13-16, 47, 50-77,
-81-87, 96-99, 150-158, 161-171, 180, 200-216 are reviewed. The probe's 47 other live-case marker branches are not source and earn no credit.
+81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221,
+230-232 are reviewed. The probe's 42 other live-case marker branches are not source and earn no credit.
 This is a selected code prefix, NOT complete function Exact.
 """
 from pathlib import Path
@@ -13,9 +14,9 @@ sys.path.insert(0,str(ROOT/'scripts'))
 from common import verify_target,target_bytes
 from probe_prefix import BASE,CODE_SIZE,TABLE_BASE,SELECTOR_BASE,run,disasm,normalized
 
-END=0x006105D8
+END=0x00610DDA
 NATIVE_CODE_SHA='200261f2d50fa04663e62d285dd09cd0eeaf601fdee46e08b2798e8cf95b02a1'
-NATIVE_PREFIX_SHA='0f299ef0aa39afaea2360524d27e29fb0db10e4bef6578e270150d57de7f23a6'
+NATIVE_PREFIX_SHA='27ab84c93456fccd601d7ff0f64f56f8d0edc08d334fbd2234e6b7dcdbb4c0e3'
 EXTERNAL_CALLS={
     '??0EffectSpawn@@QAE@XZ':0x00405490,
     '?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z':0x00413090,
@@ -27,6 +28,8 @@ EXTERNAL_CALLS={
     '?ResetFrame@Secondary@@QAEXXZ':0x0040F1E0,
     '?StartTrail@Secondary@@QAEXE@Z':0x004109D0,
     '?SetTint@Secondary@@QAEXEH@Z':0x00410B10,
+    '?SetHorizontalShake@Secondary@@QAEXHH@Z':0x00410A80,
+    '?ApplyDamage@Secondary@@QAEXHN@Z':0x004105A0,
 }
 REAL_CASES={1:0x00607A4D,2:0x00607ABE,3:0x00607B2F,
             4:0x00607BA8,5:0x00607CD8,6:0x00607E14,
@@ -55,7 +58,9 @@ REAL_CASES={1:0x00607A4D,2:0x00607ABE,3:0x00607B2F,
             204:0x0060EE5D,205:0x0060EFEE,206:0x0060F17F,
             207:0x0060F331,208:0x0060F508,209:0x0060F6F9,
             210:0x0060F8F1,211:0x0060FB12,212:0x0060FC9A,
-            213:0x0060FE22,214:0x0061004F,215:0x0061027C,216:0x006104A9}
+            213:0x0060FE22,214:0x0061004F,215:0x0061027C,216:0x006104A9,
+            220:0x006105D8,221:0x006107B4,
+            230:0x00610A47,231:0x00610B78,232:0x00610CA9}
 BRANCH=re.compile(r'^j\w+\s+(?:(?:near|short)\s+)?0x([0-9a-f]+)$')
 
 def main():
@@ -65,7 +70,7 @@ def main():
     assert len(whole)==59143 and hashlib.sha256(whole).hexdigest()==NATIVE_CODE_SHA
     assert target_bytes(image,0x00616033,4)==bytes.fromhex('8be55dc3')
     orig=whole[:END-BASE]
-    assert len(orig)==36008 and hashlib.sha256(orig).hexdigest()==NATIVE_PREFIX_SHA
+    assert len(orig)==38058 and hashlib.sha256(orig).hexdigest()==NATIVE_PREFIX_SHA
     table=target_bytes(image,TABLE_BASE,556)
     selectors=target_bytes(image,SELECTOR_BASE,325)
     assert Counter(selectors)[138]==187 and sum(x!=138 for x in selectors)==138
@@ -73,15 +78,15 @@ def main():
     for case,addr in REAL_CASES.items():
         ordinal=selectors[case-1]
         assert ordinal!=138 and struct.unpack_from('<I',table,4*ordinal)[0]==addr
-    assert [struct.unpack_from('<I',table,i*4)[0] for i in range(92)]==[
-        REAL_CASES[i] for i in list(range(1,10))+[13,14,15,16,47]+list(range(50,78))+list(range(81,88))+list(range(96,100))+list(range(150,159))+list(range(161,172))+[180]+list(range(200,217))]+[0x006105D8]
-    used,original,compiled,relocs=run(216)
+    assert [struct.unpack_from('<I',table,i*4)[0] for i in range(97)]==[
+        REAL_CASES[i] for i in list(range(1,10))+[13,14,15,16,47]+list(range(50,78))+list(range(81,88))+list(range(96,100))+list(range(150,159))+list(range(161,172))+[180]+list(range(200,217))+[220,221,230,231,232]]+[0x00610DDA]
+    used,original,compiled,relocs=run(232)
     assert used==set(REAL_CASES)
     target_ins=disasm(orig)
     candidate_ins=disasm(compiled)
-    assert len(target_ins)==9866 and len(candidate_ins)>len(target_ins)
+    assert len(target_ins)==10439 and len(candidate_ins)>len(target_ins)
     assert target_ins[2][2]=='sub esp,0x2e8'
-    assert candidate_ins[2][2]=='sub esp,0x158'
+    assert candidate_ins[2][2]=='sub esp,0x170'
     shift=0  # full six-byte opcode form restored; only stack-imm operand differs
     assert len(target_ins[2][1])-len(candidate_ins[2][1])==shift
     assert target_ins[-1][0]+len(target_ins[-1][1])==len(orig)
@@ -110,11 +115,11 @@ def main():
             ignore_candidate_bytes.update({b[0]+k:'shared return displacement'
                                            for k in range(1,5)})
             outbound+=1
-    assert (internal,outbound)==(911,119),(internal,outbound)
+    assert (internal,outbound)==(950,128),(internal,outbound)
     relocations=[r for r in relocs if r['offset']<len(orig)-shift]
     local=[r for r in relocations if 'local_target_offset' in r]
     external=[r for r in relocations if 'local_target_offset' not in r]
-    assert len(relocations)==805 and len(local)==2 and len(external)==803
+    assert len(relocations)==842 and len(local)==2 and len(external)==840
     candidate_table=len(compiled)-556-325
     expected_locals={SELECTOR_BASE:candidate_table+556,TABLE_BASE:candidate_table}
     for r in relocations:
@@ -142,9 +147,9 @@ def main():
                 raw.append((hex(BASE+a[0]+k),a[2],b[2]))
     assert not raw,raw[:15]
     print('Character04 Slot06 selected original-bound prefix PASS (NOT full Exact):')
-    print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-216 + default')
+    print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221, 230-232 + default')
     print(f'  {len(orig)} original code bytes, {len(target_ins)} x86 instructions, {internal} native internal + {outbound} shared-return branches')
     print(f'  {len(external)} original-bound calls / IEEE-754 operands + {len(local)} native-local selector/table pointers')
     print('  Every other reviewed code byte matches after original-width provisional stack allocation immediate, outbound shared return and native-bound COFF sites.')
-    print('  Still OPEN: remaining 47 real cases, original 0x2E8 stack and full original table/shared return; NOT Exact.')
+    print('  Still OPEN: remaining 42 real cases, original 0x2E8 stack and full original table/shared return; NOT Exact.')
 if __name__=='__main__':main()

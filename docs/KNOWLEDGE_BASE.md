@@ -2282,33 +2282,31 @@ runtime or external Windows linkage equivalence.
 
 ### Character04 Slot06: original-bound 59,143-byte state boss workbench
 
-Original vtable `0x00788B94` selects
-`[0x00607930,0x00616037)` of **59,143 native bytes**, followed by
-139 original jump-table DWORD entries and 325 selector bytes
-(138 live cases, 187 defaults). Authored natural C++ in
-`workbench/character04-state/Character04State.cpp` now implements
-native default plus **91 original live cases**: 1–9,13–16,47,
-50–77,81–87,96–99,150–158,161–171,180,200–216.
-New cases213–215 reproduce native resource cost1000 from private
-field0x3148, three original effect types0x19F/0x1A0/0x1A1,
-pose2 meter25, distinct facing/X and Y offsets, and unconditionally
-reset attack collision when animation advances. Case216 implements
-true x87 `velocityX>0.0` drag0.08, frame3 velocity3.0/meter25 and
-native reset. The `>=0` alternative demonstrably fails original
-machine-form comparison.
+Original vtable `0x00788B94` selects the 59,143-byte native code
+owner `[0x00607930,0x00616037)`, with adjacent 139 DWORD switch
+pointers and 325 selectors (138 live, 187 default IDs).
+`workbench/character04-state/Character04State.cpp` now authors
+**default plus 96 native live cases** (1–9,13–16,47,50–77,81–87,
+96–99,150–158,161–171,180,200–216,220–221,230–232).
+Recent original 220–221 reconstruct native multi-opponent throw,
+frame-specific XY placement, native `ApplyDamage(1200,750.0)`,
+partner pose resets, and the pose1-specific hit-count reset branch.
+Original cases230–232 implement genuine variant airborne attack
+speeds, meter and sound frame gates.
 
-Independent `workbench/character04-state/check_prefix.py` proves
-**36,008 continuous native code bytes** `[0x00607930,0x006105D8)`
-with original SHA-256
-`0f299ef0aa39afaea2360524d27e29fb0db10e4bef6578e270150d57de7f23a6`:
-**9,866 x86 instruction offsets/widths/forms, 911 internal plus
-119 shared-return native branches, 803 original COFF call/float
-operands and 2 original local dispatch pointers**. All other
-selected bytes match except the precisely provisional original-width
-stack immediate (`0x158` instead of `0x2E8`), unclosed shared-return
-displacement and independently bound COFF words. **NOT whole Exact**:
-47 original live states, native full frame/table/return still OPEN.
-Next case220 at `0x006105D8`; no all-unit cold replay.
+Dedicated `workbench/character04-state/check_prefix.py` confirms
+**38,058 consecutive native executable code bytes** from
+`[0x00607930,0x00610DDA)`, original SHA-256
+`27ab84c93456fccd601d7ff0f64f56f8d0edc08d334fbd2234e6b7dcdbb4c0e3`:
+**10,439 original x86 instruction offsets/widths/forms; 950
+internal +128 shared-return native branches; 840 independently
+original-bound COFF calls/float operands; two original local
+switch/selector addresses**. All other selected code bytes match;
+only the original-width provisional stack-immediate (`0x170` vs
+full native `0x2E8`), outbound-return displacements and target-bound
+COFF reloc fields are excepted. **Selected prefix, NOT full Exact**:
+42 real live states, full original frame, local tables and return
+remain OPEN. Next case240 at `0x00610DDA`. No cold all-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

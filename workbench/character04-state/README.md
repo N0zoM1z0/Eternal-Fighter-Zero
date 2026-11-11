@@ -1,10 +1,10 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
-**PARTIAL: not whole-function Exact.** Natural C++ now reconstructs
-native default plus **91 real live IDs**: 1–9,13–16,47,50–77,
-81–87,96–99,150–158,161–171,180,200–216. The other **47**
-authentic original live cases remain OPEN. Transient probe marker
-cases are never accepted or counted as real source.
+**PARTIAL: not whole-function Exact.** Authored natural C++ now
+covers original default and **96 genuine live cases**: 1–9,13–16,
+47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
+230–232. The other **42** native live case IDs remain OPEN.
+Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
 
@@ -20,41 +20,41 @@ cases are never accepted or counted as real source.
 
 ## Current audited continuous prefix
 
-Original `[0x00607930,0x006105D8)` covers **36,008 native
-executable bytes**, SHA-256
-`0f299ef0aa39afaea2360524d27e29fb0db10e4bef6578e270150d57de7f23a6`.
-This selected code comprises original default plus 91 real cases.
-Newest 213–215 implement three original resource-cost specials:
-frame0 zeros horizontal/vertical speed, primes a hit and subtracts
-**1000 from the child-specific resource field at `0x3148`**; frame2
-adds native meter25 and emits local effect0x19F/0x1A0/0x1A1 at
-facing-dependent offsets **28/21/5** and Y **−44/−63/−61**;
-frame6 requests sound2; their original animation advancement
-always resets attack collision. They share a real down-input
-cancel gate allowing `attackCollisionResult >= 2`.
-Case216 independently implements `ResetFrame`, initial hit count1,
-strict **`velocityX > 0.0`** deceleration by 0.08 (not `>=`, which
-changes original x87 condition bits), floor clamp at zero, and a
-frame3 velocity3.0/meter25/sound21 transition with state0
-`FaceOpponent()`/`ResetPose()` completion.
+The original code `[0x00607930,0x00610DDA)` now has **38,058
+original executable bytes**, canonical SHA-256
+`27ab84c93456fccd601d7ff0f64f56f8d0edc08d334fbd2234e6b7dcdbb4c0e3`.
+New real C++ cases220–221 reconstruct an actual two-character
+grab and four-stage throw. Case220 zeroes both speeds, transitions
+own pose221 and opponent pose108, triggers original effect0 at
+X+facing×49/Y−43, and immediately returns from successful grab.
+At frame advance it clears `remainingHitCount` whenever not on
+pose1 or the opponent is airborne; this condition was independently
+caught by native branch-target validation, not inferred from length.
+Case221 shakes screen `(50,3)`, clamps owner X, positions the
+opponent in successive native states103/117/97 at original
+Y−150/−100/−81/0, sets the opponent's facing, applies native
+`ApplyDamage(1200,750.0)` and calls opponent ResetPose/ResetFrame.
+New airborne cases230–232 use original gravity0.03 and velocityX0.5,
+grants meter5/10/10 at poses1/2/1, requests sound21/21/20, and
+returns to state13 upon landing or state9 at animation completion.
 
-Fast original-bound selected check:
+Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-The scope passes **9,866 original x86 offsets/widths and
-register-abstracted opcode forms**, **911 native internal and 119
-original shared-return branch targets**, **803 independently original-
-bound COFF direct-call/IEEE-754 references** and two native local
-selector/table addresses. Other selected machine code bytes match.
-Allowed exceptions are strictly original-width six-byte provisional
-stack allocation (`0x158` versus original `0x2E8`), outbound native
-shared-return JMP displacements and already original-bound COFF
-operand locations, not arbitrary padding.
+It verifies **10,439 original x86 instruction widths/positions and
+register-abstracted forms**, **950 original internal +128 native
+shared-return branch targets**, **840 independently original-bound
+COFF call/IEEE-754 references**, and two original local dispatch
+addresses. All other reviewed opcode bytes match exactly. Allowed
+exceptions are only the original-width provisional six-byte stack
+immediate (`0x170` vs native `0x2E8`), incomplete final shared-return
+jump distance and original-bound COFF fields. No arbitrary branch
+target differences or source padding are accepted.
 
-**Next real native case220 begins `0x006105D8`**. Remaining 47 live
-cases, full stack, 139-entry switch/325 selector data and original
-shared return remain open. This is a strict selected **prefix,
-NOT whole-function Exact**. No all-unit cold replay, no probe-credit.
+**Next live native state240 starts `0x00610DDA`**. The remaining
+42 original live case bodies, full stack, 139-entry jump table,
+325 selector bytes and shared return remain OPEN. This certificate
+is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.

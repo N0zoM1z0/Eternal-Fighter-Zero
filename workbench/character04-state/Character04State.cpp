@@ -3215,5 +3215,182 @@ void Character04::Slot06()
         return;
 
 
+    case 220: // Character04 native 0x006105D8: grab, opponent pose and impact effect
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 1 && attackCollisionResult == 3) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            outgoingPushbackVelocityX = 0.0;
+            ResetPose();
+            (*opponentSlot)->ResetFrame();
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->field0008 = 108;
+            field0008 = 221;
+            effect.type = 0;
+            effect.x = (double)((int)positionX + (int)facing * 49);
+            effect.y = (double)((int)positionY - 43);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 1 && (*opponentSlot)->positionY == 0.0)
+                remainingHitCount = 1;
+            else
+                remainingHitCount = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1)
+                    field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 221: // Character04 native 0x006107B4: four-step opponent throw and impact
+        SetHorizontalShake(50, 3);
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 1) {
+                if (facing == 1) {
+                    if (positionX + 20.0 < 40.0)
+                        positionX = 40.0;
+                }
+                if (facing == -1) {
+                    if (positionX > 620.0)
+                        positionX = 620.0;
+                }
+                (*opponentSlot)->field0008 = 103;
+                (*opponentSlot)->positionY = -150.0;
+                (*opponentSlot)->positionX = positionX + (double)((int)facing * 41);
+            }
+            if (field000a == 2) {
+                (*opponentSlot)->positionY = -100.0;
+                (*opponentSlot)->positionX = positionX + (double)((int)facing * 47);
+            }
+            if (field000a == 3) {
+                (*opponentSlot)->positionY = -81.0;
+                (*opponentSlot)->positionX = positionX - (double)((int)facing * 92);
+                (*opponentSlot)->facing = (char)-(int)facing;
+                (*opponentSlot)->field0008 = 117;
+            }
+            if (field000a == 4) {
+                (*opponentSlot)->positionY = 0.0;
+                (*opponentSlot)->positionX = positionX - (double)((int)facing * 97);
+                ApplyDamage(1200, 750.0);
+                (*opponentSlot)->field0008 = 97;
+                (*opponentSlot)->knockdownOnLanding = 1;
+                attackCollisionResult = 3;
+                (*opponentSlot)->ResetPose();
+                (*opponentSlot)->ResetFrame();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 230: // Character04 native 0x00610A47: airborne meter-action variant
+        velocityY += gravity;
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.5;
+            gravity = 0.03;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 5);
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 231: // Character04 native 0x00610B78: airborne meter-action variant
+        velocityY += gravity;
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.5;
+            gravity = 0.03;
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 10);
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 232: // Character04 native 0x00610CA9: airborne meter-action variant
+        velocityY += gravity;
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.5;
+            gravity = 0.03;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 10);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+
     }
 }
