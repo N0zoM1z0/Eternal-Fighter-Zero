@@ -2801,5 +2801,135 @@ void Character04::Slot06()
         return;
 
 
+    case 207: // EXPERIMENTAL Character04 0x0060F331: aerial cancel and pose-two charge
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 5);
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 208: // EXPERIMENTAL Character04 0x0060F508: aerial cancel, pose-four sound and post-frame charge
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        if (field000a == 4 && field000c == 0)
+            pendingCharacterSoundSlot = 2;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 1) {
+                meter = (short)(meter + 13);
+                pendingContextSoundSlot = 20;
+                remainingHitCount = 1;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 209: // EXPERIMENTAL Character04 0x0060F6F9: aerial cancel, pose-one 30-meter charge
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 30);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        if (field000a == 4 && field000c == 0)
+            pendingCharacterSoundSlot = 2;
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+
     }
 }

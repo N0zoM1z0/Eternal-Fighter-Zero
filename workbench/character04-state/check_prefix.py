@@ -2,7 +2,7 @@
 """Canonical original-bound opening of Character04's 59kB Slot06 boss.
 
 Only native default plus authored cases 1-9, 13-16, 47, 50-77,
-81-87, 96-99, 150-158, 161-171, 180, 200-206 are reviewed. The probe's 57 other live-case marker branches are not source and earn no credit.
+81-87, 96-99, 150-158, 161-171, 180, 200-209 are reviewed. The probe's 54 other live-case marker branches are not source and earn no credit.
 This is a selected code prefix, NOT complete function Exact.
 """
 from pathlib import Path
@@ -13,9 +13,9 @@ sys.path.insert(0,str(ROOT/'scripts'))
 from common import verify_target,target_bytes
 from probe_prefix import BASE,CODE_SIZE,TABLE_BASE,SELECTOR_BASE,run,disasm,normalized
 
-END=0x0060F331
+END=0x0060F8F1
 NATIVE_CODE_SHA='200261f2d50fa04663e62d285dd09cd0eeaf601fdee46e08b2798e8cf95b02a1'
-NATIVE_PREFIX_SHA='ad5046c133681bcb7af1523b647854cdb588acab526bb40b8ae34383badb023b'
+NATIVE_PREFIX_SHA='a659a1ad2dc011fc1ede375151d918b3de76a1fce1f715ce696df2982440951c'
 EXTERNAL_CALLS={
     '??0EffectSpawn@@QAE@XZ':0x00405490,
     '?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z':0x00413090,
@@ -52,7 +52,8 @@ REAL_CASES={1:0x00607A4D,2:0x00607ABE,3:0x00607B2F,
             167:0x0060DEBA,168:0x0060E0A2,169:0x0060E1E2,
             170:0x0060E322,171:0x0060E4EB,180:0x0060E73D,
             200:0x0060E88E,201:0x0060EA07,202:0x0060EB96,203:0x0060ED46,
-            204:0x0060EE5D,205:0x0060EFEE,206:0x0060F17F}
+            204:0x0060EE5D,205:0x0060EFEE,206:0x0060F17F,
+            207:0x0060F331,208:0x0060F508,209:0x0060F6F9}
 BRANCH=re.compile(r'^j\w+\s+(?:(?:near|short)\s+)?0x([0-9a-f]+)$')
 
 def main():
@@ -62,7 +63,7 @@ def main():
     assert len(whole)==59143 and hashlib.sha256(whole).hexdigest()==NATIVE_CODE_SHA
     assert target_bytes(image,0x00616033,4)==bytes.fromhex('8be55dc3')
     orig=whole[:END-BASE]
-    assert len(orig)==31233 and hashlib.sha256(orig).hexdigest()==NATIVE_PREFIX_SHA
+    assert len(orig)==32705 and hashlib.sha256(orig).hexdigest()==NATIVE_PREFIX_SHA
     table=target_bytes(image,TABLE_BASE,556)
     selectors=target_bytes(image,SELECTOR_BASE,325)
     assert Counter(selectors)[138]==187 and sum(x!=138 for x in selectors)==138
@@ -70,13 +71,13 @@ def main():
     for case,addr in REAL_CASES.items():
         ordinal=selectors[case-1]
         assert ordinal!=138 and struct.unpack_from('<I',table,4*ordinal)[0]==addr
-    assert [struct.unpack_from('<I',table,i*4)[0] for i in range(82)]==[
-        REAL_CASES[i] for i in list(range(1,10))+[13,14,15,16,47]+list(range(50,78))+list(range(81,88))+list(range(96,100))+list(range(150,159))+list(range(161,172))+[180]+list(range(200,207))]+[0x0060F331]
-    used,original,compiled,relocs=run(206)
+    assert [struct.unpack_from('<I',table,i*4)[0] for i in range(85)]==[
+        REAL_CASES[i] for i in list(range(1,10))+[13,14,15,16,47]+list(range(50,78))+list(range(81,88))+list(range(96,100))+list(range(150,159))+list(range(161,172))+[180]+list(range(200,210))]+[0x0060F8F1]
+    used,original,compiled,relocs=run(209)
     assert used==set(REAL_CASES)
     target_ins=disasm(orig)
     candidate_ins=disasm(compiled)
-    assert len(target_ins)==8587 and len(candidate_ins)>len(target_ins)
+    assert len(target_ins)==8978 and len(candidate_ins)>len(target_ins)
     assert target_ins[2][2]=='sub esp,0x2e8'
     assert candidate_ins[2][2]=='sub esp,0x128'
     shift=0  # full six-byte opcode form restored; only stack-imm operand differs
@@ -107,11 +108,11 @@ def main():
             ignore_candidate_bytes.update({b[0]+k:'shared return displacement'
                                            for k in range(1,5)})
             outbound+=1
-    assert (internal,outbound)==(786,99),(internal,outbound)
+    assert (internal,outbound)==(828,108),(internal,outbound)
     relocations=[r for r in relocs if r['offset']<len(orig)-shift]
     local=[r for r in relocations if 'local_target_offset' in r]
     external=[r for r in relocations if 'local_target_offset' not in r]
-    assert len(relocations)==762 and len(local)==2 and len(external)==760
+    assert len(relocations)==768 and len(local)==2 and len(external)==766
     candidate_table=len(compiled)-556-325
     expected_locals={SELECTOR_BASE:candidate_table+556,TABLE_BASE:candidate_table}
     for r in relocations:
@@ -139,9 +140,9 @@ def main():
                 raw.append((hex(BASE+a[0]+k),a[2],b[2]))
     assert not raw,raw[:15]
     print('Character04 Slot06 selected original-bound prefix PASS (NOT full Exact):')
-    print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-206 + default')
+    print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-209 + default')
     print(f'  {len(orig)} original code bytes, {len(target_ins)} x86 instructions, {internal} native internal + {outbound} shared-return branches')
     print(f'  {len(external)} original-bound calls / IEEE-754 operands + {len(local)} native-local selector/table pointers')
     print('  Every other reviewed code byte matches after original-width provisional stack allocation immediate, outbound shared return and native-bound COFF sites.')
-    print('  Still OPEN: remaining 57 real cases, original 0x2E8 stack and full original table/shared return; NOT Exact.')
+    print('  Still OPEN: remaining 54 real cases, original 0x2E8 stack and full original table/shared return; NOT Exact.')
 if __name__=='__main__':main()

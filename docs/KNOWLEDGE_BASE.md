@@ -2253,30 +2253,28 @@ Character04 and Kano state-Boss reconstruction.
 
 ### Character04 Slot06: original-bound 59,143-byte state boss workbench
 
-Original vtable at `0x00788B94` selects native code
-`[0x00607930,0x00616037)` of **59,143 executable bytes**, with
-139 original jump destinations and 325 selector bytes (138 live
-IDs/187 native defaults). Authored natural C++ in
-`workbench/character04-state/Character04State.cpp` now implements
-default plus **81 real live cases** (1–9,13–16,47,50–77,
-81–87,96–99,150–158,161–171,180,200–206). New 204–206
-recover three different grounded dash-cancel/meter/sound thresholds,
-correct input-facing checks, cancellation, and stand/crouch reset.
+The original `Character04::Slot06` vtable pointer `0x00788B94`
+selects 59,143 native code bytes `[0x00607930,0x00616037)` followed
+by 139 original switch pointers and 325 selectors (138 live/187
+default IDs). `workbench/character04-state/Character04State.cpp`
+now contains real C++ for **default plus 84 live cases**: 1–9,
+13–16,47,50–77,81–87,96–99,150–158,161–171,180,200–209.
+Newest 207–209 implement native aerial cancel and distinct pose
+meter/sound logic. Source order is material: 208 grants meter13
+after frame increment, 209 grants meter30 before landing test.
 
-Scoped `workbench/character04-state/check_prefix.py` proves
-**31,233 continuous native code bytes** `[0x00607930,0x0060F331)`,
-original SHA-256
-`ad5046c133681bcb7af1523b647854cdb588acab526bb40b8ae34383badb023b`:
-**8,587 original x86 instruction positions, widths, forms;
-786 internal plus 99 shared-return original jumps; 760 original-
-bound COFF direct-call/float operands and two authentic native
-local selector/table pointers**. All other original code bytes match;
-only the original-width provisional stack immediate (`0x128`
-instead of `0x2E8`), still-unclosed outbound-return displacements
-and native-bound relocation fields differ. **NOT whole Exact:** 57
-original live cases, full frame, switch/selector data and return
-remain OPEN. Next original state207 at `0x0060F331`.
-No all-unit cold replay or accepted marker source.
+Scoped `check_prefix.py` validates the **32,705-byte original
+continuous opening** `[0x00607930,0x0060F8F1)`, SHA-256
+`a659a1ad2dc011fc1ede375151d918b3de76a1fce1f715ce696df2982440951c`:
+**8,978 original x86 offsets/widths/forms, 828 internal and
+108 shared-return native branches, 766 original-bound call/float
+operands and 2 original local dispatch pointers**. All other
+selected bytes match; the only exceptions are the original-width
+provisional stack allocation (`0x128` instead of `0x2E8`), incomplete
+shared-return displacement and independently bound COFF operands.
+**NOT full Exact**: 54 unimplemented real live states, full frame,
+native tables/selectors and return remain open. Next case210 at
+`0x0060F8F1`. No cold all-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 
