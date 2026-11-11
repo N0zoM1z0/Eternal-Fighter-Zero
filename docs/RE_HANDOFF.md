@@ -7,27 +7,28 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki `Character10::Slot06` remains unfinished (62,693 bytes; NOT
-whole Exact). Focused [workbench](../workbench/nayuki-state/README.md).
-Selected prefix **49,627 original bytes / 13,615 instructions** with
-**116 live cases**: audit checks 1,270 internal and 175 outbound
-branches, 1,058 nonlocal original-bound COFF call/float references,
-and two switch operands. Candidate frame 0x308 vs original 0x2B4.
-State267 (644 bytes) now has authentic natural C++ and native-bound
-float constants, distinct from the resource-consuming state266.
+Nayuki `Character10::Slot06` is a 62,693-byte unfinished boss.
+See [focused workbench](../workbench/nayuki-state/README.md).
+Selected original-bound opening now **50,559 bytes / 13,869 native
+instructions**, default and **117 verified states**. Audit checks
+**1,297 internal branches**, **188 outbound**, **1,071 external
+COFF call/float bindings** plus two local switch-address operands.
+Candidate frame 0x308 vs original 0x2B4: NOT whole-function Exact.
 
-**Next missing state268 at 0x0045DA2B**; 14 cases268–281 absent,
-seven inherited states300–306 unreviewed. Do not treat marker bodies
-as reconstructed source. Only focused checks (no full cold replay):
+New 932-byte state268 reconstructs actual command-history and button
+selection with directional/level-dependent transitions. Next original
+**state269 starts 0x0045DDCF**. Thirteen missing states269–281,
+seven unreviewed 300–306, complete stack, local DATA and return open.
+Only targeted checks, never full all-unit cold replay:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 268 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 269 --context 12
     scripts/repo-python scripts/ci.py
 
-Keep all dirty edits and original/pinned compiler/Ghidra. Commit as
-`gpt-web: xxx`, no push without permission.
+Keep all dirty edits (one writer), canonical target, compiler/Wine,
+Ghidra and accepted source. Commit as `gpt-web: xxx` without push.
 
 ## Additional newly accepted leaf owners
 

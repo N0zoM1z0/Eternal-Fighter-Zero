@@ -4252,6 +4252,109 @@ void Character10::Slot06()
         }
         return;
 
+    case 268: // Reviewed Nayuki 0x0045DA2B: command history and button-gated super selection
+        if (field000a == 0 && field000c == 0)
+            ResetFrame();
+        if (field000a == 7) {
+            if (recognizedCommand == 1) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xA3;
+                if (facing == -1)
+                    field0008 = 0xA4;
+                return;
+            }
+            if (recognizedCommand == 0) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xA4;
+                if (facing == -1)
+                    field0008 = 0xA3;
+                return;
+            }
+            if (recognizedCommand == 10 && field3148 > 0) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 250;
+                return;
+            }
+            if (recognizedCommand == 11 && field3148 > 0) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 251;
+                return;
+            }
+            if (recognizedCommand == 20 && field3148 > 0) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 260;
+                return;
+            }
+            if (buttonPulse[0] == 1) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 275;
+                if (field3148 > 4)
+                    field0008 = 269;
+                return;
+            }
+            if (buttonPulse[1] == 1) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 274;
+                return;
+            }
+            if (buttonPulse[2] == 1) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 276;
+                if (inputY == 1)
+                    field0008 = 281;
+                return;
+            }
+            if (buttonPulse[3] == 1) {
+                if (inputX == facing) {
+                    ResetPose();
+                    ClearBufferedButtons();
+                    field0008 = 277;
+                    if (field3148 > 4)
+                        field0008 = 277;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    ClearBufferedButtons();
+                    field0008 = 278;
+                    if (field3148 > 4)
+                        field0008 = 278;
+                    return;
+                }
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 271;
+                if (inputY == 1)
+                    field0008 = 280;
+                if (field3148 == 9) {
+                    field0008 = 268;
+                    field000a = 8;
+                }
+                return;
+            }
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            ++field313c;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetFrame();
+                ResetPose();
+                return;
+            }
+        }
+        return;
+
     case 300: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
