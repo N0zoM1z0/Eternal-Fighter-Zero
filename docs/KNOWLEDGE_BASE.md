@@ -1824,6 +1824,19 @@ COFF call/float operands**. These are **independent structural
 islands only**, NOT Exact; the continuous selected strict checkpoint
 remains before original state250 at `0x0064C750` (40,336 bytes).
 
+#### Kano state257 independent 899-byte structural island
+
+Kano case257 original `[0x0064D556,0x0064D8D9)` is reconstructed in
+natural C++ and checked by
+`workbench/kano-state/check_case257_shape.py`. **241 native instruction
+positions/widths/register-abstracted forms**, **22 exact local
+branches**, **3 canonical returns**, and **10 original-bound
+COFF/IEEE-754 operands** match. Frame17 launches native effect0x191
+at X+facing*38/Y−45, frame19 rewinds three poses once, with distinct
+field316c counter and effect owner semantics. This is **NOT Exact**:
+concrete register allocation remains open after case250, and the
+strict original prefix stays 40,336 bytes. No formal ledger credit.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

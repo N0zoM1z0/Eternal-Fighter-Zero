@@ -84,6 +84,7 @@ def main():
             else:
                 assert BASE+original_target==0x006536B1,(n,a)
                 outbound+=1
+        assert (internal,outbound)==(20,3),(n,internal,outbound)
         refs=[r for r in relocs if lo<=r['offset']<hi]
         assert len(refs)==len(REF_SPEC)==len(ref_offsets)==10,(n,len(refs))
         for r,off,(kind,sym,dst) in zip(refs,ref_offsets,REF_SPEC):

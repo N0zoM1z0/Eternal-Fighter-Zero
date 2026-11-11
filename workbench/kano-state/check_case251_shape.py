@@ -77,6 +77,7 @@ def main():
             local_branches+=1
             assert original_target==int(y[1],16)
             assert original_target in original_offsets and int(y[1],16) in compiled_offsets
+    assert local_branches==7,local_branches
     cand_refs=[r for r in relocs if lo<=r['offset']<hi]
     assert len(cand_refs)==len(EXPECTED_REFS)==7
     for r,(offset,kind,symbol,dst) in zip(cand_refs,EXPECTED_REFS):

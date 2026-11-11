@@ -71,6 +71,7 @@ def main():
         else:
             outbound+=1
             assert BASE+dst==0x006536B1,(a,hex(BASE+dst))
+    assert (internal,outbound)==(20,3),(internal,outbound)
     actual=[r for r in relocs if lo<=r['offset']<hi]
     assert len(actual)==len(EXPECTED_REFS)==10
     for r,(off,typ,sym,dst) in zip(actual,EXPECTED_REFS):

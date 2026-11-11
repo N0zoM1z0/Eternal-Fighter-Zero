@@ -41,6 +41,37 @@ then switching to state13. Animation end repeats the last two frames.
 The full code path, direct call targets and canonical IEEE-754 values
 match in selected VC7.1 native comparison.
 
+### Experimental case257 — 899-byte native finisher, unaccepted island
+
+Kano original state257 `[0x0064D556,0x0064D8D9)` has **899 native
+code bytes / 241 x86 instructions**. Its full natural C++ has now
+been authored in the workbench with distinctly staged behavior:
+frame0/7 resets; native charge buildup with cap10000 and tier residue
+7500; command13 resource cancel into state251 only after frame16;
+frame3 paired local effects 0x196/0x197; frame17 launches effect
+**0x191** at integer X+facing*38 / integer Y−45, `owner=1`,
+character sound5 and `field316c` increment. It uniquely performs
+frame19→16 rewind and increments `field3138` once before animation
+completion. This is not a copy of the 254–256 frame16 effect paths.
+
+Use only the dedicated original-bound structural audit:
+
+    scripts/repo-python workbench/kano-state/check_case257_shape.py
+
+The selected VC7.1 candidate matches **all 241 original instruction
+offsets, lengths and register-abstracted instruction forms**, **22
+exact native in-state branch destinations**, **3 genuine original
+shared-return jumps**, and **10 independently original-bound COFF
+call/IEEE-754 operands** (three ResetFrame, six `__ftol2` and one
+native double500.0). Original SHA-256 for the 899-byte case:
+`7f13ea29ee1f9c768e845bb8f412b7c6919bcc00bbe9e25cf3ed278e940d4013`.
+
+**NOT Exact**: the concrete register allocation does not match the
+native case because state250's compiler phase remains unresolved.
+These island checks do not grow the 40,336-byte strict contiguous
+prefix or register any complete owner. Never count later diagnostic
+neutral marker states as original code.
+
 ### Experimental cases255–256 — two additional 858-byte native islands
 
 Kano state255 original `[0x0064CEA2,0x0064D1FC)` and state256
@@ -59,6 +90,7 @@ The launch effect types are original **0x1BC** and **0x1BD**;
 Run the separately scoped diagnostic:
 
     scripts/repo-python workbench/kano-state/check_case255_256_shape.py
+    scripts/repo-python workbench/kano-state/check_case257_shape.py
 
 The checker independently verifies both original SHA-256 extents,
 all **456 instruction offsets/widths/register-abstracted forms**,

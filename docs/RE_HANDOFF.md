@@ -92,6 +92,17 @@ spend 20/50, and effect owner/coordinate grouping are coded.
 state250. The strict Kano selected prefix remains 40,336 bytes.
 See Kano README. No cold all-unit replay.
 
+Kano case257 is now also authored as a **899-byte complete natural
+C++ state body** with dedicated original-bound *structural* diagnostic
+`workbench/kano-state/check_case257_shape.py`: all 241 x86 native
+instruction offsets/register-abstracted forms, 22 internal branches,
+3 shared-return targets and 10 original-bound native COFF call/float
+operands match. Its frame17 0x191 effect differs from other charged
+tiers, as does frame19 rewind and `field316c` counter.
+**NOT Exact**: the contiguous strict prefix remains 40,336 bytes
+because state250's concrete-register mismatch is still open. This
+work is documented and committed, not added to Exact ledgers.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++
