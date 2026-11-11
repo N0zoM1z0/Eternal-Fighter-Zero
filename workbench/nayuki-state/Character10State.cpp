@@ -2603,7 +2603,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 200: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 200: // Reviewed Nayuki state at 0x00458A23
         if ((unsigned char)dashMomentumFlag == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2647,7 +2647,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 201: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 201: // Reviewed Nayuki state at 0x00458BF6
         if ((unsigned char)dashMomentumFlag == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2677,9 +2677,15 @@ void Character10::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= timing.frameDuration) {
+        if (field000c >= timing.frameDuration ||
+            (field000c >= timing.frameDuration - 3 &&
+             field000a == 2 && field3148 > 4)) {
             field000c = 0;
             ++field000a;
+            if (field000a == 3)
+                field000a = 4;
+            if (field000a == 2 && field3148 > 3)
+                field000a = 3;
             if (field000a < 2) {
                 attackCollisionResult = 0;
             }
@@ -2691,39 +2697,62 @@ void Character10::Slot06()
         }
         return;
 
-    case 202: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if ((unsigned char)dashMomentumFlag == 0) {
-            velocityX = 0.0;
-            velocityY = 0.0;
-        }
-        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
-            velocityX -= 0.03;
-        } else {
-            velocityX = 0.0;
-            dashMomentumFlag = 0;
-        }
-        if (field000a == 3 && field000c == 0) {
+    case 202: // Original Nayuki 0x00458E35: airborne multi-hit, rebound and landing impact
+        if (field000a == 0 && field000c == 0)
+            ResetFrame();
+        if (field000a == 3 && field000c == 0)
+            remainingHitCount = 0;
+        if (field000a == 4 && field000c == 0) {
             meter = (short)(meter + 15);
             pendingContextSoundSlot = 20;
-            remainingHitCount = 1;
+            if (field3148 > 5)
+                remainingHitCount = 1;
+        }
+        if (field000a == 5 && field000c == 0)
+            remainingHitCount = 8;
+        if (field000a < 10 && field000a > 5)
+            velocityY += gravity;
+        if (velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            field000c = 0;
+            if (field000a < 10 && field000a > 5) {
+                field000a = 10;
+                SetVerticalShake(3, 0);
+                effect.type = 3;
+                effect.x = (double)((int)positionX + (int)facing * 30);
+                effect.y = (double)(int)positionY;
+                effect.group = 2;
+                effect.layer = 0;
+                contextOwner->EmitEffect(&effect);
+                pendingContextSoundSlot = 7;
+            }
+            velocityY = 0.0;
+        }
+        if (field000a >= 10) {
+            velocityX -= 0.035;
+            if (velocityX < 0.0)
+                velocityX = 0.0;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a < 2) {
+            if (field000a == 5) {
+                velocityY = -1.5;
+                velocityX = (double)field3148 * 0.05 + 1.0;
+                gravity = 0.06;
+            }
+            if (field000a == 10)
+                field000a = (unsigned short)(field000a - 4);
+            if (field000a == 11) {
+                if (field3148 > 4)
+                    remainingHitCount = 1;
+                else
+                    remainingHitCount = 0;
+            }
+            if (field000a == 4 || field000a == 5 || field000a == 7 ||
+                field000a == 9 || field000a == 11)
                 attackCollisionResult = 0;
-            }
-            if (field000a == 4) {
-                pendingCharacterSoundSlot = 0;
-                effect.type = 0x19d;
-                effect.x = (double)((int)positionX + (int)facing * 34);
-                effect.y = (double)((int)positionY - 31);
-                effect.flag0018 = (unsigned char)facing;
-                effect.layer = 1;
-                effect.group = 2;
-                EmitLocalEffect(&effect);
-            }
             if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 FaceOpponent();
@@ -2732,60 +2761,55 @@ void Character10::Slot06()
         }
         return;
 
-    case 203: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if ((unsigned char)dashMomentumFlag == 0) {
-            velocityX = 0.0;
-            velocityY = 0.0;
-        }
-        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
-            velocityX -= 0.06;
-        } else {
-            velocityX = 0.0;
-            dashMomentumFlag = 0;
-        }
+    case 203: // Nayuki original 0x0045916C: airborne cancel, delayed recoil and launch
         if (field000a == 0 && field000c == 0) {
-            remainingHitCount = 1;
+            ResetFrame();
+            remainingHitCount = 0;
         }
-        if (field000a == 10 && buttonPulse[2] == 1 && field3138 < 2) {
-            pendingCharacterSoundSlot = 0;
-            field000c = 0;
-            field000a = 6;
-            pendingCharacterSoundSlot = 0;
+        if (inputY == -1 && field000a > 0 && field3148 > 4 &&
+            positionY == 0.0 && field015c < 3 &&
+            attackCollisionResult >= 2 && field3148 > 6) {
+            field0008 = 4;
+            if (inputX == facing)
+                field0008 = 5;
+            if ((int)inputX == -(int)facing)
+                field0008 = 6;
             attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 8 && field000c == 0) {
+            meter = (short)(meter + 35);
+            pendingContextSoundSlot = 20;
+            if (field3148 > 5)
+                remainingHitCount = 1;
+        }
+        if (field000a == 10 && field000c == 0)
             remainingHitCount = 1;
-            meter = (short)(meter + 15);
-            ++field3138;
-            effect.type = 400;
-            effect.x = (double)((int)positionX + (int)facing * 90);
-            effect.y = (double)((int)positionY - 50);
-            effect.flag0018 = (unsigned char)facing;
-            effect.layer = 1;
-            effect.group = 2;
-            EmitLocalEffect(&effect);
+        if (field000a > 13)
+            velocityY += gravity;
+        if (field000a > 13 && velocityY + positionY > 0.0) {
+            ResetPose();
+            field0008 = 13;
+            return;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a < 7) {
+            if (field000a == 10)
+                pendingCharacterSoundSlot = 3;
+            if (field000a < 9)
                 attackCollisionResult = 0;
+            if (field000a == 8 || field000a == 9 || field000a == 10)
+                positionX += (double)((int)facing * 40);
+            if (field000a == 14) {
+                velocityY = -1.0;
+                velocityX = 0.7;
+                gravity = 0.033;
             }
-            if (field000a == 6) {
-                remainingHitCount = 1;
-                pendingCharacterSoundSlot = 0;
-                effect.type = 400;
-                effect.x = (double)((int)positionX + (int)facing * 90);
-                effect.y = (double)((int)positionY - 50);
-                effect.flag0018 = (unsigned char)facing;
-                effect.layer = 1;
-                effect.group = 2;
-                EmitLocalEffect(&effect);
-            }
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
-                FaceOpponent();
-                ResetPose();
-            }
+            if (field000a >= timing.animationFrameCount)
+                --field000a;
         }
         return;
 

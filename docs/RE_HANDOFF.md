@@ -7,35 +7,33 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-**Primary unfinished boss:** Nayuki Character10 Slot06, NOT an accepted Exact
-unit. Read [the focused workbench handoff](../workbench/nayuki-state/README.md)
-before editing. The latest validated prefix is **29,139 / 62,693 code bytes**,
-**8,027 original instructions**, across **77 verified states**.
-Its selected test validates **707 internal branches**, **97 external branch
-destinations**, **747 nonlocal COFF call/float references**, and **2 local
-switch-table operands**. This is selected native prefix evidence only.
+**Primary unfinished boss:** Nayuki Character10 Slot06 (62,693 bytes);
+NOT an accepted Exact unit. Read the
+[focused workbench handoff](../workbench/nayuki-state/README.md).
+The verified selected prefix is now **31,729 code bytes / 8,731
+original instructions**, spanning default and **81 live states**.
+Its original-bound checker verifies **798 internal branches**, **105
+outbound branches**, **781 nonlocal COFF call/float references**, and
+**two local switch-table operands**. The original frame is 0x2B4;
+the temporary partial candidate's frame is 0x270.
 
-**Next state is 200 at 0x00458A23**. First original-vs-candidate opcode-form
-difference: **0x00458A26** (function offset 0x71D6). The target loads
-byte [ecx+0x158], while the current unreviewed case200 follows an inherited
-timer path. The workbench contains **118 of the 137 live case labels**:
-**19 absent IDs 263–281**, plus 41 existing later case bodies that are
-still unverified. The canonical owner has a 0x2B4 stack frame; the
-focused partial probe currently has 0x264. Do not treat its neutral
-marker cases as accepted C++.
+**Next state 204 at 0x00459441:** original-vs-candidate divergence at
+**0x004595D7** (offset 0x7D87), where the original compares frame 3,
+not the inherited branch's frame 2. The workbench contains 118 / 137
+original live case labels, with 19 missing IDs 263–281 and 37 later
+unverified case bodies. No marker branches may be claimed as reconstructed.
 
-Quick focused checks, without an all-unit cold replay:
+Focused checks only; **do not run all-unit cold replay**:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 200 --context 8
-    scripts/repo-python scripts/ci.py
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 204 --context 10
 
-The ignored build/ and .analysis/ scratch can be recreated. Do **not**
-delete the canonical EFZ.exe, pinned Wine/compiler runtime, Ghidra project,
-accepted src/, tracked evidence, or dirty workbench source. Commit
-substantive work as gpt-web: xxx; do not push without authorization.
+The ignored build/ and .analysis/ scratch can be recreated. Preserve
+canonical EFZ.exe, pinned compiler/Wine tools, the Ghidra project,
+accepted src/, tracked evidence and unfinished workbench changes.
+Commit useful checkpoints as `gpt-web: xxx`, without pushing.
 
 ## Tools and checks
 
