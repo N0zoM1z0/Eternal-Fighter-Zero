@@ -268,6 +268,16 @@ and all register-abstracted instruction offsets/widths/forms. This
 is NOT concrete-register or complete Exact; native state250 still
 blocks strict Boss contiguous prefix beyond 40,336 bytes.
 
+Kano state304 has also been fully authored in natural C++ with
+**1,199 original native code bytes / 316 instruction positions**.
+It has a distinct four-wave frame13 local impact chain, a
+2,000-meter frame9 freeze/effect and original vertical screen shake.
+`check_case304_shape.py` verifies **18 original internal and 2
+shared-return jumps**, **20 original-bound native call/float
+operands**, and every native register-abstracted instruction form.
+Structural island only, **NOT concrete-byte or full owner Exact**;
+the strict Boss prefix remains 40,336 bytes until case250 closure.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

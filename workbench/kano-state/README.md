@@ -67,6 +67,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case300_shape.py
     scripts/repo-python workbench/kano-state/check_case301_shape.py
     scripts/repo-python workbench/kano-state/check_case303_shape.py
+    scripts/repo-python workbench/kano-state/check_case304_shape.py
     scripts/repo-python workbench/kano-state/check_case302_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
@@ -113,6 +114,34 @@ SetHorizontalShake, SetTint, ResetFrame, Context::EmitEffect and
 `__ftol2`. It is **native structural evidence only, NOT complete
 Exact**: original case250 register-allocation phase remains open;
 strict contiguous Boss prefix is still **40,336 bytes**.
+
+### Experimental case304 — 1,199-byte four-wave super with vertical shake
+
+Original Kano `Slot06` state304 `[0x00651084,0x00651533)` contains
+**1,199 native bytes / 316 original x86 instructions**. Its
+natural C++ reconstructs frame9 freeze/tint and meter−2000,
+context effect0x45/palette5 at integer X−facing×14 and Y−64;
+frame3 paired0x196/0x197 effects, charge+150 during frames3–6,
+full-charge threshold10000 resetting to0 and frame8; and **four
+local impact emissions at frame13** with original coordinates
+(X+facing×60,Y), (X+facing×45,Y+10),
+(X+facing×75,Y−10), (X+facing×60,Y), the last changing
+local effect type from0x1AD to0x19D. The original finishes by
+`SetVerticalShake(4,0)` and preserves state0 exit ordering.
+
+Run the original-bound selected island diagnostic:
+
+    scripts/repo-python workbench/kano-state/check_case304_shape.py
+
+It pins canonical SHA-256
+`c58104d30773aac9add5528bcd5d205ebb324c539f6aebbaac345946d0a08c2b`,
+**316 matching x86 instruction offsets/widths and register-
+abstracted forms**, **18 native internal + 2 shared-return branches**,
+and **20 independently original-bound COFF calls/IEEE-754 operands**,
+including the authentic SetVerticalShake callee0x00410A10.
+Concrete-register bytes remain different downstream of original
+case250: **structural native island only, NOT full-function Exact**.
+Strict original-bound prefix remains 40,336 bytes.
 
 ### Experimental case303 — 884-byte second-stage super launcher
 

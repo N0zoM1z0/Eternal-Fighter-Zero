@@ -2122,6 +2122,18 @@ return original branches**, and **13 direct-call COFF operands**.
 This remains a structural island; concrete-register parity and
 whole Boss Exact are still open at state250.
 
+#### Kano state304 1,199-byte original-bound four-wave super island
+
+New natural C++ state304 `[0x00651084,0x00651533)` rebuilds the
+original **1,199-byte / 316-instruction** super with frame9 freeze,
+2,000-meter cost, frame13 four local effect launches and
+SetVerticalShake(4,0). Focused `check_case304_shape.py` original-
+binds **316 register-abstracted native x86 instruction positions/
+widths/forms**, **18 internal and 2 shared-return branches**,
+**20 COFF call/float references** and canonical native SHA.
+It remains an independent structural island, NOT whole-function
+Exact while state250 has unresolved concrete VC7.1 registers.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five
