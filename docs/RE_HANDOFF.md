@@ -33,23 +33,23 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano original `Character20::Slot06` comprises **68,853 native code
-bytes**, actively reconstructed in `workbench/kano-state/`.
-Strict selected native prefix now reaches **31,809 bytes / 8,718
-instructions**, original default plus **81 reviewed live states**,
-including newly recovered state200–205. The verifier binds **803
-original internal jumps**, **102 outbound destinations**, **764
-native-bound nonlocal COFF call/float references** and both switch
-pointers. Native Kano dash cancels differ from sibling timings and
-have no speculative meter grants/effects. **Next state206 starts
-`0x0064A601`.**
+The 68,853-byte original Kano state boss is authored at
+`workbench/kano-state/Character20State.cpp`. Continuous strict
+original-bound code now covers **33,051 bytes / 9,054 x86
+instructions**, with default and **84 verified live states** through208.
+The selected checker binds **841 internal and 109 outbound native
+branches**, **774 original COFF call/IEEE-754 references**, and the
+two original local switch operands. Newly completed states206–208
+implement genuinely distinct grounded and aerial attack/hit windows,
+including original sound, hit, collision, cancel and landing gates.
+**Next native state209 at `0x0064AADB`.**
 
-Incomplete compiler frame0x11C versus original0x4A4 has matching
-six-byte opcode form/width, no position adjustment. **55 remaining
-original cases**, stack, local tables, remaining relocations and
-shared return remain unverified. NOT full Exact; diagnostic marker
-cases are not reconstructed source. Only targeted local checks,
-no full cold replay or remote push.
+Incomplete candidate frame0x11C vs real0x4A4 has same six-byte
+instruction width, with no shift. **52 remaining live states**,
+complete frame, adjacent switch DATA, remaining relocations and common
+return are still OPEN. This is NOT whole-function Exact and generated
+neutral markers have zero source/acceptance credit. Only selected
+checks, no all-unit cold replay or remote push.
 
 ## Additional newly accepted leaf owners
 
