@@ -33,25 +33,25 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano `Character20::Slot06` is an original 68,853-byte native boss
-under active source reconstruction at `workbench/kano-state/`.
-The selected original-bound opening now matches **16,450 bytes /
-4,521 original x86 instructions**, default and **42 real reviewed
-states** (1–9,13–16,47,50–77). The checker verifies **425 internal
-original branches**, **49 outbound targets**, **427 original-bound
-nonlocal COFF call/float references**, and both original native
-switch-address operands. State75–77 add complete 509/509/485-byte
-forward recoil reactions including meter, resource and stage-edge
-pushback. The source is real C++ rather than diagnostic markers.
+Original Kano `Character20::Slot06` at vtable `0x00788C90` is a
+68,853-byte state machine, actively authored in
+`workbench/kano-state/Character20State.cpp`. The selected original
+opening now matches **19,771 native bytes / 5,428 x86 instructions**,
+with default plus **49 reviewed live cases** (1–9, 13–16, 47,
+50–77, 81–87). Its checker independently verifies **501 internal
+branches**, **58 outbound targets**, **488 original-bound COFF call/
+IEEE-754 refs** and two local native switch addresses.
 
-Candidate stack0x9C and native stack0x4A4 both use six-byte prologue
-instructions, so the selected comparison requires *identical original
-instruction offsets*, with no provisional length compensation.
-The native full stack size, **94 unimplemented cases**, local switch
-DATA, remaining relocations and common return remain OPEN. This is
-**NOT complete Exact**. Next original case81 begins `0x00646A02`.
-See `workbench/kano-state/README.md`. Only selected checks, no all-unit
-cold replay, no push.
+Native-reviewed cases81–87 reconstruct an aerial lift, two ground
+impacts, direct knockback, one-shot recovery and an effect state,
+not neutral marker branches. Candidate compiler frame0xC4 differs
+from original 0x4A4, but both use the same six-byte allocation
+instruction, so no position shift is normalized. This is **NOT
+whole Exact**: **87 real native cases remain unimplemented**, as do
+complete original stack, adjacent selector DATA, remaining relocs
+and common return. **Next native case96 at 0x006476FB**. See
+`workbench/kano-state/README.md`; run only selected checks, never
+all-unit cold replay or push without permission.
 
 ## Additional newly accepted leaf owners
 

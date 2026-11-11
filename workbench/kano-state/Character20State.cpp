@@ -1413,5 +1413,312 @@ void Character20::Slot06()
         }
         return;
 
+    case 81: // Native-reviewed Kano: special hit reaction 0x005EC5D2: airborne recoil and local hit effect
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            effect.type = 499;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            EmitLocalEffect(&effect);
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.032;
+        }
+        velocityX += 0.02;
+        velocityY += gravity;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                --field000a;
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a == 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 82: // Native-reviewed Kano: special hit reaction 0x005EC7B7: repeated airborne lift and knockback
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            pendingContextSoundSlot = 30;
+            velocityY = -0.45;
+            velocityX = -0.1;
+            ++field3138;
+            meter = (short)(meter + 30);
+        }
+        if (field000a == 4 && field000c == 0) {
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.032;
+        }
+        if (velocityY > 0.0 && field000a == 4) {
+            field000a = 5;
+            field000c = 0;
+        }
+        if (field000a > 3) {
+            velocityY += gravity;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 4 && field3138 < 8) {
+                field000a = 0;
+                ++field3138;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 4) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 83: // Native-reviewed Kano: special hit reaction 0x005EC9D9: airborne ground-impact recovery
+        if (field000a == 0 && field000c == 0) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            pendingContextSoundSlot = 33;
+            velocityY = -1.5;
+            velocityX = -0.8;
+            meter = (short)(meter + 30);
+        }
+        velocityY += 0.04;
+        if (field000a == 0 && velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            velocityY = 0.0;
+            field000c = 0;
+            field000a = 1;
+            return;
+        }
+        if (field000a == 1) {
+            velocityX += 0.01;
+        }
+        if (field000a == 2 && field000c == 0) {
+            velocityX = -2.0;
+        }
+        if (field000a > 1) {
+            velocityX += 0.06;
+        }
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        return;
+
+    case 84: // Native-reviewed Kano: special hit reaction 0x005ECC1E: independent ground-impact recovery
+        if (field000a == 0 && field000c == 0) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            pendingContextSoundSlot = 33;
+            velocityY = -1.5;
+            velocityX = -0.8;
+            meter = (short)(meter + 30);
+        }
+        velocityY += 0.04;
+        if (field000a == 0 && velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            velocityY = 0.0;
+            field000c = 0;
+            field000a = 1;
+            return;
+        }
+        if (field000a == 1) {
+            velocityX += 0.01;
+        }
+        if (field000a == 2 && field000c == 0) {
+            velocityX = -2.0;
+        }
+        if (field000a > 1) {
+            velocityX += 0.06;
+        }
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        return;
+
+    case 85: // Native-reviewed Kano: special hit reaction 0x005ECE63: direct airborne knockback and landing
+        if (field000a == 0 && field000c == 0) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            pendingContextSoundSlot = 33;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            meter = (short)(meter + 30);
+        }
+        velocityY += 0.04;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 86: // Native-reviewed Kano: special hit reaction 0x005ED036: one-shot lift and landing recoil
+        if (field000a == 0 && field000c == 0) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            // Unlike state 85, this launch is suppressed after its first use.
+            if (field3138 == 0) {
+                if (field0120 != 0) {
+                    field0118 -= 30.0;
+                }
+                pendingContextSoundSlot = 33;
+                velocityX = knockbackVelocityX;
+                velocityY = knockbackVelocityY;
+                meter = (short)(meter + 30);
+                ++field3138;
+            }
+        }
+        // 0x00787DA8 holds 0.06, not the 0.04 used by state 85.
+        velocityY += 0.06;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 87: // Native-reviewed Kano: special hit reaction 0x005ED218: fixed-position effect and idle return
+        if (field000a == 0 && field000c == 0) {
+            effect.type = 0x1ef;
+            effect.x = 60.0;
+            effect.y = 40.0;
+            effect.payload = 1;
+            effect.flag0018 = 1;
+            effect.group = 0;
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

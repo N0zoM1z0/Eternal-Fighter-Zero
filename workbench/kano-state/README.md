@@ -7,29 +7,31 @@
 `[0x006538D9,0x00653A15)` (316 bytes). Original selector holds
 **136 live cases and 180 default IDs**.
 
-Current natural C++ `Character20State.cpp` now has original default
-and **42 reviewed native cases**: 1–9, 13–16, 47, 50–77. The
-continuous selected original code prefix `[0x006429C0,0x00646A02)`
-is **16,450 native bytes / 4,521 x86 instructions**, SHA-256
-`69ebb02baaf70889bd2c24a2414270e61e237f8bacd590f06f24424f6347e059`.
-The next native case81 starts at **`0x00646A02`**.
+Current authored C++ `Character20State.cpp` now contains default
+and **49 real native-reviewed cases**: 1–9, 13–16, 47, 50–77 and
+81–87. The continuous original code prefix
+`[0x006429C0,0x006476FB)` is **19,771 bytes / 5,428 x86 instructions**,
+SHA-256
+`064c3c64368d4a5cbedc833b3feaafb2589832bcf6e4c8676f06b85b68b64156`.
+Native **next case96** starts at `0x006476FB`.
 
-Original stack reserves 0x4A4 bytes; incomplete source currently
-reserves only 0x9C bytes, but **both stack instructions have equal
-six-byte length**, so no position shift or normalization is used.
-Selected scoped verifier checks **4,521 original instruction forms,
-offsets and widths**, **425 internal and 49 outbound original jump
-targets**, **427 native-bound nonlocal COFF call/IEEE-754 operands**,
-and both original switch-table pointers. **94 other cases are still
-unimplemented**; neutral marker cases in the probe have no proof
-credit, and there is no full-Exact claim.
+The incomplete candidate has compiler stack allocation 0xC4,
+while the canonical full owner uses 0x4A4. Both use identical
+six-byte prologue instructions; no location shift is normalized.
+The selected checker validates **5,428 native instruction offsets,
+lengths and opcode forms**, **501 internal branches**, **58 outbound
+original targets**, **488 original-bound COFF call/IEEE-754 references**,
+and both local switch address operands. This is only a scoped prefix,
+NOT complete function Exact. Neutral placeholders for other 87 states
+receive no source/acceptance credit.
 
-Newly restored Kano states75–77 are 509/509/485-byte forward recoil
-states with resource loss0.6 per tick and an additional 30 when
-flagged, meter+30, initial velocityX=2.2, gravity cleared, horizontal
-deceleration0.06 and stage-edge pushback dependent on opponent height.
-Completion chooses state7/3 for 75–76 or state3 for 77. They match
-original instruction order, branch targets and IEEE-754 constants.
+New original states81–87 include 485-byte airborne hit recovery,
+546-byte repeated aerial lift, two independent 581-byte ground-impact
+reactions, 467/482-byte direct knockback and one-shot lift recovery,
+and an authentic 179-byte fixed-position effect state87. These
+reconstruct conditional resource costs, field3144 one-shot special
+hit effect0x1F0, input/ground collision transitions, frame repeat
+conditions, x87 speed/friction constants, and native call order.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -46,11 +48,11 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
-    scripts/repo-python workbench/kano-state/probe_prefix.py --through 81 --context 12
+    scripts/repo-python workbench/kano-state/probe_prefix.py --through 96 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case81 `0x00646A02`**. The original
-0x4A4 frame, 94 remaining native bodies, local switch DATA, return
+Next work begins at **Kano case96 `0x006476FB`**. The original
+0x4A4 frame, 87 remaining native bodies, local switch DATA, return
 and complete relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.
