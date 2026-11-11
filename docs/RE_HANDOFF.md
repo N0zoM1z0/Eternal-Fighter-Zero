@@ -222,6 +222,16 @@ register phase means the strict contiguous Kano prefix remains
 **40,336 bytes**. Real C++ and verification are both saved; no
 all-unit cold replay was run.
 
+Kano case300 is now an independently reconstructed **1,168-byte
+native super sequence**, with original SHA-256 and
+`check_case300_shape.py` auditing **305 original x86 instruction
+positions/widths/forms**, **27 internal and 2 shared-return branches**
+and **13 original-bound COFF call/float operands**. It includes
+original meter−1000, stage impact/tint, charge10000, paired local
+effects, and animation loop. **NOT full Exact**: original case250
+register-phase difference still blocks the 40,336-byte continuous
+prefix. This is real authored C++, not neutral marker filler.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

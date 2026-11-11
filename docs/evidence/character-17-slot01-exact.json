@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "authority": "Original NayukiB Character17::Slot01 complete 1080-byte native owner [0x00741680,0x00741AB8), independently identified from EFZ.exe original vtable slot 0x00788FBC and eight original direct-call destinations",
-  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles natural C++ src/Character17Render.cpp. Strict selected-only oracle binds six original MakeSurfaceRect COFF REL32 targets at 0x0040C590 and two Video::DrawSurface targets at 0x00409A90, then matches all 1080 native bytes of the complete owner without skipped regions or unmatched masks. The original compiler register transfer requires the field3150*frame.width operand ordering in the 3000-denominator rectangle scaling; the reverse multiplication yields 1068 instead of 1080 bytes. No whole-game linkage/runtime equivalence claim and no cold all-unit replay.",
+  "authority": "Original NayukiB Character17::Slot01 complete 1080-byte native owner [0x00741680,0x00741AB8), independently identified from EFZ.exe original vtable slot 0x00788FBC and all eight original direct-call destinations",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles natural C++ src/Character17Render.cpp. Strict selected-only native oracle binds six original MakeSurfaceRect COFF REL32 targets at 0x0040C590 and two Video::DrawSurface targets at 0x00409A90, then matches all 1080 original code bytes without gaps. The critical field3150*frame.width/3000 operand order reproduces original compiler register allocation; reversed multiplication produced a 1068-byte near miss. All 8 calls, source body and original vtable independently verified. No whole-game linkage/runtime equivalence or all-unit cold replay.",
   "reports": [
     {
       "result": "exact",

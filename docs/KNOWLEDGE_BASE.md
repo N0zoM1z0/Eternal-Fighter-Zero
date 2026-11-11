@@ -2058,6 +2058,20 @@ and the pinned native SHA. This is a structural island, **NOT full
 Exact**; the strict Kano code prefix remains 40,336 bytes pending
 case250 compiler-register closure.
 
+#### Kano case300: super-sequence structural native island
+
+State300 original `[0x00650140,0x006505D0)` is **1,168 machine-code
+bytes / 305 original x86 instructions**. The authored natural C++
+restores hitstop, resource spend1000, stage impact/tint, a frame3
+paired local effect, charge10000 fast-forward and multi-path frame16
+impact with frame18 rewinds. The selected
+`workbench/kano-state/check_case300_shape.py` binds all **305 original
+instruction offsets/widths/forms**, **27 internal + 2 shared-return
+jumps** and **13 original COFF call/IEEE-754 operands**. Concrete
+register allocation still differs in the original state250 phase,
+so this is native-bound structural evidence, **NOT full Exact**;
+strict continuous Kano prefix remains **40,336 bytes**.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

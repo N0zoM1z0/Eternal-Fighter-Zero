@@ -64,7 +64,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case265_267_shape.py
     scripts/repo-python workbench/kano-state/check_case268_269_shape.py
     scripts/repo-python workbench/kano-state/check_case270_shape.py
-    scripts/repo-python workbench/kano-state/check_case270_shape.py
+    scripts/repo-python workbench/kano-state/check_case300_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
 
@@ -110,6 +110,37 @@ IEEE-754 operands**, including five native `double` constants and
 byte-wise equality for concrete registers. **NOT full Exact**:
 the original case250 phase still blocks advancing the strict
 40,336-byte contiguous prefix.
+
+### Experimental state300 — 1,168-byte native super sequence
+
+Original Kano case300 `[0x00650140,0x006505D0)` comprises **1,168
+native code bytes / 305 original x86 instructions**. Authored
+natural C++ in `Character20State.cpp` reconstructs its full
+frame0 and frame7 reset behavior, frame13 hitstop120 and meter−1000,
+`SetTint(0xB0,3)` call, stage effect0x44/palette0x13 at
+X=int(positionX), Y=int(positionY)−100, group2/layer1/owner1,
+then hit count5 and ResetFrame. It accumulates field3150 by100 on
+frames3–6, fast-forwards frame8 at charge10000, and emits original
+paired 0x196/0x197 local effects on frame3. Frame16 sets original
+sound29; frame16 after animation step emits 0x1C7 with multiple
+facing-dependent X-branch alternatives, and frame18 can rewind one
+pose until field3138 reaches3. Native reset ends at state0.
+
+Focused canonical test:
+
+    scripts/repo-python workbench/kano-state/check_case300_shape.py
+
+The independent checker freezes original SHA-256
+`9773fc66dde7c1b53a78b118c26031eb45a4d7e4f88691fed2774fa61b07367e`
+and verifies **all 305 native instruction offsets/widths and
+register-abstracted forms**, **27 original internal jump targets**,
+**2 shared-return branches** and **13 independently original-bound
+COFF direct-call / IEEE-754 operands** (three `ResetFrame`, `SetTint`,
+`Context::EmitEffect`, seven `__ftol2`, and native zero double).
+This is a *native-bound structural island*, NOT full Exact: the
+upstream state250 register-phase divergence still prevents advancing
+the strictly verified 40,336-byte continuous prefix. No ledger credit
+for complete owner or artificial code padding.
 
 ### Experimental state270 — 991-byte multiwave airborne finisher
 
@@ -432,7 +463,6 @@ The launch effect types are original **0x1BC** and **0x1BD**;
 Run the separately scoped diagnostic:
 
     scripts/repo-python workbench/kano-state/check_case255_256_shape.py
-    scripts/repo-python workbench/kano-state/check_case257_shape.py
     scripts/repo-python workbench/kano-state/check_case257_shape.py
 
 The checker independently verifies both original SHA-256 extents,
