@@ -33,23 +33,27 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano original Slot06 is a **68,853-byte native boss**, actively
-restored in `workbench/kano-state/Character20State.cpp`. Strict
-original-bound selected prefix **36,153 bytes / 9,919 x86
-instructions**, original default plus **92 reviewed live cases**.
-The selected checker independently audits **936 internal and 123
-outbound original branches**, **828 original-bound nonlocal COFF
-call/float operands**, plus both switch-address references.
+Kano's 68,853-byte native state machine is under active natural C++
+reconstruction at `workbench/kano-state/Character20State.cpp`.
+Selected original-bound prefix is now **36,996 code bytes /
+10,146 native x86 instructions** with default and **94 reviewed live
+states**. Strict checker verifies **949 internal and 125 outbound
+original branches**, **847 nonlocal original-bound COFF call/float
+operands** and two original switch table pointers.
 
-Crucial physical case correction: **215 starts 0x0064B461** and
-**217 starts 0x0064B5D6**; 216,218,219 are default. Both are now
-native-authored and verified, including accepted polar helper at
-`0x00434010` with (60°,1.5) in 215. **Next original case220 starts
-0x0064B6F9**. Current candidate stack0x120 vs original0x4A4 is a
-same-width opcode, with no position normalization. **44 remaining
-live case bodies**, full stack, local switch DATA, relocations and
-shared return are open. NOT full Exact; generated marker cases have
-zero credit. Never run all-unit cold replay or push.
+Case220 (476 bytes) is a real grounded opponent grab with both-fighter
+state changes and original effect at facing*35,Y=-52. Case221
+(367 bytes) is the follow-through, with 30 opponent hitstop, stage
+impact effect and reviewed `Secondary::ApplyDamage(1000,750.0)`
+at 0x004105A0, then opponent state63 with X/Y knockback (-2,-1.5).
+**Next native case230 starts at `0x0064BA44`.**
+
+Partial compiler stack0x130 vs canonical0x4A4 shares six-byte
+instruction width, no offset normalization. **42 remaining original
+live cases**, full stack, local switch DATA, remaining relocations
+and return are OPEN. This is **NOT full Exact**. The diagnostic probe
+creates neutral markers but they never receive reconstruction credit.
+Only targeted checks; no all-unit cold replay or remote push.
 
 ## Additional newly accepted leaf owners
 

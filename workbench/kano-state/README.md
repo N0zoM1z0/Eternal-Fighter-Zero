@@ -7,33 +7,32 @@
 `[0x006538D9,0x00653A15)` (316 bytes). Original selector holds
 **136 live cases and 180 default IDs**.
 
-The Kano `Character20State.cpp` partial natural C++ now has original
-default plus **92 native-reviewed live cases** through 217.
-Selected original code `[0x006429C0,0x0064B6F9)` is **36,153 bytes /
-9,919 x86 instructions**, original-bound SHA-256
-`58c95ff05ba4c1ab3f958141eed76816621bdc1dfb043a12725a69e8f40d70f6`.
-Next **physical original case220** starts at `0x0064B6F9`.
-Original live case215 at `0x0064B461` and217 at `0x0064B5D6`
-were recovered; 216/218/219 are default IDs.
+The natural C++ workbench `Character20State.cpp` now has default and
+**94 reviewed original live cases** through case221. The strict
+original-bound selected code `[0x006429C0,0x0064BA44)` spans
+**36,996 bytes / 10,146 x86 instructions**, prefix SHA-256
+`1f758ffc2edf8a43b932af3ec38b959060d45503cee4152be367ba132a0e7349`.
+The next native case230 starts at **`0x0064BA44`**.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` checker verifies **9,919
-original native instruction offsets/widths/forms**, **936 internal
-and 123 outbound original branch targets**, **828 original-bound
-nonlocal COFF calls/IEEE-754 operands** and both native original
-switch pointers. Candidate frame0x120 differs from canonical0x4A4
-but has a same-width six-byte allocation instruction; no position
-normalization. Strict selected-prefix proof ONLY, NOT full Exact.
-The **44 remaining live bodies**, canonical stack, original local
-switch DATA, other relocations and common return are unresolved.
-Unaccepted probe marker cases do not count as original source.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` checker verifies all **10,146
+instruction positions, widths and normalized forms**, **949 original
+internal and 125 outbound jump targets**, **847 independently
+original-bound COFF external calls/IEEE-754 references** and both
+native switch pointers. Candidate stack0x130 vs original0x4A4 uses
+the same six-byte prologue allocation width and no position shift.
+This is selected prefix, **NOT full Exact**: **42 live native cases**,
+full frame, adjacent switch tables and common return remain OPEN.
+Generated neutral marker cases have no acceptance credit.
 
-State215 (373 bytes) uses `SecondaryEffectSlot::SetVelocityPolar`
-with authentic **(60°,1.5)** and repeats frame5->3, preserving the
-original ground early landing and virtual pose/face return. State217
-(291 bytes) handles actual dashMomentumFlag-dependent horizontal
-friction0.03, frame4 sound20/one hit, collision clear below frame6,
-and state0/FaceOpponent/ResetPose completion. These were compared
-at every original opcode/branch/reference position, not inherited.
+State220 (476 bytes) restores frame2 opponent grab/ground check, both
+fighter pose/state changes, source effect at X+facing*35 and fixed
+Y=-52, and recovery through state7/3. State221 (367 bytes) is the
+original follow-through: at frame2 sets opponent **hitstopFrames=30**
+(offset0x14A, *not* guardInputFrames), emits palette2 stage effect at
+integer X+facing*74,Y-54, invokes accepted
+`Secondary::ApplyDamage(1000,750.0)` (canonical 0x004105A0), then
+sets opponent state63 and knockback X=-2,Y=-1.5. Original branch,
+call, effect-field write and exit order were compared instruction-wise.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -50,11 +49,11 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
-    scripts/repo-python workbench/kano-state/probe_prefix.py --through 220 --context 12
+    scripts/repo-python workbench/kano-state/probe_prefix.py --through 230 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case220 `0x0064B6F9`**. Original
-0x4A4 frame, 44 unverified native cases, local switch DATA,
+Next work begins at **Kano case230 `0x0064BA44`**. Original
+0x4A4 frame, 42 unverified native cases, local switch DATA,
 shared return and complete relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.

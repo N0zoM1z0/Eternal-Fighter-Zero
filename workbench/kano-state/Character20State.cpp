@@ -3222,5 +3222,76 @@ void Character20::Slot06()
         }
         return;
 
+    case 220: // Native-reviewed Kano candidate from original attack grab semantics 0x005F1440: opponent grab and impact effect
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        if (field000a == 2 && field000c == 0 &&
+            (*opponentSlot)->positionY == 0.0) {
+            remainingHitCount = 1;
+        } else {
+            remainingHitCount = 0;
+        }
+        if (field000a == 2 && attackCollisionResult == 3) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            outgoingPushbackVelocityX = 0.0;
+            ResetPose();
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->ResetFrame();
+            field0008 = 221;
+            (*opponentSlot)->field0008 = 107;
+            effect.type = 0;
+            effect.y = -52.0;
+            effect.x = (double)(int)(positionX + (double)((int)facing * 35));
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            // Original proceeds to the frame counter even after a grab.
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1)
+                    field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 221: // Native-reviewed Kano 0x0064B8D5: post-grab damage, opponent launch and recovery
+        if (field000a == 2 && field000c == 0) {
+            (*opponentSlot)->hitstopFrames = 30;
+            effect.type = 0;
+            effect.x = (double)((int)positionX + (int)facing * 74);
+            effect.y = (double)((int)positionY - 54);
+            effect.group = 2;
+            effect.palette = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            ApplyDamage(1000,750.0);
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->field0008 = 63;
+            (*opponentSlot)->knockbackVelocityX = -2.0;
+            (*opponentSlot)->knockbackVelocityY = -1.5;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        return;
+
     }
 }
