@@ -33,23 +33,25 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Original Kano `Character20::Slot06` has **68,853 bytes** of native
-code; its active workbench is `workbench/kano-state/Character20State.cpp`.
-The selected original-bound opening now matches **14,947 bytes /
-4,125 x86 instructions**, default plus **39 live cases** (1–9,
-13–16, 47, 50–74). The independent selected checker verifies **387
-original internal branches**, **46 outbound targets**, **376
-original-bound COFF call/float operands**, and the two native
-switch table pointers. Kano's wall, airborne and ground recoil
-cases62–74 are now substantive authored C++, not marker placeholders.
+Kano `Character20::Slot06` is an original 68,853-byte native boss
+under active source reconstruction at `workbench/kano-state/`.
+The selected original-bound opening now matches **16,450 bytes /
+4,521 original x86 instructions**, default and **42 real reviewed
+states** (1–9,13–16,47,50–77). The checker verifies **425 internal
+original branches**, **49 outbound targets**, **427 original-bound
+nonlocal COFF call/float references**, and both original native
+switch-address operands. State75–77 add complete 509/509/485-byte
+forward recoil reactions including meter, resource and stage-edge
+pushback. The source is real C++ rather than diagnostic markers.
 
-The current compiler candidate reserves `0x90` local stack while the
-original reserves `0x4A4`; both use six-byte instructions, so no
-position normalization is used for this checkpoint. **97 remaining
-case bodies**, original full stack, adjacent jump table, remaining
-relocations and common return are OPEN. This is **NOT full Exact**.
-Next case75 at **0x00646423**; see `workbench/kano-state/README.md`.
-Use focused selected checks only, not cold replay of all units.
+Candidate stack0x9C and native stack0x4A4 both use six-byte prologue
+instructions, so the selected comparison requires *identical original
+instruction offsets*, with no provisional length compensation.
+The native full stack size, **94 unimplemented cases**, local switch
+DATA, remaining relocations and common return remain OPEN. This is
+**NOT complete Exact**. Next original case81 begins `0x00646A02`.
+See `workbench/kano-state/README.md`. Only selected checks, no all-unit
+cold replay, no push.
 
 ## Additional newly accepted leaf owners
 

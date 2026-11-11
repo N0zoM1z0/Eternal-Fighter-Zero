@@ -7,28 +7,29 @@
 `[0x006538D9,0x00653A15)` (316 bytes). Original selector holds
 **136 live cases and 180 default IDs**.
 
-Current natural C++ at `Character20State.cpp` reconstructs
-original default plus **39 real reviewed cases**: 1–9, 13–16, 47,
-50–74. The selected native code `[0x006429C0,0x00646423)` spans
-**14,947 bytes / 4,125 original x86 instructions**, SHA-256
-`23def50e36aa07c82059a6c0f06b728b9b03e3eb47921c97f53614f49679deac`.
-The original frame allocates 0x4A4 bytes; the incomplete candidate
-now allocates 0x90 bytes, but both use the **same six-byte instruction
-form**, so the selected comparator requires identical instruction
-positions *without a stack-length adjustment*. The stack amount
-still differs: no complete Exact claim. Native-bound checks verify
-**387 internal and 46 outbound original branches**, **376 nonlocal
-COFF call/float references**, two local switch-address pointers, and
-all **4,125 original instruction forms/offsets/widths**. All later
-97 cases are neutral unaccepted marker bodies in the probe.
+Current natural C++ `Character20State.cpp` now has original default
+and **42 reviewed native cases**: 1–9, 13–16, 47, 50–77. The
+continuous selected original code prefix `[0x006429C0,0x00646A02)`
+is **16,450 native bytes / 4,521 x86 instructions**, SHA-256
+`69ebb02baaf70889bd2c24a2414270e61e237f8bacd590f06f24424f6347e059`.
+The next native case81 starts at **`0x00646A02`**.
 
-New native-reviewed cases70–74 cover Kano's wall/landing recovery,
-resource-costly recoil and grounded defensive poses. State70 uses
-meter+30, original wall impact effect0, sound31 and upward launch
-with gravity0.025; state71 uses direct high-gravity 0.072 vertical
-recovery; cases72–74 preserve edge pushback with stage-boundary and
-opponent air-height predicates. The source preserves original call
-order, reset/landing transitions and IEEE-754 constants.
+Original stack reserves 0x4A4 bytes; incomplete source currently
+reserves only 0x9C bytes, but **both stack instructions have equal
+six-byte length**, so no position shift or normalization is used.
+Selected scoped verifier checks **4,521 original instruction forms,
+offsets and widths**, **425 internal and 49 outbound original jump
+targets**, **427 native-bound nonlocal COFF call/IEEE-754 operands**,
+and both original switch-table pointers. **94 other cases are still
+unimplemented**; neutral marker cases in the probe have no proof
+credit, and there is no full-Exact claim.
+
+Newly restored Kano states75–77 are 509/509/485-byte forward recoil
+states with resource loss0.6 per tick and an additional 30 when
+flagged, meter+30, initial velocityX=2.2, gravity cleared, horizontal
+deceleration0.06 and stage-edge pushback dependent on opponent height.
+Completion chooses state7/3 for 75–76 or state3 for 77. They match
+original instruction order, branch targets and IEEE-754 constants.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -45,12 +46,11 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
-    scripts/repo-python workbench/kano-state/probe_prefix.py --through 75 --context 12
+    scripts/repo-python workbench/kano-state/probe_prefix.py --through 81 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case75 `0x00646423`**, followed by
-states76–77 and larger late moves. The original 0x4A4 frame,
-97 remaining native bodies, local switch DATA, return and complete
-relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
+Next work begins at **Kano case81 `0x00646A02`**. The original
+0x4A4 frame, 94 remaining native bodies, local switch DATA, return
+and complete relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.

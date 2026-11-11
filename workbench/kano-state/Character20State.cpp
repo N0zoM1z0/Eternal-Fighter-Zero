@@ -1296,5 +1296,122 @@ void Character20::Slot06()
         }
         return;
 
+    case 75: // Native-reviewed Kano: recoil and meter recovery 0x005EBFF3: forward grounded recoil
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            velocityX = 2.2;
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        gravity = 0.0;
+        horizontalDeceleration = 0.06;
+        velocityX -= horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 76: // Native-reviewed Kano: recoil and meter recovery 0x005EC1F0: independent duplicate of recoil 75
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            velocityX = 2.2;
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        gravity = 0.0;
+        horizontalDeceleration = 0.06;
+        velocityX -= horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 77: // Native-reviewed Kano: recoil and meter recovery 0x005EC3ED: recoil ends in crouch
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            velocityX = 2.2;
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        gravity = 0.0;
+        horizontalDeceleration = 0.06;
+        velocityX -= horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }
