@@ -2237,29 +2237,34 @@ The underlying Video callee is not separately accepted; a complete
 Exact render **caller** does not establish whole Windows runtime
 linkage or actual graphics output parity.
 
-### Character04 Slot06: new 59,143-byte original state boss workbench
+### Character04 Slot06: original-bound 59,143-byte state boss workbench
 
-A second actively reconstructed large owner is original
-`Character04::Slot06`, selected by native vtable `0x00788B94`.
-It owns **59,143 code bytes** (`0x00607930..0x00616037`)
-with 139 original switch destinations and 325 selector bytes.
-Original selector has **138 live IDs and 187 native default IDs**.
+The new large-state workbench is original `Character04::Slot06` at
+native vtable slot `0x00788B94`: code
+`[0x00607930,0x00616037)` of **59,143 bytes**, followed by
+139 four-byte switch destinations and 325 selector bytes. The
+original selector has 138 live IDs and 187 default IDs.
 
-The authored `workbench/character04-state/Character04State.cpp`
-implements original **default plus nine real live cases 1–9**, including
-original x87-driven landing branches and real jumping physics.
-Original-bound `check_prefix.py` strictly confirms the **2,003-byte
-continuous prefix** `[0x00607930,0x00608103)` against SHA-256
-`4dc9e9b1cea61c3db99957a1d52cfc6bc19c71494bf82f36bfc4cda503b9d3ac`:
-**577 instruction positions/widths/forms, 45 internal and 11 outbound
-original branches, 42 independently bound original COFF calls/double
-operands, 2 authentic switch-local pointers**. All remaining bytes
-in selected scope match after the documented incomplete-stack
-three-byte shrink, original-bound reloc fields and unresolved shared
-return displacement; nothing else is masked or shifted. **Not full
-Exact**: 129 unreviewed live states and full original 0x2E8 stack,
-switch table and return remain open. Next case13 at `0x00608103`.
-See `workbench/character04-state/README.md`.
+Real natural C++ in `workbench/character04-state/Character04State.cpp`
+now covers the original **default plus 13 live states 1–9, 13–16**.
+The added states13–16 recover directional grounded wakeup and
+three independently verified aerial launch/landing transitions,
+including original x87 geometry, 0.035 gravity, -2.7 vertical
+velocity, dash-carry horizontal 0.4/1.1 and conditional landing.
+Original-bound selected checker `check_prefix.py` proves
+**3,016 continuous original code bytes / 867 x86 instructions**,
+range `[0x00607930,0x006084F8)` and native SHA-256
+`62a22026a19a105297dd8e801f7bb0a31746becbe579c507257b3137064dac58`:
+**67 original internal + 15 original shared-return branch targets**,
+**65 original-bound COFF call/float operands** plus two native
+selector/table address pointers. Every other native opcode byte
+matches; only the original-bound relocation fields, temporary
+three-byte shorter stack frame and incomplete shared-return
+JMP distance are excluded from byte equality. This is strictly
+**selected-prefix evidence, NOT whole-function Exact**; 125 real
+cases, the original 0x2E8 stack, local table and return remain OPEN.
+**Next original state47 begins at `0x006084F8`.** No full cold replay
+or synthetic marker acceptance. See `workbench/character04-state/README.md`.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

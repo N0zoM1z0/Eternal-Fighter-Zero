@@ -200,5 +200,108 @@ void Character04::Slot06()
         return;
 
 
+    case 13: // Native 0x00608103: landing to neutral directional recovery
+        velocityX = 0.0;
+        velocityY = 0.0;
+        FaceOpponent();
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1)
+                    field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 14: // Native 0x0060819E: neutral aerial launch with dash carry
+        gravity = 0.035;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.7;
+            velocityX = 0.0;
+            if ((unsigned char)dashMomentumFlag == 1) {
+                velocityX = 0.4;
+                dashMomentumFlag = 0;
+            }
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 15: // Native 0x006082BC: forward aerial launch with alternate dash
+        gravity = 0.035;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.7;
+            velocityX = 0.7;
+            if ((unsigned char)dashMomentumFlag == 1) {
+                velocityX = 1.1;
+                dashMomentumFlag = 0;
+            }
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 16: // Native 0x006083DA: reverse launch and late landing recovery
+        gravity = 0.035;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.7;
+            velocityX = -0.7;
+            if ((unsigned char)dashMomentumFlag == 1)
+                dashMomentumFlag = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+
     }
 }

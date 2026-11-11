@@ -529,22 +529,23 @@ class layouts were changed. Evidence:
 This is an accepted *caller* Exact; the video drawing callee and
 Windows runtime are not thereby accepted. No all-unit cold replay.
 
-### New large owner: Character04::Slot06 selected prefix (NOT Exact)
+### Active second large boss: Character04::Slot06 selected prefix (NOT Exact)
 
-`workbench/character04-state/Character04State.cpp` now authors the real
-original default and states1–9 of a separate **59,143-byte Boss**
-selected by original vtable slot `0x00788B94`. It is independently
-checked in `workbench/character04-state/check_prefix.py`:
-**2,003 exact-width native code prefix bytes / 577 x86 instruction
-positions**, **45 native internal and 11 shared-return branches**,
-**42 original-bound direct calls/IEEE-754 sites** and two original
-selector/table pointers. Only original-bound relocation operands,
-three bytes of provisional stack allocation and outbound shared
-return displacement differ; all other selected bytes match.
-**129 later real states, native full 0x2E8 stack and adjacent switch
-DATA still OPEN**. First next state13 at `0x00608103`. Native
-selector: 138 live IDs and 187 default IDs. Probe marker cases are
-unaccepted; no full all-unit cold replay. See workbench README.
+`workbench/character04-state/Character04State.cpp` now reconstructs
+original default and **13 real native states** (1–9,13–16) from the
+**59,143-byte Character04::Slot06 boss**, native vtable
+`0x00788B94`. Focused `check_prefix.py` independently confirms
+**3,016 original-bound selected bytes / 867 x86 instruction positions**,
+**67 internal / 15 shared-return original branches**, **65 original
+native COFF call/IEEE-754 sites** and 2 native switch-address
+pointers. Only original-bound relocation bytes, the incomplete
+three-byte stack allocation difference and shared-return distance
+are excluded; all other selected bytes match. The full owner uses
+`0x2E8` stack and includes 139 native destination pointers and
+325 selectors (138 live, 187 defaults). **Next real case47
+starts at `0x006084F8`**; 125 real cases and full switch/return
+closure remain OPEN. This is not full Exact, and temporary marker
+bodies are not accepted reconstruction. No all-unit cold replay.
 
 ## Tools and checks
 
