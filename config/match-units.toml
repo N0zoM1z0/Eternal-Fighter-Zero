@@ -160549,3 +160549,98 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "Canonical EFZ.exe Minagi vtable 0x00788964 selects complete 47-byte owner 0x005AD520; original REL32 at 0x005AD545 independently resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10"
+
+[units.character-17-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character17Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-17-initialize-state/Character17Lifecycle.obj"
+symbol = "?InitializeState@Character17@@UAEXXZ"
+target_address = 0x0073E970
+size = 322
+
+[[units.character-17-initialize-state.relocations]]
+offset = 314
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Original EFZ.exe NayukiB vtable slot 0x00788FE8 points to complete 322-byte owner 0x0073E970, and native REL32 at 0x0073EAAA resolves reviewed ?InitializeState@Secondary@@UAEXXZ to 0x0040EDF0"
+
+[units.character-17-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character17Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-17-reset-pose/Character17Lifecycle.obj"
+symbol = "?ResetPose@Character17@@UAEXXZ"
+target_address = 0x0073EAC0
+size = 58
+
+[[units.character-17-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Original EFZ.exe NayukiB vtable slot 0x00788FB8 points to complete 58-byte owner 0x0073EAC0, and native REL32 at 0x0073EAF2 resolves reviewed ?ResetPose@Secondary@@UAEXXZ to 0x0040F110"
+
+[units.character-17-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character17Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-17-remove-local-effect/Character17Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character17@@UAEXF@Z"
+target_address = 0x0073EB00
+size = 80
+
+[[units.character-17-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Original EFZ.exe NayukiB vtable slot 0x00788FE0 points to complete 80-byte owner 0x0073EB00, and native REL32 at 0x0073EB46 resolves reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z to 0x00412E60"
+
+[units.character-17-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character17Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-17-slot03/Character17Lifecycle.obj"
+symbol = "?Slot03@Character17@@UAEXXZ"
+target_address = 0x0073EB50
+size = 19
+
+[[units.character-17-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "Original EFZ.exe NayukiB vtable slot 0x00788FC4 points to complete 19-byte owner 0x0073EB50, and native REL32 at 0x0073EB5B resolves reviewed ?UpdateLocomotionState@Secondary@@QAEXXZ to 0x0040E740"
+
+[units.character-17-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character17Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-17-slot08/Character17Lifecycle.obj"
+symbol = "?Slot08@Character17@@UAEXXZ"
+target_address = 0x00741AC0
+size = 241
+
+[units.character-17-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character17Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-17-emit-local-effect/Character17Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character17@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x00741BC0
+size = 47
+
+[[units.character-17-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Original EFZ.exe NayukiB vtable slot 0x00788FDC points to complete 47-byte owner 0x00741BC0, and native REL32 at 0x00741BE5 resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10"

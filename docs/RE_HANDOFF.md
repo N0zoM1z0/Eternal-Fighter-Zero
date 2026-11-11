@@ -93,6 +93,14 @@ All nine original REL32 calls and vtable targets were reviewed; formal
 selected proof `docs/evidence/character-21-lifecycle-exact.json`.
 Only these seven units were replayed, not a repository-wide cold replay.
 
+NayukiB `Character17` has **six complete exact lifecycle/timer
+owners / 767 original machine-code bytes** in
+`src/Character17Lifecycle.cpp`. The meaningful 241-byte `Slot08`
+countdown has the original surprising 50–149 state gate; all five
+base-method call operands and six canonical vtable locations are
+verified. Certificate: `docs/evidence/character-17-lifecycle-exact.json`.
+Only these six units were replayed, not all-unit cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

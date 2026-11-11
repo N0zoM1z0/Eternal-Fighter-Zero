@@ -1699,6 +1699,47 @@ were strictly compared. New public proofs:
 The unrelated historical stale-header certificates were not
 silently refreshed, and no full cold replay was run.
 
+### NayukiB Character17 lifecycle and special timer: six complete Exact owners
+
+Canonical `Character17` vtable `0x00788FB8` identifies six original
+full native owners, now authored in `src/Character17Lifecycle.cpp`.
+The pinned VC7.1 `/Od /G6 /MT /Gy /W3` **selected-only strict native
+replay proves 767/767 original bytes, five bound original calls and
+zero differences**, including the full nontrivial timer Slot08:
+
+| NayukiB method | Native address | Exact bytes |
+| --- | --- | ---: |
+| InitializeState | `0x0073E970` | 322 |
+| ResetPose | `0x0073EAC0` | 58 |
+| RemoveLocalEffect | `0x0073EB00` | 80 |
+| Slot03 | `0x0073EB50` | 19 |
+| Slot08 | `0x00741AC0` | 241 |
+| EmitLocalEffect | `0x00741BC0` | 47 |
+
+InitializeState zeros eight character-specific ints, sets five
+native X/Y collision pairs, clears three 64-int effect arrays, then
+calls reviewed `Secondary::InitializeState` at `0x40EDF0`.
+ResetPose zeros three child ints and delegates to `0x40F110`;
+RemoveLocalEffect zeroes all three indexed arrays and calls base
+`0x412E60`. Slot03 calls `Secondary::UpdateLocomotionState` at
+`0x40E740`; EmitLocalEffect first invokes virtual removal for
+`effectWrite` then base `0x412B10`.
+
+**Slot08 is a complete 241-byte resource/timer handler, not an empty
+leaf**. It clears `field3150` and `field314c` when its countdown is
+nonpositive, either fighter is no longer alive, or the animation
+is within state IDs 50–149. If the countdown remains positive, it
+adds `field3154` to `field3148`, wraps values above359 by subtracting
+360, and decreases `field3150` by2 before clearing both state fields
+on expiry. The **50–149 branch is original and deliberately opposite
+to an initially plausible outside-range hypothesis**; two branch
+displacements differ until fixed. No relocations exist in Slot08.
+
+Evidence: `docs/evidence/character-17-lifecycle-exact.json`.
+All six original vtable pointers and complete function extents are
+independently checked; this is original-bound codegen Exact, not
+whole-game linkage/runtime equivalence.
+
 ### NayukiB constructor: complete exact code generation (2026-11-09)
 
 `Character17::Character17` at `0x0073E790` is now a natural C++ source

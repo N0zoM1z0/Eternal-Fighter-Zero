@@ -450,3 +450,9 @@ address,end,size,status,evidence
 0x005AD500,0x005AD50B,11,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
 0x005AD510,0x005AD51B,11,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
 0x005AD520,0x005AD54F,47,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
+0x0073E970,0x0073EAB2,322,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
+0x0073EAC0,0x0073EAFA,58,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
+0x0073EB00,0x0073EB50,80,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
+0x0073EB50,0x0073EB63,19,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
+0x00741AC0,0x00741BB1,241,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
+0x00741BC0,0x00741BEF,47,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
