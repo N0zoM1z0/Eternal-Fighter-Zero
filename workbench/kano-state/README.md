@@ -63,6 +63,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case263_264_shape.py
     scripts/repo-python workbench/kano-state/check_case265_267_shape.py
     scripts/repo-python workbench/kano-state/check_case268_269_shape.py
+    scripts/repo-python workbench/kano-state/check_case270_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
 
@@ -79,6 +80,35 @@ native case because state250's compiler phase remains unresolved.
 These island checks do not grow the 40,336-byte strict contiguous
 prefix or register any complete owner. Never count later diagnostic
 neutral marker states as original code.
+
+### Experimental case270 — 991-byte resource-backed airborne pulse
+
+Original Kano state270 `[0x0064FD61,0x00650140)` contains **991
+code bytes / 265 original x86 instructions**. Its authored natural
+C++ reconstructs the original airborne rebound (initial X/Y
+velocity each ×0.5, gravity0.01, meter+45), followed by resource
+spend of 500 or 250 depending on the original field0120 gate.
+The first tick emits context effect0x21 (palette11); frame2
+emits local effect0x197 at X−facing×30,Y−30, while field313c
+triggers three further original pulses at times16,32,48 with
+positions X+facing×30/Y−30, X+facing×20/Y−10, and
+X−facing×20/Y−10. Frame7 repeats until the state counter reaches3,
+then restores state9 and gravity0.035 in original call order.
+
+Run only the independent selected original-bound shape audit:
+
+    scripts/repo-python workbench/kano-state/check_case270_shape.py
+
+It verifies original SHA-256
+`4b6c89fa0b1f03b0679e5d93ac001b93484ca454472cc69d625d989ce80e08df`,
+all **265 native instruction offsets/widths/register-abstracted
+forms**, **14 exact internal original branches**, **2 real shared-
+return jumps**, and **17 independently original-bound COFF call /
+IEEE-754 operands**, including five native `double` constants and
+`Context::EmitEffect` at 0x00407100. It intentionally does NOT claim
+byte-wise equality for concrete registers. **NOT full Exact**:
+the original case250 phase still blocks advancing the strict
+40,336-byte contiguous prefix.
 
 ### Experimental cases268–269 — two 447-byte airborne recovery attacks
 

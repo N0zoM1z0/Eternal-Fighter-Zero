@@ -1999,6 +1999,20 @@ loop, and gravity0.035/state9 exit. The original-bound checker
 call/float references**. Structural island only, **NOT Exact**;
 strict contiguous Boss prefix remains 40,336 bytes.
 
+#### Kano state270 resource-backed four-pulse airborne structural island
+
+Original `[0x0064FD61,0x00650140)` is **991 code bytes / 265 x86
+instructions**. New C++ restores native resource spending by
+field0120, context effect0x21, frame2/field313c-triggered four
+local0x197 effects, velocity/landing gravity updates and frame7
+repetition. Original-bound checker `check_case270_shape.py` confirms
+265 native instruction offsets/widths/register-abstracted forms,
+**14 original internal and 2 shared-return branches**, **17 independently
+native-bound COFF call/IEEE-754 operands**, and the canonical
+SHA-256. This is **NOT full Exact** due to the unresolved case250
+concrete-register phase; 40,336-byte strict contiguous prefix is
+unchanged.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

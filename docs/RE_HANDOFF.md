@@ -202,6 +202,16 @@ shared-return branches** and **12 exact original COFF/float operands**.
 Still NOT whole Exact: 40,336-byte strict prefix stops at case250.
 No all-unit cold replay.
 
+Kano state270 now has **991 original-bound code bytes / 265 native
+instruction forms/widths/offsets** under authored natural C++, plus
+a dedicated `check_case270_shape.py` that audits **14 internal and
+2 shared-return branches** and **17 original COFF call/double
+references**. The four-stage airborne0x197 effect chain, context
+resource spending and frame7 recovery are reconstructed. It is an
+independent structural island, **NOT concrete-register Exact**;
+formal Kano selected prefix remains 40,336 bytes until case250
+compiler-phase closure. No cold all-unit replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

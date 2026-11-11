@@ -4664,5 +4664,81 @@ void Character20::Slot06()
         }
         return;
 
+    case 270: // EXPERIMENTAL Kano 0x0064FD61: resource-backed airborne pulse and four-hit wave
+        if (field000a == 0 && field000c == 0) {
+            velocityX *= 0.5;
+            velocityY *= 0.5;
+            gravity = 0.01;
+            meter = (short)(meter + 45);
+            field3138 = 3;
+            if (field0120 == 0)
+                field0118 -= 500.0;
+            else
+                field0118 -= 250.0;
+            effect.type = 0x21;
+            effect.palette = 11;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 50);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        velocityY += gravity;
+        if (field000a == 2 && field000c == 0) {
+            effect.type = 0x197;
+            effect.x = (double)((int)positionX - (int)facing * 30);
+            effect.y = (double)((int)positionY - 30);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+        }
+        if (field000a > 1)
+            ++field313c;
+        if (field313c == 16) {
+            effect.type = 0x197;
+            effect.x = (double)((int)positionX + (int)facing * 30);
+            effect.y = (double)((int)positionY - 30);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+        }
+        if (field313c == 32) {
+            effect.type = 0x197;
+            effect.x = (double)((int)positionX + (int)facing * 20);
+            effect.y = (double)((int)positionY - 10);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+        }
+        if (field313c == 48) {
+            effect.type = 0x197;
+            effect.x = (double)((int)positionX - (int)facing * 20);
+            effect.y = (double)((int)positionY - 10);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 7 && field3138 < 3) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 4);
+                return;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                ResetPose();
+                field0008 = 9;
+                gravity = 0.035;
+            }
+        }
+        return;
+
     }
 }
