@@ -66,6 +66,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case270_shape.py
     scripts/repo-python workbench/kano-state/check_case300_shape.py
     scripts/repo-python workbench/kano-state/check_case301_shape.py
+    scripts/repo-python workbench/kano-state/check_case302_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
 
@@ -82,6 +83,35 @@ native case because state250's compiler phase remains unresolved.
 These island checks do not grow the 40,336-byte strict contiguous
 prefix or register any complete owner. Never count later diagnostic
 neutral marker states as original code.
+
+### Experimental state302 — shaken 894-byte super with independent impacts
+
+Kano state302 original `[0x00650992,0x00650D10)` spans **894
+native bytes / 235 x86 instructions**. Natural C++ authors its
+frame0 dash/frame reset, unconditional `SetHorizontalShake(50,3)`,
+frame7 reset, charge+100 on frames3–6 with early escape to frame7,
+and paired frame3 effects0x196/0x197. Frame10 consumes **3000
+meter**, applies original tint0xB0 duration0xA4, hits for 120
+frames, emits stage effect0x46/palette0x40 with Y−43 and requests
+context sound37. Frame13 produces native effect0x1C1 with
+`owner=1`, `field0030=1` (not field0028), and original facing
+flags. Animation advances attackCollisionResult0 with frame7->3
+rewind and state0 completion.
+
+Targeted independent oracle:
+
+    scripts/repo-python workbench/kano-state/check_case302_shape.py
+
+Original SHA-256
+`81b236428e7ff7d17099d0ca571c8b138db00c4c5a60a60477d6dfcc6672d5a2`
+is pinned. The checker verifies **235 original instruction
+offsets/widths/register-abstracted forms**, **18 internal and 2
+shared-return original branches**, plus **13 independently
+original-bound REL32 calls** including original
+SetHorizontalShake, SetTint, ResetFrame, Context::EmitEffect and
+`__ftol2`. It is **native structural evidence only, NOT complete
+Exact**: original case250 register-allocation phase remains open;
+strict contiguous Boss prefix is still **40,336 bytes**.
 
 ### Experimental case301 — 962-byte tier-two original super
 

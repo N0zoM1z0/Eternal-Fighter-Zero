@@ -250,6 +250,15 @@ and **13 real call/float COFF operands**. State301 is an unaccepted
 structural island, NOT full Exact; original case250 still blocks the
 strict 40,336-byte continuous Boss prefix. No cold replay.
 
+Kano state302 adds another **894 bytes / 235 native
+instructions** of authored super-move code. Targeted
+`check_case302_shape.py` freezes all native forms, **18 internal and
+2 shared-return original jumps**, **13 original REL32 call targets**,
+including SetHorizontalShake/Tint and frame13 effect0x1C1.
+It is **NOT concrete-byte Exact** due state250's remaining register
+phase; the strict Kano 40,336-byte prefix is unchanged. No full
+cold replay or unaccepted case-marker credit.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

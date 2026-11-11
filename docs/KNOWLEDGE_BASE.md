@@ -2098,6 +2098,18 @@ shared-return jumps**, and **13 native COFF call/float references**.
 This is a structural island, **NOT complete original-owner Exact**;
 the strict selected contiguous Boss prefix remains 40,336 bytes.
 
+#### Kano state302: shaken super native structural island
+
+Case302 `[0x00650992,0x00650D10)` is **894 bytes / 235 original
+x86 instructions** of natural C++ including unconditional
+`SetHorizontalShake(50,3)`, meter−3000 at frame10, stage0x46
+palette0x40, frame13 effect0x1C1 and original `field0030=1`
+effect payload. `check_case302_shape.py` verifies **235 original
+instruction widths/forms/positions**, **18 native internal and 2
+shared-return jumps**, and **13 original-bound REL32 operands**.
+This is a register-abstracted structural island, **NOT full Exact**;
+state250 still blocks the strict 40,336-byte continuous prefix.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five
