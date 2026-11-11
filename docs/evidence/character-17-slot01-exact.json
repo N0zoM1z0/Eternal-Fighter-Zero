@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "authority": "Original NayukiB Character17::Slot01 complete 1080-byte native owner [0x00741680,0x00741AB8), independently identified from EFZ.exe original vtable slot 0x00788FBC and eight original direct-call destinations",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles natural C++ src/Character17Render.cpp. Strict selected-only oracle binds six original MakeSurfaceRect COFF REL32 targets at 0x0040C590 and two Video::DrawSurface targets at 0x00409A90, then matches all 1080 native bytes of the complete owner without skipped regions or unmatched masks. The original compiler register transfer requires the field3150*frame.width operand ordering in the 3000-denominator rectangle scaling; the reverse multiplication yields 1068 instead of 1080 bytes. No whole-game linkage/runtime equivalence claim and no cold all-unit replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1080,
+      "matched_bytes": 1080,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 86,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x007416D6 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 196,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x00741744 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 299,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x007417AB resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 451,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x00741843 resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 553,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x007418A9 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 717,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x0074194D resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 895,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x007419FF resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1071,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x00741AAF resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9e1cd7ecf2ff41ad4d683b925166a2bb8c81ca35a79589320f720f3a27f32f01",
+      "target_extent_sha256": "9e1cd7ecf2ff41ad4d683b925166a2bb8c81ca35a79589320f720f3a27f32f01",
+      "unit": "character-17-slot01",
+      "symbol": "?Slot01@Character17@@UAEXXZ",
+      "target_address": "0x00741680",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d9de9a2270abbcb0bc446aa9e3f48e3ace533685a12cb0474e4cceab384bbe1a",
+      "object_sha256": "416825d66e5bc5c99254b3692c45d78986ccca2d1487160ef5410ec48094f95f",
+      "source_sha256": "045d201f5b260c0c7fd5715b4551a6cb3d9afa1cbdad07e2c9f76a8ab4c17761",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "eac712ca628eaa280e857b7669604d87497aec22bd7bd6e325b005b138eb1aab",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "fd8385c350cdfa01d841c38df5d98abf9f83a6b10cec6e23a239d57211360f84",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

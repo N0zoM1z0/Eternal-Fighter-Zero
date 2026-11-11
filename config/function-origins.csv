@@ -513,7 +513,7 @@ address,origin,status,evidence
 0x0073EB00,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
 0x0073EB50,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
 0x0073EB70,unknown,unreviewed,
-0x00741680,unknown,unreviewed,
+0x00741680,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-slot01-exact
 0x00741AC0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
 0x00741BC0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
 0x00741BF0,unknown,unreviewed,

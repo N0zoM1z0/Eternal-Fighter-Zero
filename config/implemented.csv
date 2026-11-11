@@ -446,3 +446,4 @@ address,name,source,symbol,status,evidence
 0x006D2420,Character12::Slot08,src/Character12Slot08.cpp,?Slot08@Character12@@UAEXXZ,complete,docs/evidence/character-12-slot08-exact.json
 0x0058D6E0,Character11::Slot01,src/Character11Render.cpp,?Slot01@Character11@@UAEXXZ,complete,docs/evidence/character-11-slot01-exact.json
 0x00657B70,Character20::Slot08,src/Character20Slot08.cpp,?Slot08@Character20@@UAEXXZ,complete,docs/evidence/character-20-slot08-exact.json
+0x00741680,Character17::Slot01,src/Character17Render.cpp,?Slot01@Character17@@UAEXXZ,complete,docs/evidence/character-17-slot01-exact.json

@@ -331,6 +331,18 @@ This complete leaf Exact is independent from the unfinished 68,853-
 byte Kano Slot06 boss and from its structural island diagnostics.
 Only this unit was replayed; no full cold all-unit replay.
 
+NayukiB `Character17::Slot01` is now a **complete 1,080-byte
+native Exact render function** authored as natural C++ in
+`src/Character17Render.cpp`. It uses two real pattern43/44 gauge
+draws, the original 3000-denominator width scale and the full
+player-dependent rectangle calculation. Strict selected one-unit
+replay matches 1080/1080 with zero differences, including eight
+independently original-bound calls (six MakeSurfaceRect, two
+Video::DrawSurface). The source multiplication order must be
+`field3150 * frame.width` to reproduce the original VC7.1 register
+moves. Proof: `docs/evidence/character-17-slot01-exact.json`.
+Only this unit was replayed, no full cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

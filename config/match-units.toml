@@ -161271,3 +161271,69 @@ type = "DIR32"
 symbol = "__real@c07e000000000000"
 target = 0x007884B8
 evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original DIR32 at 0x00657E15 binds __real@c07e000000000000 at 0x007884B8; native bytes and floating payload verified"
+
+[units.character-17-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character17Render.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-17-slot01/Character17Render.obj"
+symbol = "?Slot01@Character17@@UAEXXZ"
+target_address = 0x00741680
+size = 1080
+
+[[units.character-17-slot01.relocations]]
+offset = 86
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x007416D6 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-17-slot01.relocations]]
+offset = 196
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x00741744 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-17-slot01.relocations]]
+offset = 299
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x007417AB resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-17-slot01.relocations]]
+offset = 451
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x00741843 resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90"
+
+[[units.character-17-slot01.relocations]]
+offset = 553
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x007418A9 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-17-slot01.relocations]]
+offset = 717
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x0074194D resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-17-slot01.relocations]]
+offset = 895
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x007419FF resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-17-slot01.relocations]]
+offset = 1071
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x00741AAF resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90"

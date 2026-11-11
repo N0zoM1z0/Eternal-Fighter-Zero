@@ -1699,6 +1699,37 @@ were strictly compared. New public proofs:
 The unrelated historical stale-header certificates were not
 silently refreshed, and no full cold replay was run.
 
+### NayukiB Character17 Slot01: 1,080-byte two-layer gauge render Exact
+
+Canonical NayukiB `Character17` original vtable slot1 at
+`0x00788FBC` selects the complete native `Character17::Slot01`
+`[0x00741680,0x00741AB8)`, **1,080 code bytes**. The authored
+natural C++ `src/Character17Render.cpp` reproduces its two real
+sprite-gauge draws, gated by field314c>0. The base gauge uses
+pattern43 frame0 at full width; its overlay uses pattern44 frame0
+with width `field3150 * frame.width / 3000` and clips both source
+and destination rectangles. The original player0 destination is
+X=49-frame.u, Y=31-frame.v; alternate player orientation uses
+X=271+frame.u-width, including the clipped width for the overlay.
+
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected strict replay confirms
+**1,080/1,080 original machine-code bytes, eight independently
+native-bound COFF REL32 calls, and zero differences**. The six
+original MakeSurfaceRect calls resolve to 0x0040C590 and both
+Video::DrawSurface calls to 0x00409A90. Original owner boundaries,
+vtable selection and native call targets were independently checked
+before registration.
+
+The correct natural-C++ multiplication order **`field3150 *
+frame.width`** matters for exact VC7.1 codegen: swapping the operands
+produced a 1,068-byte function with different register transfers,
+despite the same arithmetic result. The accepted source restores
+original registers and the complete 1,080-byte owner without ASM
+or byte wrappers. Certificate:
+`docs/evidence/character-17-slot01-exact.json`.
+Exact native codegen alone does not establish whole-game linkage
+or runtime behavior of the rendering callee.
+
 ### NayukiB Character17 lifecycle and special timer: six complete Exact owners
 
 Canonical `Character17` vtable `0x00788FB8` identifies six original
