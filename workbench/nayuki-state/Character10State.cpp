@@ -3646,164 +3646,123 @@ void Character10::Slot06()
         }
         return;
 
-    case 253: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 253: // Reviewed Nayuki 0x0045BC9E: aerial retreat launch and conditional landing
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
-            ResetFrame();
-            meter = (short)(meter + 45);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            horizontalDeceleration = 0.0;
+            remainingHitCount = 2;
         }
+        if (positionY < 0.0) {
+            velocityY += gravity;
+            velocityX -= 0.035;
+            if (velocityX < 0.0)
+                velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 4) {
+                pendingContextSoundSlot = 20;
+                meter = (short)(meter + 45);
+                velocityX = 1.2;
+                velocityY = -2.5;
+                gravity = 0.03;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 256;
+                if (inputY == 1)
+                    field0008 = 258;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 254: // Reviewed Nayuki 0x0045BE17: frame-four launcher and local effect 404
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            horizontalDeceleration = 0.0;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 4) {
+                pendingContextSoundSlot = 20;
+                meter = (short)(meter + 45);
+                velocityX = 1.7;
+                velocityY = -1.7;
+                effect.type = 0x194;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 258;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 256: // Reviewed Nayuki 0x0045BF74: wall collision and rebound transition
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 2.4;
+            remainingHitCount = 1;
+            velocityY = 0.0;
+        }
+        if (CollisionSide() != 0 && field313c == 0) {
+            velocityX = -0.7;
+            velocityY = -2.0;
+            gravity = 0.035;
+            field0008 = 257;
+            pendingContextSoundSlot = 31;
+            effect.type = 0;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            ++field313c;
+            return;
+        }
+        if (remainingHitCount == 0) {
+            velocityX = -0.7;
+            velocityY = -2.0;
+            gravity = 0.035;
+            field0008 = 257;
+            return;
+        }
+        ++field000c;
+        if (positionY == 0.0 && velocityY >= 0.0)
+            velocityY = 0.0;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount)
+                field000a = (unsigned short)(field000a - 4);
+        }
+        return;
+
+    case 257: // Reviewed Nayuki 0x0045C155: clear buffered buttons during bounce recovery
+        velocityY += gravity;
+        ClearBufferedButtons();
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 3;
-            if (field000a == 4) {
-                effect.type = 406;
-                effect.x = (double)((int)positionX + (int)facing * 17);
-                effect.y = (double)((int)positionY - 26);
-                effect.group = 0;
-                effect.owner = 1;
-                effect.layer = 1;
-                effect.flag0018 = (unsigned char)facing;
-                effect.field0028 = 1;
-                EmitLocalEffect(&effect);
-                pendingContextSoundSlot = 21;
-            }
             if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
                 ResetPose();
-            }
-        }
-        return;
-
-    case 254: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
-            ResetFrame();
-            meter = (short)(meter + 45);
-        }
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            attackCollisionResult = 3;
-            if (field000a == 4) {
-                effect.type = 407;
-                effect.x = (double)((int)positionX + (int)facing * 17);
-                effect.y = (double)((int)positionY - 26);
-                effect.group = 0;
-                effect.owner = 1;
-                effect.layer = 1;
-                effect.flag0018 = (unsigned char)facing;
-                effect.field0028 = 1;
-                EmitLocalEffect(&effect);
-                pendingContextSoundSlot = 21;
-            }
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
-                ResetPose();
-            }
-        }
-        return;
-
-    case 256: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
-            ResetFrame();
-        }
-        if (field000a > 1) {
-            velocityY += gravity;
-            velocityX -= 0.045;
-            if (velocityX < 0.0) {
-                velocityX = 0.0;
-            }
-        }
-        if (field000a < 8 && field000a > 1 &&
-            velocityY + positionY > 0.0) {
-            field000a = 8;
-            field000c = 0;
-            positionY = 0.0;
-            ResetFrame();
-            return;
-        }
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a < 2) {
-                attackCollisionResult = 0;
-            }
-            if (field000a == 1) {
-                velocityX = 1.5;
-                velocityY = -1.5;
-                gravity = 0.05;
-                effect.type = 31;
-                effect.x = (double)(int)positionX;
-                effect.y = 0.0;
-                effect.group = 0;
-                effect.layer = 0;
-                effect.facing = facing != 1;
-                contextOwner->EmitEffect(&effect);
-            }
-            if (field000a == 3) {
-                pendingContextSoundSlot = 21;
-                remainingHitCount = 1;
-                meter = (short)(meter + 30);
-            }
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
-                ResetPose();
-            }
-        }
-        return;
-
-    case 257: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
-            ResetFrame();
-        }
-        if (field000a > 1) {
-            velocityY += gravity;
-            velocityX -= 0.045;
-            if (velocityX < 0.0) {
-                velocityX = 0.0;
-            }
-        }
-        if (field000a < 8 && field000a > 1 &&
-            velocityY + positionY > 0.0) {
-            field000a = 8;
-            field000c = 0;
-            positionY = 0.0;
-            ResetFrame();
-            return;
-        }
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a < 2) {
-                attackCollisionResult = 0;
-            }
-            if (field000a == 1) {
-                velocityX = 1.5;
-                velocityY = -1.8;
-                gravity = 0.05;
-                effect.type = 31;
-                effect.x = (double)(int)positionX;
-                effect.y = 0.0;
-                effect.group = 0;
-                effect.layer = 0;
-                effect.facing = facing != 1;
-                contextOwner->EmitEffect(&effect);
-            }
-            if (field000a == 3) {
-                pendingContextSoundSlot = 21;
-                remainingHitCount = 1;
-                meter = (short)(meter + 30);
-            }
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
-                ResetPose();
+                field0008 = 9;
             }
         }
         return;

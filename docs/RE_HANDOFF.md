@@ -7,36 +7,36 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki Character10 Slot06 remains the major unfinished **62,693-byte**
-state boss (NOT whole-function Exact). See
-[`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
-The current strict selected original-bound prefix is **42,062 bytes /
-11,569 instructions**, default plus **102 reviewed live states**.
-The checker verifies **1,052 internal branches**, **149 outbound
-jumps**, **903 original-bound nonlocal COFF call/float references**,
-and two local switch operands. Provisional frame 0x2E0 vs original 0x2B4.
+Nayuki Character10 Slot06 remains the unfinished **62,693-byte**
+state boss, not full Exact. See the
+[focused workbench handoff](../workbench/nayuki-state/README.md).
+The selected original-bound prefix is **43,407 code bytes / 11,926
+instructions**, original default and **106 reviewed live states**.
+Checker: **1,076 internal branches**, **155 outbound branch targets**,
+**936 original-bound nonlocal COFF call/float references**, two local
+switch operands. Partial stack frame 0x2F0 versus original 0x2B4.
 
-State249 (1,015 bytes) rebuilds aerial grapple carry/launch; states
-250/251 recover virtual local effects 0x191/0x192 and frame4-only
-field3148*3 early timer gates; state252 (530 bytes) adds resource cost,
-global effect33 and local effect0x193 before the same timer behavior.
+States253–257 now cover the frame4 launches, original effect0x194,
+wall collision and input-cache clearing recovery; state257 invokes
+`Secondary::ClearBufferedButtons` at 0x40F170. Earlier 249–252 also
+replaced nonmatching sibling templates.
 
-**Next original state253 at 0x0045BC9E**. The workbench has 118/137
-original labels: 102 reviewed, 16 inherited unverified, and 19 absent
-(IDs 263–281). Full code, local switch tables, shared return and
-complete relocation closure remain open. Probe markers are not proof.
+**Next state258 begins 0x0045C1DF.** Workbench has 118/137 original
+live labels: 106 reviewed, 12 existing unreviewed, 19 absent
+IDs 263–281. The full stack, selector DATA, return and remaining
+reloctations are still open. Synthetic markers are NOT real source.
 
-Run selected checks only, **no all-unit cold replay**:
+Focused checks, no full all-unit cold replay:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 253 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 258 --context 12
     scripts/repo-python scripts/ci.py
 
-Handle all dirty edits and preserve original/VC7.1/Wine/Ghidra and
-accepted source. Save substantial checkpoints as `gpt-web: xxx`.
-Do not push without permission.
+Reconcile dirty edits (single writer). Preserve original EFZ.exe,
+pinned VC7.1/Wine/Ghidra and accepted source. Commit substantive
+progress as `gpt-web: xxx`; no push without authorization.
 
 ## Additional newly accepted leaf owners
 
