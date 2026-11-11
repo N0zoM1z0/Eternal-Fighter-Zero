@@ -2,7 +2,7 @@
 // Original owner at 0x00451850 contains 62,693 code bytes and two adjacent
 // 552/306-byte switch tables. Only the opening states are reviewed.
 // Remaining states use Makoto-derived experimental scaffolding and are NOT Exact.
-// The 21 missing Nayuki-specific states must still be authored, not bypassed.
+// The 19 missing Nayuki-specific states must still be authored, not bypassed.
 #include "../../src/CharacterViews.h"
 
 void Character10::Slot06()
@@ -10,7 +10,7 @@ void Character10::Slot06()
     // Nayuki target entry 0x00451850: stop this tick if either fighter freezes it.
     if (hitstopFrames > 0 || (*opponentSlot)->hitstunFrames > 0) return;
 
-    // 0x005E8623: construct the effect spawn, snapshot this frame's duration
+    // 0x00451883: construct the effect spawn, snapshot this frame's duration
     // and the animation's frame count, then initialize the spawn's defaults.
     EffectSpawn effect;
     // Original VC7.1 frame cache uses two separate, four-byte-aligned
@@ -25,10 +25,10 @@ void Character10::Slot06()
     ResetLocalEffectSpawn(&effect);
 
     // The original selector at 0x00460F5D is an animation-ID-to-case map.
-    // Do not use sibling Ghidra's normalized 0..124 case numbers as animation IDs.
+    // Do not treat a sibling character's normalized case labels as Nayuki IDs.
     switch (field0008) {
     default: // Original Nayuki fallback at 0x004518FD for 169 unmapped IDs
-        // The selector table sends 186 IDs here; it is not a no-op.
+        // The original selector maps 169 IDs here; the default is not a no-op.
         velocityX = 0.0;
         velocityY = 0.0;
         ++field000c;
@@ -41,7 +41,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 1: // Original Nayuki state at 0x0045196E
+    case 1: // Reviewed Nayuki state at 0x0045196E
         dashMomentumFlag = 0;
         velocityX = (double)field3148 * 0.02 + 0.6;
         velocityY = 0.0;
@@ -55,7 +55,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 2: // Original Nayuki state at 0x004519F8
+    case 2: // Reviewed Nayuki state at 0x004519F8
         dashMomentumFlag = 0;
         velocityX = -0.6 - (double)field3148 * 0.02;
         velocityY = 0.0;
@@ -69,7 +69,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 3: // Original Nayuki state at 0x00451A82
+    case 3: // Reviewed Nayuki state at 0x00451A82
         velocityX = 0.0;
         velocityY = 0.0;
         FaceOpponent();
@@ -83,7 +83,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 4: // Original Nayuki state at 0x00451AFB
+    case 4: // Reviewed Nayuki state at 0x00451AFB
         if (field000a == 0 && field000c == 0) {
             FaceOpponent();
             velocityX = 0.0;
@@ -119,7 +119,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 5: // Original Nayuki state at 0x00451C50
+    case 5: // Reviewed Nayuki state at 0x00451C50
         if (field000a == 0 && field000c == 0) {
             FaceOpponent();
             velocityX = 0.0;
@@ -156,7 +156,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 6: // Original Nayuki state at 0x00451DB1
+    case 6: // Reviewed Nayuki state at 0x00451DB1
         if (field000a == 0 && field000c == 0) {
             FaceOpponent();
             velocityX = 0.0;
@@ -188,7 +188,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 7: // Original Nayuki state at 0x00451EED
+    case 7: // Reviewed Nayuki state at 0x00451EED
         velocityX = 0.0;
         velocityY = 0.0;
         FaceOpponent();
@@ -203,7 +203,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 8: // Original Nayuki state at 0x00451F70
+    case 8: // Reviewed Nayuki state at 0x00451F70
         velocityX = 0.0;
         velocityY = 0.0;
         FaceOpponent();
@@ -218,7 +218,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 9: // Original Nayuki state at 0x00451FF3
+    case 9: // Reviewed Nayuki state at 0x00451FF3
         velocityY += gravity;
         ++field000c;
         if (field000c >= timing.frameDuration) {
@@ -236,7 +236,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 13: // Original Nayuki state at 0x004520A0
+    case 13: // Reviewed Nayuki state at 0x004520A0
         velocityX = 0.0;
         velocityY = 0.0;
         FaceOpponent();
@@ -253,7 +253,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 14: // Original Nayuki state at 0x0045213B
+    case 14: // Reviewed Nayuki state at 0x0045213B
         gravity = 0.024;
         if (field000a == 0 && field000c == 0) {
             velocityY = -2.0;
@@ -282,7 +282,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 15: // Original Nayuki state at 0x00452265
+    case 15: // Reviewed Nayuki state at 0x00452265
         gravity = 0.024;
         if (field000a == 0 && field000c == 0) {
             velocityY = -2.0;
@@ -311,7 +311,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 16: // Original Nayuki state at 0x0045238F
+    case 16: // Reviewed Nayuki state at 0x0045238F
         gravity = 0.024;
         if (field000a == 0 && field000c == 0) {
             velocityY = -2.0;
@@ -338,7 +338,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 47: // Original Nayuki state at 0x004524AD
+    case 47: // Reviewed Nayuki state at 0x004524AD
         if (field000a == 0 && field000c == 0) {
             velocityX = 0.6;
             gravity = 0.035;
@@ -366,7 +366,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 50: // Original Nayuki recoil at 0x004525DD
+    case 50: // Reviewed Nayuki state at 0x004525DD
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -403,7 +403,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 51: // Original Nayuki recoil at 0x004527C4
+    case 51: // Reviewed Nayuki state at 0x004527C4
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -440,7 +440,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 52: // Original Nayuki recoil at 0x004529AB
+    case 52: // Reviewed Nayuki state at 0x004529AB
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -477,7 +477,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 53: // Original Nayuki recoil at 0x00452B92
+    case 53: // Reviewed Nayuki state at 0x00452B92
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -512,7 +512,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 54: // Original Nayuki recoil at 0x00452D79
+    case 54: // Reviewed Nayuki state at 0x00452D79
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -547,7 +547,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 55: // Original Nayuki recoil at 0x00452F60
+    case 55: // Reviewed Nayuki state at 0x00452F60
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -582,7 +582,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 56: // Reviewed original Nayuki state at 0x00453147
+    case 56: // Reviewed Nayuki state at 0x00453147
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -617,7 +617,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 57: // Reviewed original Nayuki state at 0x00453316
+    case 57: // Reviewed Nayuki state at 0x00453316
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -652,7 +652,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 58: // Reviewed original Nayuki state at 0x004534E5
+    case 58: // Reviewed Nayuki state at 0x004534E5
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -687,7 +687,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 59: // Reviewed original Nayuki state at 0x004536B4
+    case 59: // Reviewed Nayuki state at 0x004536B4
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -731,7 +731,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 60: // Reviewed original Nayuki state at 0x004538B3
+    case 60: // Reviewed Nayuki state at 0x004538B3
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -775,7 +775,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 61: // Reviewed original Nayuki state at 0x00453AB2
+    case 61: // Reviewed Nayuki state at 0x00453AB2
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -819,7 +819,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 62: // Reviewed original Nayuki state at 0x00453CB1
+    case 62: // Reviewed Nayuki state at 0x00453CB1
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -858,7 +858,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 63: // Reviewed original Nayuki state at 0x00453E68
+    case 63: // Reviewed Nayuki state at 0x00453E68
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -897,7 +897,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 64: // Reviewed original Nayuki state at 0x00454013
+    case 64: // Reviewed Nayuki state at 0x00454013
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -946,7 +946,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 65: // Reviewed original Nayuki state at 0x00454244
+    case 65: // Reviewed Nayuki state at 0x00454244
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -995,7 +995,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 66: // Reviewed original Nayuki state at 0x00454475
+    case 66: // Reviewed Nayuki state at 0x00454475
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1039,7 +1039,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 67: // Reviewed original Nayuki state at 0x0045465E
+    case 67: // Reviewed Nayuki state at 0x0045465E
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1083,7 +1083,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 68: // Reviewed original Nayuki state at 0x0045483B
+    case 68: // Reviewed Nayuki state at 0x0045483B
         if (field0120 != 0) {
             field0118 -= 1.5;
         }
@@ -1115,7 +1115,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 69: // Reviewed original Nayuki state at 0x00454977
+    case 69: // Reviewed Nayuki state at 0x00454977
         if (field0120 != 0) {
             field0118 -= 1.5;
         }
@@ -1142,7 +1142,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 70: // Reviewed original Nayuki state at 0x00454A8C
+    case 70: // Reviewed Nayuki state at 0x00454A8C
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1183,7 +1183,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 71: // Reviewed original Nayuki state at 0x00454C6C
+    case 71: // Reviewed Nayuki state at 0x00454C6C
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1222,7 +1222,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 72: // Reviewed original Nayuki state at 0x00454E17
+    case 72: // Reviewed Nayuki state at 0x00454E17
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1248,7 +1248,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 73: // Reviewed original Nayuki state at 0x00454F62
+    case 73: // Reviewed Nayuki state at 0x00454F62
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1274,7 +1274,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 74: // Reviewed original Nayuki state at 0x004550AD
+    case 74: // Reviewed Nayuki state at 0x004550AD
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1297,7 +1297,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 75: // Reviewed original Nayuki state at 0x004551E0
+    case 75: // Reviewed Nayuki state at 0x004551E0
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -1336,7 +1336,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 76: // Reviewed original Nayuki state at 0x004553D3
+    case 76: // Reviewed Nayuki state at 0x004553D3
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -1375,7 +1375,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 77: // Reviewed original Nayuki state at 0x004555C6
+    case 77: // Reviewed Nayuki state at 0x004555C6
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
@@ -1411,7 +1411,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 81: // Reviewed original Nayuki state at 0x004557A1
+    case 81: // Reviewed Nayuki state at 0x004557A1
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1452,7 +1452,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 82: // Reviewed original Nayuki state at 0x00455986
+    case 82: // Reviewed Nayuki state at 0x00455986
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1499,7 +1499,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 83: // Reviewed original Nayuki state at 0x00455BA8
+    case 83: // Reviewed Nayuki state at 0x00455BA8
         if (field000a == 0 && field000c == 0) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
@@ -1552,7 +1552,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 84: // Reviewed original Nayuki state at 0x00455DED
+    case 84: // Reviewed Nayuki state at 0x00455DED
         if (field000a == 0 && field000c == 0) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
@@ -1605,7 +1605,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 85: // Reviewed original Nayuki state at 0x00456032
+    case 85: // Reviewed Nayuki state at 0x00456032
         if (field000a == 0 && field000c == 0) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
@@ -1649,7 +1649,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 86: // Reviewed original Nayuki state at 0x00456205
+    case 86: // Reviewed Nayuki state at 0x00456205
         if (field000a == 0 && field000c == 0) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
@@ -1696,7 +1696,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 87: // Reviewed original Nayuki state at 0x004563E7
+    case 87: // Reviewed Nayuki state at 0x004563E7
         if (field000a == 0 && field000c == 0) {
             effect.type = 0x1ef;
             effect.x = 60.0;
@@ -1718,7 +1718,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 96: // Nayuki original block at 0x0045649A: wakeup timer/state recovery
+    case 96: // Reviewed Nayuki state at 0x0045649A
         if (field000a == 1 && field000c == 0 && field3148 > 0)
             --field3148;
         ++field000c;
@@ -1739,7 +1739,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 97: // Unreviewed inherited sibling logic, Makoto address 0x005: first impact flash
+    case 97: // Reviewed Nayuki state at 0x00456567
         velocityX = 0.0;
         velocityY = 0.0;
         if (field000a == 0 && field000c == 0) {
@@ -1763,7 +1763,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 98: // Unreviewed inherited sibling logic, Makoto address 0x005: separately dispatched impact flash
+    case 98: // Reviewed Nayuki state at 0x0045665F
         velocityX = 0.0;
         velocityY = 0.0;
         if (field000a == 0 && field000c == 0) {
@@ -1787,7 +1787,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 99: // Unreviewed inherited sibling logic, Makoto address 0x005: end of knockout recovery
+    case 99: // Reviewed Nayuki state at 0x00456757
         // The target deliberately checks the tick count without a pose gate.
         if (health > 0 && field000c > 99) {
             field0008 = 96;
@@ -1807,7 +1807,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 123: // Nayuki-specific neutral recovery at original 0x004567FC
+    case 123: // Reviewed Nayuki state at 0x004567FC
         velocityX = 0.0;
         velocityY = 0.0;
         ++field000c;
@@ -1821,7 +1821,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 150: // Nayuki original 0x00456877: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+    case 150: // Reviewed Nayuki state at 0x00456877
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 10);
             velocityX = -1.5;
@@ -1855,7 +1855,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 151: // Nayuki reviewed original grounded recoil: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+    case 151: // Reviewed Nayuki state at 0x004569E9
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 15);
             velocityX = -1.8;
@@ -1889,7 +1889,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 152: // Nayuki reviewed original grounded recoil: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+    case 152: // Reviewed Nayuki state at 0x00456B5B
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 20);
             velocityX = -2.3;
@@ -1923,7 +1923,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 153: // Nayuki reviewed original grounded recoil: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+    case 153: // Reviewed Nayuki state at 0x00456CCD
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 10);
             velocityX = -1.5;
@@ -1954,7 +1954,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 154: // Nayuki reviewed original grounded recoil: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+    case 154: // Reviewed Nayuki state at 0x00456E27
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 15);
             velocityX = -1.8;
@@ -1985,7 +1985,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 155: // Nayuki reviewed original grounded recoil: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+    case 155: // Reviewed Nayuki state at 0x00456F81
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 20);
             velocityX = -2.3;
@@ -2016,7 +2016,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 156: // Unreviewed inherited sibling logic, Makoto address 0x005: forward airborne knockback
+    case 156: // Reviewed Nayuki state at 0x004570DB
         if (field000a == 0 && field000c == 0) {
             velocityY = -2.6;
             meter = (short)(meter + 15);
@@ -2042,7 +2042,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 157: // Unreviewed inherited sibling logic, Makoto address 0x005: aerial effect with two-frame loop
+    case 157: // Reviewed Nayuki state at 0x004571EB
         velocityX = 1.0;
         gravity = 0.045;
         if (field000a == 0 && field000c == 0) {
@@ -2074,7 +2074,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 158: // Unreviewed inherited sibling logic, Makoto address 0x005: opposite-direction aerial effect
+    case 158: // Reviewed Nayuki state at 0x00457337
         velocityX = -1.0;
         gravity = 0.045;
         if (field000a == 0 && field000c == 0) {
@@ -2106,7 +2106,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 161: // Nayuki original 0x00457483: aerial impact and trail reset
+    case 161: // Reviewed Nayuki state at 0x00457483
         if (field000a == 0 && field000c == 0) {
             ResetFrame();
             effect.type = 9;
@@ -2131,7 +2131,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 162: // Nayuki original at 0x00457597: staged aerial launch and impact
+    case 162: // Reviewed Nayuki state at 0x00457597
         if (field000a == 0 && field000c == 0) {
             ResetFrame();
         }
@@ -2174,7 +2174,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 163: // Nayuki original 0x00457782: aerial trail and landing recovery
+    case 163: // Reviewed Nayuki state at 0x00457782
         if (field000a == 0 && field000c == 0) {
             StartTrail(1);
             ResetFrame();
@@ -2207,7 +2207,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 164: // Original Nayuki 0x004578DD: trail2 falling dash/landing
+    case 164: // Reviewed Nayuki state at 0x004578DD
         StartTrail(2);
         if (field000a == 0 && field000c == 0)
             ResetFrame();
@@ -2241,7 +2241,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 165: // Nayuki original 0x00457A5B: staged 0x190 effect and airborne recoil
+    case 165: // Reviewed Nayuki state at 0x00457A5B
         if (field000a == 0 && field000c == 0) {
             if (field3148 > 7)
                 remainingHitCount = 1;
@@ -2282,7 +2282,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 166: // Nayuki original 0x00457C25: mirrored 0x190 emission and rebound
+    case 166: // Reviewed Nayuki state at 0x00457C25
         if (field000a == 0 && field000c == 0) {
             ResetFrame();
             if (field3148 > 4)
@@ -2323,7 +2323,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 167: // Nayuki original 0x00457DF2: stunned recovery with two effects
+    case 167: // Reviewed Nayuki state at 0x00457DF2
         if (field000a == 0 && field000c == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2364,7 +2364,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 168: // Nayuki original grounded effect state: grounded impact to state 0
+    case 168: // Reviewed Nayuki state at 0x00457FCC
         if (field000a == 0 && field000c == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2394,7 +2394,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 169: // Nayuki original grounded effect state: grounded impact to state 3
+    case 169: // Reviewed Nayuki state at 0x0045810C
         if (field000a == 0 && field000c == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2424,7 +2424,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 170: // Unreviewed inherited sibling logic, Makoto address 0x005: delayed stored-velocity release
+    case 170: // Reviewed Nayuki state at 0x0045824C
         if (field000a == 0 && field000c == 0) {
             field3138 = (int)(velocityX * 100.0);
             field313c = (int)(velocityY * 100.0);
@@ -2462,7 +2462,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 171: // Unreviewed inherited sibling logic, Makoto address 0x005: frozen hit, one immediate effect
+    case 171: // Reviewed Nayuki state at 0x00458415
         if (field000a == 0 && field000c == 0) {
             field3138 = (int)(velocityX * 100.0);
             field313c = (int)(velocityY * 100.0);
@@ -2475,10 +2475,18 @@ void Character10::Slot06()
             hitstunFrames = 90;
             SetTint(0xb0, 3);
         }
-        // This effect is also on pose zero, unlike reference characters.
-        if (field000a == 0 && field000c == 0) {
+        // The first impact effect occurs at frame 1, not on entry frame 0.
+        if (field000a == 1 && field000c == 0) {
             pendingContextSoundSlot = 18;
             effect.type = 1;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 2 && field000c == 0) {
+            effect.type = 4;
             effect.x = (double)(int)positionX;
             effect.y = (double)(int)positionY;
             effect.group = 2;
@@ -2492,6 +2500,7 @@ void Character10::Slot06()
             attackCollisionResult = 0;
             if (field000a >= timing.animationFrameCount) {
                 field0008 = 9;
+                FaceOpponent();
                 velocityX = (double)field3138 * 0.01;
                 velocityY = (double)field313c * 0.01;
                 gravity = 0.035;
@@ -2500,7 +2509,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 178: // Unreviewed inherited sibling logic, Makoto address 0x005: dash slide and jump cancel
+    case 178: // Reviewed Nayuki state at 0x00458665
         velocityX -= 0.03;
         velocityX = velocityX;
         if (velocityX < 0.0) {
@@ -2523,14 +2532,42 @@ void Character10::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a >= timing.animationFrameCount) {
-                field0008 = 7;
+                field0008 = 0;
                 ResetPose();
                 return;
             }
         }
         return;
 
-    case 180: // Unreviewed inherited sibling logic, Makoto address 0x005: trailing aerial landing
+    case 179: // Reviewed Nayuki state at 0x00458787
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 0 && field000c == 0) {
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount - 1)
+                FaceOpponent();
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1)
+                    field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 180: // Reviewed Nayuki state at 0x004588B1
         if (field000a == 0 && field000c == 0) {
             StartTrail(2);
             velocityX = 0.0;
@@ -2540,23 +2577,23 @@ void Character10::Slot06()
         if (positionY < 0.0) {
             velocityY += gravity;
         }
-        if (positionY + velocityY > 0.0 && field000a < 10) {
+        if (positionY + velocityY > 0.0 && field000a < 11) {
             ResetFrame();
             positionY = 0.0;
             field000c = 0;
-            field000a = 10;
+            field000a = 11;
             pendingContextSoundSlot = 9;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == 1) {
+            if (field000a == 4) {
                 velocityX = -0.5;
                 velocityY = -1.0;
                 gravity = 0.028;
             }
-            if (field000a == 10) {
+            if (field000a == 11) {
                 field000a = (unsigned short)(field000a - 2);
             }
             if (field000a >= timing.animationFrameCount) {
@@ -2566,7 +2603,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 200: // Unreviewed inherited sibling logic, Makoto address 0x005: dash-momentum attack
+    case 200: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if ((unsigned char)dashMomentumFlag == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2610,7 +2647,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 201: // Unreviewed inherited sibling logic, Makoto address 0x005: dash-momentum attack
+    case 201: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if ((unsigned char)dashMomentumFlag == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2654,7 +2691,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 202: // Unreviewed inherited sibling logic, Makoto address 0x005: local hit effect on advanced pose
+    case 202: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if ((unsigned char)dashMomentumFlag == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2695,7 +2732,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 203: // Unreviewed inherited sibling logic, Makoto address 0x005: repeatable charged hit
+    case 203: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if ((unsigned char)dashMomentumFlag == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2752,7 +2789,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 204: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded dash cancel and recovery
+    case 204: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if ((unsigned char)dashMomentumFlag == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2799,7 +2836,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 205: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded dash cancel and recovery
+    case 205: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if ((unsigned char)dashMomentumFlag == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2846,7 +2883,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 206: // Unreviewed inherited sibling logic, Makoto address 0x005: accelerating repeatable dash strike
+    case 206: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a < 2) {
             if ((unsigned char)dashMomentumFlag == 0) {
                 velocityX = 0.0;
@@ -2896,7 +2933,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 207: // Unreviewed inherited sibling logic, Makoto address 0x005: aerial attack with jump cancel
+    case 207: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         velocityY += gravity;
         if (inputY == -1 && field000a > 0 && field015c < 3 &&
             attackCollisionResult >= 2 && airActionCount == 0) {
@@ -2937,7 +2974,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 208: // Unreviewed inherited sibling logic, Makoto address 0x005: aerial attack with jump cancel
+    case 208: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         velocityY += gravity;
         if (inputY == -1 && field000a > 0 && field015c < 3 &&
             attackCollisionResult >= 2 && airActionCount == 0) {
@@ -2978,7 +3015,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 209: // Unreviewed inherited sibling logic, Makoto address 0x005: repeated aerial local attack
+    case 209: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         velocityY += gravity;
         if (inputY == -1 && field000a > 0 && field015c < 3 &&
             attackCollisionResult >= 2 && airActionCount == 0) {
@@ -3032,7 +3069,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 210: // Unreviewed inherited sibling logic, Makoto address 0x005: impact-driven crouch recovery
+    case 210: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3072,7 +3109,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 211: // Unreviewed inherited sibling logic, Makoto address 0x005: airborne pose-5 local hit effect
+    case 211: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         velocityY += gravity;
         if (inputY == -1 && field000a > 0 && field015c < 3 &&
             attackCollisionResult >= 2 && airActionCount == 0) {
@@ -3120,7 +3157,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 212: // Unreviewed inherited sibling logic, Makoto address 0x005: aerial bounce and landing flash
+    case 212: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         velocityY += gravity;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 30);
@@ -3162,7 +3199,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 213: // Unreviewed inherited sibling logic, Makoto address 0x005: upward hit recoil
+    case 213: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         gravity = 0.042;
         velocityY += gravity;
         if (field000a == 0 && field000c == 0) {
@@ -3181,7 +3218,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 214: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded hit flash and recovery
+    case 214: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         velocityX = 0.0;
         velocityY = 0.0;
         if (field000a == 0 && field000c == 0) {
@@ -3210,7 +3247,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 220: // Unreviewed inherited sibling logic, Makoto address 0x005: opponent grab and impact effect
+    case 220: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         velocityX = 0.0;
         velocityY = 0.0;
         dashMomentumFlag = 0;
@@ -3250,7 +3287,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 221: // Unreviewed inherited sibling logic, Makoto address 0x005: follow-through after opponent grab
+    case 221: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 1 && field000c == 0) {
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->ResetFrame();
@@ -3300,7 +3337,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 230: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded trail strike
+    case 230: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         StartTrail(3);
         dashMomentumFlag = 0;
         if (velocityX > 0.0) {
@@ -3332,7 +3369,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 231: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded trail strike
+    case 231: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         StartTrail(3);
         dashMomentumFlag = 0;
         if (velocityX > 0.0) {
@@ -3364,7 +3401,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 232: // Unreviewed inherited sibling logic, Makoto address 0x005: launched strike with landing shortcut
+    case 232: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         dashMomentumFlag = 0;
         StartTrail(3);
         if (field000a == 0 && field000c == 0) {
@@ -3408,7 +3445,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 248: // Unreviewed inherited sibling logic, Makoto address 0x005: airborne grab and opponent capture
+    case 248: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         velocityY += gravity;
         if (field000a == 1 && attackCollisionResult == 3) {
             (*opponentSlot)->ResetFrame();
@@ -3442,7 +3479,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 249: // Unreviewed inherited sibling logic, Makoto address 0x005: airborne throw and landing impact
+    case 249: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         field013e = 30;
         (*opponentSlot)->field013e = 30;
         dashMomentumFlag = 0;
@@ -3508,7 +3545,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 250: // Unreviewed inherited sibling logic, Makoto address 0x005: local special-effect finisher
+    case 250: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3538,7 +3575,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 251: // Unreviewed inherited sibling logic, Makoto address 0x005: local special-effect finisher
+    case 251: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3568,7 +3605,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 252: // Unreviewed inherited sibling logic, Makoto address 0x005: two-phase special effect finisher
+    case 252: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3621,7 +3658,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 253: // Unreviewed inherited sibling logic, Makoto address 0x005: pose-4 local impact finisher
+    case 253: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3651,7 +3688,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 254: // Unreviewed inherited sibling logic, Makoto address 0x005: pose-4 local impact finisher
+    case 254: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3681,7 +3718,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 256: // Unreviewed inherited sibling logic, Makoto address 0x005: aerial launcher and hit flash
+    case 256: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3732,7 +3769,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 257: // Unreviewed inherited sibling logic, Makoto address 0x005: aerial launcher and hit flash
+    case 257: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3783,7 +3820,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 258: // Unreviewed inherited sibling logic, Makoto address 0x005: two-wave aerial impact sequence
+    case 258: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3872,7 +3909,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 259: // Unreviewed inherited sibling logic, Makoto address 0x005: paired local impact effects
+    case 259: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3909,7 +3946,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 260: // Unreviewed inherited sibling logic, Makoto address 0x005: paired local impact effects
+    case 260: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3946,7 +3983,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 261: // Unreviewed inherited sibling logic, Makoto address 0x005: resource-backed paired effects
+    case 261: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -3995,7 +4032,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 262: // Unreviewed inherited sibling logic, Makoto address 0x005: slowed aerial local finisher
+    case 262: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             velocityX *= 0.25;
             velocityY *= 0.25;
@@ -4025,7 +4062,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 300: // Unreviewed inherited sibling logic, Makoto address 0x005: super sequence with frozen impact
+    case 300: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             velocityX = 0.0;
@@ -4081,7 +4118,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 301: // Unreviewed inherited sibling logic, Makoto address 0x005: super sequence with frozen impact
+    case 301: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             velocityX = 0.0;
@@ -4137,7 +4174,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 302: // Unreviewed inherited sibling logic, Makoto address 0x005: super sequence with frozen impact
+    case 302: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             velocityX = 0.0;
@@ -4193,7 +4230,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 303: // Unreviewed inherited sibling logic, Makoto address 0x005: extended super and repeated hit bursts
+    case 303: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -4331,7 +4368,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 304: // Unreviewed inherited sibling logic, Makoto address 0x005: extended super and repeated hit bursts
+    case 304: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -4470,7 +4507,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 305: // Unreviewed inherited sibling logic, Makoto address 0x005: extended super and repeated hit bursts
+    case 305: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             ResetFrame();
@@ -4613,7 +4650,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 306: // Unreviewed inherited sibling logic, Makoto address 0x005: sustained super impact and rise
+    case 306: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             if (field3138 == 0) {

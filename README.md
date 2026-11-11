@@ -78,14 +78,16 @@ Exact in `src/Character14Commands.cpp`; Nagamori's 12,277-byte
 are also fully Exact in `src/Character06Input.cpp` and
 `src/Character06Commands.cpp`. Their historical partial workbench
 probes are not the current source of truth. Shiori's 63,132-byte
-`Slot06`, Nagamori's 15,292-byte CPU `Slot05`,
+`Slot06`, Nayuki's 62,693-byte state `Slot06`,
 `Scene2::PrepareBattle` and Ikumi `Slot08` remain substantive
 unfinished owners. See [handoff](docs/RE_HANDOFF.md) for exact
 candidate paths, measurements and targeted next steps.
 
 Reader/audio integration is complete; accepted code lives in `src/`.
 
-Recent completed **large** owners include Makoto `Slot06`
+Recent completed **large** owners include Nayuki Slot07
+(20,517 code bytes plus 212 switch-data bytes), Nayuki Slot05
+(13,259 bytes), Nayuki Slot04 (10,605 bytes), Makoto `Slot06`
 (59,292 bytes including tables), Nagamori `Slot04` (12,277 bytes) and
 `Slot02` (4,917 bytes), and Ikumi `Slot02` (5,153 bytes); each has a
 complete target-bound exact receipt in `docs/evidence/`. The
@@ -93,7 +95,8 @@ complete target-bound exact receipt in `docs/evidence/`. The
 2,727 bytes. More functions, linked data and runtime semantics are
 still open. For current next actions and blockers, use the concise
 [receiving-agent handoff](docs/RE_HANDOFF.md), not historical session
-summaries.
+summaries. Nayuki Slot06 currently has a selected 29,139-byte native
+prefix, but remains NOT Exact; 19 live case labels 263–281 are missing.
 
 The last recorded compiler, linker, resource and native execution smoke checks
 passed. The original

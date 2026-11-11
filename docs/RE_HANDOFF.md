@@ -5,6 +5,38 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
+## Receiving agent — immediate next task (2026-11-11)
+
+**Primary unfinished boss:** Nayuki Character10 Slot06, NOT an accepted Exact
+unit. Read [the focused workbench handoff](../workbench/nayuki-state/README.md)
+before editing. The latest validated prefix is **29,139 / 62,693 code bytes**,
+**8,027 original instructions**, across **77 verified states**.
+Its selected test validates **707 internal branches**, **97 external branch
+destinations**, **747 nonlocal COFF call/float references**, and **2 local
+switch-table operands**. This is selected native prefix evidence only.
+
+**Next state is 200 at 0x00458A23**. First original-vs-candidate opcode-form
+difference: **0x00458A26** (function offset 0x71D6). The target loads
+byte [ecx+0x158], while the current unreviewed case200 follows an inherited
+timer path. The workbench contains **118 of the 137 live case labels**:
+**19 absent IDs 263–281**, plus 41 existing later case bodies that are
+still unverified. The canonical owner has a 0x2B4 stack frame; the
+focused partial probe currently has 0x264. Do not treat its neutral
+marker cases as accepted C++.
+
+Quick focused checks, without an all-unit cold replay:
+
+    git status --short --branch
+    scripts/repo-python scripts/verify-target.py
+    scripts/repo-python workbench/nayuki-state/check_prefix.py
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 200 --context 8
+    scripts/repo-python scripts/ci.py
+
+The ignored build/ and .analysis/ scratch can be recreated. Do **not**
+delete the canonical EFZ.exe, pinned Wine/compiler runtime, Ghidra project,
+accepted src/, tracked evidence, or dirty workbench source. Commit
+substantive work as gpt-web: xxx; do not push without authorization.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256
@@ -82,11 +114,11 @@ source src/Character10Cpu.cpp with proof
 docs/evidence/character-10-slot05-exact.json.
 Reproduce with the selected-only unit:
 scripts/repo-python scripts/replay-exact-units.py --unit character-10-slot05.
-The formerly dirty workbench and unfinished generic
-experiment were fully reconciled into the accepted
-source before retiring them. Whole-game linkage/runtime
-and the separate Nayuki Slot04 experiment are not
-included in this acceptance.
+The formerly dirty Slot05 workbench was reconciled
+into accepted source before retirement. Nayuki Slot04
+was separately completed and accepted as Exact; the
+remaining major Nayuki state boss is Slot06. Whole-game
+linkage and runtime equivalence remain open.
 
 
 Nayuki Character10::Slot02 is now full native strict
@@ -219,7 +251,7 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
-| Nayuki Character10::Slot06 state boss | 0x00451850, 62,693 original code bytes + 552/306-byte local tables | workbench/nayuki-state/ selected audit covers 27,132 original bytes / 7,486 original instructions through state 169 (72 reviewed live cases); 667 internal jumps, 89 canonical outbound targets, 693 original-bound non-switch COFF relocations and 2 local switch references. Partial compiler marker cases NOT accepted; candidate frame 0x24C vs native 0x2B4. Continue at 0x0045824C (state 170): 35,561 bytes open and 20 missing cases, NOT Exact. |
+| Nayuki Character10::Slot06 state boss | 0x00451850, 62,693 original code bytes + 552/306-byte local data | workbench/nayuki-state/ selected prefix: 29,139 bytes / 8,027 native instructions, 77 states, 707 internal and 97 valid outbound jumps, 747 original-bound nonlocal relocations plus 2 local table operands; original stack 0x2B4 (partial probe 0x264). Case labels present 118/137, absent 263–281 (19), other 41 unreviewed. Start state 200, 0x00458A23; mismatch at 0x00458A26. 33,554 code bytes open, NOT full Exact. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 
@@ -235,6 +267,16 @@ headers until its original codegen is resolved. Nagamori Slot07 and the Video
 pixel kernels also remain open; current Video candidates are in `src/`.
 
 ## Retention
+
+As of 2026-11-11, cleanup removed **365 stale root-level Wine reg*.tmp
+registry snapshots**, totaling 398,450,169 bytes (about 380 MiB), after
+checking for active Wine/compiler processes. The authoritative system.reg,
+user.reg, userdef.reg, pinned VC7.1 toolchain, Ghidra project, original EFZ.exe,
+tracked source/evidence and Git history were kept. Untracked build/ and
+.analysis/ caches plus Python bytecode were also cleared; subsequent
+verify-target, toolchain --check, selected Nayuki Slot06 native rebuild and
+lightweight CI all passed. If the next agent needs an ignored artifact, rerun
+the selected script rather than restoring the deleted cache.
 
 Keep necessary inputs, current results and useful knowledge. Historical cleanup
 archives, duplicate certificates, integrated drafts and superseded private

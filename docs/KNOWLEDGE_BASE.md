@@ -8,7 +8,9 @@ Use [PROGRESS.md](PROGRESS.md) and the ledgers for current acceptance, and
 apply to the pinned VC7.1 RTM 13.10.3077 and canonical EFZ target unless stated
 otherwise. Historical comparisons record their original inputs; obtain current
 exactness by rebuilding and comparing the selected unit. Disposable generated
-files are not required to use these findings.
+files are not required to use these findings. Older sections record historical
+intermediate candidate sizes and superseded progress counts; use the generated
+progress report, active handoff and selected native receipts for current status.
 
 ## Target identity
 
@@ -3024,56 +3026,57 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: reviewed 27,132-byte state boss prefix
+## Nayuki Character10 Slot06: reviewed 29,139-byte state boss prefix
 
-Nayuki original vtable Slot06 at 0x00788288 selects
-[0x00451850,0x00460D35), **62,693 original x86
-code bytes**, complete SHA-256
-4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-Directly following are the 138-entry/552-byte
-jump target array at 0x00460D35 and the
-306-byte compact selector at 0x00460F5D,
-covering 137 live and 169 default state IDs.
+Original vtable slot06 at 0x00788288 selects
+[0x00451850,0x00460D35), **62,693 original code bytes**,
+SHA-256 4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
+Adjacent local switch DATA is 552 bytes at 0x00460D35
+and 306 selector bytes at 0x00460F5D, with 137 live IDs
+and 169 default mappings.
 
-Natural C++ workbench/nayuki-state/Character10State.cpp
-reconstructs [0x00451850,0x0045824C), **27,132 original
-instruction bytes / 7,486 instructions**, original
-prefix SHA-256
-7f7dc354621912742a96787549560f9177abe51ab70f29d8f67dfef2a0325690.
-Authentic Nayuki work now covers the default
-state and **72 live cases**: 1–9, 13–16, 47,
-50–77, 81–87, 96–99, 123, 150–158, 161–169.
-Complex movement, hit reactions, wall bounce,
-impact sound, grouped effect state and knockdown
-transitions have been independently reviewed.
-Original state123 was reconstructed (absent from
-the sibling); states 163/164 use frame-sensitive
-trail/landing and original floating-point physics,
-and states 165/166 emit mirrored 0x190 particles
-with differing field3148 state thresholds.
-States 167–169 restore original hitstun, tint
-and effect dispatch.
+The partial natural C++ source is
+workbench/nayuki-state/Character10State.cpp.
+Reviewed code [0x00451850,0x00458A23) covers
+**29,139 bytes / 8,027 original x86 instructions**,
+SHA-256 5d806ca17e1c22319b18fc68100395b69414584e3110bf5834a7e1c8ed412850.
+The default branch and **77 live state bodies** are
+reviewed: 1–9, 13–16, 47, 50–77, 81–87, 96–99,
+123, 150–158, 161–171, 178–180.
+State 123 and 179 were authored separately from the
+original; state 180's landing/loop threshold is frame
+11 (not the inherited frame 10), with physics updated
+at frame 4. Mirrored 165/166 effects use different
+field3148 thresholds and velocities.
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 with selected
-workbench/nayuki-state/check_prefix.py validates
-**7,486 same-offset/same-width normalized original
-instruction forms**, with only the incomplete
-frame size (partial 0x24C vs original 0x2B4) different.
-It independently verifies **667 internal original
-branch targets, 89 valid outbound destinations,
-693 original-bound non-switch COFF references**,
-two local selector/table references and all
-72 canonical case entry addresses. The test
-uses explicitly UNACCEPTED marker branches for
-unreviewed later states; these placeholders do
-not contribute recovered native source.
+The reproducible single-owner
+workbench/nayuki-state/check_prefix.py uses pinned VC7.1
+/Od /G6 /MT /Gy /W3 to verify **8,027 same-offset,
+same-width normalized native instructions**,
+with only the incomplete candidate 0x264 stack
+allocation differing from the original 0x2B4 frame.
+It checks **707 original internal jumps**, **97
+valid outbound targets**, **747 original-bound
+nonlocal COFF call/IEEE-754 relocations**, two
+local switch-address operands and 77 case entries.
+Temporary marker cases generated for late unreviewed
+states are NOT recovered source.
 
-Continue at original 0x0045824C, state 170.
-**Not whole-function Exact:** 35,561 remaining
-code bytes, 20 original live cases absent from
-the larger workbench, full native frame, adjacent
-tables, remaining symbols and final return remain
-open. No all-unit cold replay.
+Current workbench holds **118/137 live original case
+labels**. The **19 missing labels are 263–281**; 41
+other existing later cases are still unreviewed
+sibling-derived hypotheses. At original
+**0x00458A23 (state 200)** the candidate again
+diverges: target opcode at 0x00458A26 loads
+byte [ecx+0x158], while the sibling candidate
+follows another path.
+
+**Not full Exact.** The 33,554 remaining code bytes,
+missing cases, full stack, switch tables and
+other original relocations and final return remain
+open. Continue with the commands in
+workbench/nayuki-state/README.md and docs/RE_HANDOFF.md.
+No all-unit cold replay.
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 
