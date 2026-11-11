@@ -1770,30 +1770,31 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano `Character20::Slot06` original vtable `0x00788C90` points to
-`[0x006429C0,0x006536B5)` (**68,853 code bytes**) and adjacent
-137-word switch destination and 316-byte selector data (136 live /
-180 default). The natural C++ in `workbench/kano-state/`
-reproduces `[0x006429C0,0x0064BECA)` = **38,154 native code bytes /
-10,466 x86 instructions**, SHA-256
-`e790ad12a48cb8263f331204afbecf7d29f12d45ccccffb07e156023a20e321b`.
-Default plus **97 original live states** now native-reviewed through232.
+Original Kano `Character20::Slot06` vtable at `0x00788C90` selects
+`[0x006429C0,0x006536B5)` (**68,853 code bytes**), plus 137
+four-byte switch destinations and 316 selector bytes (136 live,
+180 default). Authored C++ in `workbench/kano-state/` strictly matches
+`[0x006429C0,0x0064C212)` = **38,994 native code bytes /
+10,702 x86 instructions**, original-bound prefix SHA-256
+`83b434493f6966cac0d4d24f23cda2476878f3339d85efa82901a5d5419d3cf0`.
+Original default plus **100 native-reviewed live states** through235.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` strict selected verifier
-checks **10,466 native instruction offsets/widths/forms**, **985
-internal and 130 outbound native branch targets**, **865 original-
-bound COFF call/float references** and two local switch operands.
-Candidate0x130 stack vs canonical0x4A4 has equal six-byte instruction
-width with no position shift. This is selected original prefix only,
-**NOT full Exact**. **39 original live cases**, full native frame,
-switch data/return remain open.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected audit validates all
+**10,702 instruction offsets, lengths and normalized opcodes**,
+**1,008 internal / 133 outbound original branch targets**, **883
+independently original-bound nonlocal COFF calls/float operands** and
+both local table pointers. Candidate stack0x130 and original0x4A4
+have equal instruction width, no position normalization. Partial
+selected-prefix evidence ONLY: **NOT whole Exact**; 36 live states,
+complete stack, native tables, remaining relocs and return unresolved.
 
-New cases230,231,232 are independent trail/grounded strike bodies
-with X friction0.01, startup X1.2; strike activation on frame1/4/2,
-frame-gated jump cancels and collision clearing below frame3/6/3,
-respectively. All native calls/float payloads/branches compared.
-Next original case233 begins at `0x0064BECA`.
-No full cold replay or synthetic marker case acceptance.
+Newly reviewed states233–235 are 284/284/272 bytes: original
+`StartTrail(3)`, dash reset, X deceleration0.01, frame0 X=1.2,
+state3 completion; attack gates frame1 (233), frame2 (234,235),
+and original hit counts one/one/six. Case235 clears collision each
+frame advance, while 233/234 gate clear below frame3. **Next live
+state248 begins at `0x0064C212`**; IDs236–247 are native default.
+No all-unit cold replay or acceptance of neutral marker bodies.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 

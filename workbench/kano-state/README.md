@@ -8,32 +8,30 @@
 **136 live cases and 180 default IDs**.
 
 The authored natural C++ `Character20State.cpp` now contains
-original default and **97 reviewed live case bodies** through state232.
-The selected original `[0x006429C0,0x0064BECA)` covers **38,154
-native code bytes / 10,466 x86 instructions**, SHA-256
-`e790ad12a48cb8263f331204afbecf7d29f12d45ccccffb07e156023a20e321b`.
-Next native case233 starts at **`0x0064BECA`**.
+original default plus **100 native-reviewed live cases** through235.
+The strict original-bound prefix `[0x006429C0,0x0064C212)` spans
+**38,994 native code bytes / 10,702 x86 instructions**, SHA-256
+`83b434493f6966cac0d4d24f23cda2476878f3339d85efa82901a5d5419d3cf0`.
+Next original live state248 starts at **`0x0064C212`**; original
+case IDs236–247 are default selectors, NOT missing code bodies.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` original-bound checker verifies
-**10,466 original instruction positions/widths/normalized forms**,
-**985 internal / 130 outbound branch targets**, **865 nonlocal
-original-bound COFF call/IEEE-754 references** and two original
-switch table address operands. Incomplete compiler frame0x130 vs
-canonical0x4A4 has identical six-byte instruction width; no offset
-normalization is allowed. This is SELECTED PREFIX only, **NOT whole
-Exact**. **39 native live case bodies**, full original stack,
-local switch DATA, remaining relocs and common return remain OPEN.
-Temporary neutral probe markers have no source/Exact credit.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` checker independently verifies
+all **10,702 original instruction offsets/forms/widths**, **1,008
+internal and 133 outbound native branch targets**, **883 bound
+nonlocal COFF call/IEEE-754 operand references** plus both original
+local switch pointers. Partial candidate frame0x130 differs from
+canonical0x4A4 but both use identical six-byte instruction lengths
+(no address shift). SELECTED PREFIX only, **NOT full Exact**:
+**36 original live state bodies**, complete stack, switch DATA,
+remaining relocs and return remain OPEN. Probe marker cases unaccepted.
 
-Newly verified Kano states230/231/232 are complete 284/437/437-byte
-trail-strike variants. All call `StartTrail(3)`, clear dash momentum,
-apply horizontal friction0.01 and initialize velocityX=1.2. State230
-starts hit/sound21 on frame1. State231 starts its sound20/one hit on
-frame4 and state232 on frame2; both include genuine frame-gated
-upward jump cancel with directional state4/5/6 selection. The original
-collision-reset boundaries differ: below frame3 for 230 and232,
-below frame6 for231. Original float payloads, native branch offsets,
-virtual call ordering and exit to state0 were all checked.
+The original 233/234/235 are three complete Kano grounded trail
+strikes (284/284/272 bytes) with `StartTrail(3)`, X speed decay0.01,
+frame0 X=1.2/Y=0 and state3 recovery. 233 starts sound21/hit1 on
+frame1, 234 on frame2, 235 has frame2 sound21/**six hits** and
+unconditional collision clear on animation advance. The distinct
+frame condition and hit count are verified against canonical opcode
+structure, jump edges and original operands—not sibling assumptions.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -50,11 +48,11 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
-    scripts/repo-python workbench/kano-state/probe_prefix.py --through 233 --context 12
+    scripts/repo-python workbench/kano-state/probe_prefix.py --through 248 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case233 `0x0064BECA`**. Original
-0x4A4 frame, 39 unverified native cases, local switch DATA,
+Next work begins at **Kano case248 `0x0064C212`**. Original
+0x4A4 frame, 36 unverified native cases, local switch DATA,
 shared return and complete relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.

@@ -33,24 +33,24 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Original Kano state boss is **68,853 native code bytes**, actively
-recovered in `workbench/kano-state/Character20State.cpp`. Strict
-selected prefix **38,154 original code bytes / 10,466 native x86
-instructions**, default and **97 reviewed live cases** through232.
-The original-bound checker verifies **985 internal and 130 outbound
-branch targets**, **865 nonlocal bound COFF calls/IEEE-754 refs** and
-both native local switch table address references.
+Kano original `Slot06` is a **68,853-byte native state boss** actively
+reconstructed in `workbench/kano-state/Character20State.cpp`.
+Selected strict original-bound prefix now covers **38,994 bytes /
+10,702 x86 instructions**, original default plus **100 reviewed
+real live cases** through235. Independent audit validates **1,008
+internal and 133 outbound native jumps**, **883 original-bound
+nonlocal COFF call/IEEE-754 references** plus two original local
+switch table pointers. 233–235 are newly reviewed 284/284/272-byte
+trail strikes with native frame1/2 hit gates, hit1 vs six hits, and
+state3 recovery. **Next live case248 at `0x0064C212`**; IDs236–247
+map to native default, not missing owners.
 
-States230 (284 bytes), 231 (437 bytes), 232 (437 bytes) now restore
-Kano's grounded trail/friction attacks and directional jump cancel,
-with frame1/4/2 activation, original hit/sound gates and differing
-collision-reset thresholds. **Next original state233 at
-`0x0064BECA`**. Compiler partial stack0x130 vs native0x4A4 has
-same 6-byte instruction width, with no positional adjustment.
-**39 native cases**, full original stack, native selector DATA,
-remaining relocations and common return are OPEN; NOT whole Exact.
-Only scoped selected checks, no all-unit cold replay or push.
-Diagnostic markers do not count as authored cases.
+Incomplete stack0x130 vs native0x4A4 has equal six-byte instruction
+width and no position normalization. Remaining **36 original live
+states**, full stack, local tables, other relocs and common return
+OPEN. This is NOT whole-function Exact. Diagnostic marker cases have
+no acceptance credit. Only focused Kano checker/probe and fast CI;
+never all-unit cold replay or push.
 
 ## Additional newly accepted leaf owners
 
