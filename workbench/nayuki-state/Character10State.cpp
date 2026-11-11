@@ -3452,20 +3452,23 @@ void Character10::Slot06()
         }
         return;
 
-    case 248: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 248: // Reviewed Nayuki 0x0045B1EB: aerial grab and opponent impact positioning
         velocityY += gravity;
         if (field000a == 1 && attackCollisionResult == 3) {
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
+            ResetPose();
             ResetFrame();
-            (*opponentSlot)->airActionDisabled = 1;
-            field000a = 0;
-            field000c = 0;
             field0008 = 249;
-            (*opponentSlot)->field0008 = 110;
-            (*opponentSlot)->positionY = positionY;
-            (*opponentSlot)->positionX = positionX + (double)((int)facing * 19);
-            return;
+            (*opponentSlot)->field0008 = 100;
+            effect.type = 0;
+            effect.x = (double)((int)positionX + (int)facing * 33);
+            effect.y = (double)((int)positionY - 51);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 33);
+            (*opponentSlot)->positionY = positionY - 61.0;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
@@ -3480,8 +3483,8 @@ void Character10::Slot06()
             }
             attackCollisionResult = 0;
             if (field000a >= timing.animationFrameCount) {
-                field0008 = 211;
-                field000a = 1;
+                field0008 = 209;
+                field000a = 2;
             }
         }
         return;

@@ -7,34 +7,35 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki Character10 Slot06 remains an unfinished **62,693-byte**
-native state boss, not whole-function Exact. Its focused source/handoff:
+Nayuki Character10 Slot06 remains the unfinished **62,693-byte**
+native state boss, **not whole-function Exact**. Focused source/handoff:
 [`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
 
-Reviewed selected original-bound prefix is **39,323 code bytes /
-10,794 instructions**, default plus **97 live cases**. Its checker
-verifies **1,002 original internal branches**, **143 outbound targets**,
-**865 nonlocal original-bound COFF references** and 2 local switch
-operands. Partial frame 0x298 vs canonical 0x2B4. Newly recovered
-states 213,214,220,221,230,231,232 extend the complete compared prefix.
+The selected original-bound prefix is **39,821 original bytes /
+10,933 instructions**, default plus **98 live cases**, with
+**1,011 original internal branches**, **144 outbound destinations**,
+**872 original-bound nonlocal COFF references** and two local switch
+operands. Partial frame is 0x2A4 versus original 0x2B4.
+Original state248 (498 bytes) now restores Nayuki-specific opponent
+resets, aerial grab impact/positioning and state209 timeout path.
 
-**Next state248 begins 0x0045B1EB.** The workbench has 118 of 137
-original live case labels: 97 reviewed, 21 existing unreviewed,
-19 missing (IDs 263–281). Full function, switch data, final
-relocations and common return remain open. Probe markers do not
-constitute reconstructed source.
+**Next original state249 at 0x0045B3DD**, first opcode disagreement
+at 0x0045B3E0. Source has 118 of 137 original live states:
+98 reviewed, 20 existing unreviewed and 19 missing IDs 263–281.
+This is a strict prefix, NOT whole Exact; local switch tables, remaining
+relocations, original return and full frame are open.
 
 Only selected checks, **never all-unit cold replay**:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 248 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 249 --context 12
     scripts/repo-python scripts/ci.py
 
-Reconcile all dirty changes; no other writer. Preserve private
-original, pinned VC7.1/Wine, Ghidra, accepted source and workbench.
-Commit substantial checkpoints as `gpt-web: xxx`, without push.
+Reconcile every dirty edit; no concurrent writer. Preserve original,
+pinned VC7.1/Wine, Ghidra, accepted source and unfinished workbench.
+Commit substantial progress as `gpt-web: xxx`; never push without permission.
 
 ## Additional newly accepted leaf owners
 
