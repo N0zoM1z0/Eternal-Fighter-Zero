@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "authority": "Original Mio Character11 virtual Slot01 selected by canonical vtable entry 0x00788880; independently reviewed full 975-byte native owner 0x0058D6E0..0x0058DAAF and all 8 native direct call destinations",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles authored natural C++ src/Character11Render.cpp with the original two sprite-gauge rendering paths. The selected-only native oracle compares all 975 code bytes of the complete original owner with independently reviewed original COFF REL32 targets for 6 MakeSurfaceRect calls at 0x0040C590 and 2 Video::DrawSurface calls at 0x00409A90. Zero differences; does not depend on status of the unaccepted Video rendering callee itself. Not whole-product linkage/runtime parity; no cold all-unit replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 975,
+      "matched_bytes": 975,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 85,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D735 independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 195,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D7A3 independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 298,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D80A independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 450,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D8A2 independently resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 527,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D8EF independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 664,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D978 independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 791,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D9F7 independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 967,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058DAA7 independently resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "bbae4135c2d76403709ff1282724f0b70b5e0fb5e5c634db1cd03d0d14ceea6f",
+      "target_extent_sha256": "bbae4135c2d76403709ff1282724f0b70b5e0fb5e5c634db1cd03d0d14ceea6f",
+      "unit": "character-11-slot01",
+      "symbol": "?Slot01@Character11@@UAEXXZ",
+      "target_address": "0x0058D6E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "6c5d3e2a41008f7203def714cbc0ce0b5d70c2236da39497915b1cb02669f3de",
+      "object_sha256": "f0f476ebefd3e3b09729269c69feba49aea9cb9a317af23fd26f4e3ab7046a16",
+      "source_sha256": "240a18def635f35830291875affc9bdc661546087d55f0e150a9924f4593a5fa",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9d2bb92f6ed240c0a20c4d5bcef026aaac59ee2ba04d26200ef523e6a1725ca0",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "32293474628cf2f8b66fb9c7838fde93158447f15949de0dc496a63fbfa4e08c",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -154,6 +154,17 @@ pass selected strict replay with zero differences.
 Evidence: `docs/evidence/character-12-slot08-exact.json`.
 Only this unit was replayed, no all-unit cold replay.
 
+Mio `Character11::Slot01` is now a **complete native Exact
+975-byte dual sprite-gauge render function** in
+`src/Character11Render.cpp`. It reads original pattern 43/44 frame0,
+computes real source/destination rectangles and draws to Video using
+the original two direct calls. All **8 original COFF REL32 targets**
+(six MakeSurfaceRect and two DrawSurface) are independently bound;
+975/975 native code bytes match, no differences. The called Video
+render routine remains separately unaccepted. Proof:
+`docs/evidence/character-11-slot01-exact.json`.
+Selected one-unit replay only; no cold all-unit replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

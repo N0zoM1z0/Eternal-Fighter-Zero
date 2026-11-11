@@ -2358,6 +2358,34 @@ The constructor, its called switch owner and all original source
 extents are accepted **independently**, not by assuming the call
 produces runtime-equivalent behavior for the entire game.
 
+### Mio Character11 Slot01: 975-byte two-gauge render Exact
+
+Canonical Mio `Character11` vtable slot1 at `0x00788880` points to
+the full **975-byte** native `Character11::Slot01`, original
+`[0x0058D6E0,0x0058DAAF)`. Natural C++ in `src/Character11Render.cpp`
+implements **two real sprite-gauge render variants** selected by
+field3150==0 or1. Each takes original `patterns[43/44].frames[0]`,
+constructs source and left-/right-facing destination rectangles
+using `frame.u/v/width/height`, and calls the original
+`Video::DrawSurface` with selected texture and color key.
+
+The pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected strict replay proves
+**975/975 native code bytes, 8 independently original-bound COFF
+REL32 operands, and zero differences**. The six real
+`MakeSurfaceRect` call sites resolve to 0x0040C590; two
+`Video::DrawSurface` calls resolve to 0x00409A90. The latter callee
+is separately not yet accepted as Exact; this proof is specifically
+the complete *caller* function, with native callee binding original-
+bound. All source control-flow and nonrelocated machine bytes match.
+
+Original sprite positions for the player==0 branch use 45-frame.u,
+31-frame.v. The alternate player branch uses
+(frame.u+275)-frame.width,31-frame.v, preserving source/destination
+and texture selection, stack layout and draw ordering.
+Proof: `docs/evidence/character-11-slot01-exact.json`.
+Whole Windows runtime linkage, native video callee reconstruction and
+portability remain separately open.
+
 ### Mio Character11 lifecycle: six complete native Exact owners
 
 The original Mio `Character11` vtable at `0x0078887C` identifies six

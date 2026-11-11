@@ -161083,3 +161083,69 @@ type = "REL32"
 symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
 target = 0x00407100
 evidence = "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D271F independently binds ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z to 0x00407100; source std C++ and original operand values reviewed"
+
+[units.character-11-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character11Render.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-11-slot01/Character11Render.obj"
+symbol = "?Slot01@Character11@@UAEXXZ"
+target_address = 0x0058D6E0
+size = 975
+
+[[units.character-11-slot01.relocations]]
+offset = 85
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D735 independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-11-slot01.relocations]]
+offset = 195
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D7A3 independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-11-slot01.relocations]]
+offset = 298
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D80A independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-11-slot01.relocations]]
+offset = 450
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D8A2 independently resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90"
+
+[[units.character-11-slot01.relocations]]
+offset = 527
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D8EF independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-11-slot01.relocations]]
+offset = 664
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D978 independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-11-slot01.relocations]]
+offset = 791
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058D9F7 independently resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-11-slot01.relocations]]
+offset = 967
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058DAA7 independently resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90"

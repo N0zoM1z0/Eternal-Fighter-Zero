@@ -337,7 +337,7 @@ address,origin,status,evidence
 0x00588610,authored,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
 0x00588660,authored,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
 0x00588680,unknown,unreviewed,
-0x0058D6E0,unknown,unreviewed,
+0x0058D6E0,authored,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-slot01-exact
 0x0058DAB0,authored,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
 0x0058DAC0,authored,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
 0x0058DAF0,unknown,unreviewed,
