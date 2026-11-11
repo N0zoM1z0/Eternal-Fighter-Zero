@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "authority": "Seven complete Character13 Kaori virtual/lifecycle code owners at canonical EFZ.exe vtable 0x00788BF8, reviewed full boundaries and original-bound COFF relocation destinations",
+  "method": "Pinned VC7.1 RTM /Od /G6 /MT /Gy /W3 compiles normal natural C++ in src/Character13Lifecycle.cpp. Original vtable binds each reviewed owner and all five direct call displacements bind independently to accepted Secondary methods. Strict selected-only oracle replays every COFF relocation and compares every byte of all seven complete target functions with zero differences. No synthetic padding, partial prefix, masked relocations or full cold replay. Does not establish whole-game linkage or runtime equivalence.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 283,
+      "matched_bytes": 283,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 275,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "Canonical EFZ.exe: Character13 vtable entry 0x00788C28 selects complete 0x00638F10 owner; original call field at 0x00639023 resolves reviewed ?InitializeState@Secondary@@UAEXXZ 0x0040EDF0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "68945ba44d4ad67aad92426219cc87012e3da7de3898efc01c994d6b78a9e231",
+      "target_extent_sha256": "68945ba44d4ad67aad92426219cc87012e3da7de3898efc01c994d6b78a9e231",
+      "unit": "character-13-initialize-state",
+      "symbol": "?InitializeState@Character13@@UAEXXZ",
+      "target_address": "0x00638F10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "20b644b46336a2e0adb7af61ba260165aaf13538bd6837013ac623560e73ca46",
+      "object_sha256": "1231935ad83472c0f33ecd5bf6a1f456371213981729863cbc94ae4413cf6ddb",
+      "source_sha256": "75cd657175d91088965ed19f04d07dd3025e326ca9c46262a045658d4393a69e",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e2562ef8f6806b0b2fb76ce504dda6c36e800a3a0c2f3af29f00f4fc45d1fc26",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "59a6bde70258f4a69739400c31827b40a90612e573a2c0366be6d0bd1075a3e8",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "Canonical EFZ.exe: Character13 vtable entry 0x00788BF8 selects complete 0x00639030 owner; original call field at 0x00639062 resolves reviewed ?ResetPose@Secondary@@UAEXXZ 0x0040F110",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "defc0505821ab7ef9c6ff655aa64e18fcf7a476c5b83e90a62364c798676eb69",
+      "target_extent_sha256": "defc0505821ab7ef9c6ff655aa64e18fcf7a476c5b83e90a62364c798676eb69",
+      "unit": "character-13-reset-pose",
+      "symbol": "?ResetPose@Character13@@UAEXXZ",
+      "target_address": "0x00639030",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "20b644b46336a2e0adb7af61ba260165aaf13538bd6837013ac623560e73ca46",
+      "object_sha256": "9f9866cda7c9a8241414f01e8ae827abd1d8799eaaa97e27e5f64ddc91bba80f",
+      "source_sha256": "75cd657175d91088965ed19f04d07dd3025e326ca9c46262a045658d4393a69e",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e2562ef8f6806b0b2fb76ce504dda6c36e800a3a0c2f3af29f00f4fc45d1fc26",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b1843e06b77d52c53d7d7efdc063542b39c522d8323885d779e34c67acbff948",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "Canonical EFZ.exe: Character13 vtable entry 0x00788C20 selects complete 0x00639070 owner; original call field at 0x006390B6 resolves reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z 0x00412E60",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0e86c5fc1bc1c59918f7db2ced7809e3fadb3e60d3fd4510dfbab308f415f4ff",
+      "target_extent_sha256": "0e86c5fc1bc1c59918f7db2ced7809e3fadb3e60d3fd4510dfbab308f415f4ff",
+      "unit": "character-13-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character13@@UAEXF@Z",
+      "target_address": "0x00639070",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "20b644b46336a2e0adb7af61ba260165aaf13538bd6837013ac623560e73ca46",
+      "object_sha256": "0b043a0839f863f53a00b8a7523a71d44cb10e1661e99ad6e361d636fda5f813",
+      "source_sha256": "75cd657175d91088965ed19f04d07dd3025e326ca9c46262a045658d4393a69e",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e2562ef8f6806b0b2fb76ce504dda6c36e800a3a0c2f3af29f00f4fc45d1fc26",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "4bc2232a3a6ac2fa9853a9f2dcf90fa50b3339740cc0c48e9abca59f0d701d6e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "Canonical EFZ.exe: Character13 vtable entry 0x00788C04 selects complete 0x006390C0 owner; original call field at 0x006390CB resolves reviewed ?UpdateLocomotionState@Secondary@@QAEXXZ 0x0040E740",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "702dcab869afea02ade0992e37e68c3da810fcd4d941b26e2be0f6b5ac71a7b6",
+      "target_extent_sha256": "702dcab869afea02ade0992e37e68c3da810fcd4d941b26e2be0f6b5ac71a7b6",
+      "unit": "character-13-slot03",
+      "symbol": "?Slot03@Character13@@UAEXXZ",
+      "target_address": "0x006390C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "20b644b46336a2e0adb7af61ba260165aaf13538bd6837013ac623560e73ca46",
+      "object_sha256": "a39fd265822f4e4eb6f2dfb022952270a9741ab12b3dda4626f6cf02a3746dc4",
+      "source_sha256": "75cd657175d91088965ed19f04d07dd3025e326ca9c46262a045658d4393a69e",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e2562ef8f6806b0b2fb76ce504dda6c36e800a3a0c2f3af29f00f4fc45d1fc26",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "32e8d55dbeea6263090e92a018a47c8f4d300fd55fc65274437eb52b1a160982",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "character-13-slot01",
+      "symbol": "?Slot01@Character13@@UAEXXZ",
+      "target_address": "0x0063B610",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "20b644b46336a2e0adb7af61ba260165aaf13538bd6837013ac623560e73ca46",
+      "object_sha256": "9246d564581ffea94a57032957edd0d9f55db4a649fab020a516e72e2456ba63",
+      "source_sha256": "75cd657175d91088965ed19f04d07dd3025e326ca9c46262a045658d4393a69e",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e2562ef8f6806b0b2fb76ce504dda6c36e800a3a0c2f3af29f00f4fc45d1fc26",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "aa4be5a8fe897bf645052f3c3980edcef959cefc11acd5c7fa31e8c3fc9be64a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "character-13-slot08",
+      "symbol": "?Slot08@Character13@@UAEXXZ",
+      "target_address": "0x0063B620",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "20b644b46336a2e0adb7af61ba260165aaf13538bd6837013ac623560e73ca46",
+      "object_sha256": "a8c4360d66b0354cd4ca549c2c79e343c648432358adc735697747de317eeb2f",
+      "source_sha256": "75cd657175d91088965ed19f04d07dd3025e326ca9c46262a045658d4393a69e",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e2562ef8f6806b0b2fb76ce504dda6c36e800a3a0c2f3af29f00f4fc45d1fc26",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8d263c7b82d153241620400a0c8d738eafced26e9d08b51e111cc2fda53301fb",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "Canonical EFZ.exe: Character13 vtable entry 0x00788C1C selects complete 0x0063B630 owner; original call field at 0x0063B655 resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z 0x00412B10",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8adc784e15dd437a7932ab422306b5f0a5f292338ddcba9b510b08d707b81be8",
+      "target_extent_sha256": "8adc784e15dd437a7932ab422306b5f0a5f292338ddcba9b510b08d707b81be8",
+      "unit": "character-13-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character13@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x0063B630",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "20b644b46336a2e0adb7af61ba260165aaf13538bd6837013ac623560e73ca46",
+      "object_sha256": "14307da51f128eaa0807413c4f931431f494d95cdd55ec8499a635e2b0db6ff9",
+      "source_sha256": "75cd657175d91088965ed19f04d07dd3025e326ca9c46262a045658d4393a69e",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e2562ef8f6806b0b2fb76ce504dda6c36e800a3a0c2f3af29f00f4fc45d1fc26",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "feb4397ba12992589048a9ba5a8be61d658631f4e6bcc873396a96d835d51f2e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -387,3 +387,10 @@ address,name,source,symbol,status,evidence
 0x00461460,Character10::Slot04,src/Character10Action.cpp,?Slot04@Character10@@UAEXXZ,complete,docs/evidence/character-10-slot04-exact.json
 0x00463DD0,Character10::Slot01,src/Character10Render.cpp,?Slot01@Character10@@UAEXXZ,complete,docs/evidence/character-10-slot01-exact.json
 0x00468870,Character10::Slot07,src/Character10Effects.cpp,?Slot07@Character10@@UAEXXZ,complete,docs/evidence/character-10-slot07-exact.json
+0x00638F10,Character13::InitializeState,src/Character13Lifecycle.cpp,?InitializeState@Character13@@UAEXXZ,complete,docs/evidence/character-13-lifecycle-exact.json
+0x00639030,Character13::ResetPose,src/Character13Lifecycle.cpp,?ResetPose@Character13@@UAEXXZ,complete,docs/evidence/character-13-lifecycle-exact.json
+0x00639070,Character13::RemoveLocalEffect,src/Character13Lifecycle.cpp,?RemoveLocalEffect@Character13@@UAEXF@Z,complete,docs/evidence/character-13-lifecycle-exact.json
+0x006390C0,Character13::Slot03,src/Character13Lifecycle.cpp,?Slot03@Character13@@UAEXXZ,complete,docs/evidence/character-13-lifecycle-exact.json
+0x0063B610,Character13::Slot01,src/Character13Lifecycle.cpp,?Slot01@Character13@@UAEXXZ,complete,docs/evidence/character-13-lifecycle-exact.json
+0x0063B620,Character13::Slot08,src/Character13Lifecycle.cpp,?Slot08@Character13@@UAEXXZ,complete,docs/evidence/character-13-lifecycle-exact.json
+0x0063B630,Character13::EmitLocalEffect,src/Character13Lifecycle.cpp,?EmitLocalEffect@Character13@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-13-lifecycle-exact.json

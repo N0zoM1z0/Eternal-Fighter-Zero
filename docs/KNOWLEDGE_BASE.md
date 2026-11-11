@@ -1530,6 +1530,43 @@ complete target bytes. The new public receipts are
 certificates were left unchanged; unrelated `CharacterViews.h` users still
 have earlier stale dependency metadata and were not cold-replayed.
 
+### Kaori Character13 lifecycle and virtual delegates
+
+The original `Character13` Kaori vtable at `0x00788BF8` and canonical
+complete function boundaries identify **seven additional authored Exact
+owners** with ordinary C++ in `src/Character13Lifecycle.cpp`. Pinned
+VC7.1 `/Od /G6 /MT /Gy /W3` selected strict comparisons reproduced
+**509/509 original machine-code bytes**, five independently bound
+nonlocal call relocations, and **zero byte differences**:
+
+| Kaori owner | Target | Exact bytes |
+| --- | --- | ---: |
+| InitializeState | `0x00638F10` | 283 |
+| ResetPose | `0x00639030` | 58 |
+| RemoveLocalEffect | `0x00639070` | 80 |
+| Slot03 | `0x006390C0` | 19 |
+| Slot01 | `0x0063B610` | 11 |
+| Slot08 | `0x0063B620` | 11 |
+| EmitLocalEffect | `0x0063B630` | 47 |
+
+Original initializer zeroes five character integers, writes all ten
+collision offset shorts, clears each of three 64-int arrays, and invokes
+`Secondary::InitializeState` (`0x0040EDF0`). The reset clears just
+three child integers before `Secondary::ResetPose` (`0x0040F110`).
+Effect removal clears three arrays indexed by signed `short` before
+`Secondary::RemoveLocalEffect` (`0x00412E60`); emission calls its
+virtual removal on `effectWrite`, then the base emitter (`0x00412B10`).
+Slot03 delegates to `UpdateLocomotionState` (`0x0040E740`); Slot01 and
+Slot08 are authentic empty member overrides with 11 bytes each.
+
+All seven original vtable entries, complete function extents, nonlocal
+call operands and return instructions were reviewed before registering
+Exact. Source uses the accepted Character13 class layout without
+changing any shared header or accepted other owners. The public strict
+selected receipts are `docs/evidence/character-13-lifecycle-exact.json`.
+These seven codegen results do not demonstrate full game linkage,
+runtime or portability.
+
 ### MizukaB constructor: complete exact native code generation (2026-11-09)
 
 The reviewed selection-ID 18 constructor `Character18::Character18` at

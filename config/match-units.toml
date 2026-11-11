@@ -139904,3 +139904,108 @@ type = "DIR32"
 symbol = "$L62941"
 target = 0x0046D874
 evidence = "Canonical EFZ.exe address 0x0046D901: original local compiler switch-table or owned code label; COFF DIR32 $L62941 -> 0x0046D874, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[units.character-13-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character13Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-13-initialize-state/Character13Lifecycle.obj"
+symbol = "?InitializeState@Character13@@UAEXXZ"
+target_address = 0x00638F10
+size = 283
+
+[[units.character-13-initialize-state.relocations]]
+offset = 275
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Canonical EFZ.exe: Character13 vtable entry 0x00788C28 selects complete 0x00638F10 owner; original call field at 0x00639023 resolves reviewed ?InitializeState@Secondary@@UAEXXZ 0x0040EDF0"
+
+[units.character-13-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character13Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-13-reset-pose/Character13Lifecycle.obj"
+symbol = "?ResetPose@Character13@@UAEXXZ"
+target_address = 0x00639030
+size = 58
+
+[[units.character-13-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Canonical EFZ.exe: Character13 vtable entry 0x00788BF8 selects complete 0x00639030 owner; original call field at 0x00639062 resolves reviewed ?ResetPose@Secondary@@UAEXXZ 0x0040F110"
+
+[units.character-13-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character13Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-13-remove-local-effect/Character13Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character13@@UAEXF@Z"
+target_address = 0x00639070
+size = 80
+
+[[units.character-13-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Canonical EFZ.exe: Character13 vtable entry 0x00788C20 selects complete 0x00639070 owner; original call field at 0x006390B6 resolves reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z 0x00412E60"
+
+[units.character-13-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character13Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-13-slot03/Character13Lifecycle.obj"
+symbol = "?Slot03@Character13@@UAEXXZ"
+target_address = 0x006390C0
+size = 19
+
+[[units.character-13-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "Canonical EFZ.exe: Character13 vtable entry 0x00788C04 selects complete 0x006390C0 owner; original call field at 0x006390CB resolves reviewed ?UpdateLocomotionState@Secondary@@QAEXXZ 0x0040E740"
+
+[units.character-13-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character13Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-13-slot01/Character13Lifecycle.obj"
+symbol = "?Slot01@Character13@@UAEXXZ"
+target_address = 0x0063B610
+size = 11
+
+[units.character-13-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character13Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-13-slot08/Character13Lifecycle.obj"
+symbol = "?Slot08@Character13@@UAEXXZ"
+target_address = 0x0063B620
+size = 11
+
+[units.character-13-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character13Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-13-emit-local-effect/Character13Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character13@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x0063B630
+size = 47
+
+[[units.character-13-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Canonical EFZ.exe: Character13 vtable entry 0x00788C1C selects complete 0x0063B630 owner; original call field at 0x0063B655 resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z 0x00412B10"

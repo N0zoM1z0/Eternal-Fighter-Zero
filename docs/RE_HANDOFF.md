@@ -36,6 +36,19 @@ Reconcile all dirty changes; no other writer. Preserve private
 original, pinned VC7.1/Wine, Ghidra, accepted source and workbench.
 Commit substantial checkpoints as `gpt-web: xxx`, without push.
 
+## Additional newly accepted leaf owners
+
+Kaori `Character13` now has seven complete strict Exact normal-C++
+virtual/lifecycle owners in `src/Character13Lifecycle.cpp`: full
+283-byte initializer, 58-byte reset, 80-byte effect removal,
+19-byte Slot03, two 11-byte delegates and 47-byte emitter.
+All **509/509 original bytes**, five original-bound direct call
+relocations, seven vtable targets and reviewed function boundaries
+are confirmed by selected replay. Evidence:
+`docs/evidence/character-13-lifecycle-exact.json`. No shared header
+or accepted constructor was edited. Targeted unit IDs start with
+`character-13-`; no full cold replay was run.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

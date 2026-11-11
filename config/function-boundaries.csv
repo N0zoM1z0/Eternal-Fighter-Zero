@@ -418,3 +418,10 @@ address,end,size,status,evidence
 0x00463DD0,0x0046417B,939,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot01-render-exact
 0x00468870,0x0046D969,20729,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot07-effects-exact
 0x00451850,0x00460D35,62693,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot06-state-prefix
+0x00638F10,0x0063902B,283,reviewed,docs/KNOWLEDGE_BASE.md#kaori-character13-lifecycle-and-virtual-delegates
+0x00639030,0x0063906A,58,reviewed,docs/KNOWLEDGE_BASE.md#kaori-character13-lifecycle-and-virtual-delegates
+0x00639070,0x006390C0,80,reviewed,docs/KNOWLEDGE_BASE.md#kaori-character13-lifecycle-and-virtual-delegates
+0x006390C0,0x006390D3,19,reviewed,docs/KNOWLEDGE_BASE.md#kaori-character13-lifecycle-and-virtual-delegates
+0x0063B610,0x0063B61B,11,reviewed,docs/KNOWLEDGE_BASE.md#kaori-character13-lifecycle-and-virtual-delegates
+0x0063B620,0x0063B62B,11,reviewed,docs/KNOWLEDGE_BASE.md#kaori-character13-lifecycle-and-virtual-delegates
+0x0063B630,0x0063B65F,47,reviewed,docs/KNOWLEDGE_BASE.md#kaori-character13-lifecycle-and-virtual-delegates
