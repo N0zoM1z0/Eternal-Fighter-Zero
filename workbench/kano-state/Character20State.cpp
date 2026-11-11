@@ -1720,5 +1720,91 @@ void Character20::Slot06()
         }
         return;
 
+    case 96: // Native-reviewed Kano wake-up or impact 0x005ED2CB: stand/crouch wakeup timing
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            // Face one frame before the animation ends, not at the end.
+            if (field000a == timing.animationFrameCount - 1) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 97: // Native-reviewed Kano wake-up or impact 0x005ED360: first impact flash
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 0 && field000c == 0) {
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 99;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 98: // Native-reviewed Kano wake-up or impact 0x005ED458: separately dispatched impact flash
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 0 && field000c == 0) {
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 99;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 99: // Native-reviewed Kano 0x00647980: timed wake-up with conditional health gate
+        ++field000c;
+        dashMomentumFlag = 0;
+        if (health > 0 && field000c > 99 && field000a == 0) {
+            field0008 = 96;
+            ResetPose();
+        }
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount)
+                FaceOpponent();
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 96;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

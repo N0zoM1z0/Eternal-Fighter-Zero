@@ -14,8 +14,8 @@ from native_build import compile_source
 from coff import object_function
 from probe_prefix import BASE,CODE_SIZE,PROBE,OBJECT,disasm,normalized,make_source
 
-END=0x006476FB # first instruction of native case13, after nine full authored cases
-NATIVE_CODE_SHA="064c3c64368d4a5cbedc833b3feaafb2589832bcf6e4c8676f06b85b68b64156"
+END=0x00647A3A # first instruction of native case13, after nine full authored cases
+NATIVE_CODE_SHA="8566a57cefe15e360f84466889a9e171e44f03ba6b411f50fb4b7a763cc69d28"
 CALLS={
 '??0EffectSpawn@@QAE@XZ':0x00405490,
 '?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z':0x00413090,
@@ -23,6 +23,7 @@ CALLS={
 '?CollisionSide@Secondary@@QAEDXZ':0x0040FF70,
 '__ftol2':0x007783B8,
 '?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z':0x00407100,
+'?SetVerticalShake@Secondary@@QAEXHH@Z':0x00410A10,
 }
 
 def main():
@@ -30,10 +31,10 @@ def main():
     assert struct.unpack('<I',target_bytes(image,0x00788C90,4))[0]==BASE
     prefix=target_bytes(image,BASE,END-BASE)
     original=target_bytes(image,BASE,CODE_SIZE)
-    assert len(prefix)==19771 and len(original)==68853
+    assert len(prefix)==20602 and len(original)==68853
     assert hashlib.sha256(prefix).hexdigest()==NATIVE_CODE_SHA
-    used=make_source(87)
-    assert used==set(range(1,10))|{13,14,15,16,47}|set(range(50,78))|set(range(81,88)),used
+    used=make_source(99)
+    assert used==set(range(1,10))|{13,14,15,16,47}|set(range(50,78))|set(range(81,88))|set(range(96,100)),used
     try:
         compile_source(PROBE,OBJECT,['/Od','/G6','/MT','/Gy','/W3'],
                        ROOT/'.analysis/build/kano-state-selected-prefix.log')
@@ -43,7 +44,7 @@ def main():
     target,compiled=disasm(prefix),disasm(code)
     assert len(compiled)>len(target)
     assert target[2][2]=='sub esp,0x4a4'
-    assert compiled[2][2]=='sub esp,0xc4'
+    assert compiled[2][2]=='sub esp,0xd4'
     assert target[2][0]==compiled[2][0]==3
     # The real full boss reserves 0x4A4 of local stack. The incomplete
     # candidate currently reserves 0x90; both prologues use the same six-byte
@@ -56,7 +57,7 @@ def main():
         assert len(a[1])==len(b[1]),(i,a,b)
         assert normalized(a[2])==normalized(b[2]),(i,a,b)
     assert compiled[len(target)][0]+shift==len(prefix)
-    assert len(target)==5428,len(target)
+    assert len(target)==5664,len(target)
 
     original_pos={x[0]:i for i,x in enumerate(target)}
     compiled_pos={x[0]:i for i,x in enumerate(compiled)}
@@ -73,7 +74,7 @@ def main():
             internal+=1
             assert original_pos[dst]==compiled_pos.get(local),(a,b)
         else:outbound+=1
-    assert (internal,outbound)==(501,58),(internal,outbound)
+    assert (internal,outbound)==(519,62),(internal,outbound)
     refs=defaultdict(set);local_refs={};n=0
     for r in rels:
         off=r['offset']
@@ -99,10 +100,10 @@ def main():
             refs[(symbol,r['type'])].add(dest)
     assert local_refs=={0xA1:0x006538D9,0xA8:0x006536B5},local_refs
     assert all(len(values)==1 for values in refs.values()),refs
-    assert n==490 and len(refs)==50 and len(local_refs)==2,(n,len(refs),len(local_refs))
-    print(f'Kano Slot06: {len(prefix)} / {CODE_SIZE} native code bytes; 49 real states + default, NO complete Exact.')
+    assert n==504 and len(refs)==51 and len(local_refs)==2,(n,len(refs),len(local_refs))
+    print(f'Kano Slot06: {len(prefix)} / {CODE_SIZE} native code bytes; 53 real states + default, NO complete Exact.')
     print('native instructions',len(target),'internal branches',internal,'outbound targets',outbound)
     print('original-bound external/float operands',n-len(local_refs),'local switch address operands',len(local_refs),'distinct symbols',len(refs))
-    print('native frame 0x4A4 vs incomplete candidate 0xC4; full local data, return and other 87 state bodies OPEN.')
+    print('native frame 0x4A4 vs incomplete candidate 0xD4; full local data, return and other 83 state bodies OPEN.')
 
 if __name__=='__main__':main()

@@ -33,25 +33,24 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Original Kano `Character20::Slot06` at vtable `0x00788C90` is a
-68,853-byte state machine, actively authored in
-`workbench/kano-state/Character20State.cpp`. The selected original
-opening now matches **19,771 native bytes / 5,428 x86 instructions**,
-with default plus **49 reviewed live cases** (1–9, 13–16, 47,
-50–77, 81–87). Its checker independently verifies **501 internal
-branches**, **58 outbound targets**, **488 original-bound COFF call/
-IEEE-754 refs** and two local native switch addresses.
+Kano's original 68,853-byte `Character20::Slot06` is being restored in
+`workbench/kano-state/Character20State.cpp`. The continuous selected
+native opening is now **20,602 bytes / 5,664 x86 instructions**, with
+default plus **53 reviewed live cases** (1–9, 13–16, 47, 50–77,
+81–87, 96–99). The strictly selected checker binds **519 original
+internal branches**, **62 outbound destinations**, **502 original-
+bound nonlocal call/IEEE-754 operands** plus both switch addresses.
+Recently authored states96–99 add health-gated wakeup and original
+stage-impact effects, with `SetVerticalShake(3,0)` independently
+resolved to `0x00410A10`.
 
-Native-reviewed cases81–87 reconstruct an aerial lift, two ground
-impacts, direct knockback, one-shot recovery and an effect state,
-not neutral marker branches. Candidate compiler frame0xC4 differs
-from original 0x4A4, but both use the same six-byte allocation
-instruction, so no position shift is normalized. This is **NOT
-whole Exact**: **87 real native cases remain unimplemented**, as do
-complete original stack, adjacent selector DATA, remaining relocs
-and common return. **Next native case96 at 0x006476FB**. See
-`workbench/kano-state/README.md`; run only selected checks, never
-all-unit cold replay or push without permission.
+Compiler candidate stack0xD4 differs from native0x4A4, but both
+allocation instructions are six bytes, so no position normalization
+is used. **83 original case bodies remain**; native selector tables,
+full frame, relocs and common return are open. This is NOT full Exact.
+Next original state **150 starts at 0x00647A3A**. For focused scoped
+checks see `workbench/kano-state/README.md`. Do NOT run an all-unit
+cold replay or count generated diagnostic marker cases.
 
 ## Additional newly accepted leaf owners
 
