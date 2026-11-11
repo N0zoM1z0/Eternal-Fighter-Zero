@@ -16,45 +16,43 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Original [0x00451850,0x0045ED5D): **54,541 / 62,693 code bytes**,
-**14,962 native x86 instructions**, SHA-256
-c429f929b7ebe0ff66fc31061d7de478c6719f7bccf8ef61b9d789eaa5bbad78.
-Original default plus **125 live state bodies** have been reviewed.
+Native [0x00451850,0x0045F293): **55,875 / 62,693 original code bytes**,
+**15,326 x86 instructions**, SHA-256
+`e6fb4d7815706357f70ca149f7719152065aef7d4bfa12c04e2103a633d6dfe5`.
+Original default and **127 live states through 278** are reviewed.
 
-New state275 (518 bytes) restores the second airborne grab-impact
-branch: entry ResetFrame and one remaining hit, frame3 launch
-(1.4,-2.1), gravity .045 and meter45, landing frames3–7 trigger
-shake(3,0), effect3 at X+facing*30, sound7 and the frame8->7 loop.
-Exit requires FaceOpponent, ResetFrame, then virtual ResetPose.
-State276 (514 bytes) is a distinct dash attack with a frame1
-**39 - field3148 * 3** time gate in addition to the normal duration.
-It sets frame3 sound20/meter35, frame5 hitcount1, advances X by
-facing*40 at frames3–5, and later starts airborne motion with
-vertical speed -0.7, velocityX 0.7 and gravity .033. Its post-launch
-landing moves to state13, and animation exit loops the final frame.
-Both restored cases match original code and bound floating constants;
-no unreviewed inherited body was counted as source.
+New state277 (667 bytes) is an exact original-bound third variant
+of the positive-direction charge movement: entry velocityX=1.4,
+post-frame3 damping=0.08, context sound21 at frames1/3, input
+cancellation to state275/269/274/276/281/271/280/268, repeated
+frame4->0 loops and reset to state268 frame8 on completion.
+State278 (667 bytes) is the reverse-direction counterpart with
+velocityX=-1.4. Both compare at original native instruction positions,
+widths, branch destinations and IEEE-754 references; they are natural
+source cases, not marker substitutions.
 
-Focused original-bound verification:
+Run focused proof only:
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` validates **14,962 original
-instruction positions/widths/normalized forms** apart from the
-incomplete compiler frame allocation (0x328 vs native 0x2B4).
-The audit independently verifies **1,404 original internal branches**,
-**210 outbound destinations**, **1,135 nonlocal original-bound COFF
-call/IEEE-754 references**, 2 local switch operands and **125
-original selector case targets**. This is selected-prefix evidence,
-NOT complete original-function Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` validates **15,326 original
+instruction offsets, widths and normalized forms** except the
+incomplete stack frame allocation (candidate 0x328 versus original
+0x2B4). Checks bind **1,444 internal branches**, **222 outbound
+jump destinations**, **1,157 nonlocal COFF call/float references**,
+two switch operands and **127 original case entry targets**.
+Selected-prefix evidence is NOT full-function Exact.
 
-## Next state and unfinished full owner
+## Critical original layout and next work
 
-Original state277 begins at **0x0045ED5D**. Only **five missing live
-case IDs 277–281** remain unimplemented; seven inherited bodies
-300–306 are still not whole-function verified. Workbench has 132 of
-137 state labels (125 selected-prefix verified). **8,152 original code
-bytes**, canonical 0x2B4 frame, 552/306-byte switch tables, remaining
-relocations and shared return remain open. Use original disassembly
-and `probe_prefix.py --through 277 --context 12`; never count
-synthetic marker branches or run all-unit cold replay.
+The physical original order is **state278 at 0x45EFF8, then state300
+at 0x45F293, then state279 at 0x45F4E9**. The current selective probe
+emits case labels in numeric order, so its synthetic state279 marker
+comes before state300 and creates a mismatch at 0x45F293; do NOT
+mistake this for a failed 278 body. The local probe's case emission
+must preserve original physical order to compare the next region.
+Original states279–281 are still missing, and inherited 300–306 are
+not yet fully verified. **6,818 original code bytes**, full original
+frame, adjacent 552/306-byte switch DATA, remaining relocations and
+common return remain open. Avoid full cold replay and unaccepted
+neutral case markers.
