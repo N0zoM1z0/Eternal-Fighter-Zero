@@ -1,10 +1,10 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
 **PARTIAL: not whole-function Exact.** Natural C++ now reconstructs
-original default plus **87 real live IDs**: 1–9,13–16,47,50–77,
-81–87,96–99,150–158,161–171,180,200–212. The other **51**
-authentic live IDs remain OPEN. Diagnostic marker cases are never
-accepted as source or credited toward byte matching.
+native default plus **91 real live IDs**: 1–9,13–16,47,50–77,
+81–87,96–99,150–158,161–171,180,200–216. The other **47**
+authentic original live cases remain OPEN. Transient probe marker
+cases are never accepted or counted as real source.
 
 ## Original PE ownership and dispatch
 
@@ -20,36 +20,41 @@ accepted as source or credited toward byte matching.
 
 ## Current audited continuous prefix
 
-Original `[0x00607930,0x0060FE22)` covers **34,034 native
+Original `[0x00607930,0x006105D8)` covers **36,008 native
 executable bytes**, SHA-256
-`b92ebcb066f6deb3f64259a26deb6dbda11b673085d39d065028e7121bcf3ac3`.
-Source contains native default plus 87 real live case branches.
-Newest 210–212 are three distinct local hit levels with original
-state-specific animation and effect timing. State210 has the
-original ground dash cancel gate, pose0 speed reset, pose2
-0x19F effect at X−facing×28/Y−44 and sound1; 211/212 have no
-dash cancel and emit 0x1A0 at X−facing×21/Y−63 or 0x1A1 at
-X−facing×5/Y−61. Case212 clears early collision only for
-new pose<2, unlike the other two (<3). Their pose6 sound2,
-true effect emission/remaining hits and state0 reset are native.
+`0f299ef0aa39afaea2360524d27e29fb0db10e4bef6578e270150d57de7f23a6`.
+This selected code comprises original default plus 91 real cases.
+Newest 213–215 implement three original resource-cost specials:
+frame0 zeros horizontal/vertical speed, primes a hit and subtracts
+**1000 from the child-specific resource field at `0x3148`**; frame2
+adds native meter25 and emits local effect0x19F/0x1A0/0x1A1 at
+facing-dependent offsets **28/21/5** and Y **−44/−63/−61**;
+frame6 requests sound2; their original animation advancement
+always resets attack collision. They share a real down-input
+cancel gate allowing `attackCollisionResult >= 2`.
+Case216 independently implements `ResetFrame`, initial hit count1,
+strict **`velocityX > 0.0`** deceleration by 0.08 (not `>=`, which
+changes original x87 condition bits), floor clamp at zero, and a
+frame3 velocity3.0/meter25/sound21 transition with state0
+`FaceOpponent()`/`ResetPose()` completion.
 
-Focused original-bound check:
+Fast original-bound selected check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-Verifies **9,339 original x86 instruction offsets, widths and
-register-abstracted forms**, **861 exact internal and 112 original
-shared-return branch destinations**, **781 original COFF direct-call
-/ IEEE-754 references** and two original local selector/table
-pointers. Other original opcode bytes match exactly. Only the
-original-width provisional stack allocation (`0x140` vs native
-full `0x2E8`), still-outbound shared-return jump displacement and
-the independently native-bound COFF operands are exempt.
+The scope passes **9,866 original x86 offsets/widths and
+register-abstracted opcode forms**, **911 native internal and 119
+original shared-return branch targets**, **803 independently original-
+bound COFF direct-call/IEEE-754 references** and two native local
+selector/table addresses. Other selected machine code bytes match.
+Allowed exceptions are strictly original-width six-byte provisional
+stack allocation (`0x158` versus original `0x2E8`), outbound native
+shared-return JMP displacements and already original-bound COFF
+operand locations, not arbitrary padding.
 
-**Next original live case213 begins at `0x0060FE22`**. The
-remaining 51 original live states, full original stack, 139-DWORD
-native switch table, 325 selector bytes and shared return remain
-OPEN. This is selected-prefix, **NOT full native Exact**. Never
-run cold all-unit replay or count probe marker code.
+**Next real native case220 begins `0x006105D8`**. Remaining 47 live
+cases, full stack, 139-entry switch/325 selector data and original
+shared return remain open. This is a strict selected **prefix,
+NOT whole-function Exact**. No all-unit cold replay, no probe-credit.

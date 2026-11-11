@@ -3046,6 +3046,174 @@ void Character04::Slot06()
         return;
 
 
+    case 213: // Character04 native 0x0060FE22: meter-cost local hit tier 1
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing)
+                field0008 = 5;
+            if ((int)inputX == -(int)facing)
+                field0008 = 6;
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            remainingHitCount = 1;
+            reinterpret_cast<Character04StateFields *>(this)->field3148 -= 1000;
+        }
+        if (field000a == 2 && field000c == 0) {
+            pendingCharacterSoundSlot = 1;
+            meter = (short)(meter + 25);
+            effect.type = 0x19f;
+            effect.x = (double)((int)positionX - (int)facing * 28);
+            effect.y = (double)((int)positionY - 44);
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        if (field000a == 6 && field000c == 0)
+            pendingCharacterSoundSlot = 2;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+
+
+
+    case 214: // Character04 native 0x0061004F: meter-cost local hit tier 2
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing)
+                field0008 = 5;
+            if ((int)inputX == -(int)facing)
+                field0008 = 6;
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            remainingHitCount = 1;
+            reinterpret_cast<Character04StateFields *>(this)->field3148 -= 1000;
+        }
+        if (field000a == 2 && field000c == 0) {
+            pendingCharacterSoundSlot = 1;
+            meter = (short)(meter + 25);
+            effect.type = 0x1a0;
+            effect.x = (double)((int)positionX - (int)facing * 21);
+            effect.y = (double)((int)positionY - 63);
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        if (field000a == 6 && field000c == 0)
+            pendingCharacterSoundSlot = 2;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+
+
+    case 215: // Character04 native 0x0061027C: meter-cost local hit tier 3
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing)
+                field0008 = 5;
+            if ((int)inputX == -(int)facing)
+                field0008 = 6;
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            remainingHitCount = 1;
+            reinterpret_cast<Character04StateFields *>(this)->field3148 -= 1000;
+        }
+        if (field000a == 2 && field000c == 0) {
+            pendingCharacterSoundSlot = 1;
+            meter = (short)(meter + 25);
+            effect.type = 0x1a1;
+            effect.x = (double)((int)positionX - (int)facing * 5);
+            effect.y = (double)((int)positionY - 61);
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        if (field000a == 6 && field000c == 0)
+            pendingCharacterSoundSlot = 2;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+
+
+
+    case 216: // Character04 native 0x006104A9: horizontal speed drag and timed charge
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+            remainingHitCount = 1;
+        }
+        if (velocityX > 0.0)
+            velocityX -= 0.08;
+        if (velocityX < 0.0)
+            velocityX = 0.0;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1)
+                attackCollisionResult = 0;
+            if (field000a == 3) {
+                pendingContextSoundSlot = 21;
+                meter = (short)(meter + 25);
+                velocityX = 3.0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
 
     }
 }
