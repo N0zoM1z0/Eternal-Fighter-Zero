@@ -33,22 +33,25 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Original Kano `Slot06` is a 68,853-byte state boss, actively authored
-in `workbench/kano-state/Character20State.cpp`. Selected original
-opening now matches **27,607 code bytes / 7,586 x86 instructions**,
-original default and **71 reviewed native cases** through169.
-Strict checker validates **683 internal branches**, **84 outbound
-original targets**, **684 original-bound nonlocal COFF calls/floats**
-plus two local switch pointers. Cases167–169 restore original tint,
-resource/impact effects and two distinct ground recovery paths.
-**Next original case170 begins 0x00649597.**
+Original Kano `Slot06` is a **68,853-byte** state boss under natural
+C++ reconstruction in `workbench/kano-state/Character20State.cpp`.
+The strict selected opening now matches **28,564 native code bytes /
+7,833 original x86 instructions**, default plus **73 reviewed live
+case bodies** (1–9,13–16,47,50–77,81–87,96–99,150–158,161–171).
+The selected original-bound checker confirms **700 internal and 87
+outbound branch targets**, **714 native-bound nonlocal COFF call/float
+references** and both original native switch pointers.
 
-Compiler candidate frame0x114 vs native0x4A4 shares the six-byte
-allocation length, so no position shift is allowed. **65 case bodies
-remain unreviewed**, including existing experimental 170/171 source.
-Canonical stack, local switch DATA, remaining relocs and shared return
-are OPEN. NOT whole Exact; diagnostic markers are unaccepted. Only
-selected checks; no all-unit cold replay, no push without permission.
+States170/171 were not merely inspected: their authored C++ now
+matches full 457/500-byte originals. State170's x87 gravity test
+precedes velocity clearing; state171's restoration checks gravity
+only after restoring X/Y caches, setting0.02 conditionally. Both
+read/write sequences are original-bound. **Next live original case178
+at `0x00649954`**, with 179 default. Candidate stack0x11C differs
+from canonical0x4A4, but both are six-byte instructions, so no offset
+normalization. **63 native cases, complete stack/table/return remain
+OPEN; NOT full Exact.** No credit for synthetic probe markers, and
+no full all-unit cold replay/push. See focused Kano README.
 
 ## Additional newly accepted leaf owners
 

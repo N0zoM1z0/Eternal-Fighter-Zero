@@ -2448,15 +2448,15 @@ void Character20::Slot06()
         }
         return;
 
-    case 170: // Kano unverified native candidate 0x005EF240: delayed stored-velocity release
+    case 170: // Native-reviewed Kano original 0x005EF240: delayed stored-velocity release
         if (field000a == 0 && field000c == 0) {
             field3138 = (int)(velocityX * 100.0);
             field313c = (int)(velocityY * 100.0);
-            velocityX = 0.0;
-            velocityY = 0.0;
             if (gravity == 0.0) {
                 gravity = 0.035;
             }
+            velocityX = 0.0;
+            velocityY = 0.0;
             guardInputFrames = 0;
             outgoingPushbackVelocityX = 0.0;
             hitstunFrames = 60;
@@ -2486,7 +2486,7 @@ void Character20::Slot06()
         }
         return;
 
-    case 171: // Kano unverified native candidate 0x005EF409: frozen hit, one immediate effect
+    case 171: // Native-reviewed Kano original 0x005EF409: frozen hit, one immediate effect
         if (field000a == 0 && field000c == 0) {
             field3138 = (int)(velocityX * 100.0);
             field313c = (int)(velocityY * 100.0);
@@ -2518,7 +2518,8 @@ void Character20::Slot06()
                 field0008 = 9;
                 velocityX = (double)field3138 * 0.01;
                 velocityY = (double)field313c * 0.01;
-                gravity = 0.035;
+                if (gravity == 0.0)
+                    gravity = 0.02;
                 ResetPose();
             }
         }

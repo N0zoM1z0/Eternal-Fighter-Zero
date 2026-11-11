@@ -1770,29 +1770,31 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Original Kano `Character20::Slot06` vtable at `0x00788C90` targets
-`[0x006429C0,0x006536B5)` (**68,853 code bytes**) plus 137-entry
-address and 316-byte selector tables (136 live,180 default).
-Authored source in `workbench/kano-state/` now matches
-`[0x006429C0,0x00649597)` = **27,607 bytes / 7,586 native x86
-instructions**, SHA-256
-`435dc0515825455aba0d5c5be5fb8d89542029849be47af37069f3af84f15dbb`.
-Default plus **71 real cases** are native-reviewed through169.
+Kano `Character20::Slot06`, vtable `0x00788C90`, is original native
+`[0x006429C0,0x006536B5)`, 68,853 bytes, plus 137-address/316-byte
+local switch selector tables (136 live / 180 default cases).
+The active C++ at `workbench/kano-state/Character20State.cpp` matches
+strict selected original `[0x006429C0,0x00649954)` with **28,564
+native code bytes / 7,833 instructions**, SHA-256
+`f9066304a2f788c3d7c8bdf8839c5a8a255f615b48e8ba190e47f0c4bcc2c66c`.
+The default and **73 reviewed live cases** through171 are authored.
 
-Scoped pinned VC7.1 `/Od /G6 /MT /Gy /W3` checker confirms **7,586
-original instruction offsets/widths/forms**, **683 internal and
-84 outbound branches**, **684 native-bound nonlocal COFF call/float
-references**, and two local table addresses. Candidate0x114 stack vs
-canonical0x4A4 use same-width six-byte allocation; no instruction
-offset normalization. This is only a selected prefix, NOT Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` scope validates **7,833 original
+x86 positions/widths/forms**, **700 original internal branches and
+87 outbound targets**, **714 original-bound nonlocal COFF call/float
+references**, and two local switch-table pointers. Candidate stack
+0x11C differs from native0x4A4 but both use six-byte allocations,
+so there is no position shift. **Not full Exact:** 63 remaining
+original state bodies, full native stack, switch DATA and common
+return are still open. Generated neutral probe markers unaccepted.
 
-States167 (488 bytes),168/169 (330 each) restore resource/tint and
-impact effects plus distinct state0/3 grounded recovery. Original
-constants, direct call targets and flow structure are checked.
-**Next case170 at 0x00649597**. Still 65 unreviewed cases,
-full original frame, local DATA/relocation closure and common return.
-Experimental states170–171 have no native proof yet. No all-unit cold
-replay or credit for markers.
+State170 stores velocity in *100 integer caches and conditionally
+sets gravity0.035 before clearing X/Y; state171 independently uses
+combo scaling, effect1, cached velocity restore and the original
+x87 zero-gravity conditional to set0.02. Both original native code
+bodies match at every instruction position and bound operand.
+Next live state178 is `0x00649954` (179 is default). Only selected
+checks, no all-unit cold replay or false complete owner claim.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
