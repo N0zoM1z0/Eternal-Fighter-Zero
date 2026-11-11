@@ -1,9 +1,10 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
-**PARTIAL: not whole-function Exact.** The original default and
-**53 real live cases** are implemented in natural C++: 1–9,13–16,47,
-50–77,81–87,96–99. The other 85 original live cases are unimplemented.
-Throwaway compilation markers for them never count as authored source.
+**PARTIAL: not whole-function Exact.** Authored natural C++ now
+covers the original default and **62 authentic live IDs**: 1–9,
+13–16,47,50–77,81–87,96–99,150–158. The remaining 76 native live
+states are *not* reconstructed. Temporary probe markers are only
+for compilation, never source acceptance.
 
 ## Original PE ownership and dispatch
 
@@ -19,33 +20,34 @@ Throwaway compilation markers for them never count as authored source.
 
 ## Current audited continuous prefix
 
-`[0x00607930,0x0060C81F)` = **20,207 native executable bytes**,
-original SHA-256
-`1f4e0c8bf16522d67bf8ebe7b298bc32d49fb97e8d9b7d88a4efdde377e1fa16`.
-The 53 authored real states include a new 96–99 knockout/recovery
-sequence: 96 restores standing/crouching face direction; 97/98
-make genuinely independent ground impact effects and call the
-native `SetVerticalShake(3,0)`; and 99 has an early health/pose/tick
-recovery return **before** its frame counter increments. This last
-return is required for exact native control-flow form and semantics.
+`[0x00607930,0x0060D54B)` = **23,579 original code bytes**,
+canonical SHA-256
+`3530f7f8805f82b717c5a312271fa539d4bc482fd004ac3b63be39da25ba294f`.
+The latest nine actual source branches implement native states150–158:
+six ground/crouch recoil variants at different meter and velocity
+tiers, one forward aerial hit, and two original air/impact stage-effect
+variants. They preserve the original no-dash-reset behavior and
+restore *state9 plus `ResetPose`* on animation completion for states
+157/158, rather than a related character's two-frame rewind.
 
-Selected original-bound verification:
+Run the independently pinned selected-only audit:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It checks **5,575 original x86 instruction positions, widths and
-abstracted opcode forms**, **512 internal and 63 shared-return native
-jump targets**, **500 original-bound direct calls / IEEE-754
-references** plus two local selector/switch pointers, and exact
-machine bytes elsewhere. The original-width six-byte stack
-allocation still uses provisional `0xD4` rather than original
-`0x2E8`; only this immediate, unclosed shared-return displacement
-and independently native-bound COFF operands are excepted.
+It checks **6,513 authentic original instruction offsets/widths and
+register-abstracted opcode forms**, **598 internal and 72 shared-return
+native jump targets**, **602 original-bound direct calls / IEEE-754
+references** plus 2 original local dispatch pointers. All other
+reviewed code bytes match. The original six-byte frame allocation
+still reserves a provisional `0xE4` rather than original `0x2E8`;
+only that immediate, incomplete original shared-return displacements
+and independently target-bound COFF fields are excluded from raw
+byte equality. No arbitrary padding or missing-code masking.
 
-**Next real state150 starts at `0x0060C81F`.** IDs100–149 map to
-original default. 85 live states, full stack frame, adjacent
-jump table, selector bytes and final return are still OPEN.
-**NOT whole-function Exact.** No cold all-unit replay and no
-acceptance of compiler probe markers.
+**Next native case161 starts `0x0060D54B`**; IDs159/160 map to
+native default. The remaining **76 original live cases**, whole
+frame, full 139-entry native switch/325 selectors and shared return
+are still OPEN. Strict selected-prefix proof is **NOT full Exact**.
+Never run cold all-unit replay or count marker source.
