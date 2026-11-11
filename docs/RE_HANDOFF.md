@@ -33,22 +33,22 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano's original 68,853-byte `Character20::Slot06` has natural C++
-under active original-bound reconstruction in `workbench/kano-state/`.
-Its selected prefix now matches **24,034 code bytes / 6,614 original
-x86 instructions** with default plus **62 verified live cases**:
-1–9, 13–16, 47, 50–77, 81–87, 96–99, 150–158. Strict checker
-independently audits **605 internal branches**, **71 outbound**,
-**604 nonlocal COFF call/IEEE-754 operands** and the two original
-switch references. Cases157/158 omit the sibling dash-clear and end
-in state9, not sibling loop; case150–155 original velocities and
-meter values are reviewed. **Next state161 at 0x006487A2.**
+Kano's 68,853-byte `Slot06` is being reconstructed in natural C++ at
+`workbench/kano-state/Character20State.cpp`. The selected opening
+matches **25,605 original code bytes / 7,045 native instructions**,
+original default plus **66 reviewed live cases** (1–9, 13–16, 47,
+50–77, 81–87, 96–99, 150–158, 161–164). Strict checker verifies
+**642 internal**, **79 outbound original jumps**, **632 native-bound
+external call/float references**, and both local table pointers.
+The new 161–164 restore the native effect9 height, attack frame gates,
+forward and reverse dash dynamics. **Next native case165 at 0x00648DC5.**
 
-Incomplete selected frame 0xE4 vs canonical 0x4A4 has the same
-six-byte instruction length; there is no offset compensation.
-**74 original states, canonical complete stack, local switch DATA,
-all remaining relocs and shared return are OPEN. NOT full Exact.**
-No all-unit cold replay or acceptance of generated case markers.
+Incomplete stack0xF4 differs from original0x4A4, but both use a
+six-byte allocation instruction, so no offset shift is allowed.
+**70 cases**, canonical stack, switch tables, remaining relocations
+and shared return are OPEN. Experimental 165–171 bodies are present
+but not counted as original-bound reviewed. **NOT whole Exact**.
+Only selected checks; no all-unit cold replay or push.
 
 ## Additional newly accepted leaf owners
 

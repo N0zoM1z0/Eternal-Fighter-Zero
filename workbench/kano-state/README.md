@@ -7,33 +7,33 @@
 `[0x006538D9,0x00653A15)` (316 bytes). Original selector holds
 **136 live cases and 180 default IDs**.
 
-Current natural C++ `Character20State.cpp` now authors default and
-**62 native-reviewed real cases**: 1–9, 13–16, 47, 50–77,
-81–87, 96–99 and 150–158. Original continuous code
-`[0x006429C0,0x006487A2)` = **24,034 bytes / 6,614 original x86
+Current natural C++ `Character20State.cpp` has original default and
+**66 native-reviewed live case bodies**: 1–9, 13–16, 47,
+50–77, 81–87, 96–99, 150–158 and 161–164. Original code
+`[0x006429C0,0x00648DC5)` = **25,605 native bytes / 7,045 x86
 instructions**, SHA-256
-`d19ab1094159f6437e5ff70ef1d63b41a9e78a1482dd84daf5d8766d2feb7bd3`.
-Next original case is **161 at `0x006487A2`**.
+`5b9690a14e9d7ce276f2d6e7df577e26f7c72d5c03d6565ae12d8e3a3293a514`.
+Next native case **165 starts `0x00648DC5`**.
 
-The pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected native checker
-matches **6,614 original instruction positions, lengths and forms**,
-**605 internal branches**, **71 original outbound targets**,
-**604 nonlocal original-bound call/IEEE-754 COFF references** and both
-native switch-table address operands. The candidate still reserves
-0xE4 stack bytes versus canonical 0x4A4, with identical six-byte
-allocation instruction lengths and no offset normalization. This is
-ONLY a strict selected prefix, not whole-function Exact. **74 cases**
-remain absent; diagnostic neutral markers get no acceptance credit.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected native checker matches
+**7,045 instruction positions, widths and normalized opcodes**,
+**642 internal and 79 outbound original branch targets**, **632
+independently original-bound nonlocal COFF call/IEEE-754 operands** and
+both original switch address references. Incomplete candidate frame
+0xF4 versus full original 0x4A4 has equal six-byte instruction length
+and no offset compensation. This remains *selected-prefix evidence,
+NOT full owner Exact*. 70 cases remain unreviewed/unimplemented.
+Experimental source for 165–171 exists but is UNACCEPTED until each
+body matches canonical native. The selective probe uses diagnostic
+neutral markers for later cases and does not count them as source.
 
-New reviewed cases150–155 implement independent crouch/standing
-recoil variants with different meter values and X velocity
--1.5/-1.8/-2.3, wall/edge pushback, deceleration0.06 and animation
-transitions. Case156 handles upward knockback; cases157/158 implement
-positive/negative aerial effect attacks with gravity0.045 and local
-state transitions. Crucially, original Kano states157/158 do **not**
-clear `dashMomentumFlag`, and end in state9/ResetPose rather than the
-Makoto-style `frame -= 2` loop. Every difference was resolved against
-original machine code and IEEE-754 operand locations.
+New cases161–164 are substantively Kano-specific: effect9 at Y−70,
+frame4 and frame15 gates on the aerial launch, conditional frame>3
+velocityX=1.5 and a three-frame rewind on forward dash, and the
+native reverse dash with `StartTrail(2)`, X=-3.1, +0.04 friction,
+ResetFrame and state0 stop. These were corrected against original
+machine code, control flow and numeric constants, not assumed from
+Makoto behavior.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -50,11 +50,11 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
-    scripts/repo-python workbench/kano-state/probe_prefix.py --through 161 --context 12
+    scripts/repo-python workbench/kano-state/probe_prefix.py --through 165 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case161 `0x006487A2`**. Original
-0x4A4 stack frame, 74 remaining native bodies, local switch DATA,
+Next work begins at **Kano case165 `0x00648DC5`**. Original
+0x4A4 frame, 70 unverified native cases, local switch DATA,
 shared return and complete relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.

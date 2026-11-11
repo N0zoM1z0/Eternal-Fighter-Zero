@@ -1729,31 +1729,30 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Original Kano `Character20::Slot06` vtable slot6 at `0x00788C90`
-points to `[0x006429C0,0x006536B5)`, **68,853 code bytes**, plus
-137 four-byte switch destinations and 316 selector bytes (136 live,
-180 default). Active authored natural C++ at `workbench/kano-state/`
-now reproduces **24,034 original bytes / 6,614 x86 instructions**
-through native 161 entry at `0x006487A2`, SHA-256
-`d19ab1094159f6437e5ff70ef1d63b41a9e78a1482dd84daf5d8766d2feb7bd3`.
-Reviewed default and **62 live cases**: 1–9, 13–16, 47, 50–77,
-81–87, 96–99 and 150–158.
+Kano `Character20::Slot06` vtable slot6 at `0x00788C90` selects
+original `[0x006429C0,0x006536B5)`, **68,853 code bytes**, plus
+137 switch entries and 316 selector bytes (136 live / 180 default).
+The natural C++ in `workbench/kano-state/Character20State.cpp`
+reproduces default and **66 reviewed live cases**. Its selected prefix
+`[0x006429C0,0x00648DC5)` is **25,605 native code bytes /
+7,045 x86 instructions**, SHA-256
+`5b9690a14e9d7ce276f2d6e7df577e26f7c72d5c03d6565ae12d8e3a3293a514`.
 
-VC7.1 `/Od /G6 /MT /Gy /W3` selected checker verifies **6,614
-native instruction positions/widths/forms**, **605 internal and
-71 outbound original branches**, **604 bound external call/float
-COFF references**, and both original switch-table references.
-Temporary candidate stack0xE4 vs original0x4A4 has equal 6-byte
-instruction width, so no instruction-offset adjustment is allowed.
-**Partial prefix only: 74 cases and original full owner closure
-still missing. NOT complete Exact.** Markers have no source credit.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected verifier validates
+**7,045 instruction forms/widths/offsets**, **642 original internal
+and 79 outbound branch targets**, **632 nonlocal original-bound
+COFF call/float references**, and 2 local switch pointers. The
+partial frame0xF4 differs from canonical0x4A4 but is the same six-byte
+instruction width. Not a whole-function Exact certificate: **70
+remaining cases**, original stack, jump DATA and common return open.
 
-States150–155 reconstruct multiple tiered recoil motions with
-native negative X launch -1.5/-1.8/-2.3 and frame timing; 156
-recovers upward knockback; 157–158 restore directional aerial effects
-with distinct end-state9 and NO dashMomentumFlag clear (unlike
-Makoto sibling). All are native matched, not copied assumptions.
-Next case161 starts `0x006487A2`. Use scoped Kano checker only.
+New state161 emits effect9 at Y−70; state162 has distinct frame4
+and frame15 timing and Y−70 effect; state163 uses conditional frame>3
+X velocity1.5, three-frame loop rewind and original cancel checks;
+state164 uses `StartTrail(2)`, negative X=-3.1 and +0.04 damping.
+These are original-bound C++, while existing source cases165–171
+remain *experimental, unreviewed*. Next state165 `0x00648DC5`.
+No cold all-unit replay or credit for synthetic marker cases.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 

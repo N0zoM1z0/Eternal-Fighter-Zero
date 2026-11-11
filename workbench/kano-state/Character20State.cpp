@@ -2133,5 +2133,416 @@ void Character20::Slot06()
         }
         return;
 
+    case 161: // Native-reviewed Kano original 0x005EE377: aerial impact and trail reset
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+            effect.type = 9;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 70);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            remainingHitCount = 1;
+            pendingContextSoundSlot = 62;
+            ++field3138;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+                gravity = 0.035;
+            }
+        }
+        return;
+
+    case 162: // Native-reviewed Kano original 0x005EE48B: staged aerial launch and impact
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+        }
+        if (field000a == 3 && field000c == 0) {
+            velocityY = -1.5;
+            gravity = 0.025;
+            remainingHitCount = 1;
+        }
+        if (field000a == 4 && field000c == 0) {
+            ResetFrame();
+            effect.type = 9;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 70);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            remainingHitCount = 1;
+            pendingContextSoundSlot = 62;
+            meter = (short)(meter - 1000);
+            ++field3138;
+        }
+        velocityY += gravity;
+        if (positionY + velocityY > 0.0) {
+            field0008 = 13;
+            ResetPose();
+            ResetPose();
+            positionY = 0.0;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 15) {
+                gravity = 0.035;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        return;
+
+    case 163: // Native-reviewed Kano original 0x005EE676: cancellable forward dash
+        if (field000a == 0 && field000c == 0) {
+            StartTrail(3);
+        }
+        if (inputY == -1 && field000a > 0) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (field000a > 3)
+            velocityX = 1.5;
+        dashMomentumFlag = 1;
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 3);
+                return;
+            }
+        }
+        if (inputX == facing && field313c >= 80) {
+            field0008 = 178;
+            ResetPose();
+        }
+        if (inputX != facing && field3138 >= 60) {
+            field0008 = 178;
+            ResetPose();
+        }
+        return;
+
+    case 164: // Native-reviewed Kano 0x00648C86 reverse dash with momentum recovery
+        StartTrail(2);
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            ResetFrame();
+            velocityX = -3.1;
+            velocityY = 0.0;
+            gravity = 0.0;
+            field3138 = 1;
+            pendingContextSoundSlot = 17;
+        }
+        if (field000a > -1)
+            velocityX += 0.04;
+        if (velocityX >= 0.0 && field000a > -1) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            field0008 = 0;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount)
+                field000a = 0;
+        }
+        return;
+
+    case 165: // Kano unverified native candidate 0x005EE9B2: sustained airborne momentum
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            velocityX = 1.9;
+            velocityY = 1.3;
+            StartTrail(3);
+            horizontalDeceleration = -0.015;
+            gravity = -0.038;
+            pendingContextSoundSlot = 17;
+        }
+        velocityY += gravity;
+        velocityX += horizontalDeceleration;
+        if (velocityX < 0.5) {
+            velocityX = 0.5;
+        }
+        if (velocityY < -1.5) {
+            velocityY = -1.5;
+        }
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (inputX == facing && field313c >= 120) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        if (inputX != facing && field3138 >= 48) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        return;
+
+    case 166: // Kano unverified native candidate 0x005EEBB9: sustained airborne momentum
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            velocityX = -1.9;
+            velocityY = 1.3;
+            StartTrail(3);
+            horizontalDeceleration = 0.015;
+            gravity = -0.038;
+            pendingContextSoundSlot = 17;
+        }
+        velocityY += gravity;
+        velocityX += horizontalDeceleration;
+        if (velocityX > -0.5) {
+            velocityX = -0.5;
+        }
+        if (velocityY < -1.5) {
+            velocityY = -1.5;
+        }
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if ((int)inputX == -(int)facing && field313c >= 120) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        if ((int)inputX != -(int)facing && field3138 >= 48) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        return;
+
+    case 167: // Kano unverified native candidate 0x005EEDC4: stunned recovery with two effects
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (field0120 == 1) {
+                comboDamageScale += field0118 * 5.0;
+            }
+            field0118 = 0.0;
+            hitstunFrames = 90;
+            SetTint(0xb0, 3);
+        }
+        if (field000a == 1 && field000c == 0) {
+            pendingContextSoundSlot = 18;
+            effect.type = 1;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 2 && field000c == 0) {
+            effect.type = 4;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 168: // Kano unverified native candidate 0x005EEFAC: grounded impact to state 0
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            positionY = 0.0;
+            gravity = 0.0;
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            horizontalDeceleration = 0.0;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 169: // Kano unverified native candidate 0x005EF0F6: grounded impact to state 3
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            positionY = 0.0;
+            gravity = 0.0;
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            horizontalDeceleration = 0.0;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 170: // Kano unverified native candidate 0x005EF240: delayed stored-velocity release
+        if (field000a == 0 && field000c == 0) {
+            field3138 = (int)(velocityX * 100.0);
+            field313c = (int)(velocityY * 100.0);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (gravity == 0.0) {
+                gravity = 0.035;
+            }
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            hitstunFrames = 60;
+        }
+        if (hitstunFrames == 0 && field3140 == 0) {
+            ++field3140;
+            velocityX = (double)field3138 * 0.01;
+            velocityY = (double)field313c * 0.01;
+        }
+        if (hitstunFrames == 0) {
+            velocityY += gravity;
+        }
+        if (velocityY + positionY > 0.0) {
+            ResetFrame();
+            positionY = 0.0;
+            field0008 = 169;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 171: // Kano unverified native candidate 0x005EF409: frozen hit, one immediate effect
+        if (field000a == 0 && field000c == 0) {
+            field3138 = (int)(velocityX * 100.0);
+            field313c = (int)(velocityY * 100.0);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (field0120 == 1) {
+                comboDamageScale += field0118 * 5.0;
+            }
+            field0118 = 0.0;
+            hitstunFrames = 90;
+            SetTint(0xb0, 3);
+        }
+        // This effect is also on pose zero, unlike reference characters.
+        if (field000a == 0 && field000c == 0) {
+            pendingContextSoundSlot = 18;
+            effect.type = 1;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                velocityX = (double)field3138 * 0.01;
+                velocityY = (double)field313c * 0.01;
+                gravity = 0.035;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }
