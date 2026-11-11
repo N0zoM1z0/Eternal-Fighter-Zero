@@ -540,5 +540,280 @@ void Character20::Slot06()
         }
         return;
 
+    case 55: // Native-checked Kano recoil and edge pushback 0x005e9d2d: grounded recoil continuation 3
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 20);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.8;
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 56: // Native-checked Kano level recoil 0x005E9F1E: recoil returning directly to crouch
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 10);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.1;
+            if (field0120 != 0) {
+                field0118 -= 10.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                // Unlike cases 50-55, this recovery always chooses crouch.
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 57: // Native-checked Kano level recoil 0x5ea0f7: stronger recoil returning to crouch
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 15);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.5;
+            if (field0120 != 0) {
+                field0118 -= 20.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                // Unlike cases 50-55, this recovery always chooses crouch.
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 58: // Native-checked Kano level recoil 0x5ea2d0: stronger recoil returning to crouch
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 20);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.8;
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                // Unlike cases 50-55, this recovery always chooses crouch.
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 59: // Native-checked Kano recoil 0x005EA4A9: airborne hit reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
+            if (velocityY < -2.0) {
+                velocityY = -2.0;
+            } else if (velocityY > -0.5) {
+                velocityY = -0.5;
+            }
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 60: // Native-checked Kano recoil 0x5ea6a8: stronger airborne hit reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
+            if (velocityY < -4.0) {
+                velocityY = -4.0;
+            } else if (velocityY > -0.5) {
+                velocityY = -0.5;
+            }
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 61: // Native-checked Kano recoil 0x5ea8a7: stronger airborne hit reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
+            if (velocityY < -6.0) {
+                velocityY = -6.0;
+            } else if (velocityY > -0.5) {
+                velocityY = -0.5;
+            }
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

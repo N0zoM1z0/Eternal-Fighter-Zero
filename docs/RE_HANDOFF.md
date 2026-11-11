@@ -33,24 +33,24 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Original Kano Slot06 is a **68,853-byte native state boss**, with
-an active authored workbench at `workbench/kano-state/Character20State.cpp`.
-Selected original-bound prefix now reaches **6,055 bytes /
-1,669 x86 instructions**, original default plus **19 fully reviewed
-live cases** (1–9, 13–16, 47, 50–54). Its checker validates **146
-original internal branches**, **21 outbound destinations**, **164
-nonlocal original call/IEEE-754 bindings** and two local table
-addresses. The latest 50–54 are substantive 497-byte original-bound
-recoil/guard states. Real Kano jump/landing logic and tier-dependent
-values differ from the Makoto sibling. **Next state55 at 0x00644167**.
+The original Kano 68,853-byte Slot06 boss is actively being restored
+in `workbench/kano-state/Character20State.cpp`. Continuous selected
+original-bound native prefix is now **9,494 bytes / 2,605 x86
+instructions**, with default plus **26 reviewed authentic states**
+(1–9, 13–16, 47, 50–61). The local checker verifies **240 original
+internal branches**, **28 outbound branch targets**, **269 original-
+bound nonlocal COFF call/IEEE-754 operands** and two original local
+switch addresses. Cases50–61 are complete 473–511-byte recovery /
+recoil bodies with stage-edge pushback and combo-damage scaling.
 
-Incomplete candidate stack allocation 0x6C is three instruction
-bytes shorter than canonical 0x4A4; this temporary difference is
-explicitly accounted for in the selected checker. Remaining
-117 case bodies, original complete stack, jump tables, relocations
-and common return are OPEN. This is NOT full Exact: unreviewed
-marker cases have no reconstruction or acceptance credit. See
-`workbench/kano-state/README.md`; no all-unit cold replay.
+Original Kano stack allocation `0x4A4` is temporarily `0x7C` in the
+partial C++ probe, giving exactly one acknowledged three-byte
+prologue instruction-length discrepancy. Remaining **110 case bodies**,
+original complete stack, native switch tables, remaining relocation
+inventory and common return are OPEN, **NOT complete Exact**.
+**Next original case62 at 0x00644ED6**. Read
+`workbench/kano-state/README.md`; continue only focused selected
+compilation, not all-unit cold replay or marker-case acceptance.
 
 ## Additional newly accepted leaf owners
 
