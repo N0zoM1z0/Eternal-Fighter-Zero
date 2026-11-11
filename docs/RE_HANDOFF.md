@@ -192,6 +192,16 @@ triple effect0x1A2 uses facing-dependent X offsets 100/80/130,
 sound6 and ResetPose/FaceOpponent order match. Structural island
 ONLY, NOT Exact; strict prefix remains 40,336. No all-unit replay.
 
+Kano state268/269 now also have real natural-C++ bodies, **447 bytes
+and 123 original x86 instructions each**. Original entry halved X/Y
+velocity, gravity0.01, +45 meter, a frame2 effect0x197 at X−facing30
+and Y−30, frame7 up-to-three rewinds and state9/gravity0.035 exit
+are source-authored. The native-bound `check_case268_269_shape.py`
+audits **246 instruction positions/forms**, **16 internal and 4
+shared-return branches** and **12 exact original COFF/float operands**.
+Still NOT whole Exact: 40,336-byte strict prefix stops at case250.
+No all-unit cold replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

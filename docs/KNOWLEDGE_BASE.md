@@ -1987,6 +1987,18 @@ branches**, and **24 original-bound COFF REL32 calls**. This is a
 structural island only, NOT full Exact, due pending native concrete
 register closure after case250; 40,336 strict Boss prefix unchanged.
 
+#### Kano states268–269: original airborne recovery islands
+
+Both native 447-byte case bodies (268 and269, 123 x86 instructions
+each) are natural C++ with original entry velocityX/Y×0.5,
+gravity0.01, meter+45, effect0x197 at frame2, frame7 three-tier
+loop, and gravity0.035/state9 exit. The original-bound checker
+`check_case268_269_shape.py` pins both original SHA-256 hashes,
+**246 instruction offsets/widths and register-abstracted forms**,
+**16 internal and 4 shared-return branches** and **12 native COFF
+call/float references**. Structural island only, **NOT Exact**;
+strict contiguous Boss prefix remains 40,336 bytes.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

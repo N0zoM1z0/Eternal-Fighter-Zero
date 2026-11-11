@@ -62,6 +62,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case261_262_shape.py
     scripts/repo-python workbench/kano-state/check_case263_264_shape.py
     scripts/repo-python workbench/kano-state/check_case265_267_shape.py
+    scripts/repo-python workbench/kano-state/check_case268_269_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
 
@@ -78,6 +79,33 @@ native case because state250's compiler phase remains unresolved.
 These island checks do not grow the 40,336-byte strict contiguous
 prefix or register any complete owner. Never count later diagnostic
 neutral marker states as original code.
+
+### Experimental cases268–269 — two 447-byte airborne recovery attacks
+
+The original Kano state268 `[0x0064F9E3,0x0064FBA2)` and269
+`[0x0064FBA2,0x0064FD61)` are two independent **447-byte /
+123-instruction** airborne recovery paths. Natural C++ in
+`Character20State.cpp` reconstructs both: on frame0 each halves
+horizontal/vertical velocity by0.5, installs gravity0.01, gains
+45 meter and initializes field3138=3. Every tick then advances
+velocityY by gravity. At frame2, effect0x197 is emitted at
+integer X−facing×30, integer Y−30, with original flag/layer/group
+write order. On animation frame7, at most three times, it advances
+field3138 and rewinds four poses. When the animation ends it calls
+native virtual ResetPose, sets state9 and restores gravity0.035.
+
+Reproducible original-bound scope checker:
+
+    scripts/repo-python workbench/kano-state/check_case268_269_shape.py
+
+Both canonical SHA-256 extents and all **246 original instruction
+offsets, widths, register-abstracted forms** are matched with
+**16 exact native internal and 4 canonical shared-return branches**,
+plus **12 independent COFF float/call operand bindings**: original
+0.5 twice, 0.01, two __ftol2 calls and 0.035 per state. This is a
+structural island **NOT concrete-byte or full-function Exact**;
+original case250 register mismatch still blocks the strict native
+prefix beyond 40,336 bytes. No accepted function credit.
 
 ### Experimental cases265–267 — triple image effects (1,488 native bytes)
 

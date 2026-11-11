@@ -4592,5 +4592,77 @@ void Character20::Slot06()
         }
         return;
 
+    case 268: // EXPERIMENTAL Kano 0x0064F9E3: airborne deceleration and repeatable hit
+        if (field000a == 0 && field000c == 0) {
+            velocityX *= 0.5;
+            velocityY *= 0.5;
+            gravity = 0.01;
+            meter = (short)(meter + 45);
+            field3138 = 3;
+        }
+        velocityY += gravity;
+        if (field000a == 2 && field000c == 0) {
+            effect.type = 0x197;
+            effect.x = (double)((int)positionX - (int)facing * 30);
+            effect.y = (double)((int)positionY - 30);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 7 && field3138 < 3) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 4);
+                return;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                ResetPose();
+                field0008 = 9;
+                gravity = 0.035;
+            }
+        }
+        return;
+
+    case 269: // EXPERIMENTAL Kano 0x0064FBA2: airborne deceleration and repeatable hit
+        if (field000a == 0 && field000c == 0) {
+            velocityX *= 0.5;
+            velocityY *= 0.5;
+            gravity = 0.01;
+            meter = (short)(meter + 45);
+            field3138 = 3;
+        }
+        velocityY += gravity;
+        if (field000a == 2 && field000c == 0) {
+            effect.type = 0x197;
+            effect.x = (double)((int)positionX - (int)facing * 30);
+            effect.y = (double)((int)positionY - 30);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 7 && field3138 < 3) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 4);
+                return;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                ResetPose();
+                field0008 = 9;
+                gravity = 0.035;
+            }
+        }
+        return;
+
     }
 }
