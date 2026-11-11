@@ -33,22 +33,23 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Original Kano `Slot06` has 68,853 native code bytes, with natural C++
-actively authored in `workbench/kano-state/Character20State.cpp`.
-The selected original-bound prefix reaches **29,234 code bytes /
-8,023 x86 instructions**, default plus **75 reviewed live cases**:
-1–9,13–16,47,50–77,81–87,96–99,150–158,161–171,178,180.
-Strict checker validates **716 internal and 91 outbound branches**,
-**728 original-bound nonlocal COFF call/float references**, two local
-switch pointers. State178 restores directional dash-cancel and 0.03
-friction; state180 restores trailing aerial launch/landing and frame9
-loop. 179 is default. **Next original case200 starts at 0x00649BF2.**
+Kano original `Character20::Slot06` comprises **68,853 native code
+bytes**, actively reconstructed in `workbench/kano-state/`.
+Strict selected native prefix now reaches **31,809 bytes / 8,718
+instructions**, original default plus **81 reviewed live states**,
+including newly recovered state200–205. The verifier binds **803
+original internal jumps**, **102 outbound destinations**, **764
+native-bound nonlocal COFF call/float references** and both switch
+pointers. Native Kano dash cancels differ from sibling timings and
+have no speculative meter grants/effects. **Next state206 starts
+`0x0064A601`.**
 
-Incomplete stack0x11C differs from native0x4A4, with equal six-byte
-instruction length/no offset compensation. **61 original live case
-bodies, full frame, switch tables, remaining references and common
-return are OPEN. NOT full Exact.** The probe's neutral markers are
-not accepted. Only focused native checks, no all-unit cold replay.
+Incomplete compiler frame0x11C versus original0x4A4 has matching
+six-byte opcode form/width, no position adjustment. **55 remaining
+original cases**, stack, local tables, remaining relocations and
+shared return remain unverified. NOT full Exact; diagnostic marker
+cases are not reconstructed source. Only targeted local checks,
+no full cold replay or remote push.
 
 ## Additional newly accepted leaf owners
 

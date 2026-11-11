@@ -1770,29 +1770,28 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano original `Character20::Slot06` vtable at `0x00788C90` selects
-`[0x006429C0,0x006536B5)`, **68,853 native code bytes**, with 137
-local jump addresses and 316 selector bytes (136 live,180 defaults).
-Authoring workbench `workbench/kano-state/Character20State.cpp`
-currently matches native `[0x006429C0,0x00649BF2)`, **29,234 code
-bytes / 8,023 instructions**, prefix SHA-256
-`5d52f335247c236154b01bf0e8e4b08c0dd62fcc00fcb13650fbe866ead6dc68`.
-Original default + **75 native-reviewed cases** through180.
+Original Kano `Character20::Slot06`, vtable `0x00788C90`, owns
+`[0x006429C0,0x006536B5)` of **68,853 native code bytes** plus
+137 original jump destinations and 316 selector bytes (136 live IDs,
+180 default). Natural C++ in `workbench/kano-state/Character20State.cpp`
+now matches `[0x006429C0,0x0064A601)` = **31,809 native bytes /
+8,718 x86 instructions**, SHA-256
+`91fff2a75dfbda84e04ca1d3a4fd4bb58ad3181ce85c3ead5d492051fd010725`.
+The original default and **81 verified live cases** are reviewed
+through205. Pinned VC7.1 `/Od /G6 /MT /Gy /W3` verifies all **8,718
+original instruction offsets/forms/widths**, **803 internal and 102
+outbound canonical jumps**, **764 nonlocal original-bound COFF
+call/float references** and both local table operands. Candidate
+stack0x11C versus native0x4A4 has same six-byte instruction width,
+so no positional normalization. **Partial only, NOT full Exact.**
 
-Selected VC7.1 `/Od /G6 /MT /Gy /W3` auditor matches **8,023
-original x86 instruction offsets/widths/forms**, **716 internal
-and 91 outbound original jumps**, **728 exact original-bound nonlocal
-COFF calls/floats**, two switch pointers. Candidate frame0x11C vs
-original0x4A4 have equal 6-byte instruction width but different
-stack allocation; **NOT complete original Exact**. The other
-61 cases, local DATA, full stack and common return are open.
-
-Original state178 restores dash friction−0.03, clears momentum on
-clamp, jump cancels, and state0 exit; original state180 restores
-trailing aerial landing, frame2 launch (−0.5,−1), gravity0.028,
-frame9→7 loop and original reset order. State179 is a default ID.
-Next live case200 `0x00649BF2`; marker source is UNACCEPTED and only
-focused native comparison was used (no all-unit cold replay).
+States200–205 restore authentic grounded dash attacks with Kano frame
+activation, jump-cancel conditions, hit counts, sounds, collision
+window resets and state0/3 pose exit. Unreviewed sibling meter
+and local effects were removed. Next case206 at `0x0064A601`;
+**55 live cases**, full stack, jump DATA, remaining relocations and
+common return are open. No full all-unit cold replay or credit for
+probe-only marker cases.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 

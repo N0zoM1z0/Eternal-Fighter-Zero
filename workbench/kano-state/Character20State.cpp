@@ -2592,5 +2592,306 @@ void Character20::Slot06()
         }
         return;
 
+    case 200: // Native-reviewed Kano original 0x005EF87C: dash-momentum attack
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 2 && field000c == 0) {
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 201: // Native-reviewed Kano original 0x005EFA4F: dash-momentum attack
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult > 0 && attackCollisionResult != 6) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 1 && field000c == 0) {
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 4) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 202: // Native-reviewed Kano original 0x005EFC22: local hit effect on advanced pose
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (field000a == 4 && field000c == 0) {
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 6) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 203: // Native-reviewed Kano 0x0064A09D: exact collision-gated dash and frame4 activation
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult == 3) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 4 && field000c == 0) {
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 6) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 204: // Native-reviewed Kano original 0x005F008D: grounded dash cancel and recovery
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 1 && field000c == 0) {
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 205: // Native-reviewed Kano original 0x005F0278: grounded dash cancel and recovery
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 2 && field000c == 0) {
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 4) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 206: // Kano native hypothesis to be verified 0x005F0463: accelerating repeatable dash strike
+        if (field000a < 2) {
+            if ((unsigned char)dashMomentumFlag == 0) {
+                velocityX = 0.0;
+                velocityY = 0.0;
+            }
+            if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+                velocityX -= 0.03;
+            } else {
+                velocityX = 0.0;
+                dashMomentumFlag = 0;
+            }
+        }
+        if (velocityX > 0.0) {
+            dashMomentumFlag = 0;
+            velocityX -= 0.02;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 25);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 2) {
+                velocityX = 1.9;
+            }
+            if (field000a == 6 && field3138 < 4) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+                if (field3138 > 2) {
+                    remainingHitCount = 0;
+                }
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }
