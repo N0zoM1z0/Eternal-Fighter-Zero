@@ -3140,36 +3140,41 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: 53,509-byte selected boss prefix
+## Nayuki Character10 Slot06: 54,541-byte selected boss opening
 
-Original vtable Slot06 at 0x00788288 -> [0x00451850,0x00460D35),
-62,693 code bytes; canonical SHA-256
+Original vtable Slot06 at 0x00788288 selects [0x00451850,0x00460D35),
+62,693 bytes, canonical SHA-256
 4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-Adjacent switch DATA contains 138 four-byte targets and 306 selectors.
-`workbench/nayuki-state/Character10State.cpp` now matches original
-[0x00451850,0x0045E955), **53,509 code bytes / 14,677 native
-instructions**, SHA-256
-fb64b228b834142e26b0f0612e24d2a726e5acbeb322181651db495ff3c8c5ac.
-Default plus **123 original live cases** through state274 reviewed.
+The adjacent selector DATA includes 138 four-byte addresses and 306
+byte selectors (137 live IDs, 169 defaults). The partial natural C++
+at `workbench/nayuki-state/Character10State.cpp` reproduces
+[0x00451850,0x0045ED5D): **54,541 original code bytes / 14,962
+native x86 instructions**, prefix SHA-256
+c429f929b7ebe0ff66fc31061d7de478c6719f7bccf8ef61b9d789eaa5bbad78.
+The original default and **125 live cases** through state276 are
+original-bound reviewed.
 
-State273 is the reverse 667-byte state272 counterpart with original
-X=-1.4 (IEEE-754 at 0x788088) and same button cancel, frame4 rewind,
-0.08 X damping and state268 exit. State274 (408 bytes) is a tiered
-attack effect: first tick ResetFrame; frame9-specific duration reduction
-`field3148*3`; frame7 emits type0x1AC (or 0x1AD toward opponent,
-0x1AB away), at facing*30 and integer Y-50, field0028=1,
-group/layer=0, facing flag, meter+45. Matching includes original x87,
-local effect field-write order, control-flow and timer math.
+State275 (518 bytes) recovers the second airborne impact/special:
+frame3 launch at velocity (1.4,-2.1), gravity .045 and meter45;
+landing triggers vertical shake(3,0), type3 effect at facing*30,
+sound7, frame8->7 loop, and eventual state0 after FaceOpponent,
+ResetFrame, ResetPose. State276 (514 bytes) is a dash sequence with
+an additional frame1 gate at tick `39 - field3148*3`, frame3
+sound20/meter35, frames3–5 facing*40 movement, frame5 one hit,
+and late vertical speed -0.7, horizontal .7, gravity .033. Original
+x87 constant bindings and original code/branch forms were verified.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected audit: **14,677
-original native instruction offsets/forms/widths** aside from incomplete
-stack 0x31C versus canonical 0x2B4; **1,377 internal branches**,
-**206 outbound targets**, **1,116 nonlocal original-bound COFF
-call/float references**, 2 switch operands and 123 selector cases.
-NOT whole Exact: **9,184 remaining code bytes**, 7 missing original
-states275–281, 7 present unreviewed 300–306 bodies, full native
-frame, switch DATA and common return. Next state275 at 0x0045E955;
-use focused native probe/check, not all-unit cold replay or markers.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` focused prefix check verifies
+**14,962 original instruction offsets, widths and normalized forms**
+except partial compiler stack 0x328 vs canonical 0x2B4; **1,404
+internal jumps**, **210 outbound branch targets**, **1,135 nonlocal
+original-bound COFF call/float references**, two local switch operands
+and **125 original case destinations**. It does NOT prove full Exact.
+Only **8,152 original code bytes**, five missing states277–281 and
+seven inherited unreviewed 300–306 remain, plus full stack, switch
+DATA, remaining relocations and return. Next case277 at 0x45ED5D.
+Use selected native comparison and original disassembly, no full
+cold replay or acceptance of generated marker branches.
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 

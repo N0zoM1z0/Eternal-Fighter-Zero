@@ -16,38 +16,45 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Reviewed [0x00451850,0x0045E955): **53,509 / 62,693 native code
-bytes**, **14,677 original x86 instructions**, SHA-256
-fb64b228b834142e26b0f0612e24d2a726e5acbeb322181651db495ff3c8c5ac.
-Original default plus **123 live states** through274 are reviewed.
+Original [0x00451850,0x0045ED5D): **54,541 / 62,693 code bytes**,
+**14,962 native x86 instructions**, SHA-256
+c429f929b7ebe0ff66fc31061d7de478c6719f7bccf8ef61b9d789eaa5bbad78.
+Original default plus **125 live state bodies** have been reviewed.
 
-State273 is a natural 667-byte reverse counterpart of 272: initial
-velocityX **-1.4** rather than +1.4 (IEEE-754 0x788088), while
-retaining 0.08 damping, frame1/3 sound21, button cancellation,
-frame4 rewind, state268 exit and the canonical call order.
-State274 is a separate 408-byte attack: first-tick ResetFrame,
-then a tier-dependent frame9 timing gate. On transition to frame7
-it selects local effect **0x1AC**, 0x1AD for inputX==facing or
-0x1AB for the opposite input; it emits at integer X + facing*30,
-Y-50, field0028=1, group/layer=0, facing flag, then gives 45 meter.
-Completion resets state0 after virtual ResetPose. The original
-`sub/neg/sbb/inc` VC7.1 frame9 indicator and all operands match.
+New state275 (518 bytes) restores the second airborne grab-impact
+branch: entry ResetFrame and one remaining hit, frame3 launch
+(1.4,-2.1), gravity .045 and meter45, landing frames3–7 trigger
+shake(3,0), effect3 at X+facing*30, sound7 and the frame8->7 loop.
+Exit requires FaceOpponent, ResetFrame, then virtual ResetPose.
+State276 (514 bytes) is a distinct dash attack with a frame1
+**39 - field3148 * 3** time gate in addition to the normal duration.
+It sets frame3 sound20/meter35, frame5 hitcount1, advances X by
+facing*40 at frames3–5, and later starts airborne motion with
+vertical speed -0.7, velocityX 0.7 and gravity .033. Its post-launch
+landing moves to state13, and animation exit loops the final frame.
+Both restored cases match original code and bound floating constants;
+no unreviewed inherited body was counted as source.
+
+Focused original-bound verification:
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected audit checks **14,677
-original instruction offsets/widths/normalized forms** except partial
-stack allocation (0x31C vs original 0x2B4), **1,377 internal jumps**,
-**206 outbound**, **1,116 nonlocal original-bound COFF call/float
-references**, two local switch operands and **123 selector case
-entries**. This is NOT full function Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` validates **14,962 original
+instruction positions/widths/normalized forms** apart from the
+incomplete compiler frame allocation (0x328 vs native 0x2B4).
+The audit independently verifies **1,404 original internal branches**,
+**210 outbound destinations**, **1,135 nonlocal original-bound COFF
+call/IEEE-754 references**, 2 local switch operands and **125
+original selector case targets**. This is selected-prefix evidence,
+NOT complete original-function Exact.
 
-## Next original case and incomplete full owner
+## Next state and unfinished full owner
 
-State275 starts at **0x0045E955**. Seven original live IDs275–281
-remain missing from natural source, alongside seven inherited
-300–306 bodies not yet fully verified. Workbench now has 130/137
-case labels, 123 reviewed. **9,184 native code bytes**, full
-canonical stack, switch DATA, remaining relocations and common return
-are open. Probe only `probe_prefix.py --through 275`, never full
-all-unit cold replay; marker branches are UNACCEPTED.
+Original state277 begins at **0x0045ED5D**. Only **five missing live
+case IDs 277–281** remain unimplemented; seven inherited bodies
+300–306 are still not whole-function verified. Workbench has 132 of
+137 state labels (125 selected-prefix verified). **8,152 original code
+bytes**, canonical 0x2B4 frame, 552/306-byte switch tables, remaining
+relocations and shared return remain open. Use original disassembly
+and `probe_prefix.py --through 277 --context 12`; never count
+synthetic marker branches or run all-unit cold replay.

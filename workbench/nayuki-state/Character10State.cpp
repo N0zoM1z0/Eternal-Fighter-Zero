@@ -4623,6 +4623,88 @@ void Character10::Slot06()
         }
         return;
 
+    case 275: // Reviewed Nayuki 0x0045E955: second aerial impact and rebound launcher
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+            remainingHitCount = 1;
+        }
+        if (positionY < 0.0)
+            velocityY += gravity;
+        if (positionY + velocityX > 0.0 && field000a > 2 && field000a < 8) {
+            field000c = 0;
+            positionY = 0.0;
+            ResetFrame();
+            field000a = 8;
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)((int)positionX + (int)facing * 30);
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 3) {
+                meter = (short)(meter + 45);
+                velocityX = 1.4;
+                velocityY = -2.1;
+                gravity = 0.045;
+            }
+            if (field000a == 8)
+                --field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetFrame();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 276: // Reviewed Nayuki 0x0045EB5B: dash attack with tiered frame1 advance
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+            remainingHitCount = 0;
+        }
+        if (field000a == 3 && field000c == 0) {
+            meter = (short)(meter + 35);
+            pendingContextSoundSlot = 20;
+        }
+        if (field000a > 8)
+            velocityY += gravity;
+        if (field000a > 8 && velocityY + positionY > 0.0) {
+            ResetPose();
+            field0008 = 13;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration ||
+            (field000a == 1 && field000c == 39 - field3148 * 3)) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 5) {
+                pendingCharacterSoundSlot = 3;
+                remainingHitCount = 1;
+            }
+            if (field000a < 3)
+                attackCollisionResult = 0;
+            if (field000a == 3 || field000a == 4 || field000a == 5)
+                positionX += (double)((int)facing * 40);
+            if (field000a == 9) {
+                velocityY = -0.7;
+                velocityX = 0.7;
+                gravity = 0.033;
+            }
+            if (field000a >= timing.animationFrameCount)
+                --field000a;
+        }
+        return;
+
     case 300: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
