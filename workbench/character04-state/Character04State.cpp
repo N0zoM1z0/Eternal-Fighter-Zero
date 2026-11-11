@@ -2931,5 +2931,121 @@ void Character04::Slot06()
         return;
 
 
+    case 210: // EXPERIMENTAL Character04 0x0060F8F1: special cancel and mirrored local hit
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult == 3) {
+            field0008 = 4;
+            if (inputX == facing)
+                field0008 = 5;
+            if ((int)inputX == -(int)facing)
+                field0008 = 6;
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            remainingHitCount = 1;
+        }
+        if (field000a == 2 && field000c == 0) {
+            pendingCharacterSoundSlot = 1;
+            meter = (short)(meter + 25);
+            effect.type = 0x19f;
+            effect.x = (double)((int)positionX - (int)facing * 28);
+            effect.y = (double)((int)positionY - 44);
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        if (field000a == 6 && field000c == 0)
+            pendingCharacterSoundSlot = 2;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3)
+                attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+
+
+    case 211: // EXPERIMENTAL Character04 0x0060FB12: uncancelled local hit level two
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            remainingHitCount = 1;
+        }
+        if (field000a == 2 && field000c == 0) {
+            pendingCharacterSoundSlot = 1;
+            meter = (short)(meter + 25);
+            effect.type = 0x1a0;
+            effect.x = (double)((int)positionX - (int)facing * 21);
+            effect.y = (double)((int)positionY - 63);
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        if (field000a == 6 && field000c == 0)
+            pendingCharacterSoundSlot = 2;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3)
+                attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+
+
+    case 212: // EXPERIMENTAL Character04 0x0060FC9A: uncancelled local hit level three
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            remainingHitCount = 1;
+        }
+        if (field000a == 2 && field000c == 0) {
+            pendingCharacterSoundSlot = 1;
+            meter = (short)(meter + 25);
+            effect.type = 0x1a1;
+            effect.x = (double)((int)positionX - (int)facing * 5);
+            effect.y = (double)((int)positionY - 61);
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        if (field000a == 6 && field000c == 0)
+            pendingCharacterSoundSlot = 2;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2)
+                attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+
+
     }
 }

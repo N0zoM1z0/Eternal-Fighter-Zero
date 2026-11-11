@@ -1,9 +1,10 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
-**PARTIAL: not whole-function Exact.** Ordinary C++ now covers
-native default plus **84 authentic live IDs**: 1–9,13–16,47,50–77,
-81–87,96–99,150–158,161–171,180,200–209. The other **54** native
-live states remain OPEN; generated probe markers are never credited.
+**PARTIAL: not whole-function Exact.** Natural C++ now reconstructs
+original default plus **87 real live IDs**: 1–9,13–16,47,50–77,
+81–87,96–99,150–158,161–171,180,200–212. The other **51**
+authentic live IDs remain OPEN. Diagnostic marker cases are never
+accepted as source or credited toward byte matching.
 
 ## Original PE ownership and dispatch
 
@@ -19,35 +20,36 @@ live states remain OPEN; generated probe markers are never credited.
 
 ## Current audited continuous prefix
 
-`[0x00607930,0x0060F8F1)` is **32,705 original code bytes**,
-SHA-256 `a659a1ad2dc011fc1ede375151d918b3de76a1fce1f715ce696df2982440951c`.
-The C++ is real source for default plus 84 reviewed live states.
-Newest 207–209 are three distinct aerial cancel / hit behaviors;
-207 grants meter5 at pose1, whereas 208 grants meter13 when the
-animation advances to pose1, and 209 grants meter30 at pose1
-**before landing**. All three use native aerial jump cancel
-(airActionCount gate, down input and attack collision) and
-correctly separate pose4 sound, ground contact to state13,
-pose<3 collision reset and frame completion to state9.
+Original `[0x00607930,0x0060FE22)` covers **34,034 native
+executable bytes**, SHA-256
+`b92ebcb066f6deb3f64259a26deb6dbda11b673085d39d065028e7121bcf3ac3`.
+Source contains native default plus 87 real live case branches.
+Newest 210–212 are three distinct local hit levels with original
+state-specific animation and effect timing. State210 has the
+original ground dash cancel gate, pose0 speed reset, pose2
+0x19F effect at X−facing×28/Y−44 and sound1; 211/212 have no
+dash cancel and emit 0x1A0 at X−facing×21/Y−63 or 0x1A1 at
+X−facing×5/Y−61. Case212 clears early collision only for
+new pose<2, unlike the other two (<3). Their pose6 sound2,
+true effect emission/remaining hits and state0 reset are native.
 
-Fast original-bound selected checker:
+Focused original-bound check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-The original-bound selected audit proves **8,978 original x86
-instruction offsets/widths and register-abstracted forms**, **828
-native internal and 108 native shared-return branches**, **766
-original COFF direct-call / IEEE-754 references** and two local
-native dispatch pointers. All other code bytes match. Only the
-original-width provisional six-byte stack immediate (`0x128`
-versus complete original `0x2E8`), unresolved shared-return JMP
-displacements and independently original-bound relocation operand
-fields are excepted; no skipped or padded reviewed code.
+Verifies **9,339 original x86 instruction offsets, widths and
+register-abstracted forms**, **861 exact internal and 112 original
+shared-return branch destinations**, **781 original COFF direct-call
+/ IEEE-754 references** and two original local selector/table
+pointers. Other original opcode bytes match exactly. Only the
+original-width provisional stack allocation (`0x140` vs native
+full `0x2E8`), still-outbound shared-return jump displacement and
+the independently native-bound COFF operands are exempt.
 
-**Next original live case210 starts at `0x0060F8F1`.** Remaining
-54 authentic live states, complete original frame, 139 native
-switch addresses, 325 selector bytes and final shared return are
-still OPEN. This is **selected prefix, NOT full Exact**. Never
-count temporary compilation markers or run cold all-unit replay.
+**Next original live case213 begins at `0x0060FE22`**. The
+remaining 51 original live states, full original stack, 139-DWORD
+native switch table, 325 selector bytes and shared return remain
+OPEN. This is selected-prefix, **NOT full native Exact**. Never
+run cold all-unit replay or count probe marker code.

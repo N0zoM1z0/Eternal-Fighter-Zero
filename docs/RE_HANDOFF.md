@@ -531,23 +531,20 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 
 ### Active second large boss: Character04::Slot06 (NOT full Exact)
 
-`workbench/character04-state/Character04State.cpp` now contains
-original default plus **84 authentic live states**, through
-physical states207–209. Those three independently matched aerial
-cancel actions have distinct meter and sound positions: 207 pose1,
-208 after animation-to-pose1, 209 pose1 before landing.
-`check_prefix.py` binds **32,705 continuous native code bytes /
-8,978 original x86 instruction positions/widths/forms**, **828
-native internal and 108 shared-return branch targets**, **766
-original COFF calls/IEEE-754 constants**, and two original local
-switch references. Other selected bytes match except precisely the
-original-width provisional stack immediate (`0x128` vs `0x2E8`),
-original-bound relocation operands and incomplete shared-return
-jump distances. Original vtable `0x788B94`, full 59,143-byte owner
-and 139-pointer/325-selector DATA are independently known, but
-54 later native live states and full frame/data/return are OPEN.
-**Next state210 at `0x0060F8F1`**. Strict selected-prefix proof
-ONLY, not whole Exact. No cold all-unit replay or remote push.
+`workbench/character04-state/Character04State.cpp` now authors
+original default plus **87 real live states**, through 210–212.
+New native aerial-special branches have distinct effect types,
+pose2 coordinate offsets, sound, meter and early collision reset.
+The scoped `check_prefix.py` proves **34,034 native continuous
+bytes / 9,339 original x86 instructions**, **861 native internal
+and 112 shared-return branches**, **781 original-bound COFF
+call/float operands** plus two native local switch references.
+Only original-width provisional stack immediate (`0x140` vs
+complete `0x2E8`), original-bound COFF operands, and unclosed
+shared-return displacement differ. Next case213 at
+`0x0060FE22`; 51 real native live cases and full original
+stack/table/return are still OPEN. Strict selected-prefix only,
+**NOT whole Exact**. No all-unit cold replay or remote push.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is
 now a complete **11-byte native Exact** virtual passive hook,
