@@ -66,6 +66,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case270_shape.py
     scripts/repo-python workbench/kano-state/check_case300_shape.py
     scripts/repo-python workbench/kano-state/check_case301_shape.py
+    scripts/repo-python workbench/kano-state/check_case303_shape.py
     scripts/repo-python workbench/kano-state/check_case302_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
@@ -112,6 +113,30 @@ SetHorizontalShake, SetTint, ResetFrame, Context::EmitEffect and
 `__ftol2`. It is **native structural evidence only, NOT complete
 Exact**: original case250 register-allocation phase remains open;
 strict contiguous Boss prefix is still **40,336 bytes**.
+
+### Experimental case303 — 884-byte second-stage super launcher
+
+Original Kano state303 `[0x00650D10,0x00651084)` is **884 native
+code bytes / 233 x86 instructions**, now authored in natural C++.
+Its original frame13 freeze/tint/palette0x13 effect costs1,000 meter;
+frame3 emits paired effects0x196/0x197, frame3–6 charge increases by
+100, full charge switches to frame8, and frame14 launches native
+local effect **0x19C** at integer Y−110 and X=integer positionX.
+It preserves original frame0/7 resets, face flag and final pose0.
+
+Run the scoped original-bound case check:
+
+    scripts/repo-python workbench/kano-state/check_case303_shape.py
+
+The native SHA-256
+`3e6a9667b4b4ae0785f0815d512889fc40f30478c52092306c5957f8fe825cc6`
+is fixed. This audits **all 233 original instruction positions,
+widths and register-abstracted opcodes**, **18 original internal
+branches**, **2 shared returns**, and **13 native-bound COFF calls**
+(ResetFrame, SetTint, EmitEffect and floating integer conversion).
+The source has not solved case250's concrete register phase, so
+**this is a structural island, NOT full Exact** and does not advance
+the 40,336-byte original contiguous prefix.
 
 ### Experimental case301 — 962-byte tier-two original super
 

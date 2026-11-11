@@ -259,6 +259,15 @@ It is **NOT concrete-byte Exact** due state250's remaining register
 phase; the strict Kano 40,336-byte prefix is unchanged. No full
 cold replay or unaccepted case-marker credit.
 
+Kano state303 has now also been authored: original **884 code bytes /
+233 x86 instruction positions** of a frame14 0x19C launcher after
+a 1,000-meter freeze/tint sequence. Dedicated
+`check_case303_shape.py` verifies **18 in-state native branches,
+2 original shared-return jumps, 13 original call/float operands**
+and all register-abstracted instruction offsets/widths/forms. This
+is NOT concrete-register or complete Exact; native state250 still
+blocks strict Boss contiguous prefix beyond 40,336 bytes.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

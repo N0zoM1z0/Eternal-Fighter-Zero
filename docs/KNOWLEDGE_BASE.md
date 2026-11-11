@@ -2110,6 +2110,18 @@ shared-return jumps**, and **13 original-bound REL32 operands**.
 This is a register-abstracted structural island, **NOT full Exact**;
 state250 still blocks the strict 40,336-byte continuous prefix.
 
+#### Kano state303 884-byte super-launch structural island
+
+The natural C++ state303 reproduces **884 original code bytes /
+233 native instruction boundaries** at `[0x00650D10,0x00651084)`.
+It implements native frame13 freeze/tint/spend1000 plus frame14
+0x19C local launcher and charges/rewinds. Scoped
+`check_case303_shape.py` confirms native SHA, **233 x86 register-
+abstracted opcode forms/widths/offsets**, **18 internal and 2 shared-
+return original branches**, and **13 direct-call COFF operands**.
+This remains a structural island; concrete-register parity and
+whole Boss Exact are still open at state250.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five
