@@ -7,33 +7,35 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki Character10 Slot06 remains the major unfinished 62,693-byte
-native state boss, **NOT whole Exact**. See the focused
-[workbench instructions](../workbench/nayuki-state/README.md).
-The verified selected prefix is **34,976 bytes / 9,602 instructions**
-with default and **87 live cases**, **903 original internal branches**,
-**120 canonical outbound destinations**, **805 original-bound
-nonlocal call/float relocations** and two local switch operands.
-The partial probe stack frame is 0x280 versus full original 0x2B4.
+Nayuki Character10 Slot06 is the major unfinished **62,693-byte**
+state boss; **not whole Exact**. Its focused source/handoff is
+[`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
 
-**Next original state210 at 0x0045A0F0**. Source diverges at
-**0x0045A0F7** (function offset 0x88A7) because the unreviewed source
-must still be matched to the native frame-gated branch.
-The workbench has 118/137 live case labels: 87 verified,
-31 existing unreviewed, 19 missing IDs 263–281. No neutral probe
-marker can be claimed as reconstructed.
+A strict selected-prefix check verifies **36,319 native code bytes /
+9,968 instructions**, default plus **90 live case entries**,
+**936 original internal branches**, **127 outbound destinations**,
+**829 original-bound nonlocal COFF relocations** and two local
+switch operands. The temporary compiled frame is 0x280 versus
+original 0x2B4. These are NOT whole-owner Exact or runtime results.
 
-Focused tests only, not all-unit cold replay:
+**Next state213 starts 0x0045A62F**, mismatch at 0x0045A632
+(owner offset 0x8DE2). Reconstruct from original disassembly.
+The workbench has 118/137 state labels: 90 reviewed, 28 present but
+unverified, and 19 absent (IDs 263–281). Never count partial-probe
+marker branches as original implementation.
+
+Focused checks (not full cold replay):
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 210 --context 10
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 213 --context 12
     scripts/repo-python scripts/ci.py
 
-Preserve dirty edits, ignored canonical target, pinned compiler/Wine,
-Ghidra database, accepted `src/`, and existing analysis/evidence. Commit
-coherent progress as `gpt-web: xxx`; do not push without permission.
+Keep and reconcile all dirty edits. Preserve ignored `resources/EFZ.exe`,
+pinned VC7.1/Wine, the Ghidra project, existing accepted `src/`, and
+all tracked evidence. Save coherent local progress with `gpt-web: xxx`.
+Do not push without authorization.
 
 ## Tools and checks
 

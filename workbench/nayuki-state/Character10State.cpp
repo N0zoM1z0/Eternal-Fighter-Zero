@@ -3084,7 +3084,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 210: // Nayuki original 0x0045A0F0: four-frame launcher and landing recovery
+    case 210: // Reviewed Nayuki original 0x0045A0F0: four-frame launcher and landing recovery
         if (field000a == 0 && field000c == 0)
             ResetFrame();
         if (field000a == 4 && field000c == 0) {
@@ -3118,92 +3118,86 @@ void Character10::Slot06()
         }
         return;
 
-    case 211: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        velocityY += gravity;
+    case 211: // Reviewed Nayuki 0x0045A265: grounded cancel and frame-3 activation
         if (inputY == -1 && field000a > 0 && field015c < 3 &&
-            attackCollisionResult >= 2 && airActionCount == 0) {
-            ++airActionCount;
-            field0008 = 14;
-            if (inputX == facing) {
-                field0008 = 15;
-            }
-            if ((int)inputX == -(int)facing) {
-                field0008 = 16;
-            }
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing)
+                field0008 = 5;
+            if ((int)inputX == -(int)facing)
+                field0008 = 6;
             attackCollisionResult = 0;
             ResetPose();
             return;
         }
-        if (positionY + velocityY >= 0.0) {
-            positionY = 0.0;
-            field0008 = 13;
-            ResetPose();
-            return;
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a == 3 && field000c == 0) {
+            meter = (short)(meter + 30);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == 5) {
-                meter = (short)(meter + 15);
-                pendingContextSoundSlot = 20;
-                remainingHitCount = 1;
-                pendingCharacterSoundSlot = 0;
-                effect.type = 400;
-                effect.x = (double)((int)positionX + (int)facing * 45);
-                effect.y = (double)((int)positionY - 62);
-                effect.flag0018 = (unsigned char)facing;
-                effect.layer = 1;
-                effect.group = 2;
-                EmitLocalEffect(&effect);
-            }
-            if (field000a < 2) {
-                attackCollisionResult = 0;
-            }
+            attackCollisionResult = 0;
             if (field000a >= timing.animationFrameCount) {
-                field000a = (unsigned short)(field000a - 2);
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
             }
         }
         return;
 
-    case 212: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        velocityY += gravity;
-        if (field000a == 0 && field000c == 0) {
-            meter = (short)(meter + 30);
+    case 212: // Reviewed Nayuki 0x0045A3E8: aerial rebound, counter transition and landing effect
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 15);
             pendingContextSoundSlot = 20;
             remainingHitCount = 1;
-            velocityX /= 2.0;
-            gravity = 0.07;
+            velocityY -= -1.0;
+            gravity = 0.035;
         }
+        velocityY += gravity;
         if (attackCollisionResult > 1) {
-            field0008 = 213;
-            ResetPose();
-            ResetFrame();
+            field000c = 0;
+            field000a = 0;
+            field0008 = 257;
+            velocityX = -velocityX;
+            velocityY = -2.5;
+            gravity = 0.025;
             return;
         }
-        if (positionY + velocityY >= 0.0) {
+        if (velocityY + positionY > 0.0 && field000a < 5 &&
+            field000a > 1) {
             positionY = 0.0;
-            velocityY = 0.0;
+            field000c = 0;
+            field000a = 5;
             SetVerticalShake(3, 0);
             effect.type = 3;
-            effect.x = (double)(int)positionX;
+            effect.x = (double)((int)positionX + (int)facing * 30);
             effect.y = (double)(int)positionY;
             effect.group = 2;
             effect.layer = 0;
-            effect.palette = 7;
             contextOwner->EmitEffect(&effect);
             pendingContextSoundSlot = 7;
-            field0008 = 214;
-            ResetPose();
+            velocityX = 0.0;
+            velocityY = 0.0;
             return;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
+            if (field000a == 5)
+                --field000a;
             attackCollisionResult = 0;
             if (field000a >= timing.animationFrameCount) {
-                field000a = (unsigned short)(field000a - 2);
+                field0008 = 7;
+                FaceOpponent();
+                ResetPose();
             }
         }
         return;
