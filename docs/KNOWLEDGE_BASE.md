@@ -3026,44 +3026,54 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: reviewed 31,729-byte state boss prefix
+## Nayuki Character10 Slot06: 31,729-byte reviewed state-boss prefix
 
-Original vtable slot06 at 0x00788288 selects [0x00451850,0x00460D35),
-**62,693 original code bytes**, SHA-256
+Original Nayuki Slot06 at vtable 0x00788288 owns
+[0x00451850,0x00460D35): 62,693 original x86 code
+bytes, SHA-256
 4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-Adjacent switch DATA has 552 destination bytes at 0x00460D35 and
-306 selector bytes at 0x00460F5D: 137 live IDs, 169 default IDs.
+The adjacent 552-byte switch destination and
+306-byte selector tables are DATA, not instruction
+bytes. They contain 137 live states, 169 defaults.
 
-Current partial natural source is
-`workbench/nayuki-state/Character10State.cpp`. Reviewed code
-[0x00451850,0x00459441) is **31,729 bytes / 8,731 original x86
-instructions**, SHA-256
+The natural partial workbench at
+workbench/nayuki-state/Character10State.cpp has
+reconstructed [0x00451850,0x00459441):
+**31,729 bytes / 8,731 original x86 instructions**,
+prefix SHA-256
 e79a6fe2cab2a71967c6ad8eb3d518a1120379c75b91102ea8954e9aba8e3201.
-The reviewed default and **81 live states** are 1–9, 13–16, 47,
-50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180, 200–203.
+Reviewed original default plus 81 live cases:
+1–9, 13–16, 47, 50–77, 81–87,
+96–99, 123, 150–158, 161–171, 178–180,
+200–203. New real behavior includes grounded
+meter/dash damping (200), advanced state3148
+frame progression (201), timed airborne multi-hit
+with landing shake/particle (202), and frame-14
+launch and zero-height cancel (203). The 203
+FUCOMPP condition is equality positionY == 0.0;
+state202 collision reset is only on frames 4,
+5, 7, 9 and 11.
 
-New original-bound native comparison includes states 200 and 201, the
-823-byte state202 with aerial multi-hit/landing rebound/effect, and the
-725-byte state203 with grounded cancel, delayed hit reaction, launch
-physics and frame transition. State203 requires `positionY == 0.0` to
-reproduce VC7.1 `fld`/`fld`/`fucompp` plus parity-flag control flow;
-`0.0 > positionY` and `0.0 == positionY` each emit different code.
-The previously inherited cases 200 and 201 are fully matching source.
+The selected native check_prefix.py under
+VC7.1 /Od /G6 /MT /Gy /W3 audits
+**8,731 same-offset and same-width instructions**
+with the incomplete partial stack allocation
+(0x270 vs original 0x2B4) as the sole different
+form. Independently reviewed: **798 original
+internal jumps**, **105 valid outbound targets**,
+**781 original-bound nonlocal COFF float/call
+relocations**, 2 local switch references and
+81 canonical case entries. Neutral late-state
+marker code is NOT accepted or counted.
 
-Selected `workbench/nayuki-state/check_prefix.py` compares **8,731
-same-offset/same-width normalized x86 instructions** (except the
-partial frame), **798 original internal jumps**, **105 outbound jumps**,
-**781 original-bound nonlocal COFF call/IEEE-754 references**, two
-local switch operands, and 81 original case entry destinations.
-
-**Not full Exact.** Remaining **30,964 code bytes**, 19 missing
-case labels 263–281, 37 existing unreviewed cases, original 0x2B4
-stack frame, complete switch tables/relocations/shared return are open.
-Next state 204 starts at **0x00459441**. Its current provisional source
-diverges at **0x004595D7**: native compares frame 3, whereas inherited
-source tests frame 2 and alters the wrong field. Use
-`probe_prefix.py --through 204` and original disassembly, never a full
-cold replay. The partial probe uses UNACCEPTED marker branches.
+Next is original state204 at 0x00459441;
+the next mismatching opcode is at 0x00459444.
+The workbench has 118 original live case labels,
+19 missing IDs 263–281, and 37 later existing
+unreviewed candidate bodies. **Not full Exact:**
+30,964 code bytes, complete frame, switch tables
+and remaining relocations/return are unresolved.
+No full cold replay.
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 

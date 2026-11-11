@@ -7,33 +7,35 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-**Primary unfinished boss:** Nayuki Character10 Slot06 (62,693 bytes);
-NOT an accepted Exact unit. Read the
-[focused workbench handoff](../workbench/nayuki-state/README.md).
-The verified selected prefix is now **31,729 code bytes / 8,731
-original instructions**, spanning default and **81 live states**.
-Its original-bound checker verifies **798 internal branches**, **105
-outbound branches**, **781 nonlocal COFF call/float references**, and
-**two local switch-table operands**. The original frame is 0x2B4;
-the temporary partial candidate's frame is 0x270.
+Nayuki Character10 Slot06 is the main unfinished boss,
+NOT full Exact. See the detailed state workbench README.
+The selected proof covers **31,729/62,693 original
+code bytes**, **8,731 original instructions**,
+**81 reviewed states**, **798 internal original
+branches**, **105 original outbound destinations**,
+**781 nonlocal COFF float/call fields** plus two
+local switch operands. The native complete stack is
+0x2B4, partial compiler probe uses 0x270.
 
-**Next state 204 at 0x00459441:** original-vs-candidate divergence at
-**0x004595D7** (offset 0x7D87), where the original compares frame 3,
-not the inherited branch's frame 2. The workbench contains 118 / 137
-original live case labels, with 19 missing IDs 263–281 and 37 later
-unverified case bodies. No marker branches may be claimed as reconstructed.
+**Next state204 at 0x00459441**; mismatch
+0x00459444 (offset 0x7BF4). The candidate uses
+a placeholder instead of original dash flag
+0x158 byte handling. Original selector has
+137 live IDs, 169 defaults; workbench contains
+118 original case labels, missing 19 IDs 263–281
+and 37 other later cases remain unreviewed.
 
-Focused checks only; **do not run all-unit cold replay**:
+Focused commands:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 204 --context 10
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 204 --context 8
+    scripts/repo-python scripts/ci.py
 
-The ignored build/ and .analysis/ scratch can be recreated. Preserve
-canonical EFZ.exe, pinned compiler/Wine tools, the Ghidra project,
-accepted src/, tracked evidence and unfinished workbench changes.
-Commit useful checkpoints as `gpt-web: xxx`, without pushing.
+Do not run whole cohort cold replay or treat
+temporary marker branches as true reconstructed code.
+Preserve all dirty modifications.
 
 ## Tools and checks
 
@@ -249,7 +251,7 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
-| Nayuki Character10::Slot06 state boss | 0x00451850, 62,693 original code bytes + 552/306-byte local data | workbench/nayuki-state/ selected prefix: 29,139 bytes / 8,027 native instructions, 77 states, 707 internal and 97 valid outbound jumps, 747 original-bound nonlocal relocations plus 2 local table operands; original stack 0x2B4 (partial probe 0x264). Case labels present 118/137, absent 263–281 (19), other 41 unreviewed. Start state 200, 0x00458A23; mismatch at 0x00458A26. 33,554 code bytes open, NOT full Exact. |
+| Nayuki Character10::Slot06 state boss | 0x00451850, 62,693 code bytes + 552/306-byte local tables | selected workbench: 31,729 bytes / 8,731 instructions and 81 reviewed states; 798 internal jumps, 105 valid outbound targets, 781 canonical nonlocal COFF fields + 2 local refs; incomplete frame 0x270 vs full 0x2B4. Next state204 0x00459441, opcode difference 0x00459444. 19 missing IDs 263–281 and 37 existing later unreviewed; 30,964 code bytes remain OPEN, NOT full Exact. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 
