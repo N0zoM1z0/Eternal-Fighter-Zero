@@ -4436,6 +4436,94 @@ void Character10::Slot06()
         }
         return;
 
+    case 271: // Reviewed Nayuki 0x0045E1A9: charge meter tier and state7 exit
+        ResetFrame();
+        if (field000a == 5 && field000c == 0)
+            pendingCharacterSoundSlot = 5;
+        if (field000a == 5 && field000c == 0)
+            ++field3148;
+        if (field3148 > 9)
+            field3148 = 9;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a >= timing.animationFrameCount) {
+                ResetPose();
+                field0008 = 7;
+            }
+        }
+        return;
+
+    case 272: // Reviewed Nayuki 0x0045E287: level-gated charge movement and button cancel
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 1.4;
+            velocityY = 0.0;
+            horizontalDeceleration = 0.0;
+        }
+        if (field000a > 3) {
+            velocityX -= 0.08;
+            if (velocityX < 0.0)
+                velocityX = 0.0;
+        }
+        if ((field000a == 1 || field000a == 3) && field000c == 0)
+            pendingContextSoundSlot = 21;
+        if (field000a < 4) {
+            if (buttonPulse[0] == 1) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 275;
+                if (field3148 > 4)
+                    field0008 = 269;
+                return;
+            }
+            if (buttonPulse[1] == 1) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 274;
+                return;
+            }
+            if (buttonPulse[2] == 1) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 276;
+                if (inputY == 1)
+                    field0008 = 281;
+                return;
+            }
+            if (buttonPulse[3] == 1) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 271;
+                if (inputY == 1)
+                    field0008 = 280;
+                if (field3148 == 9) {
+                    field0008 = 268;
+                    field000a = 8;
+                }
+                return;
+            }
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 4 && field313c < 3) {
+                field000a = (unsigned short)(field000a - 4);
+                ++field313c;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 268;
+                ResetFrame();
+                ResetPose();
+                field000a = 8;
+                return;
+            }
+        }
+        return;
+
     case 300: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;

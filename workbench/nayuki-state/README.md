@@ -16,42 +16,40 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Reviewed original code [0x00451850,0x0045E1A9): **51,545 / 62,693
-bytes**, **14,141 x86 instructions**, SHA-256
-8fa2492e029cfb1a19a6448ffb0c3612adc237c4eb7ca7c19f458af4f16b4e50.
-Original default and **119 live cases** through state270 now match.
+Original [0x00451850,0x0045E522): **52,434 / 62,693 code bytes**,
+**14,384 native x86 instructions**, SHA-256
+13dafd7fcfc2c3e076888ceca3f3cbe98704626de847d4a575f2d67e508ac110.
+The default and **121 live states** through state272 have been reviewed.
 
-New state269 (518 bytes) handles an airborne-impact attack: first-tick
-ResetFrame + one hit; gravity while airborne; at frames3–7 a landing
-condition resets frame, positionY and triggers vertical shake(3,0),
-global effect3 at facing*30, sound7, then frame8. Frame3 grants
-meter45 and velocity (1.4,-2.1) with gravity .045, while frame8
-loops back to7. Completion returns to state0 in the original
-FaceOpponent/ResetFrame/ResetPose order.
+State271 is a fully reconstructed 222-byte charge/tier counter:
+it always calls ResetFrame, emits sound5 and increments `field3148`
+at frame5/tick0, caps field3148 at nine, advances each animation tick
+with attackCollisionResult3 and exits by ResetPose then state7.
+State272 is a 667-byte combo/cancel state: initializes horizontal
+velocity1.4 and zero vertical/deceleration, damps by 0.08 after
+frame3, triggers context sound21 on frames1/3, and accepts original
+button pulses only before frame4. Input chooses 275/269, 274,
+276/281 or 271/280/268 by tier and inputY. Frame4 can rewind to
+frame0 while field313c<3, and animation exit switches to state268,
+then ResetFrame/ResetPose and rewrites frame to8. Original 1.4/0.08
+IEEE-754 references and call order were compared.
 
-New state270 (468 bytes) is a delayed advancing attack: it resets
-the frame, enables hitcount at frame5, requests sound20 and meter35 at
-frame3, advances own positionX by facing*40 over frames3–5 and later
-launches at (0.7,-1) with gravity .033 at frame9. Airborne landing
-changes to state13 after ResetPose; the last animation frame loops
-back one frame. Canonical original IEEE-754 constants and x87 order
-are checked, not just normalized opcodes.
+Focused selected native verification:
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` compares **14,141 instruction
-positions/widths/forms**, **1,322 original internal branches**,
-**192 outbound targets**, **1,090 nonlocal original-bound COFF call/
-float references**, two local switch operands, and **119 selector
-case entries**. Candidate frame 0x314 differs from original 0x2B4;
-this is selected-prefix evidence, NOT whole-function Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` matches **14,384 original
+instruction offsets/widths/normalized forms** except partial stack
+allocation (candidate 0x314 vs canonical 0x2B4), **1,349 internal
+branches**, **199 outbound targets**, **1,102 original-bound nonlocal
+COFF call/float references**, 2 local switch operands and **121
+original selector case targets**. This is NOT whole Exact.
 
 ## Next state and unresolved work
 
-Original state271 starts at **0x0045E1A9**. Remaining **11 absent
-states271–281**, seven unreviewed 300–306 and full original
-stack/switch data/return remain open. Of 137 original live IDs,
-126 authored case labels exist, 119 reviewed. **11,148 original code
-bytes** are still unmatched. Continue native disassembly and focused
-`probe_prefix.py --through 271 --context 12` only. Never count
-neutral case markers or run full all-unit cold replay.
+Original state273 begins **0x0045E522**. **9 missing states273–281**
+and seven unreviewed 300–306 remain. Workbench has 128/137 live case
+labels, 121 reviewed. **10,259 unmatched native bytes**, full stack,
+local switch tables, remaining relocations and shared return are open.
+Continue native-driven focused `probe_prefix.py --through 273` only;
+marker bodies are UNACCEPTED and full cold replay is prohibited.
