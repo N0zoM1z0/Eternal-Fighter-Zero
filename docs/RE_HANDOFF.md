@@ -31,6 +31,20 @@ Continue attacking other substantial unimplemented functions and
 small exact leaf owners. Preserve dirty edits (single writer).
 Native codegen Exact is *not* a whole-product/runtime completion claim.
 
+## Active next boss: Kano Character20::Slot06 (partial)
+
+Work has **actually started** on Kano's original 68,853-byte Slot06
+state machine in `workbench/kano-state/Character20State.cpp`.
+The selected first **2,189 native bytes (621 instructions)** now match
+compiled C++ structure for original default/cases1–9, with
+50 original internal branches, 11 outbound targets, 44 externally
+bound reference operands and two verified original local jump-table
+addresses. The provisional short `0x58` stack allocation differs from
+original `0x4A4`, so this is **NOT whole Exact or any accepted function**.
+Next original case13 starts at `0x0064324D`. Native provenance and
+selected checker instructions in `workbench/kano-state/README.md`.
+Do not replay all units or count the generated marker cases.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++
