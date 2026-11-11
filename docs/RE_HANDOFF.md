@@ -212,6 +212,16 @@ independent structural island, **NOT concrete-register Exact**;
 formal Kano selected prefix remains 40,336 bytes until case250
 compiler-phase closure. No cold all-unit replay.
 
+Kano state270 has been authored as **991 native bytes / 265
+original x86 instruction locations** of a resource-costly airborne
+multiwave. The scoped `check_case270_shape.py` checks all native
+register-abstracted forms and widths, **14 original internal plus 2
+shared return branches**, and **17 independently bound original COFF
+call/float operands**. This is NOT Exact: the unresolved case250
+register phase means the strict contiguous Kano prefix remains
+**40,336 bytes**. Real C++ and verification are both saved; no
+all-unit cold replay was run.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

@@ -2013,6 +2013,20 @@ SHA-256. This is **NOT full Exact** due to the unresolved case250
 concrete-register phase; 40,336-byte strict contiguous prefix is
 unchanged.
 
+#### Kano state270 original-bound airborne multiwave island
+
+The source-authored Kano state270 spans original
+`[0x0064FD61,0x00650140)`, **991 native bytes / 265 x86 instruction
+positions**. Its original first-frame half-speed, resource cost,
+stage effect0x21 and four follow-on effect0x197 bursts at staged
+field313c intervals are implemented in real C++. The independent
+`workbench/kano-state/check_case270_shape.py` validates **265
+original register-abstracted instruction forms, 14 internal and 2
+shared-return branches, 17 original-bound COFF call/float operands**
+and the pinned native SHA. This is a structural island, **NOT full
+Exact**; the strict Kano code prefix remains 40,336 bytes pending
+case250 compiler-register closure.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

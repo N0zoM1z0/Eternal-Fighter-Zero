@@ -64,6 +64,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case265_267_shape.py
     scripts/repo-python workbench/kano-state/check_case268_269_shape.py
     scripts/repo-python workbench/kano-state/check_case270_shape.py
+    scripts/repo-python workbench/kano-state/check_case270_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
 
@@ -109,6 +110,32 @@ IEEE-754 operands**, including five native `double` constants and
 byte-wise equality for concrete registers. **NOT full Exact**:
 the original case250 phase still blocks advancing the strict
 40,336-byte contiguous prefix.
+
+### Experimental state270 — 991-byte multiwave airborne finisher
+
+Original Kano state270 occupies `[0x0064FD61,0x00650140)`:
+**991 native code bytes / 265 true x86 instructions**. Its
+natural C++ is authored in `Character20State.cpp`, preserving the
+frame0 velocity half-life, gravity0.01, meter+45 and conditional
+500.0/250.0 resource cost; it emits stage effect0x21 palette11
+at native Y−50. The special also emits four distinct local effect
+0x197 waves: frame2 X−facing×30/Y−30, then field313c=16
+X+facing×30/Y−30, 32 X+facing×20/Y−10 and 48
+X−facing×20/Y−10. Animation frame7 repeats poses until the native
+field3138 limit and eventually recovers into state9/gravity0.035.
+
+The dedicated test:
+
+    scripts/repo-python workbench/kano-state/check_case270_shape.py
+
+independently binds original SHA-256
+`4b6c89fa0b1f03b0679e5d93ac001b93484ca454472cc69d625d989ce80e08df`,
+all **265 native instruction offsets/widths/register-abstracted forms**,
+**14 original internal branches, 2 native shared-return branches and
+17 original-bound COFF/IEEE-754 operands**. This is a structural
+native island, **NOT concrete-register or full-function Exact**:
+original case250 still blocks the strict continuous Kano prefix at
+40,336 bytes. It does not change accepted function/Exact ledgers.
 
 ### Experimental cases268–269 — two 447-byte airborne recovery attacks
 
