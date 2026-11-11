@@ -70,6 +70,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case304_shape.py
     scripts/repo-python workbench/kano-state/check_case305_shape.py
     scripts/repo-python workbench/kano-state/check_case306_307_shape.py
+    scripts/repo-python workbench/kano-state/check_case308_309_shape.py
     scripts/repo-python workbench/kano-state/check_case305_shape.py
     scripts/repo-python workbench/kano-state/check_case302_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
@@ -148,6 +149,36 @@ Context::SetSceneTimer). This is **a register-abstracted structural
 island, NOT full owner Exact**. Concrete VC7.1 register parity remains
 blocked at original case250; strict contiguous prefix is still
 40,336 code bytes.
+
+### Experimental states308–309 — scene timer / single-hit super tiers
+
+Kano original cases308 `[0x00652002,0x00652361)` (**863 bytes,
+218 instructions**) and309 `[0x00652361,0x006526DF)` (**894 bytes,
+236 instructions**) now have source-authored natural C++ in
+`Character20State.cpp`. Case308 adds original
+`Context::SetSceneTimer(15)` on poses above2, a frame2 meter−3000
+stage0x46/palette0x40 impact, charge+200 capped at10000, up to five
+timed 0x1A0 aura launches and frame16 invulnerability180.
+Case309 is a different stage9 meter−2000 super: it emits the paired
+0x196/0x197 startup effects, accumulates charge+150 with an early
+frame8 return, then fires one native frame12 effect **0x1AE** with
+original sound18 instead of a multiwave emitter.
+
+Focused original-bound test:
+
+    scripts/repo-python workbench/kano-state/check_case308_309_shape.py
+
+This asserts both canonical SHA-256 native extents, **454 original
+x86 instruction positions/widths/register-abstracted forms**,
+**38 independently checked internal branches, 3 shared-return jumps,
+and 23 original REL32 calls**, including true `SetSceneTimer`,
+`ResetFrame`, `SetTint`, `Context::EmitEffect`, and `__ftol2`
+callee addresses. Natural source for case312 is also present as an
+**unaccepted subsequent draft**: its final jump currently compiles to
+a short local jump until next real case313 is added. No fake padding
+or marker source is counted. All these are structural islands,
+**NOT full Exact**; unresolved case250 keeps the strictly original-
+bound contiguous prefix at **40,336 code bytes**.
 
 ### Experimental states306–307 — two 829-byte timed follow-up supers
 

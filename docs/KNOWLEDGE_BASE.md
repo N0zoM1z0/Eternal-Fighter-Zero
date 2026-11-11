@@ -2174,6 +2174,21 @@ all 416 register-abstracted instruction forms/widths/offsets,
 These are structural islands, **NOT accepted full Exact**; the strict
 original-bound Kano prefix remains 40,336 bytes before state250.
 
+#### Kano state308/309 original-bound super islands
+
+Source-authored Kano states308/309 cover **863+894=1,757
+native bytes / 454 real x86 instructions**, respectively a
+scene-timed meter−3000 0x1A0 aura and a stage9 meter−2000
+frame12 0x1AE strike. The dedicated
+`workbench/kano-state/check_case308_309_shape.py` validates original
+SHA-256, all 454 original instruction widths/offsets and register-
+abstracted opcode forms, **38 internal and 3 canonical shared-return
+branches**, and **23 independently bound original REL32 calls**.
+State312 is currently an authored draft but awaits original-sized
+return jump closure; it is not counted in this proof. These are
+structural islands only; **NOT full-owner Exact**. The strict Kano
+prefix remains 40,336 bytes pending original case250.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

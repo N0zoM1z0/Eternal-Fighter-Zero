@@ -308,6 +308,17 @@ all instruction shapes/offsets. **NOT whole Exact**, as unresolved
 case250 still blocks the 40,336-byte strict continuous Kano prefix.
 No all-unit cold replay.
 
+Kano states308/309 are now native-authored natural C++:
+**1,757 original code bytes / 454 original x86 instructions**,
+with focused `check_case308_309_shape.py` validation of **38 internal,
+3 shared-return original branches and 23 native-bound REL32 calls**.
+Case308 uses original stage timing, `SetSceneTimer(15)` and frame16
+invulnerability180; 309 uses a single frame12 effect0x1AE and
+sound18. Case312 source is present but its return-size closure
+needs a real following case313. This is **NOT full Exact** and does
+not advance the strict original-bound 40,336-byte Kano prefix.
+No all-unit cold replay was run.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++
