@@ -2251,6 +2251,35 @@ independently confirmed. Evidence:
 complete Exact leaf, independent of the ongoing much larger
 Character04 and Kano state-Boss reconstruction.
 
+### Character04 Slot02: 4,404-byte original Exact prioritized command parser
+
+Original vtable slot2 `0x00788B84` selects complete native
+`Character04::Slot02` `[0x0061A860,0x0061B994)` of **4,404 code
+bytes**. Real authored natural C++ in `src/Character04Commands.cpp`
+scans **14 separate prioritized input patterns** across the
+180-slot circular input history, converts facing-dependent
+low-nibble directions and high-nibble button bits into native
+recognized-command values, and preserves the original early
+returns and priority ordering. This is a complete, nontrivial
+command parser, not a simple forwarding stub.
+
+Pinned original VC7.1 `/Od /G6 /MT /Gy /W3` **strict selected-only
+original-bound replay gives 4,404/4,404 native bytes, 1,268 native
+x86 instructions, zero COFF relocation sites and zero differences**.
+Original code SHA-256:
+`28150b6b0903b873fc94413a0cdb1e01bc03cae48d13c89636860bb50916037d`.
+The exact source differs materially from the related Makoto command
+parser: native Character04 does not run Makoto's 0x78 opening command,
+replaces Makoto's special 0x60 window with a real three-stage
+recognition pattern, and omits two non-native start-of-pattern
+meter and character-state gates. All 14 loop bounds, stores,
+priority exits and register-specific instructions are fully
+matched. Original vtable and complete owner boundary were reviewed
+independently. Certificate:
+`docs/evidence/character-04-slot02-exact.json`.
+Exact command decoding does not itself establish all gameplay
+runtime or external Windows linkage equivalence.
+
 ### Character04 Slot06: original-bound 59,143-byte state boss workbench
 
 The original `Character04::Slot06` vtable pointer `0x00788B94`

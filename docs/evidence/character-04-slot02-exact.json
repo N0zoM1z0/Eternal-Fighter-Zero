@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "authority": "Original Character04 vtable at 0x00788B7C, slot2 address 0x00788B84, independently points to the full 4,404-byte native command-recognition owner at [0x0061A860,0x0061B994). The original native extent and SHA256 28150b6b0903b873fc94413a0cdb1e01bc03cae48d13c89636860bb50916037d were independently inspected.",
+  "method": "Authored natural C++ src/Character04Commands.cpp is compiled by original pinned VC7.1 /Od /G6 /MT /Gy /W3. Original-bound single-unit strict replay verifies all 4,404 original executable bytes and 1,268 original x86 instruction forms without any COFF relocations or byte differences. The function scans 14 distinct prioritized windows of the 180-slot input history ring, tests facing-dependent directional nibble sequences and button high bits, recognizes native codes 0x6e/0x64/0x14/10/0x28/0x1e and repeated 10 and fixed 0x6/0x35/0x34/0x33/0x32/1/0. The related character source originally included a non-native opening 0x78 pattern and a special 0x60 sequence; source reconstruction removed that unmatched opening, rebuilt the native three-stage input sequence, and removed two extra meter/state gates. This is complete caller codegen Exact, not whole-game linkage/runtime parity. No full cold all-unit replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 4404,
+      "matched_bytes": 4404,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "28150b6b0903b873fc94413a0cdb1e01bc03cae48d13c89636860bb50916037d",
+      "target_extent_sha256": "28150b6b0903b873fc94413a0cdb1e01bc03cae48d13c89636860bb50916037d",
+      "unit": "character-04-slot02",
+      "symbol": "?Slot02@Character04@@UAEXXZ",
+      "target_address": "0x0061A860",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "ff70ce9b0781b9d55f66ca7cc5ebdddb51e2567f09ee840353493a89414c4899",
+      "source_sha256": "11f459e6c6f2685b9656ffe318297d873cf7ce88d4e9bb0a869a9eb07d2c1dfc",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "500303681923a9e17f952b088ba277a087aa76044f538b878623cc6131c77ee4",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

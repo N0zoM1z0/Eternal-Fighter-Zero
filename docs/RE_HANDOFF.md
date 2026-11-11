@@ -557,6 +557,20 @@ gives **11/11 bytes, zero COFF calls/relocations and zero differences**.
 Proof: `docs/evidence/character-08-slot08-exact.json`.
 No all-unit cold replay.
 
+`Character04::Slot02` has now been independently accepted as
+**4,404 native bytes / 1,268 x86 original instructions exact** in
+`src/Character04Commands.cpp`, original vtable slot `0x00788B84`.
+The source reconstructs **14 prioritized 180-ring input history
+patterns**, facing-dependent input codes and exact native command
+priority. Original compared bytes are **4,404/4,404 with zero
+COFF relocations and zero differences** under selected VC7.1
+strict replay. Character04 intentionally removes a related
+character's extra initial 0x78 command pattern, replaces a
+0x60-special input loop, and removes two non-native meter/state
+conditions. Proof: `docs/evidence/character-04-slot02-exact.json`.
+This completes one substantial full owner independently of the
+partial 59,143-byte Character04 Slot06 Boss. No full cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

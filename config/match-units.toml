@@ -161752,3 +161752,13 @@ object = "build/match-units/character-08-slot08/Character08Slot08.obj"
 symbol = "?Slot08@Character08@@UAEXXZ"
 target_address = 0x004261B0
 size = 11
+
+[units.character-04-slot02]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character04Commands.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-04-slot02/Character04Commands.obj"
+symbol = "?Slot02@Character04@@UAEXXZ"
+target_address = 0x0061A860
+size = 4404

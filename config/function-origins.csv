@@ -392,7 +392,7 @@ address,origin,status,evidence
 0x00619D50,authored,reviewed,docs/KNOWLEDGE_BASE.md#character04-slot01-exact
 0x0061A620,authored,reviewed,docs/KNOWLEDGE_BASE.md#character04-slot08-exact
 0x0061A830,authored,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
-0x0061A860,unknown,unreviewed,
+0x0061A860,authored,reviewed,docs/KNOWLEDGE_BASE.md#character04-slot02-exact
 0x0061B9A0,unknown,unreviewed,
 0x0061F750,unknown,unreviewed,
 0x0062A5E0,unknown,unreviewed,
