@@ -2955,5 +2955,79 @@ void Character20::Slot06()
         }
         return;
 
+    case 209: // Native-reviewed Kano 0x0064AADB: repeatable airborne multi-hit combo
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing)
+                field0008 = 15;
+            if ((int)inputX == -(int)facing)
+                field0008 = 16;
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 2 && field000c == 0)
+            remainingHitCount = 5;
+        if (field000a == 7 && field000c == 0)
+            pendingContextSoundSlot = 20;
+        if (field000a == 10 && field000c == 0)
+            pendingContextSoundSlot = 20;
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 7 || field000a == 9 ||
+                field000a == 11 || field000a == 13)
+                attackCollisionResult = 0;
+            if (field000a == 14 && field3138 < 1) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 7);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 210: // Native-reviewed Kano 0x0064AD38: meter-consuming flying local-effect attack
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a == 8 && field000c == 0) {
+            effect.type = 0x199;
+            effect.x = (double)((int)positionX + (int)facing * 150);
+            effect.y = -40.0;
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            ++field3138;
+            pendingCharacterSoundSlot = 2;
+            meter = (short)(meter - 20);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 8)
+                attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

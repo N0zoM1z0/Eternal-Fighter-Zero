@@ -33,23 +33,23 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-The 68,853-byte original Kano state boss is authored at
-`workbench/kano-state/Character20State.cpp`. Continuous strict
-original-bound code now covers **33,051 bytes / 9,054 x86
-instructions**, with default and **84 verified live states** through208.
-The selected checker binds **841 internal and 109 outbound native
-branches**, **774 original COFF call/IEEE-754 references**, and the
-two original local switch operands. Newly completed states206–208
-implement genuinely distinct grounded and aerial attack/hit windows,
-including original sound, hit, collision, cancel and landing gates.
-**Next native state209 at `0x0064AADB`.**
+Kano's original 68,853-code-byte state machine is being actively
+reconstructed in `workbench/kano-state/Character20State.cpp`.
+Its selected original-bound opening now matches **33,993 bytes /
+9,312 native x86 instructions**, default plus **86 real reviewed
+cases** through210. Strict checker verifies **870 original internal
+branches**, **113 outbound jumps**, **779 original-bound COFF call/
+IEEE-754 references** and both native switch table operands.
+State209 is a 605-byte five-hit aerial combo with original repeat
+logic; state210 is a 337-byte local-effect attack and meter20 spend.
+**Next original case211 at `0x0064AE89`.**
 
-Incomplete candidate frame0x11C vs real0x4A4 has same six-byte
-instruction width, with no shift. **52 remaining live states**,
-complete frame, adjacent switch DATA, remaining relocations and common
-return are still OPEN. This is NOT whole-function Exact and generated
-neutral markers have zero source/acceptance credit. Only selected
-checks, no all-unit cold replay or remote push.
+Incomplete candidate stack0x120 versus native0x4A4 has the same
+six-byte instruction width: no position normalization. **50 remaining
+case bodies**, full frame, local switch DATA, remaining relocation
+closure and shared return are open; **NOT whole Exact**. Diagnostic
+marker cases are unaccepted. Only targeted original-bound compilation,
+no full all-unit cold replay, no remote push.
 
 ## Additional newly accepted leaf owners
 
