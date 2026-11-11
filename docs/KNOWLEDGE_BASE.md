@@ -1770,29 +1770,29 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano `Character20::Slot06` vtable at `0x00788C90` targets original
-`[0x006429C0,0x006536B5)` = **68,853 native bytes**, plus the
-137-entry original jump table and 316-byte selector (136 live IDs).
-The natural C++ in `workbench/kano-state/Character20State.cpp`
-reproduces `[0x006429C0,0x0064911B)` = **26,459 original code bytes /
-7,287 x86 instructions**, SHA-256
-`4c148d2a49bd6c34e09c03fcdbd4ed578afd138bd7cb9d3d1df34de50bb185d5`.
-Original default and **68 reviewed real states** through 166.
+Original Kano `Character20::Slot06` vtable at `0x00788C90` targets
+`[0x006429C0,0x006536B5)` (**68,853 code bytes**) plus 137-entry
+address and 316-byte selector tables (136 live,180 default).
+Authored source in `workbench/kano-state/` now matches
+`[0x006429C0,0x00649597)` = **27,607 bytes / 7,586 native x86
+instructions**, SHA-256
+`435dc0515825455aba0d5c5be5fb8d89542029849be47af37069f3af84f15dbb`.
+Default plus **71 real cases** are native-reviewed through169.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selective audit verifies
-**7,287 original instruction offsets/forms/widths**, **664 internal
-and 81 outbound canonical jump targets**, **652 original-bound
-external call/float COFF operands**, and 2 original local table
-pointers. Incomplete candidate frame0xF4 vs native0x4A4 is the same
-six-byte opcode width, with no offset normalization. **NOT whole
-Exact:** 68 remaining cases and original table/return remain open.
+Scoped pinned VC7.1 `/Od /G6 /MT /Gy /W3` checker confirms **7,586
+original instruction offsets/widths/forms**, **683 internal and
+84 outbound branches**, **684 native-bound nonlocal COFF call/float
+references**, and two local table addresses. Candidate0x114 stack vs
+canonical0x4A4 use same-width six-byte allocation; no instruction
+offset normalization. This is only a selected prefix, NOT Exact.
 
-Kano 165 and 166 are 425/429-byte real dash/recovery variants:
-initial X speeds +1.1/−1.1, no continuous sibling acceleration;
-original state9 recovery sets ±0.9 X and 0.02/0.03 gravity gates.
-These branches and native x87 references are original-bound matched.
-Next state167 at `0x0064911B`; 167–171 experimental hypotheses
-remain unreviewed. No all-unit cold replay.
+States167 (488 bytes),168/169 (330 each) restore resource/tint and
+impact effects plus distinct state0/3 grounded recovery. Original
+constants, direct call targets and flow structure are checked.
+**Next case170 at 0x00649597**. Still 65 unreviewed cases,
+full original frame, local DATA/relocation closure and common return.
+Experimental states170–171 have no native proof yet. No all-unit cold
+replay or credit for markers.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 

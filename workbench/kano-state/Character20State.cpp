@@ -2344,7 +2344,7 @@ void Character20::Slot06()
         }
         return;
 
-    case 167: // Kano unverified native candidate 0x005EEDC4: stunned recovery with two effects
+    case 167: // Native-reviewed Kano original 0x005EEDC4: stunned recovery with two effects
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             velocityX = 0.0;
@@ -2386,7 +2386,7 @@ void Character20::Slot06()
         }
         return;
 
-    case 168: // Kano unverified native candidate 0x005EEFAC: grounded impact to state 0
+    case 168: // Native-reviewed Kano original 0x005EEFAC: grounded impact to state 0
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             velocityX = 0.0;
@@ -2417,7 +2417,7 @@ void Character20::Slot06()
         }
         return;
 
-    case 169: // Kano unverified native candidate 0x005EF0F6: grounded impact to state 3
+    case 169: // Native-reviewed Kano original 0x005EF0F6: grounded impact to state 3
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
             velocityX = 0.0;

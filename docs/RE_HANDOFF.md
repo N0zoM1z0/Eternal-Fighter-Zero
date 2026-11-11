@@ -33,23 +33,22 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano's 68,853-byte state boss is being recovered in
-`workbench/kano-state/Character20State.cpp`. The strict selected
-original-bound prefix is now **26,459 bytes / 7,287 x86 instructions**,
-default and **68 reviewed live cases**: 1–9, 13–16, 47, 50–77,
-81–87, 96–99, 150–158 and 161–166. Native audit covers
-**664 internal and 81 outbound targets**, **652 original-bound
-nonlocal COFF calls/IEEE-754 floats**, and 2 local switch references.
-165–166 now implement Kano's native ±1.1 dash and ±0.9 recovery,
-not the sibling's continuous acceleration. Next state167 at
-**`0x0064911B`**.
+Original Kano `Slot06` is a 68,853-byte state boss, actively authored
+in `workbench/kano-state/Character20State.cpp`. Selected original
+opening now matches **27,607 code bytes / 7,586 x86 instructions**,
+original default and **71 reviewed native cases** through169.
+Strict checker validates **683 internal branches**, **84 outbound
+original targets**, **684 original-bound nonlocal COFF calls/floats**
+plus two local switch pointers. Cases167–169 restore original tint,
+resource/impact effects and two distinct ground recovery paths.
+**Next original case170 begins 0x00649597.**
 
-Candidate stack0xF4 vs canonical0x4A4 has equal allocation instruction
-width and no positional shift. **68 unverified state bodies**,
-real stack, complete switch DATA, remaining relocations and common
-return remain OPEN. Existing experimental C++ 167–171 is explicitly
-unreviewed; no marker-body acceptance. **NOT full Exact**.
-Only scoped Kano checker; no full all-unit cold replay or push.
+Compiler candidate frame0x114 vs native0x4A4 shares the six-byte
+allocation length, so no position shift is allowed. **65 case bodies
+remain unreviewed**, including existing experimental 170/171 source.
+Canonical stack, local switch DATA, remaining relocs and shared return
+are OPEN. NOT whole Exact; diagnostic markers are unaccepted. Only
+selected checks; no all-unit cold replay, no push without permission.
 
 ## Additional newly accepted leaf owners
 

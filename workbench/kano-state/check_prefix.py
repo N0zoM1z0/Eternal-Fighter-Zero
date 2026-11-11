@@ -14,8 +14,8 @@ from native_build import compile_source
 from coff import object_function
 from probe_prefix import BASE,CODE_SIZE,PROBE,OBJECT,disasm,normalized,make_source
 
-END=0x0064911B # first instruction of native case13, after nine full authored cases
-NATIVE_CODE_SHA="4c148d2a49bd6c34e09c03fcdbd4ed578afd138bd7cb9d3d1df34de50bb185d5"
+END=0x00649597 # first instruction of native case13, after nine full authored cases
+NATIVE_CODE_SHA="435dc0515825455aba0d5c5be5fb8d89542029849be47af37069f3af84f15dbb"
 CALLS={
 '??0EffectSpawn@@QAE@XZ':0x00405490,
 '?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z':0x00413090,
@@ -26,6 +26,7 @@ CALLS={
 '?SetVerticalShake@Secondary@@QAEXHH@Z':0x00410A10,
 '?ResetFrame@Secondary@@QAEXXZ':0x0040F1E0,
 '?StartTrail@Secondary@@QAEXE@Z':0x004109D0,
+'?SetTint@Secondary@@QAEXEH@Z':0x00410B10,
 }
 
 def main():
@@ -33,10 +34,10 @@ def main():
     assert struct.unpack('<I',target_bytes(image,0x00788C90,4))[0]==BASE
     prefix=target_bytes(image,BASE,END-BASE)
     original=target_bytes(image,BASE,CODE_SIZE)
-    assert len(prefix)==26459 and len(original)==68853
+    assert len(prefix)==27607 and len(original)==68853
     assert hashlib.sha256(prefix).hexdigest()==NATIVE_CODE_SHA
-    used=make_source(166)
-    assert used==set(range(1,10))|{13,14,15,16,47}|set(range(50,78))|set(range(81,88))|set(range(96,100))|set(range(150,159))|set(range(161,167)),used
+    used=make_source(169)
+    assert used==set(range(1,10))|{13,14,15,16,47}|set(range(50,78))|set(range(81,88))|set(range(96,100))|set(range(150,159))|set(range(161,170)),used
     try:
         compile_source(PROBE,OBJECT,['/Od','/G6','/MT','/Gy','/W3'],
                        ROOT/'.analysis/build/kano-state-selected-prefix.log')
@@ -46,7 +47,7 @@ def main():
     target,compiled=disasm(prefix),disasm(code)
     assert len(compiled)>len(target)
     assert target[2][2]=='sub esp,0x4a4'
-    assert compiled[2][2]=='sub esp,0xf4'
+    assert compiled[2][2]=='sub esp,0x114'
     assert target[2][0]==compiled[2][0]==3
     # The real full boss reserves 0x4A4 of local stack. The incomplete
     # candidate currently reserves 0x90; both prologues use the same six-byte
@@ -59,7 +60,7 @@ def main():
         assert len(a[1])==len(b[1]),(i,a,b)
         assert normalized(a[2])==normalized(b[2]),(i,a,b)
     assert compiled[len(target)][0]+shift==len(prefix)
-    assert len(target)==7287,len(target)
+    assert len(target)==7586,len(target)
 
     original_pos={x[0]:i for i,x in enumerate(target)}
     compiled_pos={x[0]:i for i,x in enumerate(compiled)}
@@ -76,7 +77,7 @@ def main():
             internal+=1
             assert original_pos[dst]==compiled_pos.get(local),(a,b)
         else:outbound+=1
-    assert (internal,outbound)==(664,81),(internal,outbound)
+    assert (internal,outbound)==(683,84),(internal,outbound)
     refs=defaultdict(set);local_refs={};n=0
     for r in rels:
         off=r['offset']
@@ -102,10 +103,10 @@ def main():
             refs[(symbol,r['type'])].add(dest)
     assert local_refs=={0xA1:0x006538D9,0xA8:0x006536B5},local_refs
     assert all(len(values)==1 for values in refs.values()),refs
-    assert n==654 and len(refs)==62 and len(local_refs)==2,(n,len(refs),len(local_refs))
-    print(f'Kano Slot06: {len(prefix)} / {CODE_SIZE} native code bytes; 68 real states + default, NO complete Exact.')
+    assert n==686 and len(refs)==64 and len(local_refs)==2,(n,len(refs),len(local_refs))
+    print(f'Kano Slot06: {len(prefix)} / {CODE_SIZE} native code bytes; 71 real states + default, NO complete Exact.')
     print('native instructions',len(target),'internal branches',internal,'outbound targets',outbound)
     print('original-bound external/float operands',n-len(local_refs),'local switch address operands',len(local_refs),'distinct symbols',len(refs))
-    print('native frame 0x4A4 vs incomplete candidate 0xF4; full local data, return and other 68 state bodies OPEN.')
+    print('native frame 0x4A4 vs incomplete candidate 0x114; full local data, return and other 65 state bodies OPEN.')
 
 if __name__=='__main__':main()
