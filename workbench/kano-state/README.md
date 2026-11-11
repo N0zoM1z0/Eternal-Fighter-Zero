@@ -41,6 +41,32 @@ then switching to state13. Animation end repeats the last two frames.
 The full code path, direct call targets and canonical IEEE-754 values
 match in selected VC7.1 native comparison.
 
+### Experimental case251 island — native instruction-shape audit
+
+The authored `Character20State.cpp` now also includes an original
+454-byte special resource/dual-effect state251 at
+`[0x0064C999,0x0064CB5F)`. It restores the original field0118
+resource reduction by **500.0 or 250.0**, depending on field0120,
+the 10000-point charge threshold, native effects 0x198/0x197,
+Y−40 and Y coordinates, and one-shot sound1.
+
+Run the **separate** `scripts/repo-python
+workbench/kano-state/check_case251_shape.py` audit. With pinned
+VC7.1 generated C++ and original EFZ.exe bytes, it verifies **all
+117 original x86 instruction addresses and widths**, the same
+register-abstracted opcode shapes, **seven internal original branch
+destinations** and **seven independently original-bound COFF operands**
+(2 native 500.0/250.0 IEEE-754 double DIR32 literals, 1 ResetFrame
+call and 4 `__ftol2` calls). The candidate's 16-bit increment uses
+`add ax,0x1` whereas original uses `add cx,byte +0x1`, with the
+same effect and same instruction length. Other differences involve
+scratch-register assignment following original case250's unresolved
+compiler phase. **This is NOT Exact**, and native case251 is not
+added to formal complete owners or selected-prefix byte totals.
+Do not confuse this *register-abstracted island diagnostic* with
+the stricter `check_prefix.py` instruction-exact proof pinned before
+case250 at 0x0064C750.
+
 ### Experimental next state250 — NOT selected-prefix acceptance
 
 Original Kano state250 is `[0x0064C750,0x0064C999)` (**585 code
@@ -77,6 +103,7 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
+    scripts/repo-python workbench/kano-state/check_case251_shape.py
     scripts/repo-python workbench/kano-state/probe_prefix.py --through 250 --context 12
     scripts/repo-python scripts/ci.py
 

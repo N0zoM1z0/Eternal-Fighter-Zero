@@ -58,6 +58,17 @@ probe first differs in register assignment at `0x0064C955` during
 the animation rewind tail; the original 585-byte case is not accepted.
 See `workbench/kano-state/README.md`; preserve and refine this work.
 
+Kano experimental case251 has also been authored in
+`workbench/kano-state/Character20State.cpp`, including the original
+500/250 resource reduction and two local effects. The new scoped
+`workbench/kano-state/check_case251_shape.py` checks all 454 native
+bytes' instruction locations/widths, 117 register-abstracted opcode
+forms, 7 original internal jump edges and 7 independently bound
+native COFF operands. It is **NOT Exact** because scratch registers
+and one equivalent ADD encoding differ; original case250's tail also
+remains open. No new complete function or selected-prefix credit.
+See the Kano README for the precise scope and mismatch evidence.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++
