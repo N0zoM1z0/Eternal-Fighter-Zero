@@ -1,10 +1,10 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
 **PARTIAL: not whole-function Exact.** Ordinary natural C++ in
-`Character04State.cpp` implements the real native default plus **42
-physical live cases**: 1–9, 13–16, 47, 50–77. The remaining 96 live
-states are NOT implemented. Markers for those cases are generated *only*
-for throwaway compilation probes; never count them as authored source.
+`Character04State.cpp` now implements the original default and
+**49 real live cases**: 1–9, 13–16, 47, 50–77, 81–87. The other
+89 live cases are unimplemented. The build-only probe generates
+marker cases strictly for local compilation, never accepted source.
 
 ## Original PE ownership and dispatch
 
@@ -20,39 +20,38 @@ for throwaway compilation probes; never count them as authored source.
 
 ## Current audited continuous prefix
 
-**`[0x00607930,0x0060B7EC)` = 16,060 original native bytes**,
-SHA-256 `5313d76de1f173dd6e6b414facae7df16ca810a1dab5b9f73c587f3ee4281b5e`.
-Native default plus **42 reviewed real states** cover ground movement,
-three aerial jump types, neutral/crouch recovery, low aerial impact,
-12 distinct grounded recoil variations, airborne hit reactions with
--2/-4/-6 vertical clamps, true `CollisionSide` wall checks,
-state70 wall-bounce impact and airborne-to-ground transitions.
-States71–77 additionally restore high-gravity direct knockback,
-grounded boundary pushback and three distinct 2.2-horizontal-speed
-recoil attacks; Character04 does not clear dash momentum on these
-recoil paths, unlike the related Makoto code.
+**`[0x00607930,0x0060C4E5)` = 19,381 original code bytes**,
+canonical SHA-256
+`c0a2283a2bebf8e901b85b35769abbe928813bb64912c2df36e5f85edf14d4f9`.
+Original default and 49 physical native states cover movement,
+three jump variants, grounded recovery, 12 grounded recoil tiers,
+aerial hits, wall collision/rebound, multiple landing paths and
+new cases81–87, which implement air lift, ground impact, sprite
+bursts and their original timers. The native cases83–86 test and
+write the actual character-local field at **offset `0x3154`**,
+not the related character's `0x3144`; a small private local view
+is used in this workbench to avoid changing accepted headers.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected-only code verification:
+Original-bound selected compile and codegen audit:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-This checks **4,433 original x86 instruction offsets, widths and
-opcode forms**, **418 original internal and 49 native shared-return
-jump destinations**, **425 original-bound external direct-call /
-IEEE-754 operands** and two native selector/table address pointers.
-All other selected code bytes match exactly. The one incomplete-
-function prologue reserves `0x9C` instead of native `0x2E8`, **but
-both allocation instructions are six bytes** (no position shift).
-The checker permits *only* this stack-allocation immediate, the
-unresolved outbound shared-return displacement and independently
-original-bound COFF operand bytes. No synthetic marker bodies and
-no unreviewed opcode differences are accepted.
+It checks **all 5,340 original x86 instruction offsets, widths
+and register-abstracted forms**, **494 exact original internal and
+58 original shared-return branch targets**, **486 original-bound
+COFF direct-call/IEEE-754 operands** plus two native local
+selector/table address pointers. Every remaining selected opcode
+byte matches. Candidate VC7.1 uses original six-byte stack
+allocation width (`sub esp,0xC4` provisional vs original
+`sub esp,0x2E8`); only this immediate, outbound return JMP
+displacements and original-bound four-byte COFF fields are
+excluded. No arbitrary missing-code masks or byte padding.
 
-**Next real case81 starts at `0x0060B7EC`.** State IDs78/79/80 map
-natively to default. The remaining **96 live cases**, native full
-stack, adjacent switch tables, return/relocation closure and whole
-Windows runtime remain OPEN. This is strictly SELECTED PREFIX,
-**NOT whole Exact**. Do not run cold all-unit replay or accept probe
-marker bodies as reconstruction.
+**Next native live case96 starts at `0x0060C4E5`**. IDs88–95
+map to the native default. Other **89 real live cases**, full
+original frame, adjacent switch and selector data, final return,
+and eventual full-byte Exact closure are still OPEN. This is
+strictly a selected-prefix **NOT whole Exact** certificate.
+Do not run all-unit cold replay; never count generated probes.

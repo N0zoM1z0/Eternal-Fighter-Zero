@@ -2239,34 +2239,32 @@ linkage or actual graphics output parity.
 
 ### Character04 Slot06: original-bound 59,143-byte state boss workbench
 
-A second large state-machine owner is original `Character04::Slot06`
-at native vtable slot `0x00788B94`, code
-`[0x00607930,0x00616037)` (**59,143 bytes**) followed by
-139 original DWORD switch destinations and 325 selector bytes
-(138 live state IDs, 187 default IDs).
+Original vtable slot `0x00788B94` selects Character04's
+59,143-byte Slot06 native code `[0x00607930,0x00616037)`.
+Immediately following are 139 switch addresses and 325 selectors
+(138 real live IDs, 187 original defaults).
 
-Natural C++ in `workbench/character04-state/Character04State.cpp`
-now implements the original default and **42 real live cases**
-(1–9,13–16,47,50–77), including original aerial hit reactions,
-state70 wall rebound, native `CollisionSide`, crouch/ground landing,
-wall pushback and forward 2.2-speed recoil. The newest cases71–77
-restore the separate high-gravity and ground-boundary motion paths.
-No neutral synthetic marker code is credited.
+Authored natural C++ in `workbench/character04-state/Character04State.cpp`
+now covers **49 native live cases** (1–9, 13–16, 47, 50–77, 81–87)
+and the default. New cases81–87 contain real original air-to-ground,
+knockback, timed burst and special-recovery behavior. A source-local
+character child-field view is used for original offsets `0x3138`
+and `0x3154`; the special effect branch genuinely reads offset
+`0x3154` rather than the other-character value `0x3144`.
 
-Strict `workbench/character04-state/check_prefix.py` now proves
-**16,060 native opening code bytes / 4,433 real x86 instructions**,
-original `[0x00607930,0x0060B7EC)`, SHA-256
-`5313d76de1f173dd6e6b414facae7df16ca810a1dab5b9f73c587f3ee4281b5e`:
-**418 exact original internal and 49 shared-return branches**,
-**425 independently native-bound external COFF call/float sites**
-and both original switch-local address references. All reviewed
-opcode bytes match outside only the provisional same-width six-byte
-stack-allocation immediate (`0x9C` vs original `0x2E8`), unresolved
-outbound shared-return displacements and independently original-bound
-COFF fields; there is **no code offset shift**. **NOT full Exact**:
-96 remaining real cases, complete stack and native tables/return are
-still open. **Next case81 at `0x0060B7EC`**; IDs78–80 are native
-default. No cold all-unit replay or probe marker acceptance.
+`workbench/character04-state/check_prefix.py` validates the native
+**19,381-byte continuous opening** `[0x00607930,0x0060C4E5)`,
+SHA-256 `c0a2283a2bebf8e901b85b35769abbe928813bb64912c2df36e5f85edf14d4f9`.
+Its canonical original-bound comparison verifies **5,340 x86
+instruction positions/widths/forms**, **494 internal and 58
+shared-return branch targets**, **486 direct-call/float operands**
+and 2 native switch/selector pointers. Other code bytes match,
+except the explicitly documented provisional stack-immediate
+value in the original-width six-byte allocation, original-bound
+COFF operands and still-unclosed shared-return displacement.
+This is **selected prefix, NOT full Exact**; the remaining 89 real
+cases and full original 0x2E8 stack/table/return remain OPEN.
+Next native case96 at `0x0060C4E5`. No cold all-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 
