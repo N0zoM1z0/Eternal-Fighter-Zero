@@ -103,6 +103,17 @@ tiers, as does frame19 rewind and `field316c` counter.
 because state250's concrete-register mismatch is still open. This
 work is documented and committed, not added to Exact ledgers.
 
+Kano state257 adds another **899 bytes of natural C++ source** with
+original native structural proof: 241 instruction positions/forms,
+22 internal and 3 canonical return branches, ten original-bound COFF
+call/float references. The tier-specific frame17 effect0x191 and
+frame19 repeat differ substantially from prior tiers. The dedicated
+`workbench/kano-state/check_case257_shape.py` passes and documents
+the exact canonical extent/SHA. **This is NOT Exact**: concrete
+register bytes still differ after original case250, so the strict
+selected prefix remains **40,336 bytes**. See Kano README. No cold
+all-unit replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

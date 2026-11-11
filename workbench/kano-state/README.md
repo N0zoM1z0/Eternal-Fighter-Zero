@@ -72,6 +72,33 @@ These island checks do not grow the 40,336-byte strict contiguous
 prefix or register any complete owner. Never count later diagnostic
 neutral marker states as original code.
 
+### Experimental case257 — 899 native bytes, original-bound structural island
+
+Kano state257 native `[0x0064D556,0x0064D8D9)` is **899 original code
+bytes / 241 x86 instructions**. Actual natural C++ in
+`Character20State.cpp` reconstructs its charged finisher: it resets
+frame0 and frame7 motion, accumulates charge by 75 through frames3–6,
+uses the original threshold10000/residue7500, and permits original
+command13/resource cancel after frame16. On frame3 it emits the two
+`0x196`/`0x197` local effects. Frame17 emits the **0x191** effect at
+X+facing×38, Y−45, `owner=1`, with original character sound5 and
+`field316c` increment. Frame19 repeats three poses once, gated by
+`field3138`, rather than the frame16 launch of previous tiers.
+
+Run the dedicated diagnostic:
+
+    scripts/repo-python workbench/kano-state/check_case257_shape.py
+
+It binds original SHA-256
+`7f13ea29ee1f9c768e845bb8f412b7c6919bcc00bbe9e25cf3ed278e940d4013`,
+**all 241 original instruction addresses/widths/register-abstracted
+forms**, **22 original internal branches**, **3 canonical shared-return
+branches** and **10 original COFF call/IEEE-754 operands** (three
+`ResetFrame`, six `__ftol2`, one 500.0 double). It deliberately does
+NOT assert concrete-register bytes, as original case250 still causes
+a different compiler register phase. **NOT Exact**, no formal ledger
+credit and no advancement of the strict 40,336-byte prefix.
+
 ### Experimental cases255–256 — two additional 858-byte native islands
 
 Kano state255 original `[0x0064CEA2,0x0064D1FC)` and state256
@@ -90,6 +117,7 @@ The launch effect types are original **0x1BC** and **0x1BD**;
 Run the separately scoped diagnostic:
 
     scripts/repo-python workbench/kano-state/check_case255_256_shape.py
+    scripts/repo-python workbench/kano-state/check_case257_shape.py
     scripts/repo-python workbench/kano-state/check_case257_shape.py
 
 The checker independently verifies both original SHA-256 extents,

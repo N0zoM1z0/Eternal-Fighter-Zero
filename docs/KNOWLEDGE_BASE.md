@@ -1837,6 +1837,19 @@ field316c counter and effect owner semantics. This is **NOT Exact**:
 concrete register allocation remains open after case250, and the
 strict original prefix stays 40,336 bytes. No formal ledger credit.
 
+#### Kano state257: 899-byte charged finisher structural island
+
+Native case257 `[0x0064D556,0x0064D8D9)` has **899 original code
+bytes / 241 x86 instructions**. Authored natural C++ includes the
+charge/command-cancel sequence, dual `0x196`/`0x197` effects, frame17
+`0x191` launch with facing-dependent X/Y, and frame19 conditional
+three-frame rewind. `check_case257_shape.py` verifies all 241 original
+register-abstracted instruction forms/widths/offsets, **22 internal
+and 3 native shared-return branches**, and **10 original-bound
+call/IEEE-754 operands**. The concrete register assignment still
+differs; this is **NOT Exact**, and does not extend the independently
+strict native prefix past 40,336 bytes (state250 remains open).
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five
