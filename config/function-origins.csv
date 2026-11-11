@@ -389,7 +389,7 @@ address,origin,status,evidence
 0x00616700,authored,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
 0x00616750,authored,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
 0x00616770,unknown,unreviewed,
-0x00619D50,unknown,unreviewed,
+0x00619D50,authored,reviewed,docs/KNOWLEDGE_BASE.md#character04-slot01-exact
 0x0061A620,authored,reviewed,docs/KNOWLEDGE_BASE.md#character04-slot08-exact
 0x0061A830,authored,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
 0x0061A860,unknown,unreviewed,

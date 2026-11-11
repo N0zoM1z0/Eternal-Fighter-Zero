@@ -514,6 +514,21 @@ there are six complete accepted child virtuals and 1,054 original
 code bytes for this role. Only five selected strict units were
 replayed here; no cold all-unit replay.
 
+`Character04::Slot01` is now a **complete 2,248-byte native Exact
+four-layer renderer** in `src/Character04Render.cpp`. Original vtable
+slot0x788B80, **12 original MakeSurfaceRect** and **four Video::DrawSurface**
+REL32 sites are independently bound; selected one-unit replay gives
+**2,248/2,248 bytes, 16 calls, zero differences**. The real four
+visual layers use patterns41/42 fully and patterns43/44 clipped by
+field3148*frame.width/10000 or /1200. The multiplication operand
+order matters to native VC7.1 register allocation: flipping it in
+natural C++ changed candidate size from 2,230 to original 2,248.
+The typed child view is local to this source; no accepted shared
+class layouts were changed. Evidence:
+`docs/evidence/character-04-slot01-exact.json`.
+This is an accepted *caller* Exact; the video drawing callee and
+Windows runtime are not thereby accepted. No all-unit cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

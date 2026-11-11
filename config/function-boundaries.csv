@@ -485,3 +485,4 @@ address,end,size,status,evidence
 0x00616700,0x00616750,80,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
 0x00616750,0x00616763,19,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
 0x0061A830,0x0061A85F,47,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
+0x00619D50,0x0061A618,2248,reviewed,docs/KNOWLEDGE_BASE.md#character04-slot01-exact

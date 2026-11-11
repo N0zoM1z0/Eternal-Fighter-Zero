@@ -2237,6 +2237,35 @@ The underlying Video callee is not separately accepted; a complete
 Exact render **caller** does not establish whole Windows runtime
 linkage or actual graphics output parity.
 
+### Character04 Slot01: 2,248-byte four-layer native Exact renderer
+
+Original `Character04` vtable slot1 at **`0x00788B80`** selects the
+complete native owner `[0x00619D50,0x0061A618)` of **2,248 executable
+code bytes**. Authored natural C++ at `src/Character04Render.cpp`
+performs four genuine patterned draws with player-dependent geometry:
+when child field3148>0 and field3144!=3, it draws a full
+`patterns[41].frames[0]` sprite; when field3144==3, it draws full
+`patterns[42].frames[0]`. The other two layers draw patterns43 and44,
+respectively clipped to **field3148*frame.width/10000** and
+**field3148*frame.width/1200**, in opposite player-facing coordinate
+systems, using original rectangle X=49-frame.u or
+(frame.u+271)-clippedWidth, Y=31-frame.v, and original texture/colorKey.
+
+The selected one-unit pinned VC7.1 `/Od /G6 /MT /Gy /W3` oracle gives
+**2,248/2,248 original code bytes, 16 separately original-bound REL32
+calls and zero byte differences**. The full original owner includes
+**12 original `MakeSurfaceRect` calls** at 0x0040C590 and **four
+`Video::DrawSurface` calls** at 0x00409A90. A crucial real C++
+code-generation detail: reversing the order of the integer operands
+from `frame.width*field3148` to **`field3148*frame.width`** produces
+the original additional VC7.1 MOVs and exactly the native 2,248-byte
+form. The inverse order was only 2,230 bytes and cannot be accepted.
+A private source-local field view preserves shared `CharacterViews.h`.
+All 16 original call destinations and vtable slot were verified
+independently. Certificate `docs/evidence/character-04-slot01-exact.json`.
+The Video::DrawSurface *callee* remains independently unaccepted;
+this is exact caller codegen, not whole-game runtime/linkage parity.
+
 ### Character04 lifecycle: five complete original Exact owners (526 bytes)
 
 Native Character04 vtable `0x00788B7C` independently selects five

@@ -161620,3 +161620,125 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "Canonical original Character04 vtable slot 0x00788BA0 independently selects complete 47-byte native owner 0x0061A830; original REL32 at 0x0061A855 resolves ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10; every remaining byte checked."
+
+[units.character-04-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character04Render.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-04-slot01/Character04Render.obj"
+symbol = "?Slot01@Character04@@UAEXXZ"
+target_address = 0x00619D50
+size = 2248
+
+[[units.character-04-slot01.relocations]]
+offset = 105
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x00619DB9 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 215
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x00619E27 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 317
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x00619E8D resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 469
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x00619F25 resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 546
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x00619F72 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 683
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x00619FFB resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 810
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x0061A07A resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 986
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x0061A12A resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 1103
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x0061A19F resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 1267
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x0061A243 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 1445
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x0061A2F5 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 1621
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x0061A3A5 resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 1721
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x0061A409 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 1885
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x0061A4AD resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 2063
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x0061A55F resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original source and call operands independently reviewed"
+
+[[units.character-04-slot01.relocations]]
+offset = 2239
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x0061A60F resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90; original source and call operands independently reviewed"

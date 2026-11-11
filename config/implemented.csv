@@ -455,3 +455,4 @@ address,name,source,symbol,status,evidence
 0x00616700,Character04::RemoveLocalEffect,src/Character04Lifecycle.cpp,?RemoveLocalEffect@Character04@@UAEXF@Z,complete,docs/evidence/character-04-lifecycle-exact.json
 0x00616750,Character04::Slot03,src/Character04Lifecycle.cpp,?Slot03@Character04@@UAEXXZ,complete,docs/evidence/character-04-lifecycle-exact.json
 0x0061A830,Character04::EmitLocalEffect,src/Character04Lifecycle.cpp,?EmitLocalEffect@Character04@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-04-lifecycle-exact.json
+0x00619D50,Character04::Slot01,src/Character04Render.cpp,?Slot01@Character04@@UAEXXZ,complete,docs/evidence/character-04-slot01-exact.json
