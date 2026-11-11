@@ -1729,29 +1729,31 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano `Character20::Slot06` at vtable `0x00788C90` selects original
-`[0x006429C0,0x006536B5)`, **68,853 code bytes**, then a 137-entry
-jump table and 316 selector bytes (136 live / 180 default IDs).
-Active C++ at `workbench/kano-state/` reconstructs default and
-**53 reviewed real case bodies**: 1–9, 13–16, 47, 50–77, 81–87,
-and 96–99. Selected original `[0x006429C0,0x00647A3A)` is **20,602
-bytes / 5,664 x86 instructions**, SHA-256
-`8566a57cefe15e360f84466889a9e171e44f03ba6b411f50fb4b7a763cc69d28`.
+Original Kano `Character20::Slot06` vtable slot6 at `0x00788C90`
+points to `[0x006429C0,0x006536B5)`, **68,853 code bytes**, plus
+137 four-byte switch destinations and 316 selector bytes (136 live,
+180 default). Active authored natural C++ at `workbench/kano-state/`
+now reproduces **24,034 original bytes / 6,614 x86 instructions**
+through native 161 entry at `0x006487A2`, SHA-256
+`d19ab1094159f6437e5ff70ef1d63b41a9e78a1482dd84daf5d8766d2feb7bd3`.
+Reviewed default and **62 live cases**: 1–9, 13–16, 47, 50–77,
+81–87, 96–99 and 150–158.
 
-The pinned VC7.1 `/Od /G6 /MT /Gy /W3` scoped checker independently
-matches **5,664 original instruction offsets/widths/forms**, **519
-original internal and 62 outbound branch targets**, **502 original-
-bound external calls/float references** and two local switch
-references. Candidate 0xD4 stack and original 0x4A4 stack use equal
-six-byte instruction lengths, so no position compensation is allowed.
-The remaining 83 cases, full stack, tables and shared return are
-unverified: **this is NOT complete Exact**.
+VC7.1 `/Od /G6 /MT /Gy /W3` selected checker verifies **6,614
+native instruction positions/widths/forms**, **605 internal and
+71 outbound original branches**, **604 bound external call/float
+COFF references**, and both original switch-table references.
+Temporary candidate stack0xE4 vs original0x4A4 has equal 6-byte
+instruction width, so no instruction-offset adjustment is allowed.
+**Partial prefix only: 74 cases and original full owner closure
+still missing. NOT complete Exact.** Markers have no source credit.
 
-Original cases96–99 restore wakeup/crouch animation, two full ground
-impact effects (stage effect3 and shake3), and a health-gated 99-tick
-wake-up reset, including precise branch order. Next original case150
-starts at `0x00647A3A`. The selective probe uses unaccepted neutral
-markers only for the still-absent cases; no full cold replay.
+States150–155 reconstruct multiple tiered recoil motions with
+native negative X launch -1.5/-1.8/-2.3 and frame timing; 156
+recovers upward knockback; 157–158 restore directional aerial effects
+with distinct end-state9 and NO dashMomentumFlag clear (unlike
+Makoto sibling). All are native matched, not copied assumptions.
+Next case161 starts `0x006487A2`. Use scoped Kano checker only.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 

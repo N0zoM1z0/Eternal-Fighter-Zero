@@ -33,24 +33,22 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano's original 68,853-byte `Character20::Slot06` is being restored in
-`workbench/kano-state/Character20State.cpp`. The continuous selected
-native opening is now **20,602 bytes / 5,664 x86 instructions**, with
-default plus **53 reviewed live cases** (1–9, 13–16, 47, 50–77,
-81–87, 96–99). The strictly selected checker binds **519 original
-internal branches**, **62 outbound destinations**, **502 original-
-bound nonlocal call/IEEE-754 operands** plus both switch addresses.
-Recently authored states96–99 add health-gated wakeup and original
-stage-impact effects, with `SetVerticalShake(3,0)` independently
-resolved to `0x00410A10`.
+Kano's original 68,853-byte `Character20::Slot06` has natural C++
+under active original-bound reconstruction in `workbench/kano-state/`.
+Its selected prefix now matches **24,034 code bytes / 6,614 original
+x86 instructions** with default plus **62 verified live cases**:
+1–9, 13–16, 47, 50–77, 81–87, 96–99, 150–158. Strict checker
+independently audits **605 internal branches**, **71 outbound**,
+**604 nonlocal COFF call/IEEE-754 operands** and the two original
+switch references. Cases157/158 omit the sibling dash-clear and end
+in state9, not sibling loop; case150–155 original velocities and
+meter values are reviewed. **Next state161 at 0x006487A2.**
 
-Compiler candidate stack0xD4 differs from native0x4A4, but both
-allocation instructions are six bytes, so no position normalization
-is used. **83 original case bodies remain**; native selector tables,
-full frame, relocs and common return are open. This is NOT full Exact.
-Next original state **150 starts at 0x00647A3A**. For focused scoped
-checks see `workbench/kano-state/README.md`. Do NOT run an all-unit
-cold replay or count generated diagnostic marker cases.
+Incomplete selected frame 0xE4 vs canonical 0x4A4 has the same
+six-byte instruction length; there is no offset compensation.
+**74 original states, canonical complete stack, local switch DATA,
+all remaining relocs and shared return are OPEN. NOT full Exact.**
+No all-unit cold replay or acceptance of generated case markers.
 
 ## Additional newly accepted leaf owners
 
