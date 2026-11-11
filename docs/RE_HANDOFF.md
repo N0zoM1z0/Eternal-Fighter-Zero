@@ -181,6 +181,17 @@ Focused `check_case263_264_shape.py` and fast CI pass. These are
 **NOT Exact**, and do not move the strict 40,336-byte Kano prefix.
 No cold all-unit replay.
 
+Kano cases265/266/267 now have genuine authored C++ for native
+triple-effect attack variants, original **492+498+498=1,488 bytes**.
+The focused `workbench/kano-state/check_case265_267_shape.py` checker
+verifies 396 original instruction offsets/widths/register-abstracted
+forms, **18 native in-state and 3 shared-return jumps**, 24 native-
+bound direct calls, and all three original SHA extents. Frame3
+triple effect0x1A2 uses facing-dependent X offsets 100/80/130,
+180/160/210, 260/240/290 and Y offsets -480/-520/-530; original
+sound6 and ResetPose/FaceOpponent order match. Structural island
+ONLY, NOT Exact; strict prefix remains 40,336. No all-unit replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

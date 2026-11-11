@@ -4487,5 +4487,110 @@ void Character20::Slot06()
         }
         return;
 
+    case 265: // EXPERIMENTAL Kano original 0x0064F413: triple facing-weighted effects
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            field3138 = 2;
+        }
+        if (field000a == 3 && field000c == 0) {
+            pendingCharacterSoundSlot = 6;
+            effect.type = 0x1a2;
+            effect.x = (double)((int)positionX + (int)facing * 100);
+            effect.y = (double)((int)positionY - 480);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+            effect.x = (double)((int)positionX + (int)facing * 80);
+            effect.y = (double)((int)positionY - 520);
+            EmitLocalEffect(&effect);
+            effect.x = (double)((int)positionX + (int)facing * 130);
+            effect.y = (double)((int)positionY - 530);
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        return;
+
+    case 266: // EXPERIMENTAL Kano original 0x0064F5FF: triple facing-weighted effects
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            field3138 = 2;
+        }
+        if (field000a == 3 && field000c == 0) {
+            pendingCharacterSoundSlot = 6;
+            effect.type = 0x1a2;
+            effect.x = (double)((int)positionX + (int)facing * 180);
+            effect.y = (double)((int)positionY - 480);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+            effect.x = (double)((int)positionX + (int)facing * 160);
+            effect.y = (double)((int)positionY - 520);
+            EmitLocalEffect(&effect);
+            effect.x = (double)((int)positionX + (int)facing * 210);
+            effect.y = (double)((int)positionY - 530);
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        return;
+
+    case 267: // EXPERIMENTAL Kano original 0x0064F7F1: triple facing-weighted effects
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            field3138 = 2;
+        }
+        if (field000a == 3 && field000c == 0) {
+            pendingCharacterSoundSlot = 6;
+            effect.type = 0x1a2;
+            effect.x = (double)((int)positionX + (int)facing * 260);
+            effect.y = (double)((int)positionY - 480);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+            effect.x = (double)((int)positionX + (int)facing * 240);
+            effect.y = (double)((int)positionY - 520);
+            EmitLocalEffect(&effect);
+            effect.x = (double)((int)positionX + (int)facing * 290);
+            effect.y = (double)((int)positionY - 530);
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        return;
+
     }
 }

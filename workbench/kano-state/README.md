@@ -61,6 +61,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case259_shape.py
     scripts/repo-python workbench/kano-state/check_case261_262_shape.py
     scripts/repo-python workbench/kano-state/check_case263_264_shape.py
+    scripts/repo-python workbench/kano-state/check_case265_267_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
 
@@ -77,6 +78,43 @@ native case because state250's compiler phase remains unresolved.
 These island checks do not grow the 40,336-byte strict contiguous
 prefix or register any complete owner. Never count later diagnostic
 neutral marker states as original code.
+
+### Experimental cases265–267 — triple image effects (1,488 native bytes)
+
+Original Kano state265 `[0x0064F413,0x0064F5FF)` is **492 bytes**;
+states266 `[0x0064F5FF,0x0064F7F1)` and267
+`[0x0064F7F1,0x0064F9E3)` are **498 bytes each**, all three with
+**132 original x86 instructions**. Three substantial natural-C++
+case bodies are authored in `Character20State.cpp`. Frame0 resets
+motion, calls ResetFrame and sets `field3138=2`. At frame3 tick0,
+all use sound6, effect `0x1A2`, layer1/group2 and three distinct
+`EmitLocalEffect` calls, each with facing-sensitive X coordinates
+and original Y offsets −480, −520, −530:
+
+| State | Three facing-scaled X offsets |
+| --- | --- |
+| 265 | 100, 80, 130 |
+| 266 | 180, 160, 210 |
+| 267 | 260, 240, 290 |
+
+On frame advancement each clears collisionResult; completion sets
+state0 and invokes ResetPose **before** FaceOpponent, as in original.
+No speculative meter or status change is introduced.
+
+Run the dedicated native shape/branch/oracle check:
+
+    scripts/repo-python workbench/kano-state/check_case265_267_shape.py
+
+Each native 132-instruction subrange matches the selected VC7.1 C++
+by **all original offsets/widths/register-abstracted forms**, **six
+original internal jumps and one shared-return jump**, plus **eight
+independently original-bound COFF REL32 calls** (1 ResetFrame,
+6 `__ftol2`, 1 FaceOpponent). The complete three-island audit covers
+**1,488 bytes / 396 x86 instructions, 18 original internal and 3
+outbound branches, and 24 call bindings**. The native original SHA
+for each subrange is pinned in the checker. This is NOT concrete
+register or full-owner Exact because case250 register-phase mismatch
+remains unresolved. Strict prefix stays **40,336 native bytes**.
 
 ### Experimental cases263–264 — 1,621-byte native-bound paired lances
 

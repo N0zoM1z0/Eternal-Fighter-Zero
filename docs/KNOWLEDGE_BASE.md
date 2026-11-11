@@ -1973,6 +1973,20 @@ operands**, using both canonical SHA-256 extents. The register-
 abstracted shape matches, but concrete-register bytes are not Exact;
 the strict prefix still ends before case250 (40,336 bytes).
 
+#### Kano states265–267: triple-effect attack islands
+
+Three original native Kano cases have fully authored natural C++:
+265 (492 bytes), 266 (498), 267 (498), each 132 original x86
+instructions. They emit three layer1/group2 effect0x1A2 images at
+frame3 with distinct original facing-scaled X ranges and Y offsets
+-480, -520, -530; native completion returns to state0 with exact
+pose/face call ordering. `check_case265_267_shape.py` independently
+pins three original SHA-256 subranges and matches **396 native
+instruction offsets/forms/widths**, **18 local + 3 shared-return
+branches**, and **24 original-bound COFF REL32 calls**. This is a
+structural island only, NOT full Exact, due pending native concrete
+register closure after case250; 40,336 strict Boss prefix unchanged.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five
