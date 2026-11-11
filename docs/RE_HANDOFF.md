@@ -33,24 +33,23 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-The original Kano 68,853-byte Slot06 boss is actively being restored
-in `workbench/kano-state/Character20State.cpp`. Continuous selected
-original-bound native prefix is now **9,494 bytes / 2,605 x86
-instructions**, with default plus **26 reviewed authentic states**
-(1–9, 13–16, 47, 50–61). The local checker verifies **240 original
-internal branches**, **28 outbound branch targets**, **269 original-
-bound nonlocal COFF call/IEEE-754 operands** and two original local
-switch addresses. Cases50–61 are complete 473–511-byte recovery /
-recoil bodies with stage-edge pushback and combo-damage scaling.
+Kano original `Character20::Slot06` is **68,853 native code bytes**,
+actively reconstructed in `workbench/kano-state/Character20State.cpp`.
+The selected original-bound opening is now **13,041 bytes /
+3,617 original x86 instructions**, default and **34 native-reviewed
+states** (1–9, 13–16, 47, 50–69). Its checker validates **339
+original internal / 41 outbound jump targets**, **328 exact original-
+bound nonlocal COFF call/float references**, and two local switch
+address operands. These are substantial guarded/airborne recovery
+branches, not copied placeholders. New 62–69 cover scaled or direct
+knockback, conditional wall collision, resource loss and air landing.
 
-Original Kano stack allocation `0x4A4` is temporarily `0x7C` in the
-partial C++ probe, giving exactly one acknowledged three-byte
-prologue instruction-length discrepancy. Remaining **110 case bodies**,
-original complete stack, native switch tables, remaining relocation
-inventory and common return are OPEN, **NOT complete Exact**.
-**Next original case62 at 0x00644ED6**. Read
-`workbench/kano-state/README.md`; continue only focused selected
-compilation, not all-unit cold replay or marker-case acceptance.
+The incomplete candidate frame is 0x7C vs canonical 0x4A4: only
+the three-byte instruction size shift is normalized. **102 remaining
+native states**, complete original stack, adjacent switch DATA,
+remaining relocations and shared return are open. **NOT full Exact.**
+Next original case70 at **0x00645CB1**. Do not run full cold replay,
+and never give credit to generated diagnostic marker cases.
 
 ## Additional newly accepted leaf owners
 

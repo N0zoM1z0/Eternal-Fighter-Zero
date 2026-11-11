@@ -7,32 +7,29 @@
 `[0x006538D9,0x00653A15)` (316 bytes). Original selector holds
 **136 live cases and 180 default IDs**.
 
-The authored natural C++ `Character20State.cpp` now has original
-common setup, default, and **26 reviewed real cases**:
-1–9, 13–16, 47 and 50–61. Next original case62 begins at
-**`0x00644ED6`**. The consecutive selected original prefix
-`[0x006429C0,0x00644ED6)` is **9,494 native code bytes / 2,605
-instructions**, SHA-256
-`b554ad2cf978442ee6357749aa8bd272b04aa7b4dc284f94d353fc3fe25bf571`.
+The authored natural C++ `Character20State.cpp` now reconstructs
+default and **34 real reviewed cases** (1–9, 13–16, 47, 50–69).
+Its continuous selected native code reaches **case70 at
+`0x00645CB1`**, original `[0x006429C0,0x00645CB1)`:
+**13,041 native bytes / 3,617 original x86 instructions**, SHA-256
+`bf77cec9fa8cefb8e2eb0c62943e4906983342ba2ac6983a2ef3e37076385a5b`.
 
-The canonical native stack is `sub esp,0x4A4`; the incomplete selected
-C++ compiles with short `sub esp,0x7C` due to unimplemented later
-cases. The checker normalizes **only that one three-byte instruction-
-size displacement**, then strictly compares all **2,605 original
-instruction offsets, lengths and forms**, **240 internal branches**,
-**28 outbound original targets**, **269 original-bound nonlocal
-call/IEEE-754 COFF operands** and 2 original-local switch pointers.
-This is NOT whole-function Exact; the other 110 case markers are
-unaccepted neutral tests with no reconstruction credit.
+Canonical native stack is `sub esp,0x4A4`; the partial source still
+compiles with a three-byte shorter `sub esp,0x7C` because 102 state
+bodies are unimplemented. Normalizing ONLY that one 3-byte prologue
+shift, selected checker validates **3,617 original instruction
+positions, lengths and forms**, **339 internal and 41 outbound
+original jump targets**, **328 original-bound nonlocal COFF
+call/IEEE-754 references**, and both original local switch table
+addresses. Complete codegen Exact is NOT established.
 
-Newly reviewed original states55–61 implement nontrivial tiered
-recoil, hit meter recovery, edge pushback and opponent combo-damage
-scaling. State55 deliberately **does not** clear `dashMomentumFlag`;
-states56–58 **do** clear it after resource deduction. Native state
-lengths include 55=487, 56–58=473 each, and 59–61=511 each.
-Their actual machine instructions, branches and numeric IEEE-754
-operands were checked rather than assuming source equivalence with
-Makoto. These branches are preserved in authored natural C++.
+Reviewed states62–67 recover distinct aerial knockback physics with
+incoming hit resource cost 0.8, initial meter +30, optional wall
+collision into state70, original 0.75 vertical impulse scaling,
+velocity clamps -2.0/-0.5 or -4.0/-0.5, gravity0.032 and landing
+state97/98. States68–69 handle airborne recovery with cost1.5,
+original meter+3, direct knockback X/Y and wall cancellation only in
+state68. No diagnostic neutral marker case was accepted as source.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -49,12 +46,12 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
-    scripts/repo-python workbench/kano-state/probe_prefix.py --through 62 --context 12
+    scripts/repo-python workbench/kano-state/probe_prefix.py --through 70 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case62 `0x00644ED6`**, followed by
-remaining states63–77 and more complex late bodies. The full 0x4A4
-stack frame, 110 remaining native cases, local switch DATA, return
-and complete relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
+Next work begins at **Kano case70 `0x00645CB1`**, followed by
+states71–77 and larger late moves. The original full 0x4A4 frame,
+102 remaining native bodies, local switch DATA, return and complete
+relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.

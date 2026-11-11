@@ -1729,35 +1729,31 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano `Character20::Slot06` vtable slot6 `0x00788C90` targets native
-`[0x006429C0,0x006536B5)`, **68,853 code bytes**, plus a local
-137-entry jump-address table and 316-byte selector table (136 live
-IDs, 180 default). Current authored workbench C++ has the genuine
-opening/default and states1–9,13–16,47,50–61, with original-bound
-selected prefix `[0x006429C0,0x00644ED6)`: **9,494 native code bytes /
-2,605 original instructions**, SHA-256
-`b554ad2cf978442ee6357749aa8bd272b04aa7b4dc284f94d353fc3fe25bf571`.
+Kano `Character20::Slot06` vtable slot6 `0x00788C90` selects the
+**68,853-byte** native function `[0x006429C0,0x006536B5)`, followed
+by a 137-entry jump-address table and 316-byte selector table
+(136 live / 180 default IDs). Active natural C++ in
+`workbench/kano-state/Character20State.cpp` reconstructs original
+`[0x006429C0,0x00645CB1)`, **13,041 bytes / 3,617 native x86
+instructions**, SHA-256
+`bf77cec9fa8cefb8e2eb0c62943e4906983342ba2ac6983a2ef3e37076385a5b`.
+Reviewed original default and **34 real cases**: 1–9, 13–16,
+47, 50–69. All selected native instruction positions, widths,
+normalized forms, **339 internal and 41 outbound branch targets**,
+**328 independently original-bound nonlocal COFF calls/floats** and
+2 local switch operands are checked. The only acknowledged difference
+is a three-byte provisional stack allocation instruction shift:
+partial candidate 0x7C vs native 0x4A4. This is NOT full Exact;
+neutral marker cases are never accepted.
 
-The pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected checker explicitly
-accounts for one three-byte provisional stack allocation difference
-(0x7C candidate vs 0x4A4 original). After normalizing that sole
-shift, it validates **2,605 original instruction positions, widths
-and forms**, **240 internal branches**, **28 canonical outbound
-jumps**, **269 independently original-bound nonlocal COFF call/
-float operands**, and two original native switch table pointers.
-This is **partial source evidence, NOT an Exact full function**.
-Generated markers for 110 missing cases are unaccepted placeholders.
-
-Beyond Kano's distinct ±0.6 basic movement, frame2 jump timing,
-gravity0.025, and neutral/jump recovery, case47 handles air landing.
-States50–61 contain full original guard/recoil states (473–511 bytes
-each) with conditional resource loss, opponent combo-damage-scaled
-knockback, stage-boundary pushback, meter and defensive animations.
-State55 does not clear dashMomentumFlag while 56–58 do; that
-distinction was tested against original native code. The next
-original case62 begins `0x00644ED6`; 110 native bodies, complete
-0x4A4 frame, switch tables, relocations and common return are OPEN.
-Only the scoped Kano probe and checker were run, never cold all-unit replay.
+Cases62–67 are original airborne recoil and collision reactions:
+conditional cost0.8, initial meter30, scaling knockbackY by0.75
+or direct, gravity0.032, wall cancellation into state70, speed
+clamps (-2/-0.5 or -4/-0.5), landing state97/98. Cases68/69
+use cost1.5 and meter3 with wall cancellation in case68 only.
+Next original case70 starts 0x00645CB1. Still **102 unimplemented
+case bodies**, full stack, switch tables, relocations and common
+return open. Scope all replay to selected checker; never all-unit cold.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
