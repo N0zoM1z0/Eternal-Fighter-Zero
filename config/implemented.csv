@@ -443,3 +443,4 @@ address,name,source,symbol,status,evidence
 0x006CFF60,Character12::Slot03,src/Character12Lifecycle.cpp,?Slot03@Character12@@UAEXXZ,complete,docs/evidence/character-12-lifecycle-exact.json
 0x006D2400,Character12::Slot01,src/Character12Lifecycle.cpp,?Slot01@Character12@@UAEXXZ,complete,docs/evidence/character-12-lifecycle-exact.json
 0x006D2740,Character12::EmitLocalEffect,src/Character12Lifecycle.cpp,?EmitLocalEffect@Character12@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-12-lifecycle-exact.json
+0x006D2420,Character12::Slot08,src/Character12Slot08.cpp,?Slot08@Character12@@UAEXXZ,complete,docs/evidence/character-12-slot08-exact.json

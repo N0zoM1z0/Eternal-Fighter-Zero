@@ -133,6 +133,16 @@ selected strict replay gives 537/537 bytes with zero differences.
 Evidence `docs/evidence/character-12-lifecycle-exact.json`.
 Only the six selected units were replayed, not all-unit cold.
 
+EX Nanase `Character12::Slot08` has also been reconstructed as a
+**complete original 789-byte Exact virtual**, not a partial prefix,
+in `src/Character12Slot08.cpp`. It builds an EffectSpawn, gates special
+state0x140, cycles eight tint stages and emits randomized effects.
+Its **18 independently original-bound relocations**, all complete
+789 native code bytes, and real original vtable slot0x788E04
+pass selected strict replay with zero differences.
+Evidence: `docs/evidence/character-12-slot08-exact.json`.
+Only this unit was replayed, no all-unit cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "authority": "Single complete original EX Nanase Character12::Slot08 owner selected independently by original vtable 0x00788E04, owner extent 0x006D2420..0x006D2734, and all 18 original native relocation targets",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles complete ordinary natural C++ src/Character12Slot08.cpp and strict selected original-bound oracle compares all 789 bytes, with independently reviewed original operands for 17 COFF REL32 calls and one DIR32 IEEE-754 zero. No all-unit cold replay, partial-function or whole-game runtime claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 789,
+      "matched_bytes": 789,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 14,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D242E independently binds ??0EffectSpawn@@QAE@XZ to 0x00405490; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26,
+          "target": 4272272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D243A independently binds ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z to 0x00413090; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 193,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original DIR32 at 0x006D24E1 independently binds __real@0000000000000000 to 0x007872F8; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 249,
+          "target": 4256224,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D2519 independently binds ?ResetFrame@Secondary@@QAEXXZ to 0x0040F1E0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 307,
+          "target": 4262352,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?StartTrail@Secondary@@QAEXE@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D2553 independently binds ?StartTrail@Secondary@@QAEXE@Z to 0x004109D0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 404,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D25B4 independently binds ?SetCharacterTint@Secondary@@QAEXEH@Z to 0x00410AC0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 431,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D25CF independently binds ?SetCharacterTint@Secondary@@QAEXEH@Z to 0x00410AC0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 458,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D25EA independently binds ?SetCharacterTint@Secondary@@QAEXEH@Z to 0x00410AC0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 485,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D2605 independently binds ?SetCharacterTint@Secondary@@QAEXEH@Z to 0x00410AC0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 512,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D2620 independently binds ?SetCharacterTint@Secondary@@QAEXEH@Z to 0x00410AC0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 539,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D263B independently binds ?SetCharacterTint@Secondary@@QAEXEH@Z to 0x00410AC0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 566,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D2656 independently binds ?SetCharacterTint@Secondary@@QAEXEH@Z to 0x00410AC0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 596,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D2674 independently binds ?SetCharacterTint@Secondary@@QAEXEH@Z to 0x00410AC0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 660,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D26B4 independently binds __ftol2 to 0x007783B8; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 674,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D26C2 independently binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 716,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D26EC independently binds __ftol2 to 0x007783B8; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 730,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D26FA independently binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; source std C++ and original operand values reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 767,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "Original EX Nanase vtable slot 0x00788E04 independently selects 789-byte owner 0x006D2420, and original REL32 at 0x006D271F independently binds ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z to 0x00407100; source std C++ and original operand values reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "16ecf3feead24d2b9b6b360de49997560115413d3983ee224e3c17ad14decfb7",
+      "target_extent_sha256": "16ecf3feead24d2b9b6b360de49997560115413d3983ee224e3c17ad14decfb7",
+      "unit": "character-12-slot08",
+      "symbol": "?Slot08@Character12@@UAEXXZ",
+      "target_address": "0x006D2420",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "868b5b8177a4365c101b08f104baeeb0c6096351eb69ec21a7831fdedad016db",
+      "object_sha256": "be8a207c3464df2c1a37677edb1abffa8a5d2ded3c25a1c63969669387676cc9",
+      "source_sha256": "03f3521c56db2b5b0ac5d72fac1de676e55914216e29a5c967e09a03e353ccde",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "22e200d9fd5e28008bfcabeb00ee5c7ae802075cff607accdc83566c903c88cb",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "650aae714806d6bbe725fc4afc7bfdbc1983e5c1040bd4fc68f85253d9c49b56",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

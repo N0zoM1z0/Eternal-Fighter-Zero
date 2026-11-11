@@ -1978,6 +1978,43 @@ replacement. Certificates:
 full-owner certificate was independently refreshed. These selected
 checks do not assert freshness of unrelated older header proofs.
 
+### EX Nanase Character12 Slot08: 789-byte original Exact special timer
+
+Canonical EX Nanase vtable `0x00788DE4`, slot8 `0x00788E04`,
+points to a complete **789-byte native `Character12::Slot08` at
+`0x006D2420`**. New *natural C++* owner
+`src/Character12Slot08.cpp` compiles using pinned VC7.1
+`/Od /G6 /MT /Gy /W3`; the strict selected-only oracle validates
+**789 / 789 original code bytes**, **18 original-bound relocations**
+(17 REL32 direct calls and one native zero-valued double DIR32),
+and **zero differences**, with all original control-flow forms and
+function extent matched.
+
+This is an original stateful special-effect/timer virtual, not a
+trivial leaf. Each invocation constructs a real EffectSpawn and resets
+its defaults; if `field3454 == 0` and all original meter/health,
+opponent-alive, context selection, grounded and pose gates hold,
+it resets the pose/frame and switches to special state0x140.
+When `field3454 == 1`, it increments meter, calls `StartTrail(1)`,
+decrements field3150, increments field314c and wraps the latter
+past144. Every18 ticks it chooses original palette `0xD1,0xD0,
+0xCF,0xB1,0xCF,0xD0,0xD1,0xD2` in exact order, calling native
+`Secondary::SetCharacterTint(...,27)` eight separate times.
+When the counter expires outside pose IDs50–149, it emits effect
+0x22 at original signed facing-adjusted random X and random Y,
+using two original `RandomRange` calls and four original conversion
+paths before setting field3150=2.
+
+Independently confirmed original direct targets include
+`EffectSpawn` ctor0x405490, reset0x413090, frame reset0x40F1E0,
+trail0x4109D0, tint0x410AC0 (8 references), `RandomRange`
+0x4108A0 (2), `__ftol2`0x7783B8 (2), and `Context::EmitEffect`
+0x407100. The literal DIR32 at 0x7872F8 contains an exact
+IEEE-754 `0.0` payload. Original vtable selection, branch ordering,
+full extent and all relocation operands were reviewed before entry.
+Proof: `docs/evidence/character-12-slot08-exact.json`.
+This is codegen Exact, not whole-game runtime/linkage parity.
+
 ### EX Nanase Character12 lifecycle: six complete original Exact owners
 
 The canonical EX Nanase `Character12` vtable at `0x00788DE4`

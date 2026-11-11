@@ -462,7 +462,7 @@ address,origin,status,evidence
 0x006CFF80,unknown,unreviewed,
 0x006D2400,authored,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
 0x006D2410,unknown,unreviewed,
-0x006D2420,unknown,unreviewed,
+0x006D2420,authored,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-slot08-exact
 0x006D2740,authored,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
 0x006D2770,unknown,unreviewed,
 0x006D38E0,unknown,unreviewed,
