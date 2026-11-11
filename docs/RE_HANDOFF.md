@@ -531,22 +531,19 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 
 ### Active second large boss: Character04::Slot06 selected prefix (NOT Exact)
 
-`workbench/character04-state/Character04State.cpp` now reconstructs
-native default and **49 real live cases**, including the newly
-restored original air/landing special states81–87. Source-local
-private field view correctly resolves field3154 used by original
-special effect control flow without disturbing accepted headers.
-`workbench/character04-state/check_prefix.py` original-binds
-**19,381 contiguous native code bytes / 5,340 x86 instructions**,
-**494 native internal and 58 shared-return targets**, **486 native
-external COFF/IEEE-754 operands**, plus two native local dispatch
-pointers. The original-width stack instruction still reserves a
-provisional `0xC4`, not native `0x2E8`; original-bound COFF fields
-and outbound shared-return displacement remain distinct. Every
-other selected code byte matches. **Next case96 starts at
-`0x0060C4E5`**; the other 89 native live cases, complete switch,
-stack and return remain unverified. This is partial original-bound
-source evidence, **NOT whole Exact**. No all-unit cold replay/push.
+`workbench/character04-state/Character04State.cpp` now authors
+original default plus **53 real cases** (1–9,13–16,47,50–77,
+81–87,96–99). Newly restored original 96–99 implement actual
+ground-hit effects, `SetVerticalShake`, and early knockout recovery
+return. `check_prefix.py` verifies **20,207 continuous original
+code bytes / 5,575 x86 instruction offsets/widths/forms**,
+**512 native internal + 63 shared-return jumps**, **500 canonical
+COFF direct calls/IEEE-754 operands** plus two native local
+selector/jump-table references. Only the original-width provisional
+stack value (`0xD4` vs native `0x2E8`), unclosed shared-return JMP
+and original-bound reloc operands differ. **Next case150 at
+`0x0060C81F`**, remaining 85 live cases, whole function stack,
+table and return OPEN. No complete Exact claim, cold replay or push.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is
 now a complete **11-byte native Exact** virtual passive hook,

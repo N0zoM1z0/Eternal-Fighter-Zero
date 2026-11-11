@@ -1707,5 +1707,94 @@ void Character04::Slot06()
         return;
 
 
+    case 96: // Native C04 0x0060C4E5: original knockout and reset
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            // Face one frame before the animation ends, not at the end.
+            if (field000a == timing.animationFrameCount - 1) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 97: // Native C04 0x0060C57A: original knockout and reset
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 0 && field000c == 0) {
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 99;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 98: // Native C04 0x0060C672: original knockout and reset
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 0 && field000c == 0) {
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 99;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 99: // Native C04 0x0060C76A: original knockout and reset
+        // The target deliberately checks the tick count without a pose gate.
+        if (health > 0 && field000c > 99 && field000a == 0) {
+            field0008 = 96;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 96;
+                ResetPose();
+            }
+        }
+        return;
+
+
     }
 }

@@ -2253,32 +2253,28 @@ Character04 and Kano state-Boss reconstruction.
 
 ### Character04 Slot06: original-bound 59,143-byte state boss workbench
 
-Original vtable slot `0x00788B94` selects Character04's
-59,143-byte Slot06 native code `[0x00607930,0x00616037)`.
-Immediately following are 139 switch addresses and 325 selectors
-(138 real live IDs, 187 original defaults).
+Original vtable pointer `0x00788B94` selects native code
+`[0x00607930,0x00616037)`, **59,143 code bytes**, followed by
+139 original switch destinations and 325 animation-ID selectors
+(138 live IDs/187 defaults).
 
-Authored natural C++ in `workbench/character04-state/Character04State.cpp`
-now covers **49 native live cases** (1–9, 13–16, 47, 50–77, 81–87)
-and the default. New cases81–87 contain real original air-to-ground,
-knockback, timed burst and special-recovery behavior. A source-local
-character child-field view is used for original offsets `0x3138`
-and `0x3154`; the special effect branch genuinely reads offset
-`0x3154` rather than the other-character value `0x3144`.
-
-`workbench/character04-state/check_prefix.py` validates the native
-**19,381-byte continuous opening** `[0x00607930,0x0060C4E5)`,
-SHA-256 `c0a2283a2bebf8e901b85b35769abbe928813bb64912c2df36e5f85edf14d4f9`.
-Its canonical original-bound comparison verifies **5,340 x86
-instruction positions/widths/forms**, **494 internal and 58
-shared-return branch targets**, **486 direct-call/float operands**
-and 2 native switch/selector pointers. Other code bytes match,
-except the explicitly documented provisional stack-immediate
-value in the original-width six-byte allocation, original-bound
-COFF operands and still-unclosed shared-return displacement.
-This is **selected prefix, NOT full Exact**; the remaining 89 real
-cases and full original 0x2E8 stack/table/return remain OPEN.
-Next native case96 at `0x0060C4E5`. No cold all-unit replay.
+Natural C++ in `workbench/character04-state/Character04State.cpp`
+now covers **default plus 53 live states**: 1–9,13–16,47,50–77,
+81–87,96–99. New 96–99 states implement original knockout recovery,
+directional stance transition, two ground effects with vertical
+shake and precise early-return behavior when health and frame gates
+allow recovery. `check_prefix.py` original-binds **20,207
+continuous native bytes** in `[0x00607930,0x0060C81F)` SHA
+`1f4e0c8bf16522d67bf8ebe7b298bc32d49fb97e8d9b7d88a4efdde377e1fa16`.
+It verifies **5,575 original x86 instructions**, **512 internal and
+63 shared-return jumps, 500 original native calls/float operands**
+and two original table/local references. All other selected bytes
+match; exceptions are strictly the provisional original-width
+six-byte stack immediate, outbound shared-return displacement and
+independently original-bound COFF operands. This remains **strict
+selected-prefix evidence, NOT full-function Exact**. The other
+85 real states, full original stack `0x2E8`, jump table and return
+remain OPEN. Next state150 at `0x0060C81F`.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 
