@@ -102,6 +102,14 @@ base-method call operands and six canonical vtable locations are
 verified. Certificate: `docs/evidence/character-17-lifecycle-exact.json`.
 Only these six units were replayed, not all-unit cold replay.
 
+Akiko `Character16` now has **five complete Exact lifecycle and
+local-effect owners / 565 native code bytes** in
+`src/Character16Lifecycle.cpp`. Each original vtable and five base
+calls were independently checked; strict selected replay proved
+565/565 and zero differences. Certificate:
+`docs/evidence/character-16-lifecycle-exact.json`. Only these five
+units were replayed, never full all-unit cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

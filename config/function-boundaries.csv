@@ -456,3 +456,8 @@ address,end,size,status,evidence
 0x0073EB50,0x0073EB63,19,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
 0x00741AC0,0x00741BB1,241,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
 0x00741BC0,0x00741BEF,47,reviewed,docs/KNOWLEDGE_BASE.md#nayukib-character17-lifecycle-exact
+0x00721BA0,0x00721D09,361,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-lifecycle-exact
+0x00721D10,0x00721D4A,58,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-lifecycle-exact
+0x00721D50,0x00721DA0,80,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-lifecycle-exact
+0x00721DA0,0x00721DB3,19,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-lifecycle-exact
+0x00725BD0,0x00725BFF,47,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-lifecycle-exact

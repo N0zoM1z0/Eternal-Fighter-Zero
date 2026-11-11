@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "authority": "Five complete Akiko Character16 native lifecycle/effect owners selected by canonical EFZ.exe original vtable at 0x00788F58 with independently checked original owner extents and direct-call destinations",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles normal authored C++ src/Character16Lifecycle.cpp. Selected-only strict native oracle restores all five original independently reviewed COFF REL32 call operands and compares every code byte of five complete original functions without masks or skipped regions. Original 361-byte initializer includes full three-array reset. No all-unit cold replay or whole-game linkage/runtime claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 361,
+      "matched_bytes": 361,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 353,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "Canonical Akiko Character16 original vtable slot 0x00788F88 selects native 0x00721BA0 complete 361-byte owner, REL32 field 0x00721D01 resolves independently to reviewed ?InitializeState@Secondary@@UAEXXZ at 0x0040EDF0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "13556997d4f1b75f734eea7babad87e101ff10fd0bbcf96380769c55d302b42c",
+      "target_extent_sha256": "13556997d4f1b75f734eea7babad87e101ff10fd0bbcf96380769c55d302b42c",
+      "unit": "character-16-initialize-state",
+      "symbol": "?InitializeState@Character16@@UAEXXZ",
+      "target_address": "0x00721BA0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "039eaeb2d43a19d1954cd36ca92f558889579755fe9c2dd9f0db4f96aa758164",
+      "object_sha256": "347ddd3a08c10ef26204df47f1de71b0ac59a1fe5d415a1674ddb7eed65e0c77",
+      "source_sha256": "401b32f7a8ecf81baf4ce8fd56f31a8d6430aa875ae307e767ff4c1d380fce7a",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7c91dc78ff619b8d5955258b1b181c2367b4a15d269024ed6ac9a4f08107c689",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "fdd3f64fc2419b5b6bc7118a811a306af5d27afe0fc80abd7cc165c3c7c1251f",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "Canonical Akiko Character16 original vtable slot 0x00788F58 selects native 0x00721D10 complete 58-byte owner, REL32 field 0x00721D42 resolves independently to reviewed ?ResetPose@Secondary@@UAEXXZ at 0x0040F110",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d97827460f6ad66027d064f224b32c19d2cab18d762d7d33805bf73244b7a888",
+      "target_extent_sha256": "d97827460f6ad66027d064f224b32c19d2cab18d762d7d33805bf73244b7a888",
+      "unit": "character-16-reset-pose",
+      "symbol": "?ResetPose@Character16@@UAEXXZ",
+      "target_address": "0x00721D10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "039eaeb2d43a19d1954cd36ca92f558889579755fe9c2dd9f0db4f96aa758164",
+      "object_sha256": "fef293e10e4c62ee3aeaf00ec09c0d309ddfa34a2589f7ecf826021c64a48ae9",
+      "source_sha256": "401b32f7a8ecf81baf4ce8fd56f31a8d6430aa875ae307e767ff4c1d380fce7a",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7c91dc78ff619b8d5955258b1b181c2367b4a15d269024ed6ac9a4f08107c689",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "4db3e14e77c498b783913aff0d69871a23079f315958e97125e6e6adb512eac0",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "Canonical Akiko Character16 original vtable slot 0x00788F80 selects native 0x00721D50 complete 80-byte owner, REL32 field 0x00721D96 resolves independently to reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x00412E60",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "65eb2a17b885a5739faf24b8ab07ba02701dbfb03d2ff79258c08d9ed5f7d8c2",
+      "target_extent_sha256": "65eb2a17b885a5739faf24b8ab07ba02701dbfb03d2ff79258c08d9ed5f7d8c2",
+      "unit": "character-16-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character16@@UAEXF@Z",
+      "target_address": "0x00721D50",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "039eaeb2d43a19d1954cd36ca92f558889579755fe9c2dd9f0db4f96aa758164",
+      "object_sha256": "47ec0c6212439ffe35b6a525d3d41a515d7ad1dced6668407970036e8fc9cc3c",
+      "source_sha256": "401b32f7a8ecf81baf4ce8fd56f31a8d6430aa875ae307e767ff4c1d380fce7a",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7c91dc78ff619b8d5955258b1b181c2367b4a15d269024ed6ac9a4f08107c689",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b8d89e4d65887f21a81f4b28f204087caabbdcc09094bd2980f3aadeeeaef514",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "Canonical Akiko Character16 original vtable slot 0x00788F64 selects native 0x00721DA0 complete 19-byte owner, REL32 field 0x00721DAB resolves independently to reviewed ?UpdateLocomotionState@Secondary@@QAEXXZ at 0x0040E740",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8d5bd8b784afdc2cfe1293c837648a14550356e8c2978b3cd1ffcaeaa8406d21",
+      "target_extent_sha256": "8d5bd8b784afdc2cfe1293c837648a14550356e8c2978b3cd1ffcaeaa8406d21",
+      "unit": "character-16-slot03",
+      "symbol": "?Slot03@Character16@@UAEXXZ",
+      "target_address": "0x00721DA0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "039eaeb2d43a19d1954cd36ca92f558889579755fe9c2dd9f0db4f96aa758164",
+      "object_sha256": "b89b065418ab613a77cc5f4cc2a3dd6d9ad5b67587914d11e3eefe70d7b30ee6",
+      "source_sha256": "401b32f7a8ecf81baf4ce8fd56f31a8d6430aa875ae307e767ff4c1d380fce7a",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7c91dc78ff619b8d5955258b1b181c2367b4a15d269024ed6ac9a4f08107c689",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "7d63a00480b22ce2461b604cf47ffc6206ce6530a616e0a62cb1efb982ffe84d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "Canonical Akiko Character16 original vtable slot 0x00788F7C selects native 0x00725BD0 complete 47-byte owner, REL32 field 0x00725BF5 resolves independently to reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e7895061e887493ea2488a7da785e9b009c7ac0ec00c7b38dd595c08d2e669f3",
+      "target_extent_sha256": "e7895061e887493ea2488a7da785e9b009c7ac0ec00c7b38dd595c08d2e669f3",
+      "unit": "character-16-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character16@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x00725BD0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "039eaeb2d43a19d1954cd36ca92f558889579755fe9c2dd9f0db4f96aa758164",
+      "object_sha256": "afc5319a784097776bf98ace86e28ec2213381d03027c8619a365df3ad712978",
+      "source_sha256": "401b32f7a8ecf81baf4ce8fd56f31a8d6430aa875ae307e767ff4c1d380fce7a",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7c91dc78ff619b8d5955258b1b181c2367b4a15d269024ed6ac9a4f08107c689",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9de2ff98c116dea86f97b8acb7f19f5319c7cea38c6d1d287415e94979a109f0",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -160644,3 +160644,88 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "Original EFZ.exe NayukiB vtable slot 0x00788FDC points to complete 47-byte owner 0x00741BC0, and native REL32 at 0x00741BE5 resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10"
+
+[units.character-16-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character16Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-16-initialize-state/Character16Lifecycle.obj"
+symbol = "?InitializeState@Character16@@UAEXXZ"
+target_address = 0x00721BA0
+size = 361
+
+[[units.character-16-initialize-state.relocations]]
+offset = 353
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Canonical Akiko Character16 original vtable slot 0x00788F88 selects native 0x00721BA0 complete 361-byte owner, REL32 field 0x00721D01 resolves independently to reviewed ?InitializeState@Secondary@@UAEXXZ at 0x0040EDF0"
+
+[units.character-16-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character16Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-16-reset-pose/Character16Lifecycle.obj"
+symbol = "?ResetPose@Character16@@UAEXXZ"
+target_address = 0x00721D10
+size = 58
+
+[[units.character-16-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Canonical Akiko Character16 original vtable slot 0x00788F58 selects native 0x00721D10 complete 58-byte owner, REL32 field 0x00721D42 resolves independently to reviewed ?ResetPose@Secondary@@UAEXXZ at 0x0040F110"
+
+[units.character-16-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character16Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-16-remove-local-effect/Character16Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character16@@UAEXF@Z"
+target_address = 0x00721D50
+size = 80
+
+[[units.character-16-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Canonical Akiko Character16 original vtable slot 0x00788F80 selects native 0x00721D50 complete 80-byte owner, REL32 field 0x00721D96 resolves independently to reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x00412E60"
+
+[units.character-16-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character16Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-16-slot03/Character16Lifecycle.obj"
+symbol = "?Slot03@Character16@@UAEXXZ"
+target_address = 0x00721DA0
+size = 19
+
+[[units.character-16-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "Canonical Akiko Character16 original vtable slot 0x00788F64 selects native 0x00721DA0 complete 19-byte owner, REL32 field 0x00721DAB resolves independently to reviewed ?UpdateLocomotionState@Secondary@@QAEXXZ at 0x0040E740"
+
+[units.character-16-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character16Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-16-emit-local-effect/Character16Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character16@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x00725BD0
+size = 47
+
+[[units.character-16-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Canonical Akiko Character16 original vtable slot 0x00788F7C selects native 0x00725BD0 complete 47-byte owner, REL32 field 0x00725BF5 resolves independently to reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10"

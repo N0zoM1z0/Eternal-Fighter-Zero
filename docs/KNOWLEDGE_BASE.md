@@ -1854,6 +1854,38 @@ caller bytes were compared independently. Public evidence:
 `docs/evidence/nagamori-affected-consumers-exact.json`. Unrelated
 stale-header certificates and whole-image/runtime checks remain open.
 
+### Akiko Character16 lifecycle and effects: five complete Exact owners
+
+The canonical Akiko Character16 vtable at `0x00788F58` independently
+identifies five complete original functions in
+`src/Character16Lifecycle.cpp`. Pinned VC7.1 `/Od /G6 /MT /Gy /W3`
+selected-only original-bound replay matches **565 / 565 complete
+native code bytes**, **five independent original REL32 call
+relocations**, zero differences:
+
+| Character16 method | Original address | Exact bytes |
+| --- | --- | ---: |
+| InitializeState | `0x00721BA0` | 361 |
+| ResetPose | `0x00721D10` | 58 |
+| RemoveLocalEffect | `0x00721D50` | 80 |
+| Slot03 | `0x00721DA0` | 19 |
+| EmitLocalEffect | `0x00725BD0` | 47 |
+
+The nontrivial 361-byte InitializeState clears eleven Akiko-specific
+integer fields, restores five original X/Y collision offset pairs
+(-6,-72), (-22,0), (12,-14), (22,-19), (27,-41), zeros each of
+three 64-element effect arrays and calls reviewed base
+`Secondary::InitializeState` at 0x40EDF0. ResetPose and
+RemoveLocalEffect maintain the original three-field/three-array
+zeroing order before their base calls at 0x40F110 and 0x412E60.
+Slot03 delegates to `Secondary::UpdateLocomotionState` (0x40E740),
+and EmitLocalEffect first invokes virtual RemoveLocalEffect then
+base emitter at 0x412B10. All five original vtable pointers and
+entire owner boundaries were verified independently of compiler
+output before recording Exact. Proof:
+`docs/evidence/character-16-lifecycle-exact.json`.
+Codegen Exact does not establish full product linkage or runtime.
+
 ### Akiko constructor: complete exact native proof (2026-11-09)
 
 `Character16::Character16` at `0x007219A0` now has authored natural
