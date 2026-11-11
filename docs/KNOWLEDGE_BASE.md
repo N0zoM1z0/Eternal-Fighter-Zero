@@ -1876,6 +1876,23 @@ branches**, and **18 call/IEEE-754 operands**. These are structural
 island comparisons only, **NOT whole Exact**; the strict original
 Kano prefix remains 40,336 bytes pending case250 closure.
 
+#### Kano case259 original-bound 1,586-byte island (NOT Exact)
+
+The charged special case259 `[0x0064DDBF,0x0064E3F1)` is authored
+in full as natural C++ in the Kano state workbench. Independently
+original-bound diagnostic `check_case259_shape.py` verifies the
+**414 original instruction positions/widths/register-abstracted
+forms**, **24 original in-state jump destinations**, **3 original
+shared-return targets**, and **18 original COFF call/IEEE-754 operands**.
+Its three stages issue five original `0x191` effects at Y−45,
+Y−20/−70 and Y+5/−95, all with X+facing*38, native owner/layer,
+charge residue2500, meter−10, and frame19 looping until field3138=3.
+Correct assignment order was necessary to match compiler instruction
+structure. This is **not native byte Exact**, because state250's
+concrete register mismatch is still open. The strict selected
+original prefix remains 40,336 bytes, unchanged; no formal
+acceptance/ledger credit for this case.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

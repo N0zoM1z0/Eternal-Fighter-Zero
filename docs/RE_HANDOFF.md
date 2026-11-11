@@ -136,6 +136,18 @@ conditional loop count. **NOT Exact**: the case250 compiler-phase
 register divergence remains; strict Kano prefix still 40,336 bytes.
 No full all-unit cold replay.
 
+Kano state259 has additionally been reconstructed as **1,586 native
+code bytes / 414 x86 instructions** with the separate original-bound
+`workbench/kano-state/check_case259_shape.py` island: **24 original
+internal jumps, 3 shared-return edges and 18 verified native COFF
+calls/float literal references**. It restores the three staged frame17
+`0x191` effect volleys (five impact effects total), frame19→16 loop,
+charge residue2500 and meter10 deductions; correct original effect
+owner/facing assignment order is significant. **Not Exact**:
+concrete original registers remain mismatched after state250.
+Selected strict prefix still ends before state250 at 40,336 bytes.
+No full cold replay; do not count structural-island bytes as Exact.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

@@ -59,6 +59,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case257_shape.py
     scripts/repo-python workbench/kano-state/check_case258_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
+    scripts/repo-python workbench/kano-state/check_case259_shape.py
 
 The selected VC7.1 candidate matches **all 241 original instruction
 offsets, lengths and register-abstracted instruction forms**, **22
@@ -106,6 +107,40 @@ This is an independently verified **structural island, NOT concrete
 register or whole-function Exact**. Original state250's register
 phase still prevents expanding the strict contiguous 40,336-byte
 prefix; formal Exact counters remain unchanged.
+
+### Experimental case259 — 1,586-byte multi-tier five-impact finisher
+
+Kano original state259 `[0x0064DDBF,0x0064E3F1)` is **1,586 code
+bytes / 414 native x86 instructions**. The authored natural C++
+models the full charged attack: original charge saturation10000 ->
+2500 fallback, animation frame7→3 looping, real command13/resource
+cancel to state251, and frame17 stages keyed by field3138.
+First stage emits original `0x191` effect at Y−45; second emits
+Y−20 and Y−70; third emits Y+5 and Y−95. All five impact effects
+use facing*38 horizontal displacement, native `owner=1` and
+`group2/layer1`, and the original tier-dependent character sound,
+`field316c` increment and meter −10. State259 uniquely loops
+frame19→16 while field3138 is below 3.
+
+Run the independent, *non-accepting* original-bound diagnostic:
+
+    scripts/repo-python workbench/kano-state/check_case259_shape.py
+
+This pins original SHA-256
+`0cea3ab88f212da9516f5a88a6bfcbb086a08736f7aee22e01ed81f396fdd6c8`
+and all **414 native x86 instruction offsets/widths/register-
+abstracted opcode shapes**, **24 exact original internal branch
+targets**, **3 canonical shared return targets**, and **18 independently
+original-bound COFF call/IEEE-754 operands** (three ResetFrame,
+fourteen `__ftol2`, and native 500.0 double). Correcting the precise
+ordering of `effect.owner` and facing flag assignments in stages0/1
+was necessary for original instruction-shape parity.
+
+**NOT native Exact**: the concrete register choices continue to
+differ after state250. This structural-island evidence neither
+advances the 40,336-byte strict selected original prefix nor changes
+complete function ledgers. No wrapper/padding or synthetic marker
+code has been accepted.
 
 ### Experimental case258 — 1,254 native bytes, distinct triple-impact finisher
 
