@@ -2237,6 +2237,30 @@ The underlying Video callee is not separately accepted; a complete
 Exact render **caller** does not establish whole Windows runtime
 linkage or actual graphics output parity.
 
+### Character04 Slot06: new 59,143-byte original state boss workbench
+
+A second actively reconstructed large owner is original
+`Character04::Slot06`, selected by native vtable `0x00788B94`.
+It owns **59,143 code bytes** (`0x00607930..0x00616037`)
+with 139 original switch destinations and 325 selector bytes.
+Original selector has **138 live IDs and 187 native default IDs**.
+
+The authored `workbench/character04-state/Character04State.cpp`
+implements original **default plus nine real live cases 1–9**, including
+original x87-driven landing branches and real jumping physics.
+Original-bound `check_prefix.py` strictly confirms the **2,003-byte
+continuous prefix** `[0x00607930,0x00608103)` against SHA-256
+`4dc9e9b1cea61c3db99957a1d52cfc6bc19c71494bf82f36bfc4cda503b9d3ac`:
+**577 instruction positions/widths/forms, 45 internal and 11 outbound
+original branches, 42 independently bound original COFF calls/double
+operands, 2 authentic switch-local pointers**. All remaining bytes
+in selected scope match after the documented incomplete-stack
+three-byte shrink, original-bound reloc fields and unresolved shared
+return displacement; nothing else is masked or shifted. **Not full
+Exact**: 129 unreviewed live states and full original 0x2E8 stack,
+switch table and return remain open. Next case13 at `0x00608103`.
+See `workbench/character04-state/README.md`.
+
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 
 Original `Character04` vtable slot1 at **`0x00788B80`** selects the

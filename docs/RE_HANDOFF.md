@@ -529,6 +529,23 @@ class layouts were changed. Evidence:
 This is an accepted *caller* Exact; the video drawing callee and
 Windows runtime are not thereby accepted. No all-unit cold replay.
 
+### New large owner: Character04::Slot06 selected prefix (NOT Exact)
+
+`workbench/character04-state/Character04State.cpp` now authors the real
+original default and states1–9 of a separate **59,143-byte Boss**
+selected by original vtable slot `0x00788B94`. It is independently
+checked in `workbench/character04-state/check_prefix.py`:
+**2,003 exact-width native code prefix bytes / 577 x86 instruction
+positions**, **45 native internal and 11 shared-return branches**,
+**42 original-bound direct calls/IEEE-754 sites** and two original
+selector/table pointers. Only original-bound relocation operands,
+three bytes of provisional stack allocation and outbound shared
+return displacement differ; all other selected bytes match.
+**129 later real states, native full 0x2E8 stack and adjacent switch
+DATA still OPEN**. First next state13 at `0x00608103`. Native
+selector: 138 live IDs and 187 default IDs. Probe marker cases are
+unaccepted; no full all-unit cold replay. See workbench README.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256
