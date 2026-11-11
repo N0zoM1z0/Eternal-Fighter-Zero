@@ -2188,5 +2188,153 @@ void Character04::Slot06()
         return;
 
 
+    case 163: // Native 0x0060D84A: original double-speed jump with state-specific physics
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            StartTrail(3);
+        }
+        if (field000a == 2 && field000c == 0) {
+            velocityX = 2.5;
+            velocityY = -0.3;
+            gravity = 0.02;
+            if (reinterpret_cast<Character04StateFields *>(this)->field3144 == 4) {
+                velocityX = 3.2;
+                velocityY = -0.25;
+                gravity = 0.025;
+            }
+        }
+        velocityY += (double)(field000a > 2) * gravity;
+        if (positionY + velocityY >= 0.0 && field000a > 2 && field000a < 5) {
+            positionY = 0.0;
+            field000a = 5;
+            field000c = 0;
+            ResetFrame();
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 5)
+                field000a = 3;
+            if (field000a >= timing.animationFrameCount) {
+                FaceOpponent();
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 164: // Native 0x0060D9F1: forward recovery leap and pose-seven landing
+        if (field000a == 0 && field000c == 0) {
+            StartTrail(2);
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a == 2 && field000c == 0) {
+            velocityX = -2.0;
+            velocityY = -1.0;
+        }
+        if (field000a > 1)
+            velocityY += 0.04;
+        if (field000a > 3 && field000a < 7 && velocityY + positionY >= 0.0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            horizontalDeceleration = 0.0;
+            positionY = 0.0;
+            field000a = 7;
+            field000c = 0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                FaceOpponent();
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 165: // Native 0x0060DB54: forward grounded launch with timed air recovery
+        if (field000a == 0 && field000c == 0 &&
+            reinterpret_cast<Character04StateFields *>(this)->field3138 == 0) {
+            velocityX = 1.3;
+            StartTrail(3);
+            velocityY = 0.0;
+            gravity = 0.0;
+            pendingContextSoundSlot = 17;
+        }
+        ++field000c;
+        ++reinterpret_cast<Character04StateFields *>(this)->field3138;
+        ++reinterpret_cast<Character04StateFields *>(this)->field313c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount)
+                field000a = (unsigned short)(field000a - 2);
+        }
+        if (inputX == facing &&
+            reinterpret_cast<Character04StateFields *>(this)->field313c >= 120) {
+            field0008 = 9;
+            ResetPose();
+            velocityX = 1.1;
+            gravity = 0.03;
+            if (FaceOpponent() != 0)
+                velocityX = -velocityX;
+        }
+        if (inputX != facing &&
+            reinterpret_cast<Character04StateFields *>(this)->field3138 >= 48) {
+            field0008 = 9;
+            ResetPose();
+            velocityX = 1.1;
+            gravity = 0.03;
+            if (FaceOpponent() != 0)
+                velocityX = -velocityX;
+        }
+        return;
+
+    case 166: // Native 0x0060DD05: reverse grounded launch and facing-aware cooldown
+        if (field000a == 0 && field000c == 0 &&
+            reinterpret_cast<Character04StateFields *>(this)->field3138 == 0) {
+            velocityX = -1.3;
+            velocityY = 0.0;
+            gravity = 0.0;
+            StartTrail(3);
+            pendingContextSoundSlot = 17;
+        }
+        ++field000c;
+        ++reinterpret_cast<Character04StateFields *>(this)->field3138;
+        ++reinterpret_cast<Character04StateFields *>(this)->field313c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount)
+                field000a = (unsigned short)(field000a - 2);
+        }
+        if ((int)inputX == -(int)facing &&
+            reinterpret_cast<Character04StateFields *>(this)->field313c >= 120) {
+            field0008 = 9;
+            ResetPose();
+            velocityX = -0.9;
+            gravity = 0.03;
+            if (FaceOpponent() != 0)
+                velocityX = -velocityX;
+        }
+        if ((int)inputX != -(int)facing &&
+            reinterpret_cast<Character04StateFields *>(this)->field3138 >= 48) {
+            field0008 = 9;
+            ResetPose();
+            velocityX = -0.9;
+            gravity = 0.03;
+            if (FaceOpponent() != 0)
+                velocityX = -velocityX;
+        }
+        return;
+
+
     }
 }

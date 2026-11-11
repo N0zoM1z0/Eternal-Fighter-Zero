@@ -531,22 +531,20 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 
 ### Active second large boss: Character04::Slot06 (NOT full Exact)
 
-`workbench/character04-state/Character04State.cpp` now implements
-native default plus **64 real states** (1–9,13–16,47,50–77,
-81–87,96–99,150–158,161–162) of a 59,143-byte owner. New
-case161/162 real C++ has native impact Y−70, frame2 lift,
-frame7 effect and frame12 gravity, verified against original code.
-`check_prefix.py` proves **24,346 continuous original code bytes
-/ 6,719 native x86 instruction positions/widths/forms**, **612
-native internal and 75 shared-return branch targets**, **617 original
-COFF call/IEEE-754 sites** plus 2 original local dispatch pointers.
-Only precisely original-width but provisional stack value (`0xF4`
-vs native `0x2E8`), unclosed shared-return displacements and
-original-bound COFF operands are excepted; all other selected
-code bytes match. Next real case163 at `0x0060D84A`;
-74 live cases, full stack, switch table and return remain OPEN.
-Partial strict selected proof, **NOT full Exact**. No full cold
-replay or remote push.
+`workbench/character04-state/Character04State.cpp` now has native
+default plus **68 authentic real states**, including new
+original 163–166 (two-speed lift/landing, airborne dash variants,
+StartTrail and facing-dependent speed transitions). Its selected
+original-bound checker validates **25,994 continuous native code
+bytes / 7,191 original instructions**, **655 native internal and
+79 shared-return branches**, **662 bound original direct calls/
+IEEE-754 operands** and 2 original local switch pointers.
+Original-width provisional six-byte stack reserves `0xF8` versus
+the full owner's `0x2E8`; incomplete shared-return distance and
+native-bound COFF operands remain the only other differences.
+**Next original case167 at `0x0060DEBA`**; 70 real cases and final
+native frame/dispatch/return still OPEN, NOT full Exact. No cold
+all-unit replay or push.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is
 now a complete **11-byte native Exact** virtual passive hook,
