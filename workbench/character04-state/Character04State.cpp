@@ -2336,5 +2336,194 @@ void Character04::Slot06()
         return;
 
 
+    case 167: // Native Character04 0x0060DEBA: original staged hit effects
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            StartTrail(10);
+            if (field0120 == 1) {
+                comboDamageScale += field0118 * 5.0;
+            }
+            field0118 = 0.0;
+            hitstunFrames = 90;
+            SetTint(0xb0, 3);
+        }
+        if (field000a == 1 && field000c == 0) {
+            pendingContextSoundSlot = 18;
+            effect.type = 1;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 2 && field000c == 0) {
+            effect.type = 4;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 168: // Native Character04 0x0060E0A2: original staged hit effects
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            positionY = 0.0;
+            gravity = 0.0;
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            horizontalDeceleration = 0.0;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 169: // Native Character04 0x0060E1E2: original staged hit effects
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            positionY = 0.0;
+            gravity = 0.0;
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            horizontalDeceleration = 0.0;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 170: // Native Character04 0x0060E322: stored velocity and delayed recovery
+        if (field000a == 0 && field000c == 0) {
+            reinterpret_cast<Character04StateFields *>(this)->field3138 = (int)(velocityX * 100.0);
+            reinterpret_cast<Character04StateFields *>(this)->field313c = (int)(velocityY * 100.0);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (gravity == 0.0) {
+                gravity = 0.035;
+            }
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            hitstunFrames = 60;
+        }
+        if (hitstunFrames == 0 && reinterpret_cast<Character04StateFields *>(this)->field3140 == 0) {
+            ++reinterpret_cast<Character04StateFields *>(this)->field3140;
+            velocityX = (double)reinterpret_cast<Character04StateFields *>(this)->field3138 * 0.01;
+            velocityY = (double)reinterpret_cast<Character04StateFields *>(this)->field313c * 0.01;
+        }
+        if (hitstunFrames == 0) {
+            velocityY += gravity;
+        }
+        if (velocityY + positionY > 0.0) {
+            ResetFrame();
+            positionY = 0.0;
+            field0008 = 169;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 171: // Native Character04 0x0060E4EB: stored velocity and delayed recovery
+        if (field000a == 0 && field000c == 0) {
+            reinterpret_cast<Character04StateFields *>(this)->field3138 = (int)(velocityX * 100.0);
+            reinterpret_cast<Character04StateFields *>(this)->field313c = (int)(velocityY * 100.0);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            StartTrail(10);
+            if (field0120 == 1) {
+                comboDamageScale += field0118 * 5.0;
+            }
+            field0118 = 0.0;
+            hitstunFrames = 90;
+            SetTint(0xb0, 3);
+        }
+        // Original effect1 occurs on pose1; effect4 follows on pose2.
+        if (field000a == 1 && field000c == 0) {
+            pendingContextSoundSlot = 18;
+            effect.type = 1;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 2 && field000c == 0) {
+            effect.type = 4;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                velocityX = (double)reinterpret_cast<Character04StateFields *>(this)->field3138 * 0.01;
+                velocityY = (double)reinterpret_cast<Character04StateFields *>(this)->field313c * 0.01;
+                gravity = 0.035;
+                ResetPose();
+            }
+        }
+        return;
+
+
     }
 }
