@@ -7,33 +7,35 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki Character10 Slot06 remains the unfinished **62,693-byte**
-state boss; not whole-function Exact. See
+Nayuki `Character10::Slot06` is still an unfinished 62,693-byte boss,
+not full Exact. Focused instructions:
 [`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
-Strict selected prefix now reaches **44,657 original bytes / 12,270
-instructions**, default and **109 reviewed states**, with **1,112
-internal branches**, **161 original outbound targets**, **962 original-
-bound nonlocal COFF call/float references**, and two switch operands.
-Temporary frame allocation 0x2F0 vs full original 0x2B4.
-States258–260 restore the aerial landing state97, tier sound counter,
-and a 712-byte dynamically tier-scaled airborne launch sequence.
+The strict selected original-bound prefix is **46,133 bytes / 12,673
+instructions**, original default plus **111 live states**. Checker:
+**1,154 original internal branches**, **165 outbound targets**,
+**998 nonlocal COFF call/float bindings** and two local switch
+operands. Partial compiler frame 0x2F8, canonical full frame 0x2B4.
 
-**Next original state261 begins 0x0045C6C1.** Source has 118/137
-live labels (109 reviewed, 9 unverified inherited, 19 missing
-263–281). Full switch tables, remaining relocations and shared return
-remain open, and original stack width has not been matched.
+States261/262 have been reconstructed directly from original
+instructions: a 587-byte tiered aerial chain and 889-byte
+resource-consuming looping hit attack. Each now matches the entire
+original state path. Next address **0x0045CC85 is missing state263**.
+Remaining 19 live cases 263–281 are absent from the workbench source;
+seven existing 300–306 bodies still lack full verification. Do NOT
+avoid the missing cases by treating probe markers as real source.
 
-Run only focused checks; no all-unit cold replay:
+Selected local commands only:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 261 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 263 --context 12
     scripts/repo-python scripts/ci.py
 
-Preserve all dirty edits, original target, pinned VC7.1/Wine and Ghidra,
-and accepted source. Commit substantive work as `gpt-web: xxx`.
-Do not push without permission.
+Keep and reconcile all dirty edits; one operator only. Preserve
+original EFZ.exe, pinned VC7.1/Wine, Ghidra and accepted sources.
+Commit substantive progress as `gpt-web: xxx`. Do not run a full
+cold replay or push without permission.
 
 ## Additional newly accepted leaf owners
 

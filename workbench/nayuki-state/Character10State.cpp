@@ -3878,15 +3878,59 @@ void Character10::Slot06()
         }
         return;
 
-    case 261: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 261: // Reviewed Nayuki 0x0045C6C1: aerial chained launcher with tiered follow-through
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            horizontalDeceleration = 0.0;
+            remainingHitCount = 3;
+        }
+        if (positionY < 0.0)
+            velocityY += gravity;
+        if (field000a > 5 && velocityY + positionY > 0.0) {
+            positionY = 0.0;
             ResetFrame();
-            if (field0120 == 0) {
-                field0118 -= 500.0;
-            } else {
-                field0118 -= 250.0;
+            field000c = 0;
+            field000a = 16;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            ++field313c;
+            if (field000a == 5 || field000a == 9 || field000a == 13)
+                attackCollisionResult = 0;
+            if (field000a == 4) {
+                meter = (short)(meter + 45);
+                velocityX = 1.2;
+                velocityY = -1.2;
+                gravity = 0.03;
+                if (field3148 > 6)
+                    velocityY = -2.2;
             }
+            if ((field000a == 8 && field3148 < 5) ||
+                (field000a == 11 && field3148 < 7))
+                field000a = 15;
+            if (field000a == 15) {
+                if (velocityY < 0.0)
+                    velocityY *= 0.5;
+                velocityX *= 0.5;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                ResetFrame();
+                ResetPose();
+                return;
+            }
+        }
+        return;
+
+    case 262: // Reviewed Nayuki 0x0045C90C: resource-costly looping aerial special
+        if (field000a == 0 && field000c == 0) {
+            if (field0120 == 0)
+                field0118 -= 500.0;
+            else
+                field0118 -= 250.0;
             effect.type = 33;
             effect.palette = 11;
             effect.x = (double)(int)positionX;
@@ -3894,65 +3938,55 @@ void Character10::Slot06()
             effect.group = 2;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            horizontalDeceleration = 0.0;
+            remainingHitCount = (short)(field3148 + 1);
         }
-        if (field000a == 4 && field000c == 0) {
-            effect.type = 0x19c;
-            effect.x = (double)((int)positionX + (int)facing * 36);
-            effect.y = (double)((int)positionY - 78);
-            effect.owner = 1;
-            effect.flag0018 = (unsigned char)facing;
-            effect.layer = 1;
-            effect.group = 2;
-            EmitLocalEffect(&effect);
-            effect.type = 0x192;
-            effect.x = (double)((int)positionX + (int)facing * 36);
-            effect.y = (double)((int)positionY - 78);
-            effect.flag0018 = (unsigned char)facing;
-            effect.layer = 1;
-            effect.group = 2;
-            EmitLocalEffect(&effect);
-            pendingCharacterSoundSlot = 0;
-            field3148 = 1;
-        }
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            attackCollisionResult = 0;
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
-                FaceOpponent();
-                ResetPose();
-            }
-        }
-        return;
-
-    case 262: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
-            velocityX *= 0.25;
-            velocityY *= 0.25;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            horizontalDeceleration = 0.0;
+            remainingHitCount = 99;
+        }
+        velocityY += gravity;
+        if (field000a > 11 && velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            ResetFrame();
+            field000c = 0;
+            field000a = 16;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            attackCollisionResult = 3;
+            ++field313c;
+            if (field000a == 5 || field000a == 9 || field000a == 13)
+                attackCollisionResult = 0;
             if (field000a == 4) {
                 meter = (short)(meter + 45);
-                effect.type = 0x196;
-                effect.x = (double)((int)positionX + (int)facing * 14);
-                effect.y = (double)((int)positionY - 35);
-                effect.group = 0;
-                effect.owner = 1;
-                effect.layer = 1;
-                effect.flag0018 = (unsigned char)facing;
-                effect.field0028 = 1;
-                EmitLocalEffect(&effect);
-                pendingContextSoundSlot = 21;
+                velocityX = 0.8;
+                velocityY = -1.5;
+                gravity = 0.035;
+                hitInvulnerabilityFrames = (short)(field3148 * 12 + 30);
             }
+            if (field000a == 7 || field000a == 11)
+                velocityY = -1.4;
+            if (field000a == 12)
+                field000a = 4;
+            if (field000a == 11 || field000a == 8) {
+                if (field3138 > field3148)
+                    field000a = 12;
+            }
+            if (field000a == 11 || field000a == 8)
+                ++field3138;
+            if (field000a == 15 && velocityY < 0.0)
+                velocityY *= 0.5;
             if (field000a >= timing.animationFrameCount) {
-                field0008 = 9;
+                field0008 = 7;
+                ResetFrame();
                 ResetPose();
+                return;
             }
         }
         return;

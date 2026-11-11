@@ -16,53 +16,59 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Reviewed original code [0x00451850,0x0045C6C1): **44,657 / 62,693
-code bytes**, **12,270 original x86 instructions**, SHA-256:
-03fb8403a7c8c9928e7990fdaff79d770cf187e6715ec69eff0f50e12792e27a.
+Reviewed original code [0x00451850,0x0045CC85): **46,133 / 62,693
+code bytes**, **12,673 original x86 instructions**, SHA-256:
+9b36a93da67ec974b24a71a354313be803a3629a89541d2791cc000ec48a5a86.
 
-Reviewed original default and **109 live states**: 1–9, 13–16,
-47, 50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180,
-200–214, 220–221, 230–232, 248–254, 256–260.
+Reviewed default and **111 original live states**: 1–9, 13–16, 47,
+50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180,
+200–214, 220–221, 230–232, 248–254 and 256–262.
 
-States 249–252 restore Nayuki's airborne grapple, tier-gated local
-attack effects, resource expenditure and sound/meter controls.
-States 253–257 replace sibling templates with authentic launches,
-wall bounce (`CollisionSide`, state257) and recovery input reset.
-New state258 (284 bytes) sets gravity 0.04, halves horizontal speed
-on first tick, awards one remaining hit at frame3, and transitions
-to state97 on landing. State259 (254 bytes) unconditionally calls
-`ResetFrame`, increases `field3148` at frame10, caps at nine,
-emits sound slots 4/5 and exits via state7 after ResetPose.
-State260 is a **712-byte tiered airborne launcher**: starts with
-zero motion, gravity .035 and one hit, falls when airborne, applies
-.025 horizontal damping during frames5–8, increments field313c
-on frame changes, and on frame4 grants meter45 with launch speeds
-(1.8,-1.9), tiers >2 (2.1,-2), >5 (2.4,-2.1), >8 (3,-2.2).
-The frame5 transition can skip to6/7/8 based on tiers; frames6–8
-rewind to9, reducing horizontal speed by 0.3 at frame9. It exits
-to state7 only after `ResetFrame()` and `ResetPose()` in that order.
-Preserving `velocityY + positionY` operand order was required to
-reproduce the original x87 `fld`/`fadd` sequence.
+New state261 is a **587-byte tiered aerial hit-chain**: reset motion
+and set remainingHitCount3 at entry, add gravity while airborne,
+land at frame16 after frame5, increment `field313c` on frame steps,
+reset collision results for frames5/9/13, then launch on frame4 with
+meter45 and velocity (1.2,-1.2), gravity .03; tiers >6 change
+vertical launch to -2.2. Frames8/11 may skip to15 at lower tiers;
+frame15 halves upward vertical motion and horizontal speed. The end
+returns via state7 after ResetFrame and virtual ResetPose.
 
-Run focused original-bound comparison:
+New state262 is an **889-byte resource-costly looping attack**:
+frame0/tick0 subtracts 500 or 250 from field0118 according to
+field0120, emits global type33/palette11 at Y-50, and performs the
+original duplicate zero-velocity initializer (the later block sets
+remainingHitCount99). Motion applies gravity, lands at frame16
+after frame11, and increments field313c every animation step.
+Frame4 awards meter45, velocity (0.8,-1.5), gravity .035 and
+hitInvulnerabilityFrames = field3148*12+30. Frames7/11 apply -1.4
+vertical motion; frame12 loops to4, and frames8/11 can jump to12
+based on `field3138 > field3148`, incrementing field3138 as per the
+original source order. Frame15 halves upward speed; final state7
+resets frame before ResetPose.
+
+Run only the focused native comparison:
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` reproduces **12,270 original
-instruction offsets, widths and normalized opcode forms** except
-for the partial stack allocation (0x2F0 candidate vs 0x2B4
-original). Original-bound checks verify **1,112 internal branches**,
-**161 outbound destinations**, **962 nonlocal COFF call/IEEE-754
-references**, two local switch operands and **109 original selector
-case destinations**. This is selected-prefix evidence, NOT full Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` matches **12,673 native instruction
+offsets, widths and normalized opcode forms** except the incomplete
+stack allocation (candidate 0x2F8 versus original 0x2B4).
+Original-bound checks verify **1,154 internal branches**, **165
+outbound destinations**, **998 nonlocal COFF call/IEEE-754 bindings**,
+2 original local switch operands, and **111 original selector cases**.
+This is selected-prefix evidence, NOT whole-function Exact.
 
-## Next original state and remaining work
+## Next target and unresolved full owner
 
-Original state261 starts at **0x0045C6C1** and still uses an inherited
-unverified template. Use `probe_prefix.py --through 261 --context 12`
-and original disassembly. **18,036 original code bytes**, full
-stack, local switch tables, remaining relocations and common return
-are open. Of 137 live IDs, source has 118 labels: 109 reviewed,
-9 existing unreviewed and 19 missing IDs 263–281. Neutral marker
-cases and late 300–306 compiler scaffolding are not reconstructed
-source. Do not run all-unit cold replay for this owner.
+The selected source now reaches **state263 at 0x0045CC85**, the first
+of 19 live original case IDs 263–281 missing from the natural source.
+Reconstruct these real Nayuki states from original disassembly; do not
+skip them, borrow sibling implementations, or count the neutral
+markers generated by the diagnostic probe as recovered source.
+
+**16,560 original code bytes**, original 0x2B4 stack frame, full
+switch DATA, remaining relocation closure and shared return are open.
+Of 137 live states, source has 118 labels: 111 reviewed, seven
+present-but-unverified 300–306 and **19 absent IDs 263–281**. Do not
+run the all-unit cold replay, accept the incomplete prefix as whole
+Exact or claim runtime equivalence.
