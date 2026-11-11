@@ -53,6 +53,13 @@ independently checked. Public selected proof:
 `docs/evidence/character-18-lifecycle-exact.json`. The strict replay
 ran only these seven new functions, not a whole repository cold replay.
 
+Kanna `Character19` additionally has **six complete Exact lifecycle/
+virtual owners / 490 machine-code bytes** in
+`src/Character19Lifecycle.cpp`. The six canonical vtable targets and
+four base-method calls were independently verified, with strict
+selected receipts at `docs/evidence/character-19-lifecycle-exact.json`.
+No full all-unit cold replay was run; no whole-game claim.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

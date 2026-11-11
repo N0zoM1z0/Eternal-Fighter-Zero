@@ -140135,3 +140135,91 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788514 selects complete 47-byte owner 0x004D5AA0; original REL32 field 0x004D5AC5 resolves ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10, including exact float payload if applicable"
+
+[units.character-19-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character19Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-19-initialize-state/Character19Lifecycle.obj"
+symbol = "?InitializeState@Character19@@UAEXXZ"
+target_address = 0x00675E20
+size = 283
+
+[[units.character-19-initialize-state.relocations]]
+offset = 275
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Canonical EFZ.exe: Kanna Character19 vtable 0x00788D10 selects complete 283-byte owner at 0x00675E20; original call field 0x00675F33 resolves reviewed ?InitializeState@Secondary@@UAEXXZ to 0x0040EDF0"
+
+[units.character-19-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character19Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-19-reset-pose/Character19Lifecycle.obj"
+symbol = "?ResetPose@Character19@@UAEXXZ"
+target_address = 0x00675F40
+size = 58
+
+[[units.character-19-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Canonical EFZ.exe: Kanna Character19 vtable 0x00788CE0 selects complete 58-byte owner at 0x00675F40; original call field 0x00675F72 resolves reviewed ?ResetPose@Secondary@@UAEXXZ to 0x0040F110"
+
+[units.character-19-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character19Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-19-remove-local-effect/Character19Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character19@@UAEXF@Z"
+target_address = 0x00675F80
+size = 80
+
+[[units.character-19-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Canonical EFZ.exe: Kanna Character19 vtable 0x00788D08 selects complete 80-byte owner at 0x00675F80; original call field 0x00675FC6 resolves reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z to 0x00412E60"
+
+[units.character-19-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character19Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-19-slot01/Character19Lifecycle.obj"
+symbol = "?Slot01@Character19@@UAEXXZ"
+target_address = 0x00677E10
+size = 11
+
+[units.character-19-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character19Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-19-slot08/Character19Lifecycle.obj"
+symbol = "?Slot08@Character19@@UAEXXZ"
+target_address = 0x00677E20
+size = 11
+
+[units.character-19-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character19Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-19-emit-local-effect/Character19Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character19@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x00677E30
+size = 47
+
+[[units.character-19-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Canonical EFZ.exe: Kanna Character19 vtable 0x00788D04 selects complete 47-byte owner at 0x00677E30; original call field 0x00677E55 resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10"

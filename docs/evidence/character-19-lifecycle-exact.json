@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "authority": "Six complete canonical EFZ.exe Kanna Character19 lifecycle and virtual owners independently selected by original vtable at 0x00788CE0",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compile normal C++ in src/Character19Lifecycle.cpp. Independently verify six complete vtable owners, boundary lengths and four direct-call displacements resolving accepted Secondary methods. Strict selected-only oracle rebinds all four COFF relocations and compares every byte of six complete functions. No all-unit cold replay, relocation masking, incomplete-frame acceptance or runtime claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 283,
+      "matched_bytes": 283,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 275,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "Canonical EFZ.exe: Kanna Character19 vtable 0x00788D10 selects complete 283-byte owner at 0x00675E20; original call field 0x00675F33 resolves reviewed ?InitializeState@Secondary@@UAEXXZ to 0x0040EDF0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c1c0d7b8b10191a4ae3ac230524133b381dccf0e245e74a2aaa6e69817292737",
+      "target_extent_sha256": "c1c0d7b8b10191a4ae3ac230524133b381dccf0e245e74a2aaa6e69817292737",
+      "unit": "character-19-initialize-state",
+      "symbol": "?InitializeState@Character19@@UAEXXZ",
+      "target_address": "0x00675E20",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
+      "object_sha256": "f51826ef2b05d84e36a87036fe9947dbdb1582c248198217357c0c3488ab0d5a",
+      "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9e4145f19f1e95ac216abb1f554d64a034c56997d3cdbf2cca8687a18dac54b1",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "Canonical EFZ.exe: Kanna Character19 vtable 0x00788CE0 selects complete 58-byte owner at 0x00675F40; original call field 0x00675F72 resolves reviewed ?ResetPose@Secondary@@UAEXXZ to 0x0040F110",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e7b4ebf062c93e0072d70a3b3eb77bf8e656c7c1dc14c03ab017e8ddd77ecbdf",
+      "target_extent_sha256": "e7b4ebf062c93e0072d70a3b3eb77bf8e656c7c1dc14c03ab017e8ddd77ecbdf",
+      "unit": "character-19-reset-pose",
+      "symbol": "?ResetPose@Character19@@UAEXXZ",
+      "target_address": "0x00675F40",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
+      "object_sha256": "49d96162a75d90b3a6b2cc8598d7c7306dfad00a6d773a4d75868c9b81311d9e",
+      "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "668f4c8143b9c79aad251f99cd751695585b86080b6ae27793f19c51d99dfb01",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "Canonical EFZ.exe: Kanna Character19 vtable 0x00788D08 selects complete 80-byte owner at 0x00675F80; original call field 0x00675FC6 resolves reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z to 0x00412E60",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "718011899877fb7c73f118a2602fb7c059aa1d2d7a8786874723fed4924a651f",
+      "target_extent_sha256": "718011899877fb7c73f118a2602fb7c059aa1d2d7a8786874723fed4924a651f",
+      "unit": "character-19-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character19@@UAEXF@Z",
+      "target_address": "0x00675F80",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
+      "object_sha256": "72a3d15f1f13124ac29152b2e28a8aed27a92201a01e096bf6398fc01f6fac31",
+      "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "1ec081f07e45d3ef0470ec7dd4a6dd53294df23218761a7a77fccd08cada50bb",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "character-19-slot01",
+      "symbol": "?Slot01@Character19@@UAEXXZ",
+      "target_address": "0x00677E10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
+      "object_sha256": "0d2b4f199da7710c1807cece39350dc5628295470af57d9cf02dde232b23ffb6",
+      "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ff638c30beb3a7149e2113257b7921314a84fdc735ebc54197488200b2df6494",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "character-19-slot08",
+      "symbol": "?Slot08@Character19@@UAEXXZ",
+      "target_address": "0x00677E20",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
+      "object_sha256": "81815211773f2d2ae3793444f80ad0f8389408b6a643d00899478bfb500300fc",
+      "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "4d92d5775bd757cde491dc9a41d2290e31dd578eea1c770de854b756b88efd30",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "Canonical EFZ.exe: Kanna Character19 vtable 0x00788D04 selects complete 47-byte owner at 0x00677E30; original call field 0x00677E55 resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "cb48558037851b7cb52a0715185f3d0476bda628b4507c631ad96b0274de7cce",
+      "target_extent_sha256": "cb48558037851b7cb52a0715185f3d0476bda628b4507c631ad96b0274de7cce",
+      "unit": "character-19-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character19@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x00677E30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
+      "object_sha256": "81c8e6dd99d6f54c5ad2643c9d3f7b1570577593f312dc41763c29c1b55000a2",
+      "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a6bf46fe88e94b7945348902a083af2eaf31f4d96f79581342115084910bddf7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -432,3 +432,9 @@ address,end,size,status,evidence
 0x004D59D0,0x004D59DB,11,reviewed,docs/KNOWLEDGE_BASE.md#mizukab-character18-lifecycle-and-slot08
 0x004D59E0,0x004D5A93,179,reviewed,docs/KNOWLEDGE_BASE.md#mizukab-character18-lifecycle-and-slot08
 0x004D5AA0,0x004D5ACF,47,reviewed,docs/KNOWLEDGE_BASE.md#mizukab-character18-lifecycle-and-slot08
+0x00675E20,0x00675F3B,283,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact
+0x00675F40,0x00675F7A,58,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact
+0x00675F80,0x00675FD0,80,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact
+0x00677E10,0x00677E1B,11,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact
+0x00677E20,0x00677E2B,11,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact
+0x00677E30,0x00677E5F,47,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact

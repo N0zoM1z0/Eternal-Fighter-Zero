@@ -1640,6 +1640,37 @@ complete-function Exact still does not assert whole-game linkage or
 runtime equivalence; no unrelated sources or shared headers changed.
 
 
+### Kanna Character19 lifecycle: six complete Exact native functions
+
+Original `Character19` vtable at `0x00788CE0` identifies six new
+complete natural C++ functions in `src/Character19Lifecycle.cpp`.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` strict selected replay matched
+**490/490 native code bytes**, **four independently bound original
+call relocations**, and **zero differences**:
+
+| Owner | Native address | Exact bytes |
+| --- | --- | ---: |
+| InitializeState | `0x00675E20` | 283 |
+| ResetPose | `0x00675F40` | 58 |
+| RemoveLocalEffect | `0x00675F80` | 80 |
+| Slot01 | `0x00677E10` | 11 |
+| Slot08 | `0x00677E20` | 11 |
+| EmitLocalEffect | `0x00677E30` | 47 |
+
+InitializeState resets five character fields (including field3148=60),
+sets all ten collision-offset shorts, zeroes each of three 64-int
+arrays and calls reviewed `Secondary::InitializeState` at `0x40EDF0`.
+ResetPose clears three child integers then calls `0x40F110`.
+RemoveLocalEffect zeros the signed-short index in three child arrays
+and invokes base `0x412E60`. Slot01/Slot08 are authentically empty;
+EmitLocalEffect calls virtual RemoveLocalEffect on `effectWrite` then
+base EmitLocalEffect at `0x412B10`. Full original owner boundaries,
+original vtable addresses and four call operands were checked before
+registering these as Exact. Proof:
+`docs/evidence/character-19-lifecycle-exact.json`. No shared header
+or other accepted source was altered. Full game linkage, runtime and
+portability remain open.
+
 ### Kanna constructor: complete exact native code generation (2026-11-09)
 
 The authored selection-ID 19 constructor `Character19::Character19` at
