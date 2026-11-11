@@ -16,38 +16,42 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Native [0x00451850,0x0045DDCF): **50,559 / 62,693 original code bytes**,
-**13,869 x86 instructions**, SHA-256
-1780630d3483d240ac6feeb78210d3ebfb15a928481a3c8122749d6b4e301b94.
-Default and **117 live states** through 268 have been reviewed.
+Reviewed original code [0x00451850,0x0045E1A9): **51,545 / 62,693
+bytes**, **14,141 x86 instructions**, SHA-256
+8fa2492e029cfb1a19a6448ffb0c3612adc237c4eb7ca7c19f458af4f16b4e50.
+Original default and **119 live cases** through state270 now match.
 
-**State268 is an authored 932-byte command-selector state**, not
-synthetic switch-label scaffolding. First-tick ResetFrame precedes the
-frame7 command gates. It examines `recognizedCommand` (signed short
-at 0x262) values 1, 0, 10, 11, 20 with facing and `field3148` tier
-checks, then four original `buttonPulse` bytes at 0x18A–0x18D.
-Transitions reset pose, clear buffered buttons, select state IDs
-0xA3/0xA4, 250/251/260, 269/275, 274, 276/281, or directional
-277/278/271/280/268. The frame7 button3 fallback may rewrite
-frame to8 when field3148==9. The native code also preserves
-redundant tier>4 writes of 277/278, required for exact VC7.1 forms.
-Non-transition frames advance the animation and `field313c`, exiting
-to state0 through ResetFrame/ResetPose.
+New state269 (518 bytes) handles an airborne-impact attack: first-tick
+ResetFrame + one hit; gravity while airborne; at frames3–7 a landing
+condition resets frame, positionY and triggers vertical shake(3,0),
+global effect3 at facing*30, sound7, then frame8. Frame3 grants
+meter45 and velocity (1.4,-2.1) with gravity .045, while frame8
+loops back to7. Completion returns to state0 in the original
+FaceOpponent/ResetFrame/ResetPose order.
+
+New state270 (468 bytes) is a delayed advancing attack: it resets
+the frame, enables hitcount at frame5, requests sound20 and meter35 at
+frame3, advances own positionX by facing*40 over frames3–5 and later
+launches at (0.7,-1) with gravity .033 at frame9. Airborne landing
+changes to state13 after ResetPose; the last animation frame loops
+back one frame. Canonical original IEEE-754 constants and x87 order
+are checked, not just normalized opcodes.
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` checks **13,869 same-offset,
-same-width normalized instructions**, **1,297 internal branches**,
-**188 outbound targets**, **1,071 original-bound external COFF
-call/float references**, two local switch operands, and **117 original
-case entries**. Only the partial stack allocation differs (0x308
-vs original 0x2B4). This is NOT whole-function Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` compares **14,141 instruction
+positions/widths/forms**, **1,322 original internal branches**,
+**192 outbound targets**, **1,090 nonlocal original-bound COFF call/
+float references**, two local switch operands, and **119 selector
+case entries**. Candidate frame 0x314 differs from original 0x2B4;
+this is selected-prefix evidence, NOT whole-function Exact.
 
-## Next original state and remaining scope
+## Next state and unresolved work
 
-State269 starts **0x0045DDCF**. **13 missing IDs 269–281**, seven
-unreviewed 300–306 and the canonical stack/switch data/return are
-still open. Workbench has 124 of 137 live state labels, 117 verified.
-**12,134 remaining original code bytes**. Continue native-driven
-`probe_prefix.py --through 269 --context 12`; markers are not source.
-Do not run all-unit cold replay or claim runtime equivalence.
+Original state271 starts at **0x0045E1A9**. Remaining **11 absent
+states271–281**, seven unreviewed 300–306 and full original
+stack/switch data/return remain open. Of 137 original live IDs,
+126 authored case labels exist, 119 reviewed. **11,148 original code
+bytes** are still unmatched. Continue native disassembly and focused
+`probe_prefix.py --through 271 --context 12` only. Never count
+neutral case markers or run full all-unit cold replay.

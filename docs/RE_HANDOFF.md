@@ -7,28 +7,30 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki `Character10::Slot06` is a 62,693-byte unfinished boss.
-See [focused workbench](../workbench/nayuki-state/README.md).
-Selected original-bound opening now **50,559 bytes / 13,869 native
-instructions**, default and **117 verified states**. Audit checks
-**1,297 internal branches**, **188 outbound**, **1,071 external
-COFF call/float bindings** plus two local switch-address operands.
-Candidate frame 0x308 vs original 0x2B4: NOT whole-function Exact.
+Nayuki `Character10::Slot06` is a large unfinished 62,693-byte boss.
+Focused instructions: [workbench](../workbench/nayuki-state/README.md).
+Selected prefix now **51,545 original bytes / 14,141 instructions**,
+original default plus **119 reviewed states**. Strict check verifies
+**1,322 internal branches**, **192 outbound**, **1,090 nonlocal
+original-bound COFF relocations** and two local switch operands.
+Candidate stack 0x314 vs original 0x2B4: NOT whole Exact.
 
-New 932-byte state268 reconstructs actual command-history and button
-selection with directional/level-dependent transitions. Next original
-**state269 starts 0x0045DDCF**. Thirteen missing states269–281,
-seven unreviewed 300–306, complete stack, local DATA and return open.
-Only targeted checks, never full all-unit cold replay:
+States269 (518 bytes) and270 (468 bytes) are now authored and
+native-bound, adding airborne impact and dash/landing sequences.
+**Next state271 starts 0x0045E1A9**; remaining 11 missing IDs
+271–281 and seven existing unreviewed 300–306. Local DATA, return,
+full stack and relocation closure remain open.
+
+Only focused checks (no all-unit cold replay):
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 269 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 271 --context 12
     scripts/repo-python scripts/ci.py
 
-Keep all dirty edits (one writer), canonical target, compiler/Wine,
-Ghidra and accepted source. Commit as `gpt-web: xxx` without push.
+Keep all dirty edits and pinned original/VC7.1/Wine/Ghidra. Commit
+`gpt-web: xxx`, no push without authorization.
 
 ## Additional newly accepted leaf owners
 
