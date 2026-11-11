@@ -3991,6 +3991,59 @@ void Character10::Slot06()
         }
         return;
 
+    case 263: // Reviewed Nayuki 0x0045CC85: original airborne multi-hit rebound, missing from sibling source
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            horizontalDeceleration = 0.0;
+            remainingHitCount = (short)(field3148 + 6);
+        }
+        if (positionY < 0.0)
+            velocityY += gravity;
+        if (field000a > 15) {
+            velocityX -= 0.028;
+            if (velocityX < 0.0)
+                velocityX = 0.0;
+        }
+        if ((field000a == 6 || field000a == 11) && field000c == 0)
+            pendingContextSoundSlot = 20;
+        if (positionY + velocityX > 0.0 && field000a > 5 && field000a < 16) {
+            field000c = 0;
+            positionY = 0.0;
+            velocityY = 0.0;
+            field000a = 16;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            ++field313c;
+            if (field313c > 2) {
+                attackCollisionResult = 0;
+                field313c = 0;
+            }
+            if (field000a == 5) {
+                meter = (short)(meter + 45);
+                velocityX = 1.8;
+                velocityY = -1.7;
+                gravity = 0.035;
+                if (field3138 == 1) {
+                    velocityX = 0.6;
+                    velocityY = -3.2;
+                    gravity = 0.024;
+                }
+            }
+            if (field000a == 16)
+                field000a = 5;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                ResetFrame();
+                ResetPose();
+            }
+        }
+        return;
+
     case 300: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;
