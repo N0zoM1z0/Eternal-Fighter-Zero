@@ -7,34 +7,30 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki `Character10::Slot06` remains an incomplete 62,693-byte boss;
-see [focused workbench](../workbench/nayuki-state/README.md).
-Original-bound selected prefix **56,473 bytes / 15,484 instructions**,
-original default plus **128 reviewed cases**. Its checker verifies
-**1,456 internal branches**, **223 outbound targets**, **1,167
-nonlocal COFF call/float references** and two local switch operands.
-Incomplete candidate stack 0x328 vs original 0x2B4; NOT full Exact.
+Nayuki `Character10::Slot06` remains unfinished (62,693 original bytes).
+Selected original-bound prefix now **57,311 bytes / 15,714 original
+instructions**, default plus **131 verified states**. Strict check:
+**1,476 internal branches**, **226 outbound**, **1,177 canonical
+external COFF call/float references** and two local switch operands.
+Temporary compiler frame 0x330 vs original 0x2B4: NOT full Exact.
 
-State300 (598 bytes) has been replaced with canonical Nayuki C++
-from native: original global super/tint effect, local effect0x196 and
-tier-dependent frame5 timer. The selective probe was corrected to
-**sort real cases by canonical physical jump address**, because the
-native order after state278 is state300 at 0x45F293, then state279
-at 0x45F4E9. Numeric-order probe falsely inserted marker279 first.
-**Next missing state279 at 0x45F4E9**, then 280–281; 301–306
-existing bodies still need verification, native stack/switch DATA and
-return remain open. Original case data, not synthetic markers, is
-source authority.
+States279 (348 bytes), 280 (152 bytes), 281 (338 bytes) have been
+reconstructed and strict native-compared, completing **all 137
+original live case labels** in the natural source. The remaining
+unreviewed code is 301–306 (about 5,382 original bytes), plus full
+stack, original local tables, relocation and shared-return closure.
+Physical order is 278, 300, 279, 280, 281, 301; probe now preserves
+this original address order instead of numeric case order.
 
-Only focused tests (never all-unit cold replay):
+**Next state301 at 0x0045F82F.** Only focused tests:
 
     git status --short --branch
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 300 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 301 --context 12
     scripts/repo-python scripts/ci.py
 
-Preserve dirty edits, original target, pinned VC7.1/Wine, Ghidra,
-and accepted sources. Commit `gpt-web: xxx`, no push.
+Never run full all-unit cold replay. Preserve dirty work, original,
+VC7.1/Wine/Ghidra and accepted source. Commit `gpt-web: xxx`; no push.
 
 ## Additional newly accepted leaf owners
 

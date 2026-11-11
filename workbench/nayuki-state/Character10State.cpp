@@ -4841,6 +4841,81 @@ void Character10::Slot06()
         }
         return;
 
+    case 279: // Reviewed Nayuki 0x0045F4E9: tiered local strike with effect 0x191
+        if (field000a == 0 && field000c == 0)
+            ResetFrame();
+        if (field000a == 3 && field000c == 0) {
+            effect.type = 0x191;
+            effect.x = (double)((int)positionX + (int)facing * 14);
+            effect.y = (double)((int)positionY - 41);
+            effect.group = 0;
+            effect.field0028 = 1;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+            meter = (short)(meter + 45);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration - (field000a == 4) * field3148 * 3) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 280: // Reviewed Nayuki 0x0045F645: ground stance entry with early sound cue
+        ResetFrame();
+        if (field000a == 0 && field000c == 0)
+            pendingCharacterSoundSlot = 4;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a >= timing.animationFrameCount) {
+                ResetPose();
+                field0008 = 0;
+            }
+        }
+        return;
+
+    case 281: // Reviewed Nayuki 0x0045F6DD: forward dash momentum and finishing pose
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (field000a == 3 && field000c == 0) {
+            meter = (short)(meter + 25);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2)
+                attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1)
+                    field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     case 300: // Reviewed Nayuki original 0x0045F293: super entry, delayed local hit, tier timer
         if (field000a == 0 && field000c == 0) {
             velocityX = 0.0;

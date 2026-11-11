@@ -3140,40 +3140,37 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: 56,473-byte native selected boss prefix
+## Nayuki Character10 Slot06: 57,311-byte original-bound boss prefix
 
-Canonical vtable Slot06 at 0x00788288 -> [0x00451850,0x00460D35),
-62,693 bytes, SHA-256 4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-Adjacent 138-entry destination and 306-byte selector tables choose
-137 live and 169 default original IDs.
+Original vtable Slot06 at 0x00788288 -> [0x00451850,0x00460D35),
+62,693 bytes; SHA-256 4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
+Adjacent switch DATA includes 138 destinations and 306 selectors,
+137 live IDs. Natural source in `workbench/nayuki-state/Character10State.cpp`
+reproduces original [0x00451850,0x0045F82F), **57,311 bytes /
+15,714 x86 instructions**, prefix SHA-256
+35d168b00dbd58242387bcbfb4543f93dfd7e627e3aeae7e947768fc6c56e29c.
+Original default and **131 live states** are reviewed; all 137
+original live case labels now exist in authored C++.
 
-`workbench/nayuki-state/Character10State.cpp` reproduces canonical
-[0x00451850,0x0045F4E9), **56,473 bytes / 15,484 x86 instructions**,
-SHA-256 b463b5fbe7f5bbcc43f7be5a1495b83fe1f668544c76dc144e0e3805b05726f4.
-Original default and **128 live states** (through278 plus300) are
-native compared and reviewed.
+New state279 (348 bytes) implements the original type0x191 local
+strike/meter45 with tier-dependent frame4 duration. State280
+(152 bytes) calls ResetFrame, sound4 at entry, frame-step collision3,
+ResetPose then state0 completion. State281 (338 bytes) implements
+momentum-based positive dash slowdown by 0.03, frame3 meter25/hit1,
+context sound20 and state0/3 exit. Every original instruction width,
+branch and float/call relocation was checked for these cases.
 
-State300 is the original 598-byte special: frame0 zeroes X/Y speed
-and gravity, frames0–2 set horizontal shake(50,3), frame2 spends 1000
-meter, applies tint(0xB0,3) and emits global 0x44/palette0x13
-impact at integer (X, Y-40), sets hitstun120. Frame>=2 writes the
-short at offset0xF2 to10; frame4 emits local attack0x196 at
-X+facing*14, Y-41 with owner1/field0028=1 and sound0.
-Frame5's frameDuration may shorten by `field3148*6`.
-
-Critical original physical order: **case300 at 0x45F293 follows
-278 at 0x45EFF8, and precedes 279 at 0x45F4E9**. The selected probe
-now emits cases ordered by native target addresses, rather than by
-numeric IDs, avoiding false comparison failures from marker279.
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` check verifies **15,484 native
-instruction forms/offsets/widths**, apart from candidate frame
-0x328 vs original 0x2B4, **1,456 original internal branches**,
-**223 outbound targets**, **1,167 original-bound COFF call/float
-references**, two local switch operands and 128 selector cases.
-Not whole Exact: **6,220 remaining code bytes**, three missing states
-279–281, six unreviewed 301–306, canonical frame, switch DATA and
-shared return remain open. Next state279 begins 0x45F4E9.
-Never run full all-unit cold replay or count synthetic markers.
+Native physical case order is 278, 300, 279, 280, 281, 301.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` checker verifies **15,714 native
+instruction offsets/forms/widths** aside from incomplete stack frame
+0x330 vs native 0x2B4, **1,476 internal original branches**, **226
+outbound**, **1,177 original-bound nonlocal COFF call/float references**,
+two switch operands, and 131 original case destinations.
+NOT full Exact: **5,382 remaining original code bytes** include
+unreviewed case bodies301–306; original stack size, switch DATA,
+complete relocations and shared return are open. Next state301 at
+0x0045F82F. Use original disassembly plus focused native check, not
+all-unit cold replay.
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 

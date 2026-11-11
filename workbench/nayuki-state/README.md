@@ -16,46 +16,43 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Original [0x00451850,0x0045F4E9): **56,473 / 62,693 native code bytes**,
-**15,484 x86 instructions**, SHA-256
-`b463b5fbe7f5bbcc43f7be5a1495b83fe1f668544c76dc144e0e3805b05726f4`.
-The original default, states through278, and **state300** are now
-reviewed: **128 live states** total.
+Original [0x00451850,0x0045F82F): **57,311 / 62,693 original code
+bytes**, **15,714 native x86 instructions**, SHA-256
+`35d168b00dbd58242387bcbfb4543f93dfd7e627e3aeae7e947768fc6c56e29c`.
+Default and **131 original live states** are now reviewed.
+**All 137 original case labels are present in natural source.**
 
-**State300 (598 bytes)** was reconstructed against its native owner,
-not accepted from inherited Makoto source. At frame0/tick0 it zeros
-velocityX, velocityY and gravity; before frame3 it requests horizontal
-shake(50,3). At frame2/tick0 it sets hitstun120, spends 1000 meter,
-sets tint(0xB0,3), and emits global type0x44/palette0x13 at integer
-X and Y-40. Frames >=2 set the 16-bit input lock at offset 0xF2 to
-10. At frame4/tick0 it emits local type0x196 at integer X+facing*14,
-Y-41, with owner=1, group/layer0, field0028=1, facing flag, and
-character sound0. The timer advances on `frameDuration`, or at
-frame5/tick `frameDuration - field3148 * 6`, and exits to state0.
-This code was compared at every original instruction position,
-relative jump and float/call operand.
+The last three formerly missing case bodies have been reconstructed:
+state279 (348 bytes) is a tiered local strike using effect0x191,
+frame3 meter+45 and the original frame4 `field3148*3` acceleration.
+State280 (152 bytes) calls ResetFrame each tick, requests character
+sound4 at entry, sets `attackCollisionResult=3` on frame step and
+ends by ResetPose then state0. State281 (338 bytes) is a positive
+dash-momentum decay: when dashMomentumFlag=0 zero both velocities,
+otherwise subtract 0.03 from positive horizontal speed or clear flag;
+frame3 gives meter+25, sound20 and one hit, finishing at state0 or
+state3 according to inputY after FaceOpponent/ResetPose.
 
-The **physical original case order differs from numeric case order**:
-277 (0x45ED5D), 278 (0x45EFF8), **300 (0x45F293)**,
-279 (0x45F4E9). `probe_prefix.py` now orders cases by original jump
-addresses from the 138-entry canonical table, not by numeric IDs.
-Previously frozen 55,875-byte proof remains valid after this fix.
+Original physical code order after state278 remains:
+**300 (0x45F293) -> 279 (0x45F4E9) -> 280 (0x45F645) ->
+281 (0x45F6DD) -> 301 (0x45F82F)**. The selective probe uses the
+canonical switch table addresses to preserve this order.
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` matches **15,484 original native
-instruction offsets, widths and normalized forms**, except the
-provisional stack size (0x328 vs original 0x2B4). Original-bound
-checks verify **1,456 internal branches**, **223 outbound targets**,
-**1,167 nonlocal COFF call/IEEE-754 references**, two local switch
-operands and **128 original case entries**. This is not full Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` verifies **15,714 native
+instruction positions/widths/normalized forms** except partial stack
+allocation (0x330 versus original 0x2B4), **1,476 original internal
+branches**, **226 outbound targets**, **1,177 nonlocal original-bound
+COFF call/float references**, two original switch operands and **131
+original case destinations**. This is NOT whole-function Exact.
 
-## Remaining source and next target
+## Remaining owner work
 
-Next original state279 starts at **0x0045F4E9**. Only **three case
-bodies 279–281** are missing, and six existing 301–306 bodies still
-lack whole-function verification. **6,220 original code bytes**,
-full native stack, adjacent switch DATA, remaining relocations and
-shared return remain unresolved. Use focused original disassembly
-and `probe_prefix.py --through 300 --context 12`; marker cases
-are UNACCEPTED, and do not perform an all-unit cold replay.
+The original **state301 at 0x0045F82F** starts the six unreviewed
+large cases 301–306, with known vtable selector entries already in the
+source. **5,382 original code bytes**, native stack, original
+552/306-byte switch DATA, relocation closure and shared return are
+not verified. Next targeted check is original disassembly and
+`probe_prefix.py --through 301 --context 12`. Do not claim
+whole-function Exact or run full all-unit cold replay.
