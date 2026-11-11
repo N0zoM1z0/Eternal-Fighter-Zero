@@ -2072,6 +2072,19 @@ register allocation still differs in the original state250 phase,
 so this is native-bound structural evidence, **NOT full Exact**;
 strict continuous Kano prefix remains **40,336 bytes**.
 
+#### Kano state300 native-bound super startup island
+
+New natural C++ reconstructs the full **1,168 original code bytes /
+305 x86 instruction positions** of Kano state300 at
+`[0x00650140,0x006505D0)`. It includes authentic frame13 freeze,
+1,000-meter cost, SetTint and effect0x44, frame3 paired local effects,
+frame16 0x1C7 and tiered animation rewinds. Scoped
+`check_case300_shape.py` pins all **305 instruction widths/offsets
+and register-abstracted forms**, **27 original internal plus 2
+shared-return branches**, **13 true COFF call/IEEE-754 operands** and
+canonical SHA. This is a separate original-bound **structural island,
+NOT complete Exact** while the strict Boss prefix remains 40,336 bytes.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

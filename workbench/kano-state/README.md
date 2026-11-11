@@ -82,6 +82,30 @@ These island checks do not grow the 40,336-byte strict contiguous
 prefix or register any complete owner. Never count later diagnostic
 neutral marker states as original code.
 
+### Experimental case300 — 1,168-byte original super and shockwave
+
+Kano state300 `[0x00650140,0x006505D0)` has fully authored natural
+C++ covering **1,168 original code bytes / 305 x86 instructions**.
+Frame13 freezes hitstun120, spends 1,000 meter, calls SetTint,
+emits context effect0x44/palette0x13 at integer Y−100 and restores
+the timing frame. Frame0/7 reset, frame3–6 charge+100, full-charge
+10000 early loop to frame8, frame3 dual effects0x196/0x197,
+frame16 sound29 and guarded effect0x1C7, frame7/18 animation
+rewinds and state0 return are all authored in their original order.
+
+Scoped original-bound checker:
+
+    scripts/repo-python workbench/kano-state/check_case300_shape.py
+
+It pins native SHA-256
+`9773fc66dde7c1b53a78b118c26031eb45a4d7e4f88691fed2774fa61b07367e`,
+**305 original instruction positions/widths/register-abstracted
+forms**, **27 internal and 2 shared-return original jumps**, and
+**13 independently original-bound COFF call/IEEE-754 operands**.
+No ASM/byte wrapper was used. This remains a **structural island,
+NOT full owner Exact**: original state250's concrete-register
+allocation still blocks the 40,336-byte strict continuous prefix.
+
 ### Experimental case270 — 991-byte resource-backed airborne pulse
 
 Original Kano state270 `[0x0064FD61,0x00650140)` contains **991

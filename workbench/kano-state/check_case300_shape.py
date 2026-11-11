@@ -71,6 +71,7 @@ def main():
         else:
             assert BASE+orig_target==0x006536B1,(a,hex(BASE+orig_target))
             outbound+=1
+    assert (internal,outbound)==(27,2),(internal,outbound)
     selected=[r for r in rels if lo<=r['offset']<hi]
     assert len(selected)==len(REFS)==13
     for r,(off,typ,symbol,dst) in zip(selected,REFS):

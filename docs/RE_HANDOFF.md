@@ -232,6 +232,15 @@ effects, and animation loop. **NOT full Exact**: original case250
 register-phase difference still blocks the 40,336-byte continuous
 prefix. This is real authored C++, not neutral marker filler.
 
+Kano state300 now has a **1,168-byte / 305-instruction original-bound
+super-attack structural island**. Its C++ restores frame13 tint,
+hitstun and meter spend, 0x44 context effect, frame3 dual effects,
+frame16 special pulse and independent frame rewind conditions.
+The dedicated `check_case300_shape.py` confirms **27 internal and
+2 shared-return native branches** and **13 bound call/float operands**.
+This is NOT full Exact because original state250's register mismatch
+remains; strict contiguous prefix stays at 40,336 bytes.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++
