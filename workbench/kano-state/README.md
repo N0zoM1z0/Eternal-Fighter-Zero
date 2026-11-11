@@ -7,35 +7,33 @@
 `[0x006538D9,0x00653A15)` (316 bytes). Original selector holds
 **136 live cases and 180 default IDs**.
 
-The natural C++ `Character20State.cpp` now contains the original
-default and **73 original-bound reviewed live cases**: 1–9,
-13–16,47,50–77,81–87,96–99,150–158 and 161–171.
-Strict selected native prefix `[0x006429C0,0x00649954)` is **28,564
-machine-code bytes / 7,833 original x86 instructions**, SHA-256
-`f9066304a2f788c3d7c8bdf8839c5a8a255f615b48e8ba190e47f0c4bcc2c66c`.
-Next original case178 starts at **`0x00649954`** (179 is not live).
+Natural C++ at `Character20State.cpp` now contains the original
+default and **75 native-reviewed live cases**: 1–9,13–16,47,
+50–77,81–87,96–99,150–158,161–171,178,180.
+The strict selected original `[0x006429C0,0x00649BF2)` spans
+**29,234 code bytes / 8,023 original x86 instructions**, SHA-256
+`5d52f335247c236154b01bf0e8e4b08c0dd62fcc00fcb13650fbe866ead6dc68`.
+Next live state200 starts at **`0x00649BF2`**. Original state179 is
+not live and naturally dispatches to the default case.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected native checker verifies
-**7,833 original instruction offsets, lengths and normalized forms**,
-**700 original internal jumps**, **87 outbound targets**, **714
-nonlocal original-bound COFF call/IEEE-754 operands** and both local
-switch-table references. Partial candidate stack0x11C differs from
-canonical0x4A4 but uses the same six-byte instruction width, so no
-position shift or fake padding is allowed. This is a partial prefix,
-NOT complete function Exact; **63 native cases remain unreviewed**.
-Only the original-bound cases are credited: later temporary diagnostic
-neutral markers never count as restored source.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` scoped original comparison
+verifies **8,023 instruction positions/widths/normalized forms**,
+**716 canonical internal and 91 outbound jump targets**, **728
+independently native-bound nonlocal COFF call/IEEE-754 references**
+and both original local switch pointers. Partial candidate stack0x11C
+still differs from original0x4A4 (equal 6-byte instruction width,
+no position normalization). This is a **selected-prefix audit**, NOT
+whole-function Exact. The remaining **61 original live cases** are
+not verified; the probe's neutral markers have no acceptance credit.
 
-Newly reviewed 170 and171 together contribute 957 native bytes.
-State170 stores X/Y velocity *100 in child integer caches, tests zero
-gravity by x87 comparison **before** clearing motion, and restores
-velocity with 0.01 scaling after hitstun expires. Ground contact
-moves to state169. State171 instead zeros motion before conditional
-combo resource scaling, emits effect1 with sound18, and on completed
-frames restores cached velocity before checking **gravity==0.0**
-through native x87 ordering, setting gravity0.02 only when zero.
-The subtle variable write order and conditional comparison are required
-for exact original compiler instruction sequence.
+New state178 (300 bytes) restores the original ground dash X−0.03
+friction, clamp/clear-dash behavior, directional jump cancel into
+4/5/6, and final state0 reset (not sibling state7). State180 (370
+bytes) restores `StartTrail(2)`, gravity only while airborne, landing
+skip to frame9, sound9, frame2 initial launch (−0.5,−1.0) with
+gravity0.028, frame9→7 animation loop and original pose-reset/state0
+exit order. The original IEEE-754 operand references and all control
+flow instructions matched the compiled source. State179 is default.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -52,11 +50,11 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
-    scripts/repo-python workbench/kano-state/probe_prefix.py --through 178 --context 12
+    scripts/repo-python workbench/kano-state/probe_prefix.py --through 200 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case178 `0x00649954`**. Original
-0x4A4 frame, 63 unverified native cases, local switch DATA,
+Next work begins at **Kano case200 `0x00649BF2`**. Original
+0x4A4 frame, 61 unverified native cases, local switch DATA,
 shared return and complete relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.

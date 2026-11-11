@@ -1770,31 +1770,29 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano `Character20::Slot06`, vtable `0x00788C90`, is original native
-`[0x006429C0,0x006536B5)`, 68,853 bytes, plus 137-address/316-byte
-local switch selector tables (136 live / 180 default cases).
-The active C++ at `workbench/kano-state/Character20State.cpp` matches
-strict selected original `[0x006429C0,0x00649954)` with **28,564
-native code bytes / 7,833 instructions**, SHA-256
-`f9066304a2f788c3d7c8bdf8839c5a8a255f615b48e8ba190e47f0c4bcc2c66c`.
-The default and **73 reviewed live cases** through171 are authored.
+Kano original `Character20::Slot06` vtable at `0x00788C90` selects
+`[0x006429C0,0x006536B5)`, **68,853 native code bytes**, with 137
+local jump addresses and 316 selector bytes (136 live,180 defaults).
+Authoring workbench `workbench/kano-state/Character20State.cpp`
+currently matches native `[0x006429C0,0x00649BF2)`, **29,234 code
+bytes / 8,023 instructions**, prefix SHA-256
+`5d52f335247c236154b01bf0e8e4b08c0dd62fcc00fcb13650fbe866ead6dc68`.
+Original default + **75 native-reviewed cases** through180.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` scope validates **7,833 original
-x86 positions/widths/forms**, **700 original internal branches and
-87 outbound targets**, **714 original-bound nonlocal COFF call/float
-references**, and two local switch-table pointers. Candidate stack
-0x11C differs from native0x4A4 but both use six-byte allocations,
-so there is no position shift. **Not full Exact:** 63 remaining
-original state bodies, full native stack, switch DATA and common
-return are still open. Generated neutral probe markers unaccepted.
+Selected VC7.1 `/Od /G6 /MT /Gy /W3` auditor matches **8,023
+original x86 instruction offsets/widths/forms**, **716 internal
+and 91 outbound original jumps**, **728 exact original-bound nonlocal
+COFF calls/floats**, two switch pointers. Candidate frame0x11C vs
+original0x4A4 have equal 6-byte instruction width but different
+stack allocation; **NOT complete original Exact**. The other
+61 cases, local DATA, full stack and common return are open.
 
-State170 stores velocity in *100 integer caches and conditionally
-sets gravity0.035 before clearing X/Y; state171 independently uses
-combo scaling, effect1, cached velocity restore and the original
-x87 zero-gravity conditional to set0.02. Both original native code
-bodies match at every instruction position and bound operand.
-Next live state178 is `0x00649954` (179 is default). Only selected
-checks, no all-unit cold replay or false complete owner claim.
+Original state178 restores dash friction−0.03, clears momentum on
+clamp, jump cancels, and state0 exit; original state180 restores
+trailing aerial landing, frame2 launch (−0.5,−1), gravity0.028,
+frame9→7 loop and original reset order. State179 is a default ID.
+Next live case200 `0x00649BF2`; marker source is UNACCEPTED and only
+focused native comparison was used (no all-unit cold replay).
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 

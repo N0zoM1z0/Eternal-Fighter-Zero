@@ -2525,5 +2525,72 @@ void Character20::Slot06()
         }
         return;
 
+    case 178: // Native-reviewed Kano original 0x005EF5E8: dash slide and jump cancel
+        velocityX -= 0.03;
+        velocityX = velocityX;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                return;
+            }
+        }
+        return;
+
+    case 180: // Native-reviewed Kano original 0x005EF70A: trailing aerial landing
+        if (field000a == 0 && field000c == 0) {
+            StartTrail(2);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (positionY < 0.0) {
+            velocityY += gravity;
+        }
+        if (positionY + velocityY > 0.0 && field000a < 9) {
+            ResetFrame();
+            positionY = 0.0;
+            field000c = 0;
+            field000a = 9;
+            pendingContextSoundSlot = 9;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                velocityX = -0.5;
+                velocityY = -1.0;
+                gravity = 0.028;
+            }
+            if (field000a == 9) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                ResetPose();
+                field0008 = 0;
+            }
+        }
+        return;
+
     }
 }
