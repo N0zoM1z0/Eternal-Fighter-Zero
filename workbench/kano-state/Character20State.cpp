@@ -1138,5 +1138,163 @@ void Character20::Slot06()
         }
         return;
 
+    case 70: // Native-reviewed Kano original wall/ground recovery 0x005EB881: wall recovery with global effect
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            meter = (short)(meter + 30);
+            ++field3138;
+            airActionLockFrames = (short)(airActionLockFrames + 120);
+            velocityX = 0.5;
+            velocityY = -2.5;
+            gravity = 0.025;
+            pendingContextSoundSlot = 31;
+
+            effect.type = 0;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 71: // Native-reviewed Kano original wall/ground recovery 0x005EBA61: high-gravity direct-speed air reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.072;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 72: // Native-reviewed Kano original wall/ground recovery 0x005EBC0C: grounded recoil with stage pushback
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        dashMomentumFlag = 0;
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 73: // Native-reviewed Kano original wall/ground recovery 0x005EBD61: separate grounded recoil continuation
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        dashMomentumFlag = 0;
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 74: // Native-reviewed Kano original wall/ground recovery 0x005EBEB6: grounded recoil to crouch
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        dashMomentumFlag = 0;
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

@@ -33,23 +33,23 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano original `Character20::Slot06` is **68,853 native code bytes**,
-actively reconstructed in `workbench/kano-state/Character20State.cpp`.
-The selected original-bound opening is now **13,041 bytes /
-3,617 original x86 instructions**, default and **34 native-reviewed
-states** (1–9, 13–16, 47, 50–69). Its checker validates **339
-original internal / 41 outbound jump targets**, **328 exact original-
-bound nonlocal COFF call/float references**, and two local switch
-address operands. These are substantial guarded/airborne recovery
-branches, not copied placeholders. New 62–69 cover scaled or direct
-knockback, conditional wall collision, resource loss and air landing.
+Original Kano `Character20::Slot06` has **68,853 bytes** of native
+code; its active workbench is `workbench/kano-state/Character20State.cpp`.
+The selected original-bound opening now matches **14,947 bytes /
+4,125 x86 instructions**, default plus **39 live cases** (1–9,
+13–16, 47, 50–74). The independent selected checker verifies **387
+original internal branches**, **46 outbound targets**, **376
+original-bound COFF call/float operands**, and the two native
+switch table pointers. Kano's wall, airborne and ground recoil
+cases62–74 are now substantive authored C++, not marker placeholders.
 
-The incomplete candidate frame is 0x7C vs canonical 0x4A4: only
-the three-byte instruction size shift is normalized. **102 remaining
-native states**, complete original stack, adjacent switch DATA,
-remaining relocations and shared return are open. **NOT full Exact.**
-Next original case70 at **0x00645CB1**. Do not run full cold replay,
-and never give credit to generated diagnostic marker cases.
+The current compiler candidate reserves `0x90` local stack while the
+original reserves `0x4A4`; both use six-byte instructions, so no
+position normalization is used for this checkpoint. **97 remaining
+case bodies**, original full stack, adjacent jump table, remaining
+relocations and common return are OPEN. This is **NOT full Exact**.
+Next case75 at **0x00646423**; see `workbench/kano-state/README.md`.
+Use focused selected checks only, not cold replay of all units.
 
 ## Additional newly accepted leaf owners
 

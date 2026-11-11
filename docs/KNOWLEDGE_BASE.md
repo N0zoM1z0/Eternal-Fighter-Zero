@@ -1729,31 +1729,30 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano `Character20::Slot06` vtable slot6 `0x00788C90` selects the
-**68,853-byte** native function `[0x006429C0,0x006536B5)`, followed
-by a 137-entry jump-address table and 316-byte selector table
-(136 live / 180 default IDs). Active natural C++ in
-`workbench/kano-state/Character20State.cpp` reconstructs original
-`[0x006429C0,0x00645CB1)`, **13,041 bytes / 3,617 native x86
-instructions**, SHA-256
-`bf77cec9fa8cefb8e2eb0c62943e4906983342ba2ac6983a2ef3e37076385a5b`.
-Reviewed original default and **34 real cases**: 1–9, 13–16,
-47, 50–69. All selected native instruction positions, widths,
-normalized forms, **339 internal and 41 outbound branch targets**,
-**328 independently original-bound nonlocal COFF calls/floats** and
-2 local switch operands are checked. The only acknowledged difference
-is a three-byte provisional stack allocation instruction shift:
-partial candidate 0x7C vs native 0x4A4. This is NOT full Exact;
-neutral marker cases are never accepted.
+Kano `Character20::Slot06` at vtable slot6 `0x00788C90` selects
+original `[0x006429C0,0x006536B5)` (**68,853 code bytes**), followed
+by 137 switch destinations and 316 selector bytes (136 live IDs,
+180 default). `workbench/kano-state/Character20State.cpp` authors
+original default plus **39 native-reviewed live cases**: 1–9,
+13–16, 47 and 50–74. Selected prefix `[0x006429C0,0x00646423)`
+contains **14,947 original code bytes / 4,125 instructions**, SHA-256
+`23def50e36aa07c82059a6c0f06b728b9b03e3eb47921c97f53614f49679deac`.
 
-Cases62–67 are original airborne recoil and collision reactions:
-conditional cost0.8, initial meter30, scaling knockbackY by0.75
-or direct, gravity0.032, wall cancellation into state70, speed
-clamps (-2/-0.5 or -4/-0.5), landing state97/98. Cases68/69
-use cost1.5 and meter3 with wall cancellation in case68 only.
-Next original case70 starts 0x00645CB1. Still **102 unimplemented
-case bodies**, full stack, switch tables, relocations and common
-return open. Scope all replay to selected checker; never all-unit cold.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected comparison verifies all
+**4,125 native instruction offsets, forms and widths**, **387
+internal / 46 outbound canonical branch targets**, **376 independently
+original-bound nonlocal COFF call/IEEE-754 operands**, and two
+switch-address references. Candidate frame0x90 and original0x4A4
+use the same six-byte allocation instruction: no offset adjustment
+is needed, but full frame remains unmatched. This is NOT whole Exact;
+97 unimplemented case bodies use only UNACCEPTED neutral markers.
+
+Kano's reviewed cases50–61 cover tiered ground recoil and combo-scaled
+pushback; cases62–69 cover airborne knockback and optional wall
+collisions; cases70–74 cover impact effect, wall/ground recovery,
+falling gravity and stage-edge knockback. Next case75 begins
+**0x00646423**. Original stack, switch tables, remaining relocations
+and shared return remain open. No all-unit cold replay.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
