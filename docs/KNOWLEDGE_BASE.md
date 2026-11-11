@@ -2239,32 +2239,35 @@ linkage or actual graphics output parity.
 
 ### Character04 Slot06: original-bound 59,143-byte state boss workbench
 
-The new large-state workbench is original `Character04::Slot06` at
-native vtable slot `0x00788B94`: code
-`[0x00607930,0x00616037)` of **59,143 bytes**, followed by
-139 four-byte switch destinations and 325 selector bytes. The
-original selector has 138 live IDs and 187 default IDs.
+This second actively reconstructed large owner is original
+`Character04::Slot06` at native vtable `0x00788B94`, code
+`[0x00607930,0x00616037)` (**59,143 bytes**) plus adjacent
+139-entry switch destination table and 325 selectors. Native
+selector holds 138 live IDs and 187 defaults.
 
-Real natural C++ in `workbench/character04-state/Character04State.cpp`
-now covers the original **default plus 13 live states 1–9, 13–16**.
-The added states13–16 recover directional grounded wakeup and
-three independently verified aerial launch/landing transitions,
-including original x87 geometry, 0.035 gravity, -2.7 vertical
-velocity, dash-carry horizontal 0.4/1.1 and conditional landing.
-Original-bound selected checker `check_prefix.py` proves
-**3,016 continuous original code bytes / 867 x86 instructions**,
-range `[0x00607930,0x006084F8)` and native SHA-256
-`62a22026a19a105297dd8e801f7bb0a31746becbe579c507257b3137064dac58`:
-**67 original internal + 15 original shared-return branch targets**,
-**65 original-bound COFF call/float operands** plus two native
-selector/table address pointers. Every other native opcode byte
-matches; only the original-bound relocation fields, temporary
-three-byte shorter stack frame and incomplete shared-return
-JMP distance are excluded from byte equality. This is strictly
-**selected-prefix evidence, NOT whole-function Exact**; 125 real
-cases, the original 0x2E8 stack, local table and return remain OPEN.
-**Next original state47 begins at `0x006084F8`.** No full cold replay
-or synthetic marker acceptance. See `workbench/character04-state/README.md`.
+Natural C++ in `workbench/character04-state/Character04State.cpp`
+now implements **original default plus 19 real live cases**:
+1–9, 13–16, 47 and 50–54. The latter additions implement
+original low aerial strike and five nontrivial grounded recoil
+states with native meter/resource handling, pushback, wall-clamp
+floating comparison and state0/3 recovery. Unlike Makoto, the
+Character04 recoil states do *not* clear dash momentum.
+
+Strict independent `check_prefix.py` now verifies the **5,755-byte
+original continuous prefix** `[0x00607930,0x00608FAB)`, canonical
+SHA-256 `85eb4668366cea69cd6c47b32c22bc2725fe84fa4193e3cafa166345807ad9f5`:
+**1,599 native x86 instruction locations/widths/forms, 139 original
+internal and 21 shared-return jump destinations, 162 independently
+original-bound COFF call/float operands and two authentic native
+selector/table pointers**. All non-exceptional bytes match:
+only the three-byte temporary stack-frame short allocation, the
+outbound original shared-return JMP displacement and original-bound
+four-byte COFF fields are excluded. This is **selected prefix, NOT
+full-function Exact**. The other 119 native case IDs, original
+`0x2E8` stack, full local table and return remain unresolved.
+**Next live state55 begins at `0x00608FAB`.** No all-unit cold replay
+or acceptance of diagnostic marker bodies. Detailed evidence:
+`workbench/character04-state/README.md`.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

@@ -531,21 +531,25 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 
 ### Active second large boss: Character04::Slot06 selected prefix (NOT Exact)
 
-`workbench/character04-state/Character04State.cpp` now reconstructs
-original default and **13 real native states** (1–9,13–16) from the
-**59,143-byte Character04::Slot06 boss**, native vtable
-`0x00788B94`. Focused `check_prefix.py` independently confirms
-**3,016 original-bound selected bytes / 867 x86 instruction positions**,
-**67 internal / 15 shared-return original branches**, **65 original
-native COFF call/IEEE-754 sites** and 2 native switch-address
-pointers. Only original-bound relocation bytes, the incomplete
-three-byte stack allocation difference and shared-return distance
-are excluded; all other selected bytes match. The full owner uses
-`0x2E8` stack and includes 139 native destination pointers and
-325 selectors (138 live, 187 defaults). **Next real case47
-starts at `0x006084F8`**; 125 real cases and full switch/return
-closure remain OPEN. This is not full Exact, and temporary marker
-bodies are not accepted reconstruction. No all-unit cold replay.
+`workbench/character04-state/Character04State.cpp` has native default
+plus **19 original live cases** (1–9,13–16,47,50–54) of the
+**59,143-byte Character04::Slot06** selected by vtable slot
+`0x00788B94`. It includes original low aerial strike and five
+recoil/wall-pushback tiers, which differ from the related Makoto
+owner by retaining dash momentum. The scoped
+`workbench/character04-state/check_prefix.py` verifies
+**5,755 continuous original code bytes / 1,599 native instructions**,
+**139 native internal and 21 shared-return branches**, **162 exact
+original-bound call/IEEE-754 references** and two original local
+switch address pointers. All remaining reviewed bytes match except
+outbound-return displacement, independently native-bound relocation
+operands, and the provisional three-byte shorter stack allocation.
+The full owner uses original `0x2E8` frame, 139 adjacent DWORD
+switch targets and 325 selector bytes (138 live/187 defaults).
+**Next real case55 begins at `0x00608FAB`**; 119 real native cases
+and full stack/table/return still OPEN. Selected proof ONLY, not
+whole Exact; synthetic marker cases have no credit. No full cold
+all-unit replay or remote push.
 
 ## Tools and checks
 

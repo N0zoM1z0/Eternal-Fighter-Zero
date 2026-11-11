@@ -303,5 +303,217 @@ void Character04::Slot06()
         return;
 
 
+    case 47: // Native 0x006084F8: aerial knockback with early-ground impact
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            gravity = 0.035;
+        }
+        velocityY += gravity;
+        if (positionY + velocityY > 0.0 && field000a < 2) {
+            field000c = 0;
+            field000a = 2;
+            pendingContextSoundSlot = 7;
+            positionY = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                --field000a;
+            }
+        }
+        return;
+
+    case 50: // Native 0x00608628: grounded recoil and wall pushback
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 10);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.1;
+            if (field0120 != 0) {
+                field0118 -= 10.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            // Preserve the original signed ground-height test even though
+            // positionY has just been set to zero in this branch.
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 51: // Native 0x0060880F: second grounded recoil tier
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 15);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.5;
+            if (field0120 != 0) {
+                field0118 -= 20.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            // Preserve the original signed ground-height test even though
+            // positionY has just been set to zero in this branch.
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 52: // Native 0x006089F6: original grounded recoil tier
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 20);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.8;
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            // Preserve the original signed ground-height test even though
+            // positionY has just been set to zero in this branch.
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 53: // Native 0x00608BDD: original grounded recoil tier
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 10);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.1;
+            if (field0120 != 0) {
+                field0118 -= 10.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 54: // Native 0x00608DC4: original grounded recoil tier
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 15);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.5;
+            if (field0120 != 0) {
+                field0118 -= 20.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+
     }
 }
