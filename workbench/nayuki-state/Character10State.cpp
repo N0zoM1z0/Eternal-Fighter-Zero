@@ -4095,6 +4095,55 @@ void Character10::Slot06()
         }
         return;
 
+    case 265: // Reviewed Nayuki 0x0045D1CB: reverse-motion timed special with tier-gated repeats
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            horizontalDeceleration = 0.0;
+            remainingHitCount = 2;
+        }
+        if (field000a > 9) {
+            velocityX += 0.08;
+            if (velocityX > 0.0)
+                velocityX = 0.0;
+        }
+        if ((field000a == 4 || field000a == 6) && field000c == 0)
+            pendingContextSoundSlot = 21;
+        ++field000c;
+        if (field000c >= 24 && field3148 > 3 && field000a == 11) {
+            ++field000a;
+            field000c = 0;
+            attackCollisionResult = 0;
+        }
+        if (field000c >= timing.frameDuration ||
+            (field000c >= timing.frameDuration - field3148 * 3 && field000a == 11) ||
+            (field000c >= timing.frameDuration - 3 && field000a == 1 && field3148 > 2) ||
+            (field000c >= timing.frameDuration - 3 && field000a == 2 && field3148 > 4)) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 11)
+                attackCollisionResult = 0;
+            if (field000a == 4) {
+                meter = (short)(meter + 45);
+                velocityX = -2.2;
+            }
+            if (field000a == 7 && field313c < 2) {
+                field000a = 4;
+                ++field313c;
+            }
+            if (field000a == 7 && field3138 == 1 && field313c < 4) {
+                field000a = 4;
+                ++field313c;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                ResetFrame();
+                ResetPose();
+                return;
+            }
+        }
+        return;
+
     case 300: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;

@@ -7,34 +7,34 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki `Character10::Slot06` remains an incomplete **62,693-byte**
-state boss. Focused handoff:
-[`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
-Selected original-bound prefix **47,483 bytes / 13,042 instructions**,
-original default and **113 reviewed live states**. Checker verifies
-**1,199 internal branches**, **169 canonical outbound targets**,
-**1,024 nonlocal COFF call/float bindings** and two switch operands.
-Compiler candidate frame 0x2F8 vs real 0x2B4; NOT whole Exact.
+Nayuki `Character10::Slot06` remains an incomplete 62,693-byte boss.
+See [focused workbench instructions](../workbench/nayuki-state/README.md).
+Strict original-bound selected prefix is **48,180 bytes / 13,233
+instructions**, original default and **114 reviewed live states**.
+Checks cover **1,226 original internal branches**, **171 outbound
+targets**, **1,032 canonical nonlocal call/float COFF bindings**, and
+two local switch operands. Incomplete candidate frame 0x2F8 vs
+native 0x2B4, full Exact NOT proven.
 
-Previously missing states263 (629 bytes) and264 (721 bytes) now have
-complete natural C++ state paths, each native-matched. State264
-restores tiered early timer gates, frame7 loops, speed 2.2/3.4 and
-horizontal damping 0.08; original-bound float references checked.
-**Next state265 starts at 0x0045D1CB.** Remaining **17 missing IDs
-265–281** plus seven existing unreviewed 300–306 bodies. Full stack,
-selector DATA and common return remain open. Marker bodies are NOT
-original source.
+Original missing states263–265 are now fully reconstructed C++ with
+complete selected native opcode, branch and relocation matches. State265
+is the reverse-velocity (frame4 -2.2) paired with original state264;
+its frame9+ damping uses +0.08 and zero clamp. Next original
+**state266 at 0x0045D484**. Source contains 121/137 live cases;
+114 reviewed, seven later unverified 300–306, 16 missing 266–281.
+Switch DATA, stack, remaining relocations and shared return open.
 
-Focused checks, no all-unit cold replay:
+Focused checks only, never all-unit cold replay:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 265 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 266 --context 12
     scripts/repo-python scripts/ci.py
 
-Keep all dirty edits, canonical target, VC7.1/Wine, Ghidra and accepted
-source. Commit meaningful progress as `gpt-web: xxx`; no push.
+Handle all dirty edits (only one writer), preserve original, pinned
+VC7.1/Wine, Ghidra, and accepted source. Commit substantive progress
+as `gpt-web: xxx`. Do not push without permission.
 
 ## Additional newly accepted leaf owners
 
