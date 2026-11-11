@@ -5,30 +5,31 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
-## Receiving agent — immediate next task (2026-11-11)
+## Receiving agent — Nayuki state boss completed (2026-11-11)
 
-Nayuki `Character10::Slot06` is a 62,693-byte unfinished boss.
-Focused [workbench](../workbench/nayuki-state/README.md) now audits
-**61,242 original code bytes / 16,767 instructions**, default and
-**136/137 reviewed cases**. Original-bound branches: 1,564 internal,
-234 outbound; **1,256 nonlocal COFF call/float refs** and 2 switch
-addresses. Candidate frame 0x288 versus original 0x2B4: NOT whole Exact.
+**Character10::Slot06 now has a COMPLETE original-bound Exact codegen
+certificate**, not just a selected prefix. Its authored source is
+`src/Character10State.cpp` with 62,693 canonical code bytes plus
+all 858 local switch-table bytes, **63,551 / 63,551 matched** and
+**1,433 original-bound COFF relocations independently verified**.
+All 137 original live case IDs, original physical code order, complete
+0x2B4 stack frame, both native switch tables and shared return are
+closed. Formal evidence:
+`docs/evidence/character-10-state-slot06-exact.json`.
+Read [the full reconstruction record](../workbench/nayuki-state/README.md)
+for the original incremental state and repair history.
 
-State305 is now an original-matching 932-byte 3000-meter steerable
-super, with original Context::SetSceneTimer(15), ±0.8 directional
-velocity and two local effects. **Final original case306 begins
-0x0046078A**, 1,451 remaining code bytes to 0x00460D35, plus full
-native stack, adjacent switch DATA, relocations and common return.
-
-Selected checks only (not full all-unit cold replay):
+Run ONLY selected checks when working on this owner:
 
     git status --short --branch
-    scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 306 --context 12
+    scripts/repo-python scripts/replay-exact-units.py --unit character-10-state-slot06
+    scripts/repo-python scripts/validate-tracking.py --check-proofs --unit character-10-state-slot06
     scripts/repo-python scripts/ci.py
 
-Keep dirty edits and canonical original, pinned VC7.1/Wine/Ghidra;
-commit as `gpt-web: xxx`, no push without permission.
+Do not run all-unit cold replay, do not push without permission.
+Continue attacking other substantial unimplemented functions and
+small exact leaf owners. Preserve dirty edits (single writer).
+Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Additional newly accepted leaf owners
 

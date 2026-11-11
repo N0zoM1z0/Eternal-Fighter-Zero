@@ -1,9 +1,8 @@
 # Nayuki Character10::Slot06 — partial native state-machine reconstruction
 
-**Status: PARTIAL, NOT full Exact.** Work in
-`workbench/nayuki-state/Character10State.cpp` and preserve every local
-change. The accepted `src/` tree remains separate, and unrecovered
-sibling-derived states must never be counted as original source.
+**Status: COMPLETE native codegen Exact in accepted `src/Character10State.cpp`.**
+This workbench retains the historical iterative source; its 61,242-byte
+prefix checker is superseded by the complete strict selected oracle.
 
 ## Original owner
 
@@ -14,40 +13,33 @@ Adjacent separately owned switch DATA: 138 four-byte destinations at
 0x00460D35, then 306 selector bytes at 0x00460F5D.
 The switch maps 137 live animation IDs and 169 default IDs.
 
-## Selected original-bound native checkpoint
+## Completed native reconstruction — accepted source
 
-Verified code [0x00451850,0x0046078A): **61,242 / 62,693 native bytes**,
-**16,767 x86 instructions**, SHA-256
-aad384707a503f97a57588b45583442a84084b41d0389bddf9a3bcda138f11fe.
-The original default plus **136/137 live case bodies** now have
-selected native-bound natural C++ implementations, including
-formerly absent cases263–281 and super cases300–305.
+This historical workbench was the scratch source for the large Nayuki
+state boss. Its complete edited body, including all 137 original live
+case IDs, was promoted to the accepted
+`src/Character10State.cpp` as **complete selected-original-bound Exact**.
+The original function code `[0x00451850,0x00460D35)` is 62,693 bytes;
+its 552-byte destination table and 306-byte selector table extend the
+owned contribution to `[0x00451850,0x0046108F)` = **63,551 bytes**.
 
-**State305 (932 bytes)** recovers the highest-cost steerable aerial
-super: at frame3/tick0 it spends 3000 meter, applies hitstun120 and
-tint(0xB0,3), emits global type0x46/palette0x40 at Y-40 and requests
-context sound0x25. From frame4 it invokes accepted
-`Context::SetSceneTimer(15)` (original target 0x4080C0). Frames6–7
-zero motion and select vertical/horizontal ±0.8 speed from input;
-late gravity/landing skip to frame12, frame6 dual effects0x19D/0x19E,
-frame8 repeats frame6 for 20 cycles before gravity0.015, and
-frame12 loops to10. Exit is state7 via FaceOpponent/ResetPose.
-All original IEEE-754 and call relocations were audited.
+The pinned VC7.1 `/Od /G6 /MT /Gy /W3` single-unit exact oracle
+compared **63,551 / 63,551 native bytes, zero differences**, after
+binding 1,433 independent original relocation fields: 951 literal
+IEEE-754, 342 external calls, 140 switch-local pointers. The real
+0x2B4 frame, original physical case order (state300 before279),
+complete 138-entry destination and 306-byte selector tables, all
+137 live IDs, default and shared return now match EFZ.exe.
 
-    scripts/repo-python workbench/nayuki-state/check_prefix.py
+Proof: `docs/evidence/character-10-state-slot06-exact.json`.
+The former `check_prefix.py` is a historical 61,242-byte *partial*
+audit, not the complete accepted owner. For current checks use:
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` verifies **16,767 original
-instruction offsets/widths/normalized forms** except the partial
-stack allocation (candidate 0x288 versus original 0x2B4), **1,564
-internal branches**, **234 outbound**, **1,256 original-bound
-nonlocal COFF call/float references**, 2 local switch references,
-and **136 original case entry points**. Selected prefix is NOT Exact.
+    scripts/repo-python scripts/replay-exact-units.py --unit character-10-state-slot06
+    scripts/repo-python scripts/validate-tracking.py --check-proofs --unit character-10-state-slot06
 
-## Last native case and owner closure
-
-Only original **state306** is still an inherited unverified source
-body, starting at **0x0046078A** with **1,451 original code bytes**
-to the common-return boundary 0x00460D35. Complete original 0x2B4
-stack, adjacent switch DATA, remaining relocations and common return
-remain unverified. Reconstruct 306 and prove owner closure with
-local target checks, not all-unit cold replay.
+The workbench retains its historical original-bound incremental C++
+for comparison and research. Edit accepted `src/Character10State.cpp`
+for future intentional corrections. **Full game linkage, runtime
+parity and portability are separate open goals.** No all-unit cold
+replay is required for this complete unit.

@@ -3140,34 +3140,46 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: 61,242-byte selected boss prefix
+## Nayuki Character10 Slot06: COMPLETE 63,551-byte Exact native owner
 
-Original vtable Slot06 at 0x00788288 targets [0x00451850,0x00460D35),
-62,693 code bytes, SHA-256
-4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-Adjacent switch DATA has 138 four-byte destinations and 306 selectors.
-Natural C++ in `workbench/nayuki-state/Character10State.cpp` now
-matches [0x00451850,0x0046078A): **61,242 native code bytes /
-16,767 x86 instructions**, prefix SHA-256
-aad384707a503f97a57588b45583442a84084b41d0389bddf9a3bcda138f11fe.
-Default and 136/137 original cases are reviewed.
+The original `Character10::Slot06` vtable entry at **0x00788288**
+selects all **62,693 code bytes** at `[0x00451850,0x00460D35)`,
+SHA-256 `4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9`.
+Its **two adjacent function-local switch tables** are owned by this
+same original compiler contribution: 138 four-byte destination
+addresses at `[0x00460D35,0x00460F5D)` (**552 bytes**) and 306
+selector bytes at `[0x00460F5D,0x0046108F)` (**306 bytes**).
+They dispatch **137 live and 169 default IDs**. The physical code
+order includes state300 between states278 and279, not numerical order.
 
-State305 (932 bytes) is the 3000-meter directional aerial super:
-frame3 hitstun120/tint0xB0, global effect0x46/palette0x40, sound0x25;
-after frame3 `Context::SetSceneTimer(15)` at 0x4080C0; frames6–7
-set ±0.8 velocity components from player input; late gravity and
-landing route to frame12, frame6 emits local 0x19D and 0x19E,
-frame8 repeats 20 cycles then gravity0.015, and exit state7 resets
-face and pose. All original float/call references bound.
+**All 63,551 bytes of this complete code-and-table contribution are
+now formally Exact using authored natural C++** in
+`src/Character10State.cpp`. Pinned VC7.1 `/Od /G6 /MT /Gy /W3`
+reproduces the **original full 0x2B4 stack frame** and all 137 native
+case bodies plus default, with the same internal switch-table layout
+and shared function return. The strict original-bound single-unit
+oracle replays **all 1,433 COFF relocations**, none masked: 951
+original IEEE-754 references, 342 original external REL32 calls and
+140 local DIR32 pointers (including all 138 destination entries and
+two code-to-table pointers). Rebound object and original EFZ.exe
+are exactly equal, **63,551 / 63,551 bytes, zero differences**,
+complete extent SHA-256
+`8f5e61f2f1d379fa9ab1f943e53a678fe4756886cb00129bcbaeae6dac8efec4`.
 
-Selected pinned VC7.1 `/Od /G6 /MT /Gy /W3` checker verifies
-**16,767 same-offset/width normalized x86 forms** except incomplete
-candidate frame 0x288 versus full native 0x2B4, **1,564 internal
-branches**, **234 outbound**, **1,256 nonlocal COFF call/float refs**,
-two switch-address operands and 136 original case entries. This is
-NOT whole Exact. Last case306 starts 0x0046078A with **1,451 original
-code bytes** remaining, plus original stack, complete local switch
-tables and shared return. Use focused native comparison only.
+Strict selected evidence and frozen recipes:
+`docs/evidence/character-10-state-slot06-exact.json`,
+`config/match-units.toml` unit `character-10-state-slot06` and
+`config/matches.csv`. Reproduce *only this unit* with:
+
+    scripts/repo-python scripts/replay-exact-units.py --unit character-10-state-slot06
+    scripts/repo-python scripts/validate-tracking.py --check-proofs --unit character-10-state-slot06
+
+The prior incremental source remains in `workbench/nayuki-state` as
+a construction history; production-tracked source is `src/Character10State.cpp`.
+Unlike earlier partial snapshots, this certificate compares the
+**full original owner**, not a prefix or placeholder case.
+**Codegen Exact does not establish full game linkage, original
+translation-unit partitioning, runtime parity or portability.**
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 
