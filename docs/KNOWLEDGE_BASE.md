@@ -2237,6 +2237,40 @@ The underlying Video callee is not separately accepted; a complete
 Exact render **caller** does not establish whole Windows runtime
 linkage or actual graphics output parity.
 
+### Character04 lifecycle: five complete original Exact owners (526 bytes)
+
+Native Character04 vtable `0x00788B7C` independently selects five
+complete virtual methods in authored natural C++
+`src/Character04Lifecycle.cpp`. Pinned VC7.1
+`/Od /G6 /MT /Gy /W3` one-unit strict original-bound replay proves
+**526/526 native code bytes, five native COFF REL32 calls, zero
+byte differences**:
+
+| Complete Character04 method | Native entry | Exact bytes |
+| --- | --- | ---: |
+| InitializeState | `0x00616570` | 322 |
+| ResetPose | `0x006166C0` | 58 |
+| RemoveLocalEffect | `0x00616700` | 80 |
+| Slot03 | `0x00616750` | 19 |
+| EmitLocalEffect | `0x0061A830` | 47 |
+
+The 322-byte **InitializeState** restores original short collision
+pairs `(-23,-58)`, `(-24,0)`, `(4,-8)`, `(7,-12)`, `(30,-22)`,
+zeros child integer state fields at `0x3138`–`0x3154`, and clears
+all three 64-element local effect int arrays starting at offsets
+`0x3158`, `0x3258`, `0x3358` in original loop order, then calls
+`Secondary::InitializeState` at `0x0040EDF0`. ResetPose clears
+three child ints and calls base at `0x0040F110`; per-index
+RemoveLocalEffect clears three fields and delegates to base
+`0x00412E60`; Slot03 delegates to original locomotion state
+`0x0040E740`; EmitLocalEffect calls the **virtual** removal slot
+before base emission `0x00412B10`. Original vtable entries and
+all five complete owner boundaries and native call destinations
+were independently verified. A private offset-accurate child-field
+view avoids altering the already-accepted shared class header.
+Evidence `docs/evidence/character-04-lifecycle-exact.json`.
+Codegen Exact is not whole-game linkage/runtime parity.
+
 ### Character04 Slot08: 528-byte original Exact passive state controller
 
 The original Character04 vtable at `0x00788B7C`, slot8

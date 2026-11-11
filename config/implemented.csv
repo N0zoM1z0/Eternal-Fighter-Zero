@@ -450,3 +450,8 @@ address,name,source,symbol,status,evidence
 0x00657500,Character20::Slot01,src/Character20Render.cpp,?Slot01@Character20@@UAEXXZ,complete,docs/evidence/character-20-slot01-exact.json
 0x007256B0,Character16::Slot08,src/Character16Slot08.cpp,?Slot08@Character16@@UAEXXZ,complete,docs/evidence/character-16-slot08-exact.json
 0x0061A620,Character04::Slot08,src/Character04Slot08.cpp,?Slot08@Character04@@UAEXXZ,complete,docs/evidence/character-04-slot08-exact.json
+0x00616570,Character04::InitializeState,src/Character04Lifecycle.cpp,?InitializeState@Character04@@UAEXXZ,complete,docs/evidence/character-04-lifecycle-exact.json
+0x006166C0,Character04::ResetPose,src/Character04Lifecycle.cpp,?ResetPose@Character04@@UAEXXZ,complete,docs/evidence/character-04-lifecycle-exact.json
+0x00616700,Character04::RemoveLocalEffect,src/Character04Lifecycle.cpp,?RemoveLocalEffect@Character04@@UAEXF@Z,complete,docs/evidence/character-04-lifecycle-exact.json
+0x00616750,Character04::Slot03,src/Character04Lifecycle.cpp,?Slot03@Character04@@UAEXXZ,complete,docs/evidence/character-04-lifecycle-exact.json
+0x0061A830,Character04::EmitLocalEffect,src/Character04Lifecycle.cpp,?EmitLocalEffect@Character04@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-04-lifecycle-exact.json

@@ -500,6 +500,20 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Character04 has five more complete original Exact lifecycle/effect
+owners in `src/Character04Lifecycle.cpp`: InitializeState322,
+ResetPose58, RemoveLocalEffect80, Slot03 19, EmitLocalEffect47,
+total **526/526 native code bytes**, five original-bound base-call
+REL32 operands and zero differences. The real initializer restores
+five original X/Y collision pairs and three 64-int effect arrays;
+effect emission does virtual per-index removal before base delivery.
+Original vtable slots12/0/10/3/9 are independently reviewed.
+Certificate `docs/evidence/character-04-lifecycle-exact.json`.
+Together with the earlier accepted 528-byte Character04 Slot08,
+there are six complete accepted child virtuals and 1,054 original
+code bytes for this role. Only five selected strict units were
+replayed here; no cold all-unit replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

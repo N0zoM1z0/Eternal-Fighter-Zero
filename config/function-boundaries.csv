@@ -480,3 +480,8 @@ address,end,size,status,evidence
 0x00657500,0x00657B6B,1643,reviewed,docs/KNOWLEDGE_BASE.md#kano-character20-slot01-exact
 0x007256B0,0x00725BCE,1310,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-slot08-exact
 0x0061A620,0x0061A830,528,reviewed,docs/KNOWLEDGE_BASE.md#character04-slot08-exact
+0x00616570,0x006166B2,322,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
+0x006166C0,0x006166FA,58,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
+0x00616700,0x00616750,80,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
+0x00616750,0x00616763,19,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
+0x0061A830,0x0061A85F,47,reviewed,docs/KNOWLEDGE_BASE.md#character04-lifecycle-exact
