@@ -4200,6 +4200,58 @@ void Character10::Slot06()
         }
         return;
 
+    case 267: // Reviewed Nayuki 0x0045D7A7: resource-consuming frame-loop attack with 99 hits
+        if (field000a == 0 && field000c == 0) {
+            if (field0120 == 0)
+                field0118 -= 500.0;
+            else
+                field0118 -= 250.0;
+            effect.type = 33;
+            effect.palette = 11;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 50);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            horizontalDeceleration = 0.0;
+            remainingHitCount = 99;
+        }
+        if (field000a > 9) {
+            velocityX -= 0.3;
+            if (velocityX < 0.0)
+                velocityX = 0.0;
+        }
+        if ((field000a == 4 || field000a == 6) && field000c == 0)
+            pendingContextSoundSlot = 21;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 11)
+                attackCollisionResult = 0;
+            if (field000a == 4) {
+                meter = (short)(meter + 45);
+                velocityX = 2.8;
+            }
+            if (field000a == 7 && field313c < 2) {
+                field000a = 4;
+                ++field313c;
+            }
+            if (field000a == 7 && field3138 == 1 && field313c < 4) {
+                field000a = 4;
+                ++field313c;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                ResetFrame();
+                ResetPose();
+                return;
+            }
+        }
+        return;
+
     case 300: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
         if (field000a == 0 && field000c == 0) {
             dashMomentumFlag = 0;

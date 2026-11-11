@@ -3109,49 +3109,37 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: 48,983-byte original-bound boss prefix
+## Nayuki Character10 Slot06: 49,627-byte selected native boss prefix
 
-Original Character10 Slot06 at vtable 0x00788288 selects code
-[0x00451850,0x00460D35), **62,693 original code bytes**, SHA-256
-4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-Adjacent switch DATA has 138 four-byte destinations at 0x00460D35
-and 306 selector bytes at 0x00460F5D (137 live/169 default).
+Original Slot06 vtable at 0x00788288 -> [0x00451850,0x00460D35),
+62,693 bytes, SHA-256 4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
+Original adjacent switch DATA has 138 four-byte destinations and
+306 selectors (137 live IDs, 169 default).
 
-Selected naturally authored workbench at
-`workbench/nayuki-state/Character10State.cpp` verifies original
-[0x00451850,0x0045D7A7): **48,983 code bytes / 13,446 native x86
-instructions**, SHA-256
-1da4b3feae3309afd71e0801abbb795a0624414550d6ca4e60c95b973d66db2f.
-Reviewed default and **115 original live cases**: 1–9, 13–16, 47,
-50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180,
-200–214, 220–221, 230–232, 248–254, 256–266.
+Selected natural C++ `workbench/nayuki-state/Character10State.cpp`
+matches [0x00451850,0x0045DA2B), **49,627 code bytes / 13,615
+x86 instructions**, SHA-256
+038868d2b0bbdabdf424cc724faa7f697ac46b5a9f003a204687fd4d0a3f32cf.
+Original default and **116 live states** reviewed, including newly
+authored missing states263–267. State267 (644 bytes) is a resource-
+consuming 99-hit attack distinct from 266: frame0 costs 500/250,
+emits type33 palette11 impact, zeroes movement and grants 99 hits.
+After frame9 velocityX damps by 0.3 to zero; frame4 grants meter45
+and speed 2.8 (canonical 0x7881C0). Sound21 occurs at frame4/6;
+frame7 repeats at frame4 while `field313c` is below tiered limits.
+State267 has a plain `frameDuration` gate, no tier-dependent advance
+or additional hit reduction. All original IEEE-754 payloads are bound.
 
-Previously absent 263–266 have been authored and complete original-
-bound selected native comparisons passed. State263 (629 bytes) is
-an aerial tiered rebound with frame16->5 loop, state264 (721 bytes)
-implements frame4 horizontal 2.2/3.4 plus tier gates and 0.08
-horizontal drag, and 265 (697 bytes) is the reverse -2.2 variant
-with +0.08 drag and matching frame7 loop conditions. State266
-(803 bytes) extends that attack with frame0 resource cost 500/250,
-global effect33/palette11, hit count field3148+1, then frame9+
-velocityX -= 0.3, remainingHitCount=1 and zero clamp. Its frame4
-launch speed is 2.5, no state264/265 fixed 24-tick frame11 jump,
-and original field313c frame7->4 repeats and other tiered timing
-conditions remain. Float operands are checked against original
-0x7872F0=0.3 and 0x788070=2.5, not just normalized opcodes.
-
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` checker validates **13,446 native
-same-offset/same-width normalized instruction forms** aside from
-partial stack allocation (candidate 0x300 vs original 0x2B4),
-**1,252 original internal branches**, **173 canonical outbound
-jumps**, **1,045 nonlocal original-bound call/IEEE-754 COFF refs**,
-two local switch operands and 115 selector case entries.
-This is NOT complete owner Exact. **13,710 code bytes** and original
-frame, switch tables and common return remain open, with 15 missing
-states267–281 and seven present unreviewed states300–306. Next
-original case267 starts 0x0045D7A7; use native disassembly and
-focused `probe_prefix.py --through 267`. Neutral marker branches
-are UNACCEPTED, never use full all-unit cold replay here.
+Selected pinned VC7.1 `/Od /G6 /MT /Gy /W3` comparison verifies
+**13,615 normalized x86 forms** and all original offsets/widths except
+candidate stack allocation 0x308 vs full original 0x2B4, **1,270
+internal branches**, **175 outbound**, **1,058 original-bound COFF
+nonlocal call/float references**, 2 local switch operands and 116
+selector case targets. This is selected-prefix evidence, NOT Exact.
+Remaining 13,066 code bytes, full stack/switch DATA/shared return,
+14 missing cases268–281 and seven unreviewed 300–306 bodies are open.
+Next state268 starts 0x0045DA2B; use selective probe/check, not
+all-unit cold replay, and never count marker branches as C++.
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 

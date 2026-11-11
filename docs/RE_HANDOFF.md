@@ -7,38 +7,27 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki `Character10::Slot06` remains an unfinished 62,693-byte
-state boss; see [focused workbench instructions](../workbench/nayuki-state/README.md).
-Selected original-bound prefix reaches **48,983 code bytes / 13,446
-instructions**, original default and **115 reviewed live states**.
-Strict focused checker covers **1,252 internal branches**, **173
-original outbound targets**, **1,045 original-bound nonlocal call/
-IEEE-754 COFF references** and two local switch operands. Temporary
-stack 0x300 vs original full 0x2B4: NOT whole-function Exact.
+Nayuki `Character10::Slot06` remains unfinished (62,693 bytes; NOT
+whole Exact). Focused [workbench](../workbench/nayuki-state/README.md).
+Selected prefix **49,627 original bytes / 13,615 instructions** with
+**116 live cases**: audit checks 1,270 internal and 175 outbound
+branches, 1,058 nonlocal original-bound COFF call/float references,
+and two switch operands. Candidate frame 0x308 vs original 0x2B4.
+State267 (644 bytes) now has authentic natural C++ and native-bound
+float constants, distinct from the resource-consuming state266.
 
-Missing original states263–266 now have complete reconstructed C++
-with full selected native instruction and relocation comparison.
-State266 (803 bytes) restores its costly effect33/palette11 variant,
-resource deductions, hitCount1 clamp after frame9, 0.3 drag,
-frame4 velocity2.5 and tier-gated repeats.
-
-**Next original state267 begins 0x0045D7A7**. Of 137 original live
-case IDs, 122 have natural source: 115 reviewed, seven unverified
-300–306 and **15 absent IDs 267–281**. Original frame, selector
-DATA, rest of code and final return remain open. Synthetic markers
-are unaccepted test scaffolding.
-
-Only selected checks, no all-unit cold replay:
+**Next missing state268 at 0x0045DA2B**; 14 cases268–281 absent,
+seven inherited states300–306 unreviewed. Do not treat marker bodies
+as reconstructed source. Only focused checks (no full cold replay):
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 267 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 268 --context 12
     scripts/repo-python scripts/ci.py
 
-Continue through all dirty changes, preserving original EFZ.exe,
-pinned VC7.1/Wine and Ghidra/accepted sources. Save useful
-checkpoints as `gpt-web: xxx`; do not push without authorization.
+Keep all dirty edits and original/pinned compiler/Ghidra. Commit as
+`gpt-web: xxx`, no push without permission.
 
 ## Additional newly accepted leaf owners
 
