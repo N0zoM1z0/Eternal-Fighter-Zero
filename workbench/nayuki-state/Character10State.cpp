@@ -2106,12 +2106,12 @@ void Character10::Slot06()
         }
         return;
 
-    case 161: // Unreviewed inherited sibling logic, Makoto address 0x005: aerial impact and trail reset
+    case 161: // Nayuki original 0x00457483: aerial impact and trail reset
         if (field000a == 0 && field000c == 0) {
             ResetFrame();
             effect.type = 9;
             effect.x = (double)(int)positionX;
-            effect.y = (double)((int)positionY - 60);
+            effect.y = (double)((int)positionY - 70);
             effect.group = 2;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
@@ -2131,7 +2131,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 162: // Unreviewed inherited sibling logic, Makoto address 0x005: staged aerial launch and impact
+    case 162: // Nayuki original at 0x00457597: staged aerial launch and impact
         if (field000a == 0 && field000c == 0) {
             ResetFrame();
         }
@@ -2144,7 +2144,7 @@ void Character10::Slot06()
             ResetFrame();
             effect.type = 9;
             effect.x = (double)(int)positionX;
-            effect.y = (double)((int)positionY - 60);
+            effect.y = (double)((int)positionY - 70);
             effect.group = 2;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
@@ -2165,7 +2165,7 @@ void Character10::Slot06()
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == 18) {
+            if (field000a == 13) {
                 gravity = 0.035;
             }
             if (field000a >= timing.animationFrameCount) {
@@ -2174,173 +2174,157 @@ void Character10::Slot06()
         }
         return;
 
-    case 163: // Unreviewed inherited sibling logic, Makoto address 0x005: cancellable forward dash
+    case 163: // Nayuki original 0x00457782: aerial trail and landing recovery
         if (field000a == 0 && field000c == 0) {
-            StartTrail(3);
+            StartTrail(1);
+            ResetFrame();
         }
-        if (inputY == -1 && field000a > 0) {
-            field0008 = 4;
-            if (inputX == facing) {
-                field0008 = 5;
-            }
-            if ((int)inputX == -(int)facing) {
-                field0008 = 6;
-            }
-            attackCollisionResult = 0;
-            ResetPose();
+        if (field000a < 11 && field000a > 4)
+            velocityY += gravity;
+        if (positionY + velocityY > 0.0 && field000a < 11) {
+            field000c = 0;
+            ResetFrame();
+            field000a = 11;
+            positionY = 0.0;
             return;
         }
-        if (field000a == 0 && field000c == 0) {
-            velocityY = 0.0;
-            gravity = 0.0;
-        }
-        velocityX = 2.2;
-        dashMomentumFlag = 1;
         ++field000c;
-        ++field3138;
-        ++field313c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
+            if (field000a == 5) {
+                velocityX = 1.4;
+                velocityY = -0.75;
+                gravity = 0.015;
+            }
+            if (field000a == 11)
+                field000a = (unsigned short)(field000a - 4);
             if (field000a >= timing.animationFrameCount) {
-                field000a = (unsigned short)(field000a - 6);
+                field0008 = 3;
+                ResetPose();
                 return;
             }
         }
-        if (inputX == facing && field313c >= 80 && field000a < 4) {
-            field0008 = 178;
-            ResetPose();
-        }
-        if (inputX != facing && field3138 >= 60 && field000a < 4) {
-            field0008 = 178;
-            ResetPose();
-        }
         return;
 
-    case 164: // Unreviewed inherited sibling logic, Makoto address 0x005: decelerating ground dash
-        StartTrail(3);
-        dashMomentumFlag = 0;
-        if (field000a == 0 && field000c == 0) {
-            velocityX = 0.0;
-            velocityY = 0.0;
+    case 164: // Original Nayuki 0x004578DD: trail2 falling dash/landing
+        StartTrail(2);
+        if (field000a == 0 && field000c == 0)
+            ResetFrame();
+        if (field000a > 3) {
+            velocityX += 0.02;
+            velocityY += 0.035;
         }
-        if (field000a == 1 && field000c == 0) {
-            velocityX = -2.2;
-        }
-        velocityX += 0.02;
-        if (velocityX > 0.0) {
+        if (velocityX > 0.0)
             velocityX = 0.0;
+        if (positionY + velocityY > 0.0 && field000a < 11) {
+            positionY = 0.0;
+            ResetFrame();
+            field000c = 0;
+            field000a = 11;
+            return;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == 4 && field3138 < 2) {
-                field000a = (unsigned short)(field000a - 2);
-                ++field3138;
+            if (field000a == 4) {
+                velocityX = -2.0 - (double)field3148 * 0.1;
+                velocityY = -1.2;
             }
+            if (field000a == 11)
+                field000a = (unsigned short)(field000a - 2);
             if (field000a >= timing.animationFrameCount) {
-                FaceOpponent();
-                field0008 = 0;
                 ResetPose();
-                ResetFrame();
+                field0008 = 3;
             }
         }
         return;
 
-    case 165: // Unreviewed inherited sibling logic, Makoto address 0x005: sustained airborne momentum
-        if (field000a == 0 && field000c == 0 && field3138 == 0) {
-            velocityX = 1.9;
-            velocityY = 1.3;
-            StartTrail(3);
-            horizontalDeceleration = -0.015;
-            gravity = -0.038;
-            pendingContextSoundSlot = 17;
-        }
-        velocityY += gravity;
-        velocityX += horizontalDeceleration;
-        if (velocityX < 0.5) {
-            velocityX = 0.5;
-        }
-        if (velocityY < -1.5) {
-            velocityY = -1.5;
-        }
-        ++field000c;
-        ++field3138;
-        ++field313c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a >= timing.animationFrameCount) {
-                field000a = (unsigned short)(field000a - 2);
-            }
-        }
-        if (inputX == facing && field313c >= 120) {
-            field0008 = 9;
-            ResetPose();
-            gravity = 0.03;
-            if (FaceOpponent() != 0) {
-                velocityX = -velocityX;
-            }
-        }
-        if (inputX != facing && field3138 >= 48) {
-            field0008 = 9;
-            ResetPose();
-            gravity = 0.03;
-            if (FaceOpponent() != 0) {
-                velocityX = -velocityX;
-            }
-        }
-        return;
-
-    case 166: // Unreviewed inherited sibling logic, Makoto address 0x005: sustained airborne momentum
-        if (field000a == 0 && field000c == 0 && field3138 == 0) {
-            velocityX = -1.9;
-            velocityY = 1.3;
-            StartTrail(3);
-            horizontalDeceleration = 0.015;
-            gravity = -0.038;
-            pendingContextSoundSlot = 17;
-        }
-        velocityY += gravity;
-        velocityX += horizontalDeceleration;
-        if (velocityX > -0.5) {
-            velocityX = -0.5;
-        }
-        if (velocityY < -1.5) {
-            velocityY = -1.5;
-        }
-        ++field000c;
-        ++field3138;
-        ++field313c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a >= timing.animationFrameCount) {
-                field000a = (unsigned short)(field000a - 2);
-            }
-        }
-        if ((int)inputX == -(int)facing && field313c >= 120) {
-            field0008 = 9;
-            ResetPose();
-            gravity = 0.03;
-            if (FaceOpponent() != 0) {
-                velocityX = -velocityX;
-            }
-        }
-        if ((int)inputX != -(int)facing && field3138 >= 48) {
-            field0008 = 9;
-            ResetPose();
-            gravity = 0.03;
-            if (FaceOpponent() != 0) {
-                velocityX = -velocityX;
-            }
-        }
-        return;
-
-    case 167: // Unreviewed inherited sibling logic, Makoto address 0x005: stunned recovery with two effects
+    case 165: // Nayuki original 0x00457A5B: staged 0x190 effect and airborne recoil
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
+            if (field3148 > 7)
+                remainingHitCount = 1;
+            else
+                remainingHitCount = 0;
+            ResetFrame();
+            effect.type = 0x190;
+            effect.x = (double)((int)positionX - (int)facing * 36);
+            effect.y = (double)((int)positionY - 62);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 0;
+            effect.group = 0;
+            EmitLocalEffect(&effect);
+        }
+        if (field3138 == 1 && field000a == 0) {
+            velocityX = 1.9;
+            velocityY = -0.2;
+            gravity = 0.035;
+            field000c = 0;
+            field000a = 1;
+            return;
+        }
+        if (field000a > 0)
+            velocityY += gravity;
+        if (velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            ResetFrame();
+            ResetPose();
+            field0008 = 0xb3;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount)
+                field000a = (unsigned short)(field000a - 2);
+        }
+        return;
+
+    case 166: // Nayuki original 0x00457C25: mirrored 0x190 emission and rebound
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+            if (field3148 > 4)
+                remainingHitCount = 1;
+            else
+                remainingHitCount = 0;
+            effect.type = 0x190;
+            effect.x = (double)((int)positionX + (int)facing * 36);
+            effect.y = (double)((int)positionY - 62);
+            effect.flag0018 = -(int)facing;
+            effect.layer = 1;
+            effect.group = 0;
+            EmitLocalEffect(&effect);
+        }
+        if (field3138 == 1 && field000a == 0) {
+            velocityX = -1.9;
+            velocityY = -0.2;
+            gravity = 0.035;
+            field000c = 0;
+            field000a = 1;
+            return;
+        }
+        if (field000a > 0)
+            velocityY += gravity;
+        if (velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            ResetFrame();
+            ResetPose();
+            field0008 = 0xb3;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount)
+                field000a = (unsigned short)(field000a - 2);
+        }
+        return;
+
+    case 167: // Nayuki original 0x00457DF2: stunned recovery with two effects
+        if (field000a == 0 && field000c == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
             if (field0120 == 1) {
@@ -2380,9 +2364,8 @@ void Character10::Slot06()
         }
         return;
 
-    case 168: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded impact to state 0
+    case 168: // Nayuki original grounded effect state: grounded impact to state 0
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
             velocityX = 0.0;
             velocityY = 0.0;
             positionY = 0.0;
@@ -2411,9 +2394,8 @@ void Character10::Slot06()
         }
         return;
 
-    case 169: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded impact to state 3
+    case 169: // Nayuki original grounded effect state: grounded impact to state 3
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
             velocityX = 0.0;
             velocityY = 0.0;
             positionY = 0.0;

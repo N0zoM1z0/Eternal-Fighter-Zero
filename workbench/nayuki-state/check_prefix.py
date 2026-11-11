@@ -20,8 +20,8 @@ from native_build import compile_source
 from coff import object_function
 from probe_prefix import BASE,CODE_SIZE,PROBE,OBJECT,make_source,disasm,normalized
 
-END=BASE+0x5C33
-PREFIX_SHA="90c23e75f2b9c002223a451d66722efd6b1f23a19f17636840ef6f24950cb671"
+END=BASE+0x69FC
+PREFIX_SHA="7f7dc354621912742a96787549560f9177abe51ab70f29d8f67dfef2a0325690"
 FULL_SHA="4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9"
 KNOWN_CALLS={
     "??0EffectSpawn@@QAE@XZ":0x00405490,
@@ -31,9 +31,12 @@ KNOWN_CALLS={
     "__ftol2":0x007783B8,
     "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z":0x00407100,
     "?SetVerticalShake@Secondary@@QAEXHH@Z":0x00410A10,
+    "?ResetFrame@Secondary@@QAEXXZ":0x0040F1E0,
+    "?StartTrail@Secondary@@QAEXE@Z":0x004109D0,
+    "?SetTint@Secondary@@QAEXEH@Z":0x00410B10,
 }
-REVIEWED_IDS=[1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 15, 16, 47, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 81, 82, 83, 84, 85, 86, 87, 96, 97, 98, 99, 123, 150, 151, 152, 153, 154, 155, 156, 157, 158]
-REVIEWED_OFFSETS=[286, 424, 562, 683, 1024, 1377, 1693, 1824, 1955, 2128, 2283, 2581, 2879, 3165, 3469, 3956, 4443, 4930, 5417, 5904, 6391, 6854, 7317, 7780, 8291, 8802, 9313, 9752, 10179, 10740, 11301, 11790, 12267, 12583, 12860, 13340, 13767, 14098, 14429, 14736, 15235, 15734, 16209, 16694, 17240, 17821, 18402, 18869, 19351, 19530, 19735, 19983, 20231, 20396, 20519, 20889, 21259, 21629, 21975, 22321, 22667, 22939, 23271]
+REVIEWED_IDS=[1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 14, 15, 16, 47, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 81, 82, 83, 84, 85, 86, 87, 96, 97, 98, 99, 123, 150, 151, 152, 153, 154, 155, 156, 157, 158, 161, 162, 163, 164, 165, 166, 167, 168, 169]
+REVIEWED_OFFSETS=[286, 424, 562, 683, 1024, 1377, 1693, 1824, 1955, 2128, 2283, 2581, 2879, 3165, 3469, 3956, 4443, 4930, 5417, 5904, 6391, 6854, 7317, 7780, 8291, 8802, 9313, 9752, 10179, 10740, 11301, 11790, 12267, 12583, 12860, 13340, 13767, 14098, 14429, 14736, 15235, 15734, 16209, 16694, 17240, 17821, 18402, 18869, 19351, 19530, 19735, 19983, 20231, 20396, 20519, 20889, 21259, 21629, 21975, 22321, 22667, 22939, 23271, 23603, 23879, 24370, 24717, 25099, 25557, 26018, 26492, 26812]
 
 def main():
     image=verify_target()
@@ -41,7 +44,7 @@ def main():
     original=target_bytes(image,BASE,CODE_SIZE)
     assert hashlib.sha256(original).hexdigest()==FULL_SHA
     prefix=original[:END-BASE]
-    assert len(prefix)==23603 and hashlib.sha256(prefix).hexdigest()==PREFIX_SHA
+    assert len(prefix)==27132 and hashlib.sha256(prefix).hexdigest()==PREFIX_SHA
     # Data owner beyond the 62,693 code bytes: 138 addresses, 306 selectors.
     labels=target_bytes(image,0x00460D35,138*4)
     indices=target_bytes(image,0x00460F5D,306)
@@ -54,7 +57,7 @@ def main():
     assert sum(n!=137 for n in indices)==137
     # The candidate still lacks 20 of the 137 authentic live case bodies
     # in this workbench; the experimental placeholder cases are NOT accepted.
-    used=make_source(158)
+    used=make_source(169)
     assert set(REVIEWED_IDS).issubset(used)
     try:
         compile_source(PROBE,OBJECT,["/Od","/G6","/MT","/Gy","/W3"],
@@ -63,7 +66,7 @@ def main():
     finally:
         PROBE.unlink(missing_ok=True)
     target,compiled=disasm(prefix),disasm(code)
-    assert len(target)==6524 and len(compiled)>len(target)
+    assert len(target)==7486 and len(compiled)>len(target)
     assert target[2][2]=="sub esp,0x2b4"
     assert compiled[2][2].startswith("sub esp,") and compiled[2][2]!="sub esp,0x2b4"
     assert compiled[len(target)][0]==len(prefix)
@@ -89,7 +92,7 @@ def main():
             assert original_pos[dst]==compiled_pos.get(local),(a,b)
         else:
             outbound+=1
-    assert (internal,outbound)==(594,72),(internal,outbound)
+    assert (internal,outbound)==(667,89),(internal,outbound)
 
     refs=defaultdict(set)
     locals={}
@@ -116,14 +119,14 @@ def main():
             assert KNOWN_CALLS[name]==dst,(row,hex(dst))
         refs[(name,row["type"])].add(dst)
     assert locals=={0xA2:0x00460F5D,0xA9:0x00460D35},locals
-    assert n==610
-    assert len(refs)==55 and all(len(v)==1 for v in refs.values()),len(refs)
-    print("Nayuki Slot06: selected 23,603 / 62,693 original code bytes;")
-    print("6,524 original same-width/offset x86 instructions (only incomplete frame differs).")
-    print("594 verified in-prefix original branches, 72 valid original outbound targets;")
-    print("608 exact original-bound external/float relocations, 2 local switch references.")
-    print("Original dispatch: 137 live + 169 default IDs; 63 original case targets reviewed.")
-    print("NOT full Exact: 39,090 code bytes, real 0x2B4 frame, 20 missing states,")
+    assert n==695
+    assert len(refs)==66 and all(len(v)==1 for v in refs.values()),len(refs)
+    print("Nayuki Slot06: selected 27,132 / 62,693 original code bytes;")
+    print("7,486 original same-width/offset x86 instructions (only incomplete frame differs).")
+    print("667 verified in-prefix original branches, 89 valid original outbound targets;")
+    print("693 exact original-bound external/float relocations, 2 local switch references.")
+    print("Original dispatch: 137 live + 169 default IDs; 72 original case targets reviewed.")
+    print("NOT full Exact: 35,561 code bytes, real 0x2B4 frame, 20 missing states,")
     print("full switch layout, shared return and remaining relocation closure OPEN.")
 
 if __name__=="__main__":
