@@ -148,6 +148,18 @@ concrete original registers remain mismatched after state250.
 Selected strict prefix still ends before state250 at 40,336 bytes.
 No full cold replay; do not count structural-island bytes as Exact.
 
+Kano state260 is now also authored as an **821-byte actual C++
+charged attack**, with the dedicated non-accepting original-bound
+`check_case260_shape.py` checking **220 x86 original instruction
+shapes/offsets**, 20 native branches, 3 shared-return jumps and
+9 independently original-bound call/float operands. Its original
+frame12 local effect0x1B8 uses raw X and Y=-80.0, with precise
+owner/facing order, sound4, field313c=21 and field3168 counter.
+**Not Exact**: state250's concrete-register discrepancy remains,
+strict selected native prefix remains 40,336 bytes. Kano Slot08
+independent render/periodic-effect source is also under exploration,
+but has not passed original native comparison and is not registered.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

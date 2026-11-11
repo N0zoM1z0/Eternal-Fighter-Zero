@@ -59,6 +59,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case257_shape.py
     scripts/repo-python workbench/kano-state/check_case258_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
+    scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
 
 The selected VC7.1 candidate matches **all 241 original instruction
@@ -107,6 +108,38 @@ This is an independently verified **structural island, NOT concrete
 register or whole-function Exact**. Original state250's register
 phase still prevents expanding the strict contiguous 40,336-byte
 prefix; formal Exact counters remain unchanged.
+
+### Experimental case260 — 821-byte charged fixed-height strike
+
+Kano state260 original `[0x0064E3F1,0x0064E726)` spans **821 native
+code bytes / 220 original x86 instructions**. Its natural C++ source
+is now authored in `Character20State.cpp`. Unlike the preceding tier,
+its native frame7 reset precedes the frame3 pair of local effects
+0x196/0x197, then a charge +75 / cap10000 / residual7500. Original
+command13 cancellation becomes permitted after frame11. When
+animation reaches frame12 with tick0, it emits original local
+`0x1B8` at **raw positionX and Y=-80.0**, facing flag before owner,
+with group2/layer1/owner1; sets sound4, increments `field3168`,
+sets `field313c=21`, and increments `field3138`.
+
+Run only the independent original-bound diagnostic:
+
+    scripts/repo-python workbench/kano-state/check_case260_shape.py
+
+This pins original source SHA-256
+`969f7e5aa8c2ac6f4ece7f972603f627cd1d5bfae4b85375632f276a9e9707c9`
+and validates **all 220 native x86 instruction addresses, widths,
+register-abstracted forms**, **20 native in-state branch targets**,
+**3 canonical return jumps**, and **9 independently original-bound
+COFF/IEEE-754 operands** (three ResetFrame, four `__ftol2`, original
+500.0 and -80.0 double literals). Original assignment order was
+necessary to obtain full structural matching.
+
+This remains **NOT native byte Exact**, because the compiler's
+concrete register choices differ beyond unresolved state250. Strict
+contiguous accepted source prefix stays **40,336 bytes**. No original
+function Exact ledger entry, fake wrappers, or diagnostic marker
+acceptance is claimed.
 
 ### Experimental case259 — 1,586-byte multi-tier five-impact finisher
 

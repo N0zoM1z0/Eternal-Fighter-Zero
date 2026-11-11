@@ -1893,6 +1893,21 @@ concrete register mismatch is still open. The strict selected
 original prefix remains 40,336 bytes, unchanged; no formal
 acceptance/ledger credit for this case.
 
+#### Kano case260 independent original-bound island (NOT Exact)
+
+The original 821-byte state260 `[0x0064E3F1,0x0064E726)` is
+now authored as real natural C++ in the Kano Slot06 workbench.
+Its `check_case260_shape.py` confirms **all 220 original x86
+instruction positions/widths/register-abstracted forms**, **20
+internal branch destinations**, **3 shared-return paths**, **9
+independent original COFF call/IEEE-754 operands** including
+500.0 and -80.0 double constants. The frame12 effect0x1B8
+at raw positionX/Y=-80.0 and native sound/counter writes were
+carefully reconstructed; ordering of original frame7 reset,
+frame3 paired effects and `effect.owner`/facing mattered. **Not
+native Exact** until state250's concrete-register phase is solved;
+strict contiguous original-bound prefix remains 40,336 bytes.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five
