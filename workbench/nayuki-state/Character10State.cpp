@@ -2915,7 +2915,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 206: // Nayuki 0x00459901: dash cancel, meter gain and adaptive frame skip
+    case 206: // Reviewed Nayuki 0x00459901: dash cancel, meter gain and adaptive frame skip
         if ((unsigned char)dashMomentumFlag == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2960,7 +2960,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 207: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 207: // Reviewed Nayuki state at 0x00459B29
         velocityY += gravity;
         if (inputY == -1 && field000a > 0 && field015c < 3 &&
             attackCollisionResult >= 2 && airActionCount == 0) {
@@ -3001,7 +3001,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 208: // Nayuki 0x00459CFF: scaled multi-hit count for aerial attack
+    case 208: // Reviewed Nayuki 0x00459CFF: scaled multi-hit count for aerial attack
         velocityY += gravity;
         if (inputY == -1 && field000a > 0 && field015c < 3 &&
             attackCollisionResult >= 2 && airActionCount == 0) {
@@ -3042,7 +3042,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 209: // Nayuki 0x00459EE4: accelerated aerial timing and landing
+    case 209: // Reviewed Nayuki 0x00459EE4: accelerated aerial timing and landing
         velocityY += gravity;
         if (inputY == -1 && field000a > 0 && field015c < 3 &&
             attackCollisionResult >= 2 && airActionCount == 0) {
@@ -3084,43 +3084,37 @@ void Character10::Slot06()
         }
         return;
 
-    case 210: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
+    case 210: // Nayuki original 0x0045A0F0: four-frame launcher and landing recovery
+        if (field000a == 0 && field000c == 0)
             ResetFrame();
-        }
-        if (field000a == 3 && field000c == 0) {
-            velocityX = 0.6;
-            velocityY = -1.4;
-            gravity = 0.036;
-        }
-        if (field000a == 6 && field000c == 0) {
-            meter = (short)(meter + 20);
-            pendingContextSoundSlot = 20;
+        if (field000a == 4 && field000c == 0) {
+            gravity = 0.055;
+            velocityY = -1.7;
+            velocityX = 0.5;
             remainingHitCount = 1;
         }
-        if (field000a > 2) {
+        if (field000a > 4)
             velocityY += gravity;
-        }
-        if (positionY + velocityY > 0.0 && field000a < 9 && field000a > 3) {
-            positionY = 0.0;
-            ResetFrame();
-            field000c = 0;
-            field000a = 9;
-            return;
-        }
+        if (field000a == 8 && field000c == 0)
+            pendingContextSoundSlot = 20;
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a < 2) {
-                attackCollisionResult = 0;
-            }
             if (field000a >= timing.animationFrameCount) {
+                ResetPose();
                 field0008 = 3;
                 FaceOpponent();
-                ResetPose();
+                return;
             }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 4 &&
+            field000a < 11) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            field000a = 11;
+            field000c = 0;
+            ResetFrame();
         }
         return;
 

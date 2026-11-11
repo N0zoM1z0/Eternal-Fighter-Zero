@@ -14,40 +14,50 @@ Separate immediately adjacent tables: 138 four-byte destinations at
 0x00460D35 and 306 selector bytes at 0x00460F5D.
 Of 306 animation IDs, 137 are live, 169 map to default.
 The workbench has 118 of 137 case labels; 19 absent IDs 263–281.
-Of its present labels, 83 are prefix-reviewed and 35 later remain unverified.
+Of its present labels, 87 are prefix-reviewed and 31 later remain unverified.
 
 ## Selected native checkpoint
 
-Original [0x00451850,0x00459901): **32,945 bytes / 9,056 original x86
-instructions**, prefix SHA-256
-ca349ed1b20142e0620a2c6ae706a85f610201b12931c2460a5a2ff03f3c9096.
+Original [0x00451850,0x0045A0F0): **34,976 / 62,693 code bytes**,
+**9,602 original x86 instructions**, prefix SHA-256:
+0fda318cf0ae26e7ede886e6a07b8a2c43c6a84081e1f631383ff6c4eabb4cf0.
 
-Reviewed original default plus 83 live cases: 1–9, 13–16, 47, 50–77,
-81–87, 96–99, 123, 150–158, 161–171, 178–180, 200–205.
-The most recent states 204/205 restore original dash damping, grounded
-input cancel, meter/timer, and Nayuki's special tiered 3-tick frame advance.
-State205 moves the fighter 15 pixels at frames 1 and 2 and recovers to
-state 3. These are native branch and instruction comparisons, not guesses
-borrowed from the sibling character.
+The reviewed default and **87 live cases** are 1–9, 13–16, 47,
+50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180 and 200–209.
+States 204/205 implement frame skips and hit/meter changes; state206
+restores a three-tick frame gate keyed by field3148; state207 matches
+its original airborne cancellation and landing logic; state208 scales
+remainingHitCount with field3148/2+2; state209 adds its original
+30-meter, three-hit activation and another dynamic frame gate.
 
-Run focused validation only:
+Selected native check (no all-unit cold replay):
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces all 9,056 original
-instruction offsets and widths and 9,055 normalized matching forms.
-The only unmatched form is the temporary partial stack allocation
-(candidate 0x278 vs complete original 0x2B4). Checker verifies
-**842 original internal branches**, **109 canonical outbound targets**,
-**793 independently bound original nonlocal COFF call/float references**,
-two separately verified original local switch fields, and the first
-**83 original selector case destinations**.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 matches **9,602 original offsets and
+instruction widths**, and all normalized opcode forms except the
+incomplete partial stack allocation (candidate 0x280 vs original 0x2B4).
+Original-bound checks cover **903 internal branches**, **120 valid
+outbound destinations**, **805 bound call/float COFF relocations**, two
+local switch operands, and **87 original selector case destinations**.
 
-probe_prefix.py creates authentic reviewed early bodies alongside
-deliberately UNACCEPTED neutral marker branches for later live states.
-Original later 300–306 bodies are retained in this test solely to preserve
-VC7.1 ESI/prologue compiler behavior. Test-only markers are never
-accepted reconstruction.
+probe_prefix.py emits test-only neutral marker branches for unreviewed
+live cases and retains later 300–306 states to reproduce register usage.
+Those test markers are NOT recovered source and this prefix is NOT
+full-function Exact. 31 present state bodies are still unreviewed and
+19 original IDs 263–281 have no authored body.
+
+## Next code target
+
+Original state210 starts **0x0045A0F0** (function offset 0x88A0).
+The unreviewed source differs at **0x0045A0F7** (offset 0x88A7), where
+the original checks frame number and the probe does not yet include
+an authentic 210 body. Read original disassembly and compare:
+
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 210 --context 10
+
+**27,717 original code bytes** remain, plus the full stack, local
+switch tables, relocations and shared return. Do not publish Exact.
 
 ## Next code target
 
