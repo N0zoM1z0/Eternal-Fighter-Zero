@@ -2253,29 +2253,30 @@ Character04 and Kano state-Boss reconstruction.
 
 ### Character04 Slot06: original-bound 59,143-byte state boss workbench
 
-Original Character04 vtable `0x00788B94` selects
-`[0x00607930,0x00616037)` (**59,143 code bytes**), followed
-by 139 native switch pointers and 325 selectors (138 real IDs,
-187 defaults).
+Original vtable at `0x00788B94` selects native code
+`[0x00607930,0x00616037)` of **59,143 executable bytes**, with
+139 original jump destinations and 325 selector bytes (138 live
+IDs/187 native defaults). Authored natural C++ in
+`workbench/character04-state/Character04State.cpp` now implements
+default plus **81 real live cases** (1–9,13–16,47,50–77,
+81–87,96–99,150–158,161–171,180,200–206). New 204–206
+recover three different grounded dash-cancel/meter/sound thresholds,
+correct input-facing checks, cancellation, and stand/crouch reset.
 
-The actual C++ workbench `workbench/character04-state/Character04State.cpp`
-now reconstructs original default plus **78 real live cases**:
-1–9,13–16,47,50–77,81–87,96–99,150–158,161–171,180,200–203.
-New states implement native landing frame7, down-input cancel,
-pose-specific meter/sound, frame9/10 hitmarkers, and no unrelated
-related-character dash momentum logic.
-`check_prefix.py` establishes original-bound selected code range
-`[0x00607930,0x0060EE5D)` **29,997 native bytes**, SHA-256
-`c2a6e55016f6a67f58a6bc554cb34081263cedc8ece4141ad765f277ed3c6f66`:
-**8,259 original x86 instruction widths/offsets/forms, 748
-internal +93 authentic shared-return branches, 751 original-
-bound native COFF call/float sites and two switch/selector pointers**.
-Every other compared opcode byte matches outside exactly the
-provisional original-width stack immediate `0x128` (native `0x2E8`),
-canonical relocation fields and incomplete shared-return JMPs.
-**NOT complete Exact**: remaining 60 original states, full original
-frame and pointer/selector tables and return are open. Next
-state204 at `0x0060EE5D`. No cold full-unit replay.
+Scoped `workbench/character04-state/check_prefix.py` proves
+**31,233 continuous native code bytes** `[0x00607930,0x0060F331)`,
+original SHA-256
+`ad5046c133681bcb7af1523b647854cdb588acab526bb40b8ae34383badb023b`:
+**8,587 original x86 instruction positions, widths, forms;
+786 internal plus 99 shared-return original jumps; 760 original-
+bound COFF direct-call/float operands and two authentic native
+local selector/table pointers**. All other original code bytes match;
+only the original-width provisional stack immediate (`0x128`
+instead of `0x2E8`), still-unclosed outbound-return displacements
+and native-bound relocation fields differ. **NOT whole Exact:** 57
+original live cases, full frame, switch/selector data and return
+remain OPEN. Next original state207 at `0x0060F331`.
+No all-unit cold replay or accepted marker source.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

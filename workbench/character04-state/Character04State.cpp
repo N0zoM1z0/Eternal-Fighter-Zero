@@ -2691,5 +2691,115 @@ void Character04::Slot06()
         return;
 
 
+    case 204: // EXPERIMENTAL C04 0x0060EE5D: grounded action and dash-cancel
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing)
+                field0008 = 5;
+            if ((int)inputX == -(int)facing)
+                field0008 = 6;
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 5);
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3)
+                attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1)
+                    field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 205: // EXPERIMENTAL C04 0x0060EFEE: grounded action and dash-cancel
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult == 3) {
+            field0008 = 4;
+            if (inputX == facing)
+                field0008 = 5;
+            if ((int)inputX == -(int)facing)
+                field0008 = 6;
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 13);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3)
+                attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1)
+                    field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 206: // EXPERIMENTAL C04 0x0060F17F: pose-three charge and pose-ten sound
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult == 3) {
+            field0008 = 4;
+            if (inputX == facing)
+                field0008 = 5;
+            if ((int)inputX == -(int)facing)
+                field0008 = 6;
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 3 && field000c == 0) {
+            meter = (short)(meter + 25);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        if (field000a == 10 && field000c == 0)
+            pendingCharacterSoundSlot = 2;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3)
+                attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1)
+                    field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+
     }
 }

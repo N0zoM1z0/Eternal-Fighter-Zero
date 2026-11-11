@@ -531,20 +531,20 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 
 ### Active second large boss: Character04::Slot06 (NOT full Exact)
 
-Real `workbench/character04-state/Character04State.cpp` has native
-default plus **78 physical live cases** in the original 59,143-byte
-owner. New 180/200–203 implement correct landing frame7, original
-input-based attack cancels, frame9/10 markers and native meter gain.
-Selected original-bound `check_prefix.py` verifies **29,997 native
-code bytes / 8,259 original x86 instruction forms/offsets/widths**,
-**748 internal and 93 shared-return branch targets**, **751 native
-bound COFF call/IEEE-754 operands** and two native switch pointers.
-Only the original-width provisional `0x128` stack immediate versus
-native `0x2E8`, original-bound reloc operands and shared-return
-JMP displacements differ. **Next case204 `0x0060EE5D`**; 60
-real states and full native stack/139 table entries/325 selectors/
-return still OPEN. Strict selected-prefix only, NOT whole Exact;
-no cold all-unit replay or push.
+`workbench/character04-state/Character04State.cpp` authors the
+native default plus **81 authentic live cases**, including real
+states204–206 (original grounded dash-cancel/hit/meter and sound
+logic). `check_prefix.py` strictly proves **31,233 native contiguous
+code bytes / 8,587 original x86 instructions**, **786 native
+internal + 99 original shared-return jump targets**, **760 exact
+original-bound COFF calls/IEEE-754 operands** and two original
+local dispatch pointers. Only the provisional original-width
+stack immediate (`0x128` vs native `0x2E8`), incomplete shared-return
+JMP displacement and original-bound COFF operands are excluded;
+all other selected opcode bytes match. Next native case207
+`0x0060F331`; **57 live original states**, stack, original 139
+switch entries/325 selectors and return still OPEN. This is
+selected-prefix only, **NOT full Exact**. No cold all-unit replay.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is
 now a complete **11-byte native Exact** virtual passive hook,

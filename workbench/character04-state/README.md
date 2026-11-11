@@ -1,9 +1,9 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
-**PARTIAL: not whole-function Exact.** Workbench includes original
-default and **78 real live cases**: 1–9,13–16,47,50–77,81–87,
-96–99,150–158,161–171,180,200–203. Sixty real states still lack
-source; generated probe markers are not accepted reconstruction.
+**PARTIAL: not whole-function Exact.** Natural C++ reconstructs
+original default and **81 real live cases**, now including 204–206.
+The other 57 live IDs remain explicitly unimplemented. Temporary
+compiler-probe markers are never accepted original source.
 
 ## Original PE ownership and dispatch
 
@@ -19,34 +19,36 @@ source; generated probe markers are not accepted reconstruction.
 
 ## Current audited continuous prefix
 
-Native `[0x00607930,0x0060EE5D)` = **29,997 original code bytes**,
-canonical SHA-256
-`c2a6e55016f6a67f58a6bc554cb34081263cedc8ece4141ad765f277ed3c6f66`.
-Real source now has default and 78 true native live cases.
-The new case180 uses native `StartTrail(2)`, a frame7 landing
-interruption, x87 `positionY+velocityY > 0` condition, and delayed
-−0.5/−1.0/0.028 impulse on frame2 (not the related character's
-frame1/10). Cases200/201 check original down-input cancel and
-pose1-specific meter +5/+15, instead of unrelated dash-deceleration;
-case202 has distinct collisionResult3 and frame9 sound2, and case203
-adds meter35 on pose2 and frame10 sound2, with original timer and
-hit-count reset semantics.
+`[0x00607930,0x0060F331)` = **31,233 original machine-code bytes**,
+SHA-256 `ad5046c133681bcb7af1523b647854cdb588acab526bb40b8ae34383badb023b`.
+Native source has default and **81 reviewed real cases**: 1–9,
+13–16,47,50–77,81–87,96–99,150–158,161–171,180,200–206.
+Newest C++ states204–206 implement three distinct ground action
+recovery tiers: original zero horizontal/vertical velocity,
+down-input dash cancel with `field015c<3` and respective
+collisionResult thresholds (>=2 vs ==3), meter5/13/25 on
+frame1/1/3, sound21/20, pose10 character sound2 on 206,
+pose<3 collision reset, and standing/crouching completion with
+`FaceOpponent()` and `ResetPose()`. No unrelated Makoto dash-drag
+logic was carried into these original Character04 branches.
 
-Original-bound single-owner audit:
+Original-bound scope:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-Independently validates **8,259 original instruction offsets,
-widths and register-abstracted forms**, **748 native internal and
-93 original shared-return branches**, **751 original COFF
-call/IEEE-754 operands** and two native switch local pointers.
-Every other selected source opcode byte matches. Provisional
-six-byte frame reserves `0x128` instead of complete original
-`0x2E8`; only that immediate, original-bound relocation words and
-still-outbound shared-return JMP displacements are excepted.
-**Next real state204 at `0x0060EE5D`**; 60 real states and
-full native stack/139-entry switch/325 selectors/return remain open.
-This is **selected-prefix only, NOT whole-owner Exact**. Do not
-run all-unit cold replay or accept synthetic marker source.
+It validates **8,587 original x86 instruction positions/widths
+and register-abstracted forms**, **786 native internal and 99
+original shared-return branches**, **760 original-bound COFF
+calls/IEEE-754 operands** and two local switch dispatch pointers.
+Every other selected machine-code byte matches. Only original-
+width provisional stack allocation `0x128` vs native `0x2E8`,
+original-bound COFF fields and the still-outbound shared return
+JMP displacements remain excluded. This remains a **selected
+prefix, NOT a full native Exact**.
+
+**Next real state207 starts at `0x0060F331`**; the other 57
+original live cases, full stack, switch table, selector bytes and
+final return are OPEN. No cold all-unit replay and no acceptance
+of probe marker code.
