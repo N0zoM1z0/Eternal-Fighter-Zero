@@ -531,21 +531,20 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 
 ### Active second large boss: Character04::Slot06 (NOT full Exact)
 
-`workbench/character04-state/Character04State.cpp` has native
-default plus **73 original real live cases** (1–9,13–16,47,50–77,
-81–87,96–99,150–158,161–171) from the 59,143-byte owner.
-The restored 167–171 cover staged impact sprites, resource tint,
-StartTrail(10), saved velocity after hitstop, and separate pose1/2
-effect launches. `check_prefix.py` rigorously validates **28,173
-continuous native bytes / 7,758 x86 instruction forms/widths/offsets**,
-**692 internal and 85 original shared-return branches**, **728
-independently native-bound COFF calls/float refs** and 2 original
-local switch pointers. Only an original-width provisional stack
-immediate `0x128` vs native `0x2E8`, original-bound COFF fields and
-shared-return JMP distance differ. **Next native case180 starts at
-`0x0060E73D`**. Remaining 65 real states and full frame, table and
-return OPEN; selected prefix **NOT whole Exact**. No cold all-unit
-replay or push.
+Real `workbench/character04-state/Character04State.cpp` has native
+default plus **78 physical live cases** in the original 59,143-byte
+owner. New 180/200–203 implement correct landing frame7, original
+input-based attack cancels, frame9/10 markers and native meter gain.
+Selected original-bound `check_prefix.py` verifies **29,997 native
+code bytes / 8,259 original x86 instruction forms/offsets/widths**,
+**748 internal and 93 shared-return branch targets**, **751 native
+bound COFF call/IEEE-754 operands** and two native switch pointers.
+Only the original-width provisional `0x128` stack immediate versus
+native `0x2E8`, original-bound reloc operands and shared-return
+JMP displacements differ. **Next case204 `0x0060EE5D`**; 60
+real states and full native stack/139 table entries/325 selectors/
+return still OPEN. Strict selected-prefix only, NOT whole Exact;
+no cold all-unit replay or push.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is
 now a complete **11-byte native Exact** virtual passive hook,

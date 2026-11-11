@@ -2253,28 +2253,29 @@ Character04 and Kano state-Boss reconstruction.
 
 ### Character04 Slot06: original-bound 59,143-byte state boss workbench
 
-Native `Character04::Slot06` vtable `0x00788B94` selects original
-code `[0x00607930,0x00616037)` of **59,143 bytes**, adjacent 139
-jump-table pointers and 325 selectors (138 live IDs, 187 defaults).
-`workbench/character04-state/Character04State.cpp` now implements
-**73 original real live cases** plus default: 1–9,13–16,47,50–77,
-81–87,96–99,150–158,161–171. New 167–171 include original
-`StartTrail(10)`, two per-pose effects, frozen hit resource transfer,
-full ground impact reset and stored-velocity release. Original case171
-emits effect1 on pose1 and effect4 on pose2, *not* pose0.
+Original Character04 vtable `0x00788B94` selects
+`[0x00607930,0x00616037)` (**59,143 code bytes**), followed
+by 139 native switch pointers and 325 selectors (138 real IDs,
+187 defaults).
 
-Selected native `check_prefix.py` proves **28,173 continuous bytes**
-`[0x00607930,0x0060E73D)`, SHA-256
-`82eb27ca715820c331e1968ab61ba3b159e60c68eae9ff4249d65b2de05811fe`:
-**7,758 original x86 instruction offsets/widths/forms, 692 internal
-+85 shared-return native targets, 728 original-bound COFF calls/
-IEEE-754 words and 2 native local dispatch pointers**. All other
-native code bytes match. Exclusions are limited to the original-width
-six-byte provisional stack immediate `0x128` instead of native
-`0x2E8`, outbound shared-return displacements and independently
-original-bound COFF operand fields. **NOT whole Exact**: 65 original
-live states, full frame, jump table and return remain OPEN.
-Next state180 at `0x0060E73D`. No cold full-unit replay.
+The actual C++ workbench `workbench/character04-state/Character04State.cpp`
+now reconstructs original default plus **78 real live cases**:
+1–9,13–16,47,50–77,81–87,96–99,150–158,161–171,180,200–203.
+New states implement native landing frame7, down-input cancel,
+pose-specific meter/sound, frame9/10 hitmarkers, and no unrelated
+related-character dash momentum logic.
+`check_prefix.py` establishes original-bound selected code range
+`[0x00607930,0x0060EE5D)` **29,997 native bytes**, SHA-256
+`c2a6e55016f6a67f58a6bc554cb34081263cedc8ece4141ad765f277ed3c6f66`:
+**8,259 original x86 instruction widths/offsets/forms, 748
+internal +93 authentic shared-return branches, 751 original-
+bound native COFF call/float sites and two switch/selector pointers**.
+Every other compared opcode byte matches outside exactly the
+provisional original-width stack immediate `0x128` (native `0x2E8`),
+canonical relocation fields and incomplete shared-return JMPs.
+**NOT complete Exact**: remaining 60 original states, full original
+frame and pointer/selector tables and return are open. Next
+state204 at `0x0060EE5D`. No cold full-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

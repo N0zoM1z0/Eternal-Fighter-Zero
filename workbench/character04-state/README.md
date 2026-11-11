@@ -1,9 +1,9 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
-**PARTIAL: not whole-function Exact.** The workbench has original
-default and **73 authentic live cases**, including native 161–171.
-Sixty-five other real states are not yet reconstructed. The probe's
-synthetic markers are compilation aids and never source credit.
+**PARTIAL: not whole-function Exact.** Workbench includes original
+default and **78 real live cases**: 1–9,13–16,47,50–77,81–87,
+96–99,150–158,161–171,180,200–203. Sixty real states still lack
+source; generated probe markers are not accepted reconstruction.
 
 ## Original PE ownership and dispatch
 
@@ -19,37 +19,34 @@ synthetic markers are compilation aids and never source credit.
 
 ## Current audited continuous prefix
 
-`[0x00607930,0x0060E73D)` = **28,173 native code bytes**,
-original SHA-256
-`82eb27ca715820c331e1968ab61ba3b159e60c68eae9ff4249d65b2de05811fe`.
-Source-authored original default plus **73 live cases**: 1–9,
-13–16,47,50–77,81–87,96–99,150–158,161–171.
+Native `[0x00607930,0x0060EE5D)` = **29,997 original code bytes**,
+canonical SHA-256
+`c2a6e55016f6a67f58a6bc554cb34081263cedc8ece4141ad765f277ed3c6f66`.
+Real source now has default and 78 true native live cases.
+The new case180 uses native `StartTrail(2)`, a frame7 landing
+interruption, x87 `positionY+velocityY > 0` condition, and delayed
+−0.5/−1.0/0.028 impulse on frame2 (not the related character's
+frame1/10). Cases200/201 check original down-input cancel and
+pose1-specific meter +5/+15, instead of unrelated dash-deceleration;
+case202 has distinct collisionResult3 and frame9 sound2, and case203
+adds meter35 on pose2 and frame10 sound2, with original timer and
+hit-count reset semantics.
 
-New 167–171 are real source: 167 uses `StartTrail(10)`, combo
-resource transfer, tint, effect1 on pose1 and effect4 on pose2;
-168/169 reset genuine physics and emit a ground effect, returning to
-stand/crouch; 170 stores horizontal/vertical speed at 100x in child
-fields, enters a 60-frame freeze and restores speeds at0.01x;
-171 has the original two effects on *different* frames, and restores
-saved velocity and gravity0.035 at the end. The sibling's pose0
-single-effect branch was proven wrong and corrected by native compare.
-
-Run only the target-scoped strict check:
+Original-bound single-owner audit:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It independently pins **7,758 original x86 instruction
-positions/widths/register-abstracted forms**, **692 original internal
-and 85 shared-return branch targets**, **728 original native COFF
-calls/IEEE-754 operands**, and 2 local selector/jump-table pointers.
-All other selected machine-code bytes match. Candidate six-byte
-frame allocation still uses provisional `0x128` versus full
-native `0x2E8`; exact original-bound COFF operands and unclosed
-shared-return displacements are the only additional exclusions.
-
-**Next original case180 starts at `0x0060E73D`**. The other 65 real
-live cases and full native stack, table and return remain OPEN.
-Selected-prefix proof, **NOT complete Exact**. Never count probe
-marker cases or run full cold all-unit replay.
+Independently validates **8,259 original instruction offsets,
+widths and register-abstracted forms**, **748 native internal and
+93 original shared-return branches**, **751 original COFF
+call/IEEE-754 operands** and two native switch local pointers.
+Every other selected source opcode byte matches. Provisional
+six-byte frame reserves `0x128` instead of complete original
+`0x2E8`; only that immediate, original-bound relocation words and
+still-outbound shared-return JMP displacements are excepted.
+**Next real state204 at `0x0060EE5D`**; 60 real states and
+full native stack/139-entry switch/325 selectors/return remain open.
+This is **selected-prefix only, NOT whole-owner Exact**. Do not
+run all-unit cold replay or accept synthetic marker source.
