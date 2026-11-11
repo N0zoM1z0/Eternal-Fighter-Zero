@@ -16,43 +16,38 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Original [0x00451850,0x0045FCE4): **58,516 / 62,693 code bytes**,
-**16,034 x86 instructions**, SHA-256
-`70732f7eb87ab9be57e4de741db4f3167fc800d548ec96898f425e406134311f`.
-Original default plus **133 live state bodies** now have selected
-original-bound checks. All 137 case IDs exist in authored C++.
+Native [0x00451850,0x00460065): **59,413 / 62,693 original code bytes**,
+**16,275 original x86 instructions**, SHA-256
+`6aec028989229f10eb5fec56e035a4cc60ca59eb9ce9b374a6fda6b8528a0031`.
+Default plus **134 live states** are reviewed, and all 137 original
+case labels exist in the natural workbench source.
 
-State301 (597 bytes) is a full original two-thousand-meter special:
-it zeros motion and gravity on entry, shakes the screen through
-frame2, spends 2000 meter, sets hitstun120 and tint(0xB0,3), and
-emits global type0x45/palette5 at (int X,int Y-40). It enables the
-10-frame input lock from frame2, and at frame4 emits local type0x197
-at X+facing*14, Y-41, using original owner/group/field write order.
-Its frame5 timer shortens by field3148*6.
-
-State302 (608 bytes) spends **3000 meter**, uses global type0x46,
-palette0x40 and local type0x198; additionally sets context sound0x25
-and calls accepted `Context::SetSceneTimer(15)` at 0x004080C0 after
-frame2. Unlike 301, 302 has no 0xF2 input-lock assignment.
-Original direct-call targets and the complete code/branch forms
-were independently bound to EFZ.exe. The prior complete function
-proof remains valid.
+**State303 (897 bytes)** now has original Nayuki C++, not inherited
+Makoto scaffolding: first-tick ResetFrame, frame3 spend 1000 meter,
+hitstun120, tint0xB0 and global 0x44/palette0x13. Frames6/7 zero
+velocity and allow vertical/horizontal motion ±0.5 according to
+`inputX/inputY`; later frames apply gravity and a ground collision
+between frames8–11 skips to frame12. Frame6 emits two local effects
+0x19D and 0x19E at integer X with Y-80/normal Y. Frame8 may loop
+back by two until field3138 reaches 14, then gravity becomes .015;
+frame12 loops back by two. Exit state7 calls FaceOpponent then
+virtual ResetPose. All native call targets and float payloads were
+compared against the original.
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` checks **16,034 original native
-instruction offsets, widths and normalized forms** except temporary
-frame allocation (candidate 0x330, native 0x2B4), **1,500 internal
-branches**, **228 outbound targets**, **1,198 nonlocal original-bound
-COFF call/float references**, 2 switch operands and **133 original
-case destinations**. This is selected-prefix evidence, NOT full Exact.
+Focused pinned VC7.1 `/Od /G6 /MT /Gy /W3` proof verifies **16,275
+same-offset/same-width normalized original x86 instructions**,
+**1,521 internal branches**, **230 outbound branch targets**, **1,217
+nonlocal original-bound COFF call/float references**, two switch
+operands and **134 native case entries**. Partial compiler frame
+0x2F8 vs original 0x2B4; this is NOT full-function Exact.
 
 ## Next state and remaining closure
 
-**State303 at 0x0045FCE4** begins the four unreviewed original bodies
-303–306. The other 133 state cases are original-bound compared.
-**4,177 original code bytes**, full canonical stack, switch DATA,
-remaining relocation bindings and common return are open.
-Continue with original disassembly and focused
-`probe_prefix.py --through 303 --context 12`; no all-unit cold
-replay and no acceptance of unverified inherited source.
+Original **state304 starts 0x00460065**. Three authored but unreviewed
+cases304–306 remain, alongside **3,280 original code bytes**, original
+stack, adjacent 552/306-byte selector data, remaining relocations and
+shared return. Continue focused `probe_prefix.py --through 304`
+and original disassembly, not all-unit cold replay. No whole-game
+runtime claim.

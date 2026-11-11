@@ -7,30 +7,22 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki `Character10::Slot06` remains an unfinished 62,693-byte boss;
-see [focused workbench](../workbench/nayuki-state/README.md).
-Selected native-bound prefix is now **58,516 original bytes /
-16,034 x86 instructions**, default plus **133 reviewed states**.
-Checker: **1,500 internal jumps**, **228 outbound**, **1,198 nonlocal
-COFF call/float references** including canonical `Context::SetSceneTimer`
-at 0x4080C0, two local switch operands. Provisional stack 0x330 vs
-original 0x2B4; NOT whole Exact.
+Nayuki `Character10::Slot06` remains a 62,693-byte unfinished boss.
+Selected original-bound prefix **59,413 bytes / 16,275 instructions**,
+default plus **134 reviewed cases**, with **1,521 internal branches**,
+**230 outbound**, **1,217 nonlocal COFF call/float references**,
+two local switch operands. Partial frame 0x2F8 vs original 0x2B4:
+NOT whole Exact. Focused handoff:
+[`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
 
-States301/302 (597/608 bytes) are reconstructed: 301 consumes 2000
-meter with tint/effects 0x45/0x197, 302 consumes 3000 meter with
-0x46/0x198 and a scene timer; all bound original calls match.
-**Next original state303 at 0x0045FCE4**. Remaining four inherited
-unverified cases303–306, native stack, local DATA and final return.
-
-Selected checks only, no full cold replay:
-
-    git status --short --branch
-    scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 303 --context 12
-    scripts/repo-python scripts/ci.py
-
-Preserve dirty changes, canonical target, VC7.1/Wine/Ghidra and
-accepted source. Commit as `gpt-web: xxx`, no push.
+State303 (897 bytes) was reconstructed with original control-input
+flight and dual local effects, not the inherited random-effect template.
+**Next state304 begins 0x00460065**. States304–306 authored but not
+yet native-reviewed, 3,280 original code bytes, final stack, local
+switch DATA, relocation closure and shared return remain open.
+Only focused compile and `check_prefix.py` / `probe_prefix.py
+--through 304`; do not run all-unit cold replay. Preserve and handle
+dirty edits, commit meaningful progress as `gpt-web: xxx`, no push.
 
 ## Additional newly accepted leaf owners
 
