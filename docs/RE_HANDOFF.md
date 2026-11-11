@@ -462,6 +462,20 @@ Video::DrawSurface). The source multiplication order must be
 moves. Proof: `docs/evidence/character-17-slot01-exact.json`.
 Only this unit was replayed, no full cold replay.
 
+Kano `Character20::Slot01` is also **complete native Exact** in
+`src/Character20Render.cpp`: **1,643 original code bytes, 12
+independently original-bound REL32 calls and zero differences**. The
+natural C++ renders pattern42 fully at charge10000, full pattern43
+and width-clipped pattern44 at intermediate charge, with player-
+specific 49/271 source/destination rectangle geometry and three
+real Video::DrawSurface calls. Original vtable slot0x788C7C and
+all nine MakeSurfaceRect/three DrawSurface native call destinations
+are separately checked. Certificate:
+`docs/evidence/character-20-slot01-exact.json`.
+This complete caller's codegen Exact does not establish the Video
+callee's own Exact status or whole-game runtime equivalence.
+Only selected original one-unit replay, never full cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

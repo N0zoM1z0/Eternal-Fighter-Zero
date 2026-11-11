@@ -2210,6 +2210,33 @@ structural matching only, not accepted complete reconstruction.
 The compiler-register expression ordering and a future full strict
 replay remain open. No all-unit cold replay or fake probe markers.
 
+### Kano Character20 Slot01: 1,643-byte original Exact three-layer gauge renderer
+
+The original Kano `Character20` vtable slot1 at `0x00788C7C`
+identifies the **complete 1,643-byte** original render function
+`[0x00657500,0x00657B6B)`. Authored natural C++ in
+`src/Character20Render.cpp` reconstructs **three independent
+graphical layers**: a full-charge pattern42 when field3150 is10000;
+an intermediate full-size pattern43 for0<field3150<10000;
+and pattern44 clipped to `field3150 * frame.width / 10000` for
+the same intermediate range. Every layer selects original player0
+or player1 source/destination rectangle geometry with 49/271
+alignment and renders the correct indexed `surfaces[frame.texture]`
+with the native colorKey. The `field3150*frame.width` multiplication
+order is required for original VC7.1 register allocation and idiv.
+
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` original-bound **one-unit strict
+replay proves 1,643/1,643 original code bytes, 12 exact native
+COFF REL32 call destinations and zero differences**. Nine independent
+`MakeSurfaceRect` sites original-bind to `0x0040C590`, and three
+`Video::DrawSurface` sites to `0x00409A90`. The real original
+vtable, whole native extent and every native call operand were
+checked prior to Exact registration. Proof:
+`docs/evidence/character-20-slot01-exact.json`.
+The underlying Video callee is not separately accepted; a complete
+Exact render **caller** does not establish whole Windows runtime
+linkage or actual graphics output parity.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

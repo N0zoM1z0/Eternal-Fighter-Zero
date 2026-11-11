@@ -161337,3 +161337,97 @@ type = "REL32"
 symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
 target = 0x00409A90
 evidence = "Canonical EFZ.exe original NayukiB vtable slot 0x00788FBC independently selects complete 1080-byte owner 0x00741680, original REL32 at 0x00741AAF resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90"
+
+[units.character-20-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character20Render.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-20-slot01/Character20Render.obj"
+symbol = "?Slot01@Character20@@UAEXXZ"
+target_address = 0x00657500
+size = 1643
+
+[[units.character-20-slot01.relocations]]
+offset = 89
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x00657559 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original code and call ordering independently reviewed"
+
+[[units.character-20-slot01.relocations]]
+offset = 199
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x006575C7 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original code and call ordering independently reviewed"
+
+[[units.character-20-slot01.relocations]]
+offset = 302
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x0065762E resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original code and call ordering independently reviewed"
+
+[[units.character-20-slot01.relocations]]
+offset = 454
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x006576C6 resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90; original code and call ordering independently reviewed"
+
+[[units.character-20-slot01.relocations]]
+offset = 553
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x00657729 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original code and call ordering independently reviewed"
+
+[[units.character-20-slot01.relocations]]
+offset = 690
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x006577B2 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original code and call ordering independently reviewed"
+
+[[units.character-20-slot01.relocations]]
+offset = 816
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x00657830 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original code and call ordering independently reviewed"
+
+[[units.character-20-slot01.relocations]]
+offset = 992
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x006578E0 resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90; original code and call ordering independently reviewed"
+
+[[units.character-20-slot01.relocations]]
+offset = 1116
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x0065795C resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original code and call ordering independently reviewed"
+
+[[units.character-20-slot01.relocations]]
+offset = 1280
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x00657A00 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original code and call ordering independently reviewed"
+
+[[units.character-20-slot01.relocations]]
+offset = 1458
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x00657AB2 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590; original code and call ordering independently reviewed"
+
+[[units.character-20-slot01.relocations]]
+offset = 1634
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x00657B62 resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90; original code and call ordering independently reviewed"
