@@ -8,35 +8,32 @@ and failed hypotheses. Inspect current Git changes before starting.
 ## Receiving agent — immediate next task (2026-11-11)
 
 Nayuki Character10 Slot06 remains the unfinished **62,693-byte**
-state boss, not full Exact. See the
-[focused workbench handoff](../workbench/nayuki-state/README.md).
-The selected original-bound prefix is **43,407 code bytes / 11,926
-instructions**, original default and **106 reviewed live states**.
-Checker: **1,076 internal branches**, **155 outbound branch targets**,
-**936 original-bound nonlocal COFF call/float references**, two local
-switch operands. Partial stack frame 0x2F0 versus original 0x2B4.
+state boss; not whole-function Exact. See
+[`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
+Strict selected prefix now reaches **44,657 original bytes / 12,270
+instructions**, default and **109 reviewed states**, with **1,112
+internal branches**, **161 original outbound targets**, **962 original-
+bound nonlocal COFF call/float references**, and two switch operands.
+Temporary frame allocation 0x2F0 vs full original 0x2B4.
+States258–260 restore the aerial landing state97, tier sound counter,
+and a 712-byte dynamically tier-scaled airborne launch sequence.
 
-States253–257 now cover the frame4 launches, original effect0x194,
-wall collision and input-cache clearing recovery; state257 invokes
-`Secondary::ClearBufferedButtons` at 0x40F170. Earlier 249–252 also
-replaced nonmatching sibling templates.
+**Next original state261 begins 0x0045C6C1.** Source has 118/137
+live labels (109 reviewed, 9 unverified inherited, 19 missing
+263–281). Full switch tables, remaining relocations and shared return
+remain open, and original stack width has not been matched.
 
-**Next state258 begins 0x0045C1DF.** Workbench has 118/137 original
-live labels: 106 reviewed, 12 existing unreviewed, 19 absent
-IDs 263–281. The full stack, selector DATA, return and remaining
-reloctations are still open. Synthetic markers are NOT real source.
-
-Focused checks, no full all-unit cold replay:
+Run only focused checks; no all-unit cold replay:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 258 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 261 --context 12
     scripts/repo-python scripts/ci.py
 
-Reconcile dirty edits (single writer). Preserve original EFZ.exe,
-pinned VC7.1/Wine/Ghidra and accepted source. Commit substantive
-progress as `gpt-web: xxx`; no push without authorization.
+Preserve all dirty edits, original target, pinned VC7.1/Wine and Ghidra,
+and accepted source. Commit substantive work as `gpt-web: xxx`.
+Do not push without permission.
 
 ## Additional newly accepted leaf owners
 
