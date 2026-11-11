@@ -3489,69 +3489,66 @@ void Character10::Slot06()
         }
         return;
 
-    case 249: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        field013e = 30;
-        (*opponentSlot)->field013e = 30;
-        dashMomentumFlag = 0;
-        if (field000a == 0 && field000c == 0) {
-            velocityX = -2.5;
-            velocityY = -4.5;
-            gravity = 0.045;
-        }
+    case 249: // Reviewed Nayuki 0x0045B3DD: airborne grapple carry and opponent launch
+        if (field000a < 7)
+            SetHorizontalOffset(50, 3);
+        if (field000a < 7)
+            SetHorizontalShake(50, 3);
+        if (field000a == 0 && field000c == 1)
+            (*opponentSlot)->facing = (char)-(int)facing;
         velocityY += gravity;
-        if (field000a < 8) {
-            velocityX += 0.035;
-            if (velocityX > 0.0) {
-                velocityX = 0.0;
-            }
-            (*opponentSlot)->positionY = positionY;
-            (*opponentSlot)->positionX = positionX + (double)((int)facing * 19);
-            if (velocityY + positionY > 0.0) {
-                positionY = 0.0;
-                (*opponentSlot)->positionY = 0.0;
-                (*opponentSlot)->positionX = positionX;
-                field000c = 0;
-                field000a = 8;
-                effect.type = 0;
-                effect.palette = 2;
-                effect.x = (double)(int)positionX;
-                effect.y = (double)(int)positionY;
-                effect.group = 2;
-                effect.layer = 1;
-                contextOwner->EmitEffect(&effect);
-                (*opponentSlot)->ResetPose();
-                (*opponentSlot)->field0008 = 98;
-                return;
-            }
-        }
-        if (field000a == 8 && field000c == 0) {
-            hitstopFrames = 60;
-            (*opponentSlot)->hitstopFrames = 60;
-            ApplyDamage(1100, 500.0);
-        }
-        if (field000a == 9 && field000c == 0) {
-            velocityY = -1.5;
-            velocityX = -1.3;
-            gravity = 0.035;
-        }
-        if (field000a > 9 && positionY + velocityY > 0.0) {
-            ResetPose();
+        if (velocityY + positionY > 0.0 && field000a > 5) {
             ResetFrame();
             positionY = 0.0;
+            ResetPose();
             field0008 = 13;
             return;
         }
+        if (field000a == 1) {
+            (*opponentSlot)->positionY = positionY - 66.0;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 23);
+        }
+        if (field000a == 2) {
+            (*opponentSlot)->positionY = positionY - 69.0;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 21);
+        }
+        if (field000a == 3) {
+            (*opponentSlot)->positionY = positionY - 73.0;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 19);
+        }
+        if (field000a == 4) {
+            (*opponentSlot)->positionY = positionY - 74.0;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 19);
+        }
+        if (field000a == 5) {
+            (*opponentSlot)->positionY = positionY - 71.0;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 17);
+        }
+        if (field000a == 6) {
+            (*opponentSlot)->positionY = positionY - 70.0;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 16);
+        }
+        if (field000a == 7 && field000c == 0) {
+            (*opponentSlot)->facing = facing;
+            (*opponentSlot)->positionY = positionY - 60.0;
+            (*opponentSlot)->positionX = positionX - (double)((int)facing * 37);
+            (*opponentSlot)->field0008 = 63;
+            ApplyDamage(1300, 500.0);
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->knockbackVelocityX = -2.0;
+            (*opponentSlot)->knockbackVelocityY = -1.0;
+        }
+        if (field000a == 11 && field000c == 0)
+            gravity = 0.035;
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a == 3) {
-                (*opponentSlot)->field0008 = 121;
-            }
-            if (field000a >= timing.animationFrameCount) {
+            if (field000a == 11)
+                facing = (char)-(int)facing;
+            if (field000a >= timing.animationFrameCount)
                 field000a = (unsigned short)(field000a - 2);
-            }
         }
         return;
 

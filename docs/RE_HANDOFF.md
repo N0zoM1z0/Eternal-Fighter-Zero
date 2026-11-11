@@ -7,35 +7,33 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki Character10 Slot06 remains the unfinished **62,693-byte**
-native state boss, **not whole-function Exact**. Focused source/handoff:
-[`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
+Nayuki Character10 Slot06 remains the major incomplete 62,693-byte
+state boss, **not complete Exact**. See the focused
+[workbench handoff](../workbench/nayuki-state/README.md).
+Original-bound native prefix is **40,836 bytes / 11,236 instructions**,
+reviewed default and **99 live states**. The checker verifies
+**1,030 internal branches**, **146 canonical outbound destinations**,
+**889 nonlocal COFF call/float references**, and two switch operands.
+Partial frame is now 0x2C0 versus original 0x2B4: still not full
+owner closure. State249 (1,015 bytes) reconstructs complete
+multi-frame opponent carry, 1,300 damage attack and knockback.
 
-The selected original-bound prefix is **39,821 original bytes /
-10,933 instructions**, default plus **98 live cases**, with
-**1,011 original internal branches**, **144 outbound destinations**,
-**872 original-bound nonlocal COFF references** and two local switch
-operands. Partial frame is 0x2A4 versus original 0x2B4.
-Original state248 (498 bytes) now restores Nayuki-specific opponent
-resets, aerial grab impact/positioning and state209 timeout path.
+**Next state250 starts at 0x0045B7D4** and is unreviewed. Source has
+118/137 original labels: 99 reviewed, 19 inherited unreviewed, and
+19 missing (263–281). Full function, switch tables, remaining
+relocations and common return remain open. Marker branches aren't proof.
 
-**Next original state249 at 0x0045B3DD**, first opcode disagreement
-at 0x0045B3E0. Source has 118 of 137 original live states:
-98 reviewed, 20 existing unreviewed and 19 missing IDs 263–281.
-This is a strict prefix, NOT whole Exact; local switch tables, remaining
-relocations, original return and full frame are open.
-
-Only selected checks, **never all-unit cold replay**:
+Selected commands only:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 249 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 250 --context 12
     scripts/repo-python scripts/ci.py
 
-Reconcile every dirty edit; no concurrent writer. Preserve original,
-pinned VC7.1/Wine, Ghidra, accepted source and unfinished workbench.
-Commit substantial progress as `gpt-web: xxx`; never push without permission.
+Reconcile all dirty edits, preserve original/VC7.1/Wine/Ghidra and
+accepted source, and commit useful checkpoints as `gpt-web: xxx`.
+Do not run all-unit cold replay or push without permission.
 
 ## Additional newly accepted leaf owners
 

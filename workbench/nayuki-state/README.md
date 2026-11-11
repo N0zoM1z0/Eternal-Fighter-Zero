@@ -16,45 +16,46 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Reviewed code [0x00451850,0x0045B3DD): **39,821 / 62,693 original code
-bytes** and **10,933 original x86 instructions**, SHA-256:
-b0af53155881577a75fe5c7f8b1348467b19431b610c98bfc38ba298c33d774a.
+Reviewed original [0x00451850,0x0045B7D4): **40,836 / 62,693 code
+bytes** and **11,236 x86 instructions**, SHA-256:
+677a6350127d7f1904d1809c250a32e18d523644c27b6c87e7e964fd1560f02b.
 
-The reviewed default and **98 live states** are 1–9, 13–16, 47,
+The reviewed default and **99 live states** are 1–9, 13–16, 47,
 50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180,
-200–214, 220–221, 230–232 and 248. State248 replaces an inherited
-Makoto throw with Nayuki's original 498-byte aerial grab. It orders
-opponent ResetFrame/ResetPose before own ResetPose/ResetFrame,
-sets opponent state 100 and own state 249, emits an impact at own
-X + facing*33 and own Y - 51, places opponent at own X + facing*33
-and own Y - 61, then continues the standard frame timer rather than
-returning prematurely. On timeout it selects state209 at frame2.
+200–214, 220–221, 230–232 and 248–249. State249 is an authentic
+**1,015-byte airborne grapple follow-through**, not the inherited
+Makoto animation: while frames are <7 it applies horizontal offset and
+shake (50,3), drags opponent Y from own Y minus a 66/69/73/74/71/70
+step sequence and X from own X plus facing times 23/21/19/19/17/16.
+At frame7/tick0 it sets opponent facing, Y = own Y - 60,
+X = own X - facing*37, opponent state63, calls
+`ApplyDamage(1300,500.0)`, resets opponent, and sets original
+knockback (-2,-1). At frame11 it changes gravity to 0.035,
+inverts own facing on transition, and loops late frames by minus two.
+The original floating-point and integer operations, call order and
+branch forms are compared independently.
 
-Reproduce **focused** selected native comparison only:
+Reproduce focused original-bound comparison, never all-unit cold replay:
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` reproduces all **10,933 native
-instruction offsets, widths and normalized opcode forms** except for
-the temporary frame allocation (candidate 0x2A4 vs original 0x2B4).
-Original-bound checks verify **1,011 internal branches**, **144
-outbound destinations**, **872 nonlocal COFF call/IEEE-754 references**,
-2 local switch-table operands and **98 original case destinations**.
-This is selected-prefix proof, NOT full-function Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` reproduces **11,236 native
+instruction offsets, widths and normalized forms** except temporary
+frame allocation (partial candidate 0x2C0 versus original 0x2B4).
+Original-bound checks verify **1,030 internal branches**, **146
+outbound destinations**, **889 nonlocal call/IEEE-754 COFF
+references**, two local switch operands and **99 original cases**.
+This is selected-prefix evidence, not whole-function Exact.
 
-## Next code target and open scope
+## Next original state and open scope
 
-Original state249 begins at **0x0045B3DD**. The current candidate is
-unverified and diverges at **0x0045B3E0** (owner offset 0x9B90):
-original checks frame index against 7, whereas the inherited template
-immediately writes hit invulnerability. Source remains in the workbench.
+State250 begins at **0x0045B7D4**. The sibling-derived candidate is
+still unreviewed; use original disassembly and
+`probe_prefix.py --through 250 --context 12` to advance.
 
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 249 --context 12
-
-**22,872 original code bytes** are open, plus original 0x2B4 full
-stack frame, switch DATA, remaining relocations and shared return.
-The source holds 118 of 137 live IDs: **98 reviewed**, **20 unreviewed**
-and **19 missing 263–281**. The selective probe uses deliberately
-UNACCEPTED neutral markers for other original case IDs and late
-300–306 bodies to retain the VC7.1 prologue. Never claim those
-markers are authentic code. No all-unit cold replay or runtime claim.
+**21,857 code bytes**, complete 0x2B4 original frame, switch DATA,
+remaining relocations and shared return remain open.
+Of 137 live IDs, 118 labels are present: **99 reviewed**, 19 existing
+unreviewed and 19 absent (263–281). The partial probe deliberately
+uses UNACCEPTED neutral markers and late 300–306 scaffolding to keep
+the compiler prologue. Do not treat these as accepted C++.
