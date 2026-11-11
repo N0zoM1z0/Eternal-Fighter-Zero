@@ -1770,28 +1770,30 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano `Character20::Slot06` at vtable `0x00788C90` owns original
-`[0x006429C0,0x006536B5)` (**68,853 code bytes**) and adjacent
-137-word destination / 316-byte selector tables (136 live cases).
-Natural C++ at `workbench/kano-state/Character20State.cpp`
-reproduces `[0x006429C0,0x0064B461)` = **35,489 native code bytes /
-9,734 original x86 instructions**, selected SHA-256
-`99ceeb0cfe0ccd41d52f1aee9a60c8e6ad4f5f1ab236577254cfe39dbb2b8e9a`.
-Original default plus **90 native-reviewed states** through214.
+Original Kano `Character20::Slot06` vtable entry `0x00788C90`
+selects `[0x006429C0,0x006536B5)` of **68,853 native code bytes**
+plus 137 4-byte destination entries and 316 selector bytes
+(136 live,180 default). Partial C++ in `workbench/kano-state/`
+strictly reproduces `[0x006429C0,0x0064B6F9)` = **36,153 native
+bytes / 9,919 original x86 instructions**, SHA-256
+`58c95ff05ba4c1ab3f958141eed76816621bdc1dfb043a12725a69e8f40d70f6`.
+Original default and **92 live cases** through state217 reviewed.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected verifier checks
-**9,734 native instruction offsets, lengths and forms**, **916
-internal and 120 outbound canonical branch targets**, **813
-original-bound external COFF calls/IEEE-754 operands**, plus two
-local switch pointers. Both state213 (30°,2.2) and 214 (45°,1.7)
-invoke exact original helper `?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z`
-(0x00434010) on the original receiver at `&field0008`, and preserve
-native frame3/polar, frame5 loop, landing and virtual call order.
-Incomplete candidate frame0x120 vs original0x4A4 has the same six-
-byte instruction length. This is only a SELECTED PREFIX, NOT whole
-Exact. Remaining 46 live case bodies and full stack/tables/return
-remain open. **Next state220 begins 0x0064B461**. No full cold replay
-or synthetic case acceptance.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` checker confirms **9,919 native
+instruction offsets/forms/widths**, **936 internal and 123 outbound
+canonical branches**, **828 original-bound COFF calls/float operands**
+and two local switch pointers. Candidate stack0x120 vs original0x4A4
+uses the same six-byte allocation width, no position adjustment.
+This is SELECTED PREFIX, NOT full owner Exact: 44 unreviewed cases,
+full original frame, switch tables, remaining relocs and return open.
+
+Case215 (373 bytes) implements original polar angle60°, speed1.5,
+frame5 loop and ground early exit; case217 (291 bytes) implements
+positive dash friction0.03, frame4 attack and frame6 collision gate.
+Original physical case order includes 215 at `0x64B461` and 217
+at `0x64B5D6`, while 216/218/219 map to default. **Next real
+case220 at `0x0064B6F9`**. No cold all-unit replay or fake marker
+case acceptance.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 

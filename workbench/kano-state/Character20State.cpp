@@ -3161,5 +3161,66 @@ void Character20::Slot06()
         }
         return;
 
+    case 215: // Native-reviewed Kano 0x0064B461: native aerial bounce and polar-velocity hit
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a == 1 && field000c == 0)
+            remainingHitCount = 1;
+        if (positionY + velocityY >= 0.0 && field000a < 5) {
+            positionY = 0.0;
+            ResetFrame();
+            field000c = 0;
+            field000a = 5;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1)
+                attackCollisionResult = 0;
+            if (field000a == 3)
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(60.0,1.5);
+            if (field000a == 5)
+                field000a = (unsigned short)(field000a - 2);
+            if (field000a >= timing.animationFrameCount) {
+                ResetPose();
+                field0008 = 7;
+                FaceOpponent();
+            }
+        }
+        return;
+
+    case 217: // Native-reviewed Kano 0x0064B5D6: momentum-friction frame4 grounded strike
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (field000a == 4 && field000c == 0) {
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 6)
+                attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

@@ -7,33 +7,33 @@
 `[0x006538D9,0x00653A15)` (316 bytes). Original selector holds
 **136 live cases and 180 default IDs**.
 
-Original default plus **90 native-reviewed live states** are now
-authored through state214. The continuous canonical code
-`[0x006429C0,0x0064B461)` is **35,489 native bytes / 9,734
-original x86 instructions**, SHA-256
-`99ceeb0cfe0ccd41d52f1aee9a60c8e6ad4f5f1ab236577254cfe39dbb2b8e9a`.
-Next live original state220 starts at **`0x0064B461`**.
+The Kano `Character20State.cpp` partial natural C++ now has original
+default plus **92 native-reviewed live cases** through 217.
+Selected original code `[0x006429C0,0x0064B6F9)` is **36,153 bytes /
+9,919 x86 instructions**, original-bound SHA-256
+`58c95ff05ba4c1ab3f958141eed76816621bdc1dfb043a12725a69e8f40d70f6`.
+Next **physical original case220** starts at `0x0064B6F9`.
+Original live case215 at `0x0064B461` and217 at `0x0064B5D6`
+were recovered; 216/218/219 are default IDs.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected code verifier checks
-**9,734 original instruction positions/widths/normalized forms**,
-**916 original internal and 120 outbound jump targets**, **813
-nonlocal original-bound COFF call/IEEE-754 operands**, plus two
-original local switch address references. The completed exact callee
-`SecondaryEffectSlot::SetVelocityPolar` at **0x00434010** is now
-original-bound in both newly authored native case bodies. The
-incomplete source frame0x120 differs from original0x4A4 but has
-the same six-byte allocation opcode; no position shifts are allowed.
-**46 case bodies**, full native stack, switch DATA and return remain
-OPEN: this is a SELECTED PREFIX, NOT full-function Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` checker verifies **9,919
+original native instruction offsets/widths/forms**, **936 internal
+and 123 outbound original branch targets**, **828 original-bound
+nonlocal COFF calls/IEEE-754 operands** and both native original
+switch pointers. Candidate frame0x120 differs from canonical0x4A4
+but has a same-width six-byte allocation instruction; no position
+normalization. Strict selected-prefix proof ONLY, NOT full Exact.
+The **44 remaining live bodies**, canonical stack, original local
+switch DATA, other relocations and common return are unresolved.
+Unaccepted probe marker cases do not count as original source.
 
-Newly recovered states213 and214 are separate **373-byte original
-polar-launch sequences**. They start with X/Y motion reset and one
-hit on frame1, detect early ground contact and skip to frame5;
-at frame3 they call the already exact member helper with original
-parameters **(30.0°,2.2)** for state213 and **(45.0°,1.7)** for214.
-On frame5 they loop back two poses, then perform the original
-virtual ResetPose, set state7 and FaceOpponent call ordering. All
-native x87 constants and direct REL32 helper targets are reviewed.
+State215 (373 bytes) uses `SecondaryEffectSlot::SetVelocityPolar`
+with authentic **(60°,1.5)** and repeats frame5->3, preserving the
+original ground early landing and virtual pose/face return. State217
+(291 bytes) handles actual dashMomentumFlag-dependent horizontal
+friction0.03, frame4 sound20/one hit, collision clear below frame6,
+and state0/FaceOpponent/ResetPose completion. These were compared
+at every original opcode/branch/reference position, not inherited.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -53,8 +53,8 @@ Run ONLY focused checks, not full cold replay:
     scripts/repo-python workbench/kano-state/probe_prefix.py --through 220 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case220 `0x0064B461`**. Original
-0x4A4 frame, 46 unverified native cases, local switch DATA,
+Next work begins at **Kano case220 `0x0064B6F9`**. Original
+0x4A4 frame, 44 unverified native cases, local switch DATA,
 shared return and complete relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.

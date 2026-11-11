@@ -33,24 +33,23 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-The original 68,853-byte Kano state boss is being reconstructed in
-`workbench/kano-state/Character20State.cpp`. Strict original-bound
-selected opening now covers **35,489 native code bytes / 9,734 x86
-instructions**, original default and **90 reviewed live cases**.
-Verification audits **916 original internal and 120 outbound branches**,
-**813 original-bound nonlocal COFF call/IEEE-754 references** and
-both native local switch pointers. Original helper
-`SecondaryEffectSlot::SetVelocityPolar` at **0x00434010**, already
-accepted Exact, is independently bound in the newly restored 213/214
-original polar launchers, parameters (30°,2.2) and (45°,1.7).
-**Next original state220 at `0x0064B461`**.
+Kano original Slot06 is a **68,853-byte native boss**, actively
+restored in `workbench/kano-state/Character20State.cpp`. Strict
+original-bound selected prefix **36,153 bytes / 9,919 x86
+instructions**, original default plus **92 reviewed live cases**.
+The selected checker independently audits **936 internal and 123
+outbound original branches**, **828 original-bound nonlocal COFF
+call/float operands**, plus both switch-address references.
 
-The incomplete compiler stack0x120 vs native0x4A4 uses the same
-six-byte prologue instruction, with no offset normalization. **46
-remaining live original cases**, complete native stack, adjacent
-switch tables, remaining relocs and common return are open. This is
-NOT whole-function Exact; generated marker case branches never count.
-Only scoped original verification, no all-unit cold replay or push.
+Crucial physical case correction: **215 starts 0x0064B461** and
+**217 starts 0x0064B5D6**; 216,218,219 are default. Both are now
+native-authored and verified, including accepted polar helper at
+`0x00434010` with (60°,1.5) in 215. **Next original case220 starts
+0x0064B6F9**. Current candidate stack0x120 vs original0x4A4 is a
+same-width opcode, with no position normalization. **44 remaining
+live case bodies**, full stack, local switch DATA, relocations and
+shared return are open. NOT full Exact; generated marker cases have
+zero credit. Never run all-unit cold replay or push.
 
 ## Additional newly accepted leaf owners
 
