@@ -111,6 +111,6 @@ def main():
     print(f'Kano Slot06: {len(prefix)} / {CODE_SIZE} native code bytes; 102 real states + default, NO complete Exact.')
     print('native instructions',len(target),'internal branches',internal,'outbound targets',outbound)
     print('original-bound external/float operands',n-len(local_refs),'local switch address operands',len(local_refs),'distinct symbols',len(refs))
-    print('native frame 0x4A4 vs incomplete candidate 0x148; full local data, return and other 34 state bodies OPEN.')
+    print('native frame 0x4A4 vs incomplete candidate 0x148; full local data, return and 34 later non-Exact states OPEN.')
 
 if __name__=='__main__':main()

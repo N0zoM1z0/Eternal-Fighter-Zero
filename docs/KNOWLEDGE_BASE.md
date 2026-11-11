@@ -2189,6 +2189,27 @@ return jump closure; it is not counted in this proof. These are
 structural islands only; **NOT full-owner Exact**. The strict Kano
 prefix remains 40,336 bytes pending original case250.
 
+#### Kano Slot06 complete 136-case structural reconstruction (NOT Exact)
+
+Natural `workbench/kano-state/Character20State.cpp` now implements
+**every one of 136 native live case IDs**. The pinned native VC7.1
+compile reserves the original **0x4A4** frame and produces **68,853
+code bytes + 548 native pointer-table bytes + 316 selector bytes**.
+The independent original-bound `check_full_shape.py` verifies **all
+18,634 native x86 instruction offsets/widths/abstracted forms, 1,810
+relative branch targets, 1,271 original direct-call/float COFF
+operands and 139 local switch/dispatch relocations**. Every table
+pointer resolves to the original selector target, and all **316
+selector bytes** match original exactly.
+
+**No full Exact claim:** **125 non-relocation code bytes** remain
+concretely different within **123 x86 instructions** of native
+cases250 (17), 251 (79), 254 (27). The strict original-bound
+continuous prefix remains **40,336 bytes**; the rest is full-source
+structural matching only, not accepted complete reconstruction.
+The compiler-register expression ordering and a future full strict
+replay remain open. No all-unit cold replay or fake probe markers.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

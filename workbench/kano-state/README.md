@@ -21,7 +21,7 @@ Pinned VC7.1 `/Od /G6 /MT /Gy /W3` strict selected checker verifies
 two local switch table references. The incomplete candidate uses
 stack0x148 versus original0x4A4, both six-byte allocations with no
 position normalization. This is a strict selected prefix, **NOT full
-Exact**: **34 missing real state bodies**, the canonical complete
+Exact**: **34 later non-Exact state bodies**, the canonical complete
 stack frame, adjacent native switch DATA, remaining relocations and
 shared return still need verification. Neutral probe case markers
 are not accepted as authored source.
@@ -40,6 +40,42 @@ frame>5, doing own ResetFrame, zeroing Y, virtual own ResetPose,
 then switching to state13. Animation end repeats the last two frames.
 The full code path, direct call targets and canonical IEEE-754 values
 match in selected VC7.1 native comparison.
+
+### Full 136-case native structural audit — NOT whole Exact
+
+All **136 original live state IDs**, including the previously missing
+last case316, are now real hand-authored C++ cases in
+`Character20State.cpp`. The selector table contains 180 other IDs
+mapping to native default; generated neutral marker bodies are **not**
+part of this full source. The new complete candidate compiles under
+pinned VC7.1 `/Od /G6 /MT /Gy /W3` to the **original 0x4A4 stack
+frame**, **68,853 code bytes** followed by **548 bytes of 137
+native switch entries** and **316 selector bytes** (total **69,717**).
+
+Run only the **one-owner scoped checker**, never full cold replay:
+
+    scripts/repo-python workbench/kano-state/check_full_shape.py
+
+The checker original-binds and verifies all **18,634 original x86
+instruction offsets, widths and register-abstracted forms**, **1,810
+exact native relative branch targets**, **1,271 original COFF external
+calls/IEEE-754 references**, all **139 original local target-address
+relocations** (two dispatch pointers plus all 137 native table
+entries), **316 byte-for-byte identical switch selector data**, and
+the original full stack allocation. The original contiguous selected
+strict prefix through case249 remains **40,336 bytes**.
+
+**Not full Exact:** the comparison deliberately reports **125 still
+unmatched non-relocation code bytes**, corresponding to **123
+concrete-register instruction mismatches** entirely in original
+cases **250 (17), 251 (79), and 254 (27)**. All other code bytes
+match except unresolved COFF relocation sites, whose targets are
+independently original-bound by this checker. No mismatches are
+masked away or claimed as Exact. The next task is to change natural
+C++ expressions to reproduce the original VC7.1 scratch-register
+phase across cases250/251/254 without modifying already verified
+instructions. After that a separate strict full-byte oracle receipt
+would still be required to accept whole-function Exact.
 
 ### Experimental case257 — 899-byte native finisher, unaccepted island
 

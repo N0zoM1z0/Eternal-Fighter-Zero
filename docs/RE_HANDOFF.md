@@ -319,6 +319,28 @@ needs a real following case313. This is **NOT full Exact** and does
 not advance the strict original-bound 40,336-byte Kano prefix.
 No all-unit cold replay was run.
 
+### Kano Slot06 136-case full native shape milestone (not Exact)
+
+**All 136 native live cases are now source-authored**, not generated
+neutral markers; state316 ends in the canonical shared return.
+`workbench/kano-state/check_full_shape.py` compiles the whole one
+function with pinned VC7.1 and original-binds **68,853 code bytes,
+548 table bytes, 316 selectors**, the original **0x4A4 stack**, all
+**18,634 x86 instruction positions/widths/register-abstracted forms**,
+**1,810 native branch targets**, **1,271 direct-call/float COFF
+operands**, and **139 native-local address relocations**. The 316
+selector bytes are byte-for-byte identical; all 137 original
+switch destinations match native local symbol offsets.
+
+**Not whole-function Exact:** **125 unmasked concrete opcode bytes**
+remain different, concentrated in cases250/251/254 (123 instructions).
+No byte substitution/masking or false accepted source receipt.
+`check_prefix.py` still proves the earlier **40,336 original
+byte** strict selected prefix; full-shape progress is separate. The
+next priority is the register-allocation phase around state250, then
+complete strict full original-bound replay. Do not run cold all-unit
+replay, do not push.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++
