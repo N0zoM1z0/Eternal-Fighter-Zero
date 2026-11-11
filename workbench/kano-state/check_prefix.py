@@ -14,8 +14,8 @@ from native_build import compile_source
 from coff import object_function
 from probe_prefix import BASE,CODE_SIZE,PROBE,OBJECT,disasm,normalized,make_source
 
-END=0x0064BA44 # original first instruction of state230
-NATIVE_CODE_SHA="1f758ffc2edf8a43b932af3ec38b959060d45503cee4152be367ba132a0e7349"
+END=0x0064BECA # original first instruction of state233
+NATIVE_CODE_SHA="e790ad12a48cb8263f331204afbecf7d29f12d45ccccffb07e156023a20e321b"
 CALLS={
 '??0EffectSpawn@@QAE@XZ':0x00405490,
 '?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z':0x00413090,
@@ -36,10 +36,10 @@ def main():
     assert struct.unpack('<I',target_bytes(image,0x00788C90,4))[0]==BASE
     prefix=target_bytes(image,BASE,END-BASE)
     original=target_bytes(image,BASE,CODE_SIZE)
-    assert len(prefix)==36996 and len(original)==68853
+    assert len(prefix)==38154 and len(original)==68853
     assert hashlib.sha256(prefix).hexdigest()==NATIVE_CODE_SHA
-    used=make_source(221)
-    assert used==set(range(1,10))|{13,14,15,16,47}|set(range(50,78))|set(range(81,88))|set(range(96,100))|set(range(150,159))|set(range(161,172))|{178,180}|set(range(200,216))|{217,220,221},used
+    used=make_source(232)
+    assert used==set(range(1,10))|{13,14,15,16,47}|set(range(50,78))|set(range(81,88))|set(range(96,100))|set(range(150,159))|set(range(161,172))|{178,180}|set(range(200,216))|{217,220,221,230,231,232},used
     try:
         compile_source(PROBE,OBJECT,['/Od','/G6','/MT','/Gy','/W3'],
                        ROOT/'.analysis/build/kano-state-selected-prefix.log')
@@ -52,7 +52,7 @@ def main():
     assert compiled[2][2]=='sub esp,0x130'
     assert target[2][0]==compiled[2][0]==3
     # The real full boss reserves 0x4A4 of local stack. The incomplete
-    # candidate currently reserves 0x90; both prologues use the same six-byte
+    # candidate currently reserves 0x130; both prologues use the same six-byte
     # immediate form, so no position normalization is needed now.
     shift=len(target[2][1])-len(compiled[2][1])
     assert shift==0
@@ -62,7 +62,7 @@ def main():
         assert len(a[1])==len(b[1]),(i,a,b)
         assert normalized(a[2])==normalized(b[2]),(i,a,b)
     assert compiled[len(target)][0]+shift==len(prefix)
-    assert len(target)==10146,len(target)
+    assert len(target)==10466,len(target)
 
     original_pos={x[0]:i for i,x in enumerate(target)}
     compiled_pos={x[0]:i for i,x in enumerate(compiled)}
@@ -79,12 +79,12 @@ def main():
             internal+=1
             assert original_pos[dst]==compiled_pos.get(local),(a,b)
         else:outbound+=1
-    assert (internal,outbound)==(949,125),(internal,outbound)
+    assert (internal,outbound)==(985,130),(internal,outbound)
     refs=defaultdict(set);local_refs={};n=0
     for r in rels:
         off=r['offset']
-        # Compiler's first two dispatch relocations are located after the
-        # 3-byte-shorter stack instruction; no padding/field masking.
+        # Every reviewed COFF offset must align to the same original code
+        # position: incomplete and canonical frame instructions are same-width.
         actual_off=off+shift
         if actual_off>=len(prefix):continue
         assert actual_off+4<=len(prefix),(r,hex(actual_off))
@@ -105,10 +105,10 @@ def main():
             refs[(symbol,r['type'])].add(dest)
     assert local_refs=={0xA1:0x006538D9,0xA8:0x006536B5},local_refs
     assert all(len(values)==1 for values in refs.values()),refs
-    assert n==849 and len(refs)==75 and len(local_refs)==2,(n,len(refs),len(local_refs))
-    print(f'Kano Slot06: {len(prefix)} / {CODE_SIZE} native code bytes; 94 real states + default, NO complete Exact.')
+    assert n==867 and len(refs)==75 and len(local_refs)==2,(n,len(refs),len(local_refs))
+    print(f'Kano Slot06: {len(prefix)} / {CODE_SIZE} native code bytes; 97 real states + default, NO complete Exact.')
     print('native instructions',len(target),'internal branches',internal,'outbound targets',outbound)
     print('original-bound external/float operands',n-len(local_refs),'local switch address operands',len(local_refs),'distinct symbols',len(refs))
-    print('native frame 0x4A4 vs incomplete candidate 0x120; full local data, return and other 42 state bodies OPEN.')
+    print('native frame 0x4A4 vs incomplete candidate 0x130; full local data, return and other 39 state bodies OPEN.')
 
 if __name__=='__main__':main()

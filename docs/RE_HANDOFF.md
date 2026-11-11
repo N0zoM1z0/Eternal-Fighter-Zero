@@ -33,27 +33,24 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano's 68,853-byte native state machine is under active natural C++
-reconstruction at `workbench/kano-state/Character20State.cpp`.
-Selected original-bound prefix is now **36,996 code bytes /
-10,146 native x86 instructions** with default and **94 reviewed live
-states**. Strict checker verifies **949 internal and 125 outbound
-original branches**, **847 nonlocal original-bound COFF call/float
-operands** and two original switch table pointers.
+Original Kano state boss is **68,853 native code bytes**, actively
+recovered in `workbench/kano-state/Character20State.cpp`. Strict
+selected prefix **38,154 original code bytes / 10,466 native x86
+instructions**, default and **97 reviewed live cases** through232.
+The original-bound checker verifies **985 internal and 130 outbound
+branch targets**, **865 nonlocal bound COFF calls/IEEE-754 refs** and
+both native local switch table address references.
 
-Case220 (476 bytes) is a real grounded opponent grab with both-fighter
-state changes and original effect at facing*35,Y=-52. Case221
-(367 bytes) is the follow-through, with 30 opponent hitstop, stage
-impact effect and reviewed `Secondary::ApplyDamage(1000,750.0)`
-at 0x004105A0, then opponent state63 with X/Y knockback (-2,-1.5).
-**Next native case230 starts at `0x0064BA44`.**
-
-Partial compiler stack0x130 vs canonical0x4A4 shares six-byte
-instruction width, no offset normalization. **42 remaining original
-live cases**, full stack, local switch DATA, remaining relocations
-and return are OPEN. This is **NOT full Exact**. The diagnostic probe
-creates neutral markers but they never receive reconstruction credit.
-Only targeted checks; no all-unit cold replay or remote push.
+States230 (284 bytes), 231 (437 bytes), 232 (437 bytes) now restore
+Kano's grounded trail/friction attacks and directional jump cancel,
+with frame1/4/2 activation, original hit/sound gates and differing
+collision-reset thresholds. **Next original state233 at
+`0x0064BECA`**. Compiler partial stack0x130 vs native0x4A4 has
+same 6-byte instruction width, with no positional adjustment.
+**39 native cases**, full original stack, native selector DATA,
+remaining relocations and common return are OPEN; NOT whole Exact.
+Only scoped selected checks, no all-unit cold replay or push.
+Diagnostic markers do not count as authored cases.
 
 ## Additional newly accepted leaf owners
 
