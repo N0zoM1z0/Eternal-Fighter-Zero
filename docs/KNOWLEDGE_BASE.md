@@ -1727,6 +1727,40 @@ jump destinations before complete byte checks. Canonical evidence:
 checks neither refresh unrelated stale certificates nor imply full
 linked/runtime equivalence; no full cold replay was run.
 
+### Kano Character20 lifecycle and local effect management: five Exact owners
+
+The canonical `Character20` vtable at `0x00788C78` selects five
+new original-owner complete implementations in
+`src/Character20Lifecycle.cpp`. The pinned VC7.1
+`/Od /G6 /MT /Gy /W3` selected original-bound strict oracle matched
+**617/617 complete native bytes**, with **five original REL32 base
+calls** and **zero differences**:
+
+| Kano owner | Original address | Exact code bytes |
+| --- | --- | ---: |
+| InitializeState | `0x00653C30` | 413 |
+| ResetPose | `0x00653DD0` | 58 |
+| RemoveLocalEffect | `0x00653E10` | 80 |
+| Slot03 | `0x00653E60` | 19 |
+| EmitLocalEffect | `0x00657E70` | 47 |
+
+InitializeState resets fifteen child integer fields at offsets
+`0x3138..0x3170`, writes the five original X/Y collision offsets
+(-4,-57), (18,0), (21,-12), (18,-15), (38,-39), zeros three
+64-int local-effect arrays `field3174`/`field3274`/`field3374`, and
+calls `Secondary::InitializeState` at `0x40EDF0`. ResetPose clears
+three child integers then calls `Secondary::ResetPose` (`0x40F110`).
+RemoveLocalEffect clears the signed-short index in all three child
+arrays before base `RemoveLocalEffect` (`0x412E60`). Slot03 delegates
+to `Secondary::UpdateLocomotionState` (`0x40E740`). EmitLocalEffect
+calls virtual RemoveLocalEffect on `effectWrite`, then the base
+emitter at `0x412B10`. Canonical vtable slots, the five complete
+owner boundaries and every direct call destination were checked.
+
+Evidence: `docs/evidence/character-20-lifecycle-exact.json`.
+Selected codegen Exact does not establish whole-game linkage,
+original compilation partition or runtime equivalence.
+
 ### Kano constructor: complete exact code generation (2026-11-09)
 
 `Character20::Character20` at `0x00653A20` now has a reviewed natural

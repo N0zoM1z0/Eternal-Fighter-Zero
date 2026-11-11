@@ -160331,3 +160331,88 @@ type = "DIR32"
 symbol = "$L62308"
 target = 0x004518FD
 evidence = "Native EFZ.exe at 0x00460F59 references exact internal code/table label at 0x004518FD (compiled offset 173)"
+
+[units.character-20-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character20Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-20-initialize-state/Character20Lifecycle.obj"
+symbol = "?InitializeState@Character20@@UAEXXZ"
+target_address = 0x00653C30
+size = 413
+
+[[units.character-20-initialize-state.relocations]]
+offset = 405
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "EFZ.exe original Kano vtable 0x00788CA8 selects complete 413-byte 0x00653C30 owner; original REL32 at 0x00653DC5 resolves reviewed ?InitializeState@Secondary@@UAEXXZ at 0x0040EDF0"
+
+[units.character-20-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character20Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-20-reset-pose/Character20Lifecycle.obj"
+symbol = "?ResetPose@Character20@@UAEXXZ"
+target_address = 0x00653DD0
+size = 58
+
+[[units.character-20-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "EFZ.exe original Kano vtable 0x00788C78 selects complete 58-byte 0x00653DD0 owner; original REL32 at 0x00653E02 resolves reviewed ?ResetPose@Secondary@@UAEXXZ at 0x0040F110"
+
+[units.character-20-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character20Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-20-remove-local-effect/Character20Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character20@@UAEXF@Z"
+target_address = 0x00653E10
+size = 80
+
+[[units.character-20-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "EFZ.exe original Kano vtable 0x00788CA0 selects complete 80-byte 0x00653E10 owner; original REL32 at 0x00653E56 resolves reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x00412E60"
+
+[units.character-20-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character20Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-20-slot03/Character20Lifecycle.obj"
+symbol = "?Slot03@Character20@@UAEXXZ"
+target_address = 0x00653E60
+size = 19
+
+[[units.character-20-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "EFZ.exe original Kano vtable 0x00788C84 selects complete 19-byte 0x00653E60 owner; original REL32 at 0x00653E6B resolves reviewed ?UpdateLocomotionState@Secondary@@QAEXXZ at 0x0040E740"
+
+[units.character-20-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character20Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-20-emit-local-effect/Character20Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character20@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x00657E70
+size = 47
+
+[[units.character-20-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "EFZ.exe original Kano vtable 0x00788C9C selects complete 47-byte 0x00657E70 owner; original REL32 at 0x00657E95 resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10"

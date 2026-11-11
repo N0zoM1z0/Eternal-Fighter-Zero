@@ -438,3 +438,8 @@ address,end,size,status,evidence
 0x00677E10,0x00677E1B,11,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact
 0x00677E20,0x00677E2B,11,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact
 0x00677E30,0x00677E5F,47,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact
+0x00653C30,0x00653DCD,413,reviewed,docs/KNOWLEDGE_BASE.md#kano-character20-lifecycle-exact
+0x00653DD0,0x00653E0A,58,reviewed,docs/KNOWLEDGE_BASE.md#kano-character20-lifecycle-exact
+0x00653E10,0x00653E60,80,reviewed,docs/KNOWLEDGE_BASE.md#kano-character20-lifecycle-exact
+0x00653E60,0x00653E73,19,reviewed,docs/KNOWLEDGE_BASE.md#kano-character20-lifecycle-exact
+0x00657E70,0x00657E9F,47,reviewed,docs/KNOWLEDGE_BASE.md#kano-character20-lifecycle-exact

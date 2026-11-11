@@ -59,6 +59,13 @@ four base-method calls were independently verified, with strict
 selected receipts at `docs/evidence/character-19-lifecycle-exact.json`.
 No full all-unit cold replay was run; no whole-game claim.
 
+Kano `Character20` now additionally has **five complete native Exact
+lifecycle/local-effect owners / 617 code bytes** in
+`src/Character20Lifecycle.cpp`, including a 413-byte initializer
+and five independently reviewed original vtable/call bindings.
+Evidence: `docs/evidence/character-20-lifecycle-exact.json`.
+Only those five units were replayed, not an all-unit cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

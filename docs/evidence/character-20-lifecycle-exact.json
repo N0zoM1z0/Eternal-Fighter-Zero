@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "authority": "Five complete canonical Kano Character20 lifecycle/effect owners selected by original EFZ.exe vtable 0x00788C78 with original owner extents and base-method calls reviewed",
+  "method": "Five ordinary authored C++ functions in src/Character20Lifecycle.cpp compiled with pinned VC7.1 /Od /G6 /MT /Gy /W3. The selected only strict native oracle independently validates exactly five original vtable target addresses, five original REL32 base method displacements and all 617 original code bytes, with no masks or partial body comparison. Does not establish game-wide linkage/runtime equivalence, and no all-unit cold replay was performed.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 413,
+      "matched_bytes": 413,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 405,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "EFZ.exe original Kano vtable 0x00788CA8 selects complete 413-byte 0x00653C30 owner; original REL32 at 0x00653DC5 resolves reviewed ?InitializeState@Secondary@@UAEXXZ at 0x0040EDF0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a18a08b9bbe27ce058d11eed5731a7b34c6b1fc0f16b05afd1efbd116fe08590",
+      "target_extent_sha256": "a18a08b9bbe27ce058d11eed5731a7b34c6b1fc0f16b05afd1efbd116fe08590",
+      "unit": "character-20-initialize-state",
+      "symbol": "?InitializeState@Character20@@UAEXXZ",
+      "target_address": "0x00653C30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d715c7e4a1286ab7e5ee921b411aff132256161cef846f1f918cdfd16e2067f8",
+      "object_sha256": "008fca5fca279448ea81effb6ba288253e426e7965f0beb0dd763a111a3f3ae6",
+      "source_sha256": "b060061d91138339bbe15a6e1be33b59263c85d890db231e465d140529a45054",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e06df215690f543c5f9ffa0430123e91d1620a4c3f7dbf71e5318ed5ad072051",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e7b77a31f7753626059ec70dc93e483f46a190c82413721ff9cd2f779195382e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "EFZ.exe original Kano vtable 0x00788C78 selects complete 58-byte 0x00653DD0 owner; original REL32 at 0x00653E02 resolves reviewed ?ResetPose@Secondary@@UAEXXZ at 0x0040F110",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "42ac1bd9bc17ad2c81147cea529257afbfb4c210ef6a4cdd5ef4b6db7136e41b",
+      "target_extent_sha256": "42ac1bd9bc17ad2c81147cea529257afbfb4c210ef6a4cdd5ef4b6db7136e41b",
+      "unit": "character-20-reset-pose",
+      "symbol": "?ResetPose@Character20@@UAEXXZ",
+      "target_address": "0x00653DD0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d715c7e4a1286ab7e5ee921b411aff132256161cef846f1f918cdfd16e2067f8",
+      "object_sha256": "d4e8d3a5e54313b39ee43cb3c0c26b86294b842e787edab1e74c6c8aaf64ab6d",
+      "source_sha256": "b060061d91138339bbe15a6e1be33b59263c85d890db231e465d140529a45054",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e06df215690f543c5f9ffa0430123e91d1620a4c3f7dbf71e5318ed5ad072051",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "1e0e0c75729358a7c5d290eccfc5554f76b040acd80f5c5cc2f3f4e66c91786a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "EFZ.exe original Kano vtable 0x00788CA0 selects complete 80-byte 0x00653E10 owner; original REL32 at 0x00653E56 resolves reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x00412E60",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "ae883a748d5cd43ea387bc700cdf8bc427f2fe684871afa49c533c9402d1039b",
+      "target_extent_sha256": "ae883a748d5cd43ea387bc700cdf8bc427f2fe684871afa49c533c9402d1039b",
+      "unit": "character-20-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character20@@UAEXF@Z",
+      "target_address": "0x00653E10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d715c7e4a1286ab7e5ee921b411aff132256161cef846f1f918cdfd16e2067f8",
+      "object_sha256": "f106c34c03b0c519b505de40bcaeeaf74e9190e59b98e479d441899fa035134c",
+      "source_sha256": "b060061d91138339bbe15a6e1be33b59263c85d890db231e465d140529a45054",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e06df215690f543c5f9ffa0430123e91d1620a4c3f7dbf71e5318ed5ad072051",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "435fa335897d858fcb1ad63ce83ac7756c6285ca8bd28c2336483df1322ae176",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original Kano vtable 0x00788C84 selects complete 19-byte 0x00653E60 owner; original REL32 at 0x00653E6B resolves reviewed ?UpdateLocomotionState@Secondary@@QAEXXZ at 0x0040E740",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "212c2fb11040e9ff40b0cddf2b22b0a672aa635b1f2b97c5d26473c13fb17cc0",
+      "target_extent_sha256": "212c2fb11040e9ff40b0cddf2b22b0a672aa635b1f2b97c5d26473c13fb17cc0",
+      "unit": "character-20-slot03",
+      "symbol": "?Slot03@Character20@@UAEXXZ",
+      "target_address": "0x00653E60",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d715c7e4a1286ab7e5ee921b411aff132256161cef846f1f918cdfd16e2067f8",
+      "object_sha256": "3b98c74aaece5e78eae108af9796244d042184b2b7ccb387b2cc720f204bdfe0",
+      "source_sha256": "b060061d91138339bbe15a6e1be33b59263c85d890db231e465d140529a45054",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e06df215690f543c5f9ffa0430123e91d1620a4c3f7dbf71e5318ed5ad072051",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "d426a15dc6aa22373c27c967629757c12ad623391a2929823f9dedd14f04f5da",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "EFZ.exe original Kano vtable 0x00788C9C selects complete 47-byte 0x00657E70 owner; original REL32 at 0x00657E95 resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "ebf69b30d5f6cf79f047f164a89e51739e9e8fcc5f7f6acf5e6345141097a4fa",
+      "target_extent_sha256": "ebf69b30d5f6cf79f047f164a89e51739e9e8fcc5f7f6acf5e6345141097a4fa",
+      "unit": "character-20-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character20@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x00657E70",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d715c7e4a1286ab7e5ee921b411aff132256161cef846f1f918cdfd16e2067f8",
+      "object_sha256": "4055bb4a01895d365b6cc23252352f38dad68173022b4e5e0de2e70eb70f2acf",
+      "source_sha256": "b060061d91138339bbe15a6e1be33b59263c85d890db231e465d140529a45054",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e06df215690f543c5f9ffa0430123e91d1620a4c3f7dbf71e5318ed5ad072051",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8b15b7764725754e410e94aec170709d7ddb38950fdfca6a20f38b541c04edce",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
