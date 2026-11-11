@@ -7,30 +7,28 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki Character10 Slot06 is an unfinished 62,693-byte boss.
-Focused [workbench handoff](../workbench/nayuki-state/README.md):
-selected prefix **60,310 code bytes / 16,516 original instructions**,
-original default plus **135 live states**. Checker validates **1,542
-internal**, **232 outbound branch destinations**, **1,236 nonlocal
-original-bound COFF call/IEEE-754 refs** and two switch operands.
-Candidate frame 0x288 vs native 0x2B4: NOT whole Exact.
+Nayuki `Character10::Slot06` is a 62,693-byte unfinished boss.
+Focused [workbench](../workbench/nayuki-state/README.md) now audits
+**61,242 original code bytes / 16,767 instructions**, default and
+**136/137 reviewed cases**. Original-bound branches: 1,564 internal,
+234 outbound; **1,256 nonlocal COFF call/float refs** and 2 switch
+addresses. Candidate frame 0x288 versus original 0x2B4: NOT whole Exact.
 
-State304 (897 bytes) now restores real input-steered aerial high-meter
-super, dual local hit effects, 20-cycle frame loop and landing path.
-**Next original state305 starts 0x004603E6**. Only two inherited
-unreviewed bodies 305–306 remain (**2,383 original bytes**) plus
-original stack, complete switch tables, relocation/return closure.
-All 137 live selector IDs are present in natural workbench source.
+State305 is now an original-matching 932-byte 3000-meter steerable
+super, with original Context::SetSceneTimer(15), ±0.8 directional
+velocity and two local effects. **Final original case306 begins
+0x0046078A**, 1,451 remaining code bytes to 0x00460D35, plus full
+native stack, adjacent switch DATA, relocations and common return.
 
-Only focused checks, no all-unit cold replay:
+Selected checks only (not full all-unit cold replay):
 
     git status --short --branch
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 305 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 306 --context 12
     scripts/repo-python scripts/ci.py
 
-Preserve all dirty changes, original target, pinned VC7.1/Wine and
-Ghidra. Commit coherent progress as `gpt-web: xxx`; no push.
+Keep dirty edits and canonical original, pinned VC7.1/Wine/Ghidra;
+commit as `gpt-web: xxx`, no push without permission.
 
 ## Additional newly accepted leaf owners
 

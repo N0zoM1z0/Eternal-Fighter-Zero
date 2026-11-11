@@ -16,41 +16,38 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Original code [0x00451850,0x004603E6): **60,310 / 62,693 bytes**,
-**16,516 original x86 instructions**, SHA-256
-f67d8a1c5c3ba6f6314fb8c9bb2d087b9e99273158784fd2fa38f3d2f64242b0.
-Original default and **135/137 live states** now have original-bound
-natural C++ source, including all formerly missing 263–281 and
-late super states300–304.
+Verified code [0x00451850,0x0046078A): **61,242 / 62,693 native bytes**,
+**16,767 x86 instructions**, SHA-256
+aad384707a503f97a57588b45583442a84084b41d0389bddf9a3bcda138f11fe.
+The original default plus **136/137 live case bodies** now have
+selected native-bound natural C++ implementations, including
+formerly absent cases263–281 and super cases300–305.
 
-State304 is an **897-byte original high-meter controllable super**:
-entry ResetFrame, frame3/tick0 spends 2000 meter and emits global
-0x45/palette5 effect at Y-40 with hitstun120/tint(0xB0,3). Frames6/7
-zero movement and choose ±0.65 vertical/horizontal velocity from
-inputY, inputX and facing. Gravity applies after frame7; a landing
-condition in frames8–11 jumps to frame12. Frame6 transition emits
-local effects0x19D/0x19E; frame8 can repeat frame6 up to 20 times,
-then applies gravity0.015, and frame12 loops back to frame10.
-Exit selects state7 after FaceOpponent/ResetPose. This implementation
-was recovered against original native bytes, not inherited Makoto code.
-
-Targeted original-bound native verification:
+**State305 (932 bytes)** recovers the highest-cost steerable aerial
+super: at frame3/tick0 it spends 3000 meter, applies hitstun120 and
+tint(0xB0,3), emits global type0x46/palette0x40 at Y-40 and requests
+context sound0x25. From frame4 it invokes accepted
+`Context::SetSceneTimer(15)` (original target 0x4080C0). Frames6–7
+zero motion and select vertical/horizontal ±0.8 speed from input;
+late gravity/landing skip to frame12, frame6 dual effects0x19D/0x19E,
+frame8 repeats frame6 for 20 cycles before gravity0.015, and
+frame12 loops to10. Exit is state7 via FaceOpponent/ResetPose.
+All original IEEE-754 and call relocations were audited.
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` compares **16,516 same-offset,
-same-width normalized original instructions** except the incomplete
-candidate stack allocation (0x288 vs original 0x2B4), **1,542
-internal branches**, **232 canonical outbound destinations**,
-**1,236 nonlocal COFF call/float references**, 2 local switch operands
-and 135 original selector case entry targets. Not full Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` verifies **16,767 original
+instruction offsets/widths/normalized forms** except the partial
+stack allocation (candidate 0x288 versus original 0x2B4), **1,564
+internal branches**, **234 outbound**, **1,256 original-bound
+nonlocal COFF call/float references**, 2 local switch references,
+and **136 original case entry points**. Selected prefix is NOT Exact.
 
-## Final native state bodies / owner closure
+## Last native case and owner closure
 
-Only **305 and306** remain unreviewed inherited state bodies: original
-address 305 **0x004603E6**, with **2,383 original code bytes** until
-the common return at 0x00460D35. Full 0x2B4 native stack, adjacent
-552-byte destination and 306-byte selector tables, remaining
-relocation/return closure are not yet proven. Work with original
-`probe_prefix.py --through 305` and selected verifier only; no
-all-unit cold replay, no synthetic marker acceptance.
+Only original **state306** is still an inherited unverified source
+body, starting at **0x0046078A** with **1,451 original code bytes**
+to the common-return boundary 0x00460D35. Complete original 0x2B4
+stack, adjacent switch DATA, remaining relocations and common return
+remain unverified. Reconstruct 306 and prove owner closure with
+local target checks, not all-unit cold replay.

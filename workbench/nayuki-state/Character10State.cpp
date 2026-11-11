@@ -5207,7 +5207,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 305: // Nayuki 0x004603E6: three-thousand-meter directional timer super
+    case 305: // Reviewed Nayuki 0x004603E6: three-thousand-meter directional timer super
         if (field000a == 0 && field000c == 0)
             ResetFrame();
         if (field000a == 3 && field000c == 0) {
