@@ -7,33 +7,29 @@
 `[0x006538D9,0x00653A15)` (316 bytes). Original selector holds
 **136 live cases and 180 default IDs**.
 
-Current natural C++ `Character20State.cpp` has original default and
-**66 native-reviewed live case bodies**: 1–9, 13–16, 47,
-50–77, 81–87, 96–99, 150–158 and 161–164. Original code
-`[0x006429C0,0x00648DC5)` = **25,605 native bytes / 7,045 x86
-instructions**, SHA-256
-`5b9690a14e9d7ce276f2d6e7df577e26f7c72d5c03d6565ae12d8e3a3293a514`.
-Next native case **165 starts `0x00648DC5`**.
+Current natural C++ `Character20State.cpp` now contains default and
+**68 original-bound reviewed cases**: 1–9, 13–16, 47, 50–77,
+81–87, 96–99, 150–158, 161–166. Canonical contiguous code
+`[0x006429C0,0x0064911B)` = **26,459 bytes / 7,287 x86 instructions**,
+SHA-256 `4c148d2a49bd6c34e09c03fcdbd4ed578afd138bd7cb9d3d1df34de50bb185d5`.
+Next native case167 begins at **`0x0064911B`**.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected native checker matches
-**7,045 instruction positions, widths and normalized opcodes**,
-**642 internal and 79 outbound original branch targets**, **632
-independently original-bound nonlocal COFF call/IEEE-754 operands** and
-both original switch address references. Incomplete candidate frame
-0xF4 versus full original 0x4A4 has equal six-byte instruction length
-and no offset compensation. This remains *selected-prefix evidence,
-NOT full owner Exact*. 70 cases remain unreviewed/unimplemented.
-Experimental source for 165–171 exists but is UNACCEPTED until each
-body matches canonical native. The selective probe uses diagnostic
-neutral markers for later cases and does not count them as source.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected checker verifies
+**7,287 original instruction offsets, lengths and normalized forms**,
+**664 internal and 81 outbound original branch targets**, **652
+native-bound nonlocal COFF call/float references**, and two original
+switch pointers. The incomplete stack allocation is 0xF4 vs native
+0x4A4 (same six-byte opcode); NO offset shift is normalized.
+This is a selected original-bound prefix, NOT whole-function Exact.
+**68 case bodies** and original native tables/return remain open.
+Existing experimental C++ 167–171 is retained but UNREVIEWED.
 
-New cases161–164 are substantively Kano-specific: effect9 at Y−70,
-frame4 and frame15 gates on the aerial launch, conditional frame>3
-velocityX=1.5 and a three-frame rewind on forward dash, and the
-native reverse dash with `StartTrail(2)`, X=-3.1, +0.04 friction,
-ResetFrame and state0 stop. These were corrected against original
-machine code, control flow and numeric constants, not assumed from
-Makoto behavior.
+Reviewed 165/166 (425/429 bytes) are materially different from the
+Makoto sibling: +1.1/−1.1 initial horizontal dash with zero vertical
+movement/gravity, sound17, animation-frame loop and facing-dependent
+state9 recovery. Recovery sets ±0.9 horizontal velocity with Kano's
+0.02/0.03 gravity gate. Literal float and external call operands
+are verified against original EFZ.exe, not simply masked.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -50,11 +46,11 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
-    scripts/repo-python workbench/kano-state/probe_prefix.py --through 165 --context 12
+    scripts/repo-python workbench/kano-state/probe_prefix.py --through 167 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case165 `0x00648DC5`**. Original
-0x4A4 frame, 70 unverified native cases, local switch DATA,
+Next work begins at **Kano case167 `0x0064911B`**. Original
+0x4A4 frame, 68 unverified native cases, local switch DATA,
 shared return and complete relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.

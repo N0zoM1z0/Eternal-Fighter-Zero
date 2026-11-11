@@ -33,22 +33,23 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano's 68,853-byte `Slot06` is being reconstructed in natural C++ at
-`workbench/kano-state/Character20State.cpp`. The selected opening
-matches **25,605 original code bytes / 7,045 native instructions**,
-original default plus **66 reviewed live cases** (1–9, 13–16, 47,
-50–77, 81–87, 96–99, 150–158, 161–164). Strict checker verifies
-**642 internal**, **79 outbound original jumps**, **632 native-bound
-external call/float references**, and both local table pointers.
-The new 161–164 restore the native effect9 height, attack frame gates,
-forward and reverse dash dynamics. **Next native case165 at 0x00648DC5.**
+Kano's 68,853-byte state boss is being recovered in
+`workbench/kano-state/Character20State.cpp`. The strict selected
+original-bound prefix is now **26,459 bytes / 7,287 x86 instructions**,
+default and **68 reviewed live cases**: 1–9, 13–16, 47, 50–77,
+81–87, 96–99, 150–158 and 161–166. Native audit covers
+**664 internal and 81 outbound targets**, **652 original-bound
+nonlocal COFF calls/IEEE-754 floats**, and 2 local switch references.
+165–166 now implement Kano's native ±1.1 dash and ±0.9 recovery,
+not the sibling's continuous acceleration. Next state167 at
+**`0x0064911B`**.
 
-Incomplete stack0xF4 differs from original0x4A4, but both use a
-six-byte allocation instruction, so no offset shift is allowed.
-**70 cases**, canonical stack, switch tables, remaining relocations
-and shared return are OPEN. Experimental 165–171 bodies are present
-but not counted as original-bound reviewed. **NOT whole Exact**.
-Only selected checks; no all-unit cold replay or push.
+Candidate stack0xF4 vs canonical0x4A4 has equal allocation instruction
+width and no positional shift. **68 unverified state bodies**,
+real stack, complete switch DATA, remaining relocations and common
+return remain OPEN. Existing experimental C++ 167–171 is explicitly
+unreviewed; no marker-body acceptance. **NOT full Exact**.
+Only scoped Kano checker; no full all-unit cold replay or push.
 
 ## Additional newly accepted leaf owners
 

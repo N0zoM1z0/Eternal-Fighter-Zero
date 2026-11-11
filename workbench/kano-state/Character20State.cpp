@@ -2274,22 +2274,13 @@ void Character20::Slot06()
         }
         return;
 
-    case 165: // Kano unverified native candidate 0x005EE9B2: sustained airborne momentum
+    case 165: // Native-reviewed Kano 0x00648DC5 forward sustained dash and delayed recovery
         if (field000a == 0 && field000c == 0 && field3138 == 0) {
-            velocityX = 1.9;
-            velocityY = 1.3;
+            velocityX = 1.1;
             StartTrail(3);
-            horizontalDeceleration = -0.015;
-            gravity = -0.038;
+            velocityY = 0.0;
+            gravity = 0.0;
             pendingContextSoundSlot = 17;
-        }
-        velocityY += gravity;
-        velocityX += horizontalDeceleration;
-        if (velocityX < 0.5) {
-            velocityX = 0.5;
-        }
-        if (velocityY < -1.5) {
-            velocityY = -1.5;
         }
         ++field000c;
         ++field3138;
@@ -2297,44 +2288,34 @@ void Character20::Slot06()
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= timing.animationFrameCount) {
-                field000a = (unsigned short)(field000a - 2);
-            }
+            if (field000a >= timing.animationFrameCount)
+                field000a = 0;
         }
         if (inputX == facing && field313c >= 120) {
             field0008 = 9;
             ResetPose();
-            gravity = 0.03;
-            if (FaceOpponent() != 0) {
+            velocityX = 0.9;
+            gravity = 0.02;
+            if (FaceOpponent() != 0)
                 velocityX = -velocityX;
-            }
         }
         if (inputX != facing && field3138 >= 48) {
             field0008 = 9;
             ResetPose();
-            gravity = 0.03;
-            if (FaceOpponent() != 0) {
+            velocityX = 0.9;
+            gravity = 0.02;
+            if (FaceOpponent() != 0)
                 velocityX = -velocityX;
-            }
         }
         return;
 
-    case 166: // Kano unverified native candidate 0x005EEBB9: sustained airborne momentum
+    case 166: // Native-reviewed Kano 0x00648F6E backward sustained dash and recovery
         if (field000a == 0 && field000c == 0 && field3138 == 0) {
-            velocityX = -1.9;
-            velocityY = 1.3;
+            velocityX = -1.1;
+            velocityY = 0.0;
+            gravity = 0.0;
             StartTrail(3);
-            horizontalDeceleration = 0.015;
-            gravity = -0.038;
             pendingContextSoundSlot = 17;
-        }
-        velocityY += gravity;
-        velocityX += horizontalDeceleration;
-        if (velocityX > -0.5) {
-            velocityX = -0.5;
-        }
-        if (velocityY < -1.5) {
-            velocityY = -1.5;
         }
         ++field000c;
         ++field3138;
@@ -2342,25 +2323,24 @@ void Character20::Slot06()
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= timing.animationFrameCount) {
-                field000a = (unsigned short)(field000a - 2);
-            }
+            if (field000a >= timing.animationFrameCount)
+                field000a = 0;
         }
         if ((int)inputX == -(int)facing && field313c >= 120) {
             field0008 = 9;
             ResetPose();
-            gravity = 0.03;
-            if (FaceOpponent() != 0) {
+            velocityX = -0.9;
+            gravity = 0.02;
+            if (FaceOpponent() != 0)
                 velocityX = -velocityX;
-            }
         }
         if ((int)inputX != -(int)facing && field3138 >= 48) {
             field0008 = 9;
             ResetPose();
+            velocityX = -0.9;
             gravity = 0.03;
-            if (FaceOpponent() != 0) {
+            if (FaceOpponent() != 0)
                 velocityX = -velocityX;
-            }
         }
         return;
 

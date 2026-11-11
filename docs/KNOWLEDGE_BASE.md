@@ -1770,30 +1770,29 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano `Character20::Slot06` vtable slot6 at `0x00788C90` selects
-original `[0x006429C0,0x006536B5)`, **68,853 code bytes**, plus
-137 switch entries and 316 selector bytes (136 live / 180 default).
+Kano `Character20::Slot06` vtable at `0x00788C90` targets original
+`[0x006429C0,0x006536B5)` = **68,853 native bytes**, plus the
+137-entry original jump table and 316-byte selector (136 live IDs).
 The natural C++ in `workbench/kano-state/Character20State.cpp`
-reproduces default and **66 reviewed live cases**. Its selected prefix
-`[0x006429C0,0x00648DC5)` is **25,605 native code bytes /
-7,045 x86 instructions**, SHA-256
-`5b9690a14e9d7ce276f2d6e7df577e26f7c72d5c03d6565ae12d8e3a3293a514`.
+reproduces `[0x006429C0,0x0064911B)` = **26,459 original code bytes /
+7,287 x86 instructions**, SHA-256
+`4c148d2a49bd6c34e09c03fcdbd4ed578afd138bd7cb9d3d1df34de50bb185d5`.
+Original default and **68 reviewed real states** through 166.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected verifier validates
-**7,045 instruction forms/widths/offsets**, **642 original internal
-and 79 outbound branch targets**, **632 nonlocal original-bound
-COFF call/float references**, and 2 local switch pointers. The
-partial frame0xF4 differs from canonical0x4A4 but is the same six-byte
-instruction width. Not a whole-function Exact certificate: **70
-remaining cases**, original stack, jump DATA and common return open.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selective audit verifies
+**7,287 original instruction offsets/forms/widths**, **664 internal
+and 81 outbound canonical jump targets**, **652 original-bound
+external call/float COFF operands**, and 2 original local table
+pointers. Incomplete candidate frame0xF4 vs native0x4A4 is the same
+six-byte opcode width, with no offset normalization. **NOT whole
+Exact:** 68 remaining cases and original table/return remain open.
 
-New state161 emits effect9 at Y−70; state162 has distinct frame4
-and frame15 timing and Y−70 effect; state163 uses conditional frame>3
-X velocity1.5, three-frame loop rewind and original cancel checks;
-state164 uses `StartTrail(2)`, negative X=-3.1 and +0.04 damping.
-These are original-bound C++, while existing source cases165–171
-remain *experimental, unreviewed*. Next state165 `0x00648DC5`.
-No cold all-unit replay or credit for synthetic marker cases.
+Kano 165 and 166 are 425/429-byte real dash/recovery variants:
+initial X speeds +1.1/−1.1, no continuous sibling acceleration;
+original state9 recovery sets ±0.9 X and 0.02/0.03 gravity gates.
+These branches and native x87 references are original-bound matched.
+Next state167 at `0x0064911B`; 167–171 experimental hypotheses
+remain unreviewed. No all-unit cold replay.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
