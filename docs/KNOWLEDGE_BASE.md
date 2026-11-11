@@ -1978,6 +1978,40 @@ replacement. Certificates:
 full-owner certificate was independently refreshed. These selected
 checks do not assert freshness of unrelated older header proofs.
 
+### EX Nanase Character12 lifecycle: six complete original Exact owners
+
+The canonical EX Nanase `Character12` vtable at `0x00788DE4`
+identifies six new complete natural-C++ owners in
+`src/Character12Lifecycle.cpp`. Pinned VC7.1
+`/Od /G6 /MT /Gy /W3` **selected strict original-bound replay proves
+537/537 native code bytes, five original COFF REL32 calls, and
+zero differences**:
+
+| Character12 method | Native address | Exact bytes |
+| --- | --- | ---: |
+| InitializeState | `0x006CFD80` | 322 |
+| ResetPose | `0x006CFED0` | 58 |
+| RemoveLocalEffect | `0x006CFF10` | 80 |
+| Slot03 | `0x006CFF60` | 19 |
+| Slot01 | `0x006D2400` | 11 |
+| EmitLocalEffect | `0x006D2740` | 47 |
+
+The complete **322-byte InitializeState** resets eight original
+child integer fields in native order, reinstalls five X/Y collision
+short pairs (-12,-58), (18,0), (16,-9), (21,-14), (33,-26), clears
+three 64-int local-effect arrays, and calls original base
+`Secondary::InitializeState` at 0x40EDF0. ResetPose resets three
+child fields and calls `Secondary::ResetPose` (0x40F110);
+RemoveLocalEffect clears all three per-index array entries then
+calls `Secondary::RemoveLocalEffect` (0x412E60); Slot03 delegates
+to base UpdateLocomotionState (0x40E740); EmitLocalEffect first
+invokes virtual removal for effectWrite, then base emitter at
+0x412B10. The 11-byte Slot01 is a real empty override, not
+synthetic filler. Each original vtable pointer, complete owner
+boundary and all five original call targets were independently
+reviewed. Proof: `docs/evidence/character-12-lifecycle-exact.json`.
+Codegen Exact does not establish full-game linkage or runtime parity.
+
 ### EX Nanase constructor: complete exact source (2026-11-09)
 
 `Character12::Character12` at `0x006CFBB0` now has authored natural

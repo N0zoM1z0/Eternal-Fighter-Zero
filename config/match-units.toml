@@ -160852,3 +160852,98 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "Canonical Mio Character11 original vtable slot 0x007888A0 selects complete 47-byte owner 0x0058DAC0, and independently reviewed native REL32 field 0x0058DAE5 resolves ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10"
+
+[units.character-12-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character12Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-12-initialize-state/Character12Lifecycle.obj"
+symbol = "?InitializeState@Character12@@UAEXXZ"
+target_address = 0x006CFD80
+size = 322
+
+[[units.character-12-initialize-state.relocations]]
+offset = 314
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Canonical EX Nanase Character12 original vtable 0x00788E14 selects complete 322-byte native owner at 0x006CFD80; independently reviewed original REL32 operand 0x006CFEBA resolves ?InitializeState@Secondary@@UAEXXZ to 0x0040EDF0"
+
+[units.character-12-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character12Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-12-reset-pose/Character12Lifecycle.obj"
+symbol = "?ResetPose@Character12@@UAEXXZ"
+target_address = 0x006CFED0
+size = 58
+
+[[units.character-12-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Canonical EX Nanase Character12 original vtable 0x00788DE4 selects complete 58-byte native owner at 0x006CFED0; independently reviewed original REL32 operand 0x006CFF02 resolves ?ResetPose@Secondary@@UAEXXZ to 0x0040F110"
+
+[units.character-12-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character12Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-12-remove-local-effect/Character12Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character12@@UAEXF@Z"
+target_address = 0x006CFF10
+size = 80
+
+[[units.character-12-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Canonical EX Nanase Character12 original vtable 0x00788E0C selects complete 80-byte native owner at 0x006CFF10; independently reviewed original REL32 operand 0x006CFF56 resolves ?RemoveLocalEffect@Secondary@@UAEXF@Z to 0x00412E60"
+
+[units.character-12-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character12Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-12-slot03/Character12Lifecycle.obj"
+symbol = "?Slot03@Character12@@UAEXXZ"
+target_address = 0x006CFF60
+size = 19
+
+[[units.character-12-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "Canonical EX Nanase Character12 original vtable 0x00788DF0 selects complete 19-byte native owner at 0x006CFF60; independently reviewed original REL32 operand 0x006CFF6B resolves ?UpdateLocomotionState@Secondary@@QAEXXZ to 0x0040E740"
+
+[units.character-12-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character12Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-12-slot01/Character12Lifecycle.obj"
+symbol = "?Slot01@Character12@@UAEXXZ"
+target_address = 0x006D2400
+size = 11
+
+[units.character-12-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character12Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-12-emit-local-effect/Character12Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character12@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x006D2740
+size = 47
+
+[[units.character-12-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Canonical EX Nanase Character12 original vtable 0x00788E08 selects complete 47-byte native owner at 0x006D2740; independently reviewed original REL32 operand 0x006D2765 resolves ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10"

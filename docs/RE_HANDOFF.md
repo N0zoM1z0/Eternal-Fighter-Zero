@@ -119,6 +119,14 @@ strict selected replay 506/506, zero differences. Proof:
 `docs/evidence/character-11-lifecycle-exact.json`.
 Only these six units were replayed; no full cold replay.
 
+EX Nanase `Character12` now has **six complete native Exact
+lifecycle/effect owners / 537 original code bytes** in
+`src/Character12Lifecycle.cpp`. Five original base method direct
+calls and six canonical original vtable pointers are reviewed;
+selected strict replay gives 537/537 bytes with zero differences.
+Evidence `docs/evidence/character-12-lifecycle-exact.json`.
+Only the six selected units were replayed, not all-unit cold.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

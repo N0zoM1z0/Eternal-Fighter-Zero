@@ -467,3 +467,9 @@ address,end,size,status,evidence
 0x00588660,0x00588673,19,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
 0x0058DAB0,0x0058DABB,11,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
 0x0058DAC0,0x0058DAEF,47,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
+0x006CFD80,0x006CFEC2,322,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
+0x006CFED0,0x006CFF0A,58,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
+0x006CFF10,0x006CFF60,80,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
+0x006CFF60,0x006CFF73,19,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
+0x006D2400,0x006D240B,11,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
+0x006D2740,0x006D276F,47,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
