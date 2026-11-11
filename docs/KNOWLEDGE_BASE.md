@@ -1837,6 +1837,43 @@ both owned switch tables. Public proof:
 refresh unrelated historical stale-header certificates or prove
 whole-game runtime equivalence. No full cold replay was performed.
 
+### Minagi Character21 lifecycle: seven native Exact owners
+
+The original `Character21` vtable at `0x00788940` selects seven newly
+authored complete normal-C++ functions in `src/Character21Lifecycle.cpp`.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected strict replay proves
+**666 / 666 native bytes**, **nine original-bound COFF REL32 call
+operands**, and **zero differences**:
+
+| Minagi owner | Native address | Exact bytes |
+| --- | --- | ---: |
+| InitializeState | `0x005AA180` | 440 |
+| ResetPose | `0x005AA340` | 58 |
+| RemoveLocalEffect | `0x005AA380` | 80 |
+| Slot03 | `0x005AA3D0` | 19 |
+| Slot01 | `0x005AD500` | 11 |
+| Slot08 | `0x005AD510` | 11 |
+| EmitLocalEffect | `0x005AD520` | 47 |
+
+The nontrivial **440-byte InitializeState** resets seven child ints,
+sets all ten original Minagi X/Y collision offsets, clears three
+64-int arrays, then calls `Secondary::InitializeState`. It also
+constructs and initializes an `EffectSpawn`, emits original local
+effect **0x190** at integer X minus facing×40 and integer Y,
+with the original `owner`, `group`, `layer`, `payload`, `field0028`
+and facing-flag assignments. The five initializer REL32 operands
+bind original `Secondary::InitializeState` (0x40EDF0), `EffectSpawn`
+constructor (0x405490), `ResetLocalEffectSpawn` (0x413090), and two
+`__ftol2` calls (0x7783B8). ResetPose, RemoveLocalEffect, Slot03 and
+EmitLocalEffect preserve their individually checked base-method
+call targets; Slot01 and Slot08 are authentic empty 11-byte overrides.
+
+Independent vtable target addresses, complete extents, nonrelocated
+bytes and original direct-call operands were reviewed before
+registration. Certificate:
+`docs/evidence/character-21-lifecycle-exact.json`. Codegen Exact
+is not whole-game linkage/runtime parity or portability.
+
 ### Minagi constructor: independently accepted exact source (2026-11-09)
 
 `Character21::Character21` at `0x005A9FA0` now has authored natural C++

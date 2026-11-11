@@ -80,6 +80,14 @@ and five independently reviewed original vtable/call bindings.
 Evidence: `docs/evidence/character-20-lifecycle-exact.json`.
 Only those five units were replayed, not an all-unit cold replay.
 
+Minagi `Character21` now has **seven complete Exact lifecycle
+and local-effect functions / 666 original code bytes** in
+`src/Character21Lifecycle.cpp`. The 440-byte initializer constructs
+and emits real effect0x190 after clearing original state/arrays.
+All nine original REL32 calls and vtable targets were reviewed; formal
+selected proof `docs/evidence/character-21-lifecycle-exact.json`.
+Only these seven units were replayed, not a repository-wide cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

@@ -160416,3 +160416,136 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "EFZ.exe original Kano vtable 0x00788C9C selects complete 47-byte 0x00657E70 owner; original REL32 at 0x00657E95 resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10"
+
+[units.character-21-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character21Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-21-initialize-state/Character21Lifecycle.obj"
+symbol = "?InitializeState@Character21@@UAEXXZ"
+target_address = 0x005AA180
+size = 440
+
+[[units.character-21-initialize-state.relocations]]
+offset = 301
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Canonical EFZ.exe Minagi vtable 0x00788970 selects complete 440-byte owner 0x005AA180; original REL32 at 0x005AA2AD independently resolves reviewed ?InitializeState@Secondary@@UAEXXZ to 0x0040EDF0"
+
+[[units.character-21-initialize-state.relocations]]
+offset = 309
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "Canonical EFZ.exe Minagi vtable 0x00788970 selects complete 440-byte owner 0x005AA180; original REL32 at 0x005AA2B5 independently resolves reviewed ??0EffectSpawn@@QAE@XZ to 0x00405490"
+
+[[units.character-21-initialize-state.relocations]]
+offset = 321
+type = "REL32"
+symbol = "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00413090
+evidence = "Canonical EFZ.exe Minagi vtable 0x00788970 selects complete 440-byte owner 0x005AA180; original REL32 at 0x005AA2C1 independently resolves reviewed ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z to 0x00413090"
+
+[[units.character-21-initialize-state.relocations]]
+offset = 338
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe Minagi vtable 0x00788970 selects complete 440-byte owner 0x005AA180; original REL32 at 0x005AA2D2 independently resolves reviewed __ftol2 to 0x007783B8"
+
+[[units.character-21-initialize-state.relocations]]
+offset = 370
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe Minagi vtable 0x00788970 selects complete 440-byte owner 0x005AA180; original REL32 at 0x005AA2F2 independently resolves reviewed __ftol2 to 0x007783B8"
+
+[units.character-21-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character21Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-21-reset-pose/Character21Lifecycle.obj"
+symbol = "?ResetPose@Character21@@UAEXXZ"
+target_address = 0x005AA340
+size = 58
+
+[[units.character-21-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Canonical EFZ.exe Minagi vtable 0x00788940 selects complete 58-byte owner 0x005AA340; original REL32 at 0x005AA372 independently resolves reviewed ?ResetPose@Secondary@@UAEXXZ to 0x0040F110"
+
+[units.character-21-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character21Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-21-remove-local-effect/Character21Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character21@@UAEXF@Z"
+target_address = 0x005AA380
+size = 80
+
+[[units.character-21-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Canonical EFZ.exe Minagi vtable 0x00788968 selects complete 80-byte owner 0x005AA380; original REL32 at 0x005AA3C6 independently resolves reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z to 0x00412E60"
+
+[units.character-21-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character21Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-21-slot03/Character21Lifecycle.obj"
+symbol = "?Slot03@Character21@@UAEXXZ"
+target_address = 0x005AA3D0
+size = 19
+
+[[units.character-21-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "Canonical EFZ.exe Minagi vtable 0x0078894C selects complete 19-byte owner 0x005AA3D0; original REL32 at 0x005AA3DB independently resolves reviewed ?UpdateLocomotionState@Secondary@@QAEXXZ to 0x0040E740"
+
+[units.character-21-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character21Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-21-slot01/Character21Lifecycle.obj"
+symbol = "?Slot01@Character21@@UAEXXZ"
+target_address = 0x005AD500
+size = 11
+
+[units.character-21-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character21Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-21-slot08/Character21Lifecycle.obj"
+symbol = "?Slot08@Character21@@UAEXXZ"
+target_address = 0x005AD510
+size = 11
+
+[units.character-21-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character21Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-21-emit-local-effect/Character21Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character21@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x005AD520
+size = 47
+
+[[units.character-21-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Canonical EFZ.exe Minagi vtable 0x00788964 selects complete 47-byte owner 0x005AD520; original REL32 at 0x005AD545 independently resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10"

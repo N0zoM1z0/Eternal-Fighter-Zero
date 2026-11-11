@@ -413,3 +413,10 @@ address,name,source,symbol,status,evidence
 0x00653E10,Character20::RemoveLocalEffect,src/Character20Lifecycle.cpp,?RemoveLocalEffect@Character20@@UAEXF@Z,complete,docs/evidence/character-20-lifecycle-exact.json
 0x00653E60,Character20::Slot03,src/Character20Lifecycle.cpp,?Slot03@Character20@@UAEXXZ,complete,docs/evidence/character-20-lifecycle-exact.json
 0x00657E70,Character20::EmitLocalEffect,src/Character20Lifecycle.cpp,?EmitLocalEffect@Character20@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-20-lifecycle-exact.json
+0x005AA180,Character21::InitializeState,src/Character21Lifecycle.cpp,?InitializeState@Character21@@UAEXXZ,complete,docs/evidence/character-21-lifecycle-exact.json
+0x005AA340,Character21::ResetPose,src/Character21Lifecycle.cpp,?ResetPose@Character21@@UAEXXZ,complete,docs/evidence/character-21-lifecycle-exact.json
+0x005AA380,Character21::RemoveLocalEffect,src/Character21Lifecycle.cpp,?RemoveLocalEffect@Character21@@UAEXF@Z,complete,docs/evidence/character-21-lifecycle-exact.json
+0x005AA3D0,Character21::Slot03,src/Character21Lifecycle.cpp,?Slot03@Character21@@UAEXXZ,complete,docs/evidence/character-21-lifecycle-exact.json
+0x005AD500,Character21::Slot01,src/Character21Lifecycle.cpp,?Slot01@Character21@@UAEXXZ,complete,docs/evidence/character-21-lifecycle-exact.json
+0x005AD510,Character21::Slot08,src/Character21Lifecycle.cpp,?Slot08@Character21@@UAEXXZ,complete,docs/evidence/character-21-lifecycle-exact.json
+0x005AD520,Character21::EmitLocalEffect,src/Character21Lifecycle.cpp,?EmitLocalEffect@Character21@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-21-lifecycle-exact.json

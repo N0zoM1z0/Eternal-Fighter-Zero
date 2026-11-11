@@ -443,3 +443,10 @@ address,end,size,status,evidence
 0x00653E10,0x00653E60,80,reviewed,docs/KNOWLEDGE_BASE.md#kano-character20-lifecycle-exact
 0x00653E60,0x00653E73,19,reviewed,docs/KNOWLEDGE_BASE.md#kano-character20-lifecycle-exact
 0x00657E70,0x00657E9F,47,reviewed,docs/KNOWLEDGE_BASE.md#kano-character20-lifecycle-exact
+0x005AA180,0x005AA338,440,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
+0x005AA340,0x005AA37A,58,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
+0x005AA380,0x005AA3D0,80,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
+0x005AA3D0,0x005AA3E3,19,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
+0x005AD500,0x005AD50B,11,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
+0x005AD510,0x005AD51B,11,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
+0x005AD520,0x005AD54F,47,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
