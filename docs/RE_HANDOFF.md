@@ -7,22 +7,30 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki `Character10::Slot06` remains a 62,693-byte unfinished boss.
-Selected original-bound prefix **59,413 bytes / 16,275 instructions**,
-default plus **134 reviewed cases**, with **1,521 internal branches**,
-**230 outbound**, **1,217 nonlocal COFF call/float references**,
-two local switch operands. Partial frame 0x2F8 vs original 0x2B4:
-NOT whole Exact. Focused handoff:
-[`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
+Nayuki Character10 Slot06 is an unfinished 62,693-byte boss.
+Focused [workbench handoff](../workbench/nayuki-state/README.md):
+selected prefix **60,310 code bytes / 16,516 original instructions**,
+original default plus **135 live states**. Checker validates **1,542
+internal**, **232 outbound branch destinations**, **1,236 nonlocal
+original-bound COFF call/IEEE-754 refs** and two switch operands.
+Candidate frame 0x288 vs native 0x2B4: NOT whole Exact.
 
-State303 (897 bytes) was reconstructed with original control-input
-flight and dual local effects, not the inherited random-effect template.
-**Next state304 begins 0x00460065**. States304–306 authored but not
-yet native-reviewed, 3,280 original code bytes, final stack, local
-switch DATA, relocation closure and shared return remain open.
-Only focused compile and `check_prefix.py` / `probe_prefix.py
---through 304`; do not run all-unit cold replay. Preserve and handle
-dirty edits, commit meaningful progress as `gpt-web: xxx`, no push.
+State304 (897 bytes) now restores real input-steered aerial high-meter
+super, dual local hit effects, 20-cycle frame loop and landing path.
+**Next original state305 starts 0x004603E6**. Only two inherited
+unreviewed bodies 305–306 remain (**2,383 original bytes**) plus
+original stack, complete switch tables, relocation/return closure.
+All 137 live selector IDs are present in natural workbench source.
+
+Only focused checks, no all-unit cold replay:
+
+    git status --short --branch
+    scripts/repo-python workbench/nayuki-state/check_prefix.py
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 305 --context 12
+    scripts/repo-python scripts/ci.py
+
+Preserve all dirty changes, original target, pinned VC7.1/Wine and
+Ghidra. Commit coherent progress as `gpt-web: xxx`; no push.
 
 ## Additional newly accepted leaf owners
 

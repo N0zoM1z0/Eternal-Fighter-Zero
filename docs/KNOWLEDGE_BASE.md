@@ -3140,35 +3140,38 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: 59,413-byte original-bound boss prefix
+## Nayuki Character10 Slot06: 60,310-byte selected native boss prefix
 
-Canonical vtable Slot06 at 0x00788288 -> [0x00451850,0x00460D35),
-62,693 native bytes, SHA-256
+Original Slot06 vtable 0x00788288 selects [0x00451850,0x00460D35),
+62,693 code bytes, original SHA-256
 4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-Local DATA consists of 138 destination words and 306 selector bytes.
-Partial natural `workbench/nayuki-state/Character10State.cpp` matches
-original [0x00451850,0x00460065), **59,413 code bytes / 16,275 x86
-instructions**, SHA-256
-6aec028989229f10eb5fec56e035a4cc60ca59eb9ce9b374a6fda6b8528a0031.
-Original default and **134 live cases** now reviewed (all 137 labeled).
+Adjacent local selector DATA has 138 four-byte destinations and
+306 selector bytes (137 live IDs).
 
-New state303 (897 bytes) implements frame3 super activation,
-1000-meter expense/tint and impact0x44, frames6/7 directional flight
-with ±0.5 velocity, gravity and frame8–11 ground skip, frame6 local
-effects0x19D/0x19E, frame8 two-frame loop up to field3138=14,
-then .015 gravity, and frame12 repeat, with state7 FaceOpponent/
-ResetPose exit. Native branch placement, floats, and original call
-operands verified against the canonical target.
+`workbench/nayuki-state/Character10State.cpp` now matches
+[0x00451850,0x004603E6): **60,310 native bytes / 16,516 original
+x86 instructions**, selected SHA-256
+f67d8a1c5c3ba6f6314fb8c9bb2d087b9e99273158784fd2fa38f3d2f64242b0.
+Reviewed original default plus 135/137 live case bodies.
 
-Focused pinned VC7.1 `/Od /G6 /MT /Gy /W3` prefix audit verifies
-**16,275 native x86 instruction positions/widths/forms**, **1,521
-original internal branches**, **230 outbound**, **1,217 external
-COFF calls/float refs**, two local switch operands, 134 case targets.
-Partial stack0x2F8 vs canonical0x2B4, NOT whole Exact. Remaining
-**3,280 original bytes** correspond to authored-but-unreviewed
-states304–306; full original stack, local jump tables, relocation
-and return closure remain open. Next state304 at 0x00460065.
-Use focused checker/probe only, not full all-unit cold replay.
+Original late state304 (897 bytes) is a controllable 2,000-meter super
+with hitstun120/tint0xB0, global type0x45/palette5 at frame3,
+input-dependent ±0.65 velocities in frames6–7 and gravity after frame7.
+A frame8–11 landing jumps to frame12. At frame6 it emits two local
+effects0x19D/0x19E; frame8 repeats up to20 cycles and then sets
+gravity0.015; frame12 loops to10 and completion exits to state7.
+All x87 IEEE-754 payloads, COFF calls, branch targets, opcodes and
+instruction offsets were original-bound verified.
+
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected checker validates
+**16,516 native offsets/widths/normalized forms**, excluding the
+incomplete compiler stack allocation (0x288 vs canonical 0x2B4),
+**1,542 internal branches**, **232 outbound**, **1,236 original-bound
+nonlocal COFF call/float operands**, 2 local switch references and
+135 native case destinations. Not whole Exact: original state bodies
+305–306 (2,383 remaining bytes), original native stack, local tables,
+remaining relocs and shared return are open. State305 at 0x004603E6;
+use focused native probe/check and never full all-unit cold replay.
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 

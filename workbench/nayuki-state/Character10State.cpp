@@ -5134,24 +5134,9 @@ void Character10::Slot06()
         }
         return;
 
-    case 304: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
+    case 304: // Reviewed Nayuki 0x00460065: high-meter directional super with twin local effects
+        if (field000a == 0 && field000c == 0)
             ResetFrame();
-            remainingHitCount = 99;
-        }
-        if (field000a == 3 && field000c == 0) {
-            velocityY = -2.4;
-            velocityX = -0.4;
-            gravity = 0.029;
-            remainingHitCount = 99;
-        }
-        if (field000a == 3) {
-            SetHorizontalShake(50, 3);
-        }
-        if (field000a > 11) {
-            (*opponentSlot)->SetHorizontalShake(50, 3);
-        }
         if (field000a == 3 && field000c == 0) {
             hitstunFrames = 120;
             meter = (short)(meter - 2000);
@@ -5165,132 +5150,66 @@ void Character10::Slot06()
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
         }
-        if (field000a == 11 && field000c == 0) {
+        if (field000a == 6 || field000a == 7) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (inputY == -1)
+                velocityY = -0.65;
+            if (inputY == 1)
+                velocityY = 0.65;
+            if (inputX == facing)
+                velocityX = 0.65;
+            if ((int)inputX == -(int)facing)
+                velocityX = -0.65;
+        }
+        if (field000a > 7)
+            velocityY += gravity;
+        if (velocityY + positionY > 0.0 && field000a > 7 && field000a < 12) {
             ResetFrame();
-        }
-        if (field000a == 12 && field000c == 0) {
-            velocityX = -0.2;
-            velocityY = -0.8;
-            gravity = 0.015;
-        }
-        if (field000a == 14 && field000c == 0) {
-            effect.owner = 0;
-            effect.type = 3;
-            effect.x = (double)(int)(positionX + (double)((int)facing *
-                       (unsigned short)RandomRange(0, 240)));
-            effect.y = 0.0;
-            effect.group = 2;
-            effect.layer = 1;
-            contextOwner->EmitEffect(&effect);
-
-            effect.owner = 1;
-            effect.type = 0x1a0;
-            effect.x = (double)(int)positionX;
-            effect.y = 0.0;
-            effect.flag0018 = (unsigned char)facing;
-            effect.group = 2;
-            effect.layer = 1;
-            EmitLocalEffect(&effect);
-
-            effect.type = 0x191;
-            effect.x = (double)((int)positionX + (int)facing * 27);
-            effect.y = (double)((int)positionY - 28);
-            effect.flag0018 = (unsigned char)facing;
-            effect.layer = 1;
-            effect.group = 2;
-            EmitLocalEffect(&effect);
-
-            effect.type = 0x1a5;
-            effect.x = (double)((int)positionX + (int)facing * 16);
-            effect.y = (double)((int)positionY - 43);
-            effect.layer = 1;
-            effect.group = 0;
-            EmitLocalEffect(&effect);
-
-            effect.x = (double)((int)positionX + (int)facing * 21);
-            effect.y = (double)((int)positionY - 51);
-            effect.layer = 0;
-            EmitLocalEffect(&effect);
-            pendingCharacterSoundSlot = 0;
-        }
-        if (field000a == 18 && field000c == 0) {
-            effect.owner = 0;
-            effect.type = 3;
-            effect.x = (double)(int)(positionX + (double)((int)facing *
-                       (unsigned short)RandomRange(0, 240)));
-            effect.y = 0.0;
-            effect.group = 2;
-            effect.layer = 1;
-            contextOwner->EmitEffect(&effect);
-
-            effect.type = 0x191;
-            effect.x = (double)((int)positionX + (int)facing * 27);
-            effect.y = (double)((int)positionY - 28);
-            effect.flag0018 = (unsigned char)facing;
-            effect.layer = 1;
-            effect.group = 2;
-            EmitLocalEffect(&effect);
-
-            effect.type = 0x1a5;
-            effect.x = (double)((int)positionX + (int)facing * 16);
-            effect.y = (double)((int)positionY - 43);
-            effect.layer = 1;
-            effect.group = 0;
-            EmitLocalEffect(&effect);
-
-            effect.x = (double)((int)positionX + (int)facing * 21);
-            effect.y = (double)((int)positionY - 51);
-            effect.layer = 0;
-            EmitLocalEffect(&effect);
-            pendingCharacterSoundSlot = 0;
-        }
-        velocityY += gravity;
-        if (field000a < 20 && velocityY > 0.15) {
-            velocityY = 0.15;
-        }
-        if (field000a > 14 && field000a < 22 && velocityY + positionY > 0.0) {
             positionY = 0.0;
-            ResetFrame();
-            field000a = 22;
+            field000a = 12;
             field000c = 0;
+            return;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a == 20 && field3138 < 15) {
-                ++field3138;
-                field000a = (unsigned short)(field000a - 3);
+            if (field000a == 6) {
+                effect.owner = 1;
+                effect.type = 0x19d;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)((int)positionY - 80);
+                effect.flag0018 = (unsigned char)facing;
+                effect.group = 0;
+                effect.layer = 1;
+                EmitLocalEffect(&effect);
+                effect.type = 0x19e;
+                effect.y = (double)(int)positionY;
+                EmitLocalEffect(&effect);
             }
-            if (field000a == 22) {
+            if (field000a == 8) {
+                if (field3138 < 20) {
+                    field000a = (unsigned short)(field000a - 2);
+                    ++field3138;
+                } else {
+                    gravity = 0.015;
+                }
+            }
+            if (field000a == 12)
                 field000a = (unsigned short)(field000a - 2);
-            }
             if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
+                FaceOpponent();
                 ResetPose();
             }
         }
         return;
 
-    case 305: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
+    case 305: // Nayuki 0x004603E6: three-thousand-meter directional timer super
+        if (field000a == 0 && field000c == 0)
             ResetFrame();
-            remainingHitCount = 99;
-        }
-        if (field000a == 3 && field000c == 0) {
-            velocityY = -2.4;
-            velocityX = -0.4;
-            gravity = 0.029;
-            remainingHitCount = 99;
-        }
-        if (field000a == 3) {
-            SetHorizontalShake(50, 3);
-        }
-        if (field000a > 11) {
-            (*opponentSlot)->SetHorizontalShake(50, 3);
-        }
         if (field000a == 3 && field000c == 0) {
             hitstunFrames = 120;
             meter = (short)(meter - 3000);
@@ -5303,114 +5222,62 @@ void Character10::Slot06()
             effect.owner = 1;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            pendingContextSoundSlot = 37;
+            pendingContextSoundSlot = 0x25;
         }
-        if (field000a == 11 && field000c == 0) {
-            ResetFrame();
-        }
-        if (field000a > 10) {
+        if (field000a > 3)
             contextOwner->SetSceneTimer(15);
+        if (field000a == 6 || field000a == 7) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (inputY == -1)
+                velocityY = -0.8;
+            if (inputY == 1)
+                velocityY = 0.8;
+            if (inputX == facing)
+                velocityX = 0.8;
+            if ((int)inputX == -(int)facing)
+                velocityX = -0.8;
         }
-        if (field000a == 12 && field000c == 0) {
-            velocityX = -0.2;
-            velocityY = -0.8;
-            gravity = 0.015;
-        }
-        if (field000a == 14 && field000c == 0) {
-            effect.owner = 0;
-            effect.type = 3;
-            effect.x = (double)(int)(positionX + (double)((int)facing *
-                       (unsigned short)RandomRange(0, 320)));
-            effect.y = 0.0;
-            effect.group = 2;
-            effect.layer = 1;
-            contextOwner->EmitEffect(&effect);
-
-            effect.owner = 1;
-            effect.type = 0x1a1;
-            effect.x = (double)(int)positionX;
-            effect.y = 0.0;
-            effect.flag0018 = (unsigned char)facing;
-            effect.group = 2;
-            effect.layer = 1;
-            EmitLocalEffect(&effect);
-
-            effect.type = 0x191;
-            effect.x = (double)((int)positionX + (int)facing * 27);
-            effect.y = (double)((int)positionY - 28);
-            effect.flag0018 = (unsigned char)facing;
-            effect.layer = 1;
-            effect.group = 2;
-            EmitLocalEffect(&effect);
-
-            effect.type = 0x1a5;
-            effect.x = (double)((int)positionX + (int)facing * 16);
-            effect.y = (double)((int)positionY - 43);
-            effect.layer = 1;
-            effect.group = 0;
-            EmitLocalEffect(&effect);
-
-            effect.x = (double)((int)positionX + (int)facing * 21);
-            effect.y = (double)((int)positionY - 51);
-            effect.layer = 0;
-            EmitLocalEffect(&effect);
-            pendingCharacterSoundSlot = 0;
-        }
-        if (field000a == 18 && field000c == 0) {
-            effect.owner = 0;
-            effect.type = 3;
-            effect.x = (double)(int)(positionX + (double)((int)facing *
-                       (unsigned short)RandomRange(0, 320)));
-            effect.y = 0.0;
-            effect.group = 2;
-            effect.layer = 1;
-            contextOwner->EmitEffect(&effect);
-
-            effect.type = 0x191;
-            effect.x = (double)((int)positionX + (int)facing * 27);
-            effect.y = (double)((int)positionY - 28);
-            effect.flag0018 = (unsigned char)facing;
-            effect.layer = 1;
-            effect.group = 2;
-            EmitLocalEffect(&effect);
-
-            effect.type = 0x1a5;
-            effect.x = (double)((int)positionX + (int)facing * 16);
-            effect.y = (double)((int)positionY - 43);
-            effect.layer = 1;
-            effect.group = 0;
-            EmitLocalEffect(&effect);
-
-            effect.x = (double)((int)positionX + (int)facing * 21);
-            effect.y = (double)((int)positionY - 51);
-            effect.layer = 0;
-            EmitLocalEffect(&effect);
-            pendingCharacterSoundSlot = 0;
-        }
-        velocityY += gravity;
-        if (field000a < 20 && velocityY > 0.15) {
-            velocityY = 0.15;
-        }
-        if (field000a > 14 && field000a < 22 && velocityY + positionY > 0.0) {
-            positionY = 0.0;
+        if (field000a > 7)
+            velocityY += gravity;
+        if (velocityY + positionY > 0.0 && field000a > 7 && field000a < 12) {
             ResetFrame();
-            field000a = 22;
+            positionY = 0.0;
+            field000a = 12;
             field000c = 0;
+            return;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a == 20 && field3138 < 25) {
-                ++field3138;
-                field000a = (unsigned short)(field000a - 3);
+            if (field000a == 6) {
+                effect.owner = 1;
+                effect.type = 0x19d;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)((int)positionY - 80);
+                effect.flag0018 = (unsigned char)facing;
+                effect.group = 0;
+                effect.layer = 1;
+                EmitLocalEffect(&effect);
+                effect.type = 0x19e;
+                effect.y = (double)(int)positionY;
+                EmitLocalEffect(&effect);
             }
-            if (field000a == 22) {
+            if (field000a == 8) {
+                if (field3138 < 20) {
+                    field000a = (unsigned short)(field000a - 2);
+                    ++field3138;
+                } else {
+                    gravity = 0.015;
+                }
+            }
+            if (field000a == 12)
                 field000a = (unsigned short)(field000a - 2);
-            }
             if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
+                FaceOpponent();
                 ResetPose();
             }
         }
