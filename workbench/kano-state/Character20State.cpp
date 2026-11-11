@@ -3476,5 +3476,44 @@ void Character20::Slot06()
         }
         return;
 
+    case 248: // Native-reviewed Kano 0x0064C212: native aerial opponent catch and reposition
+        velocityY += gravity;
+        if (field000a == 1 && attackCollisionResult == 3) {
+            (*opponentSlot)->ResetFrame();
+            (*opponentSlot)->ResetPose();
+            ResetPose();
+            ResetFrame();
+            field0008 = 249;
+            (*opponentSlot)->field0008 = 100;
+            effect.type = 0;
+            effect.x = (double)((int)positionX + (int)facing * 29);
+            effect.y = (double)((int)positionY - 62);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 29);
+            (*opponentSlot)->positionY = positionY - 62.0;
+            SetHorizontalOffset(50, 3);
+            SetHorizontalShake(50, 3);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1 && (*opponentSlot)->positionY < 0.0 &&
+                ((*opponentSlot)->field0008 < 50 ||
+                 (*opponentSlot)->field0008 > 149)) {
+                remainingHitCount = 1;
+            } else {
+                remainingHitCount = 0;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 209;
+                field000a = 2;
+            }
+        }
+        return;
+
     }
 }

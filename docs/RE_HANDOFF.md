@@ -33,24 +33,24 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano original `Slot06` is a **68,853-byte native state boss** actively
-reconstructed in `workbench/kano-state/Character20State.cpp`.
-Selected strict original-bound prefix now covers **38,994 bytes /
-10,702 x86 instructions**, original default plus **100 reviewed
-real live cases** through235. Independent audit validates **1,008
-internal and 133 outbound native jumps**, **883 original-bound
-nonlocal COFF call/IEEE-754 references** plus two original local
-switch table pointers. 233–235 are newly reviewed 284/284/272-byte
-trail strikes with native frame1/2 hit gates, hit1 vs six hits, and
-state3 recovery. **Next live case248 at `0x0064C212`**; IDs236–247
-map to native default, not missing owners.
+Kano original Slot06 is **68,853 native code bytes**, actively
+restored as natural C++ in `workbench/kano-state/Character20State.cpp`.
+Strict original-bound selected prefix now reaches **39,514 code bytes /
+10,848 original x86 instructions**, default plus **101 reviewed live
+states** through248. Original-bound verifier confirms **1,017
+internal and 134 outbound native branches**, **892 COFF call/float
+relocations** and both local native switch references.
 
-Incomplete stack0x130 vs native0x4A4 has equal six-byte instruction
-width and no position normalization. Remaining **36 original live
-states**, full stack, local tables, other relocs and common return
-OPEN. This is NOT whole-function Exact. Diagnostic marker cases have
-no acceptance credit. Only focused Kano checker/probe and fast CI;
-never all-unit cold replay or push.
+The new 520-byte state248 implements airborne opponent grab: native
+state transitions (own249/opponent100), X+facing*29/Y−62 impact and
+opponent reposition, plus original `SetHorizontalOffset(50,3)`
+0x00410A40 and `SetHorizontalShake(50,3)` 0x00410A80 calls. **Next
+state249 begins `0x0064C41A`**. Original stack0x4A4 vs candidate
+0x13C have same six-byte opcode width, with no position adjustment.
+Remaining **35 live state bodies**, original full stack, native
+jump DATA, remaining relocations and common return are OPEN.
+NOT full Exact, synthetic markers never count. Scoped Kano checks
+only, no all-unit cold replay or remote push.
 
 ## Additional newly accepted leaf owners
 
