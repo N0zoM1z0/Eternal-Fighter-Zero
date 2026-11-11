@@ -529,25 +529,24 @@ class layouts were changed. Evidence:
 This is an accepted *caller* Exact; the video drawing callee and
 Windows runtime are not thereby accepted. No all-unit cold replay.
 
-### Active second large boss: Character04::Slot06 selected prefix (NOT Exact)
+### Active second large boss: Character04::Slot06 (NOT full Exact)
 
 `workbench/character04-state/Character04State.cpp` now implements
-native default and **62 physical live states** (1–9,13–16,47,
-50–77,81–87,96–99,150–158) of the 59,143-byte native Slot06.
-The newest 150–158 include true stand/crouch recoil tiers and two
-distinct aerial impact results; state157/158 must end via state9
-and `ResetPose` rather than loop back two frames.
-`check_prefix.py` verifies **23,579 native code bytes / 6,513
-original x86 instruction positions/widths/forms**, **598 internal
-and 72 shared-return native branches**, **602 native-bound calls /
-IEEE-754 constants** and two original local switch references.
-Original-width stack instruction reserves provisional `0xE4` vs
-native `0x2E8`; only that immediate, outbound shared-return
-relocation/distance and independently original-bound COFF fields
-are excluded. Next original case161 at `0x0060D54B`; remaining 76
-live cases, full original frame, adjacent switch tables and native
-shared return still OPEN. Strict selected-prefix ONLY, **NOT whole
-Exact**. No cold all-unit replay, no push.
+native default plus **64 real states** (1–9,13–16,47,50–77,
+81–87,96–99,150–158,161–162) of a 59,143-byte owner. New
+case161/162 real C++ has native impact Y−70, frame2 lift,
+frame7 effect and frame12 gravity, verified against original code.
+`check_prefix.py` proves **24,346 continuous original code bytes
+/ 6,719 native x86 instruction positions/widths/forms**, **612
+native internal and 75 shared-return branch targets**, **617 original
+COFF call/IEEE-754 sites** plus 2 original local dispatch pointers.
+Only precisely original-width but provisional stack value (`0xF4`
+vs native `0x2E8`), unclosed shared-return displacements and
+original-bound COFF operands are excepted; all other selected
+code bytes match. Next real case163 at `0x0060D84A`;
+74 live cases, full stack, switch table and return remain OPEN.
+Partial strict selected proof, **NOT full Exact**. No full cold
+replay or remote push.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is
 now a complete **11-byte native Exact** virtual passive hook,

@@ -2119,5 +2119,74 @@ void Character04::Slot06()
         return;
 
 
+    case 161: // Native Character04 0x0060D54B: aerial impact and repeated launch
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+            effect.type = 9;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 70);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            remainingHitCount = 1;
+            pendingContextSoundSlot = 62;
+            ++reinterpret_cast<Character04StateFields *>(this)->field3138;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+                gravity = 0.035;
+            }
+        }
+        return;
+
+    case 162: // Native Character04 0x0060D65F: aerial impact and repeated launch
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+        }
+        if (field000a == 2 && field000c == 0) {
+            velocityY = -1.5;
+            gravity = 0.025;
+            remainingHitCount = 1;
+        }
+        if (field000a == 7 && field000c == 0) {
+            ResetFrame();
+            effect.type = 9;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 70);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            remainingHitCount = 1;
+            pendingContextSoundSlot = 62;
+            meter = (short)(meter - 1000);
+            ++reinterpret_cast<Character04StateFields *>(this)->field3138;
+        }
+        velocityY += gravity;
+        if (positionY + velocityY > 0.0) {
+            field0008 = 13;
+            ResetPose();
+            ResetPose();
+            positionY = 0.0;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 12) {
+                gravity = 0.035;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        return;
+
+
     }
 }
