@@ -2287,6 +2287,39 @@ The constructor, its called switch owner and all original source
 extents are accepted **independently**, not by assuming the call
 produces runtime-equivalent behavior for the entire game.
 
+### Mio Character11 lifecycle: six complete native Exact owners
+
+The original Mio `Character11` vtable at `0x0078887C` identifies six
+newly authored natural-C++ methods in `src/Character11Lifecycle.cpp`.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected-only full-owner replay
+proves **506 / 506 original native bytes, nine native original-bound
+COFF operands, and zero differences**:
+
+| Mio method | Original address | Exact bytes |
+| --- | --- | ---: |
+| InitializeState | `0x005884B0` | 287 |
+| ResetPose | `0x005885D0` | 62 |
+| RemoveLocalEffect | `0x00588610` | 80 |
+| Slot03 | `0x00588660` | 19 |
+| Slot08 | `0x0058DAB0` | 11 |
+| EmitLocalEffect | `0x0058DAC0` | 47 |
+
+The complete 287-byte initializer resets character field3138,
+**double** states field3140/field3148, and two additional ints;
+reinstalls ten exact native collision-offset shorts (-22,-56),
+(17,0), (15,-23), (22,-26), (33,-52); zeros all three independent
+64-int effect arrays and delegates to `Secondary::InitializeState`.
+The 62-byte ResetPose also sets both doubles to zero before invoking
+`Secondary::ResetPose`. **All four native double-zero constant
+references** at original `0x007872F8` are checked as DIR32,
+not skipped under a generic relocation mask. Five independently
+bound base calls target 0x40EDF0, 0x40F110, 0x412E60, 0x40E740,
+and 0x412B10; original Slot08 is an actual 11-byte empty override.
+Each complete original boundary and vtable slot was checked before
+registration. Certificate:
+`docs/evidence/character-11-lifecycle-exact.json`.
+Codegen Exact is not whole-game linkage or runtime equivalence.
+
 ### Mio constructor: original x87 double state initialization (2026-11-09)
 
 `Character11::Character11` at `0x00588310` has new natural C++

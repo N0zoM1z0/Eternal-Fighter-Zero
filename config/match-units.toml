@@ -160729,3 +160729,126 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "Canonical Akiko Character16 original vtable slot 0x00788F7C selects native 0x00725BD0 complete 47-byte owner, REL32 field 0x00725BF5 resolves independently to reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10"
+
+[units.character-11-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character11Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-11-initialize-state/Character11Lifecycle.obj"
+symbol = "?InitializeState@Character11@@UAEXXZ"
+target_address = 0x005884B0
+size = 287
+
+[[units.character-11-initialize-state.relocations]]
+offset = 27
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical Mio Character11 original vtable slot 0x007888AC selects complete 287-byte owner 0x005884B0, and independently reviewed native DIR32 field 0x005884CB resolves __real@0000000000000000 to 0x007872F8"
+
+[[units.character-11-initialize-state.relocations]]
+offset = 42
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical Mio Character11 original vtable slot 0x007888AC selects complete 287-byte owner 0x005884B0, and independently reviewed native DIR32 field 0x005884DA resolves __real@0000000000000000 to 0x007872F8"
+
+[[units.character-11-initialize-state.relocations]]
+offset = 279
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Canonical Mio Character11 original vtable slot 0x007888AC selects complete 287-byte owner 0x005884B0, and independently reviewed native REL32 field 0x005885C7 resolves ?InitializeState@Secondary@@UAEXXZ to 0x0040EDF0"
+
+[units.character-11-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character11Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-11-reset-pose/Character11Lifecycle.obj"
+symbol = "?ResetPose@Character11@@UAEXXZ"
+target_address = 0x005885D0
+size = 62
+
+[[units.character-11-reset-pose.relocations]]
+offset = 25
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical Mio Character11 original vtable slot 0x0078887C selects complete 62-byte owner 0x005885D0, and independently reviewed native DIR32 field 0x005885E9 resolves __real@0000000000000000 to 0x007872F8"
+
+[[units.character-11-reset-pose.relocations]]
+offset = 40
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical Mio Character11 original vtable slot 0x0078887C selects complete 62-byte owner 0x005885D0, and independently reviewed native DIR32 field 0x005885F8 resolves __real@0000000000000000 to 0x007872F8"
+
+[[units.character-11-reset-pose.relocations]]
+offset = 54
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Canonical Mio Character11 original vtable slot 0x0078887C selects complete 62-byte owner 0x005885D0, and independently reviewed native REL32 field 0x00588606 resolves ?ResetPose@Secondary@@UAEXXZ to 0x0040F110"
+
+[units.character-11-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character11Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-11-remove-local-effect/Character11Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character11@@UAEXF@Z"
+target_address = 0x00588610
+size = 80
+
+[[units.character-11-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Canonical Mio Character11 original vtable slot 0x007888A4 selects complete 80-byte owner 0x00588610, and independently reviewed native REL32 field 0x00588656 resolves ?RemoveLocalEffect@Secondary@@UAEXF@Z to 0x00412E60"
+
+[units.character-11-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character11Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-11-slot03/Character11Lifecycle.obj"
+symbol = "?Slot03@Character11@@UAEXXZ"
+target_address = 0x00588660
+size = 19
+
+[[units.character-11-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "Canonical Mio Character11 original vtable slot 0x00788888 selects complete 19-byte owner 0x00588660, and independently reviewed native REL32 field 0x0058866B resolves ?UpdateLocomotionState@Secondary@@QAEXXZ to 0x0040E740"
+
+[units.character-11-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character11Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-11-slot08/Character11Lifecycle.obj"
+symbol = "?Slot08@Character11@@UAEXXZ"
+target_address = 0x0058DAB0
+size = 11
+
+[units.character-11-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character11Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-11-emit-local-effect/Character11Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character11@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x0058DAC0
+size = 47
+
+[[units.character-11-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Canonical Mio Character11 original vtable slot 0x007888A0 selects complete 47-byte owner 0x0058DAC0, and independently reviewed native REL32 field 0x0058DAE5 resolves ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10"

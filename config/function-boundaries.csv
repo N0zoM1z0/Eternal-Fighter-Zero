@@ -461,3 +461,9 @@ address,end,size,status,evidence
 0x00721D50,0x00721DA0,80,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-lifecycle-exact
 0x00721DA0,0x00721DB3,19,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-lifecycle-exact
 0x00725BD0,0x00725BFF,47,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-lifecycle-exact
+0x005884B0,0x005885CF,287,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
+0x005885D0,0x0058860E,62,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
+0x00588610,0x00588660,80,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
+0x00588660,0x00588673,19,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
+0x0058DAB0,0x0058DABB,11,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact
+0x0058DAC0,0x0058DAEF,47,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-lifecycle-exact

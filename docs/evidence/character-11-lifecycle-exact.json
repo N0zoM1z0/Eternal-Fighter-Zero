@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "authority": "Six complete Mio Character11 lifecycle and local-effect originals selected independently by canonical EFZ.exe vtable 0x0078887C with individually checked native owner boundaries and original floating-constant/call destination addresses",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles ordinary C++ src/Character11Lifecycle.cpp; selected-only strict oracle independently binds four original x87 IEEE-754 double-zero DIR32 relocations and five original COFF REL32 base-method calls. All 506 native code bytes of the six complete owners match, zero differences. No full cold replay or whole-game runtime assertion.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 287,
+      "matched_bytes": 287,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 27,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Mio Character11 original vtable slot 0x007888AC selects complete 287-byte owner 0x005884B0, and independently reviewed native DIR32 field 0x005884CB resolves __real@0000000000000000 to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 42,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Mio Character11 original vtable slot 0x007888AC selects complete 287-byte owner 0x005884B0, and independently reviewed native DIR32 field 0x005884DA resolves __real@0000000000000000 to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 279,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "Canonical Mio Character11 original vtable slot 0x007888AC selects complete 287-byte owner 0x005884B0, and independently reviewed native REL32 field 0x005885C7 resolves ?InitializeState@Secondary@@UAEXXZ to 0x0040EDF0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8d690959d24e1fbb4992fe8a1fe45680348346eb736f4402b9f0cb05e34fe438",
+      "target_extent_sha256": "8d690959d24e1fbb4992fe8a1fe45680348346eb736f4402b9f0cb05e34fe438",
+      "unit": "character-11-initialize-state",
+      "symbol": "?InitializeState@Character11@@UAEXXZ",
+      "target_address": "0x005884B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "63d5e09d9edf1a6beb594870dc066f9a58bee8c9755d4538db4ed908300fa101",
+      "object_sha256": "f1940400a3c734bf9c9f2d3c0992058370f77e59b79af0de04fba29aa5b5953a",
+      "source_sha256": "a8ef13562b81b297e6e81f1937f7723141e76f7092e783ec222dc35b650813cb",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c6e103ba2f7f12319fde86bbdff5eb638f658a71488922f66eb1446293151c87",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0ad0d8f1a3663401ca5ccf3bd6f4f8e344568aafbcd9e3ea14cc68cca5419755",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 62,
+      "matched_bytes": 62,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 25,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Mio Character11 original vtable slot 0x0078887C selects complete 62-byte owner 0x005885D0, and independently reviewed native DIR32 field 0x005885E9 resolves __real@0000000000000000 to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 40,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Mio Character11 original vtable slot 0x0078887C selects complete 62-byte owner 0x005885D0, and independently reviewed native DIR32 field 0x005885F8 resolves __real@0000000000000000 to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 54,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "Canonical Mio Character11 original vtable slot 0x0078887C selects complete 62-byte owner 0x005885D0, and independently reviewed native REL32 field 0x00588606 resolves ?ResetPose@Secondary@@UAEXXZ to 0x0040F110",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "58c7f703cb457ae3892e9bedb72aef6b74661b802e043ff4227843200622780f",
+      "target_extent_sha256": "58c7f703cb457ae3892e9bedb72aef6b74661b802e043ff4227843200622780f",
+      "unit": "character-11-reset-pose",
+      "symbol": "?ResetPose@Character11@@UAEXXZ",
+      "target_address": "0x005885D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "63d5e09d9edf1a6beb594870dc066f9a58bee8c9755d4538db4ed908300fa101",
+      "object_sha256": "8654f38ce6e0b3822ddc99d3631f0b676a82b009e965386de3befdfe1d88cf76",
+      "source_sha256": "a8ef13562b81b297e6e81f1937f7723141e76f7092e783ec222dc35b650813cb",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c6e103ba2f7f12319fde86bbdff5eb638f658a71488922f66eb1446293151c87",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "23b4707fa8caae272af78b2b03304a0d86ae86c878b40e1c76878608e5f672a3",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "Canonical Mio Character11 original vtable slot 0x007888A4 selects complete 80-byte owner 0x00588610, and independently reviewed native REL32 field 0x00588656 resolves ?RemoveLocalEffect@Secondary@@UAEXF@Z to 0x00412E60",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b71b8f7d30b335feefe05c210d3531e8099421b94ce80fe061ff5a9387b9668b",
+      "target_extent_sha256": "b71b8f7d30b335feefe05c210d3531e8099421b94ce80fe061ff5a9387b9668b",
+      "unit": "character-11-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character11@@UAEXF@Z",
+      "target_address": "0x00588610",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "63d5e09d9edf1a6beb594870dc066f9a58bee8c9755d4538db4ed908300fa101",
+      "object_sha256": "657ceaa30ef693dc6bf1792ddbc591bac5dda3b56804ce6c9b8c897412791b3d",
+      "source_sha256": "a8ef13562b81b297e6e81f1937f7723141e76f7092e783ec222dc35b650813cb",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c6e103ba2f7f12319fde86bbdff5eb638f658a71488922f66eb1446293151c87",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8c9fbb59367440641fd1aab536b0c257ef5ab7df2759490fa773291bba6230ca",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "Canonical Mio Character11 original vtable slot 0x00788888 selects complete 19-byte owner 0x00588660, and independently reviewed native REL32 field 0x0058866B resolves ?UpdateLocomotionState@Secondary@@QAEXXZ to 0x0040E740",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9b22203a2ec65c1bfc5bccfdddda0b42bcc43b8295844af4bb08b9f9202dee96",
+      "target_extent_sha256": "9b22203a2ec65c1bfc5bccfdddda0b42bcc43b8295844af4bb08b9f9202dee96",
+      "unit": "character-11-slot03",
+      "symbol": "?Slot03@Character11@@UAEXXZ",
+      "target_address": "0x00588660",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "63d5e09d9edf1a6beb594870dc066f9a58bee8c9755d4538db4ed908300fa101",
+      "object_sha256": "fcfa8f4bf1cf9db490a98c6e14999bbc8dd1eb1ca127c70d08cc9e216889ac44",
+      "source_sha256": "a8ef13562b81b297e6e81f1937f7723141e76f7092e783ec222dc35b650813cb",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c6e103ba2f7f12319fde86bbdff5eb638f658a71488922f66eb1446293151c87",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "f3e7ba6e8c30e853b7c252c7001e0459c371d684d37ec54db78e743692f26c33",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "character-11-slot08",
+      "symbol": "?Slot08@Character11@@UAEXXZ",
+      "target_address": "0x0058DAB0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "63d5e09d9edf1a6beb594870dc066f9a58bee8c9755d4538db4ed908300fa101",
+      "object_sha256": "a8ab55c05b2b278c648eaac816acde8729faac335da72025cfe8e4cde9f8dcff",
+      "source_sha256": "a8ef13562b81b297e6e81f1937f7723141e76f7092e783ec222dc35b650813cb",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c6e103ba2f7f12319fde86bbdff5eb638f658a71488922f66eb1446293151c87",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "5616e76b9dedbcdf0e54eff7cb0d9c018f733ed8cf9e34795fbe542230eadbf6",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "Canonical Mio Character11 original vtable slot 0x007888A0 selects complete 47-byte owner 0x0058DAC0, and independently reviewed native REL32 field 0x0058DAE5 resolves ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "108ecc717c3d06e06cb0b62c93163905dc2fc71ebe269b861639e7bf6fcd9e79",
+      "target_extent_sha256": "108ecc717c3d06e06cb0b62c93163905dc2fc71ebe269b861639e7bf6fcd9e79",
+      "unit": "character-11-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character11@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x0058DAC0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "63d5e09d9edf1a6beb594870dc066f9a58bee8c9755d4538db4ed908300fa101",
+      "object_sha256": "afe7826773e139dece16e529740cafff26aa14f47adc7f6f52870dac34aa555e",
+      "source_sha256": "a8ef13562b81b297e6e81f1937f7723141e76f7092e783ec222dc35b650813cb",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c6e103ba2f7f12319fde86bbdff5eb638f658a71488922f66eb1446293151c87",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "7134f3f8cabef3c7f7410888d9b37f0134918a4deb3a2cfc36b430d290b0378e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

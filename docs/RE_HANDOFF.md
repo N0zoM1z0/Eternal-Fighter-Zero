@@ -111,6 +111,14 @@ calls were independently checked; strict selected replay proved
 `docs/evidence/character-16-lifecycle-exact.json`. Only these five
 units were replayed, never full all-unit cold replay.
 
+Mio `Character11` now has **six complete Exact lifecycle and effect
+owners / 506 original code bytes** in `src/Character11Lifecycle.cpp`.
+Nine reviewed original-bound COFF operands include four double-zero
+DIR32 literals and five direct base calls. Six complete owners pass
+strict selected replay 506/506, zero differences. Proof:
+`docs/evidence/character-11-lifecycle-exact.json`.
+Only these six units were replayed; no full cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256
