@@ -7,33 +7,36 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki Character10 Slot06 remains the major incomplete 62,693-byte
-state boss, **not complete Exact**. See the focused
-[workbench handoff](../workbench/nayuki-state/README.md).
-Original-bound native prefix is **40,836 bytes / 11,236 instructions**,
-reviewed default and **99 live states**. The checker verifies
-**1,030 internal branches**, **146 canonical outbound destinations**,
-**889 nonlocal COFF call/float references**, and two switch operands.
-Partial frame is now 0x2C0 versus original 0x2B4: still not full
-owner closure. State249 (1,015 bytes) reconstructs complete
-multi-frame opponent carry, 1,300 damage attack and knockback.
+Nayuki Character10 Slot06 remains the major unfinished **62,693-byte**
+state boss (NOT whole-function Exact). See
+[`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
+The current strict selected original-bound prefix is **42,062 bytes /
+11,569 instructions**, default plus **102 reviewed live states**.
+The checker verifies **1,052 internal branches**, **149 outbound
+jumps**, **903 original-bound nonlocal COFF call/float references**,
+and two local switch operands. Provisional frame 0x2E0 vs original 0x2B4.
 
-**Next state250 starts at 0x0045B7D4** and is unreviewed. Source has
-118/137 original labels: 99 reviewed, 19 inherited unreviewed, and
-19 missing (263–281). Full function, switch tables, remaining
-relocations and common return remain open. Marker branches aren't proof.
+State249 (1,015 bytes) rebuilds aerial grapple carry/launch; states
+250/251 recover virtual local effects 0x191/0x192 and frame4-only
+field3148*3 early timer gates; state252 (530 bytes) adds resource cost,
+global effect33 and local effect0x193 before the same timer behavior.
 
-Selected commands only:
+**Next original state253 at 0x0045BC9E**. The workbench has 118/137
+original labels: 102 reviewed, 16 inherited unverified, and 19 absent
+(IDs 263–281). Full code, local switch tables, shared return and
+complete relocation closure remain open. Probe markers are not proof.
+
+Run selected checks only, **no all-unit cold replay**:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 250 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 253 --context 12
     scripts/repo-python scripts/ci.py
 
-Reconcile all dirty edits, preserve original/VC7.1/Wine/Ghidra and
-accepted source, and commit useful checkpoints as `gpt-web: xxx`.
-Do not run all-unit cold replay or push without permission.
+Handle all dirty edits and preserve original/VC7.1/Wine/Ghidra and
+accepted source. Save substantial checkpoints as `gpt-web: xxx`.
+Do not push without permission.
 
 ## Additional newly accepted leaf owners
 

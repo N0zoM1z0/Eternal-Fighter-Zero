@@ -16,46 +16,48 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Reviewed original [0x00451850,0x0045B7D4): **40,836 / 62,693 code
-bytes** and **11,236 x86 instructions**, SHA-256:
-677a6350127d7f1904d1809c250a32e18d523644c27b6c87e7e964fd1560f02b.
+Reviewed original code [0x00451850,0x0045BC9E): **42,062 / 62,693 code
+bytes**, **11,569 original x86 instructions**, SHA-256:
+765f61bc30ca653dfcfca460f7aea4b55d247c2794cd96f4bb0dbeb6837694fd.
 
-The reviewed default and **99 live states** are 1–9, 13–16, 47,
-50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180,
-200–214, 220–221, 230–232 and 248–249. State249 is an authentic
-**1,015-byte airborne grapple follow-through**, not the inherited
-Makoto animation: while frames are <7 it applies horizontal offset and
-shake (50,3), drags opponent Y from own Y minus a 66/69/73/74/71/70
-step sequence and X from own X plus facing times 23/21/19/19/17/16.
-At frame7/tick0 it sets opponent facing, Y = own Y - 60,
-X = own X - facing*37, opponent state63, calls
-`ApplyDamage(1300,500.0)`, resets opponent, and sets original
-knockback (-2,-1). At frame11 it changes gravity to 0.035,
-inverts own facing on transition, and loops late frames by minus two.
-The original floating-point and integer operations, call order and
-branch forms are compared independently.
+Reviewed default and **102 live states**: 1–9, 13–16, 47, 50–77,
+81–87, 96–99, 123, 150–158, 161–171, 178–180, 200–214,
+220–221, 230–232, 248–252. State249 was reconstructed as a
+1,015-byte aerial grapple that carries/launches the opponent and
+calls `ApplyDamage(1300,500.0)` at frame7. States250/251 are
+original 348-byte tiered frame-gated attack emissions: `0x191` and
+`0x192` at frame3 with original facing*14/Y-41, `field0028 = 1`,
+group/layer=0 and virtual `EmitLocalEffect`, incrementing meter by
+45. The unusual native timer threshold only reduces the frame
+length by `field3148 * 3` when `field000a == 4` (compiler emits
+`sub; neg; sbb; inc`), not at all earlier frames.
 
-Reproduce focused original-bound comparison, never all-unit cold replay:
+State252 is a distinct 530-byte resource-consuming variant. On
+frame0/tick0 it deducts 500 or 250 depending on `field0120`,
+emits global type33 / palette11 at integer Y -50, and calls
+`ResetFrame` after the global emission. At frame3 it emits local
+`0x193` with the same tiered timer path. Its field-write order
+(`field0028` before group/layer) differs from states250/251 and was
+confirmed from native instruction offsets.
+
+Selected check (never full cold replay):
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` reproduces **11,236 native
-instruction offsets, widths and normalized forms** except temporary
-frame allocation (partial candidate 0x2C0 versus original 0x2B4).
-Original-bound checks verify **1,030 internal branches**, **146
-outbound destinations**, **889 nonlocal call/IEEE-754 COFF
-references**, two local switch operands and **99 original cases**.
-This is selected-prefix evidence, not whole-function Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` reproduces **11,569 native
+instruction offsets, widths and opcode forms** except the incomplete
+stack allocation (partial candidate 0x2E0 versus original 0x2B4).
+Original-bound checks include **1,052 internal branches**, **149
+outbound destinations**, **903 original-bound nonlocal call/IEEE-754
+COFF references**, 2 local switch operands and **102 original selector
+case destinations**. Selected-prefix evidence is NOT full Exact.
 
 ## Next original state and open scope
 
-State250 begins at **0x0045B7D4**. The sibling-derived candidate is
-still unreviewed; use original disassembly and
-`probe_prefix.py --through 250 --context 12` to advance.
-
-**21,857 code bytes**, complete 0x2B4 original frame, switch DATA,
-remaining relocations and shared return remain open.
-Of 137 live IDs, 118 labels are present: **99 reviewed**, 19 existing
-unreviewed and 19 absent (263–281). The partial probe deliberately
-uses UNACCEPTED neutral markers and late 300–306 scaffolding to keep
-the compiler prologue. Do not treat these as accepted C++.
+State253 begins at **0x0045BC9E** and remains an unverified sibling
+template. `probe_prefix.py --through 253 --context 12` is the next
+focused comparison. Original function still has **20,631 code bytes**
+to recover, a real 0x2B4 frame, local switch DATA, remaining binding
+closure and a shared return. Source has 118 of 137 original labels:
+102 verified, 16 unreviewed and 19 missing (263–281). Generated
+neutral marker branches and late 300–306 scaffolding are NOT source.

@@ -3552,29 +3552,26 @@ void Character10::Slot06()
         }
         return;
 
-    case 250: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
+    case 250: // Reviewed original Nayuki 0x0045B7D4: tiered multi-frame effect 401
+        if (field000a == 0 && field000c == 0)
             ResetFrame();
+        if (field000a == 3 && field000c == 0) {
+            effect.type = 0x191;
+            effect.x = (double)((int)positionX + (int)facing * 14);
+            effect.y = (double)((int)positionY - 41);
+            effect.group = 0;
+            effect.field0028 = 1;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
             meter = (short)(meter + 45);
         }
         ++field000c;
-        if (field000c >= timing.frameDuration) {
+        if (field000c >= timing.frameDuration - (field000a == 4) * field3148 * 3) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 3;
-            if (field000a == 3) {
-                effect.type = 403;
-                effect.x = (double)((int)positionX + (int)facing * 23);
-                effect.y = (double)((int)positionY - 76);
-                effect.group = 0;
-                effect.owner = 1;
-                effect.layer = 1;
-                effect.flag0018 = (unsigned char)facing;
-                EmitLocalEffect(&effect);
-                pendingContextSoundSlot = 21;
-                pendingCharacterSoundSlot = 5;
-            }
             if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
@@ -3582,29 +3579,26 @@ void Character10::Slot06()
         }
         return;
 
-    case 251: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
+    case 251: // Reviewed original Nayuki 0x0045B930: tiered multi-frame effect 402
+        if (field000a == 0 && field000c == 0)
             ResetFrame();
+        if (field000a == 3 && field000c == 0) {
+            effect.type = 0x192;
+            effect.x = (double)((int)positionX + (int)facing * 14);
+            effect.y = (double)((int)positionY - 41);
+            effect.group = 0;
+            effect.field0028 = 1;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
             meter = (short)(meter + 45);
         }
         ++field000c;
-        if (field000c >= timing.frameDuration) {
+        if (field000c >= timing.frameDuration - (field000a == 4) * field3148 * 3) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 3;
-            if (field000a == 3) {
-                effect.type = 404;
-                effect.x = (double)((int)positionX + (int)facing * 23);
-                effect.y = (double)((int)positionY - 76);
-                effect.group = 0;
-                effect.owner = 1;
-                effect.layer = 1;
-                effect.flag0018 = (unsigned char)facing;
-                EmitLocalEffect(&effect);
-                pendingContextSoundSlot = 21;
-                pendingCharacterSoundSlot = 5;
-            }
             if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
@@ -3612,16 +3606,12 @@ void Character10::Slot06()
         }
         return;
 
-    case 252: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 252: // Reviewed original Nayuki 0x0045BA8C: resource-costly area effect plus tiered hit
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
-            ResetFrame();
-            meter = (short)(meter + 45);
-            if (field0120 == 0) {
+            if (field0120 == 0)
                 field0118 -= 500.0;
-            } else {
+            else
                 field0118 -= 250.0;
-            }
             effect.type = 33;
             effect.palette = 11;
             effect.x = (double)(int)positionX;
@@ -3630,34 +3620,25 @@ void Character10::Slot06()
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
         }
-        if (field000a == 3) {
-            effect.type = 0x195;
-            effect.x = (double)((int)positionX + (int)facing * 23);
-            effect.y = (double)((int)positionY - 76);
+        if (field000a == 0 && field000c == 0)
+            ResetFrame();
+        if (field000a == 3 && field000c == 0) {
+            effect.type = 0x193;
+            effect.x = (double)((int)positionX + (int)facing * 14);
+            effect.y = (double)((int)positionY - 41);
+            effect.field0028 = 1;
             effect.group = 0;
-            effect.owner = 1;
-            effect.layer = 1;
+            effect.layer = 0;
             effect.flag0018 = (unsigned char)facing;
             EmitLocalEffect(&effect);
-            pendingContextSoundSlot = 21;
-            pendingCharacterSoundSlot = 5;
+            pendingCharacterSoundSlot = 0;
+            meter = (short)(meter + 45);
         }
         ++field000c;
-        if (field000c >= timing.frameDuration) {
+        if (field000c >= timing.frameDuration - (field000a == 4) * field3148 * 3) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 3;
-            if (field000a == 3) {
-                effect.type = 0x195;
-                effect.x = (double)((int)positionX + (int)facing * 23);
-                effect.y = (double)((int)positionY - 76);
-                effect.group = 0;
-                effect.owner = 1;
-                effect.layer = 1;
-                effect.flag0018 = (unsigned char)facing;
-                EmitLocalEffect(&effect);
-                pendingContextSoundSlot = 21;
-            }
             if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();

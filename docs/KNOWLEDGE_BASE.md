@@ -3063,50 +3063,49 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: 40,836-byte original-bound state boss prefix
+## Nayuki Character10 Slot06: 42,062-byte original-bound state boss prefix
 
-Original Character10 vtable Slot06 at 0x00788288 selects code
-[0x00451850,0x00460D35), 62,693 original bytes, SHA-256
+Original Character10 vtable Slot06 at 0x00788288 selects
+[0x00451850,0x00460D35): **62,693 original code bytes**, SHA-256
 4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-Original adjacent local switch DATA contains 138 four-byte destinations
-at 0x00460D35 and 306 selector bytes at 0x00460F5D, dispatching
-137 live and 169 default animation IDs.
+Adjacent local switch DATA: 138 four-byte targets at 0x00460D35
+and 306 selector bytes at 0x00460F5D (137 live / 169 default IDs).
 
-Unfinished natural source: `workbench/nayuki-state/Character10State.cpp`.
-Original [0x00451850,0x0045B7D4) is a **40,836-byte / 11,236 native
-instruction** selected opening, SHA-256
-677a6350127d7f1904d1809c250a32e18d523644c27b6c87e7e964fd1560f02b.
-Reviewed default and **99 original states**: 1–9, 13–16, 47,
+`workbench/nayuki-state/Character10State.cpp` reproduces original
+[0x00451850,0x0045BC9E): **42,062 code bytes / 11,569 x86
+instructions**, original prefix SHA-256
+765f61bc30ca653dfcfca460f7aea4b55d247c2794cd96f4bb0dbeb6837694fd.
+Reviewed original default and **102 live states**: 1–9, 13–16, 47,
 50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180,
-200–214, 220–221, 230–232 and 248–249.
+200–214, 220–221, 230–232 and 248–252.
 
-Earlier original-bound reconstructed states 213/214 implement aerial
-landing and wakeup, 220/221 authentic throws, 230–232 aerial cancel
-and hit tiers, 248 opponent capture and impact. State249 now exactly
-reproduces its **1,015-byte** original airborne grapple follow-through:
-for frames below7, `SetHorizontalOffset(50,3)` and
-`SetHorizontalShake(50,3)`; per-frame opponent Y displacement
-66,69,73,74,71,70 and facing-relative X displacement
-23,21,19,19,17,16; at frame7 reset opponent facing, set opponent
-Y = own Y - 60 and X = own X - facing*37, state63,
-call `ApplyDamage(1300,500.0)` at 0x4105A0 and opponent ResetPose,
-then write knockback velocities (-2,-1). At frame11 set gravity
-0.035 and reverse own facing on transition; late animation frames
-loop by subtracting two. The original constant references and exact
-x87/branch forms were checked, not inferred from Makoto.
+State249 restores full 1,015-byte aerial opponent carry/launch: opponent
+facing/position shifts across frames1–7, `ApplyDamage(1300,500.0)`
+with knockback (-2,-1), frame11 gravity .035 and late-frame loop.
+States250/251 are each 348-byte local effect attacks `0x191`/`0x192`.
+Frame3/tick0 emits at own X + facing*14, own Y-41 with
+`field0028=1`, group/layer0 and `flag0018=facing`; meter +45;
+frame4 alone receives a timer reduction by field3148*3. The VC7.1
+branchless pattern `sub ecx,4; neg ecx; sbb ecx,ecx; inc ecx`
+implements the frame4 indicator: it is NOT a generic early-frame
+threshold. State252 is a 530-byte distinct counterpart: frame0/tick0
+subtracts 500/250 from `field0118` based on `field0120`, emits
+global effect33/palette11 at integer Y-50, calls `ResetFrame`, then
+frame3 emits type0x193 plus meter45 and the same tiered frame4 gate.
+Unlike cases250/251, 252 writes effect `field0028` before group0.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected checker validates
-**11,236 same-offset/same-width original x86 instructions** and
-normalized forms other than partial frame allocation (candidate
-0x2C0 vs original 0x2B4), **1,030 original internal branches**,
-**146 valid outbound targets**, **889 original-bound nonlocal COFF
-call/float relocations**, two local switch operands and 99 original
-case destinations. This is NOT full owner Exact. **21,857 code bytes**,
-complete frame, original jump tables, remaining relocations and
-shared return remain open. State250 begins 0x0045B7D4; use
-`probe_prefix.py --through 250` and original disassembly, never
-an all-unit cold replay. 19 original case IDs 263–281 are absent,
-with 19 other existing bodies unreviewed. Marker branches are NOT source.
+Selected native VC7.1 `/Od /G6 /MT /Gy /W3` checker verifies
+**11,569 same-offset, same-width original x86 instruction forms**
+except the incomplete candidate frame allocation (0x2E0 vs original
+0x2B4), **1,052 original internal branches**, **149 canonical outbound
+destinations**, **903 original-bound nonlocal COFF calls/floats**,
+2 local switch operands and 102 original selector destinations.
+This is NOT full function Exact: **20,631 original code bytes**,
+complete 0x2B4 frame, switch tables, remaining relocations and return
+are open. 19 original case IDs 263–281 are absent and 16 existing
+cases unreviewed. Next state253 starts 0x0045BC9E; use selected
+`probe_prefix.py --through 253`, never all-unit cold replay.
+Neutral case markers in the probe are UNACCEPTED placeholders.
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 
