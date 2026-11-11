@@ -33,17 +33,21 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Work has **actually started** on Kano's original 68,853-byte Slot06
-state machine in `workbench/kano-state/Character20State.cpp`.
-The selected first **2,189 native bytes (621 instructions)** now match
-compiled C++ structure for original default/cases1–9, with
-50 original internal branches, 11 outbound targets, 44 externally
-bound reference operands and two verified original local jump-table
-addresses. The provisional short `0x58` stack allocation differs from
-original `0x4A4`, so this is **NOT whole Exact or any accepted function**.
-Next original case13 starts at `0x0064324D`. Native provenance and
-selected checker instructions in `workbench/kano-state/README.md`.
-Do not replay all units or count the generated marker cases.
+Kano original 68,853-byte Slot06 is under **actual authored source
+reconstruction** at `workbench/kano-state/Character20State.cpp`.
+The continuous selected native prefix is now **3,266 original bytes /
+927 instructions**, default plus **13 authentic cases** 1–9,
+13–16. The strict local checker validates **74 original internal
+branches**, **15 outbound destinations**, **67 bound float/call
+relocations** and 2 local switch-address references. Original
+C++-driven Kano jump timing and IEEE-754 speeds differ from sibling.
+
+The partial candidate has a 3-byte shorter stack allocation
+(0x58 vs original 0x4A4) because 123 case bodies remain missing.
+This is *not* a full Exact unit or accepted function. **Next native
+case47 begins 0x00643682**. Selected checks and provenance are in
+`workbench/kano-state/README.md`; do not perform whole-repo cold replay
+or count the neutral marker cases as reconstruction.
 
 ## Additional newly accepted leaf owners
 

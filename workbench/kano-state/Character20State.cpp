@@ -220,5 +220,111 @@ void Character20::Slot06()
         }
         return;
 
+    case 13: // Native-checked Kano state from original disassembly 0x005E8E7A: grounded landing recovery
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        FaceOpponent();
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                // The original tests inputY (+0x189) after selecting state 0.
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 14: // Native-checked Kano aerial state based on original disassembly 0x005E8F1F: upward launch and landing recovery
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            gravity = 0.025;
+            velocityY = -2.2;
+            velocityX = 0.0;
+            if ((unsigned char)dashMomentumFlag == 1) {
+                velocityX = 0.4;
+                dashMomentumFlag = 0;
+            }
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 15: // Native-checked Kano aerial state based on original disassembly 0x005E902E: forward aerial launch
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            gravity = 0.025;
+            velocityY = -2.2;
+            velocityX = 0.7;
+            if ((unsigned char)dashMomentumFlag == 1) {
+                velocityX = 1.1;
+                dashMomentumFlag = 0;
+            }
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 16: // Native-checked Kano aerial state based on original disassembly 0x005E913B: backward aerial launch
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            gravity = 0.025;
+            velocityY = -2.2;
+            velocityX = -0.7;
+            if ((unsigned char)dashMomentumFlag == 1)
+                dashMomentumFlag = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
     }
 }

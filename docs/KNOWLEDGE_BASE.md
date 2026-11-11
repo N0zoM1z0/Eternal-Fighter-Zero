@@ -1729,27 +1729,28 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano `Character20::Slot06` vtable slot6 at `0x00788C90` targets the
-**68,853-byte** native state machine `[0x006429C0,0x006536B5)`.
-Adjacent local data has 137 four-byte jump entries (548 bytes) and
-316 state selectors (316 bytes), dispatching 136 live cases and
-180 default cases. The partial source in `workbench/kano-state/`
-reproduces the **2,189-byte** original opening/default/1–9 cases
-at the instruction level after explicitly accounting for the only
-provisional compiler-frame-size difference (three bytes in the stack
-allocation instruction). The selected verifier checks all **621
-native instruction positions/forms/widths**, 50 internal and 11
-outbound branch targets, **44 bound nonlocal float/call operands**,
-and both original local table pointers.
+Kano `Character20::Slot06` vtable slot6 `0x00788C90` selects the
+**68,853-byte** original state machine `[0x006429C0,0x006536B5)`.
+Adjacent table data owns 137 address words (548 bytes) and 316
+selector bytes, mapping **136 live / 180 default** animation IDs.
+The natural partial source in `workbench/kano-state/` reproduces
+**3,266 original native bytes / 927 instructions** from the opening
+through complete cases1–9 and13–16, with next original case47 at
+`0x00643682`. Accounting for the only provisional compiler-frame
+instruction-length difference (candidate short 0x58, canonical long
+0x4A4), the selected native checker verifies **927 original forms and
+positions**, 74 internal and 15 outbound branch targets,
+**67 original-bound nonlocal call/IEEE-754 operands** and both local
+switch table addresses. This is a *partial* proof, NOT whole Exact.
 
-The cases have original Kano-specific speed values (+0.6/-0.6),
-jump timing frame2, gravity0.025, launch -2.2, dash-carry 0.3,
-and original landing/cancel ordering. These are native-verified
-natural C++ branches, not yet an accepted Exact function.
-**Original state13 starts at 0x0064324D**. All later 127 cases,
-complete original frame, tables and shared return are open. No
-all-unit cold replay; source markers in the selective probe are
-UNACCEPTED, and the Kano boss remains unfinished.
+Reviewed Kano-specific behaviors include +0.6/-0.6 base movement;
+frame2 jump timing (not the sibling's frame3); gravity0.025,
+vertical launch-2.2, and optional dash carry 0.3 / 0.4 / 1.1;
+original landing, pose reset and state changes. The remaining
+123 native case bodies, complete 0x4A4 stack, switch DATA, relocs
+and common return are OPEN. The generated neutral marker cases have
+no acceptance credit. Continue original disassembly with selected
+`check_prefix.py` and `probe_prefix.py --through 47` only.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
