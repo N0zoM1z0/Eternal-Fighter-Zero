@@ -3515,5 +3515,59 @@ void Character20::Slot06()
         }
         return;
 
+    case 249: // Native-reviewed Kano 0x0064C41A: staged aerial throw and opponent tracking
+        if (field000a < 5)
+            SetHorizontalOffset(50, 3);
+        if (field000a < 5)
+            SetHorizontalShake(50, 3);
+        if (field000a == 0 && field000c == 1)
+            (*opponentSlot)->facing = -facing;
+        velocityY += gravity;
+        if (velocityY + positionY > 0.0 && field000a > 5) {
+            ResetFrame();
+            positionY = 0.0;
+            ResetPose();
+            field0008 = 13;
+            return;
+        }
+        if (field000a == 2) {
+            (*opponentSlot)->positionY = positionY - 47.0;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 28);
+            (*opponentSlot)->field0008 = 101;
+        }
+        if (field000a == 3) {
+            (*opponentSlot)->positionY = positionY - 38.0;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 20);
+            (*opponentSlot)->field0008 = 101;
+            (*opponentSlot)->facing = facing;
+        }
+        if (field000a == 4) {
+            (*opponentSlot)->positionY = positionY - 62.0;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 29);
+            (*opponentSlot)->field0008 = 100;
+            (*opponentSlot)->facing = facing;
+        }
+        if (field000a == 5 && field000c == 0) {
+            (*opponentSlot)->positionY = positionY - 72.0;
+            (*opponentSlot)->positionX = positionX;
+            (*opponentSlot)->field0008 = 63;
+            (*opponentSlot)->facing = facing;
+            ApplyDamage(1200, 500.0);
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->knockbackVelocityX = -1.0;
+            (*opponentSlot)->knockbackVelocityY = -2.3;
+        }
+        if (field000a == 12 && field000c == 0)
+            gravity = 0.035;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount)
+                field000a = (unsigned short)(field000a - 2);
+        }
+        return;
+
     }
 }

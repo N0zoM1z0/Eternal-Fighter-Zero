@@ -33,24 +33,24 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano original Slot06 is **68,853 native code bytes**, actively
-restored as natural C++ in `workbench/kano-state/Character20State.cpp`.
-Strict original-bound selected prefix now reaches **39,514 code bytes /
-10,848 original x86 instructions**, default plus **101 reviewed live
-states** through248. Original-bound verifier confirms **1,017
-internal and 134 outbound native branches**, **892 COFF call/float
-relocations** and both local native switch references.
+Original Kano `Character20::Slot06` owns **68,853 native code bytes**;
+its authored C++ `workbench/kano-state/Character20State.cpp` now
+reproduces selected original `[0x006429C0,0x0064C750)`, **40,336
+bytes / 11,096 x86 instructions**. Default plus **102 live cases**
+reviewed. The strict checker binds **1,032 internal / 136 outbound
+original branch targets**, **906 native-bound nonlocal COFF calls/
+IEEE-754 references** and two original switch addresses.
 
-The new 520-byte state248 implements airborne opponent grab: native
-state transitions (own249/opponent100), X+facing*29/Y−62 impact and
-opponent reposition, plus original `SetHorizontalOffset(50,3)`
-0x00410A40 and `SetHorizontalShake(50,3)` 0x00410A80 calls. **Next
-state249 begins `0x0064C41A`**. Original stack0x4A4 vs candidate
-0x13C have same six-byte opcode width, with no position adjustment.
-Remaining **35 live state bodies**, original full stack, native
-jump DATA, remaining relocations and common return are OPEN.
-NOT full Exact, synthetic markers never count. Scoped Kano checks
-only, no all-unit cold replay or remote push.
+The new **822-byte state249** implements a long original airborne
+throw: opponent facing/position and animation changes on frames0–5,
+damage `ApplyDamage(1200,500.0)`, opponent knockback (-1.0,-2.3),
+original horizontal shake and offset, strict landing threshold,
+frame12 gravity and frame-loop exit. **Next case250 starts at
+`0x0064C750`**. Candidate stack0x148 vs original0x4A4 uses equal
+six-byte allocation width without offset normalization.
+**34 missing native case bodies**, original full frame, local switch
+DATA and shared return are OPEN; NOT whole Exact. Markers unaccepted.
+Only scoped Kano checker, no full all-unit cold replay or push.
 
 ## Additional newly accepted leaf owners
 

@@ -7,34 +7,39 @@
 `[0x006538D9,0x00653A15)` (316 bytes). Original selector holds
 **136 live cases and 180 default IDs**.
 
-Kano `Character20State.cpp` now authors the native default and
-**101 reviewed live states** through 248. Strict selected original
-`[0x006429C0,0x0064C41A)` is **39,514 native code bytes /
-10,848 original x86 instructions**, SHA-256
-`380f695f6544b8489bbeca95d015d7ee31935bcb042177634419d350a0b67706`.
-The next original state249 starts at **`0x0064C41A`**.
+Kano `Character20State.cpp` now contains original default and
+**102 native-reviewed live cases** through state249. The selected
+original code `[0x006429C0,0x0064C750)` covers **40,336 native
+bytes / 11,096 original x86 instructions**, SHA-256
+`c919786c0a1cb38c73818936db0dd297c6f02574021224c7a636f59ad7b31f75`.
+The next physical native case250 begins at **`0x0064C750`**.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected checker verifies
-**10,848 original instruction offsets, widths and normalized forms**,
-**1,017 internal and 134 outbound native jump destinations**, **892
-nonlocal original-bound COFF call/IEEE-754 references**, and both
-native switch-table address operands. This selected codegen candidate
-has a provisional stack frame0x13C vs original0x4A4, but both
-allocation instructions have identical six-byte widths and no
-position normalization is allowed. This is **NOT whole-function Exact**;
-**35 original live cases**, final stack, original local switch DATA,
-remaining relocations and shared return remain OPEN. The compiler's
-neutral diagnostic marker cases receive no original-source credit.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` strict selected checker verifies
+**11,096 original instruction positions, widths, normalized forms**,
+**1,032 original internal and 136 outbound branch destinations**,
+**906 independently original-bound COFF calls/IEEE-754 operands** and
+two local switch table references. The incomplete candidate uses
+stack0x148 versus original0x4A4, both six-byte allocations with no
+position normalization. This is a strict selected prefix, **NOT full
+Exact**: **34 missing real state bodies**, the canonical complete
+stack frame, adjacent native switch DATA, remaining relocations and
+shared return still need verification. Neutral probe case markers
+are not accepted as authored source.
 
-**State248 (520 bytes)** restores Kano's original airborne opponent
-capture: frame1/grab collision3 invokes both opponent and own
-ResetPose/ResetFrame in original order, sends own state249 and opponent
-state100, emits group2/layer1 impact0 at integer X+facing×29 and
-Y−62, then places opponent at X+facing×29/Y−62.0. It calls native
-`SetHorizontalOffset(50,3)` (original 0x410A40) and
-`SetHorizontalShake(50,3)` (0x410A80), both bound in strict COFF
-original relocation checks. The original animation completion sets
-state209 and frame2. No marker body is claimed.
+New **state249 (822 bytes)** reconstructs an original complex aerial
+throw sequence: while frames<5 it requests native horizontal offset
+and shake (50,3); frame0/tick1 reverses the grabbed fighter's facing;
+X/Y velocity advances under gravity. At frames2/3/4 it moves the
+opponent to X+facing*(28/20/29), Y-(47/38/62), and assigns original
+opponent states101/101/100 and facing. On frame5/tick0 it sets the
+opponent position to own X,Y-72, state63 and facing, calls accepted
+`ApplyDamage(1200,500.0)`, resets opponent pose, and assigns original
+knockback velocities -1.0/-2.3; at frame12 it sets gravity0.035.
+A native landing branch only fires on **strict Y+velocityY >0** and
+frame>5, doing own ResetFrame, zeroing Y, virtual own ResetPose,
+then switching to state13. Animation end repeats the last two frames.
+The full code path, direct call targets and canonical IEEE-754 values
+match in selected VC7.1 native comparison.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -51,11 +56,11 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
-    scripts/repo-python workbench/kano-state/probe_prefix.py --through 249 --context 12
+    scripts/repo-python workbench/kano-state/probe_prefix.py --through 250 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case249 `0x0064C41A`**. Original
-0x4A4 frame, 35 unverified native cases, local switch DATA,
+Next work begins at **Kano case250 `0x0064C750`**. Original
+0x4A4 frame, 34 unverified native cases, local switch DATA,
 shared return and complete relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.

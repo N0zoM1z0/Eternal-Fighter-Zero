@@ -1770,30 +1770,31 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Original Kano `Character20::Slot06` at vtable `0x00788C90` owns
-`[0x006429C0,0x006536B5)` (**68,853 original code bytes**) plus
-137 native switch destinations and 316 selector bytes (136 live /
-180 default IDs). Natural C++ in `workbench/kano-state/` now matches
-`[0x006429C0,0x0064C41A)` = **39,514 code bytes / 10,848 native x86
-instructions**, SHA-256
-`380f695f6544b8489bbeca95d015d7ee31935bcb042177634419d350a0b67706`.
-Default plus **101 live native case bodies** reviewed through248.
+Original Kano `Character20::Slot06` vtable `0x00788C90` selects
+`[0x006429C0,0x006536B5)` (**68,853 native code bytes**) plus
+137 four-byte switch entries and 316 selector bytes (136 live,
+180 default). Natural source `workbench/kano-state/Character20State.cpp`
+now matches `[0x006429C0,0x0064C750)` = **40,336 original bytes /
+11,096 x86 instructions**, selected SHA-256
+`c919786c0a1cb38c73818936db0dd297c6f02574021224c7a636f59ad7b31f75`.
+Default plus **102 reviewed native live cases** through249.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` strictly checks all **10,848
-original instruction positions, forms and widths**, **1,017 internal
-and 134 outbound branch targets**, **892 original-bound nonlocal
-COFF calls/IEEE-754 references** and two local switch pointers.
-Provisional candidate stack0x13C vs canonical0x4A4 has the same
-six-byte allocation width without offset adjustment. **Selected
-prefix ONLY, NOT full Exact**: 35 case bodies, complete native stack,
-local switch data and shared return are still open.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected checker validates all
+**11,096 original instruction offsets/widths/forms**, **1,032
+internal / 136 outbound native branch targets**, **906 original-
+bound COFF call/float refs** and two switch table operands. The
+candidate stack0x148 differs from full canonical0x4A4 but uses the
+same six-byte instruction width. Selected prefix ONLY, NOT Exact.
 
-State248 (520 bytes) recovers native airborne grab: own state249,
-opponent state100, effect0 at X+facing*29/Y−62 and opponent
-repositioning, `SetHorizontalOffset(50,3)` at 0x410A40 and
-`SetHorizontalShake(50,3)` at 0x410A80. Original call and float
-payloads audited. Next case249 begins `0x0064C41A`.
-No full all-unit cold replay or synthetic case acceptance.
+State249 (822 bytes) now implements Kano's actual complex aerial
+throw: early screen offset/shake, opponent facing inversion,
+frame2/3/4 positional tracking and action state changes, frame5
+`ApplyDamage(1200,500.0)` and opponent X/Y knockback (-1.0,-2.3),
+strict landing >0 and frame12 gravity0.035. The original animations
+and relative/float/direct call operands are native-reviewed.
+**Next state250 begins at `0x0064C750`**. Remaining 34 original
+case bodies, full stack/switch tables/shared return open.
+No cold full replay or credit for neutral probe markers.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
