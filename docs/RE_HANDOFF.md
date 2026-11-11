@@ -241,6 +241,15 @@ The dedicated `check_case300_shape.py` confirms **27 internal and
 This is NOT full Exact because original state250's register mismatch
 remains; strict contiguous prefix stays at 40,336 bytes.
 
+Kano state301 C++ now reconstructs an additional **962 native
+bytes / 254 original instruction forms**, including its 2,000-meter
+tier, frame13 tint/freeze, frame15 effect0x1A3 and independent
+six-round animation rewind. The scoped `check_case301_shape.py`
+original-binds **20 internal and 2 shared-return native branches**
+and **13 real call/float COFF operands**. State301 is an unaccepted
+structural island, NOT full Exact; original case250 still blocks the
+strict 40,336-byte continuous Boss prefix. No cold replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

@@ -65,6 +65,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case268_269_shape.py
     scripts/repo-python workbench/kano-state/check_case270_shape.py
     scripts/repo-python workbench/kano-state/check_case300_shape.py
+    scripts/repo-python workbench/kano-state/check_case301_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
 
@@ -81,6 +82,32 @@ native case because state250's compiler phase remains unresolved.
 These island checks do not grow the 40,336-byte strict contiguous
 prefix or register any complete owner. Never count later diagnostic
 neutral marker states as original code.
+
+### Experimental case301 — 962-byte tier-two original super
+
+Kano original state301 `[0x006505D0,0x00650992)` is **962 original
+code bytes / 254 x86 instructions** with fully authored natural C++.
+It retains the frame0/7 reset and frame3 paired 0x196/0x197
+local effects but differs from state300: frame13 spends **2,000
+meter**, uses context effect0x45/palette5 and native tint/freeze,
+then frame15 emits local effect0x1A3 at integer X+facing×40,
+integer Y−40. It charges+100 through frames3–6 and, at full
+charge10000, resets to zero and selects frame7. Frame19 rewinds
+three poses up to six times, not state300's shorter iteration.
+
+Scoped checker (NEVER all-unit cold replay):
+
+    scripts/repo-python workbench/kano-state/check_case301_shape.py
+
+Canonical native SHA-256
+`976a8b842aa8a6b6b74d67165d60923b40b8798bbaf2af18c91946fc0349b4dc`
+is pinned. The checker independently verifies **254 x86 native
+instruction offsets/widths/register-abstracted forms**, **20
+canonical in-case jumps**, **2 shared-return targets**, and all
+**13 original-bound COFF call/IEEE-754 operand references**. This
+is a **structural island only, NOT complete Exact**: original
+case250's register phase is still open and the formal strict
+continuous prefix remains 40,336 code bytes.
 
 ### Experimental case300 — 1,168-byte original super and shockwave
 

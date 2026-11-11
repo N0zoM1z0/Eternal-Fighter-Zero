@@ -4826,5 +4826,82 @@ void Character20::Slot06()
         }
         return;
 
+    case 301: // EXPERIMENTAL Kano 0x006505D0: two-k meter super with repeated frame19 strike
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            pendingCharacterSoundSlot = 0;
+        }
+        if (field000a == 13 && field000c == 0) {
+            hitstunFrames = 120;
+            meter = (short)(meter - 2000);
+            SetTint(0xb0, 3);
+            effect.type = 0x45;
+            effect.palette = 5;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 100);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            remainingHitCount = 5;
+            ResetFrame();
+        }
+        if (field000a == 7 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a > 2 && field000a < 7)
+            field3150 += 100;
+        if (field000a > 2 && field000a < 7 && field3150 >= 10000) {
+            field3150 = 0;
+            field000a = 7;
+            field000c = 0;
+            return;
+        }
+        if (field000a == 3 && field000c == 0) {
+            effect.type = 0x196;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            effect.type = 0x197;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        if (field000a == 15 && field000c == 0) {
+            effect.type = 0x1a3;
+            effect.x = (double)((int)positionX + (int)facing * 40);
+            effect.y = (double)((int)positionY - 40);
+            effect.group = 2;
+            effect.layer = 1;
+            effect.owner = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 7)
+                field000a = (unsigned short)(field000a - 4);
+            if (field000a == 19 && field3138 < 6) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

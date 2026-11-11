@@ -2085,6 +2085,19 @@ shared-return branches**, **13 true COFF call/IEEE-754 operands** and
 canonical SHA. This is a separate original-bound **structural island,
 NOT complete Exact** while the strict Boss prefix remains 40,336 bytes.
 
+#### Kano state301 original-bound second-tier super island
+
+Natural Kano `Slot06` C++ now includes state301 original
+`[0x006505D0,0x00650992)` = **962 code bytes / 254 x86 instruction
+positions**, with distinct 2,000-meter freeze/tint sequence,
+context0x45/palette5, frame15 0x1A3 local pulse and six-round
+frame19 repetition. Native checker `check_case301_shape.py`
+independently validates the pinned SHA, **254 native instruction
+widths/offsets/register-abstracted forms**, **20 internal and 2
+shared-return jumps**, and **13 native COFF call/float references**.
+This is a structural island, **NOT complete original-owner Exact**;
+the strict selected contiguous Boss prefix remains 40,336 bytes.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five
