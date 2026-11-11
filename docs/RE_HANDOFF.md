@@ -7,34 +7,38 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki `Character10::Slot06` remains an incomplete 62,693-byte boss.
-See [focused workbench instructions](../workbench/nayuki-state/README.md).
-Strict original-bound selected prefix is **48,180 bytes / 13,233
-instructions**, original default and **114 reviewed live states**.
-Checks cover **1,226 original internal branches**, **171 outbound
-targets**, **1,032 canonical nonlocal call/float COFF bindings**, and
-two local switch operands. Incomplete candidate frame 0x2F8 vs
-native 0x2B4, full Exact NOT proven.
+Nayuki `Character10::Slot06` remains an unfinished 62,693-byte
+state boss; see [focused workbench instructions](../workbench/nayuki-state/README.md).
+Selected original-bound prefix reaches **48,983 code bytes / 13,446
+instructions**, original default and **115 reviewed live states**.
+Strict focused checker covers **1,252 internal branches**, **173
+original outbound targets**, **1,045 original-bound nonlocal call/
+IEEE-754 COFF references** and two local switch operands. Temporary
+stack 0x300 vs original full 0x2B4: NOT whole-function Exact.
 
-Original missing states263–265 are now fully reconstructed C++ with
-complete selected native opcode, branch and relocation matches. State265
-is the reverse-velocity (frame4 -2.2) paired with original state264;
-its frame9+ damping uses +0.08 and zero clamp. Next original
-**state266 at 0x0045D484**. Source contains 121/137 live cases;
-114 reviewed, seven later unverified 300–306, 16 missing 266–281.
-Switch DATA, stack, remaining relocations and shared return open.
+Missing original states263–266 now have complete reconstructed C++
+with full selected native instruction and relocation comparison.
+State266 (803 bytes) restores its costly effect33/palette11 variant,
+resource deductions, hitCount1 clamp after frame9, 0.3 drag,
+frame4 velocity2.5 and tier-gated repeats.
 
-Focused checks only, never all-unit cold replay:
+**Next original state267 begins 0x0045D7A7**. Of 137 original live
+case IDs, 122 have natural source: 115 reviewed, seven unverified
+300–306 and **15 absent IDs 267–281**. Original frame, selector
+DATA, rest of code and final return remain open. Synthetic markers
+are unaccepted test scaffolding.
+
+Only selected checks, no all-unit cold replay:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 266 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 267 --context 12
     scripts/repo-python scripts/ci.py
 
-Handle all dirty edits (only one writer), preserve original, pinned
-VC7.1/Wine, Ghidra, and accepted source. Commit substantive progress
-as `gpt-web: xxx`. Do not push without permission.
+Continue through all dirty changes, preserving original EFZ.exe,
+pinned VC7.1/Wine and Ghidra/accepted sources. Save useful
+checkpoints as `gpt-web: xxx`; do not push without authorization.
 
 ## Additional newly accepted leaf owners
 

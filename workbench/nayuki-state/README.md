@@ -16,49 +16,53 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Reviewed original [0x00451850,0x0045D484): **48,180 / 62,693 code
-bytes**, **13,233 original native x86 instructions**, SHA-256:
-b2227e02df897973aea02954620cab14c17ba57d10a72440fab0ce45726a4fcf.
+Reviewed original [0x00451850,0x0045D7A7): **48,983 / 62,693 code
+bytes**, **13,446 native x86 instructions**, original prefix SHA-256:
+1da4b3feae3309afd71e0801abbb795a0624414550d6ca4e60c95b973d66db2f.
 
-Reviewed original default and **114 live states**: 1–9, 13–16,
-47, 50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180,
-200–214, 220–221, 230–232, 248–254, and 256–265.
+Reviewed default and **115 live states**: 1–9, 13–16, 47,
+50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180,
+200–214, 220–221, 230–232, 248–254, and 256–266.
 
-Missing original states263 (629 bytes), 264 (721 bytes), and now
-265 (697 bytes) have real C++ source instead of the selective probe's
-neutral marker cases. State263 implements a repeated aerial hit chain,
-landing frame16->5 restart and frame5 tiered launch. State264 has
-long-frame tier gates, frame7->4 hit loops and a 2.2/3.4 horizontal
-frame4 launch, decelerating 0.08 after frame9. State265 is the reverse
-counterpart: the same original timing/loop structure but 0.08 is
-**added** to negative horizontal velocity and clamped at zero, and
-frame4 launches at **-2.2** without state264's alternate 3.4 branch.
-The canonical constant operands are verified; neither state is a
-renamed Makoto template or a matching-instruction-form-only guess.
+The previously missing **states263–266** now have complete natural
+original-bound C++ paths. State263 (629 bytes) implements an aerial
+rebound with tiered frame5 launch and frame16 restart. State264
+(721 bytes) is an advanced horizontal attack with frame4 speed 2.2
+or 3.4, -0.08 drag and early timer gates. State265 (697 bytes) is
+its reverse, frame4 speed -2.2 and +0.08 drag to zero. State266
+(803 bytes) is a **resource-consuming variant**: frame0 deducts
+500/250 resource based on field0120, emits global effect33/palette11,
+and sets hitCount to field3148+1. After frame9, it subtracts 0.3
+horizontal speed and sets one remaining hit before clamping speed at
+zero. Frame4 grants meter45 and velocityX=2.5, with two frame7->4
+loops (field313c bounds 2/4 according to field3138) and frame11
+and frames1/2 tier-dependent shortened durations. No frame11 fixed
+24-tick skip occurs in this variant. All three new nonlocal IEEE-754
+payloads are checked against original data.
 
-Focused native original-bound comparison:
+Run only the focused original-bound native check:
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` matches **13,233 original
-instruction positions, widths and normalized opcode forms** apart
-from the incomplete candidate stack allocation (0x2F8 vs native
-0x2B4). Independently validated **1,226 internal original jumps**,
-**171 canonical outbound destinations**, **1,032 original-bound
-nonlocal call/IEEE-754 COFF references**, two switch operands and
-**114 original case entry targets**. This is selected-prefix evidence,
-NOT complete original-owner Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` compares **13,446 same-offset,
+same-width original x86 instruction forms** excluding only the
+partial candidate stack allocation (0x300 vs original 0x2B4).
+Original-bound: **1,252 internal jumps**, **173 outbound targets**,
+**1,045 nonlocal COFF call/float relocation bindings**, 2 local
+switch-address operands and **115 original selector case targets**.
+This is selected-prefix verification, NOT whole-owner Exact.
 
-## Next missing case and unresolved closure
+## Next missing case and unresolved full owner
 
-Next original **state266 begins at 0x0045D484**. Missing states266–281
-remain; reconstruct their actual original instructions, not synthetic
-neutral marker cases. The focus probe can compile through 266 only:
+Original **state267 begins at 0x0045D7A7**. States267–281 are still
+missing natural source and require original disassembly, not sibling
+hypotheses or synthetic marker cases. Focused probe:
 
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 266 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 267 --context 12
 
-**14,513 original code bytes**, original 0x2B4 stack frame, adjacent
-552/306-byte switch DATA, remaining relocations and shared return
-are open. Of 137 original live states, source has 121 labels:
-114 reviewed, seven unreviewed inherited 300–306 and **16 absent
-266–281**. No all-unit cold replay or whole-product/runtime claim.
+**13,710 remaining code bytes**, canonical 0x2B4 stack frame,
+552/306-byte local switch DATA, remaining COFF relocations and
+shared return are open. Of 137 original live IDs, 122 now have
+source labels: **115 reviewed**, seven later 300–306 unreviewed,
+**15 missing 267–281**. Marker cases in the probe are UNACCEPTED;
+no all-unit cold replay or whole-game runtime/portability claim.
