@@ -7,33 +7,34 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki `Character10::Slot06` remains a 62,693-byte unfinished boss.
-See [focused handoff](../workbench/nayuki-state/README.md).
-Selected original-bound prefix **55,875 code bytes / 15,326 native
-instructions**, default and **127 reviewed states**. Strong checks:
-**1,444 internal branches**, **222 outbound**, **1,157 nonlocal COFF
-call/float references** and two local switch references. Candidate
-frame 0x328 versus real original 0x2B4: NOT full Exact.
+Nayuki `Character10::Slot06` remains an incomplete 62,693-byte boss;
+see [focused workbench](../workbench/nayuki-state/README.md).
+Original-bound selected prefix **56,473 bytes / 15,484 instructions**,
+original default plus **128 reviewed cases**. Its checker verifies
+**1,456 internal branches**, **223 outbound targets**, **1,167
+nonlocal COFF call/float references** and two local switch operands.
+Incomplete candidate stack 0x328 vs original 0x2B4; NOT full Exact.
 
-State277 (667 bytes) and reverse state278 (667 bytes) now have authored
-original-bound native matching C++ branches. **Next original byte
-0x45F293 is state300, not state279**: native physical order is
-278 -> 300 -> 279. The numeric-order selective probe currently emits
-neutral marker279 first. Fix local probe emission order before
-attempting to compare beyond 0x45F293; do not count marker branches
-as original source. Missing cases279–281, unreviewed 300–306,
-canonical stack, local jump tables and shared return remain open.
+State300 (598 bytes) has been replaced with canonical Nayuki C++
+from native: original global super/tint effect, local effect0x196 and
+tier-dependent frame5 timer. The selective probe was corrected to
+**sort real cases by canonical physical jump address**, because the
+native order after state278 is state300 at 0x45F293, then state279
+at 0x45F4E9. Numeric-order probe falsely inserted marker279 first.
+**Next missing state279 at 0x45F4E9**, then 280–281; 301–306
+existing bodies still need verification, native stack/switch DATA and
+return remain open. Original case data, not synthetic markers, is
+source authority.
 
-Selected commands only; never all-unit cold replay:
+Only focused tests (never all-unit cold replay):
 
     git status --short --branch
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 278 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 300 --context 12
     scripts/repo-python scripts/ci.py
 
-Reconcile dirty changes, preserve canonical target, VC7.1/Wine,
-Ghidra and accepted source. Commit checkpoints `gpt-web: xxx`,
-no push without authorization.
+Preserve dirty edits, original target, pinned VC7.1/Wine, Ghidra,
+and accepted sources. Commit `gpt-web: xxx`, no push.
 
 ## Additional newly accepted leaf owners
 

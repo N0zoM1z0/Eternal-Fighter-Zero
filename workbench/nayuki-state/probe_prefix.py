@@ -7,6 +7,7 @@ The additional authentic states 300..306 retain ESI/frame shape in VC7.1.
 from pathlib import Path
 import argparse
 import re
+import struct
 import subprocess
 import sys
 
@@ -54,6 +55,14 @@ def make_source(last_real):
     assert len(live)==137 and live[-1]==306
     original=set(live)
     assert set(parts).issubset(original)
+    # The original switch bodies are not strictly sorted by numeric ID:
+    # state300 at 0x45F293 precedes state279 at 0x45F4E9. Retain the
+    # canonical physical address order when emitting real bodies and test
+    # markers; numeric-order output falsely breaks the native prefix.
+    destinations=target_bytes(im,0x00460D35,138*4)
+    body_address={n:struct.unpack_from('<I',destinations,4*sel[n-1])[0]
+                  for n in live}
+    emission_order=sorted(live,key=lambda n:(body_address[n],n))
     # Include selected authentic early cases and selected complex late ones to
     # recover the real VC7.1 ESI register use, without compiling 150 KB every edit.
     force=set(range(300,307))
@@ -61,7 +70,7 @@ def make_source(last_real):
     output=body[:matches[0].start()]
     output+=''.join(parts[x] if x in used
                     else f"    case {x}:\n        field000a = (unsigned short)(field000a + {x});\n        return;\n\n"
-                    for x in live)
+                    for x in emission_order)
     output+="    }\n}\n"
     PROBE.write_text(output)
     return used

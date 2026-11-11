@@ -3140,36 +3140,40 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: 55,875-byte selected native boss prefix
+## Nayuki Character10 Slot06: 56,473-byte native selected boss prefix
 
-Original Slot06 vtable 0x00788288 -> [0x00451850,0x00460D35),
+Canonical vtable Slot06 at 0x00788288 -> [0x00451850,0x00460D35),
 62,693 bytes, SHA-256 4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-Adjacent local switch DATA has 138 address words and 306 selectors.
-`workbench/nayuki-state/Character10State.cpp` reproduces native
-[0x00451850,0x0045F293): **55,875 original code bytes / 15,326
-x86 instructions**, SHA-256
-e6fb4d7815706357f70ca149f7719152065aef7d4bfa12c04e2103a633d6dfe5.
-Original default and **127 states through278** reviewed.
+Adjacent 138-entry destination and 306-byte selector tables choose
+137 live and 169 default original IDs.
 
-New state277 is an original-bound 667-byte +1.4 horizontal charge
-move with 0.08 damping, context sounds and tiered four-button cancel;
-state278 is its 667-byte -1.4 reverse variant, with identical
-frame4 rewind, button priority and state268 exit frame8.
-The selected pinned VC7.1 `/Od /G6 /MT /Gy /W3` checker verifies
-**15,326 original instruction positions/widths/opcode forms** except
-the incomplete partial stack allocation (candidate 0x328 vs native
-0x2B4), **1,444 internal branches**, **222 outbound targets**,
-**1,157 original-bound nonlocal COFF call/float references**, 2 local
-switch operands and **127 native case entries**. NOT full Exact.
+`workbench/nayuki-state/Character10State.cpp` reproduces canonical
+[0x00451850,0x0045F4E9), **56,473 bytes / 15,484 x86 instructions**,
+SHA-256 b463b5fbe7f5bbcc43f7be5a1495b83fe1f668544c76dc144e0e3805b05726f4.
+Original default and **128 live states** (through278 plus300) are
+native compared and reviewed.
 
-Original native physical ordering changes after state278:
-278=0x45EFF8, **300=0x45F293**, 279=0x45F4E9. Current selective
-probe emits the synthetic missing-state279 marker before state300
-because of numeric sorting, so a mismatch after 0x45F293 is
-expected. Change *local case emission order*, not earlier confirmed
-source logic. **6,818 code bytes**, missing state IDs279–281,
-unreviewed 300–306, complete original stack and local switch DATA,
-remaining relocations and shared return remain open.
+State300 is the original 598-byte special: frame0 zeroes X/Y speed
+and gravity, frames0–2 set horizontal shake(50,3), frame2 spends 1000
+meter, applies tint(0xB0,3) and emits global 0x44/palette0x13
+impact at integer (X, Y-40), sets hitstun120. Frame>=2 writes the
+short at offset0xF2 to10; frame4 emits local attack0x196 at
+X+facing*14, Y-41 with owner1/field0028=1 and sound0.
+Frame5's frameDuration may shorten by `field3148*6`.
+
+Critical original physical order: **case300 at 0x45F293 follows
+278 at 0x45EFF8, and precedes 279 at 0x45F4E9**. The selected probe
+now emits cases ordered by native target addresses, rather than by
+numeric IDs, avoiding false comparison failures from marker279.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` check verifies **15,484 native
+instruction forms/offsets/widths**, apart from candidate frame
+0x328 vs original 0x2B4, **1,456 original internal branches**,
+**223 outbound targets**, **1,167 original-bound COFF call/float
+references**, two local switch operands and 128 selector cases.
+Not whole Exact: **6,220 remaining code bytes**, three missing states
+279–281, six unreviewed 301–306, canonical frame, switch DATA and
+shared return remain open. Next state279 begins 0x45F4E9.
+Never run full all-unit cold replay or count synthetic markers.
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 
