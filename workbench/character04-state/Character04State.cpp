@@ -2,6 +2,13 @@
 // This is an incomplete workbench. Unreviewed live states are NOT source.
 #include "../../src/CharacterViews.h"
 
+// The accepted shared Character04 header has provisional child layout.
+// Use this private offset view without changing accepted owner recipes.
+struct Character04StatePrivate {
+    unsigned char base[0x3138];
+    int field3138;
+};
+
 void Character04::Slot06()
 {
     if (hitstopFrames > 0 || (*opponentSlot)->hitstunFrames > 0) return;
@@ -951,6 +958,195 @@ void Character04::Slot06()
             ++field000a;
             if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 66: // Native Character04 0x0060A4C0: wall collision / landing special
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a > 0 && CollisionSide() != 0) {
+            field0008 = 70;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 67: // Native Character04 0x0060A6A9: wall collision / landing special
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a > 0 && CollisionSide() != 0) {
+            field0008 = 70;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 68: // Native Character04 0x0060A886: wall collision / landing special
+        if (field0120 != 0) {
+            field0118 -= 1.5;
+        }
+        meter = (short)(meter + 3);
+        velocityX = knockbackVelocityX;
+        velocityY = knockbackVelocityY;
+        ++field000c;
+        if (CollisionSide() != 0) {
+            field0008 = 70;
+            ResetPose();
+            return;
+        }
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 69: // Native Character04 0x0060A9C2: wall collision / landing special
+        if (field0120 != 0) {
+            field0118 -= 1.5;
+        }
+        meter = (short)(meter + 3);
+        velocityX = knockbackVelocityX;
+        velocityY = knockbackVelocityY;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 70: // Native Character04 0x0060AAD7: wall collision / landing special
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0 && reinterpret_cast<Character04StatePrivate *>(this)->field3138 == 0) {
+            meter = (short)(meter + 30);
+            ++reinterpret_cast<Character04StatePrivate *>(this)->field3138;
+            airActionLockFrames = (short)(airActionLockFrames + 120);
+            velocityX = 0.5;
+            velocityY = -2.5;
+            gravity = 0.025;
+            pendingContextSoundSlot = 31;
+
+            effect.type = 0;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 0;
             }
         }
         if (positionY + velocityY >= 0.0 && field000a > 1) {

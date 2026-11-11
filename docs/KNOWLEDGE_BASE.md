@@ -2239,35 +2239,37 @@ linkage or actual graphics output parity.
 
 ### Character04 Slot06: original-bound 59,143-byte state boss workbench
 
-The original `Character04::Slot06` native vtable `0x00788B94`
-selects `[0x00607930,0x00616037)` (**59,143 bytes**) and adjacent
-139 native switch destination pointers and 325 selector bytes.
-Native selector maps 138 live IDs and 187 defaults.
+Original `Character04::Slot06` at vtable `0x00788B94` owns code
+`[0x00607930,0x00616037)` (**59,143 bytes**) plus adjacent
+139 original switch destination pointers and 325 selectors
+(138 live original cases and 187 default IDs).
 
-The workbench `workbench/character04-state/Character04State.cpp` now
-contains real C++ for **original default plus 30 native cases**:
-1–9,13–16,47 and50–65. Newly recovered cases62–65 implement
-original unclamped/direct velocity airborne recovery, wall impact
-with actual calls to `Secondary::CollisionSide` at0x40FF70 and
-state70 transition, plus native vertical clamps −2/−4 with 0.032
-gravity and conditional ground recovery. All are authored source,
-not marker branches or renamed sibling assembly.
+Native C++ in `workbench/character04-state/Character04State.cpp`
+now authors original default and **35 reviewed live cases**:
+1–9,13–16,47,50–70. The most recent cases66–70 reconstruct
+wall-sensitive `CollisionSide` logic, direct airborne knockback,
+independently original-bound stage/impact effects, and state70
+wall-bounce with 0.025 gravity and -2.5 vertical speed. Each case
+is real source, not generated marker code.
 
-Scoped strict original-bound `check_prefix.py` now proves
-**11,152 original continuous code bytes / 3,096 x86 instructions**
-`[0x00607930,0x0060A4C0)`, original SHA-256
-`013d2d6e861e57ab1dc947ffb169b05c778d776b6b509a8721db2a02958eddc7`.
-It checks **291 exact native internal and 34 shared-return branch
-targets, 304 independently bound original COFF calls/IEEE-754
-operands** (including original CollisionSide), and both original
-switch-table/selector pointers. All selected bytes match outside
-*only* the temporary shorter original stack allocation, original-
-bound relocation sites and unresolved shared-return displacement.
-This is strictly **selected prefix, NOT whole Exact**: other
-108 live case bodies, original full `0x2E8` frame, local tables
-and shared return are still open. **Next real case66 starts
-`0x0060A4C0`.** No full cold replay or diagnostic marker credit.
-See workbench README.
+Selected strict `check_prefix.py` now checks **13,191 continuous
+original code bytes / 3,669 x86 instructions** from
+`[0x00607930,0x0060ACB7)`, native SHA-256
+`f8d8368e12a1d09811ed281cadf4f54e35646e61618124c4a735a74ca63881a0`.
+It verifies **342 original internal and 42 shared-return branch
+targets**, **335 independently original-bound COFF calls/IEEE-754
+operands** (including real `CollisionSide`, `Context::EmitEffect`,
+`__ftol2`) and two original local table/selector pointers.
+The incomplete function now compiles with **the original-width
+six-byte `sub esp` instruction**, candidate stack0x84 versus original
+0x2E8, so *no position compensation* is needed. Every other
+reviewed machine-code byte matches outside this original-bound
+prologue immediate, unresolved shared-return JMP displacements
+and four-byte COFF relocation fields. **NOT full Exact:**
+103 real native case bodies, original stack size/return and complete
+local switch DATA remain OPEN. **Next state71 starts `0x0060ACB7`.**
+No cold all-unit replay or synthetic marker acceptance. See
+workbench README.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

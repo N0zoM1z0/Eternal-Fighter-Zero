@@ -531,24 +531,24 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 
 ### Active second large boss: Character04::Slot06 selected prefix (NOT Exact)
 
-`workbench/character04-state/Character04State.cpp` now contains real
-C++ for the default plus **30 original live cases**
-(1–9,13–16,47,50–65) of the **59,143-byte** original boss at
-vtable `0x00788B94`. Added cases62–65 implement true direct and
-clamped airborne knockback plus native wall collisions to state70,
-including the reviewed `CollisionSide` callee at 0x40FF70.
-Focused `check_prefix.py` confirms **11,152 native code bytes /
-3,096 original instruction positions/forms/widths**, **291 internal
-and 34 shared-return original branches**, **304 independently
-native-bound COFF call/float references** and two original native
-selector/table pointers. Remaining reviewed opcode bytes match
-outside independently native-bound relocation fields, incomplete
-three-byte provisional stack shrink and outbound shared-return
-JMP distance. The complete original owner still uses `0x2E8` frame,
-139 jump pointers and 325 selector bytes. **Next case66
-begins `0x0060A4C0`**; 108 real case bodies, full stack/table
-and return remain OPEN. NOT whole-function Exact. No full cold
-all-unit replay, no marker-body acceptance, no push.
+`workbench/character04-state/Character04State.cpp` now authors
+original default plus **35 reviewed live cases** (1–9,13–16,47,
+50–70) of the **59,143-byte Character04::Slot06** selected by
+vtable `0x00788B94`. Cases66–70 include native collision checks,
+airborne recovery, wall-bounce impact and ground transitions.
+The scoped `check_prefix.py` confirms **13,191 continuous original
+bytes / 3,669 x86 instruction offsets/widths/forms**, **342 internal
+and 42 shared-return native branches**, **335 original-bound COFF
+call/float operands** and two native selector/table references.
+The real compiler candidate now uses a **six-byte `sub esp` opcode**,
+matching original instruction width with *no position shift*, though
+candidate immediate0x84 differs from original0x2E8. Apart from
+this incomplete frame operand, outbound-return relative distances
+and independently native-bound COFF sites, all reviewed bytes match.
+Original 139-pointer/325-selector data, full stack and 103 real
+case bodies remain OPEN. **Next case71 at `0x0060ACB7`.**
+NOT complete Exact; only local checks/fast CI, no cold all-unit
+replay, marker acceptance or remote push.
 
 ## Tools and checks
 
