@@ -3657,5 +3657,73 @@ void Character20::Slot06()
         }
         return;
 
+    case 254: // EXPERIMENTAL Kano 0x0064CB5F: charged dual-effect finisher and cancellable launcher
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            pendingCharacterSoundSlot = 0;
+        }
+        if (field000a == 3 && field000c == 0) {
+            effect.type = 0x196;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            effect.type = 0x197;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        if (field000a == 7 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a > 2 && field000a < 7)
+            field3150 += 75;
+        if (field000a > 2 && field000a < 7 && field3150 >= 10000) {
+            field3150 = 7500;
+            field000a = 7;
+            field000c = 0;
+            return;
+        }
+        if (field000a > 15 && recognizedCommand == 13 &&
+            (field0118 >= 500.0 || field0120 > 0)) {
+            ResetPose();
+            ResetFrame();
+            field0008 = 251;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 7)
+                field000a = (unsigned short)(field000a - 4);
+            if (field000a == 16 && field3138 < 1) {
+                effect.type = 0x1bb;
+                effect.x = (double)((int)positionX +
+                   ((int)facing * 150 + (int)inputX * 70));
+                effect.y = 0.0;
+                effect.group = 2;
+                effect.layer = 1;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                pendingCharacterSoundSlot = 3;
+                ++field3170;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

@@ -1796,6 +1796,20 @@ and relative/float/direct call operands are native-reviewed.
 case bodies, full stack/switch tables/shared return open.
 No cold full replay or credit for neutral probe markers.
 
+#### Kano state254 independent structural island (unaccepted)
+
+State254 native `[0x0064CB5F,0x0064CEA2)` comprises **835 original
+bytes / 223 instruction boundaries**. New natural C++ in the Kano
+workbench reconstructs the full charged dual-effect, resource-cancel,
+frame16 launcher and effect owner/position arithmetic. Scoped script
+`check_case254_shape.py` original-binds **20 internal branches, 3
+shared-return branches and 10 native COFF operands**, and verifies
+all 223 instruction shapes after abstracting EAX/EDX/ECX register
+selection. The original concrete register bytes do **not** match and
+case250 still blocks the strict continuous prefix. Thus case254 is
+**NOT full or partial Exact acceptance** and changes neither formal
+function ledger nor original-bound continuous prefix of 40,336 bytes.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

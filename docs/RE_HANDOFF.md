@@ -69,6 +69,17 @@ and one equivalent ADD encoding differ; original case250's tail also
 remains open. No new complete function or selected-prefix credit.
 See the Kano README for the precise scope and mismatch evidence.
 
+Kano case254 now also has **835 bytes / 223 original instruction
+positions and register-abstracted shapes** from authored natural C++.
+The separate `workbench/kano-state/check_case254_shape.py` verifies
+20 native internal branches, 3 shared-return jumps and 10 independently
+original-bound COFF call/float operands. This is **NOT Exact**:
+concrete register bytes still differ after the unresolved case250.
+The contiguous selected prefix remains 40,336 bytes; Kano state251
+and state254 are structural islands, not formally accepted owners.
+Real original code correction included grouped facing/input offset
+arithmetic and the `owner` (not `field0028`) effect field.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

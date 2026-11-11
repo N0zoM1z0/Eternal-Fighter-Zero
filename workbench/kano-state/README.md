@@ -41,6 +41,39 @@ then switching to state13. Animation end repeats the last two frames.
 The full code path, direct call targets and canonical IEEE-754 values
 match in selected VC7.1 native comparison.
 
+### Experimental case254 island — 835 native bytes, source authored
+
+Original Kano state254 `[0x0064CB5F,0x0064CEA2)` is **835 machine
+code bytes / 223 original x86 instructions**. Natural C++ was
+substantively authored in `Character20State.cpp`, restoring the two
+native frame3 local effects `0x196`/`0x197`, frame7 reset, charge
+counter accumulation by75, saturation-cancel threshold10000 and
+charge reset to7500, native command13/resource-500 cancel to state251,
+frame7->3 rewind, and frame16 `0x1BB` launch with original
+positionX + (facing*150 + inputX*70) computation, `effect.owner=1`,
+context sound3 and `field3170` increment.
+
+Run **only the dedicated original-bound diagnostic**:
+
+    scripts/repo-python workbench/kano-state/check_case254_shape.py
+
+This checks the original canonical SHA-256
+`77afeef263e2e92f5601f26e9dd92f44d17ddfc4f14b5f80e143790cc34a64bf`,
+**223 original x86 instruction offsets/widths and register-abstracted
+forms**, **20 exact original in-state branch targets**, **3 canonical
+shared-return paths**, plus **10 original-bound COFF direct call /
+IEEE-754 operands** (five `__ftol2`, three ResetFrame, native 500.0
+and native 0.0 literals). A real correction was necessary: the two
+facing/inputX terms must be grouped before addition to `positionX`,
+and `owner`, not `field0028`, receives the value1.
+
+This remains a **separate register-abstracted structural island, NOT
+Exact**. Original and selected candidate concrete register allocation
+still differ because the intervening case250 codegen phase is open.
+The formal selected prefix MUST remain pinned at original case250
+start `0x0064C750`; case254 is NOT credited as a complete/Exact owner.
+Native cases252/253 map to default, not missing authored states.
+
 ### Experimental case251 island — native instruction-shape audit
 
 The authored `Character20State.cpp` now also includes an original
@@ -104,6 +137,7 @@ Run ONLY focused checks, not full cold replay:
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
     scripts/repo-python workbench/kano-state/check_case251_shape.py
+    scripts/repo-python workbench/kano-state/check_case254_shape.py
     scripts/repo-python workbench/kano-state/probe_prefix.py --through 250 --context 12
     scripts/repo-python scripts/ci.py
 
