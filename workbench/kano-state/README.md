@@ -59,6 +59,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case257_shape.py
     scripts/repo-python workbench/kano-state/check_case258_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
+    scripts/repo-python workbench/kano-state/check_case261_262_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
 
@@ -75,6 +76,32 @@ native case because state250's compiler phase remains unresolved.
 These island checks do not grow the 40,336-byte strict contiguous
 prefix or register any complete owner. Never count later diagnostic
 neutral marker states as original code.
+
+### Experimental cases261–262 — paired charged effect launchers
+
+The original Kano states261 and262 occupy native
+`[0x0064E726,0x0064EA72)` and `[0x0064EA72,0x0064EDBE)`,
+**844 bytes / 225 x86 instructions each**. Both now have authored
+natural C++ code. Their original state0/frame7 resets and frame3
+paired 0x196/0x197 local effects match, but the distinct charge
+residue, effect type and resource cost are Kano-specific:
+**261: charge5000, launch0x1B9, meter−20**;
+**262: charge2500, launch0x1BA, meter−50**. Frame12 launches at
+X=positionX,Y=-80 and the native sound4/field3168/field313c/
+field3138 write order differs between these two tiers.
+
+Run:
+
+    scripts/repo-python workbench/kano-state/check_case261_262_shape.py
+
+This selected native-bound checker verifies both original SHA-256
+extents, **450 real instruction offsets/widths/register-abstracted
+forms**, **40 exact internal branch targets**, **6 canonical shared
+returns**, and **18 original-bound COFF call/IEEE-754 references**.
+Both original bodies match these structural properties; concrete
+compiler registers remain different because case250 is still open,
+so **NOT whole-Exact and no new formal ledger credit**. The independently
+strict contiguous Kano prefix remains **40,336 bytes**.
 
 ### Experimental case259 — 1,586-byte five-impact charged finisher
 

@@ -1948,6 +1948,19 @@ registration. Proof: `docs/evidence/character-20-slot08-exact.json`.
 This is complete codegen Exact for one owner, not whole-game runtime
 or linkage equivalence.
 
+#### Kano states261/262 original-bound paired launcher islands
+
+Native cases261/262 each comprise **844 original code bytes / 225
+instruction locations**. Their fully authored natural C++ includes
+original distinct full-charge residue5000/2500, frame12 effects
+0x1B9/0x1BA, and native 20/50 meter cost, while preserving separate
+sound and effect-counter write ordering. Original-bound audit
+`workbench/kano-state/check_case261_262_shape.py` verifies **450
+instruction positions/register-abstracted forms, 40 internal and
+6 shared-return native jumps, and 18 original COFF call/float
+operands**. This is a native structural island, **NOT full Exact**;
+the real stack and original case250 compiler phase remain open.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

@@ -160,6 +160,17 @@ strict selected native prefix remains 40,336 bytes. Kano Slot08
 independent render/periodic-effect source is also under exploration,
 but has not passed original native comparison and is not registered.
 
+Kano charged special states261/262 have also been reconstructed
+in natural C++ and native-bound structurally checked. Each original
+844-byte / 225-instruction case matches the register-abstracted
+original with **20 internal + 3 shared-return native branches**
+and **9 original COFF call/float bindings**. The completed
+`check_case261_262_shape.py` records both native SHA-256 extents,
+original charge5000 vs2500, launch effects0x1B9 vs0x1BA, and
+meter cost20 vs50 with distinct write ordering. The two islands are
+**NOT Exact** due original state250's unresolved register phase.
+The strict 40,336-byte Kano prefix is unchanged; no cold replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++
