@@ -258,6 +258,8 @@ def main():
     candidate_table=len(compiled)-556-325
     candidate_selector=candidate_table+556
     candidate_epilogue=candidate_table-4
+    assert candidate_epilogue==len(orig)-code_shift
+    assert candidate_ins[len(target_ins)+1][2]=='mov esp,ebp'  # no synthetic tail trampoline
     # The compiler-generated 325-byte selector is byte-identical. Its 139
     # jump-table relocations target the exact original case-entry ordering.
     assert compiled[candidate_selector:candidate_selector+325]==selectors
@@ -293,7 +295,8 @@ def main():
         assert compiled[candidate_off:candidate_off+4]==candidate_disp,(hex(BASE+off),compiled[candidate_off:candidate_off+4])
     ignore_candidate_bytes.update({off-code_shift:'state256 x87 scratch-slot displacement'
                                    for off in stack_temp_disp_offsets})
-    internal=outbound=0
+    internal=outbound=direct_outbound=trampoline_outbound=0
+    trampoline_targets=set()
     for i,a in enumerate(target_ins):
         # The explicit native-tail reservation is the sole extra prologue
         # instruction; all remaining candidate instructions shift by +6.
@@ -334,26 +337,32 @@ def main():
                     assert len(native_trampoline[1])==len(candidate_trampoline[1])==5
                     assert BASE+int(native_target[1],16)==0x00616033
                     assert int(candidate_target[1],16)==candidate_epilogue
+                    trampoline_outbound+=1
+                    trampoline_targets.add(got)
                 else:
                     assert got==candidate_epilogue,(i,a,b,hex(candidate_epilogue))
+                    direct_outbound+=1
                 ignore_candidate_bytes.update({b[0]+k:'shared return displacement'
                                                for k in range(1,5)})
             elif a[1][0]==0x0f and 0x80<=a[1][1]<=0x8f:
-                # The final case has native near conditional exits directly
-                # to the shared epilogue; their candidate targets are pinned
-                # to the epilogue after the single fallthrough trampoline.
+                # The final case's native near conditional exits target the
+                # common epilogue directly; no synthetic tail trampoline remains.
                 assert b[1][:2]==a[1][:2] and len(a[1])==len(b[1])==6,(i,a,b)
                 assert got==candidate_epilogue,(i,a,b,hex(candidate_epilogue))
+                direct_outbound+=1
                 ignore_candidate_bytes.update({b[0]+k:'shared conditional-return displacement'
                                                for k in range(2,6)})
             elif 0x70<=a[1][0]<=0x7f:
                 assert b[1][0]==a[1][0] and len(a[1])==len(b[1])==2,(i,a,b)
                 assert got==candidate_epilogue,(i,a,b,hex(candidate_epilogue))
+                direct_outbound+=1
                 ignore_candidate_bytes[b[0]+1]='shared conditional-return displacement'
             else:
                 raise AssertionError(('unsupported shared-return branch',i,a,b))
             outbound+=1
     assert (internal,outbound)==(1417,187),(internal,outbound)
+    assert (direct_outbound,trampoline_outbound,len(trampoline_targets))==(177,10,7),(
+        direct_outbound,trampoline_outbound,trampoline_targets)
     relocations=[r for r in relocs if r['offset']<len(orig)-code_shift]
     local=[r for r in relocations if 'local_target_offset' in r]
     external=[r for r in relocations if 'local_target_offset' not in r]
@@ -387,10 +396,11 @@ def main():
     print('Character04 Slot06 selected original-bound prefix PASS (NOT full Exact):')
     print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221, 230-232, 240-241, 249-269,303-309,312,315-325 + default')
     print(f'  {len(orig)} original code bytes, {len(target_ins)} x86 instructions, {internal} native internal + {outbound} shared-return branches')
+    print(f'  Shared returns: {direct_outbound} direct to common epilogue + {trampoline_outbound} via {len(trampoline_targets)} original in-prefix trampolines; no synthetic tail trampoline')
     print(f'  {len(external)} original-bound calls / IEEE-754 operands + {len(local)} native-local selector/table pointers')
     print(f'  {len(LEAF_DEPENDENCIES)} boss leaf dependencies independently Exact: {leaf_bytes} bytes, zero differences')
     print(f'  Exact dispatch data: 139-entry table target order + 325 selector bytes; {len(candidate_table_relocs)} table labels bound to original case order')
     print('  Exact scratch slots: both state255 EBP-0x1BC references match native.')
-    print('  Remaining explicit byte differences: split 0x2E8 prologue (0x1C8 + 0x120), eight state256 x87 scratch displacement bytes, shared-return routing and target-bound COFF fields.')
-    print('  All 138 live cases and dispatch data are covered; one-instruction prologue, eight x87 scratch bytes and shared-return layout remain NOT Exact.')
+    print('  Remaining explicit byte differences: split 0x2E8 prologue (0x1C8 + 0x120), eight state256 x87 scratch displacement bytes, shared-return rel32 displacement bytes (targets exact) and target-bound COFF fields.')
+    print('  All 138 live cases and dispatch data are covered; one-instruction prologue, eight x87 scratch bytes and shared-return rel32 bytes remain NOT Exact; all 187 targets are exact.')
 if __name__=='__main__':main()

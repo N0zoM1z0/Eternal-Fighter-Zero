@@ -884,9 +884,10 @@ direct call/float operands** and 2 canonical native-local dispatch
 pointers. Only the split stack prologue (`0x1C8` compiler frame plus inline
 `0x120` tail, exact `0x2E8` total), eight explicitly pinned state256 low-byte x87 scratch-slot displacements
 (native `EBP-0x1C0` through `EBP-0x1CC` slots shifted by four bytes in
-the provisional frame), shared-return routing (including the verified
-in-prefix return trampoline) and independently target-bound COFF fields
-differ. All 138 live case bodies and exact 139-entry table/325-byte selector are now covered. Remaining work is the single-instruction prologue, eight state256 x87 scratch bytes, exact shared return and COFF relocation byte layout. Partial prefix evidence
+the provisional frame), shared-return rel32 displacements (177 direct epilogue targets, 10
+branches through seven original in-prefix trampolines, no synthetic tail
+trampoline) and independently target-bound COFF fields
+differ. All 138 live case bodies and exact 139-entry table/325-byte selector are now covered. Remaining work is the single-instruction prologue, eight state256 x87 scratch bytes, shared-return rel32 bytes (all 187 targets exact) and COFF relocation byte layout. Partial prefix evidence
 only, **NOT whole-function Exact**; no cold all-unit replay/push.
 A selected cold replay of the 14 source-level leaf dependencies used by this
 boss is also **1,918/1,918 native bytes exact, zero differences**. Evidence:

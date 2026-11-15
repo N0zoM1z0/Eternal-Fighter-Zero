@@ -498,9 +498,10 @@ addresses. The only explicit differences are the split stack prologue (`sub esp,
 plus inline `sub esp,0x120`, reserving the exact native total `0x2E8`), eight low bytes of the
 state256 x87 integer-conversion scratch-slot displacements (native
 slots `EBP-0x1C0` through `EBP-0x1CC`, provisional slots shifted by four
-bytes), shared-return routing (including the verified in-prefix return
+bytes), shared-return rel32 displacement bytes (177 direct epilogue targets, 10
+branches through seven original in-prefix trampolines, no synthetic tail
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-All **138 real live case bodies** now have source coverage. The 139-entry jump-table target order and all 325 selector bytes are verified exactly. Remaining Exactness work is the single-instruction native prologue, eight state256 x87 scratch-slot bytes, shared-return layout and target-bound COFF relocation fields. This certificate remains **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
+All **138 real live case bodies** now have source coverage. The 139-entry jump-table target order and all 325 selector bytes are verified exactly. Remaining Exactness work is the single-instruction native prologue, eight state256 x87 scratch-slot bytes, shared-return rel32 bytes (all 187 targets exact) and target-bound COFF relocation fields. This certificate remains **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
 The boss's **14 source-level leaf dependencies** were also cold-replayed as selected units: **1,918/1,918 native bytes exact, zero differences** (EffectSpawn construction, local/global effect emission, movement/tint controls, frame reset, trail, opponent/collision helpers, scene timer and damage). Evidence: `docs/evidence/character04-slot06-leaf-dependencies-exact.json`; no all-unit cold replay.

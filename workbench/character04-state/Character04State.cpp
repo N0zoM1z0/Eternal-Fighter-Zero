@@ -8317,7 +8317,7 @@ void Character04::Slot06()
             // Preserve the native five-byte shared-return jump width; the
             // C++ return immediately after this trampoline performs epilogue.
             _emit 0E9h
-            _emit 09Bh
+            _emit 096h
             _emit 008h
             _emit 000h
             _emit 000h
@@ -8384,7 +8384,7 @@ void Character04::Slot06()
         state321_exit:
             // Preserve native E9 rel32 return directly to the shared epilogue.
             _emit 0E9h
-            _emit 0FDh
+            _emit 0F8h
             _emit 007h
             _emit 000h
             _emit 000h
@@ -8527,7 +8527,7 @@ void Character04::Slot06()
         state322_exit:
             // Native near return; displacement is pinned after following cases are laid out.
             _emit 0E9h
-            _emit 029h
+            _emit 024h
             _emit 006h
             _emit 000h
             _emit 000h
@@ -8594,7 +8594,7 @@ void Character04::Slot06()
         state323_exit:
             // Native E9 rel32 to the shared epilogue; displacement pinned after layout.
             _emit 0E9h
-            _emit 08Bh
+            _emit 086h
             _emit 005h
             _emit 000h
             _emit 000h
@@ -8799,7 +8799,7 @@ void Character04::Slot06()
         state324_exit:
             // Native E9 rel32 return; displacement pinned after final case layout.
             _emit 0E9h
-            _emit 008h
+            _emit 003h
             _emit 003h
             _emit 000h
             _emit 000h
@@ -9061,13 +9061,8 @@ void Character04::Slot06()
             mov edx,[ecx]
             mov ecx,[ebp-54h]
             call dword ptr [edx]
-            // Normal fallthrough uses a five-byte trampoline; conditional
-            // native shared-return branches target the epilogue after it.
-            _emit 0E9h
-            _emit 000h
-            _emit 000h
-            _emit 000h
-            _emit 000h
+            // Native conditional exits and normal fallthrough share the
+            // compiler's common epilogue directly; no extra trampoline.
         state325_exit:
         }
 
