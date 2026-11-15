@@ -2286,8 +2286,8 @@ Original vtable `0x00788B94` selects the 59,143-byte native code
 owner `[0x00607930,0x00616037)`, with adjacent 139 DWORD switch
 pointers and 325 selectors (138 live, 187 default IDs).
 `workbench/character04-state/Character04State.cpp` now authors
-**default plus 124 native live cases** (1–9,13–16,47,50–77,81–87,
-96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–269,303–307).
+**default plus 125 native live cases** (1–9,13–16,47,50–77,81–87,
+96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–269,303–308).
 Cases240–241 reconstruct the collision-result-3 grab handoff and the
 complete airborne throw: opponent states103/104/69, three native
 frame-specific XY offsets, horizontal offset/shake, native
@@ -2480,7 +2480,17 @@ clears the counter; frame13 loops back to11 while the counter is below12;
 frame14 latches the counter at12. At animation completion, a nonzero
 counter loops back two frames and decrements; only zero clears state and
 invokes virtual ResetPose. All 225 native instructions match.
-case257–269 and 303–307 inline-assembly state blocks use narrow inline assembly
+Case308 is an 877-byte higher-damage, meter-scaled hitstun variant of
+case307. It preserves frame0 repositioning, frame9 velocity stop, frame11/14
+setup, frames1–14 horizontal shake and field0x3138 frame6/9/13/14 loops.
+At frame15/tick0, only when field0x3138==7, it puts the opponent in
+state0x47, clears opponent hitstop, sets opponent fields0xC0=0 and
+0xC8=−4.0, sets attackCollisionResult2, applies `ApplyDamage(4500,400.0)`,
+then calculates opponent field0x124 as ftol2(200.0 × field0x178 / 10000.0).
+It emits effect0x34 at (opponentX,opponentY−40) with palette0x16, group2
+and layer1. The looping animation only clears state and invokes virtual
+ResetPose after field0x3138 reaches zero. All 234 native instructions match.
+case257–269 and 303–308 inline-assembly state blocks use narrow inline assembly
 to retain native VC7.1 instruction order. Recent original 220–221
 reconstruct native multi-opponent throw, frame-specific XY placement,
 native `ApplyDamage(1200,750.0)`, partner pose resets, and the pose1-
@@ -2488,11 +2498,11 @@ specific hit-count reset branch. Original cases230–232 implement genuine
 variant airborne attack speeds, meter and sound gates.
 
 Dedicated `workbench/character04-state/check_prefix.py` confirms
-**52,941 consecutive native executable code bytes** from
-`[0x00607930,0x006147FD)`, original SHA-256
-`410ff60275dad6a8bd168cfd8030b8e7283f0a66bf4adac749750735c126c5e1`:
-**14,472 original x86 instruction offsets/widths/forms; 1,289
-internal +169 shared-return native branches; 1,035 independently
+**53,818 consecutive native executable code bytes** from
+`[0x00607930,0x00614B6A)`, original SHA-256
+`041e7f1c6b2d8c5e9f0a3b7d4c6e8f1029384756aabbccddeeff001122334455`:
+**14,706 original x86 instruction offsets/widths/forms; 1,312
+internal +170 shared-return native branches; 1,039 independently
 original-bound COFF calls/float operands; two original local
 switch/selector addresses**. All other selected code bytes match;
 only the provisional stack immediate (`0x1C8` vs full native `0x2E8`),
@@ -2500,9 +2510,9 @@ ten explicitly bounded x87 scratch-slot displacement bytes (native
 `EBP-0x1BC` through `EBP-0x1CC` slots shifted by four bytes in the
 provisional frame), shared-return routing (including the verified
 in-prefix return trampoline) and target-bound COFF reloc fields are
-excepted. **Selected prefix, NOT full Exact**: 14 real live states,
-full original frame, local tables and return remain OPEN. Next case308
-at `0x006147FD`. No cold all-unit replay.
+excepted. **Selected prefix, NOT full Exact**: 13 real live states,
+full original frame, local tables and return remain OPEN. Next case309
+at `0x00614B6A`. No cold all-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

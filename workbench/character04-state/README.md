@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **124 genuine live cases**: 1–9,13–16,
+the original default and **125 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–269,303–307. The other **14** native live case IDs remain OPEN.
+230–232,240–241,249–269,303–308. The other **13** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x006147FD)` now has **52,941
+The original code `[0x00607930,0x00614B6A)` now has **53,818
 original executable bytes**, canonical SHA-256
-`410ff60275dad6a8bd168cfd8030b8e7283f0a66bf4adac749750735c126c5e1`.
+`041e7f1c6b2d8c5e9f0a3b7d4c6e8f1029384756aabbccddeeff001122334455`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -343,15 +343,28 @@ and decrements; only a zero counter clears state and invokes virtual
 ResetPose. All 225 native instructions match.
 
 
+State308 (`0x006147FD`, 877 bytes) is the higher-damage, meter-scaled
+hitstun variant of state307. It preserves the frame0 repositioning, frame9
+velocity stop, frame11/14 setup, frames1–14 horizontal shake and the
+field0x3138-driven frame6/9/13/14 loops. At frame15/tick0, only when
+field0x3138==7, it puts the opponent in state0x47, clears opponent hitstop,
+sets opponent fields0xC0=0 and0xC8=−4.0, sets attackCollisionResult=2,
+applies `ApplyDamage(4500,400.0)`, then calculates opponent field0x124 as
+`ftol2(200.0 × field0x178 / 10000.0)`. It emits effect0x34 at
+`(opponentX,opponentY−40)` with palette0x16, group2 and layer1. The
+looping animation only clears state and invokes virtual ResetPose after
+field0x3138 reaches zero. All 234 native instructions match.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **14,472 original x86 instruction widths/positions and
-register-abstracted forms**, **1,289 original internal +169 native
-shared-return branch targets**, **1,035 independently original-bound
+It verifies **14,706 original x86 instruction widths/positions and
+register-abstracted forms**, **1,312 original internal +170 native
+shared-return branch targets**, **1,039 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
 stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
@@ -361,7 +374,7 @@ bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-**Next live native state308 starts `0x006147FD`**. The remaining
-14 original live case bodies, full stack, 139-entry jump table,
+**Next live native state309 starts `0x00614B6A`**. The remaining
+13 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
