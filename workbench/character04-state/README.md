@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **132 genuine live cases**: 1–9,13–16,
+the original default and **133 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–269,303–309,312,315–319. The other **6** native live case IDs remain OPEN.
+230–232,240–241,249–269,303–309,312,315–320. The other **5** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x006155C9)` now has **56,473
+The original code `[0x00607930,0x0061579D)` now has **56,941
 original executable bytes**, canonical SHA-256
-`6cdbbc319f5f7909fe62b33945f660c1c7edca4baea22f9d0b85ef947a7dc5b1`.
+`5bf56be09459acb1202fe09793a88abbeb318b061223833644db49cc5edec569`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -421,15 +421,25 @@ native tick/frame counters; when animation completes it clears the state
 and invokes the native virtual reset. All 45 native instructions match.
 
 
+State320 (`0x006155C9`, 468 bytes) is the alternate-cost/effect variant
+of state318. Frame0/tick0 zeros velocityX/Y. Frame3/tick0 sets
+field0x14C=120, subtracts2000 from field0x148, applies tint0xB0 for3 ticks,
+and emits global effect0x45 at integer-truncated `(X−facing×13,Y−51)`
+with palette0x05, group2 and layer1. It then emits local effect0x1BA at
+`(X,Y−15)` with owner1, current facing, group2, layer0 and lifetime300,
+and sets field0x3144=2. Animation completion clears state and invokes the
+native virtual reset. All 120 native instructions match.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **15,417 original x86 instruction widths/positions and
-register-abstracted forms**, **1,372 original internal +180 native
-shared-return branch targets**, **1,057 independently original-bound
+It verifies **15,537 original x86 instruction widths/positions and
+register-abstracted forms**, **1,378 original internal +181 native
+shared-return branch targets**, **1,063 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
 stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
@@ -439,7 +449,7 @@ bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-**Next live native state320 starts `0x006155C9`**. The remaining
-6 original live case bodies, full stack, 139-entry jump table,
+**Next live native state321 starts `0x0061579D`**. The remaining
+5 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
