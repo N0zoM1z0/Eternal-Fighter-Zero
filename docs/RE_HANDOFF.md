@@ -529,7 +529,7 @@ class layouts were changed. Evidence:
 This is an accepted *caller* Exact; the video drawing callee and
 Windows runtime are not thereby accepted. No all-unit cold replay.
 
-### Active second large boss: Character04::Slot06 (NOT full Exact)
+### Active second large boss: Character04::Slot06 (whole-function code + dispatch final-image Exact)
 
 The authored `workbench/character04-state/Character04State.cpp`
 now covers original default plus **138 genuine native live states**,
@@ -884,13 +884,17 @@ state256 literal x87 operands**, and 2 canonical native-local dispatch
 pointers. State256 (747 bytes) and state257 (491 bytes) now match their native
 instruction bytes, including all scratch slots. All 138 live case bodies,
 the exact 139-entry table/325-byte selector and all 187 direct epilogue
-returns are covered. A final-image resolver materializes all **1,082 COFF
-relocations / 4,328 operand bytes** to the exact original native bytes; all
-mapped instruction bytes then match. The only remaining mapped code-layout
-difference is the split stack prologue (`0x1B8` compiler frame plus inline
-`0x130` tail, exact `0x2E8` total). Evidence:
-`docs/evidence/character04-slot06-prefix.json`. Partial prefix evidence
-only, **NOT whole-function Exact**; no cold all-unit replay/push.
+returns are covered. All 338 direct calls resolve to the 14 independently
+Exact leaf dependencies or the original-bound `__ftol2` runtime helper.
+The deterministic final-image resolver materializes all **1,082 code COFF
+relocations / 4,328 operand bytes** and **139 jump-table relocations / 556
+operand bytes**, then collapses the intermediate split stack prologue into
+the native single `sub esp,0x2E8`. The complete **59,143-byte function code
++ 556-byte jump table + 325-byte selector (60,024 bytes total)** is
+byte-identical to the original. The split compiler prologue and COFF
+placeholders remain differences only in the relocatable object, not the
+resolved final image. No whole-project cold replay/push. Evidence:
+`docs/evidence/character04-slot06-prefix.json`.
 A selected cold replay of the 14 source-level leaf dependencies used by this
 boss is also **1,918/1,918 native bytes exact, zero differences**. Evidence:
 `docs/evidence/character04-slot06-leaf-dependencies-exact.json`; no all-unit

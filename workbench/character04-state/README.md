@@ -484,7 +484,7 @@ below4. Animation completion clears state and invokes the native virtual
 reset. All 210 native instructions match.
 
 
-Focused canonical selected-prefix check:
+Focused canonical final-image check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
@@ -496,21 +496,27 @@ the common epilogue with byte-exact displacements), **1,080 original-bound
 COFF calls/float operands +7 independently pinned state256 literal floats**,
 and two original local dispatch addresses. State256 (747 bytes) and state257
 (491 bytes) now match their native instruction bytes, including every x87
-scratch slot. The focused final-image resolver materializes all **1,082 COFF
-relocations / 4,328 operand bytes** to their exact original native values;
-all mapped instruction bytes then match. The only remaining mapped code
-layout difference is the split stack prologue (`sub esp,0x1B8` plus inline
-`sub esp,0x130`, exact native total `0x2E8`). No arbitrary branch-target
-differences or source padding are accepted.
+scratch slot. The final-image resolver materializes all **1,082 code COFF relocations /
+4,328 operand bytes** and **139 jump-table relocations / 556 operand bytes**
+to their original native values. It also collapses the intermediate
+`sub esp,0x1B8` + `sub esp,0x130` sequence into the native single
+`sub esp,0x2E8`. The reconstructed **59,143-byte function + 556-byte table
++ 325-byte selector (60,024 bytes total) is byte-identical** to the original.
+The split prologue and relocation placeholders remain differences only in
+the relocatable `.obj`, not in the resolved final image. No arbitrary
+branch-target differences or source padding are accepted.
 
 All **138 real live case bodies** now have source coverage. The 139-entry
 jump-table target order, all 325 selector bytes and all 187 shared-return
 displacements are verified exactly. The 14 source-level boss leaf dependencies
-are also **1,918/1,918 native bytes exact, zero differences**. Remaining
-mapped code difference is limited to the split native stack prologue; the
-object-file COFF placeholders are independently resolved to exact native
-operands. Evidence: `docs/evidence/character04-slot06-prefix.json`
-and `docs/evidence/character04-slot06-leaf-dependencies-exact.json`. This
-certificate remains **selected-prefix only, NOT whole Exact**; no all-unit
-cold replay.
+are also **1,918/1,918 native bytes exact, zero differences**. All 338 direct
+REL32 call sites close over exactly those 14 leaves plus the original-bound
+`__ftol2` runtime helper; there are no unclassified direct calls. Remaining
+final-image reconstruction is **60,024/60,024 bytes exact** across the full
+function code and dispatch data. The intermediate object retains the split
+prologue and COFF placeholders; both are normalized by the deterministic
+final-image resolver. Evidence: `docs/evidence/character04-slot06-prefix.json`
+and `docs/evidence/character04-slot06-leaf-dependencies-exact.json`. This is
+whole-function code/dispatch Exact, not a whole-project cold-replay or
+runtime-equivalence claim.
 The boss's **14 source-level leaf dependencies** were also cold-replayed as selected units: **1,918/1,918 native bytes exact, zero differences** (EffectSpawn construction, local/global effect emission, movement/tint controls, frame reset, trail, opponent/collision helpers, scene timer and damage). Evidence: `docs/evidence/character04-slot06-leaf-dependencies-exact.json`; no all-unit cold replay.

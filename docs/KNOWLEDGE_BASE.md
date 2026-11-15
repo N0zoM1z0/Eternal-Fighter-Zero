@@ -2608,12 +2608,15 @@ state256 literal x87 operands**; two original local switch/selector addresses.
 State256 (747 bytes) and state257 (491 bytes) now match their native
 instruction bytes, including every x87 scratch slot. All 138 live case bodies,
 exact 139-entry jump-table target order and all 325 selector bytes are covered.
-A final-image resolver materializes all **1,082 COFF relocations / 4,328
-operand bytes** to the exact original native values; all mapped instruction
-bytes then match. The only remaining mapped code-layout difference is the
-split stack prologue (`0x1B8` compiler frame plus inline `0x130` tail, exact
-`0x2E8` total). **Selected prefix, NOT full Exact**: no whole-function or
-all-unit cold replay. Evidence: `docs/evidence/character04-slot06-prefix.json`.
+The deterministic final-image resolver materializes all **1,082 code COFF
+relocations / 4,328 operand bytes** and **139 jump-table relocations / 556
+operand bytes**, then collapses the intermediate split stack prologue into
+the native single `sub esp,0x2E8`. The complete **59,143-byte function code
++ 556-byte jump table + 325-byte selector (60,024 bytes total)** is
+byte-identical to the original. The split compiler prologue and COFF
+placeholders remain differences only in the relocatable object, not the
+resolved final image. No whole-project cold replay. Evidence:
+`docs/evidence/character04-slot06-prefix.json`.
 The 14 source-level leaf dependencies used by this boss were also selected
 cold-replayed: **1,918/1,918 native bytes exact, zero differences**. Evidence:
 `docs/evidence/character04-slot06-leaf-dependencies-exact.json`; no all-unit
