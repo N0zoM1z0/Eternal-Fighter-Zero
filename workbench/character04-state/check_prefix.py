@@ -3,7 +3,7 @@
 
 Only native default plus authored cases 1-9, 13-16, 47, 50-77,
 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221,
-230-232, 240-241, 249-269,303-309,312,315-324 are reviewed. The probe's 1 other live-case marker branch is not source and earns no credit.
+230-232, 240-241, 249-269,303-309,312,315-325 are reviewed. All 138 real live cases are source; no live-case marker branches remain.
 This is a selected code prefix, NOT complete function Exact.
 """
 from pathlib import Path
@@ -14,9 +14,9 @@ sys.path.insert(0,str(ROOT/'scripts'))
 from common import verify_target,target_bytes
 from probe_prefix import BASE,CODE_SIZE,TABLE_BASE,SELECTOR_BASE,run,disasm,normalized
 
-END=0x00615D30
+END=0x00616033
 NATIVE_CODE_SHA='200261f2d50fa04663e62d285dd09cd0eeaf601fdee46e08b2798e8cf95b02a1'
-NATIVE_PREFIX_SHA='af41c40d9a23f584368da859a192e62f2886da422d3fecf61cc30463d8be2afc'
+NATIVE_PREFIX_SHA='59784e3e7df3098d6ecc0874fc5bd88e9a0e4c97824438319e94e67ca2671011'
 EXTERNAL_CALLS={
     '??0EffectSpawn@@QAE@XZ':0x00405490,
     '?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z':0x00413090,
@@ -32,6 +32,7 @@ EXTERNAL_CALLS={
     '?SetHorizontalShake@Secondary@@QAEXHH@Z':0x00410A80,
     '?SetSceneTimer@Context@@QAEXH@Z':0x004080C0,
     '?ApplyDamage@Secondary@@QAEXHN@Z':0x004105A0,
+    '?SetCharacterTint@Secondary@@QAEXEH@Z':0x00410AC0,
 }
 REAL_CASES={1:0x00607A4D,2:0x00607ABE,3:0x00607B2F,
             4:0x00607BA8,5:0x00607CD8,6:0x00607E14,
@@ -62,7 +63,7 @@ REAL_CASES={1:0x00607A4D,2:0x00607ABE,3:0x00607B2F,
             210:0x0060F8F1,211:0x0060FB12,212:0x0060FC9A,
             213:0x0060FE22,214:0x0061004F,215:0x0061027C,216:0x006104A9,
             220:0x006105D8,221:0x006107B4,
-            230:0x00610A47,231:0x00610B78,232:0x00610CA9,240:0x00610DDA,241:0x00610FCC,249:0x0061129C,250:0x006113DC,251:0x00611590,252:0x00611767,253:0x00611A7D,254:0x00611B49,255:0x00611DB0,256:0x00612093,257:0x0061237E,258:0x00612569,259:0x00612757,260:0x0061294C,261:0x00612BEE,262:0x00612CDD,263:0x00612DFD,264:0x00612F90,265:0x00613123,266:0x006133B5,267:0x006134F0,268:0x00613632,269:0x00613774,303:0x00613824,304:0x00613B1F,305:0x00613E1A,306:0x006141C6,307:0x006144B9,308:0x006147FD,309:0x00614B6A,312:0x00614D70,315:0x006150C3,316:0x0061519F,317:0x0061527B,318:0x00615357,319:0x0061552B,320:0x006155C9,321:0x0061579D,322:0x0061583B,323:0x00615A0F,324:0x00615AAD}
+            230:0x00610A47,231:0x00610B78,232:0x00610CA9,240:0x00610DDA,241:0x00610FCC,249:0x0061129C,250:0x006113DC,251:0x00611590,252:0x00611767,253:0x00611A7D,254:0x00611B49,255:0x00611DB0,256:0x00612093,257:0x0061237E,258:0x00612569,259:0x00612757,260:0x0061294C,261:0x00612BEE,262:0x00612CDD,263:0x00612DFD,264:0x00612F90,265:0x00613123,266:0x006133B5,267:0x006134F0,268:0x00613632,269:0x00613774,303:0x00613824,304:0x00613B1F,305:0x00613E1A,306:0x006141C6,307:0x006144B9,308:0x006147FD,309:0x00614B6A,312:0x00614D70,315:0x006150C3,316:0x0061519F,317:0x0061527B,318:0x00615357,319:0x0061552B,320:0x006155C9,321:0x0061579D,322:0x0061583B,323:0x00615A0F,324:0x00615AAD,325:0x00615D30}
 BRANCH=re.compile(r'^j\w+\s+(?:(?:near|short)\s+)?0x([0-9a-f]+)$')
 
 def main():
@@ -72,7 +73,7 @@ def main():
     assert len(whole)==59143 and hashlib.sha256(whole).hexdigest()==NATIVE_CODE_SHA
     assert target_bytes(image,0x00616033,4)==bytes.fromhex('8be55dc3')
     orig=whole[:END-BASE]
-    assert len(orig)==58368 and hashlib.sha256(orig).hexdigest()==NATIVE_PREFIX_SHA
+    assert len(orig)==59139 and hashlib.sha256(orig).hexdigest()==NATIVE_PREFIX_SHA
     # The two state265 x87 resource costs are pinned raw absolute operands;
     # verify both instruction bytes and the original 500/250 constants.
     assert target_bytes(image,0x00787C30,8)==struct.pack('<d',500.0)
@@ -145,6 +146,16 @@ def main():
     # State324's frame-4 reset/zero comparison loads are original absolute 0.0.
     for va in (0x00615BD5,0x00615BE1,0x00615BED,0x00615CDD):
         assert orig[va-BASE:va-BASE+6]==bytes.fromhex('dd05f8727800'),hex(va)
+    # State325 pins the partner launch and meter-scaled damage constants.
+    for va,value in ((0x00787F50,-5.0),(0x00787C30,500.0),
+                     (0x00787FB8,0.15),(0x00788B40,3500.0)):
+        assert target_bytes(image,va,8)==struct.pack('<d',value),(hex(va),target_bytes(image,va,8).hex())
+    for va,raw in ((0x00615DB9,'dd05f8727800'),(0x00615DC2,'dd05f8727800'),
+                   (0x00615E6F,'dd05f8727800'),(0x00615E83,'dd05507f7800'),
+                   (0x00615EBD,'dd05307c7800'),(0x00615ED2,'dc0db87f7800'),
+                   (0x00615ED8,'dc05408b7800')):
+        raw=bytes.fromhex(raw)
+        assert orig[va-BASE:va-BASE+len(raw)]==raw,(hex(va),orig[va-BASE:va-BASE+len(raw)].hex())
     # State309's third local effect uses the original absolute zero Y operand.
     assert target_bytes(image,0x007872F8,8)==struct.pack('<d',0.0)
     assert orig[0x00614C85-BASE:0x00614C85-BASE+6]==bytes.fromhex('dd05f8727800')
@@ -189,13 +200,13 @@ def main():
     for case,addr in REAL_CASES.items():
         ordinal=selectors[case-1]
         assert ordinal!=138 and struct.unpack_from('<I',table,4*ordinal)[0]==addr
-    assert [struct.unpack_from('<I',table,i*4)[0] for i in range(137)]==[
-        REAL_CASES[i] for i in list(range(1,10))+[13,14,15,16,47]+list(range(50,78))+list(range(81,88))+list(range(96,100))+list(range(150,159))+list(range(161,172))+[180]+list(range(200,217))+[220,221,230,231,232,240,241,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,303,304,305,306,307,308,309,312,315,316,317,318,319,320,321,322,323,324]]
-    used,original,compiled,relocs=run(324)
+    assert [struct.unpack_from('<I',table,i*4)[0] for i in range(138)]==[
+        REAL_CASES[i] for i in list(range(1,10))+[13,14,15,16,47]+list(range(50,78))+list(range(81,88))+list(range(96,100))+list(range(150,159))+list(range(161,172))+[180]+list(range(200,217))+[220,221,230,231,232,240,241,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,303,304,305,306,307,308,309,312,315,316,317,318,319,320,321,322,323,324,325]]
+    used,original,compiled,relocs=run(325)
     assert used==set(REAL_CASES)
     target_ins=disasm(orig)
     candidate_ins=disasm(compiled)
-    assert len(target_ins)==15917 and len(candidate_ins)>len(target_ins)
+    assert len(target_ins)==16127 and len(candidate_ins)>len(target_ins)
     assert target_ins[2][2]=='sub esp,0x2e8'
     assert candidate_ins[2][2]=='sub esp,0x1c8'
     shift=0  # full six-byte opcode form restored; only stack-imm operand differs
@@ -253,30 +264,45 @@ def main():
             internal+=1
         else:
             assert BASE+dst==0x00616033,(i,a,hex(BASE+dst))
-            assert a[1][0]==b[1][0]==0xe9 and len(a[1])==5,(i,a,b)
-            if got < len(orig)-shift:
-                # VC7.1 may route one return through the same native
-                # shared-return jump instruction before the common epilogue.
-                assert got in target_by_offset and got in candidate_by_offset,(i,a,b)
-                native_trampoline=target_by_offset[got]
-                candidate_trampoline=candidate_by_offset[got]
-                native_target=BRANCH.fullmatch(native_trampoline[2])
-                candidate_target=BRANCH.fullmatch(candidate_trampoline[2])
-                assert native_target and candidate_target,(i,native_trampoline,candidate_trampoline)
-                assert native_trampoline[1][0]==candidate_trampoline[1][0]==0xe9
-                assert len(native_trampoline[1])==len(candidate_trampoline[1])==5
-                assert BASE+int(native_target[1],16)==0x00616033
-                assert int(candidate_target[1],16)==candidate_epilogue
-            else:
+            if a[1][0]==0xe9:
+                assert b[1][0]==0xe9 and len(a[1])==len(b[1])==5,(i,a,b)
+                if got < len(orig)-shift:
+                    # VC7.1 may route a return through an original in-prefix
+                    # shared-return trampoline before the common epilogue.
+                    assert got in target_by_offset and got in candidate_by_offset,(i,a,b)
+                    native_trampoline=target_by_offset[got]
+                    candidate_trampoline=candidate_by_offset[got]
+                    native_target=BRANCH.fullmatch(native_trampoline[2])
+                    candidate_target=BRANCH.fullmatch(candidate_trampoline[2])
+                    assert native_target and candidate_target,(i,native_trampoline,candidate_trampoline)
+                    assert native_trampoline[1][0]==candidate_trampoline[1][0]==0xe9
+                    assert len(native_trampoline[1])==len(candidate_trampoline[1])==5
+                    assert BASE+int(native_target[1],16)==0x00616033
+                    assert int(candidate_target[1],16)==candidate_epilogue
+                else:
+                    assert got==candidate_epilogue,(i,a,b,hex(candidate_epilogue))
+                ignore_candidate_bytes.update({b[0]+k:'shared return displacement'
+                                               for k in range(1,5)})
+            elif a[1][0]==0x0f and 0x80<=a[1][1]<=0x8f:
+                # The final case has native near conditional exits directly
+                # to the shared epilogue; their candidate targets are pinned
+                # to the epilogue after the single fallthrough trampoline.
+                assert b[1][:2]==a[1][:2] and len(a[1])==len(b[1])==6,(i,a,b)
                 assert got==candidate_epilogue,(i,a,b,hex(candidate_epilogue))
-            ignore_candidate_bytes.update({b[0]+k:'shared return displacement'
-                                           for k in range(1,5)})
+                ignore_candidate_bytes.update({b[0]+k:'shared conditional-return displacement'
+                                               for k in range(2,6)})
+            elif 0x70<=a[1][0]<=0x7f:
+                assert b[1][0]==a[1][0] and len(a[1])==len(b[1])==2,(i,a,b)
+                assert got==candidate_epilogue,(i,a,b,hex(candidate_epilogue))
+                ignore_candidate_bytes[b[0]+1]='shared conditional-return displacement'
+            else:
+                raise AssertionError(('unsupported shared-return branch',i,a,b))
             outbound+=1
-    assert (internal,outbound)==(1404,185),(internal,outbound)
+    assert (internal,outbound)==(1417,187),(internal,outbound)
     relocations=[r for r in relocs if r['offset']<len(orig)-shift]
     local=[r for r in relocations if 'local_target_offset' in r]
     external=[r for r in relocations if 'local_target_offset' not in r]
-    assert len(relocations)==1080 and len(local)==2 and len(external)==1078
+    assert len(relocations)==1089 and len(local)==2 and len(external)==1087
     expected_locals={SELECTOR_BASE:candidate_table+556,TABLE_BASE:candidate_table}
     for r in relocations:
         off=r['offset'];pos=off+shift
@@ -303,9 +329,9 @@ def main():
                 raw.append((hex(BASE+a[0]+k),a[2],b[2]))
     assert not raw,raw[:15]
     print('Character04 Slot06 selected original-bound prefix PASS (NOT full Exact):')
-    print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221, 230-232, 240-241, 249-269,303-309,312,315-324 + default')
+    print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221, 230-232, 240-241, 249-269,303-309,312,315-325 + default')
     print(f'  {len(orig)} original code bytes, {len(target_ins)} x86 instructions, {internal} native internal + {outbound} shared-return branches')
     print(f'  {len(external)} original-bound calls / IEEE-754 operands + {len(local)} native-local selector/table pointers')
     print('  Remaining explicit exceptions: provisional stack size, ten x87 scratch-slot displacement bytes, shared returns and native-bound COFF fields.')
-    print('  Still OPEN: remaining 1 real case, original 0x2E8 stack and full original table/shared return; NOT Exact.')
+    print('  Still OPEN: no real case bodies; original 0x2E8 stack and full original table/shared return remain NOT Exact.')
 if __name__=='__main__':main()
