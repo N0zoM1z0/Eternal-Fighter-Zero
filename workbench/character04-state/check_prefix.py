@@ -209,10 +209,14 @@ def main():
     assert len(target_ins)==16127 and len(candidate_ins)>len(target_ins)
     assert target_ins[2][2]=='sub esp,0x2e8'
     assert candidate_ins[2][2]=='sub esp,0x1c8'
-    shift=0  # full six-byte opcode form restored; only stack-imm operand differs
-    assert len(target_ins[2][1])-len(candidate_ins[2][1])==shift
+    # VC7.1's generated locals retain their native EBP offsets; reserve the
+    # remaining 0x120 bytes immediately after its 0x1C8 compiler prologue.
+    assert candidate_ins[4][2]=='sub esp,0x120'
+    assert 0x1c8+0x120==0x2e8
+    code_shift=-6  # one explicit six-byte tail reservation after native insn 3
+    assert len(target_ins[2][1])==len(candidate_ins[2][1])
     assert target_ins[-1][0]+len(target_ins[-1][1])==len(orig)
-    assert candidate_ins[len(target_ins)][0]==len(orig)-shift
+    assert candidate_ins[len(target_ins)+1][0]==len(orig)-code_shift
     original_offsets={x[0] for x in target_ins}
     candidate_offsets={x[0] for x in candidate_ins}
     target_by_offset={x[0]:x for x in target_ins}
@@ -238,14 +242,18 @@ def main():
     stack_temp_disp_offsets=set(stack_temp_displacements)
     stack_temp_instruction_offsets={off-2 for off in stack_temp_disp_offsets}
     for off,(native_disp,candidate_disp) in stack_temp_displacements.items():
+        candidate_off=off-code_shift
         assert orig[off:off+4]==native_disp,(hex(BASE+off),orig[off:off+4])
-        assert compiled[off:off+4]==candidate_disp,(hex(BASE+off),compiled[off:off+4])
-    ignore_candidate_bytes.update({off:'provisional x87 scratch-slot displacement'
+        assert compiled[candidate_off:candidate_off+4]==candidate_disp,(hex(BASE+off),compiled[candidate_off:candidate_off+4])
+    ignore_candidate_bytes.update({off-code_shift:'provisional x87 scratch-slot displacement'
                                    for off in stack_temp_disp_offsets})
     internal=outbound=0
-    for i,(a,b) in enumerate(zip(target_ins,candidate_ins)):
-        if i==2:continue  # only incomplete stack size is allowed
-        assert a[0]==b[0]+(shift if i>2 else 0),(i,a,b)
+    for i,a in enumerate(target_ins):
+        # The explicit native-tail reservation is the sole extra prologue
+        # instruction; all remaining candidate instructions shift by +6.
+        b=candidate_ins[i if i<4 else i+1]
+        if i==2:continue
+        assert a[0]==b[0]+(code_shift if i>=4 else 0),(i,a,b)
         assert len(a[1])==len(b[1]),(i,a,b)
         if a[0] in stack_temp_instruction_offsets:
             assert a[1][:2]==b[1][:2] and a[1][3:]==b[1][3:],(i,a,b)
@@ -260,17 +268,18 @@ def main():
         dst=int(native_branch[1],16);got=int(compiled_branch[1],16)
         if dst<len(orig):
             assert dst in original_offsets and got in candidate_offsets
-            assert dst==got+shift,(i,a,b)
+            assert dst==got+code_shift,(i,a,b)
             internal+=1
         else:
             assert BASE+dst==0x00616033,(i,a,hex(BASE+dst))
             if a[1][0]==0xe9:
                 assert b[1][0]==0xe9 and len(a[1])==len(b[1])==5,(i,a,b)
-                if got < len(orig)-shift:
+                if got < len(orig)-code_shift:
                     # VC7.1 may route a return through an original in-prefix
                     # shared-return trampoline before the common epilogue.
-                    assert got in target_by_offset and got in candidate_by_offset,(i,a,b)
-                    native_trampoline=target_by_offset[got]
+                    native_got=got+code_shift
+                    assert native_got in target_by_offset and got in candidate_by_offset,(i,a,b)
+                    native_trampoline=target_by_offset[native_got]
                     candidate_trampoline=candidate_by_offset[got]
                     native_target=BRANCH.fullmatch(native_trampoline[2])
                     candidate_target=BRANCH.fullmatch(candidate_trampoline[2])
@@ -299,13 +308,13 @@ def main():
                 raise AssertionError(('unsupported shared-return branch',i,a,b))
             outbound+=1
     assert (internal,outbound)==(1417,187),(internal,outbound)
-    relocations=[r for r in relocs if r['offset']<len(orig)-shift]
+    relocations=[r for r in relocs if r['offset']<len(orig)-code_shift]
     local=[r for r in relocations if 'local_target_offset' in r]
     external=[r for r in relocations if 'local_target_offset' not in r]
     assert len(relocations)==1089 and len(local)==2 and len(external)==1087
     expected_locals={SELECTOR_BASE:candidate_table+556,TABLE_BASE:candidate_table}
     for r in relocations:
-        off=r['offset'];pos=off+shift
+        off=r['offset'];pos=off+code_shift
         assert struct.unpack_from('<I',compiled,off)[0]==0,(r,hex(off))
         ignore_candidate_bytes.update({off+k:'COFF operand' for k in range(4)})
         native_raw=struct.unpack_from('<I',orig,pos)[0]
@@ -321,7 +330,8 @@ def main():
             native_dst=(BASE+pos+4+struct.unpack_from('<i',orig,pos)[0])&0xffffffff
             assert native_dst==EXTERNAL_CALLS[r['symbol']],(r,hex(native_dst))
     raw=[]
-    for i,(a,b) in enumerate(zip(target_ins,candidate_ins)):
+    for i,a in enumerate(target_ins):
+        b=candidate_ins[i if i<4 else i+1]
         if i==2:continue
         for k in range(len(a[1])):
             if b[0]+k in ignore_candidate_bytes:continue

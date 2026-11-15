@@ -20,6 +20,9 @@ struct Character04StatePrivate {
 
 void Character04::Slot06()
 {
+    // Preserve the original 0x2E8 frame while keeping compiler-owned locals
+    // at their native EBP offsets: 0x1C8 compiler frame + 0x120 native tail.
+    __asm { sub esp, 120h }
     if (hitstopFrames > 0 || (*opponentSlot)->hitstunFrames > 0) return;
     EffectSpawn effect;
     struct FrameTiming {
