@@ -532,7 +532,7 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 ### Active second large boss: Character04::Slot06 (NOT full Exact)
 
 The authored `workbench/character04-state/Character04State.cpp`
-now covers original default plus **123 genuine native live states**,
+now covers original default plus **124 genuine native live states**,
 most recently reconstructed states220–221 two-character grab/throw,
 230–232 aerial attack tiers, 240's collision-result-3 grab handoff,
 241's complete multi-stage airborne throw, 249's special-move
@@ -542,7 +542,7 @@ post-landing recovery bridge, 254's held-input charge/launch, 255's
 alternate held-input charge/aerial launch, 256's aerial special
 follow-through, 257's special-effect follow-through, 258's wider
 local-effect follow-through, and 259's farthest-reaching local-effect
-variant, and 260's aerial capture/dual-effect initialization, plus 261's aerial deceleration recovery and 262's aerial fall/landing reset, plus 263's aerial capture effect pair and 264's alternate local-effect variant, plus 265's charge-capture/resource-cost sequence and 266's effect0x1B0 aerial follow-through, plus 267's extended-offset variant and 268's farthest-reaching effect0x1B0 follow-through, plus 269's zero-velocity aerial recovery, 303's multi-stage capture throw, 304's alternate cost/effect throw and 305's dual-effect aerial throw and 306's multi-loop opponent-repositioning throw. State240 resets both fighters' frame/pose state, advances the
+variant, and 260's aerial capture/dual-effect initialization, plus 261's aerial deceleration recovery and 262's aerial fall/landing reset, plus 263's aerial capture effect pair and 264's alternate local-effect variant, plus 265's charge-capture/resource-cost sequence and 266's effect0x1B0 aerial follow-through, plus 267's extended-offset variant and 268's farthest-reaching effect0x1B0 follow-through, plus 269's zero-velocity aerial recovery, 303's multi-stage capture throw, 304's alternate cost/effect throw and 305's dual-effect aerial throw and 306's multi-loop opponent-repositioning throw and 307's field3138-gated looping variant. State240 resets both fighters' frame/pose state, advances the
 owner to state241 and the opponent to state100, emits effect0 at
 integer-truncated X+facing×31/Y−82, and preserves the native airborne/
 state-range test for `remainingHitCount`. State241 applies horizontal
@@ -612,7 +612,7 @@ it sets `field3144=2` and emits effect0x19C at `(X+facing×200,Y)`. Both
 effects use owner1, group2, current facing and layer1. Every frame advance
 sets attackCollisionResult3; animation completion clears state, invokes
 the virtual ResetPose slot and faces the opponent. The case255 x87 launch
-and case257–269 and 303–306 inline-assembly state blocks use narrow inline
+and case257–269 and 303–307 inline-assembly state blocks use narrow inline
 assembly to preserve native VC7.1 instruction order. The original-bound
 State260's 674 native bytes initialize an aerial capture on frame0/tick0:
 they zero both velocities, set byte0x2C8 to5, initialize field3148=10000,
@@ -741,20 +741,35 @@ is below9; frame9 adds `facing×80` to owner X and clears the loop counter;
 frame13 loops backward by2 while the counter is below12. Animation
 completion clears state, faces the opponent and invokes virtual ResetPose.
 All 208 native instructions match.
+State307's 836 native bytes are the looping variant of state306. Frame0/
+tick0 clears field0x3138, sets velocityX=0.3, places owner X at
+`opponentX+facing×30`, and clears attackCollisionResult. Frame9/tick0 adds
+zero to owner X and sets velocityX=0. Frame11/tick0 sets byte0x2C9=0x14;
+frame14/tick0 sets byte0x2C8=2. At frame15/tick0, only when field0x3138
+is exactly7, it puts the opponent in state0x47, clears opponent hitstop,
+sets opponent fields0xC0=0 and0xC8=−4.0, sets attackCollisionResult=2,
+applies `ApplyDamage(3200,400.0)`, and emits effect0x34 at
+(opponentX,opponentY−40) with palette0x16, group2 and layer1. Frames1–14
+apply horizontal shake `(50,10)`. Frame6 loops back to4 while the counter
+is below9; frame9 adds `facing×80` to owner X and clears the counter; frame13
+loops back to11 while the counter is below12; frame14 latches the counter
+at12. At animation completion, a nonzero counter loops back two frames
+and decrements; only a zero counter clears state and invokes virtual
+ResetPose. All 225 native instructions match.
 The original-bound strict checker caught and corrected state220's subtle
 reset: when animation advances outside pose1, it must set
 `remainingHitCount=0`, not leave it unchanged. Native 221 applies 1200/750.0 damage and places both
 fighters at four distinct pose-specific coordinates. `check_prefix.py`
-proves **52,105 continuous native code bytes / 14,247 original x86
-instruction locations/widths/forms**, **1,266 native internal and 168
-original shared-return branch targets**, **1,032 exact original-bound
+proves **52,941 continuous native code bytes / 14,472 original x86
+instruction locations/widths/forms**, **1,289 native internal and 169
+original shared-return branch targets**, **1,035 exact original-bound
 direct call/float operands** and 2 canonical native-local dispatch
 pointers. Only the provisional stack immediate (`0x1C8` vs native
 `0x2E8`), ten explicitly pinned low-byte x87 scratch-slot displacements
 (native `EBP-0x1BC` through `EBP-0x1CC` slots shifted by four bytes in
 the provisional frame), shared-return routing (including the verified
 in-prefix return trampoline) and independently target-bound COFF fields
-differ. **Next native case307 at `0x006144B9`**; other 15 live cases,
+differ. **Next native case308 at `0x006147FD`**; other 14 live cases,
 full frame, switch/data and return still OPEN. Partial prefix evidence
 only, **NOT whole-function Exact**; no cold all-unit replay/push.
 
