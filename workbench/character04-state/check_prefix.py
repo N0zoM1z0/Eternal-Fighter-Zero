@@ -344,27 +344,25 @@ def main():
                     trampoline_targets.add(got)
                 else:
                     assert got==candidate_epilogue,(i,a,b,hex(candidate_epilogue))
+                    assert a[1][1:5]==b[1][1:5],(i,a,b)
                     direct_outbound+=1
-                ignore_candidate_bytes.update({b[0]+k:'shared return displacement'
-                                               for k in range(1,5)})
             elif a[1][0]==0x0f and 0x80<=a[1][1]<=0x8f:
                 # The final case's native near conditional exits target the
                 # common epilogue directly; no synthetic tail trampoline remains.
                 assert b[1][:2]==a[1][:2] and len(a[1])==len(b[1])==6,(i,a,b)
                 assert got==candidate_epilogue,(i,a,b,hex(candidate_epilogue))
+                assert a[1][2:6]==b[1][2:6],(i,a,b)
                 direct_outbound+=1
-                ignore_candidate_bytes.update({b[0]+k:'shared conditional-return displacement'
-                                               for k in range(2,6)})
             elif 0x70<=a[1][0]<=0x7f:
                 assert b[1][0]==a[1][0] and len(a[1])==len(b[1])==2,(i,a,b)
                 assert got==candidate_epilogue,(i,a,b,hex(candidate_epilogue))
+                assert a[1][1:2]==b[1][1:2],(i,a,b)
                 direct_outbound+=1
-                ignore_candidate_bytes[b[0]+1]='shared conditional-return displacement'
             else:
                 raise AssertionError(('unsupported shared-return branch',i,a,b))
             outbound+=1
     assert (internal,outbound)==(1417,187),(internal,outbound)
-    assert (direct_outbound,trampoline_outbound,len(trampoline_targets))==(177,10,7),(
+    assert (direct_outbound,trampoline_outbound,len(trampoline_targets))==(187,0,0),(
         direct_outbound,trampoline_outbound,trampoline_targets)
     relocations=[r for r in relocs if r['offset']<len(orig)-code_shift]
     local=[r for r in relocations if 'local_target_offset' in r]
@@ -419,11 +417,11 @@ def main():
     print('Character04 Slot06 selected original-bound prefix PASS (NOT full Exact):')
     print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221, 230-232, 240-241, 249-269,303-309,312,315-325 + default')
     print(f'  {len(orig)} original code bytes, {len(target_ins)} x86 instructions, {internal} native internal + {outbound} shared-return branches')
-    print(f'  Shared returns: {direct_outbound} direct to common epilogue + {trampoline_outbound} via {len(trampoline_targets)} original in-prefix trampolines; no synthetic tail trampoline')
+    print(f'  Shared returns: all {direct_outbound} branches directly to common epilogue; rel32/conditional displacements byte-exact, no trampolines')
     print(f'  {len(external)} original-bound COFF calls/floats + {len(RAW_FLOAT_OPERANDS)} inline-asm pinned original floats + {len(local)} native-local selector/table pointers')
     print(f'  {len(LEAF_DEPENDENCIES)} boss leaf dependencies independently Exact: {leaf_bytes} bytes, zero differences')
     print(f'  Exact dispatch data: 139-entry table target order + 325 selector bytes; {len(candidate_table_relocs)} table labels bound to original case order')
     print('  Exact scratch slots: state255 and all four state256 x87 conversions match native byte-for-byte.')
-    print('  Remaining explicit byte differences: split 0x2E8 prologue (0x1B8 + 0x130), shared-return rel32 displacement bytes (targets exact) and target-bound COFF fields.')
-    print('  All 138 live cases and dispatch data are covered; one-instruction prologue and shared-return rel32 bytes remain NOT Exact; all 187 targets are exact.')
+    print('  Remaining explicit byte differences: split 0x2E8 prologue (0x1B8 + 0x130), target-bound COFF fields.')
+    print('  All 138 live cases and dispatch data are covered; only the one-instruction prologue and target-bound COFF operand fields remain NOT byte-identical; all 187 shared returns are exact.')
 if __name__=='__main__':main()

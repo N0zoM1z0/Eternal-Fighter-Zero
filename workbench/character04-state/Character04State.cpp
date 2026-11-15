@@ -5745,8 +5745,8 @@ void Character04::Slot06()
             mov ecx, dword ptr [ebp-54h]
             call Secondary::ResetFrame
             _emit 0E9h
-            _emit 073h
-            _emit 000h
+            _emit 0AEh
+            _emit 032h
             _emit 000h
             _emit 000h
         state262_normal_advance:
@@ -6755,7 +6755,11 @@ void Character04::Slot06()
             mov word ptr [ecx+0Ch], 0
             mov edx, dword ptr [ebp-54h]
             mov word ptr [edx+0Ah], 9
-            jmp state303_exit
+            _emit 0E9h
+            _emit 00Fh
+            _emit 026h
+            _emit 000h
+            _emit 000h
         state303_frame8_check_hit:
             mov eax, dword ptr [ebp-54h]
             cmp dword ptr [eax+168h], 3
@@ -6792,7 +6796,11 @@ void Character04::Slot06()
             mov word ptr [edx+8], 06Ch
             mov eax, dword ptr [ebp-54h]
             mov word ptr [eax+8], 0132h
-            jmp state303_exit
+            _emit 0E9h
+            _emit 0A7h
+            _emit 025h
+            _emit 000h
+            _emit 000h
         state303_skip_frame8_result:
             mov ecx, dword ptr [ebp-54h]
             movzx edx, word ptr [ecx+0Ah]
@@ -7027,7 +7035,11 @@ void Character04::Slot06()
             mov word ptr [edx+0Ch],0
             mov eax,[ebp-54h]
             mov word ptr [eax+0Ah],9h
-            jmp state304_exit
+            _emit 0E9h
+            _emit 014h
+            _emit 023h
+            _emit 000h
+            _emit 000h
         state304_00613D1F:
             mov ecx,[ebp-54h]
             cmp dword ptr [ecx+168h],3h
@@ -7064,7 +7076,11 @@ void Character04::Slot06()
             mov word ptr [eax+8h],6Ch
             mov ecx,[ebp-54h]
             mov word ptr [ecx+8h],133h
-            jmp state304_exit
+            _emit 0E9h
+            _emit 0ACh
+            _emit 022h
+            _emit 000h
+            _emit 000h
         state304_00613D87:
             mov edx,[ebp-54h]
             movzx eax,word ptr [edx+0Ah]
@@ -7312,7 +7328,11 @@ void Character04::Slot06()
             mov word ptr [edx+0Ch],0
             mov eax,[ebp-54h]
             mov word ptr [eax+0Ah],9h
-            jmp state305_exit
+            _emit 0E9h
+            _emit 0EEh
+            _emit 01Fh
+            _emit 000h
+            _emit 000h
         state305_00614045:
             mov ecx,[ebp-54h]
             cmp dword ptr [ecx+168h],3h
@@ -7401,7 +7421,11 @@ void Character04::Slot06()
             mov edx,[ecx]
             mov ecx,[ebp-54h]
             call dword ptr [edx+24h]
-            jmp state305_exit
+            _emit 0E9h
+            _emit 000h
+            _emit 01Fh
+            _emit 000h
+            _emit 000h
         state305_00614133:
             mov eax,[ebp-54h]
             movzx ecx,word ptr [eax+0Ah]
@@ -8789,8 +8813,8 @@ void Character04::Slot06()
             mov word ptr [edx+0Ah],0
             // Native near jump to the shared epilogue; preserve E9 rel32 width.
             _emit 0E9h
-            _emit 013h
-            _emit 000h
+            _emit 0ACh
+            _emit 00Eh
             _emit 000h
             _emit 000h
         state315_00615187:
@@ -8874,8 +8898,8 @@ void Character04::Slot06()
             mov word ptr [edx+0Ah],0
             // Native near jump to the shared epilogue; preserve E9 rel32 width.
             _emit 0E9h
-            _emit 013h
-            _emit 000h
+            _emit 0D0h
+            _emit 00Dh
             _emit 000h
             _emit 000h
         state316_00615263:
@@ -8958,8 +8982,8 @@ void Character04::Slot06()
             mov edx,[ebp-54h]
             mov word ptr [edx+0Ah],0
             _emit 0E9h
-            _emit 013h
-            _emit 000h
+            _emit 0F4h
+            _emit 00Ch
             _emit 000h
             _emit 000h
         state317_0061533F:
