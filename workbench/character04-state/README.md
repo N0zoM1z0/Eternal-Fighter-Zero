@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **113 genuine live cases**: 1–9,13–16,
+the original default and **114 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–263. The other **25** native live case IDs remain OPEN.
+230–232,240–241,249–264. The other **24** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00612F90)` now has **46,688
+The original code `[0x00607930,0x00613123)` now has **47,091
 original executable bytes**, canonical SHA-256
-`06bbcba0c7e339a3b053deb8cb1351e23c6227d824ef4bf5fdb7090ac25b9faa`.
+`661665bd6bf94ad71943a0d326e6fc1d0986fb79fa1ec8e299d6f911458bc588`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -210,15 +210,24 @@ attackCollisionResult=3; animation completion clears state, invokes virtual
 ResetPose and faces the opponent.
 
 
+State264 (`0x00612F90`, 403 bytes) repeats the state263 capture sequence
+with local effect0x1AD instead of 0x1AC. It calls ResetFrame at frame0/
+tick0; frame3/tick0 sets field3144=2 and byte0x2C8=5, emits global
+effect0x1F at integer-truncated (X,Y), then local effect0x1AD at
+integer-truncated (X,Y−20) using owner1, group2, current facing and layer1.
+Every frame advance sets attackCollisionResult=3; animation completion
+clears state, invokes virtual ResetPose and faces the opponent.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **12,777 original x86 instruction widths/positions and
-register-abstracted forms**, **1,142 original internal +152 native
-shared-return branch targets**, **977 independently original-bound
+It verifies **12,885 original x86 instruction widths/positions and
+register-abstracted forms**, **1,148 original internal +153 native
+shared-return branch targets**, **984 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
 stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
@@ -228,7 +237,7 @@ bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-**Next live native state264 starts `0x00612F90`**. The remaining
-25 original live case bodies, full stack, 139-entry jump table,
+**Next live native state265 starts `0x00613123`**. The remaining
+24 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
