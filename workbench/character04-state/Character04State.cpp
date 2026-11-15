@@ -13,7 +13,7 @@ struct Character04StateFields {
 // Use this private offset view without changing accepted owner recipes.
 struct Character04StatePrivate {
     unsigned char base[0x3138];
-    int field3138;
+    int field3138, field313c;
 };
 
 void Character04::Slot06()
@@ -3543,6 +3543,48 @@ void Character04::Slot06()
             attackCollisionResult = 0;
             if (field000a >= timing.animationFrameCount) {
                 field000a = 11;
+            }
+        }
+        return;
+
+    case 251: // Character04 native 0x00611590: second airborne throw with pose-reset completion
+        if (field000a == 0 && field000c == 0) {
+            if (positionY == 0.0) {
+                velocityX = 0.0;
+                gravity = 0.0;
+            }
+            if (positionY < 0.0) {
+                reinterpret_cast<Character04StatePrivate *>(this)->field3138 = 1;
+            }
+            gravity = 0.0;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 0x19);
+            remainingHitCount = 1;
+            velocityX *= 0.5;
+            velocityY *= 0.5;
+            gravity = 0.035;
+        }
+        if (field000a > 1 && velocityY + positionY >= 0.0) {
+            field000c = 0;
+            field000a = 0;
+            field0008 = 0xfd;
+            reinterpret_cast<Character04StatePrivate *>(this)->field313c = 1;
+            return;
+        }
+        ++field000c;
+        velocityY += gravity;
+        if (field000c >= timing.frameDuration ||
+            (field000c >= timing.frameDuration - 3 &&
+             reinterpret_cast<Character04StatePrivate *>(this)->field3138 == 1)) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
             }
         }
         return;

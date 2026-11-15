@@ -1,9 +1,9 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
 **PARTIAL: not whole-function Exact.** Authored natural C++ now
-covers original default and **100 genuine live cases**: 1–9,13–16,
+covers original default and **101 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–250. The other **38** native live case IDs remain OPEN.
+230–232,240–241,249–251. The other **37** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -20,9 +20,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00611590)` now has **40,032
+The original code `[0x00607930,0x00611767)` now has **40,503
 original executable bytes**, canonical SHA-256
-`93be659a6cdf07979c2b68729f2a3fac3dd15273d5b55f9ef3eb5d0e6df7ce40`.
+`28ddd402101a79e74a9fabe7a2ee87281d867572e5451b07f8e36737781fe26c`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -70,6 +70,13 @@ airborne frames can advance three ticks early when `field3138==1`. Every
 advance clears the collision result and the animation wraps to frame11.
 Once frame>=2 and `positionY+velocityY` is nonnegative, it clears tick
 and frame and transitions to state253.
+State251 (`0x00611590`, 471 bytes) is the second airborne startup variant.
+It uses the same ground/air startup latch and frame1 meter/velocity setup,
+but frame1 gravity is0.035. Its landing handoff additionally sets the
+private `field313c=1` before leaving for state253. Unlike state250's frame11
+loop, state251 clears `attackCollisionResult` only when the animation
+advances into frame1; at animation completion it sets state0 and invokes
+the virtual `ResetPose` slot, which clears the Character04 private counters.
 
 Focused canonical selected-prefix check:
 
@@ -77,9 +84,9 @@ Focused canonical selected-prefix check:
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **10,993 original x86 instruction widths/positions and
-register-abstracted forms**, **989 original internal +134 native
-shared-return branch targets**, **874 independently original-bound
+It verifies **11,124 original x86 instruction widths/positions and
+register-abstracted forms**, **1,002 original internal +136 native
+shared-return branch targets**, **883 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. All other reviewed opcode bytes match exactly. Allowed
 exceptions are only the original-width provisional six-byte stack
@@ -88,7 +95,7 @@ the single verified in-prefix jump trampoline), and original-bound COFF
 fields. No arbitrary branch
 target differences or source padding are accepted.
 
-**Next live native state250 starts `0x006113DC`**. The remaining
-39 original live case bodies, full stack, 139-entry jump table,
+**Next live native state252 starts `0x00611767`**. The remaining
+37 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
