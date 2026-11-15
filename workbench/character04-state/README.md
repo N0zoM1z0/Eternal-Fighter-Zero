@@ -1,9 +1,10 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
-**PARTIAL: not whole-function Exact.** Authored natural C++ now
-covers original default and **104 genuine live cases**: 1–9,13–16,
+**PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
+scoped VC7.1 inline assembly for register-sensitive x87 code) covers
+the original default and **105 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–254. The other **34** native live case IDs remain OPEN.
+230–232,240–241,249–255. The other **33** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -20,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00611DB0)` now has **42,112
+The original code `[0x00607930,0x00612093)` now has **42,851
 original executable bytes**, canonical SHA-256
-`b59b98a00bd465a48023b6b26f19fcd1d6c8d49a03c5ded127c02b55047fb370`.
+`56a0be7f803fb0ccdba22532b829e0aed63bcd2a56b26d03bc79e31c4efb08b5`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -105,24 +106,39 @@ frame6 advance it either hands off to state261 when charged, or repositions
 at opponentX−facing×60; normal animation completion faces the opponent and
 resets the pose.
 
+State255 (`0x00611DB0`, 739 bytes) is the alternate held-input charge
+and aerial launch. It sets `attackCollisionResult=2` each tick and counts
+`buttonHeld[1]` in `field313c`. Frame2/tick0 clears byte0x2C8 and emits
+effect0x20 at integer-truncated `(X+facing×60,Y)` with opposite facing.
+Frame5/tick0 calls `ResetFrame`; charge above30 latches `field3138=1`.
+Horizontal velocity accumulates deceleration and clamps at zero. At
+frame5/tick20, an uncharged branch positions X at opponentX−facing×180.
+Frame6/tick0 sets velocity1.5 and deceleration−0.05. On frame6 advance,
+a charged launch enters state0x106, positions X at opponentX−facing×100,
+clamps to540/100 for facing±1, and sets Y=−100. Otherwise it clears the
+collision result and uses the normal animation-completion FaceOpponent /
+ResetPose path. The register-sensitive x87 launch block is emitted with
+narrow inline assembly to retain the native instruction order.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **11,560 original x86 instruction widths/positions and
-register-abstracted forms**, **1,044 original internal +140 native
-shared-return branch targets**, **912 independently original-bound
+It verifies **11,761 original x86 instruction widths/positions and
+register-abstracted forms**, **1,064 original internal +142 native
+shared-return branch targets**, **921 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
-addresses. All other reviewed opcode bytes match exactly. Allowed
-exceptions are only the original-width provisional six-byte stack
-immediate (`0x190` vs native `0x2E8`), shared-return routing (including
-the single verified in-prefix jump trampoline), and original-bound COFF
-fields. No arbitrary branch
-target differences or source padding are accepted.
+addresses. The only explicit differences are the provisional six-byte
+stack immediate (`0x1B8` vs native `0x2E8`), the two low bytes of the
+frame-6 x87 scratch-slot displacements (`EBP-0x1BC` native vs
+`EBP-0x1B8` provisional), shared-return routing (including the single
+verified in-prefix jump trampoline), and original-bound COFF fields.
+No arbitrary branch-target differences or source padding are accepted.
 
-**Next live native state255 starts `0x00611DB0`**. The remaining
-34 original live case bodies, full stack, 139-entry jump table,
+**Next live native state256 starts `0x00612093`**. The remaining
+33 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.

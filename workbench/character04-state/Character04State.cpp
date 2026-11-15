@@ -3731,5 +3731,155 @@ void Character04::Slot06()
         }
         return;
 
+    case 255: // Character04 native 0x00611DB0: alternate held-input charge and aerial launch
+        // VC7.1 rotates the frame-6 register allocation in C++; keep the exact
+        // native compare/x87 launch path explicit. The two scratch operands
+        // use the bottom of this provisional frame (see check_prefix.py).
+        attackCollisionResult = 2;
+        if (buttonHeld[1] > 0) {
+            ++reinterpret_cast<Character04StateFields *>(this)->field313c;
+        }
+        if (field000a == 2 && field000c == 0) {
+            reinterpret_cast<unsigned char *>(this)[0x2c8] = 0;
+            effect.type = 0x20;
+            effect.x = (double)((int)positionX + (int)facing * 60);
+            effect.y = (double)(int)positionY;
+            effect.group = 0;
+            effect.flag0018 = (unsigned char)-facing;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 5 && field000c == 0) {
+            ResetFrame();
+            if (reinterpret_cast<Character04StateFields *>(this)->field313c > 30) {
+                reinterpret_cast<Character04StateFields *>(this)->field3138 = 1;
+            }
+        }
+        velocityX += horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (field000a == 5 && field000c == 0x14 &&
+            reinterpret_cast<Character04StateFields *>(this)->field3138 == 0) {
+            positionX = (*opponentSlot)->positionX - (double)((int)facing * 180);
+        }
+        if (field000a == 6 && field000c == 0) {
+            velocityX = 1.5;
+            horizontalDeceleration = -0.05;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            __asm {
+                mov edx, dword ptr [ebp-54h]
+                movzx eax, word ptr [edx+0Ah]
+                cmp eax, 6
+                jne state255_skip_charge
+                mov ecx, dword ptr [ebp-54h]
+                cmp dword ptr [ecx+3138h], 1
+                jne state255_skip_charge
+            }
+            __asm {
+                mov edx, dword ptr [ebp-54h]
+                mov word ptr [edx+0Ah], 0
+                mov eax, dword ptr [ebp-54h]
+                mov word ptr [eax+0Ch], 0
+                mov ecx, dword ptr [ebp-54h]
+                mov word ptr [ecx+08h], 0106h
+                mov edx, dword ptr [ebp-54h]
+                mov eax, dword ptr [edx+78h]
+                mov ecx, dword ptr [eax]
+                mov edx, dword ptr [ebp-54h]
+                movsx eax, byte ptr [edx+50h]
+                imul eax, eax, 064h
+                mov dword ptr [ebp-1B8h], eax
+                fild dword ptr [ebp-1B8h]
+                fsubr qword ptr [ecx+20h]
+                mov ecx, dword ptr [ebp-54h]
+                fstp qword ptr [ecx+20h]
+                mov edx, dword ptr [ebp-54h]
+                fld qword ptr [edx+20h]
+                _emit 0DCh
+                _emit 01Dh
+                _emit 058h
+                _emit 08Bh
+                _emit 078h
+                _emit 000h
+                fnstsw ax
+                test ah, 041h
+                jnz state255_no_right_clamp
+                mov eax, dword ptr [ebp-54h]
+                movsx ecx, byte ptr [eax+50h]
+                cmp ecx, 1
+                jnz state255_no_right_clamp
+                mov edx, dword ptr [ebp-54h]
+                _emit 0DDh
+                _emit 005h
+                _emit 058h
+                _emit 08Bh
+                _emit 078h
+                _emit 000h
+                fstp qword ptr [edx+20h]
+            state255_no_right_clamp:
+                mov eax, dword ptr [ebp-54h]
+                fld qword ptr [eax+20h]
+                _emit 0DCh
+                _emit 01Dh
+                _emit 0D0h
+                _emit 075h
+                _emit 078h
+                _emit 000h
+                fnstsw ax
+                test ah, 05h
+                jpe state255_no_left_clamp
+                mov ecx, dword ptr [ebp-54h]
+                movsx edx, byte ptr [ecx+50h]
+                cmp edx, -1
+                jnz state255_no_left_clamp
+                mov eax, dword ptr [ebp-54h]
+                _emit 0DDh
+                _emit 005h
+                _emit 0D0h
+                _emit 075h
+                _emit 078h
+                _emit 000h
+                fstp qword ptr [eax+20h]
+            state255_no_left_clamp:
+                mov ecx, dword ptr [ebp-54h]
+                _emit 0DDh
+                _emit 005h
+                _emit 0C8h
+                _emit 075h
+                _emit 078h
+                _emit 000h
+                fstp qword ptr [ecx+28h]
+            }
+            return;
+            __asm {
+            state255_skip_charge:
+            }
+            __asm {
+            mov edx, dword ptr [ebp-54h]
+            mov dword ptr [edx+168h], 0
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            movzx edx, word ptr [ebp-08h]
+            cmp ecx, edx
+            jl state255_skip_reset
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+08h], 0
+        }
+        FaceOpponent();
+        __asm {
+            mov ecx, dword ptr [ebp-54h]
+            mov edx, dword ptr [ecx]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [edx]
+        state255_skip_reset:
+        }
+        }
+        return;
+
     }
 }
