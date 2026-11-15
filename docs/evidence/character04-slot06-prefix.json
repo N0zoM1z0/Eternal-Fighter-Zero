@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "status": "selected-prefix-only",
-  "authority": "Original-bound selected native code prefix and switch data. This is not a whole-function Exact or whole-project replay certificate.",
+  "status": "whole-function-code-and-dispatch-final-image-exact",
+  "authority": "Complete native Character04 Slot06 function code and full dispatch data reconstructed at final-image level. This is not a whole-project cold-replay certificate.",
   "owner": {
     "symbol": "?Slot06@Character04@@UAEXXZ",
     "entry": "0x00607930",
@@ -89,18 +89,37 @@
     "evidence": "docs/evidence/character04-slot06-leaf-dependencies-exact.json"
   },
   "remaining_nonidentical_object_fields": [
-    "The only remaining mapped instruction-layout difference is the split 0x2E8 stack prologue (compiler sub esp,0x1B8 plus inline sub esp,0x130 versus native sub esp,0x2E8).",
-    "The .obj retains COFF relocation placeholders; the focused final-image resolver materializes all 1,082 relocation operands (4,328 bytes) to the exact original native bytes."
+    "The intermediate VC7.1 .obj uses a split stack reservation and COFF relocation placeholders. The final-image reconstruction collapses/resolves these fields and is byte-identical to the complete native function code and dispatch data."
   ],
   "validation": {
     "focused_checker": "scripts/repo-python workbench/character04-state/check_prefix.py",
-    "full_all_unit_cold_replay": false
+    "full_all_unit_cold_replay": false,
+    "scope": "Complete Character04 Slot06 function code and dispatch data; no whole-project cold replay."
   },
   "resolved_linked_image": {
-    "coff_relocation_entries": 1082,
-    "relocation_operand_bytes": 4328,
-    "all_operands_resolved_to_original_native_bytes": true,
-    "all_mapped_instruction_bytes_match_original_after_resolution": true,
-    "remaining_code_layout_difference": "The compiler emits sub esp,0x1B8 plus inline sub esp,0x130 instead of the single native sub esp,0x2E8; both reserve the same total stack space."
+    "total_bytes": 60024,
+    "function_code_bytes": 59143,
+    "dispatch_table_bytes": 556,
+    "selector_bytes": 325,
+    "code_coff_relocation_entries": 1082,
+    "code_relocation_operand_bytes": 4328,
+    "table_relocation_entries": 139,
+    "table_relocation_operand_bytes": 556,
+    "code_bytes_exact": true,
+    "dispatch_table_bytes_exact": true,
+    "selector_bytes_exact": true,
+    "native_prologue_reconstructed": true,
+    "normalization": "Replace candidate sub esp,0x1B8 with native sub esp,0x2E8 and remove the following candidate-only sub esp,0x130; resolve code and jump-table COFF operands to original native values."
+  },
+  "direct_call_closure": {
+    "direct_rel32_call_sites": 338,
+    "unique_external_symbols": 15,
+    "source_level_leaf_dependencies": 14,
+    "source_level_leaf_dependency_bytes_exact": 1918,
+    "runtime_helpers": [
+      "__ftol2"
+    ],
+    "unclassified_direct_call_symbols": [],
+    "all_direct_call_targets_original_bound": true
   }
 }
