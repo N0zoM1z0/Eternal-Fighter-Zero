@@ -7890,6 +7890,90 @@ void Character04::Slot06()
         state316_exit:
         }
         return;
+    case 317: // Character04 native 0x0061527B: third zero-velocity hitstun recovery
+        // Same frame-0/1 movement reset and field3144==1 re-entry gate as
+        // 315/316, with a third distinct register allocation/return layout.
+        __asm {
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            test ecx,ecx
+            jnz state317_006152A9
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state317_006152A9
+            mov ecx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+30h]
+            mov edx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+38h]
+        state317_006152A9:
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            cmp ecx,1h
+            jnz state317_006152CD
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state317_006152CD
+            mov ecx,[ebp-54h]
+            mov dword ptr [ecx+3148h],0
+        state317_006152CD:
+            mov edx,[ebp-54h]
+            mov ax,[edx+0Ch]
+            add ax,1h
+            mov ecx,[ebp-54h]
+            mov [ecx+0Ch],ax
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            movzx ecx,word ptr [ebp-4h]
+            cmp eax,ecx
+            jl state317_exit
+            mov edx,[ebp-54h]
+            mov word ptr [edx+0Ch],0
+            mov eax,[ebp-54h]
+            mov cx,[eax+0Ah]
+            add cx,1h
+            mov edx,[ebp-54h]
+            mov [edx+0Ah],cx
+            mov eax,[ebp-54h]
+            mov dword ptr [eax+168h],0
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            movzx eax,word ptr [ebp-8h]
+            cmp edx,eax
+            jl state317_exit
+            mov ecx,[ebp-54h]
+            cmp dword ptr [ecx+3144h],1h
+            jnz state317_0061533F
+            mov edx,[ebp-54h]
+            mov word ptr [edx+0Ah],0
+            _emit 0E9h
+            _emit 013h
+            _emit 000h
+            _emit 000h
+            _emit 000h
+        state317_0061533F:
+            mov eax,[ebp-54h]
+            mov word ptr [eax+8h],0
+            mov ecx,[ebp-54h]
+            mov edx,[ecx]
+            mov ecx,[ebp-54h]
+            call dword ptr [edx]
+        state317_exit:
+        }
+        return;
 
     }
 }
