@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **107 genuine live cases**: 1–9,13–16,
+the original default and **108 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–257. The other **31** native live case IDs remain OPEN.
+230–232,240–241,249–258. The other **30** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00612569)` now has **44,089
+The original code `[0x00607930,0x00612757)` now has **44,583
 original executable bytes**, canonical SHA-256
-`4717cab228197be415afe83a9bcb3c55669127d324949e6cc2a1b0c67a156dae`.
+`9c58f43f734f3de9f82f9999ddb23882d34f149192423a7cd740ff923f3f6c4d`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -147,15 +147,28 @@ arms and the final frame-counter/virtual-reset sequence use narrow inline
 assembly to preserve the native VC7.1 register and instruction order.
 
 
+State258 (`0x00612569`, 494 bytes) is the wider local-effect follow-through.
+It sets `attackCollisionResult=2` each tick and calls `ResetFrame` at
+frame0/tick0. At frame2/tick0, `field3144==4` spends1000 from
+`field3148` (clamped at zero) and emits local effect0x1A8 at
+integer-truncated `(X+facing×160,Y)`; otherwise it sets `field3144=2` and
+emits effect0x19C at `(X+facing×120,Y)`. Both effects use owner1, group2,
+current facing and layer1. Every frame advance sets
+`attackCollisionResult=3`; animation completion clears state, invokes the
+virtual ResetPose slot and faces the opponent. The state is expressed in
+narrow inline assembly so both local-effect branches, the frame counter,
+and the virtual reset retain the native instruction/register sequence.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **12,089 original x86 instruction widths/positions and
-register-abstracted forms**, **1,094 original internal +145 native
-shared-return branch targets**, **943 independently original-bound
+It verifies **12,216 original x86 instruction widths/positions and
+register-abstracted forms**, **1,103 original internal +146 native
+shared-return branch targets**, **949 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
 stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
@@ -165,7 +178,7 @@ bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-**Next live native state258 starts `0x00612569`**. The remaining
-31 original live case bodies, full stack, 139-entry jump table,
+**Next live native state259 starts `0x00612757`**. The remaining
+30 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
