@@ -532,26 +532,29 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 ### Active second large boss: Character04::Slot06 (NOT full Exact)
 
 The authored `workbench/character04-state/Character04State.cpp`
-now covers original default plus **97 genuine native live states**,
+now covers original default plus **98 genuine native live states**,
 most recently full C++ for states220–221 two-character grab/throw,
-230–232 aerial attack tiers, and 240's collision-result-3 grab handoff.
-State240 resets both fighters' frame/pose state, advances the owner to
-state241 and the opponent to state100, emits effect0 at integer-truncated
-X+facing×31/Y−82, positions the opponent at the corresponding live
-coordinates, and preserves the native airborne/state-range test for
-`remainingHitCount` before its state209/frame1 completion handoff.
-The original-bound strict checker caught and corrected state220's subtle
-reset: when animation advances outside pose1, it must set
-`remainingHitCount=0`, not leave it unchanged. Native 221 applies
-1200/750.0 damage and places both fighters at four distinct pose-specific
-coordinates. `check_prefix.py` proves **38,556 continuous native code
-bytes / 10,578 original x86 instruction locations/widths/forms**, **959
-native internal and 129 original shared-return branch targets**, **847
-exact original-bound direct call/float operands** and 2 canonical
+230–232 aerial attack tiers, 240's collision-result-3 grab handoff, and
+241's complete multi-stage airborne throw. State240 resets both fighters'
+frame/pose state, advances the owner to state241 and the opponent to
+state100, emits effect0 at integer-truncated X+facing×31/Y−82, and
+preserves the native airborne/state-range test for `remainingHitCount`.
+State241 applies horizontal offset/shake `(50,3)`, positions the opponent
+in states103/104/69 at three native offsets, applies `ApplyDamage(1300,
+500.0)`, sets opponent knockback velocities `(-3.0,3.0)`, and loops its
+last two frames until landing. The original-bound strict checker caught
+and corrected state220's subtle reset: when animation advances outside
+pose1, it must set `remainingHitCount=0`, not leave it unchanged. Native
+221 applies 1200/750.0 damage and places both fighters at four distinct
+pose-specific coordinates. `check_prefix.py` proves **39,276 continuous
+native code bytes / 10,792 original x86 instruction locations/widths/forms**,
+**973 native internal and 131 original shared-return branch targets**,
+**860 exact original-bound direct call/float operands** and 2 canonical
 native-local dispatch pointers. Only the original-width provisional stack
-immediate (`0x17C` vs native `0x2E8`), unclosed shared return and
-independently target-bound COFF fields differ. **Next native case241 at
-`0x00610FCC`**; other 41 live cases, full frame, switch/data and return
+immediate (`0x188` vs native `0x2E8`), shared-return routing (including
+one verified in-prefix trampoline) and independently target-bound COFF
+fields differ. **Next native case249 at
+`0x0061129C`**; other 40 live cases, full frame, switch/data and return
 still OPEN. Partial prefix evidence only, **NOT whole-function Exact**;
 no cold all-unit replay/push.
 

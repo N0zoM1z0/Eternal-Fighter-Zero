@@ -1,9 +1,9 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
 **PARTIAL: not whole-function Exact.** Authored natural C++ now
-covers original default and **97 genuine live cases**: 1–9,13–16,
+covers original default and **98 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240. The other **41** native live case IDs remain OPEN.
+230–232,240–241. The other **40** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -20,9 +20,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00610FCC)` now has **38,556
+The original code `[0x00607930,0x0061129C)` now has **39,276
 original executable bytes**, canonical SHA-256
-`9c7dc6ef19f6dffa44438e6800ecd106685a5e9bfa325fccebc75f7cacce374a`.
+`2733776f67e7a38fb70947fedefaec31e572604464060197ecf21c4c1f3b9318`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -45,6 +45,15 @@ at the corresponding live X/Y offsets. On frame advance it derives
 `remainingHitCount` from the opponent's airborne position and whether
 the opponent state is outside 50–149, clears the collision result, and
 hands off to state209/frame1 when the animation ends.
+State241 (`0x00610FCC`, 720 bytes) completes the airborne throw sequence.
+It applies horizontal offset and shake `(50,3)` through frame3, flips
+the opponent's facing on tick1, and advances the opponent through states
+103/104/69 at the native `(X+facing×29,Y−80)`,
+`(X+facing×11,Y−71)`, and `(X−facing×37,Y−60)` placements. The frame3
+impact applies `ApplyDamage(1300,500.0)`, resets the opponent pose, and
+sets knockback velocities `(-3.0,3.0)`. Frame5 installs gravity0.035;
+the animation loops its final two frames until the landing predicate
+fails, then resets the owner and transitions to state13.
 
 Focused canonical selected-prefix check:
 
@@ -52,17 +61,18 @@ Focused canonical selected-prefix check:
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **10,578 original x86 instruction widths/positions and
-register-abstracted forms**, **959 original internal +129 native
-shared-return branch targets**, **847 independently original-bound
+It verifies **10,792 original x86 instruction widths/positions and
+register-abstracted forms**, **973 original internal +131 native
+shared-return branch targets**, **860 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. All other reviewed opcode bytes match exactly. Allowed
 exceptions are only the original-width provisional six-byte stack
-immediate (`0x17C` vs native `0x2E8`), incomplete final shared-return
-jump distance and original-bound COFF fields. No arbitrary branch
+immediate (`0x188` vs native `0x2E8`), shared-return routing (including
+the single verified in-prefix jump trampoline), and original-bound COFF
+fields. No arbitrary branch
 target differences or source padding are accepted.
 
-**Next live native state241 starts `0x00610FCC`**. The remaining
-41 original live case bodies, full stack, 139-entry jump table,
+**Next live native state249 starts `0x0061129C`**. The remaining
+40 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.

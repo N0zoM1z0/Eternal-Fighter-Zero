@@ -2286,8 +2286,12 @@ Original vtable `0x00788B94` selects the 59,143-byte native code
 owner `[0x00607930,0x00616037)`, with adjacent 139 DWORD switch
 pointers and 325 selectors (138 live, 187 default IDs).
 `workbench/character04-state/Character04State.cpp` now authors
-**default plus 96 native live cases** (1–9,13–16,47,50–77,81–87,
-96–99,150–158,161–171,180,200–216,220–221,230–232).
+**default plus 98 native live cases** (1–9,13–16,47,50–77,81–87,
+96–99,150–158,161–171,180,200–216,220–221,230–232,240–241).
+Cases240–241 reconstruct the collision-result-3 grab handoff and the
+complete airborne throw: opponent states103/104/69, three native
+frame-specific XY offsets, horizontal offset/shake, native
+`ApplyDamage(1300,500.0)`, and knockback velocities `(-3.0,3.0)`.
 Recent original 220–221 reconstruct native multi-opponent throw,
 frame-specific XY placement, native `ApplyDamage(1200,750.0)`,
 partner pose resets, and the pose1-specific hit-count reset branch.
@@ -2295,18 +2299,18 @@ Original cases230–232 implement genuine variant airborne attack
 speeds, meter and sound frame gates.
 
 Dedicated `workbench/character04-state/check_prefix.py` confirms
-**38,058 consecutive native executable code bytes** from
-`[0x00607930,0x00610DDA)`, original SHA-256
-`27ab84c93456fccd601d7ff0f64f56f8d0edc08d334fbd2234e6b7dcdbb4c0e3`:
-**10,439 original x86 instruction offsets/widths/forms; 950
-internal +128 shared-return native branches; 840 independently
+**39,276 consecutive native executable code bytes** from
+`[0x00607930,0x0061129C)`, original SHA-256
+`2733776f67e7a38fb70947fedefaec31e572604464060197ecf21c4c1f3b9318`:
+**10,792 original x86 instruction offsets/widths/forms; 973
+internal +131 shared-return native branches; 860 independently
 original-bound COFF calls/float operands; two original local
 switch/selector addresses**. All other selected code bytes match;
-only the original-width provisional stack-immediate (`0x170` vs
-full native `0x2E8`), outbound-return displacements and target-bound
-COFF reloc fields are excepted. **Selected prefix, NOT full Exact**:
-42 real live states, full original frame, local tables and return
-remain OPEN. Next case240 at `0x00610DDA`. No cold all-unit replay.
+only the original-width provisional stack-immediate (`0x188` vs
+full native `0x2E8`), shared-return routing (including one verified
+in-prefix trampoline) and target-bound COFF reloc fields are excepted. **Selected prefix, NOT full Exact**:
+40 real live states, full original frame, local tables and return
+remain OPEN. Next case249 at `0x0061129C`. No cold all-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

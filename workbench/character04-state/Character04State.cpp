@@ -3428,5 +3428,57 @@ void Character04::Slot06()
         }
         return;
 
+    case 241: // Character04 native 0x00610FCC: airborne multi-stage throw
+        if (field000a < 4) {
+            SetHorizontalOffset(50, 3);
+        }
+        if (field000a < 4) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a == 0 && field000c == 1) {
+            (*opponentSlot)->facing = -facing;
+        }
+        velocityY += gravity;
+        if (velocityY + positionY > 0.0 && field000a > 5) {
+            ResetFrame();
+            positionY = 0.0;
+            ResetPose();
+            field0008 = 13;
+            return;
+        }
+        if (field000a == 1) {
+            (*opponentSlot)->positionY = positionY - 80.0;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 29);
+            (*opponentSlot)->field0008 = 0x67;
+        }
+        if (field000a == 2) {
+            (*opponentSlot)->positionY = positionY - 71.0;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 11);
+            (*opponentSlot)->field0008 = 0x68;
+            (*opponentSlot)->facing = facing;
+        }
+        if (field000a == 3 && field000c == 0) {
+            (*opponentSlot)->positionY = positionY - 60.0;
+            (*opponentSlot)->positionX = positionX - (double)((int)facing * 37);
+            (*opponentSlot)->field0008 = 0x45;
+            ApplyDamage(0x514, 500.0);
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->knockbackVelocityX = -3.0;
+            (*opponentSlot)->knockbackVelocityY = 3.0;
+        }
+        if (field000a == 5 && field000c == 0) {
+            gravity = 0.035;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        return;
+
     }
 }
