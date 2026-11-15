@@ -2286,8 +2286,8 @@ Original vtable `0x00788B94` selects the 59,143-byte native code
 owner `[0x00607930,0x00616037)`, with adjacent 139 DWORD switch
 pointers and 325 selectors (138 live, 187 default IDs).
 `workbench/character04-state/Character04State.cpp` now authors
-**default plus 122 native live cases** (1–9,13–16,47,50–77,81–87,
-96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–269,303–305).
+**default plus 123 native live cases** (1–9,13–16,47,50–77,81–87,
+96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–269,303–306).
 Cases240–241 reconstruct the collision-result-3 grab handoff and the
 complete airborne throw: opponent states103/104/69, three native
 frame-specific XY offsets, horizontal offset/shake, native
@@ -2453,7 +2453,20 @@ local effects0x1A3 at (0,20) and0x1A4 at (0,38) with owner1 and layer1.
 Frame advances clear collision result; animation completion clears state
 and invokes virtual ResetPose. Its 10.0, 1.8, −0.05, 20.0 and38.0 operands
 are pinned to original PE data.
-case257–269 and 303–305 inline-assembly state blocks use narrow inline assembly
+Case306 is a 755-byte multi-loop aerial throw with opponent repositioning.
+Frame0/tick0 sets velocityX=0.3, places owner X at opponentX+facing×30,
+and clears attackCollisionResult. Frame9/tick0 adds the original zero
+constant to owner X and sets velocityX=0. Frame11/tick0 sets byte0x2C9=0x14;
+frame15/tick0 sets byte0x2C8=2. At frame15/tick90 it puts the opponent in
+state0x47, clears opponent hitstop, sets opponent fields0xC0=0 and0xC8=−4.0,
+sets attackCollisionResult2, applies `ApplyDamage(2400,400.0)`, and emits
+effect0x34 at (opponentX,opponentY−40) with palette0x16, group2 and layer1.
+Frames1–14 apply horizontal shake (50,10). On frame advances, frame6 loops
+backward by2 while field0x3138 is below9; frame9 adds facing×80 to owner X
+and clears the loop counter; frame13 loops backward by2 while the counter
+is below12. Animation completion clears state, faces the opponent and
+invokes virtual ResetPose. All 208 native instructions match.
+case257–269 and 303–306 inline-assembly state blocks use narrow inline assembly
 to retain native VC7.1 instruction order. Recent original 220–221
 reconstruct native multi-opponent throw, frame-specific XY placement,
 native `ApplyDamage(1200,750.0)`, partner pose resets, and the pose1-
@@ -2461,11 +2474,11 @@ specific hit-count reset branch. Original cases230–232 implement genuine
 variant airborne attack speeds, meter and sound gates.
 
 Dedicated `workbench/character04-state/check_prefix.py` confirms
-**51,350 consecutive native executable code bytes** from
-`[0x00607930,0x006141C6)`, original SHA-256
-`37060015730d31aee3fbef7fc6a510385fe3a47b91dd563ced0f0b71ae754a62`:
-**14,039 original x86 instruction offsets/widths/forms; 1,247
-internal +167 shared-return native branches; 1,028 independently
+**52,105 consecutive native executable code bytes** from
+`[0x00607930,0x006144B9)`, original SHA-256
+`193fc30c41bd39d4a6816838b4804aed37f458b054bd16b6e32fa8f7385c4c3e`:
+**14,247 original x86 instruction offsets/widths/forms; 1,266
+internal +168 shared-return native branches; 1,032 independently
 original-bound COFF calls/float operands; two original local
 switch/selector addresses**. All other selected code bytes match;
 only the provisional stack immediate (`0x1C8` vs full native `0x2E8`),
@@ -2473,9 +2486,9 @@ ten explicitly bounded x87 scratch-slot displacement bytes (native
 `EBP-0x1BC` through `EBP-0x1CC` slots shifted by four bytes in the
 provisional frame), shared-return routing (including the verified
 in-prefix return trampoline) and target-bound COFF reloc fields are
-excepted. **Selected prefix, NOT full Exact**: 16 real live states,
-full original frame, local tables and return remain OPEN. Next case306
-at `0x006141C6`. No cold all-unit replay.
+excepted. **Selected prefix, NOT full Exact**: 15 real live states,
+full original frame, local tables and return remain OPEN. Next case307
+at `0x006144B9`. No cold all-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 
