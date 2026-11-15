@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **119 genuine live cases**: 1–9,13–16,
+the original default and **121 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–269. The other **19** native live case IDs remain OPEN.
+230–232,240–241,249–269,303–304. The other **17** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00613824)` now has **48,884
+The original code `[0x00607930,0x00613E1A)` now has **50,410
 original executable bytes**, canonical SHA-256
-`5f2ce0bbe5c53cf4b93b8d4c9a18c6dd6215841c89c05eee69ddd1f7ec481a1b`.
+`9b8541d1e2eeea9d99cb443a6b3fb31b46b20d73e463ff58edfb3e3086140f49`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -268,15 +268,39 @@ virtual ResetPose and faces the opponent. Both x87 zero constants are
 pinned to original address 0x7872F8 and checked against the original data.
 
 
+State303 (`0x00613824`, 763 bytes) is a multi-stage aerial capture throw.
+At frame0/tick0 it zeroes three movement fields. Frame2 applies horizontal
+shake `(50,3)`; frame2/tick0 sets field0x16C=1 and field0x14C=120,
+subtracts1000 from field0x148, applies tint0xB0 for3 ticks, and emits
+global effect0x44 at integer-truncated `(X,Y−40)` with palette0x13,
+group2 and layer1. Frame4/tick0 clears byte0x2C8. Frame8/tick0 sets
+velocityX=5.0; frame9/tick0 sets velocityX=1.8 and horizontal
+acceleration−0.05. After frame8 it integrates that acceleration and clamps
+velocityX at zero. At frame8, collision result2 or5 resets tick and advances
+to frame9; result3 sets opponent hitstop9999, resets both poses, sets the
+opponent to Y=0/state0x6C and the owner to state0x132. Frames1–17 retain
+the horizontal shake. Frame advances clear collision result; animation
+completion clears state and invokes virtual ResetPose.
+
+State304 (`0x00613B1F`, 763 bytes) is the alternate capture-throw variant.
+It shares state303's frame gates and collision-result branches, but
+subtracts2000 from field0x148, emits effect0x45 with palette0x05, starts
+frame8 at velocityX=7.0, and hands the owner to state0x133 on a successful
+frame8 hit. It retains frame9 velocityX=1.8, acceleration−0.05, the
+zero-floor integration, opponent hitstop9999 and opponent state0x6C.
+Both 763-byte states match all 212 native x86 instructions, and their
+absolute 0.0/5.0/7.0/1.8/−0.05 operands are pinned to original PE data.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **13,359 original x86 instruction widths/positions and
-register-abstracted forms**, **1,183 original internal +158 native
-shared-return branch targets**, **1,008 independently original-bound
+It verifies **13,783 original x86 instruction widths/positions and
+register-abstracted forms**, **1,225 original internal +164 native
+shared-return branch targets**, **1,020 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
 stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
@@ -286,7 +310,7 @@ bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-**Next live native state270 starts `0x00613824`**. The remaining
-19 original live case bodies, full stack, 139-entry jump table,
+**Next live native state305 starts `0x00613E1A`**. The remaining
+17 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
