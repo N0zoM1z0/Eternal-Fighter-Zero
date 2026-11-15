@@ -5504,5 +5504,71 @@ void Character04::Slot06()
         }
         return;
 
+    case 269: // Character04 native 0x00613774: zero-velocity aerial recovery
+        __asm {
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            test ecx, ecx
+            jnz state269_skip_startup
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ch]
+            test eax, eax
+            jnz state269_skip_startup
+            mov ecx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+30h]
+            mov edx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+38h]
+            mov eax, dword ptr [ebp-54h]
+            mov byte ptr [eax+2C8h], 5
+        state269_skip_startup:
+            mov ecx, dword ptr [ebp-54h]
+            mov dx, word ptr [ecx+0Ch]
+            add dx, 1
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+0Ch], dx
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ch]
+            movzx eax, word ptr [ebp-04h]
+            cmp edx, eax
+            jl state269_tick_done
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+0Ch], 0
+            mov edx, dword ptr [ebp-54h]
+            mov ax, word ptr [edx+0Ah]
+            add ax, 1
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+0Ah], ax
+            mov edx, dword ptr [ebp-54h]
+            mov dword ptr [edx+168h], 0
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            movzx edx, word ptr [ebp-08h]
+            cmp ecx, edx
+            jl state269_tick_done
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+08h], 0
+            mov ecx, dword ptr [ebp-54h]
+            mov edx, dword ptr [ecx]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [edx]
+        }
+        FaceOpponent();
+        __asm {
+        state269_tick_done:
+        }
+        return;
+
     }
 }
