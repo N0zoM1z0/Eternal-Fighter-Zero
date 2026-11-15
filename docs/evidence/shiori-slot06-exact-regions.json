@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "status": "focused-exact-regions-not-whole-function",
+  "owner": {
+    "symbol": "?Slot06@Character08@@UAEXXZ",
+    "entry": "0x4136d0",
+    "code_bytes": 62273,
+    "table_bytes": 540,
+    "selector_bytes": 319,
+    "total_bytes": 63132,
+    "native_candidate_extent_size_equal": true
+  },
+  "build": {
+    "source_sha256": "011ad3a126fc6422b56b5e3db08ef2e16626a6d437f05267ad0b7171a8a43e93",
+    "object_sha256": "123e2308c5bc7a75e24d0eaf472aa019c54e3f5ac9e7208fcf5fc41b4002efbc",
+    "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
+  },
+  "case303": {
+    "native_start": "0x41fa6b",
+    "bytes": 611,
+    "whole_case_byte_exact": true,
+    "rel32_relocations_materialized": 9,
+    "calls": [
+      {
+        "offset": "0x41fac4",
+        "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+        "target": "0x410b10"
+      },
+      {
+        "offset": "0x41fad9",
+        "symbol": "__ftol2",
+        "target": "0x7783b8"
+      },
+      {
+        "offset": "0x41faf3",
+        "symbol": "__ftol2",
+        "target": "0x7783b8"
+      },
+      {
+        "offset": "0x41fb23",
+        "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+        "target": "0x407100"
+      },
+      {
+        "offset": "0x41fb37",
+        "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+        "target": "0x40f1e0"
+      },
+      {
+        "offset": "0x41fb6e",
+        "symbol": "__ftol2",
+        "target": "0x7783b8"
+      },
+      {
+        "offset": "0x41fb94",
+        "symbol": "__ftol2",
+        "target": "0x7783b8"
+      },
+      {
+        "offset": "0x41fc69",
+        "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+        "target": "0x4108a0"
+      },
+      {
+        "offset": "0x41fcbb",
+        "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+        "target": "0x40e630"
+      }
+    ]
+  },
+  "late_meter_arithmetic": [
+    {
+      "case": 307,
+      "native_va": "0x4205c2",
+      "bytes": 25,
+      "operation": "sub eax,0x7D0",
+      "byte_exact": true
+    },
+    {
+      "case": 308,
+      "native_va": "0x4207e0",
+      "bytes": 25,
+      "operation": "sub eax,0xBB8",
+      "byte_exact": true
+    },
+    {
+      "case": 315,
+      "native_va": "0x421beb",
+      "bytes": 26,
+      "operation": "sub edx,0x3E8",
+      "byte_exact": true
+    }
+  ],
+  "dispatch": {
+    "table_relocations": 135,
+    "case_entry_order_exact": true,
+    "selector_bytes_exact": true
+  },
+  "qualification": "These pinned regions are byte-exact after original-bound relocation materialization. Other Shiori Slot06 states still contain register-allocation differences; this is not a whole-function Exact certificate."
+}
