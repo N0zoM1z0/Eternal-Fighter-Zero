@@ -21,7 +21,7 @@ struct Character04StatePrivate {
 void Character04::Slot06()
 {
     // Preserve the original 0x2E8 frame while keeping compiler-owned locals
-    // at their native EBP offsets: 0x1C8 compiler frame + 0x120 native tail.
+    // at native EBP offsets: 0x1C8 compiler frame + 0x120 native tail.
     __asm { sub esp, 120h }
     if (hitstopFrames > 0 || (*opponentSlot)->hitstunFrames > 0) return;
     EffectSpawn effect;
@@ -3738,8 +3738,8 @@ void Character04::Slot06()
 
     case 255: // Character04 native 0x00611DB0: alternate held-input charge and aerial launch
         // VC7.1 rotates the frame-6 register allocation in C++; keep the exact
-        // native compare/x87 launch path explicit. The two scratch operands
-        // use the bottom of this provisional frame (see check_prefix.py).
+        // native compare/x87 launch path explicit, including its original
+        // EBP-0x1BC integer-conversion scratch slot.
         attackCollisionResult = 2;
         if (buttonHeld[1] > 0) {
             ++reinterpret_cast<Character04StateFields *>(this)->field313c;
@@ -3798,8 +3798,8 @@ void Character04::Slot06()
                 mov edx, dword ptr [ebp-54h]
                 movsx eax, byte ptr [edx+50h]
                 imul eax, eax, 064h
-                mov dword ptr [ebp-1B8h], eax
-                fild dword ptr [ebp-1B8h]
+                mov dword ptr [ebp-1BCh], eax
+                fild dword ptr [ebp-1BCh]
                 fsubr qword ptr [ecx+20h]
                 mov ecx, dword ptr [ebp-54h]
                 fstp qword ptr [ecx+20h]

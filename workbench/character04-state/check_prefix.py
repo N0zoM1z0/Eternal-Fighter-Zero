@@ -240,8 +240,8 @@ def main():
     assert candidate_by_offset[candidate_epilogue+3][2]=='ret'
     ignore_candidate_bytes={}
     stack_temp_displacements={
-        0x00611FDD-BASE:(bytes.fromhex('44feffff'),bytes.fromhex('48feffff')),
-        0x00611FE3-BASE:(bytes.fromhex('44feffff'),bytes.fromhex('48feffff')),
+        # Four state256 int-to-double conversions each use two instructions;
+        # VC7.1's scratch slots remain four bytes above the native slots.
         0x006120C8-BASE:(bytes.fromhex('40feffff'),bytes.fromhex('44feffff')),
         0x006120CE-BASE:(bytes.fromhex('40feffff'),bytes.fromhex('44feffff')),
         0x006120E5-BASE:(bytes.fromhex('3cfeffff'),bytes.fromhex('40feffff')),
@@ -257,7 +257,7 @@ def main():
         candidate_off=off-code_shift
         assert orig[off:off+4]==native_disp,(hex(BASE+off),orig[off:off+4])
         assert compiled[candidate_off:candidate_off+4]==candidate_disp,(hex(BASE+off),compiled[candidate_off:candidate_off+4])
-    ignore_candidate_bytes.update({off-code_shift:'provisional x87 scratch-slot displacement'
+    ignore_candidate_bytes.update({off-code_shift:'state256 x87 scratch-slot displacement'
                                    for off in stack_temp_disp_offsets})
     internal=outbound=0
     for i,a in enumerate(target_ins):
@@ -355,6 +355,7 @@ def main():
     print(f'  {len(orig)} original code bytes, {len(target_ins)} x86 instructions, {internal} native internal + {outbound} shared-return branches')
     print(f'  {len(external)} original-bound calls / IEEE-754 operands + {len(local)} native-local selector/table pointers')
     print(f'  Exact dispatch data: 139-entry table target order + 325 selector bytes; {len(candidate_table_relocs)} table labels bound to original case order')
-    print('  Remaining explicit byte differences: split 0x2E8 stack prologue (0x1C8 + 0x120), ten x87 scratch-slot displacements, shared-return routing and target-bound COFF fields.')
-    print('  All 138 live cases and dispatch data are covered; exact one-instruction prologue, x87 scratch bytes and shared-return layout remain NOT Exact.')
+    print('  Exact scratch slots: both state255 EBP-0x1BC references match native.')
+    print('  Remaining explicit byte differences: split 0x2E8 prologue (0x1C8 + 0x120), eight state256 x87 scratch displacement bytes, shared-return routing and target-bound COFF fields.')
+    print('  All 138 live cases and dispatch data are covered; one-instruction prologue, eight x87 scratch bytes and shared-return layout remain NOT Exact.')
 if __name__=='__main__':main()

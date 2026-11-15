@@ -882,11 +882,11 @@ instruction locations/widths/forms**, **1,417 native internal and 187
 original shared-return branch targets**, **1,087 exact original-bound
 direct call/float operands** and 2 canonical native-local dispatch
 pointers. Only the split stack prologue (`0x1C8` compiler frame plus inline
-`0x120` tail, exact `0x2E8` total), ten explicitly pinned low-byte x87 scratch-slot displacements
-(native `EBP-0x1BC` through `EBP-0x1CC` slots shifted by four bytes in
+`0x120` tail, exact `0x2E8` total), eight explicitly pinned state256 low-byte x87 scratch-slot displacements
+(native `EBP-0x1C0` through `EBP-0x1CC` slots shifted by four bytes in
 the provisional frame), shared-return routing (including the verified
 in-prefix return trampoline) and independently target-bound COFF fields
-differ. All 138 live case bodies and exact 139-entry table/325-byte selector are now covered. Remaining work is the single-instruction prologue, ten x87 scratch bytes, exact shared return and COFF relocation byte layout. Partial prefix evidence
+differ. All 138 live case bodies and exact 139-entry table/325-byte selector are now covered. Remaining work is the single-instruction prologue, eight state256 x87 scratch bytes, exact shared return and COFF relocation byte layout. Partial prefix evidence
 only, **NOT whole-function Exact**; no cold all-unit replay/push.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is
