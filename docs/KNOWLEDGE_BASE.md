@@ -2286,8 +2286,8 @@ Original vtable `0x00788B94` selects the 59,143-byte native code
 owner `[0x00607930,0x00616037)`, with adjacent 139 DWORD switch
 pointers and 325 selectors (138 live, 187 default IDs).
 `workbench/character04-state/Character04State.cpp` now authors
-**default plus 129 native live cases** (1–9,13–16,47,50–77,81–87,
-96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–269,303–309,312,315–316).
+**default plus 131 native live cases** (1–9,13–16,47,50–77,81–87,
+96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–269,303–309,312,315–318).
 Cases240–241 reconstruct the collision-result-3 grab handoff and the
 complete airborne throw: opponent states103/104/69, three native
 frame-specific XY offsets, horizontal offset/shake, native
@@ -2523,7 +2523,21 @@ the current state; otherwise they clear state and invoke the native virtual
 reset. Their register allocation and shared-return trampoline bytes differ,
 so both blocks are independently reconstructed and checked: 61 native
 instructions each.
-case257–269 and 303–309,312,315–316 inline-assembly state blocks use narrow inline assembly
+Case317 is the third 220-byte zero-velocity hitstun recovery variant.
+It zeros velocityX/Y at frame0/tick0, clears field0x3148 at frame1/tick0,
+and advances frame/tick counters. At animation completion, field0x3144==1
+resets frame to0 and returns while retaining the current state; otherwise
+it clears state and invokes the native virtual reset. Its register
+allocation and shared-return trampoline differ from cases315/316. All 61
+native instructions match.
+Case318 is a 468-byte two-effect aerial hitstun launch. Frame0/tick0 zeros
+velocityX/Y. Frame3/tick0 sets field0x14C=120, subtracts1000 from field
+0x148, applies tint0xB0 for3 ticks, and emits global effect0x44 at integer
+(X−facing×13,Y−51) with palette0x13, group2 and layer1. It then emits local
+effect0x1B6 at (X,Y−15) with owner1, current facing, group2, layer0 and
+lifetime300, and sets field0x3144=2. Animation completion clears state and
+invokes the native virtual reset. All 120 native instructions match.
+case257–269 and 303–309,312,315–318 inline-assembly state blocks use narrow inline assembly
 to retain native VC7.1 instruction order. Recent original 220–221
 reconstruct native multi-opponent throw, frame-specific XY placement,
 native `ApplyDamage(1200,750.0)`, partner pose resets, and the pose1-
@@ -2531,11 +2545,11 @@ specific hit-count reset branch. Original cases230–232 implement genuine
 variant airborne attack speeds, meter and sound gates.
 
 Dedicated `workbench/character04-state/check_prefix.py` confirms
-**55,627 consecutive native executable code bytes** from
-`[0x00607930,0x0061527B)`, original SHA-256
-`3c3e62fe22b15e2833a72e66f2a1a4ec18fb4902b1c52b182fb478663d4f5de1`:
-**15,191 original x86 instruction offsets/widths/forms; 1,355
-internal +176 shared-return native branches; 1,051 independently
+**56,315 consecutive native executable code bytes** from
+`[0x00607930,0x0061552B)`, original SHA-256
+`c41244e0d0947993878899637b38296238902a1e81db19b3e855db05ed62b563`:
+**15,372 original x86 instruction offsets/widths/forms; 1,368
+internal +179 shared-return native branches; 1,057 independently
 original-bound COFF calls/float operands; two original local
 switch/selector addresses**. All other selected code bytes match;
 only the provisional stack immediate (`0x1C8` vs full native `0x2E8`),
@@ -2543,9 +2557,9 @@ ten explicitly bounded x87 scratch-slot displacement bytes (native
 `EBP-0x1BC` through `EBP-0x1CC` slots shifted by four bytes in the
 provisional frame), shared-return routing (including the verified
 in-prefix return trampoline) and target-bound COFF reloc fields are
-excepted. **Selected prefix, NOT full Exact**: 9 real live states,
-full original frame, local tables and return remain OPEN. Next case317
-at `0x0061527B`. No cold all-unit replay.
+excepted. **Selected prefix, NOT full Exact**: 7 real live states,
+full original frame, local tables and return remain OPEN. Next case319
+at `0x0061552B`. No cold all-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 
