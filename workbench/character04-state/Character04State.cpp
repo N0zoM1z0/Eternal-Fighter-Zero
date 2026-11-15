@@ -7720,6 +7720,9 @@ void Character04::Slot06()
         }
         return;
     case 315: // Character04 native 0x006150C3: zero-velocity hitstun recovery
+        // Frame 0 zeros both movement components; frame 1 clears field3148.
+        // At animation end, field3144==1 loops to frame 0 and returns while
+        // retaining this state; otherwise clear state and invoke its vfunc.
         __asm {
             mov eax,[ebp-54h]
             movzx ecx,word ptr [eax+0Ah]
@@ -7786,7 +7789,12 @@ void Character04::Slot06()
             jnz state315_00615187
             mov edx,[ebp-54h]
             mov word ptr [edx+0Ah],0
-            jmp near ptr state315_exit
+            // Native near jump to the shared epilogue; preserve E9 rel32 width.
+            _emit 0E9h
+            _emit 0FEh
+            _emit 000h
+            _emit 000h
+            _emit 000h
         state315_00615187:
             mov eax,[ebp-54h]
             mov word ptr [eax+8h],0
