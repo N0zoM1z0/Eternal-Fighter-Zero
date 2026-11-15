@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **114 genuine live cases**: 1–9,13–16,
+the original default and **115 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–264. The other **24** native live case IDs remain OPEN.
+230–232,240–241,249–265. The other **23** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00613123)` now has **47,091
+The original code `[0x00607930,0x006133B5)` now has **47,749
 original executable bytes**, canonical SHA-256
-`661665bd6bf94ad71943a0d326e6fc1d0986fb79fa1ec8e299d6f911458bc588`.
+`1f19773b4677bea5d11471255628677e86fc80b22f0693a654d10ea4bda78210`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -219,15 +219,29 @@ Every frame advance sets attackCollisionResult=3; animation completion
 clears state, invokes virtual ResetPose and faces the opponent.
 
 
+State265 (`0x00613123`, 658 bytes) initializes a charge capture at
+frame0/tick0. It emits global effect0x21 at integer-truncated `(X,Y−40)`
+with palette0x0B, group2 and layer1, then starts trail3. If `field3144==4`
+it spends1000 from `field3148` and clamps at zero; otherwise it subtracts
+500.0 or250.0 from `field0118` according to `field0120`. At frame3/tick0
+it sets `field3144=2` and byte0x2C8=5, emits global effect0x1F at `(X,Y)`
+with facing flag `facing==-1`, then local effect0x1AE at `(X,Y−20)` using
+owner1, group2, current facing and layer1. Every frame advance sets
+`attackCollisionResult=3`; animation completion clears state, invokes
+virtual ResetPose and faces the opponent. The two x87 resource constants
+are pinned to original absolute addresses 0x787C30 (500.0) and 0x787C70
+(250.0), with both original data values independently checked.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **12,885 original x86 instruction widths/positions and
-register-abstracted forms**, **1,148 original internal +153 native
-shared-return branch targets**, **984 independently original-bound
+It verifies **13,055 original x86 instruction widths/positions and
+register-abstracted forms**, **1,161 original internal +154 native
+shared-return branch targets**, **995 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
 stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
@@ -237,7 +251,7 @@ bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-**Next live native state265 starts `0x00613123`**. The remaining
-24 original live case bodies, full stack, 139-entry jump table,
+**Next live native state266 starts `0x006133B5`**. The remaining
+23 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
