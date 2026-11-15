@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **137 genuine live cases**: 1–9,13–16,
+the original default and **138 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–269,303–309,312,315–324. The other **1** native live case ID remains OPEN.
+230–232,240–241,249–269,303–309,312,315–325. All **138** native live case bodies are now reconstructed.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00615D30)` now has **58,368
+The original code `[0x00607930,0x00616033)` now has **59,139
 original executable bytes**, canonical SHA-256
-`af41c40d9a23f584368da859a192e62f2886da422d3fecf61cc30463d8be2afc`.
+`59784e3e7df3098d6ecc0874fc5bd88e9a0e4c97824438319e94e67ca2671011`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -467,15 +467,32 @@ field0x168; at frame4 it compares the partner's +0x28 double to original
 invokes the native virtual reset. All 170 native instructions match.
 
 
+State325 (`0x00615D30`, 771 bytes) is the final partner-capture and staged
+launch. Every tick applies horizontal shake `(50,3)`. Frames0–1 use tint
+`0xB0`; frames2–9 use owner tint `0xB1` and partner character tint `0xB0`.
+Frame1/tick0 sets byte0x2C8=3 and spawns local effect0x1C2 at `(0,0)` with
+owner1, group2, layer1 and the native one-valued spawn flags. Frame2/tick0
+sets partner state0x6B; frame11/tick0 sets byte0x2C8=2. Frame12/tick0 puts
+the partner in state0x47, sets partner X velocity to0 and Y velocity to−5.0,
+clears partner frame/tick, sets partner field0x128=1, and applies
+`ApplyDamage(ftol2(field3148×0.15+3500.0),500.0)`. It sets owner byte0x2C9
+=0x16, reverses partner facing, clears partner field0x14A, emits global
+effect0x34 at `(partnerX,partnerY−40)`, and clears owner field0x3148.
+After each completed animation frame it clears field0x168; at frame6 it
+loops back four frames and increments field0x3138 while that counter is
+below4. Animation completion clears state and invokes the native virtual
+reset. All 210 native instructions match.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **15,917 original x86 instruction widths/positions and
-register-abstracted forms**, **1,404 original internal +185 native
-shared-return branch targets**, **1,078 independently original-bound
+It verifies **16,127 original x86 instruction widths/positions and
+register-abstracted forms**, **1,417 original internal +187 native
+shared-return branch targets**, **1,087 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
 stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
@@ -485,7 +502,4 @@ bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-**Next live native state325 starts `0x00615D30`**. The remaining
-1 original live case body, full stack, 139-entry jump table,
-325 selector bytes and shared return remain OPEN. This certificate
-is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
+All **138 real live case bodies** now have source coverage. Remaining Exactness work is the native `0x2E8` stack allocation, full 139-entry jump table, 325 selector bytes, shared-return layout and the explicitly bounded COFF/x87 differences. This certificate remains **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
