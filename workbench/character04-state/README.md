@@ -392,8 +392,8 @@ velocityY at frame0/tick0, clear field0x3148 at frame1/tick0, and advance
 the native frame/tick counters. At animation completion, if field0x3144==1
 they reset the frame to0 and return while retaining the current state;
 otherwise they clear the state and invoke the native virtual reset. Their
-register allocation and shared-return trampoline bytes differ, so both
-blocks are independently reconstructed and checked: 61 native
+register allocation and direct-epilogue rel32 operands differ by variant,
+so both blocks are independently reconstructed and checked: 61 native
 instructions each.
 
 
@@ -402,7 +402,7 @@ recovery variant. It zeros velocityX/Y at frame0/tick0, clears field0x3148
 at frame1/tick0, and advances frame/tick counters. At animation completion,
 field0x3144==1 resets frame to0 and returns while retaining the current
 state; otherwise it clears state and invokes the native virtual reset.
-Its register allocation and shared-return trampoline are distinct from
+Its register allocation and direct-epilogue rel32 operand are distinct from
 315/316. All 61 native instructions match.
 
 State318 (`0x00615357`, 468 bytes) is a two-effect aerial hitstun launch.
@@ -490,18 +490,25 @@ Focused canonical selected-prefix check:
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **16,127 original x86 instruction widths/positions and
-register-abstracted forms**, **1,417 original internal +187 native
-shared-return branch targets**, **1,087 independently original-bound
-COFF call/IEEE-754 references**, and two original local dispatch
-addresses. The only explicit differences are the split stack prologue (`sub esp,0x1C8`
-plus inline `sub esp,0x120`, reserving the exact native total `0x2E8`), eight low bytes of the
-state256 x87 integer-conversion scratch-slot displacements (native
-slots `EBP-0x1C0` through `EBP-0x1CC`, provisional slots shifted by four
-bytes), shared-return rel32 displacement bytes (177 direct epilogue targets, 10
-branches through seven original in-prefix trampolines, no synthetic tail
-trampoline), and original-bound COFF fields. No arbitrary branch-target
-differences or source padding are accepted.
+It verifies **16,127 original x86 instruction widths/positions and forms**,
+**1,417 native internal branches +187 shared returns** (all 187 direct to
+the common epilogue with byte-exact displacements), **1,080 original-bound
+COFF calls/float operands +7 independently pinned state256 literal floats**,
+and two original local dispatch addresses. State256 (747 bytes) and state257
+(491 bytes) now match their native instruction bytes, including every x87
+scratch slot. The only explicit code-byte difference is the split stack
+prologue (`sub esp,0x1B8` plus inline `sub esp,0x130`, exact native total
+`0x2E8`); original-bound COFF operand fields remain object-format
+relocation placeholders. No arbitrary branch-target differences or source
+padding are accepted.
 
-All **138 real live case bodies** now have source coverage. The 139-entry jump-table target order and all 325 selector bytes are verified exactly. Remaining Exactness work is the single-instruction native prologue, eight state256 x87 scratch-slot bytes, shared-return rel32 bytes (all 187 targets exact) and target-bound COFF relocation fields. This certificate remains **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
+All **138 real live case bodies** now have source coverage. The 139-entry
+jump-table target order, all 325 selector bytes and all 187 shared-return
+displacements are verified exactly. The 14 source-level boss leaf dependencies
+are also **1,918/1,918 native bytes exact, zero differences**. Remaining
+byte differences are limited to the split native stack prologue and
+object-format COFF relocation fields. Evidence: `docs/evidence/character04-slot06-prefix.json`
+and `docs/evidence/character04-slot06-leaf-dependencies-exact.json`. This
+certificate remains **selected-prefix only, NOT whole Exact**; no all-unit
+cold replay.
 The boss's **14 source-level leaf dependencies** were also cold-replayed as selected units: **1,918/1,918 native bytes exact, zero differences** (EffectSpawn construction, local/global effect emission, movement/tint controls, frame reset, trail, opponent/collision helpers, scene timer and damage). Evidence: `docs/evidence/character04-slot06-leaf-dependencies-exact.json`; no all-unit cold replay.

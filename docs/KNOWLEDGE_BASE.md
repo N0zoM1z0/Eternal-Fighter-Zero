@@ -2520,16 +2520,15 @@ variants. Both zero velocityX and velocityY at frame0/tick0, clear field
 0x3148 at frame1/tick0, and advance frame/tick counters. At animation
 completion, if field0x3144==1 they reset frame to0 and return while retaining
 the current state; otherwise they clear state and invoke the native virtual
-reset. Their register allocation and shared-return trampoline bytes differ,
-so both blocks are independently reconstructed and checked: 61 native
-instructions each.
+reset. Their register allocation and direct-epilogue rel32 operands differ
+by variant, so both blocks are independently reconstructed and checked:
+61 native instructions each.
 Case317 is the third 220-byte zero-velocity hitstun recovery variant.
 It zeros velocityX/Y at frame0/tick0, clears field0x3148 at frame1/tick0,
 and advances frame/tick counters. At animation completion, field0x3144==1
 resets frame to0 and returns while retaining the current state; otherwise
-it clears state and invokes the native virtual reset. Its register
-allocation and shared-return trampoline differ from cases315/316. All 61
-native instructions match.
+it clears state and invokes the native virtual reset. Its register allocation and direct-epilogue rel32 operand differ from
+cases315/316. All 61 native instructions match.
 Case318 is a 468-byte two-effect aerial hitstun launch. Frame0/tick0 zeros
 velocityX/Y. Frame3/tick0 sets field0x14C=120, subtracts1000 from field
 0x148, applies tint0xB0 for3 ticks, and emits global effect0x44 at integer
@@ -2602,17 +2601,17 @@ Dedicated `workbench/character04-state/check_prefix.py` confirms
 **59,139 consecutive native executable code bytes** from
 `[0x00607930,0x00616033)`, original SHA-256
 `59784e3e7df3098d6ecc0874fc5bd88e9a0e4c97824438319e94e67ca2671011`:
-**16,127 original x86 instruction offsets/widths/forms; 1,417
-internal +187 shared-return native branches; 1,087 independently
-original-bound COFF calls/float operands; two original local
-switch/selector addresses**. All other selected code bytes match;
-only the split stack prologue (`0x1C8` compiler frame plus inline `0x120` tail, exact `0x2E8` total),
-eight explicitly bounded state256 x87 scratch-slot displacement bytes (native
-`EBP-0x1C0` through `EBP-0x1CC` slots shifted by four bytes in the
-provisional frame), shared-return rel32 displacements (177 direct epilogue targets, 10
-branches through seven original in-prefix trampolines, no synthetic tail
-trampoline) and target-bound COFF reloc fields are
-excepted. **Selected prefix, NOT full Exact**: all 138 live case bodies, exact 139-entry jump-table target order and all 325 selector bytes are covered. Remaining byte differences are the single-instruction prologue, eight state256 x87 scratch slots, shared-return rel32 bytes (all 187 targets exact) and target-bound COFF relocations. No cold all-unit replay.
+**16,127 original x86 instruction offsets/widths/forms; 1,417 native
+internal +187 direct shared-return branches** (all 187 target and displacement
+bytes exact); **1,080 original-bound COFF calls/float operands +7 pinned
+state256 literal x87 operands**; two original local switch/selector addresses.
+State256 (747 bytes) and state257 (491 bytes) now match their native
+instruction bytes, including every x87 scratch slot. All 138 live case bodies,
+exact 139-entry jump-table target order and all 325 selector bytes are covered.
+Only the split stack prologue (`0x1B8` compiler frame plus inline `0x130`
+tail, exact `0x2E8` total) and object-format COFF relocation operand fields
+are not byte-identical. **Selected prefix, NOT full Exact**: no whole-function
+or all-unit cold replay. Evidence: `docs/evidence/character04-slot06-prefix.json`.
 The 14 source-level leaf dependencies used by this boss were also selected
 cold-replayed: **1,918/1,918 native bytes exact, zero differences**. Evidence:
 `docs/evidence/character04-slot06-leaf-dependencies-exact.json`; no all-unit

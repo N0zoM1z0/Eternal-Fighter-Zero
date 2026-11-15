@@ -798,15 +798,15 @@ hitstun-recovery variants. Both zero velocityX and velocityY at frame0/tick0,
 clear field0x3148 at frame1/tick0, and advance native frame/tick counters.
 At animation completion, if field0x3144==1 they reset the frame to0 and
 return while retaining the current state; otherwise they clear state and
-invoke the native virtual reset. Their register allocation and shared-return
-trampoline bytes differ, so both blocks are independently reconstructed
-and checked: 61 native instructions each.
+invoke the native virtual reset. Their register allocation and direct-epilogue rel32 operands differ by
+variant, so both blocks are independently reconstructed and checked: 61
+native instructions each.
 State317's 220 native bytes are the third zero-velocity hitstun recovery
 variant. It zeros velocityX/Y at frame0/tick0, clears field0x3148 at
 frame1/tick0, and advances frame/tick counters. At animation completion,
 field0x3144==1 resets frame to0 and returns while retaining the current
 state; otherwise it clears state and invokes the native virtual reset.
-Its register allocation and shared-return trampoline are distinct from
+Its register allocation and direct-epilogue rel32 operand are distinct from
 315/316. All 61 native instructions match.
 State318's 468 native bytes are a two-effect aerial hitstun launch.
 Frame0/tick0 zeros velocityX/Y. Frame3/tick0 sets field0x14C=120,
@@ -876,18 +876,18 @@ Animation completion clears state and invokes native virtual reset. All
 The original-bound strict checker caught and corrected state220's subtle
 reset: when animation advances outside pose1, it must set
 `remainingHitCount=0`, not leave it unchanged. Native 221 applies 1200/750.0 damage and places both
-fighters at four distinct pose-specific coordinates. `check_prefix.py`
-proves **59,139 continuous native code bytes / 16,127 original x86
-instruction locations/widths/forms**, **1,417 native internal and 187
-original shared-return branch targets**, **1,087 exact original-bound
-direct call/float operands** and 2 canonical native-local dispatch
-pointers. Only the split stack prologue (`0x1C8` compiler frame plus inline
-`0x120` tail, exact `0x2E8` total), eight explicitly pinned state256 low-byte x87 scratch-slot displacements
-(native `EBP-0x1C0` through `EBP-0x1CC` slots shifted by four bytes in
-the provisional frame), shared-return rel32 displacements (177 direct epilogue targets, 10
-branches through seven original in-prefix trampolines, no synthetic tail
-trampoline) and independently target-bound COFF fields
-differ. All 138 live case bodies and exact 139-entry table/325-byte selector are now covered. Remaining work is the single-instruction prologue, eight state256 x87 scratch bytes, shared-return rel32 bytes (all 187 targets exact) and COFF relocation byte layout. Partial prefix evidence
+fighters at four distinct pose-specific coordinates. `check_prefix.py` proves **59,139 continuous native code bytes / 16,127
+original x86 instruction locations/widths/forms**, **1,417 native internal
+branches and 187 direct shared-return branches** (all target and displacement
+bytes exact), **1,080 original-bound COFF call/float operands +7 pinned
+state256 literal x87 operands**, and 2 canonical native-local dispatch
+pointers. State256 (747 bytes) and state257 (491 bytes) now match their native
+instruction bytes, including all scratch slots. All 138 live case bodies,
+the exact 139-entry table/325-byte selector and all 187 direct epilogue
+returns are covered. Only the split stack prologue (`0x1B8` compiler frame
+plus inline `0x130` tail, exact `0x2E8` total) and object-format COFF
+relocation operand fields differ byte-for-byte. Evidence:
+`docs/evidence/character04-slot06-prefix.json`. Partial prefix evidence
 only, **NOT whole-function Exact**; no cold all-unit replay/push.
 A selected cold replay of the 14 source-level leaf dependencies used by this
 boss is also **1,918/1,918 native bytes exact, zero differences**. Evidence:

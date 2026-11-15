@@ -95,6 +95,39 @@ REAL_CASES={1:0x00607A4D,2:0x00607ABE,3:0x00607B2F,
             230:0x00610A47,231:0x00610B78,232:0x00610CA9,240:0x00610DDA,241:0x00610FCC,249:0x0061129C,250:0x006113DC,251:0x00611590,252:0x00611767,253:0x00611A7D,254:0x00611B49,255:0x00611DB0,256:0x00612093,257:0x0061237E,258:0x00612569,259:0x00612757,260:0x0061294C,261:0x00612BEE,262:0x00612CDD,263:0x00612DFD,264:0x00612F90,265:0x00613123,266:0x006133B5,267:0x006134F0,268:0x00613632,269:0x00613774,303:0x00613824,304:0x00613B1F,305:0x00613E1A,306:0x006141C6,307:0x006144B9,308:0x006147FD,309:0x00614B6A,312:0x00614D70,315:0x006150C3,316:0x0061519F,317:0x0061527B,318:0x00615357,319:0x0061552B,320:0x006155C9,321:0x0061579D,322:0x0061583B,323:0x00615A0F,324:0x00615AAD,325:0x00615D30}
 BRANCH=re.compile(r'^j\w+\s+(?:(?:near|short)\s+)?0x([0-9a-f]+)$')
 
+def verify_prefix_evidence():
+    path=ROOT/'docs/evidence/character04-slot06-prefix.json'
+    evidence=json.loads(path.read_text())
+    assert evidence['schema_version']==1 and evidence['status']=='selected-prefix-only'
+    assert evidence['owner']['symbol']=='?Slot06@Character04@@UAEXXZ'
+    assert evidence['owner']['entry']=='0x00607930'
+    prefix=evidence['prefix']
+    assert (prefix['start'],prefix['end_exclusive'],prefix['bytes'],prefix['sha256'])==(
+        '0x00607930','0x00616033',59139,NATIVE_PREFIX_SHA)
+    assert prefix['x86_instruction_count']==16127
+    coverage=evidence['coverage']
+    assert coverage['live_case_bodies']==len(REAL_CASES)==138
+    assert coverage['default_selector_entries']==187
+    assert coverage['dispatch_table_entries']==139 and coverage['selector_bytes']==325
+    assert coverage['table_target_order_exact'] and coverage['selector_bytes_exact']
+    branches=evidence['branches']
+    assert (branches['native_internal'],branches['shared_returns'])==(1417,187)
+    assert branches['shared_returns_direct_to_common_epilogue']==187
+    assert branches['shared_return_displacements_byte_exact']
+    assert branches['synthetic_or_in_prefix_return_trampolines']==0
+    x87=evidence['x87']
+    assert x87['state255_scratch_slot']=='EBP-0x1BC'
+    assert x87['state256_native_scratch_slots']=='EBP-0x1C0..EBP-0x1CC'
+    assert x87['state256_code_bytes']==REAL_CASES[257]-REAL_CASES[256]==747
+    assert x87['state257_code_bytes']==REAL_CASES[258]-REAL_CASES[257]==491
+    assert x87['state256_and_257_instruction_bytes_exact'] and len(x87['state256_literal_operands'])==7
+    bindings=evidence['object_bindings']
+    assert (bindings['coff_relocations_in_prefix'],bindings['external_original_bound_calls_and_float_operands'],
+            bindings['local_selector_and_table_pointers'],bindings['state256_inline_asm_literal_float_operands'])==(1082,1080,2,7)
+    leaves=evidence['leaf_dependencies']
+    assert (leaves['units'],leaves['native_bytes'],leaves['matched_bytes'],leaves['differences'])==(14,1918,1918,0)
+    assert not evidence['validation']['full_all_unit_cold_replay']
+
 def verify_leaf_dependencies():
     path=ROOT/'docs/evidence/character04-slot06-leaf-dependencies-exact.json'
     evidence=json.loads(path.read_text())
@@ -112,6 +145,7 @@ def verify_leaf_dependencies():
     return sum(size for _,_,size in LEAF_DEPENDENCIES.values())
 
 def main():
+    verify_prefix_evidence()
     leaf_bytes=verify_leaf_dependencies()
     image=verify_target()
     assert struct.unpack('<I',target_bytes(image,0x00788B94,4))[0]==BASE

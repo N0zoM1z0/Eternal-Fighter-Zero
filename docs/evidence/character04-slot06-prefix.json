@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "status": "selected-prefix-only",
+  "authority": "Original-bound selected native code prefix and switch data. This is not a whole-function Exact or whole-project replay certificate.",
+  "owner": {
+    "symbol": "?Slot06@Character04@@UAEXXZ",
+    "entry": "0x00607930",
+    "native_full_code_bytes": 59143
+  },
+  "prefix": {
+    "start": "0x00607930",
+    "end_exclusive": "0x00616033",
+    "bytes": 59139,
+    "sha256": "59784e3e7df3098d6ecc0874fc5bd88e9a0e4c97824438319e94e67ca2671011",
+    "x86_instruction_count": 16127
+  },
+  "coverage": {
+    "live_case_bodies": 138,
+    "default_selector_entries": 187,
+    "source_covered_cases": "1-9,13-16,47,50-77,81-87,96-99,150-158,161-171,180,200-216,220-221,230-232,240-241,249-269,303-309,312,315-325",
+    "dispatch_table_entries": 139,
+    "selector_bytes": 325,
+    "table_target_order_exact": true,
+    "selector_bytes_exact": true
+  },
+  "branches": {
+    "native_internal": 1417,
+    "shared_returns": 187,
+    "shared_returns_direct_to_common_epilogue": 187,
+    "shared_return_displacements_byte_exact": true,
+    "synthetic_or_in_prefix_return_trampolines": 0
+  },
+  "x87": {
+    "state255_scratch_slot": "EBP-0x1BC",
+    "state256_native_scratch_slots": "EBP-0x1C0..EBP-0x1CC",
+    "state256_code_bytes": 747,
+    "state257_code_bytes": 491,
+    "state256_and_257_instruction_bytes_exact": true,
+    "state256_literal_operands": [
+      {
+        "instruction": "0x00612169",
+        "target": "0x00787C30",
+        "value": 500.0
+      },
+      {
+        "instruction": "0x00612183",
+        "target": "0x00787C70",
+        "value": 250.0
+      },
+      {
+        "instruction": "0x0061228E",
+        "target": "0x007872F8",
+        "value": 0.0
+      },
+      {
+        "instruction": "0x0061229E",
+        "target": "0x007872F8",
+        "value": 0.0
+      },
+      {
+        "instruction": "0x006122C2",
+        "target": "0x00787F00",
+        "value": 8.0
+      },
+      {
+        "instruction": "0x006122E5",
+        "target": "0x00788058",
+        "value": 3.5
+      },
+      {
+        "instruction": "0x006122F1",
+        "target": "0x007885B0",
+        "value": -0.05
+      }
+    ]
+  },
+  "object_bindings": {
+    "coff_relocations_in_prefix": 1082,
+    "external_original_bound_calls_and_float_operands": 1080,
+    "local_selector_and_table_pointers": 2,
+    "state256_inline_asm_literal_float_operands": 7,
+    "all_relocated_targets_and_literal_operands_independently_verified": true
+  },
+  "leaf_dependencies": {
+    "units": 14,
+    "native_bytes": 1918,
+    "matched_bytes": 1918,
+    "differences": 0,
+    "evidence": "docs/evidence/character04-slot06-leaf-dependencies-exact.json"
+  },
+  "remaining_nonidentical_object_fields": [
+    "Native prologue is one sub esp,0x2E8; compiler candidate reserves the same 0x2E8 total as sub esp,0x1B8 plus inline sub esp,0x130 after saving ECX.",
+    "COFF relocation operand fields remain object-format placeholders; their original destinations/payloads are independently verified."
+  ],
+  "validation": {
+    "focused_checker": "scripts/repo-python workbench/character04-state/check_prefix.py",
+    "full_all_unit_cold_replay": false
+  }
+}
