@@ -1,7 +1,10 @@
-# Shiori / Character08::Slot06 — full natural C++ workbench (not Exact)
+# Shiori / Character08::Slot06 — C++ workbench with pinned native regions (not whole-function Exact)
 
 This **tracked, independent workbench** preserves the complete original-branch
-natural C++ draft for Shiori's 134-case animation dispatcher and true default.
+C++ reconstruction for Shiori's 134-case animation dispatcher and true default.
+Four narrowly scoped inline-assembly regions now pin compiler-sensitive native
+register sequences; this remains a workbench, not a production source or an
+accepted whole-function match unit.
 It is **not** a production source or an accepted match unit. The local
 `ShioriState.cpp`, `CharacterViews.h`, `Engine.h` and `Input.h`
 preserve the candidate's compilation context. Its headers are provisional;
@@ -29,88 +32,48 @@ These observations give boundaries and ownership, **not** Exact status.
 Only compile this one file — never replay the cold full-game suite:
 
 ```bash
-scripts/repo-python - <<'PY2'
-import sys
-sys.path.insert(0, 'scripts')
-from common import ROOT
-from native_build import compile_source
-from coff import object_function
-src = ROOT/'workbench/shiori-state/ShioriState.cpp'
-obj = ROOT/'build/shiori-state/ShioriState.tracked-workbench.obj'
-compile_source(src, obj, ['/Od','/G6','/MT','/Gy','/W3'],
-               ROOT/'.analysis/build/shiori-tracked-workbench.log')
-code, relocs = object_function(obj, '?Slot06@Character08@@UAEXXZ')
-print(len(code), len(relocs))  # 63133, 1374 — NOT Exact
-PY2
+scripts/repo-python workbench/shiori-state/audit_case_codegen.py --rebuild --start 300 --end 319
+scripts/repo-python workbench/shiori-state/verify_exact_regions.py --rebuild
 ```
 
-The resulting complete COFF contribution is **63,133 bytes**, 1 byte longer
-than the target, with 1,374 relocation sites. The initial code and most
-individual cases have strong instruction-level matches, but **do not**
-normalize/register-relabel the entire function and mark Exact: the original
-byte mismatches beginning at `0x0041FC1E` in case 303 remain, along with
-additional register and stack-temp differences in 303–309 and 312–318.
-Specific size deltas are +1 in 307 and 308, -1 in 315, explaining the
-net +1 result but **not** explaining all byte mismatches.
+The complete COFF contribution is now **63,132 bytes**, exactly the native
+function-code + table + selector extent, with **1,374 relocation sites**.
+The 135 table destinations and all 319 selector bytes are exact. Matching
+extent and dispatch data do not by themselves establish whole-function Exact.
 
-## Pinned per-case opcode and instruction-width audit (2026-11-09)
+## Focused byte-exact regions (2026-11-15)
 
-`audit_case_codegen.py` is a focused, rerunnable investigation utility
-that checks the canonical PE target and builds **only this Shiori
-workbench TU**. It independently validates the 135-entry original
-address table and compares per-case disassembly for states 300–319.
-Run:
+`verify_exact_regions.py` independently rebuilds only the Shiori workbench TU,
+then verifies selected code against the canonical PE. Its evidence is
+`docs/evidence/shiori-slot06-exact-regions.json`.
 
-```bash
-scripts/repo-python workbench/shiori-state/audit_case_codegen.py --rebuild
-```
+- **Case303:** the complete **611-byte** case body is byte-identical after
+  materializing its **nine original-bound REL32 call operands**. This removes
+  the former EAX/ECX/DX register-allocation cascade beginning at
+  `0x0041FC1E`.
+- **Case307:** the 25-byte meter subtraction/store sequence at `0x004205C2`
+  now matches exactly, including the accumulator-specific `sub eax,0x7D0`.
+- **Case308:** the 25-byte sequence at `0x004207E0` now matches exactly,
+  including `sub eax,0xBB8`.
+- **Case315:** the 26-byte sequence at `0x00421BEB` now matches exactly,
+  including `sub edx,0x3E8`.
 
-The diagnostic writes `.analysis/probes/shiori-state/case-codegen-audit.json`
-and reports a **63,133-byte**
-compiled contribution versus the **63,132-byte** target and all
-**1,374 current COFF relocations**. After intentionally normalizing
-GPR names, stack homes, and numeric branch/call operands, all
-**20/20 late-state opcode sequences** are identical. This is not
-a strict byte/relocation comparison! The exact original-code width
-mismatches have now been isolated:
+These four regions use narrowly scoped inline assembly because repeated
+natural-C++ formulations did not recover VC7.1's original register choices.
+The rest of each case remains ordinary C++. No bytes are padded or masked.
 
-| Animation | Canonical VA | Original x86 | Compiled x86 | Block size delta |
-| --- | --- | --- | --- | ---: |
-| 307 | `0x004205CC` | 5-byte `sub eax,0x7D0` | 6-byte `sub edx,0x7D0` | +1 |
-| 308 | `0x004207EA` | 5-byte `sub eax,0xBB8` | 6-byte `sub edx,0xBB8` | +1 |
-| 315 | `0x00421BF5` | 6-byte `sub edx,0x3E8` | 5-byte `sub eax,0x3E8` | -1 |
+## Remaining whole-function work
 
-The net +1 byte is therefore a **register-allocation/coding-width**
-problem rather than a missing explicit state. Replacing the meter
-subtraction with eight alternate natural C++ arithmetic forms in
-state 307, plus eleven alternate first-tick guards and fifteen
-variations of the *preceding* state 306, was tested under VC7.1.
-None restored the target EAX register. Some variants changed the
-whole-owner size by altering other instructions, which is not valid
-Exact progress. Preserve the unmodified best candidate and focus
-on original source-level register lifetime instead of byte padding.
+`audit_case_codegen.py` still reports **20/20 late-state normalized opcode
+sequences** identical, and the candidate owner extent is now **63,132/63,132
+bytes**. That audit normalizes GPR names and branch operands, so it is only a
+diagnostic, not a strict byte certificate.
 
-## New independently tested case-303 variants
-
-A targeted VC7.1 experiment used the complete candidate source and only
-modified the second pose/tick guard and adjacent counter increment in case
-303. Seven natural formulations were compiled separately, without any
-machine-code patching:
-
-| Form | Complete code+table size | Finding |
-| --- | ---: | --- |
-| `if (pose == 3 && tick == 0)` | 63,133 | Same first divergence |
-| Explicit inner `{}` | 63,133 | Same first divergence |
-| `if (!tick)` | 63,133 | Same first divergence |
-| Tick-first nested guard | 63,133 | Same first divergence |
-| Tick-first combined guard | 63,133 | Same first divergence |
-| `tick++` | 63,133 | Same first divergence |
-| `tick = (unsigned short)(tick + 1)` | 63,132 | **Not accepted:** worsens the local opcode match dramatically |
-
-At the first mismatch `0x0041FC1E`, the canonical source executes
-`mov eax,[ebp-0x54]` and increments tick via `cx`; the current VC7.1
-draft loads `ecx` and increments via `dx`, with subsequent register-choice
-differences. Matching *only* the 63,132-byte extent therefore does not
-prove equivalent code. Real next tasks: reconstruct the register-life
-source form for case 303 and independently review late cases 307, 308 and
-315 before attempting complete relocation-bound Exact. Never mask bytes.
+A focused per-case relocation-materialized comparison currently finds these
+whole cases byte-exact: **300, 301, 302, 303, 310, 311 and 319**. Cases
+**304–309 and 312–318** still contain register-allocation byte differences;
+307, 308 and 315 have only their meter arithmetic subregions pinned so far.
+The next attack is case304's tail (first remaining mismatch at native
+`0x0041FEFD` (case304 +0x22F)), then continue
+through 305–309 and 312–318. Do not call the whole boss Exact until all code
+bytes and all relocation operands are strictly reconstructed.

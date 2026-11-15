@@ -919,8 +919,9 @@ strict replay. Character04 intentionally removes a related
 character's extra initial 0x78 command pattern, replaces a
 0x60-special input loop, and removes two non-native meter/state
 conditions. Proof: `docs/evidence/character-04-slot02-exact.json`.
-This completes one substantial full owner independently of the
-partial 59,143-byte Character04 Slot06 Boss. No full cold replay.
+This completes one substantial full owner independently of the now
+**60,024/60,024-byte final-image-exact Character04 Slot06 function + dispatch
+image**. No full cold replay.
 
 ## Tools and checks
 
@@ -1136,14 +1137,15 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
-| Nayuki Character10::Slot06 state boss | 0x00451850, 62,693 code bytes + 552/306 local data | selected 32,945 code bytes / 9,056 original instructions, 83 reviewed cases; 842 internal jumps, 109 canonical outbound targets, 793 nonlocal original-bound COFF relocs and 2 local table refs. Incomplete stack 0x278 vs 0x2B4. Next state206 at 0x00459901, mismatch 0x00459904. 35 later existing unreviewed cases plus 19 absent 263–281. 29,748 bytes remain OPEN, NOT full Exact. |
-| Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
+| Nayuki Character10::Slot06 state boss | `0x00451850`, 62,693 code bytes + 552/306 local data | `src/Character10State.cpp` and `docs/evidence/character-10-state-slot06-exact.json`: complete native codegen Exact; selected single-unit replay accepted. No whole-project cold replay implied. |
+| Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: candidate extent now 63,132 bytes. Case303 is 611/611 bytes exact after 9 original-bound REL32 operands; 307/308/315 meter arithmetic regions are 25/25/26 bytes exact. Whole cases 300/301/302/303/310/311/319 are byte-exact; register-allocation differences remain in 304–309 and 312–318. Focused proof: `verify_exact_regions.py`; not whole-function Exact yet. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 
-Focused diagnostic commands:
+Focused diagnostic / exact-region commands (no whole-project replay):
 
 ```bash
-scripts/repo-python workbench/shiori-state/audit_case_codegen.py --rebuild
+scripts/repo-python workbench/shiori-state/audit_case_codegen.py --rebuild --start 300 --end 319
+scripts/repo-python workbench/shiori-state/verify_exact_regions.py --rebuild
 ```
 
 These normalized diagnostics do not grant Exact credit. Other workbench READMEs
