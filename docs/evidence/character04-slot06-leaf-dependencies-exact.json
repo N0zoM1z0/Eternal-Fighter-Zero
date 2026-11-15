@@ -1,0 +1,604 @@
+{
+  "schema_version": 1,
+  "authority": "Selected complete-function-codegen replay of the source-level leaf dependencies used by Character04::Slot06. These are complete native functions, not call-site-only assertions.",
+  "owner": {
+    "symbol": "?Slot06@Character04@@UAEXXZ",
+    "target_address": "0x00607930",
+    "selected_native_prefix_end": "0x00616033"
+  },
+  "reports": [
+    {
+      "result": "exact",
+      "size": 30,
+      "matched_bytes": 30,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 16,
+          "target": 7830976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_memset",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed complete pool body and original call operands",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "6e29f4e9f7c18111358377512b098e4c62371280882858f2b58d016499f01c06",
+      "target_extent_sha256": "6e29f4e9f7c18111358377512b098e4c62371280882858f2b58d016499f01c06",
+      "unit": "effect-spawn-construct",
+      "symbol": "??0EffectSpawn@@QAE@XZ",
+      "target_address": "0x00405490",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "7daa43156e57738fcae144ba35dd58642378e45d6413e0d20e37e8f6d274cc0f",
+      "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "64b6cd45571a019417c5ffe7c6bea3fe5f4810c1270ac41a0bbf6e97d119eebf",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 106,
+      "matched_bytes": 106,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "d153ebc761db797569978ad370059e1c2eefbd7a03b3d64412f071fcbdcf22eb",
+      "target_extent_sha256": "d153ebc761db797569978ad370059e1c2eefbd7a03b3d64412f071fcbdcf22eb",
+      "unit": "secondary-reset-local-effect-spawn",
+      "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x00413090",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "982a8906803263f7bdc9302b94bf723b618c0355c1437a89fac2992f0eefc740",
+      "source_sha256": "7bb7d13f936c3f91f282bd716818622c9e054049efa18951c093c3115b7d02ad",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "aec05885dfe38e3a098a829aa05b4181f8d606f67413d4e1cd3cf2145e1fba3f",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 130,
+      "matched_bytes": 130,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "0d648ef993a2dfb8d12aea59d30ab59273239a1e67b7bf1b46b57fd1f1a60b24",
+      "target_extent_sha256": "0d648ef993a2dfb8d12aea59d30ab59273239a1e67b7bf1b46b57fd1f1a60b24",
+      "unit": "secondary-face-opponent",
+      "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+      "target_address": "0x0040E630",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "4e679ca816e122ee9abfd78c809f8b5ca6d5e874854d0011f51790459cd1c36b",
+      "source_sha256": "2aa9247d8ab0ba4f1ea539ce84b597dd2c808a962e0504295b615b20e52a3ae7",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "006f305044973af09ef2fe887bfa5e7315e8aa30029f0824e944a2f920a43618",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 222,
+      "matched_bytes": 222,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 22,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 57,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 92,
+          "target": 7896128,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4071800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 120,
+          "target": 7896088,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4083580000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 155,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 201,
+          "target": 7896128,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4071800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "712b502bbb3ed80cebc804305342091aa7e30d9c2df22cfa7dde8b877bbe0f7c",
+      "target_extent_sha256": "712b502bbb3ed80cebc804305342091aa7e30d9c2df22cfa7dde8b877bbe0f7c",
+      "unit": "secondary-collision-side",
+      "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+      "target_address": "0x0040FF70",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "bc833c192984d72b6b0826e997384893e4ead7336bcf01285b77a55177b6e112",
+      "source_sha256": "08ad148d3d265fc975dea75550d11edd1144522d5199b80a92557f08d489294f",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "7dbb4dcb2fc8534e2d63a8cbca8cab9c767c0ab6cd5ae6710bebe6ff7cdf3c38",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 406,
+      "matched_bytes": 406,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 396,
+          "target": 4223856,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AdvanceEffectWrite@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed complete pool body and original call operands",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d97676fb10b9883ba7c45746c1e00fd06725ae62a687f833ac0c6e8f39e1b0bc",
+      "target_extent_sha256": "d97676fb10b9883ba7c45746c1e00fd06725ae62a687f833ac0c6e8f39e1b0bc",
+      "unit": "context-emit-effect",
+      "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+      "target_address": "0x00407100",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "7f52ebcb898c7fdf5e0413a0f3c5ee254638a37d13e5e699030f78044e0bfec2",
+      "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "76948b7eca73deb6a333fe20c948ba0642c6b848308234f203bedcf92a02e95a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 43,
+      "matched_bytes": 43,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "63da85902d6263e7193af3404095c4d02ef40cca48833408fd9da477906829e0",
+      "target_extent_sha256": "63da85902d6263e7193af3404095c4d02ef40cca48833408fd9da477906829e0",
+      "unit": "secondary-set-vertical-shake",
+      "symbol": "?SetVerticalShake@Secondary@@QAEXHH@Z",
+      "target_address": "0x00410A10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "4312da584e83a5da33e25720c55e3b0d7845f24d62438b0710221fe9d395bac5",
+      "source_sha256": "68d0a8b5608481634f817aa49e794fcf8a45d8e7c673ec7d3fd775805e333131",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "137c58982d158346e7eb40a0ff21fae72b75dd580024391f738118373479ef75",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 74,
+      "matched_bytes": 74,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 24,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 36,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 48,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 60,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c58eb72d276316816771d28a5b91ad81ecdc5e6effe516176be860ba898b015a",
+      "target_extent_sha256": "c58eb72d276316816771d28a5b91ad81ecdc5e6effe516176be860ba898b015a",
+      "unit": "secondary-reset-frame",
+      "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+      "target_address": "0x0040F1E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "0bad0df74a233a4ce74630b89d659e151284ce8a13b2183aa98e4920c5de551e",
+      "source_sha256": "2a17b1556720a857b0dbf96bb5a50d934880fcf150bc341986a9e89ceaab884f",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "76cffda9cc7c88fbc2f55836e589a2ce1ceebd8a6084eda676c424914ca94d43",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 61,
+      "matched_bytes": 61,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 51,
+          "target": 4270608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Begin@SecondaryTrail@@QAEXPBVSecondaryPose@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "1aa178496d085210d246adfb963eb3c1cdb9ffd5ef3db01ef589887ea98b24c8",
+      "target_extent_sha256": "1aa178496d085210d246adfb963eb3c1cdb9ffd5ef3db01ef589887ea98b24c8",
+      "unit": "secondary-start-trail",
+      "symbol": "?StartTrail@Secondary@@QAEXE@Z",
+      "target_address": "0x004109D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "903401755fbad25c614bb9f0c5c79ec261a1391b3999c3dda4f1e4e98c27eb09",
+      "source_sha256": "9c9f727c02f0178eac91620a89c29a6d615517bf484cef5ef3a999be10bf2f46",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "073c5ec62613b4a42c787da77ad5b631718609f7454ae89501d30283528b5745",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 96,
+      "matched_bytes": 96,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "066017b2635b99dabc12568eae6d1c76abd8d7bbeaca851b177d0948164aa974",
+      "target_extent_sha256": "066017b2635b99dabc12568eae6d1c76abd8d7bbeaca851b177d0948164aa974",
+      "unit": "secondary-set-tint",
+      "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+      "target_address": "0x00410B10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "9d4bb724bb2ff4fc972b9768b561ad7cb980eb2b1c664af4ced4fb7cf2449374",
+      "source_sha256": "68d0a8b5608481634f817aa49e794fcf8a45d8e7c673ec7d3fd775805e333131",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e53fee2c81c1a3911d593df5fd47e9f46c425a61853a88de60fd1bc711f8e4cd",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 63,
+      "matched_bytes": 63,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "c7dc4ca1212bde3f45e8a00c0b8c560776ec5f8aff2ceb1dfc9c56d829be94f0",
+      "target_extent_sha256": "c7dc4ca1212bde3f45e8a00c0b8c560776ec5f8aff2ceb1dfc9c56d829be94f0",
+      "unit": "secondary-horizontal-offset",
+      "symbol": "?SetHorizontalOffset@Secondary@@QAEXHH@Z",
+      "target_address": "0x00410A40",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "2aad371a3b8ee68528a9f532455bf17750c81439e25cc590dfb209d924df7a4a",
+      "source_sha256": "50204ed57691f4eab3e5faaebc9b1fd69700bafbade153a87d3524c78ff6eb72",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c1fadcb067f332e5d3ef04da24a313b872565477452d05688aae7da9d1044ed2",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 63,
+      "matched_bytes": 63,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "1050a8f8fb16f1e56320fa69a1c3e05d0f2e32b6a4e29a39a81965ecce2a15b0",
+      "target_extent_sha256": "1050a8f8fb16f1e56320fa69a1c3e05d0f2e32b6a4e29a39a81965ecce2a15b0",
+      "unit": "secondary-set-horizontal-shake",
+      "symbol": "?SetHorizontalShake@Secondary@@QAEXHH@Z",
+      "target_address": "0x00410A80",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "396c17da82deee3cd1c2c8b89ec38279ff44845642b7e188d03345f11590940d",
+      "source_sha256": "68d0a8b5608481634f817aa49e794fcf8a45d8e7c673ec7d3fd775805e333131",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c03791d5ee198778141eac90d6338106e0c3bdee1947b4a28748a0258b492bfd",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 60,
+      "matched_bytes": 60,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "32590a886a5f6bcc4aa65b9b9c0173a3e211eb3ea224fe53202d18e12cab2e2c",
+      "target_extent_sha256": "32590a886a5f6bcc4aa65b9b9c0173a3e211eb3ea224fe53202d18e12cab2e2c",
+      "unit": "context-scene-timer",
+      "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+      "target_address": "0x004080C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "99e7ac5b82b39929d12f889e59cfaa8e2d2a1def6ce64efc3bd575e278ef2169",
+      "source_sha256": "50204ed57691f4eab3e5faaebc9b1fd69700bafbade153a87d3524c78ff6eb72",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e68e12a78d16e4f878c46d8a96d54cb754547265d8aeac9e66f40fc4720c6b38",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 489,
+      "matched_bytes": 489,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4260992,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DamageFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 89,
+          "target": 4261168,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?HealthFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 103,
+          "target": 4261216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ComboFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 111,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 148,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 166,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 199,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 215,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 478,
+          "target": 4261952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AddScore@Secondary@@QAEXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d31b9db18b71723b6b6c4afbf2da728b14fa49ef3e8c6d8caf38f80c58454d57",
+      "target_extent_sha256": "d31b9db18b71723b6b6c4afbf2da728b14fa49ef3e8c6d8caf38f80c58454d57",
+      "unit": "secondary-apply-damage",
+      "symbol": "?ApplyDamage@Secondary@@QAEXHN@Z",
+      "target_address": "0x004105A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "bbe49cb3b638a3b160941856608567abf111bf378abd84091ef0eb532b9abc09",
+      "source_sha256": "30f51cccb3da13309f537b8a9a3f866aa529ed9f0c496860e67dcd7fa843e375",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e065a634166500062f80ab29676bf94eff2a8de0afbbbc2cf3ae784430ee624d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 75,
+      "matched_bytes": 75,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "ad210e107abf3c062ae72dc86648ab43ce428fac0a0e791cfa8380b2a048e2a6",
+      "target_extent_sha256": "ad210e107abf3c062ae72dc86648ab43ce428fac0a0e791cfa8380b2a048e2a6",
+      "unit": "secondary-set-character-tint",
+      "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+      "target_address": "0x00410AC0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "15cb5d70c5de243fe0504ef2fcb67897b280006f60c385f198ad2a669e913473",
+      "source_sha256": "495aa920ff199c671a7e8924e7316aab87aa36d118c35f96f5d9a00754debc63",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/SceneBattle.h": "115c379b79e672af145f9f97e1deb8d299ae3e92f643e8e34361891fd00f4f5c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "208ab5e7eb5a75394d8db017a8a42b3f9d98beefc353304634058a80b1b39bbf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "342097f48143ef95e006d2a883b4e1e1119636abe07ebfefeeec3bcdd648e9e6",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "14 explicitly selected cold leaf-unit replays; all 1,918 native code bytes exact with zero differences. Includes EffectSpawn construction, local/global effect emission, movement/tint controls, frame reset, opponent/collision helpers, trail, scene timer and damage. No full all-unit cold replay."
+}

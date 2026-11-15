@@ -2612,6 +2612,10 @@ eight explicitly bounded state256 x87 scratch-slot displacement bytes (native
 provisional frame), shared-return routing (including the verified
 in-prefix return trampoline) and target-bound COFF reloc fields are
 excepted. **Selected prefix, NOT full Exact**: all 138 live case bodies, exact 139-entry jump-table target order and all 325 selector bytes are covered. Remaining byte differences are the single-instruction prologue, eight state256 x87 scratch slots, shared-return layout and target-bound COFF relocations. No cold all-unit replay.
+The 14 source-level leaf dependencies used by this boss were also selected
+cold-replayed: **1,918/1,918 native bytes exact, zero differences**. Evidence:
+`docs/evidence/character04-slot06-leaf-dependencies-exact.json`; no all-unit
+cold replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

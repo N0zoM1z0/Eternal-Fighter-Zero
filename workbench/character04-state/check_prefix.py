@@ -8,7 +8,7 @@ This is a selected code prefix, NOT complete function Exact.
 """
 from pathlib import Path
 from collections import Counter
-import hashlib,re,struct,sys
+import hashlib,json,re,struct,sys
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'scripts'))
 from common import verify_target,target_bytes
@@ -34,6 +34,23 @@ EXTERNAL_CALLS={
     '?ApplyDamage@Secondary@@QAEXHN@Z':0x004105A0,
     '?SetCharacterTint@Secondary@@QAEXEH@Z':0x00410AC0,
 }
+LEAF_DEPENDENCIES={
+    'effect-spawn-construct':('??0EffectSpawn@@QAE@XZ',0x00405490,30),
+    'secondary-reset-local-effect-spawn':('?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z',0x00413090,106),
+    'secondary-face-opponent':('?FaceOpponent@Secondary@@QAEHXZ',0x0040E630,130),
+    'secondary-collision-side':('?CollisionSide@Secondary@@QAEDXZ',0x0040FF70,222),
+    'context-emit-effect':('?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z',0x00407100,406),
+    'secondary-set-vertical-shake':('?SetVerticalShake@Secondary@@QAEXHH@Z',0x00410A10,43),
+    'secondary-reset-frame':('?ResetFrame@Secondary@@QAEXXZ',0x0040F1E0,74),
+    'secondary-start-trail':('?StartTrail@Secondary@@QAEXE@Z',0x004109D0,61),
+    'secondary-set-tint':('?SetTint@Secondary@@QAEXEH@Z',0x00410B10,96),
+    'secondary-horizontal-offset':('?SetHorizontalOffset@Secondary@@QAEXHH@Z',0x00410A40,63),
+    'secondary-set-horizontal-shake':('?SetHorizontalShake@Secondary@@QAEXHH@Z',0x00410A80,63),
+    'context-scene-timer':('?SetSceneTimer@Context@@QAEXH@Z',0x004080C0,60),
+    'secondary-apply-damage':('?ApplyDamage@Secondary@@QAEXHN@Z',0x004105A0,489),
+    'secondary-set-character-tint':('?SetCharacterTint@Secondary@@QAEXEH@Z',0x00410AC0,75),
+}
+
 REAL_CASES={1:0x00607A4D,2:0x00607ABE,3:0x00607B2F,
             4:0x00607BA8,5:0x00607CD8,6:0x00607E14,
             7:0x00607F50,8:0x00607FD3,9:0x00608056,
@@ -66,7 +83,24 @@ REAL_CASES={1:0x00607A4D,2:0x00607ABE,3:0x00607B2F,
             230:0x00610A47,231:0x00610B78,232:0x00610CA9,240:0x00610DDA,241:0x00610FCC,249:0x0061129C,250:0x006113DC,251:0x00611590,252:0x00611767,253:0x00611A7D,254:0x00611B49,255:0x00611DB0,256:0x00612093,257:0x0061237E,258:0x00612569,259:0x00612757,260:0x0061294C,261:0x00612BEE,262:0x00612CDD,263:0x00612DFD,264:0x00612F90,265:0x00613123,266:0x006133B5,267:0x006134F0,268:0x00613632,269:0x00613774,303:0x00613824,304:0x00613B1F,305:0x00613E1A,306:0x006141C6,307:0x006144B9,308:0x006147FD,309:0x00614B6A,312:0x00614D70,315:0x006150C3,316:0x0061519F,317:0x0061527B,318:0x00615357,319:0x0061552B,320:0x006155C9,321:0x0061579D,322:0x0061583B,323:0x00615A0F,324:0x00615AAD,325:0x00615D30}
 BRANCH=re.compile(r'^j\w+\s+(?:(?:near|short)\s+)?0x([0-9a-f]+)$')
 
+def verify_leaf_dependencies():
+    path=ROOT/'docs/evidence/character04-slot06-leaf-dependencies-exact.json'
+    evidence=json.loads(path.read_text())
+    assert evidence['schema_version']==1
+    assert evidence['owner']['symbol']=='?Slot06@Character04@@UAEXXZ'
+    reports={r['unit']:r for r in evidence['reports']}
+    assert set(reports)==set(LEAF_DEPENDENCIES)
+    for unit,(symbol,address,size) in LEAF_DEPENDENCIES.items():
+        report=reports[unit]
+        assert report['result']=='exact' and report['acceptance_authority']=='complete-function-codegen',unit
+        assert report['symbol']==symbol and int(report['target_address'],16)==address,unit
+        assert report['size']==report['matched_bytes']==size and report['difference_count']==0,unit
+        assert report['first_differences']==[],unit
+        assert EXTERNAL_CALLS[symbol]==address,unit
+    return sum(size for _,_,size in LEAF_DEPENDENCIES.values())
+
 def main():
+    leaf_bytes=verify_leaf_dependencies()
     image=verify_target()
     assert struct.unpack('<I',target_bytes(image,0x00788B94,4))[0]==BASE
     whole=target_bytes(image,BASE,CODE_SIZE)
@@ -354,6 +388,7 @@ def main():
     print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221, 230-232, 240-241, 249-269,303-309,312,315-325 + default')
     print(f'  {len(orig)} original code bytes, {len(target_ins)} x86 instructions, {internal} native internal + {outbound} shared-return branches')
     print(f'  {len(external)} original-bound calls / IEEE-754 operands + {len(local)} native-local selector/table pointers')
+    print(f'  {len(LEAF_DEPENDENCIES)} boss leaf dependencies independently Exact: {leaf_bytes} bytes, zero differences')
     print(f'  Exact dispatch data: 139-entry table target order + 325 selector bytes; {len(candidate_table_relocs)} table labels bound to original case order')
     print('  Exact scratch slots: both state255 EBP-0x1BC references match native.')
     print('  Remaining explicit byte differences: split 0x2E8 prologue (0x1C8 + 0x120), eight state256 x87 scratch displacement bytes, shared-return routing and target-bound COFF fields.')

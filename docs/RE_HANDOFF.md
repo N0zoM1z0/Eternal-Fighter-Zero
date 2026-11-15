@@ -888,6 +888,10 @@ the provisional frame), shared-return routing (including the verified
 in-prefix return trampoline) and independently target-bound COFF fields
 differ. All 138 live case bodies and exact 139-entry table/325-byte selector are now covered. Remaining work is the single-instruction prologue, eight state256 x87 scratch bytes, exact shared return and COFF relocation byte layout. Partial prefix evidence
 only, **NOT whole-function Exact**; no cold all-unit replay/push.
+A selected cold replay of the 14 source-level leaf dependencies used by this
+boss is also **1,918/1,918 native bytes exact, zero differences**. Evidence:
+`docs/evidence/character04-slot06-leaf-dependencies-exact.json`; no all-unit
+cold replay.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is
 now a complete **11-byte native Exact** virtual passive hook,
