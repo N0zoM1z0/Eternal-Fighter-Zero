@@ -7974,6 +7974,145 @@ void Character04::Slot06()
         state317_exit:
         }
         return;
+    case 318: // Character04 native 0x00615357: two-effect aerial hitstun launch
+        // Frame 3 spends 1000, tints, emits global effect44 at (X-facing*13,
+        // Y-51), then local effect1B6 at (X,Y-15) for 300 ticks and latches
+        // field3144=2. Preserve both distinct spawn layouts and call paths.
+        __asm {
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            test ecx,ecx
+            jnz state318_00615385
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state318_00615385
+            mov ecx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+30h]
+            mov edx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+38h]
+        state318_00615385:
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            cmp ecx,3h
+            jnz state318_006154BB
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state318_006154BB
+            mov ecx,[ebp-54h]
+            mov word ptr [ecx+14Ch],78h
+            mov edx,[ebp-54h]
+            movsx eax,word ptr [edx+148h]
+            sub eax,3E8h
+            mov ecx,[ebp-54h]
+            mov [ecx+148h],ax
+            push 3h
+            push 0B0h
+            mov ecx,[ebp-54h]
+            call SetTint
+            mov word ptr [ebp-4Ch],44h
+            mov byte ptr [ebp-24h],13h
+            mov edx,[ebp-54h]
+            fld qword ptr [edx+20h]
+            call _ftol2
+            mov ecx,[ebp-54h]
+            movsx edx,byte ptr [ecx+50h]
+            imul edx,edx,0Dh
+            sub eax,edx
+            mov [ebp-2ACh],eax
+            fild dword ptr [ebp-2ACh]
+            fstp qword ptr [ebp-48h]
+            mov eax,[ebp-54h]
+            fld qword ptr [eax+28h]
+            call _ftol2
+            sub eax,33h
+            mov [ebp-2B0h],eax
+            fild dword ptr [ebp-2B0h]
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h],2h
+            mov dword ptr [ebp-50h],1h
+            mov byte ptr [ebp-2Fh],1h
+            lea ecx,[ebp-50h]
+            push ecx
+            mov edx,[ebp-54h]
+            mov ecx,[edx+7Ch]
+            call Context::EmitEffect
+            mov word ptr [ebp-4Ch],1B6h
+            mov eax,[ebp-54h]
+            fld qword ptr [eax+20h]
+            call _ftol2
+            mov [ebp-2B4h],eax
+            fild dword ptr [ebp-2B4h]
+            fstp qword ptr [ebp-48h]
+            mov ecx,[ebp-54h]
+            fld qword ptr [ecx+28h]
+            call _ftol2
+            sub eax,0Fh
+            mov [ebp-2B8h],eax
+            fild dword ptr [ebp-2B8h]
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h],2h
+            mov dword ptr [ebp-50h],1h
+            mov byte ptr [ebp-2Fh],0
+            mov edx,[ebp-54h]
+            mov al,[edx+50h]
+            mov [ebp-38h],al
+            mov dword ptr [ebp-20h],12Ch
+            lea ecx,[ebp-50h]
+            push ecx
+            mov edx,[ebp-54h]
+            mov eax,[edx]
+            mov ecx,[ebp-54h]
+            call dword ptr [eax+24h]
+            mov ecx,[ebp-54h]
+            mov dword ptr [ecx+3144h],2h
+        state318_006154BB:
+            mov edx,[ebp-54h]
+            mov ax,[edx+0Ch]
+            add ax,1h
+            mov ecx,[ebp-54h]
+            mov [ecx+0Ch],ax
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            movzx ecx,word ptr [ebp-4h]
+            cmp eax,ecx
+            jl state318_exit
+            mov edx,[ebp-54h]
+            mov word ptr [edx+0Ch],0
+            mov eax,[ebp-54h]
+            mov cx,[eax+0Ah]
+            add cx,1h
+            mov edx,[ebp-54h]
+            mov [edx+0Ah],cx
+            mov eax,[ebp-54h]
+            mov dword ptr [eax+168h],0
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            movzx eax,word ptr [ebp-8h]
+            cmp edx,eax
+            jl state318_exit
+            mov ecx,[ebp-54h]
+            mov word ptr [ecx+8h],0
+            mov edx,[ebp-54h]
+            mov eax,[edx]
+            mov ecx,[ebp-54h]
+            call dword ptr [eax]
+        state318_exit:
+        }
+        return;
 
     }
 }
