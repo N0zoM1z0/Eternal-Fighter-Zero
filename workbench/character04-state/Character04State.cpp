@@ -5024,5 +5024,201 @@ void Character04::Slot06()
         }
         return;
 
+    case 265: // Character04 native 0x00613123: charge capture and dual local effects
+        __asm {
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            test ecx, ecx
+            jnz state265_skip_frame0_reset
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ch]
+            test eax, eax
+            jnz state265_skip_frame0_reset
+        }
+        ResetFrame();
+        __asm {
+        state265_skip_frame0_reset:
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ah]
+            test edx, edx
+            jnz state265_skip_frame0_effect
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ch]
+            test ecx, ecx
+            jnz state265_skip_frame0_effect
+            mov word ptr [ebp-4Ch], 021h
+            mov byte ptr [ebp-24h], 0Bh
+            mov edx, dword ptr [ebp-54h]
+            fld qword ptr [edx+20h]
+            call _ftol2
+            mov dword ptr [ebp-238h], eax
+            fild dword ptr [ebp-238h]
+            fstp qword ptr [ebp-48h]
+            mov eax, dword ptr [ebp-54h]
+            fld qword ptr [eax+28h]
+            call _ftol2
+            sub eax, 028h
+            mov dword ptr [ebp-23Ch], eax
+            fild dword ptr [ebp-23Ch]
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h], 2
+            mov byte ptr [ebp-2Fh], 1
+            lea ecx, [ebp-50h]
+            push ecx
+            mov edx, dword ptr [ebp-54h]
+            mov ecx, dword ptr [edx+7Ch]
+            call Context::EmitEffect
+        }
+        StartTrail(3);
+        __asm {
+            mov eax, dword ptr [ebp-54h]
+            cmp dword ptr [eax+3144h], 4
+            jnz state265_alternate_cost
+            mov ecx, dword ptr [ebp-54h]
+            mov edx, dword ptr [ecx+3148h]
+            sub edx, 03E8h
+            mov eax, dword ptr [ebp-54h]
+            mov dword ptr [eax+3148h], edx
+            mov ecx, dword ptr [ebp-54h]
+            cmp dword ptr [ecx+3148h], 0
+            jnl state265_cost_ready
+            mov edx, dword ptr [ebp-54h]
+            mov dword ptr [edx+3148h], 0
+        state265_cost_ready:
+            jmp state265_cost_merge
+        state265_alternate_cost:
+            mov eax, dword ptr [ebp-54h]
+            movsx ecx, byte ptr [eax+120h]
+            test ecx, ecx
+            jnz state265_alternate_cost_250
+            mov edx, dword ptr [ebp-54h]
+            fld qword ptr [edx+118h]
+            _emit 0DCh
+            _emit 025h
+            _emit 030h
+            _emit 07Ch
+            _emit 078h
+            _emit 000h
+            mov eax, dword ptr [ebp-54h]
+            fstp qword ptr [eax+118h]
+            jmp state265_cost_merge
+        state265_alternate_cost_250:
+            mov ecx, dword ptr [ebp-54h]
+            fld qword ptr [ecx+118h]
+            _emit 0DCh
+            _emit 025h
+            _emit 070h
+            _emit 07Ch
+            _emit 078h
+            _emit 000h
+            mov edx, dword ptr [ebp-54h]
+            fstp qword ptr [edx+118h]
+        state265_cost_merge:
+        }
+        __asm {
+        state265_skip_frame0_effect:
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            cmp ecx, 3
+            jnz state265_skip_frame3_effect
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ch]
+            test eax, eax
+            jnz state265_skip_frame3_effect
+            mov ecx, dword ptr [ebp-54h]
+            mov dword ptr [ecx+3144h], 2
+            mov edx, dword ptr [ebp-54h]
+            mov byte ptr [edx+2C8h], 5
+            mov word ptr [ebp-4Ch], 01Fh
+            mov eax, dword ptr [ebp-54h]
+            fld qword ptr [eax+20h]
+            call _ftol2
+            mov dword ptr [ebp-240h], eax
+            fild dword ptr [ebp-240h]
+            fstp qword ptr [ebp-48h]
+            mov ecx, dword ptr [ebp-54h]
+            fld qword ptr [ecx+28h]
+            call _ftol2
+            mov dword ptr [ebp-244h], eax
+            fild dword ptr [ebp-244h]
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h], 0
+            mov byte ptr [ebp-2Fh], 1
+            mov edx, dword ptr [ebp-54h]
+            movsx eax, byte ptr [edx+50h]
+            sub eax, -1
+            neg eax
+            sbb eax, eax
+            inc eax
+            mov dword ptr [ebp-34h], eax
+            lea ecx, [ebp-50h]
+            push ecx
+            mov edx, dword ptr [ebp-54h]
+            mov ecx, dword ptr [edx+7Ch]
+            call Context::EmitEffect
+            mov word ptr [ebp-4Ch], 01AEh
+            mov eax, dword ptr [ebp-54h]
+            fld qword ptr [eax+20h]
+            call _ftol2
+            mov dword ptr [ebp-248h], eax
+            fild dword ptr [ebp-248h]
+            fstp qword ptr [ebp-48h]
+            mov ecx, dword ptr [ebp-54h]
+            fld qword ptr [ecx+28h]
+            call _ftol2
+            sub eax, 014h
+            mov dword ptr [ebp-24Ch], eax
+            fild dword ptr [ebp-24Ch]
+            fstp qword ptr [ebp-40h]
+            mov edx, dword ptr [ebp-54h]
+            mov al, byte ptr [edx+50h]
+            mov byte ptr [ebp-38h], al
+            mov byte ptr [ebp-30h], 2
+            mov byte ptr [ebp-2Fh], 1
+            mov dword ptr [ebp-50h], 1
+            lea ecx, [ebp-50h]
+            push ecx
+            mov edx, dword ptr [ebp-54h]
+            mov eax, dword ptr [edx]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [eax+24h]
+        state265_skip_frame3_effect:
+            mov ecx, dword ptr [ebp-54h]
+            mov dx, word ptr [ecx+0Ch]
+            add dx, 1
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+0Ch], dx
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ch]
+            movzx eax, word ptr [ebp-04h]
+            cmp edx, eax
+            jl state265_tick_done
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+0Ch], 0
+            mov edx, dword ptr [ebp-54h]
+            mov ax, word ptr [edx+0Ah]
+            add ax, 1
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+0Ah], ax
+            mov edx, dword ptr [ebp-54h]
+            mov dword ptr [edx+168h], 3
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            movzx edx, word ptr [ebp-08h]
+            cmp ecx, edx
+            jl state265_tick_done
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+08h], 0
+            mov ecx, dword ptr [ebp-54h]
+            mov edx, dword ptr [ecx]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [edx]
+        }
+        FaceOpponent();
+        __asm {
+        state265_tick_done:
+        }
+        return;
+
     }
 }
