@@ -2,6 +2,8 @@
 // This is an incomplete workbench. Unreviewed live states are NOT source.
 #include "../../src/CharacterViews.h"
 
+extern "C" int __cdecl _ftol2(void);
+
 // Source-local offsets only, to keep accepted shared CharacterViews.h stable.
 struct Character04StateFields {
     unsigned char base[0x3138];
@@ -3944,6 +3946,130 @@ void Character04::Slot06()
                 field0008 = 0;
                 ResetPose();
             }
+        }
+        return;
+
+    case 257: // Character04 native 0x0061237E: special effect follow-through
+        attackCollisionResult = 2;
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+        }
+        if (field000a == 2 && field000c == 0) {
+            __asm {
+                mov ecx, dword ptr [ebp-54h]
+                cmp dword ptr [ecx+3144h], 4
+                jz state257_high_cost
+                mov edx, dword ptr [ebp-54h]
+                mov dword ptr [edx+3144h], 2
+                mov word ptr [ebp-4Ch], 019Ch
+                mov eax, dword ptr [ebp-54h]
+                fld qword ptr [eax+20h]
+                call _ftol2
+                mov ecx, dword ptr [ebp-54h]
+                movsx edx, byte ptr [ecx+50h]
+                imul edx, edx, 028h
+                add eax, edx
+                mov dword ptr [ebp-1D0h], eax
+                fild dword ptr [ebp-1D0h]
+                fstp qword ptr [ebp-48h]
+                mov eax, dword ptr [ebp-54h]
+                fld qword ptr [eax+28h]
+                call _ftol2
+                mov dword ptr [ebp-1D4h], eax
+                fild dword ptr [ebp-1D4h]
+                fstp qword ptr [ebp-40h]
+                mov dword ptr [ebp-50h], 1
+                mov byte ptr [ebp-30h], 2
+                mov ecx, dword ptr [ebp-54h]
+                mov dl, byte ptr [ecx+50h]
+                mov byte ptr [ebp-38h], dl
+                mov byte ptr [ebp-2Fh], 1
+                lea eax, [ebp-50h]
+                push eax
+                mov ecx, dword ptr [ebp-54h]
+                mov edx, dword ptr [ecx]
+                mov ecx, dword ptr [ebp-54h]
+                call dword ptr [edx+24h]
+                jmp state257_effect_done
+            state257_high_cost:
+                mov eax, dword ptr [ebp-54h]
+                mov ecx, dword ptr [eax+3148h]
+                sub ecx, 03E8h
+                mov edx, dword ptr [ebp-54h]
+                mov dword ptr [edx+3148h], ecx
+                mov eax, dword ptr [ebp-54h]
+                cmp dword ptr [eax+3148h], 0
+                jnl state257_high_cost_ready
+                mov ecx, dword ptr [ebp-54h]
+                mov dword ptr [ecx+3148h], 0
+            state257_high_cost_ready:
+                mov word ptr [ebp-4Ch], 01A8h
+                mov edx, dword ptr [ebp-54h]
+                fld qword ptr [edx+20h]
+                call _ftol2
+                mov ecx, dword ptr [ebp-54h]
+                movsx edx, byte ptr [ecx+50h]
+                imul edx, edx, 050h
+                add eax, edx
+                mov dword ptr [ebp-1D8h], eax
+                fild dword ptr [ebp-1D8h]
+                fstp qword ptr [ebp-48h]
+                mov eax, dword ptr [ebp-54h]
+                fld qword ptr [eax+28h]
+                call _ftol2
+                mov dword ptr [ebp-1DCh], eax
+                fild dword ptr [ebp-1DCh]
+                fstp qword ptr [ebp-40h]
+                mov dword ptr [ebp-50h], 1
+                mov byte ptr [ebp-30h], 2
+                mov ecx, dword ptr [ebp-54h]
+                mov dl, byte ptr [ecx+50h]
+                mov byte ptr [ebp-38h], dl
+                mov byte ptr [ebp-2Fh], 1
+                lea eax, [ebp-50h]
+                push eax
+                mov ecx, dword ptr [ebp-54h]
+                mov edx, dword ptr [ecx]
+                mov ecx, dword ptr [ebp-54h]
+                call dword ptr [edx+24h]
+            state257_effect_done:
+            }
+        }
+        __asm {
+            mov eax, dword ptr [ebp-54h]
+            mov cx, word ptr [eax+0Ch]
+            add cx, 1
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+0Ch], cx
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ch]
+            movzx edx, word ptr [ebp-04h]
+            cmp ecx, edx
+            jl state257_tick_done
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+0Ch], 0
+            mov ecx, dword ptr [ebp-54h]
+            mov dx, word ptr [ecx+0Ah]
+            add dx, 1
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+0Ah], dx
+            mov ecx, dword ptr [ebp-54h]
+            mov dword ptr [ecx+168h], 3
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ah]
+            movzx ecx, word ptr [ebp-08h]
+            cmp eax, ecx
+            jl state257_tick_done
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+08h], 0
+            mov eax, dword ptr [ebp-54h]
+            mov edx, dword ptr [eax]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [edx]
+        }
+        FaceOpponent();
+        __asm {
+        state257_tick_done:
         }
         return;
 
