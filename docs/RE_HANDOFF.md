@@ -532,23 +532,28 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 ### Active second large boss: Character04::Slot06 (NOT full Exact)
 
 The authored `workbench/character04-state/Character04State.cpp`
-now covers original default plus **96 genuine native live states**,
-most recently full C++ for states220–221 two-character grab/throw
-and 230–232 aerial attack tiers. The original-bound strict checker
-caught and corrected state220's subtle reset: when animation
-advances outside pose1, it must set `remainingHitCount=0`, not
-leave it unchanged. Native 221 applies 1200/750.0 damage and places
-both fighters at four distinct pose-specific coordinates.
-`check_prefix.py` proves **38,058 continuous native code bytes /
-10,439 original x86 instruction locations/widths/forms**, **950
-native internal and 128 original shared-return branch targets**,
-**840 exact original-bound direct call/float operands** and 2
-canonical native-local dispatch pointers. Only the original-width
-provisional stack immediate (`0x170` vs native `0x2E8`), unclosed
-shared return and independently target-bound COFF fields differ.
-**Next native case240 at `0x00610DDA`**; other 42 live cases, full
-frame, switch/data and return still OPEN. Partial prefix evidence
-only, **NOT whole-function Exact**; no cold all-unit replay/push.
+now covers original default plus **97 genuine native live states**,
+most recently full C++ for states220–221 two-character grab/throw,
+230–232 aerial attack tiers, and 240's collision-result-3 grab handoff.
+State240 resets both fighters' frame/pose state, advances the owner to
+state241 and the opponent to state100, emits effect0 at integer-truncated
+X+facing×31/Y−82, positions the opponent at the corresponding live
+coordinates, and preserves the native airborne/state-range test for
+`remainingHitCount` before its state209/frame1 completion handoff.
+The original-bound strict checker caught and corrected state220's subtle
+reset: when animation advances outside pose1, it must set
+`remainingHitCount=0`, not leave it unchanged. Native 221 applies
+1200/750.0 damage and places both fighters at four distinct pose-specific
+coordinates. `check_prefix.py` proves **38,556 continuous native code
+bytes / 10,578 original x86 instruction locations/widths/forms**, **959
+native internal and 129 original shared-return branch targets**, **847
+exact original-bound direct call/float operands** and 2 canonical
+native-local dispatch pointers. Only the original-width provisional stack
+immediate (`0x17C` vs native `0x2E8`), unclosed shared return and
+independently target-bound COFF fields differ. **Next native case241 at
+`0x00610FCC`**; other 41 live cases, full frame, switch/data and return
+still OPEN. Partial prefix evidence only, **NOT whole-function Exact**;
+no cold all-unit replay/push.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is
 now a complete **11-byte native Exact** virtual passive hook,

@@ -3391,6 +3391,42 @@ void Character04::Slot06()
         }
         return;
 
+    case 240: // Character04 native 0x00610DDA: throw capture and opponent positioning
+        velocityY += gravity;
+        if (field000a == 1 && attackCollisionResult == 3) {
+            (*opponentSlot)->ResetFrame();
+            (*opponentSlot)->ResetPose();
+            ResetPose();
+            ResetFrame();
+            field0008 = 241;
+            (*opponentSlot)->field0008 = 100;
+            effect.type = 0;
+            effect.x = (double)((int)positionX + (int)facing * 31);
+            effect.y = (double)((int)positionY - 82);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 31);
+            (*opponentSlot)->positionY = positionY - 82.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1 && (*opponentSlot)->positionY < 0.0 &&
+                ((*opponentSlot)->field0008 < 50 ||
+                 (*opponentSlot)->field0008 > 149)) {
+                remainingHitCount = 1;
+            } else {
+                remainingHitCount = 0;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0xd1;
+                field000a = 1;
+            }
+        }
+        return;
 
     }
 }
