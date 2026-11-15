@@ -7805,6 +7805,84 @@ void Character04::Slot06()
         state315_exit:
         }
         return;
+    case 316: // Character04 native 0x0061519F: alternate zero-velocity hitstun recovery
+        __asm {
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            test ecx,ecx
+            jnz state316_006151CD
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state316_006151CD
+            mov ecx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+30h]
+            mov edx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+38h]
+        state316_006151CD:
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            cmp ecx,1h
+            jnz state316_006151F1
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state316_006151F1
+            mov ecx,[ebp-54h]
+            mov dword ptr [ecx+3148h],0
+        state316_006151F1:
+            mov edx,[ebp-54h]
+            mov ax,[edx+0Ch]
+            add ax,1h
+            mov ecx,[ebp-54h]
+            mov [ecx+0Ch],ax
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            movzx ecx,word ptr [ebp-4h]
+            cmp eax,ecx
+            jl state316_exit
+            mov edx,[ebp-54h]
+            mov word ptr [edx+0Ch],0
+            mov eax,[ebp-54h]
+            mov cx,[eax+0Ah]
+            add cx,1h
+            mov edx,[ebp-54h]
+            mov [edx+0Ah],cx
+            mov eax,[ebp-54h]
+            mov dword ptr [eax+168h],0
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            movzx eax,word ptr [ebp-8h]
+            cmp edx,eax
+            jl state316_exit
+            mov ecx,[ebp-54h]
+            cmp dword ptr [ecx+3144h],1h
+            jnz state316_00615263
+            mov edx,[ebp-54h]
+            mov word ptr [edx+0Ah],0
+            jmp state316_exit
+        state316_00615263:
+            mov eax,[ebp-54h]
+            mov word ptr [eax+8h],0
+            mov ecx,[ebp-54h]
+            mov edx,[ecx]
+            mov ecx,[ebp-54h]
+            call dword ptr [edx]
+        state316_exit:
+        }
+        return;
 
     }
 }
