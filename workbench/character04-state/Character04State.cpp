@@ -8175,6 +8175,151 @@ void Character04::Slot06()
         state319_exit:
         }
         return;
+    case 320: // Character04 native 0x006155C9: alternate two-effect aerial hitstun launch
+        // Alternate state318: frame3 spends 2000 and emits global effect45
+        // plus local effect1BA; preserve palette, layer and 300-tick lifetime.
+        __asm {
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            test ecx,ecx
+            jnz state320_006155F7
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state320_006155F7
+            mov ecx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+30h]
+            mov edx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+38h]
+        state320_006155F7:
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            cmp ecx,3h
+            jnz state320_0061572D
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state320_0061572D
+            mov ecx,[ebp-54h]
+            mov word ptr [ecx+14Ch],78h
+            mov edx,[ebp-54h]
+            movsx eax,word ptr [edx+148h]
+            sub eax,7D0h
+            mov ecx,[ebp-54h]
+            mov [ecx+148h],ax
+            push 3h
+            push 0B0h
+            mov ecx,[ebp-54h]
+            call SetTint
+            mov word ptr [ebp-4Ch],45h
+            mov byte ptr [ebp-24h],5h
+            mov edx,[ebp-54h]
+            fld qword ptr [edx+20h]
+            call _ftol2
+            mov ecx,[ebp-54h]
+            movsx edx,byte ptr [ecx+50h]
+            imul edx,edx,0Dh
+            sub eax,edx
+            mov [ebp-2BCh],eax
+            fild dword ptr [ebp-2BCh]
+            fstp qword ptr [ebp-48h]
+            mov eax,[ebp-54h]
+            fld qword ptr [eax+28h]
+            call _ftol2
+            sub eax,33h
+            mov [ebp-2C0h],eax
+            fild dword ptr [ebp-2C0h]
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h],2h
+            mov dword ptr [ebp-50h],1h
+            mov byte ptr [ebp-2Fh],1h
+            lea ecx,[ebp-50h]
+            push ecx
+            mov edx,[ebp-54h]
+            mov ecx,[edx+7Ch]
+            call Context::EmitEffect
+            mov word ptr [ebp-4Ch],1BAh
+            mov eax,[ebp-54h]
+            fld qword ptr [eax+20h]
+            call _ftol2
+            mov [ebp-2C4h],eax
+            fild dword ptr [ebp-2C4h]
+            fstp qword ptr [ebp-48h]
+            mov ecx,[ebp-54h]
+            fld qword ptr [ecx+28h]
+            call _ftol2
+            sub eax,0Fh
+            mov [ebp-2C8h],eax
+            fild dword ptr [ebp-2C8h]
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h],2h
+            mov dword ptr [ebp-50h],1h
+            mov byte ptr [ebp-2Fh],0
+            mov edx,[ebp-54h]
+            mov al,[edx+50h]
+            mov [ebp-38h],al
+            mov dword ptr [ebp-20h],12Ch
+            lea ecx,[ebp-50h]
+            push ecx
+            mov edx,[ebp-54h]
+            mov eax,[edx]
+            mov ecx,[ebp-54h]
+            call dword ptr [eax+24h]
+            mov ecx,[ebp-54h]
+            mov dword ptr [ecx+3144h],2h
+        state320_0061572D:
+            mov edx,[ebp-54h]
+            mov ax,[edx+0Ch]
+            add ax,1h
+            mov ecx,[ebp-54h]
+            mov [ecx+0Ch],ax
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            movzx ecx,word ptr [ebp-4h]
+            cmp eax,ecx
+            jl state320_exit
+            mov edx,[ebp-54h]
+            mov word ptr [edx+0Ch],0
+            mov eax,[ebp-54h]
+            mov cx,[eax+0Ah]
+            add cx,1h
+            mov edx,[ebp-54h]
+            mov [edx+0Ah],cx
+            mov eax,[ebp-54h]
+            mov dword ptr [eax+168h],0
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            movzx eax,word ptr [ebp-8h]
+            cmp edx,eax
+            jl state320_exit
+            mov ecx,[ebp-54h]
+            mov word ptr [ecx+8h],0
+            mov edx,[ebp-54h]
+            mov eax,[edx]
+            mov ecx,[ebp-54h]
+            call dword ptr [eax]
+        state320_exit:
+            // Preserve the native five-byte shared-return jump width; the
+            // C++ return immediately after this trampoline performs epilogue.
+            _emit 0E9h
+            _emit 06Eh
+            _emit 000h
+            _emit 000h
+            _emit 000h
+        }
+        return;
 
     }
 }
