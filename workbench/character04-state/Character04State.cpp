@@ -8314,8 +8314,8 @@ void Character04::Slot06()
             // Preserve the native five-byte shared-return jump width; the
             // C++ return immediately after this trampoline performs epilogue.
             _emit 0E9h
-            _emit 03Ah
-            _emit 003h
+            _emit 0A7h
+            _emit 005h
             _emit 000h
             _emit 000h
         }
@@ -8381,8 +8381,8 @@ void Character04::Slot06()
         state321_exit:
             // Preserve native E9 rel32 return directly to the shared epilogue.
             _emit 0E9h
-            _emit 09Ch
-            _emit 002h
+            _emit 009h
+            _emit 005h
             _emit 000h
             _emit 000h
         }
@@ -8524,8 +8524,8 @@ void Character04::Slot06()
         state322_exit:
             // Native near return; displacement is pinned after following cases are laid out.
             _emit 0E9h
-            _emit 0C8h
-            _emit 000h
+            _emit 035h
+            _emit 003h
             _emit 000h
             _emit 000h
         }
@@ -8591,8 +8591,8 @@ void Character04::Slot06()
         state323_exit:
             // Native E9 rel32 to the shared epilogue; displacement pinned after layout.
             _emit 0E9h
-            _emit 02Ah
-            _emit 000h
+            _emit 097h
+            _emit 002h
             _emit 000h
             _emit 000h
         }
