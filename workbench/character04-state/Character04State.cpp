@@ -4671,5 +4671,123 @@ void Character04::Slot06()
         }
         return;
 
+    case 262: // Character04 native 0x00612CDD: aerial fall and landing reset
+        __asm {
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ah]
+            test edx, edx
+            jnz state262_skip_startup
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ch]
+            test ecx, ecx
+            jnz state262_skip_startup
+            mov edx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0C0h
+            _emit 075h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+30h]
+            mov eax, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [eax+38h]
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+16Ch], 1
+        state262_skip_startup:
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            cmp ecx, 2
+            jng state262_skip_gravity
+            mov edx, dword ptr [ebp-54h]
+            fld qword ptr [edx+38h]
+            _emit 0DCh
+            _emit 005h
+            _emit 0D8h
+            _emit 07Dh
+            _emit 078h
+            _emit 000h
+            mov eax, dword ptr [ebp-54h]
+            fstp qword ptr [eax+38h]
+        state262_skip_gravity:
+            mov ecx, dword ptr [ebp-54h]
+            mov edx, dword ptr [ebp-54h]
+            fld qword ptr [ecx+28h]
+            fadd qword ptr [edx+38h]
+            _emit 0DCh
+            _emit 01Dh
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fnstsw ax
+            test ah, 041h
+            jnz state262_normal_advance
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            cmp ecx, 0Ch
+            jnl state262_normal_advance
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+0Ah], 0Ch
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+0Ch], 0
+            mov ecx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+28h]
+            mov ecx, dword ptr [ebp-54h]
+            call Secondary::ResetFrame
+            _emit 0E9h
+            _emit 073h
+            _emit 000h
+            _emit 000h
+            _emit 000h
+        state262_normal_advance:
+            mov edx, dword ptr [ebp-54h]
+            mov ax, word ptr [edx+0Ch]
+            add ax, 1
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+0Ch], ax
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ch]
+            movzx ecx, word ptr [ebp-04h]
+            cmp eax, ecx
+            jl state262_tick_done
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+0Ch], 0
+            mov eax, dword ptr [ebp-54h]
+            mov cx, word ptr [eax+0Ah]
+            add cx, 1
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+0Ah], cx
+            mov eax, dword ptr [ebp-54h]
+            mov dword ptr [eax+168h], 0
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ah]
+            movzx eax, word ptr [ebp-08h]
+            cmp edx, eax
+            jl state262_tick_done
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+08h], 0
+        }
+        FaceOpponent();
+        __asm {
+            mov edx, dword ptr [ebp-54h]
+            mov eax, dword ptr [edx]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [eax]
+        state262_tick_done:
+        }
+        return;
+
     }
 }
