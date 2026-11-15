@@ -8314,12 +8314,221 @@ void Character04::Slot06()
             // Preserve the native five-byte shared-return jump width; the
             // C++ return immediately after this trampoline performs epilogue.
             _emit 0E9h
-            _emit 06Eh
+            _emit 0B2h
+            _emit 002h
+            _emit 000h
+            _emit 000h
+        }
+    case 321: // Character04 native 0x0061579D: alternate simple aerial recovery reset
+        // Frame0/tick0 zeros both movement components; native register use
+        // differs from the preceding simple recovery states.
+        __asm {
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            test edx,edx
+            jnz state321_006157CB
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ch]
+            test ecx,ecx
+            jnz state321_006157CB
+            mov edx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+30h]
+            mov eax,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [eax+38h]
+        state321_006157CB:
+            mov ecx,[ebp-54h]
+            mov dx,[ecx+0Ch]
+            add dx,1h
+            mov eax,[ebp-54h]
+            mov [eax+0Ch],dx
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ch]
+            movzx eax,word ptr [ebp-4h]
+            cmp edx,eax
+            jl state321_exit
+            mov ecx,[ebp-54h]
+            mov word ptr [ecx+0Ch],0
+            mov edx,[ebp-54h]
+            mov ax,[edx+0Ah]
+            add ax,1h
+            mov ecx,[ebp-54h]
+            mov [ecx+0Ah],ax
+            mov edx,[ebp-54h]
+            mov dword ptr [edx+168h],0
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            movzx edx,word ptr [ebp-8h]
+            cmp ecx,edx
+            jl state321_exit
+            mov eax,[ebp-54h]
+            mov word ptr [eax+8h],0
+            mov ecx,[ebp-54h]
+            mov edx,[ecx]
+            mov ecx,[ebp-54h]
+            call dword ptr [edx]
+        state321_exit:
+            // Preserve native E9 rel32 return directly to the shared epilogue.
+            _emit 0E9h
+            _emit 014h
+            _emit 002h
+            _emit 000h
+            _emit 000h
+        }
+    case 322: // Character04 native 0x0061583B: 3000-cost dual-effect aerial launch
+        // Frame3 spends3000, applies tint0xB0, emits global effect0x46 at
+        // (X-facing*13,Y-51), then local effect0x1BE at (X,Y-15) for300 ticks.
+        __asm {
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            test ecx,ecx
+            jnz state322_00615869
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state322_00615869
+            mov ecx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+30h]
+            mov edx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+38h]
+        state322_00615869:
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            cmp ecx,3h
+            jnz state322_0061599F
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state322_0061599F
+            mov ecx,[ebp-54h]
+            mov word ptr [ecx+14Ch],78h
+            mov edx,[ebp-54h]
+            movsx eax,word ptr [edx+148h]
+            sub eax,0BB8h
+            mov ecx,[ebp-54h]
+            mov [ecx+148h],ax
+            push 3h
+            push 0B0h
+            mov ecx,[ebp-54h]
+            call SetTint
+            mov word ptr [ebp-4Ch],46h
+            mov byte ptr [ebp-24h],40h
+            mov edx,[ebp-54h]
+            fld qword ptr [edx+20h]
+            call _ftol2
+            mov ecx,[ebp-54h]
+            movsx edx,byte ptr [ecx+50h]
+            imul edx,edx,0Dh
+            sub eax,edx
+            mov [ebp-2CCh],eax
+            fild dword ptr [ebp-2CCh]
+            fstp qword ptr [ebp-48h]
+            mov eax,[ebp-54h]
+            fld qword ptr [eax+28h]
+            call _ftol2
+            sub eax,33h
+            mov [ebp-2D0h],eax
+            fild dword ptr [ebp-2D0h]
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h],2h
+            mov dword ptr [ebp-50h],1h
+            mov byte ptr [ebp-2Fh],1h
+            lea ecx,[ebp-50h]
+            push ecx
+            mov edx,[ebp-54h]
+            mov ecx,[edx+7Ch]
+            call Context::EmitEffect
+            mov word ptr [ebp-4Ch],1BEh
+            mov eax,[ebp-54h]
+            fld qword ptr [eax+20h]
+            call _ftol2
+            mov [ebp-2D4h],eax
+            fild dword ptr [ebp-2D4h]
+            fstp qword ptr [ebp-48h]
+            mov ecx,[ebp-54h]
+            fld qword ptr [ecx+28h]
+            call _ftol2
+            sub eax,0Fh
+            mov [ebp-2D8h],eax
+            fild dword ptr [ebp-2D8h]
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h],2h
+            mov dword ptr [ebp-50h],1h
+            mov byte ptr [ebp-2Fh],0
+            mov edx,[ebp-54h]
+            mov al,[edx+50h]
+            mov [ebp-38h],al
+            mov dword ptr [ebp-20h],12Ch
+            lea ecx,[ebp-50h]
+            push ecx
+            mov edx,[ebp-54h]
+            mov eax,[edx]
+            mov ecx,[ebp-54h]
+            call dword ptr [eax+24h]
+            mov ecx,[ebp-54h]
+            mov dword ptr [ecx+3144h],2h
+        state322_0061599F:
+            mov edx,[ebp-54h]
+            mov ax,[edx+0Ch]
+            add ax,1h
+            mov ecx,[ebp-54h]
+            mov [ecx+0Ch],ax
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            movzx ecx,word ptr [ebp-4h]
+            cmp eax,ecx
+            jl state322_exit
+            mov edx,[ebp-54h]
+            mov word ptr [edx+0Ch],0
+            mov eax,[ebp-54h]
+            mov cx,[eax+0Ah]
+            add cx,1h
+            mov edx,[ebp-54h]
+            mov [edx+0Ah],cx
+            mov eax,[ebp-54h]
+            mov dword ptr [eax+168h],0
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            movzx eax,word ptr [ebp-8h]
+            cmp edx,eax
+            jl state322_exit
+            mov ecx,[ebp-54h]
+            mov word ptr [ecx+8h],0
+            mov edx,[ebp-54h]
+            mov eax,[edx]
+            mov ecx,[ebp-54h]
+            call dword ptr [eax]
+        state322_exit:
+            // Native near return; displacement is pinned after following cases are laid out.
+            _emit 0E9h
+            _emit 040h
             _emit 000h
             _emit 000h
             _emit 000h
         }
-        return;
 
     }
 }
