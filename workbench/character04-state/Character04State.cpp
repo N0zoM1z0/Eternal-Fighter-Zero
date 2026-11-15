@@ -3480,5 +3480,34 @@ void Character04::Slot06()
         }
         return;
 
+    case 249: // Character04 native 0x0061129C: opening special-move effect and hitstun setup
+        if (field000a == 0 && (unsigned short)field000c == 0) {
+            field00dc = 4;
+            field00de = 0xec;
+            velocityX = 0.0;
+            remainingHitCount = 1;
+            guardInputFrames = 0;
+            hitstunFrames = 0x3c;
+            effect.type = 0x28;
+            effect.x = (double)((int)positionX + (int)facing * 10);
+            effect.y = (double)((int)positionY - 0x28);
+            effect.group = 2;
+            effect.layer = 1;
+            effect.palette = 0x13;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }
