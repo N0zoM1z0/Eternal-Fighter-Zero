@@ -19,7 +19,25 @@ PROBE=ROOT/'workbench/character04-state/__case_probe.cpp'
 OBJECT=ROOT/'build/character04-state/Character04Prefix.obj'
 def disasm(buf):
     s=subprocess.run(['ndisasm','-b32','-o0','-'],input=buf,capture_output=True,check=True).stdout.decode()
-    return [(int(a,16),bytes.fromhex(h),v) for a,h,v in re.findall(r'^([0-9A-F]+)\s+([0-9A-F]+)\s+(.+)$',s,re.M)]
+    instructions=[]
+    current=None
+    for line in s.splitlines():
+        match=re.match(r'^([0-9A-F]+)\s+([0-9A-F]+)\s+(.+)$',line)
+        if match:
+            if current is not None:
+                instructions.append((current[0],bytes(current[1]),current[2]))
+            current=[int(match[1],16),bytearray.fromhex(match[2]),match[3]]
+            continue
+        # NDISASM wraps instructions longer than eight bytes onto one or
+        # more continuation rows (`         -0000`). Preserve those bytes in
+        # the owning instruction; dropping them silently misaligns every
+        # subsequent instruction and can hide malformed inline-asm blobs.
+        continuation=re.match(r'^\s+-([0-9A-F]+)\s*$',line)
+        if continuation and current is not None:
+            current[1].extend(bytes.fromhex(continuation[1]))
+    if current is not None:
+        instructions.append((current[0],bytes(current[1]),current[2]))
+    return instructions
 def normalized(op):
     if op.startswith('jmp [eax*4+'):return 'jmp [eax*4+TABLE]'
     if re.match(r'^movzx eax,byte \[edx\+0x[0-9a-f]+\]$',op):return 'movzx eax,byte [edx+SELECTOR]'

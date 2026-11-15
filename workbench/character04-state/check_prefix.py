@@ -34,6 +34,18 @@ EXTERNAL_CALLS={
     '?ApplyDamage@Secondary@@QAEXHN@Z':0x004105A0,
     '?SetCharacterTint@Secondary@@QAEXEH@Z':0x00410AC0,
 }
+RAW_FLOAT_OPERANDS={
+    # State256 is authored as a byte-exact x87 block. These seven absolute
+    # operands intentionally remain literal bytes instead of COFF DIR32s.
+    0x00612169:(0x00787C30,bytes.fromhex('0000000000407f40')),
+    0x00612183:(0x00787C70,bytes.fromhex('0000000000406f40')),
+    0x0061228E:(0x007872F8,bytes.fromhex('0000000000000000')),
+    0x0061229E:(0x007872F8,bytes.fromhex('0000000000000000')),
+    0x006122C2:(0x00787F00,bytes.fromhex('0000000000002040')),
+    0x006122E5:(0x00788058,bytes.fromhex('0000000000000c40')),
+    0x006122F1:(0x007885B0,bytes.fromhex('9a9999999999a9bf')),
+}
+
 LEAF_DEPENDENCIES={
     'effect-spawn-construct':('??0EffectSpawn@@QAE@XZ',0x00405490,30),
     'secondary-reset-local-effect-spawn':('?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z',0x00413090,106),
@@ -242,11 +254,11 @@ def main():
     candidate_ins=disasm(compiled)
     assert len(target_ins)==16127 and len(candidate_ins)>len(target_ins)
     assert target_ins[2][2]=='sub esp,0x2e8'
-    assert candidate_ins[2][2]=='sub esp,0x1c8'
+    assert candidate_ins[2][2]=='sub esp,0x1b8'
     # VC7.1's generated locals retain their native EBP offsets; reserve the
-    # remaining 0x120 bytes immediately after its 0x1C8 compiler prologue.
-    assert candidate_ins[4][2]=='sub esp,0x120'
-    assert 0x1c8+0x120==0x2e8
+    # remaining 0x130 bytes immediately after its 0x1B8 compiler prologue.
+    assert candidate_ins[4][2]=='sub esp,0x130'
+    assert 0x1b8+0x130==0x2e8
     code_shift=-6  # one explicit six-byte tail reservation after native insn 3
     assert len(target_ins[2][1])==len(candidate_ins[2][1])
     assert target_ins[-1][0]+len(target_ins[-1][1])==len(orig)
@@ -275,18 +287,9 @@ def main():
     assert candidate_by_offset[candidate_epilogue+2][2]=='pop ebp'
     assert candidate_by_offset[candidate_epilogue+3][2]=='ret'
     ignore_candidate_bytes={}
-    stack_temp_displacements={
-        # Four state256 int-to-double conversions each use two instructions;
-        # VC7.1's scratch slots remain four bytes above the native slots.
-        0x006120C8-BASE:(bytes.fromhex('40feffff'),bytes.fromhex('44feffff')),
-        0x006120CE-BASE:(bytes.fromhex('40feffff'),bytes.fromhex('44feffff')),
-        0x006120E5-BASE:(bytes.fromhex('3cfeffff'),bytes.fromhex('40feffff')),
-        0x006120EB-BASE:(bytes.fromhex('3cfeffff'),bytes.fromhex('40feffff')),
-        0x006121DE-BASE:(bytes.fromhex('38feffff'),bytes.fromhex('3cfeffff')),
-        0x006121E4-BASE:(bytes.fromhex('38feffff'),bytes.fromhex('3cfeffff')),
-        0x006121F8-BASE:(bytes.fromhex('34feffff'),bytes.fromhex('38feffff')),
-        0x006121FE-BASE:(bytes.fromhex('34feffff'),bytes.fromhex('38feffff')),
-    }
+    # All x87 integer-conversion scratch slots in states255 and256 now use
+    # their original EBP offsets; no displacement exceptions remain.
+    stack_temp_displacements={}
     stack_temp_disp_offsets=set(stack_temp_displacements)
     stack_temp_instruction_offsets={off-2 for off in stack_temp_disp_offsets}
     for off,(native_disp,candidate_disp) in stack_temp_displacements.items():
@@ -366,7 +369,7 @@ def main():
     relocations=[r for r in relocs if r['offset']<len(orig)-code_shift]
     local=[r for r in relocations if 'local_target_offset' in r]
     external=[r for r in relocations if 'local_target_offset' not in r]
-    assert len(relocations)==1089 and len(local)==2 and len(external)==1087
+    assert len(relocations)==1082 and len(local)==2 and len(external)==1080
     expected_locals={SELECTOR_BASE:candidate_table+556,TABLE_BASE:candidate_table}
     for r in relocations:
         off=r['offset'];pos=off+code_shift
@@ -384,6 +387,26 @@ def main():
             assert r['type']=='REL32' and r['symbol'] in EXTERNAL_CALLS,r
             native_dst=(BASE+pos+4+struct.unpack_from('<i',orig,pos)[0])&0xffffffff
             assert native_dst==EXTERNAL_CALLS[r['symbol']],(r,hex(native_dst))
+    # The two exact raw-assembly cases contain seven absolute x87 operands.
+    # They have no COFF DIR32 records by design, so bind each literal address
+    # and its eight original PE payload bytes independently here.
+    absolute_operand_re=re.compile(r'\[dword 0x([0-9a-f]+)\]')
+    raw_absolute={}
+    relocation_offsets={r['offset'] for r in relocations}
+    for off,raw_bytes,op in target_ins:
+        va=BASE+off
+        if not 0x00612093<=va<0x0061237E:continue
+        match=absolute_operand_re.search(op)
+        if not match:continue
+        candidate_operand=off-code_shift+2
+        if candidate_operand not in relocation_offsets:
+            raw_absolute[va]=int(match[1],16)
+    assert raw_absolute=={va:target for va,(target,_) in RAW_FLOAT_OPERANDS.items()},raw_absolute
+    for va,(target,payload) in RAW_FLOAT_OPERANDS.items():
+        off=va-BASE
+        assert struct.unpack_from('<I',orig,off+2)[0]==target,(hex(va),hex(target))
+        assert target_bytes(image,target,8)==payload,(hex(va),hex(target))
+        assert struct.unpack_from('<I',compiled,off-code_shift+2)[0]==target,(hex(va),hex(target))
     raw=[]
     for i,a in enumerate(target_ins):
         b=candidate_ins[i if i<4 else i+1]
@@ -397,10 +420,10 @@ def main():
     print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221, 230-232, 240-241, 249-269,303-309,312,315-325 + default')
     print(f'  {len(orig)} original code bytes, {len(target_ins)} x86 instructions, {internal} native internal + {outbound} shared-return branches')
     print(f'  Shared returns: {direct_outbound} direct to common epilogue + {trampoline_outbound} via {len(trampoline_targets)} original in-prefix trampolines; no synthetic tail trampoline')
-    print(f'  {len(external)} original-bound calls / IEEE-754 operands + {len(local)} native-local selector/table pointers')
+    print(f'  {len(external)} original-bound COFF calls/floats + {len(RAW_FLOAT_OPERANDS)} inline-asm pinned original floats + {len(local)} native-local selector/table pointers')
     print(f'  {len(LEAF_DEPENDENCIES)} boss leaf dependencies independently Exact: {leaf_bytes} bytes, zero differences')
     print(f'  Exact dispatch data: 139-entry table target order + 325 selector bytes; {len(candidate_table_relocs)} table labels bound to original case order')
-    print('  Exact scratch slots: both state255 EBP-0x1BC references match native.')
-    print('  Remaining explicit byte differences: split 0x2E8 prologue (0x1C8 + 0x120), eight state256 x87 scratch displacement bytes, shared-return rel32 displacement bytes (targets exact) and target-bound COFF fields.')
-    print('  All 138 live cases and dispatch data are covered; one-instruction prologue, eight x87 scratch bytes and shared-return rel32 bytes remain NOT Exact; all 187 targets are exact.')
+    print('  Exact scratch slots: state255 and all four state256 x87 conversions match native byte-for-byte.')
+    print('  Remaining explicit byte differences: split 0x2E8 prologue (0x1B8 + 0x130), shared-return rel32 displacement bytes (targets exact) and target-bound COFF fields.')
+    print('  All 138 live cases and dispatch data are covered; one-instruction prologue and shared-return rel32 bytes remain NOT Exact; all 187 targets are exact.')
 if __name__=='__main__':main()
