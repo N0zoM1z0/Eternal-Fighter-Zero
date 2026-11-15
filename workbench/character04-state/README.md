@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **121 genuine live cases**: 1–9,13–16,
+the original default and **122 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–269,303–304. The other **17** native live case IDs remain OPEN.
+230–232,240–241,249–269,303–305. The other **16** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00613E1A)` now has **50,410
+The original code `[0x00607930,0x006141C6)` now has **51,350
 original executable bytes**, canonical SHA-256
-`9b8541d1e2eeea9d99cb443a6b3fb31b46b20d73e463ff58edfb3e3086140f49`.
+`37060015730d31aee3fbef7fc6a510385fe3a47b91dd563ced0f0b71ae754a62`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -292,15 +292,33 @@ Both 763-byte states match all 212 native x86 instructions, and their
 absolute 0.0/5.0/7.0/1.8/−0.05 operands are pinned to original PE data.
 
 
+State305 (`0x00613E1A`, 940 bytes) is the aerial capture that branches into
+a two-effect throw. Frame0/tick0 calls ResetFrame. Frame2/tick0 zeroes
+three movement fields, sets field0x16C=1 and field0x14C=120, subtracts
+3000 from field0x148, applies tint0xB0 for3 ticks, and emits global
+effect0x46 at integer-truncated `(X,Y−40)` with palette0x40, group2 and
+layer1. It also sets byte0x2C9=0x25. Frames above1 call
+`Context::SetSceneTimer(15)`; frames below3 apply horizontal shake
+`(50,3)`. Frame4/tick0 clears byte0x2C8. Frame8/tick0 sets velocityX=10.0
+and one remaining hit; frame9/tick0 sets velocityX=1.8 and horizontal
+acceleration−0.05, which is integrated after frame8 with a zero floor.
+At frame8, collision result2 or5 advances to frame9; result3 sets opponent
+hitstop9999, resets both poses, sets opponent Y=0/state0x6C and owner
+state0x134, then emits local effects0x1A3 at `(0,20)` and0x1A4 at `(0,38)`
+with owner1 and layer1. Frame advances clear collision result; animation
+completion clears state and invokes virtual ResetPose. The 10.0, 1.8,
+−0.05, 20.0 and38.0 operands are pinned to original PE data.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **13,783 original x86 instruction widths/positions and
-register-abstracted forms**, **1,225 original internal +164 native
-shared-return branch targets**, **1,020 independently original-bound
+It verifies **14,039 original x86 instruction widths/positions and
+register-abstracted forms**, **1,247 original internal +167 native
+shared-return branch targets**, **1,028 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
 stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
@@ -310,7 +328,7 @@ bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-**Next live native state305 starts `0x00613E1A`**. The remaining
-17 original live case bodies, full stack, 139-entry jump table,
+**Next live native state306 starts `0x006141C6`**. The remaining
+16 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
