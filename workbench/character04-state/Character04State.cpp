@@ -3653,5 +3653,27 @@ void Character04::Slot06()
         }
         return;
 
+    case 253: // Character04 native 0x00611A7D: post-landing recovery and input branch
+        velocityX = 0.0;
+        velocityY = 0.0;
+        FaceOpponent();
+        ++field000c;
+        if (field000c >= timing.frameDuration ||
+            (field000a == 2 &&
+             reinterpret_cast<Character04StateFields *>(this)->field313c == 1 &&
+             field000c == 0x15)) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }
