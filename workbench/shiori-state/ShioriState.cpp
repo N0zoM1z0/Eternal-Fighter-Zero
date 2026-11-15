@@ -4627,23 +4627,75 @@ void Character08::Slot06()
         EmitLocalEffect(&effect);
       }
       --field313c;
-      ++field000c;
-      if (field000c >= frameDuration) {
-        field000c = 0;
-        ++field000a;
-        if ((field3138 < 1) && (field000a == 10)) {
-          field000a = field000a + -6;
-          ++field3138;
-        }
-        if (((0xf0 < ((unsigned short)RandomRange(0,0x1e0))) || (field000a == 1)) && (0 < field016c))
-        {
-          field0168 = 0;
-        }
-        if (field000a >= frameCount) {
-          field0008 = 3;
-          FaceOpponent();
-          ResetPose();
-        }
+      __asm {
+        mov eax, dword ptr [ebp-54h]
+        mov cx, word ptr [eax+0Ch]
+        add cx, 1
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ch], cx
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ch]
+        movzx edx, word ptr [ebp-4h]
+        cmp ecx, edx
+        jl state304_skip_frame
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ch], 0
+        mov ecx, dword ptr [ebp-54h]
+        mov dx, word ptr [ecx+0Ah]
+        add dx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+        mov ecx, dword ptr [ebp-54h]
+        cmp dword ptr [ecx+3138h], 1
+        jge state304_after_loop
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ah]
+        cmp eax, 0Ah
+        jne state304_after_loop
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        sub edx, 6
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+3138h]
+        add edx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+3138h], edx
+    state304_after_loop:
+        push 1E0h
+        push 0
+        mov ecx, dword ptr [ebp-54h]
+        call RandomRange
+        movzx ecx, ax
+        cmp ecx, 0F0h
+        jg state304_clear_buffer
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ah]
+        cmp eax, 1
+        jne state304_after_clear
+    state304_clear_buffer:
+        mov ecx, dword ptr [ebp-54h]
+        movsx edx, word ptr [ecx+16Ch]
+        test edx, edx
+        jle state304_after_clear
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+168h], 0
+    state304_after_clear:
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        movzx eax, word ptr [ebp-8h]
+        cmp edx, eax
+        jl state304_skip_frame
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+8h], 3
+        mov ecx, dword ptr [ebp-54h]
+        call FaceOpponent
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [eax]
+    state304_skip_frame:
       }
       break;
     case 305:
@@ -4694,23 +4746,75 @@ void Character08::Slot06()
         EmitLocalEffect(&effect);
       }
       --field313c;
-      ++field000c;
-      if (field000c >= frameDuration) {
-        field000c = 0;
-        ++field000a;
-        if ((field3138 < 3) && (field000a == 10)) {
-          field000a = field000a + -6;
-          ++field3138;
-        }
-        if (((0xf0 < ((unsigned short)RandomRange(0,0x1e0))) || (field000a == 1)) && (0 < field016c))
-        {
-          field0168 = 0;
-        }
-        if (field000a >= frameCount) {
-          field0008 = 3;
-          FaceOpponent();
-          ResetPose();
-        }
+      __asm {
+        mov eax, dword ptr [ebp-54h]
+        mov cx, word ptr [eax+0Ch]
+        add cx, 1
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ch], cx
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ch]
+        movzx edx, word ptr [ebp-4h]
+        cmp ecx, edx
+        jl state305_skip_frame
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ch], 0
+        mov ecx, dword ptr [ebp-54h]
+        mov dx, word ptr [ecx+0Ah]
+        add dx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+        mov ecx, dword ptr [ebp-54h]
+        cmp dword ptr [ecx+3138h], 3
+        jge state305_after_loop
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ah]
+        cmp eax, 0Ah
+        jne state305_after_loop
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        sub edx, 6
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+3138h]
+        add edx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+3138h], edx
+    state305_after_loop:
+        push 1E0h
+        push 0
+        mov ecx, dword ptr [ebp-54h]
+        call RandomRange
+        movzx ecx, ax
+        cmp ecx, 0F0h
+        jg state305_clear_buffer
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ah]
+        cmp eax, 1
+        jne state305_after_clear
+    state305_clear_buffer:
+        mov ecx, dword ptr [ebp-54h]
+        movsx edx, word ptr [ecx+16Ch]
+        test edx, edx
+        jle state305_after_clear
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+168h], 0
+    state305_after_clear:
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        movzx eax, word ptr [ebp-8h]
+        cmp edx, eax
+        jl state305_skip_frame
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+8h], 3
+        mov ecx, dword ptr [ebp-54h]
+        call FaceOpponent
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [eax]
+    state305_skip_frame:
       }
       break;
     case 306:
@@ -4720,7 +4824,13 @@ void Character08::Slot06()
       field0158 = 0;
       if ((field000a == 3) && (field000c == 0)) {
         field014c = 0x78;
-        field0148 = field0148 + -1000;
+        __asm {
+          mov edx, dword ptr [ebp-54h]
+          movsx eax, word ptr [edx+148h]
+          sub eax, 3E8h
+          mov ecx, dword ptr [ebp-54h]
+          mov word ptr [ecx+148h], ax
+        }
         SetTint(0xb0,3);
         effect.type = 0x44;
         effect.palette = 0x13;
