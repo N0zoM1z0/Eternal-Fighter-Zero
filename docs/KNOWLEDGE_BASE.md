@@ -2286,8 +2286,8 @@ Original vtable `0x00788B94` selects the 59,143-byte native code
 owner `[0x00607930,0x00616037)`, with adjacent 139 DWORD switch
 pointers and 325 selectors (138 live, 187 default IDs).
 `workbench/character04-state/Character04State.cpp` now authors
-**default plus 105 native live cases** (1–9,13–16,47,50–77,81–87,
-96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–255).
+**default plus 106 native live cases** (1–9,13–16,47,50–77,81–87,
+96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–256).
 Cases240–241 reconstruct the collision-result-3 grab handoff and the
 complete airborne throw: opponent states103/104/69, three native
 frame-specific XY offsets, horizontal offset/shake, native
@@ -2317,29 +2317,38 @@ charge above30 at frame5, applies the uncharged opponent-relative X offset
 at frame5/tick20, and installs velocity1.5/deceleration−0.05 at frame6.
 Its charged frame6 branch enters state0x106 at opponentX−facing×100,
 clamps X to540/100 and sets Y=−100; the normal completion path faces the
-opponent and invokes virtual ResetPose. The register-sensitive x87 launch
-block is narrowly expressed in inline assembly to retain native VC7.1
-instruction order. Recent original 220–221 reconstruct native
-multi-opponent throw, frame-specific XY placement, native
-`ApplyDamage(1200,750.0)`, partner pose resets, and the pose1-specific
-hit-count reset branch. Original cases230–232 implement genuine variant
-airborne attack speeds, meter and sound frame gates.
+opponent and invokes virtual ResetPose. Case256 emits effect0x21/trail3
+and applies the resource-cost branch on frame0, sets one remaining hit,
+emits effect0x20 on frame2, and skips directly from frame4 to frame6
+when `attackCollisionResult==2` (without requiring tick zero). Its normal
+path resets frame at frame5, advances horizontal velocity by
+`horizontalDeceleration` with a zero floor, installs velocityX8.0 at
+frame5/tick20 and velocityX3.5 plus deceleration−0.05 at frame6/tick0,
+and clears collision result only when advancing into frames below2.
+Animation completion faces the opponent and invokes virtual ResetPose.
+The register-sensitive x87 launch block in case255 is narrowly expressed
+in inline assembly to retain native VC7.1 instruction order. Recent
+original 220–221 reconstruct native multi-opponent throw, frame-specific
+XY placement, native `ApplyDamage(1200,750.0)`, partner pose resets, and
+the pose1-specific hit-count reset branch. Original cases230–232
+implement genuine variant airborne attack speeds, meter and sound gates.
 
 Dedicated `workbench/character04-state/check_prefix.py` confirms
-**42,851 consecutive native executable code bytes** from
-`[0x00607930,0x00612093)`, original SHA-256
-`56a0be7f803fb0ccdba22532b829e0aed63bcd2a56b26d03bc79e31c4efb08b5`:
-**11,761 original x86 instruction offsets/widths/forms; 1,064
-internal +142 shared-return native branches; 921 independently
+**43,598 consecutive native executable code bytes** from
+`[0x00607930,0x0061237E)`, original SHA-256
+`dc2249fcbd3f0099f2a9863800a136c2b76209394cb37a380e3b9b1c7e873fb7`:
+**11,962 original x86 instruction offsets/widths/forms; 1,085
+internal +144 shared-return native branches; 937 independently
 original-bound COFF calls/float operands; two original local
 switch/selector addresses**. All other selected code bytes match;
-only the provisional stack immediate (`0x1B8` vs full native `0x2E8`),
-the two explicitly bounded x87 scratch-slot displacement bytes
-(`EBP-0x1B8` vs native `EBP-0x1BC`), shared-return routing (including
-one verified in-prefix trampoline) and target-bound COFF reloc fields
-are excepted. **Selected prefix, NOT full Exact**: 33 real live states,
-full original frame, local tables and return remain OPEN. Next case256 at
-`0x00612093`. No cold all-unit replay.
+only the provisional stack immediate (`0x1C8` vs full native `0x2E8`),
+ten explicitly bounded x87 scratch-slot displacement bytes (native
+`EBP-0x1BC` through `EBP-0x1CC` slots shifted by four bytes in the
+provisional frame), shared-return routing (including one verified
+in-prefix trampoline) and target-bound COFF reloc fields are excepted.
+**Selected prefix, NOT full Exact**: 32 real live states, full original
+frame, local tables and return remain OPEN. Next case257 at
+`0x0061237E`. No cold all-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

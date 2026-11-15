@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **105 genuine live cases**: 1–9,13–16,
+the original default and **106 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–255. The other **33** native live case IDs remain OPEN.
+230–232,240–241,249–256. The other **32** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00612093)` now has **42,851
+The original code `[0x00607930,0x0061237E)` now has **43,598
 original executable bytes**, canonical SHA-256
-`56a0be7f803fb0ccdba22532b829e0aed63bcd2a56b26d03bc79e31c4efb08b5`.
+`dc2249fcbd3f0099f2a9863800a136c2b76209394cb37a380e3b9b1c7e873fb7`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -121,24 +121,38 @@ ResetPose path. The register-sensitive x87 launch block is emitted with
 narrow inline assembly to retain the native instruction order.
 
 
+State256 (`0x00612093`, 747 bytes) is the aerial special follow-through.
+Frame0/tick0 emits effect0x21 at integer-truncated `(X,Y−20)`, starts
+trail3, applies the same field3144/field3148 or field0120/field0118 cost
+branch, and sets one remaining hit. Frame2/tick0 emits effect0x20 at
+`(X+facing×60,Y)`. Frame4 with `attackCollisionResult==2` resets tick and
+jumps directly to frame6 (there is no tick==0 requirement). Otherwise
+frame5/tick0 calls `ResetFrame`; horizontal velocity accumulates
+`horizontalDeceleration` and clamps at zero, frame5/tick20 sets velocityX
+8.0, and frame6/tick0 sets velocityX 3.5 plus horizontalDeceleration
+−0.05. Each frame advance clears the collision result only when the new
+frame is below2; animation completion faces the opponent and resets pose.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **11,761 original x86 instruction widths/positions and
-register-abstracted forms**, **1,064 original internal +142 native
-shared-return branch targets**, **921 independently original-bound
+It verifies **11,962 original x86 instruction widths/positions and
+register-abstracted forms**, **1,085 original internal +144 native
+shared-return branch targets**, **937 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
-stack immediate (`0x1B8` vs native `0x2E8`), the two low bytes of the
-frame-6 x87 scratch-slot displacements (`EBP-0x1BC` native vs
-`EBP-0x1B8` provisional), shared-return routing (including the single
-verified in-prefix jump trampoline), and original-bound COFF fields.
-No arbitrary branch-target differences or source padding are accepted.
+stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
+frame-6/launch x87 integer-conversion scratch-slot displacements (native
+slots `EBP-0x1BC` through `EBP-0x1CC`, provisional slots shifted by four
+bytes), shared-return routing (including the single verified in-prefix
+jump trampoline), and original-bound COFF fields. No arbitrary branch-
+target differences or source padding are accepted.
 
-**Next live native state256 starts `0x00612093`**. The remaining
-33 original live case bodies, full stack, 139-entry jump table,
+**Next live native state257 starts `0x0061237E`**. The remaining
+32 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.

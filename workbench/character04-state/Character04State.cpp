@@ -3881,5 +3881,71 @@ void Character04::Slot06()
         }
         return;
 
+    case 256: // Character04 native 0x00612093: aerial special follow-through
+        if (field000a == 0 && field000c == 0) {
+            effect.type = 0x21;
+            effect.palette = 0x0b;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 0x14);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            StartTrail(3);
+            if (reinterpret_cast<Character04StateFields *>(this)->field3144 == 4) {
+                reinterpret_cast<Character04StateFields *>(this)->field3148 -= 1000;
+                if (reinterpret_cast<Character04StateFields *>(this)->field3148 < 0) {
+                    reinterpret_cast<Character04StateFields *>(this)->field3148 = 0;
+                }
+            } else if (field0120 == 0) {
+                field0118 -= 500.0;
+            } else {
+                field0118 -= 250.0;
+            }
+            remainingHitCount = 1;
+        }
+        if (field000a == 2 && field000c == 0) {
+            reinterpret_cast<unsigned char *>(this)[0x2c8] = 0;
+            effect.type = 0x20;
+            effect.x = (double)((int)positionX + (int)facing * 60);
+            effect.y = (double)(int)positionY;
+            effect.group = 0;
+            effect.flag0018 = (unsigned char)-facing;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 4 && attackCollisionResult == 2) {
+            field000c = 0;
+            field000a = 6;
+            return;
+        }
+        if (field000a == 5 && field000c == 0) {
+            ResetFrame();
+        }
+        velocityX += horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (field000a == 5 && field000c == 0x14) {
+            velocityX = 8.0;
+        }
+        if (field000a == 6 && field000c == 0) {
+            velocityX = 3.5;
+            horizontalDeceleration = -0.05;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                FaceOpponent();
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }
