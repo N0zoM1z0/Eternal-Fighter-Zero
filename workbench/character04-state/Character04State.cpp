@@ -5570,5 +5570,278 @@ void Character04::Slot06()
         }
         return;
 
+    case 303: // Character04 native 0x00613824: multi-stage aerial capture throw
+        __asm {
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            test ecx, ecx
+            jnz state303_skip_frame0
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ch]
+            test eax, eax
+            jnz state303_skip_frame0
+            mov ecx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+30h]
+            mov edx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+38h]
+            mov eax, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [eax+48h]
+        state303_skip_frame0:
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ah]
+            cmp edx, 2
+            jnz state303_skip_frame2_shake
+            push 3
+            push 032h
+            mov ecx, dword ptr [ebp-54h]
+            call SetHorizontalShake
+        state303_skip_frame2_shake:
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            cmp ecx, 2
+            jnz state303_skip_frame2_effect
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ch]
+            test eax, eax
+            jnz state303_skip_frame2_effect
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+16Ch], 1
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+14Ch], 078h
+            mov eax, dword ptr [ebp-54h]
+            movsx ecx, word ptr [eax+148h]
+            sub ecx, 03E8h
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+148h], cx
+            push 3
+            push 0B0h
+            mov ecx, dword ptr [ebp-54h]
+            call SetTint
+            mov word ptr [ebp-4Ch], 044h
+            mov byte ptr [ebp-24h], 013h
+            mov eax, dword ptr [ebp-54h]
+            fld qword ptr [eax+20h]
+            call _ftol2
+            mov dword ptr [ebp-268h], eax
+            fild dword ptr [ebp-268h]
+            fstp qword ptr [ebp-48h]
+            mov ecx, dword ptr [ebp-54h]
+            fld qword ptr [ecx+28h]
+            call _ftol2
+            sub eax, 028h
+            mov dword ptr [ebp-26Ch], eax
+            fild dword ptr [ebp-26Ch]
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h], 2
+            mov dword ptr [ebp-50h], 1
+            mov byte ptr [ebp-2Fh], 1
+            lea edx, [ebp-50h]
+            push edx
+            mov eax, dword ptr [ebp-54h]
+            mov ecx, dword ptr [eax+7Ch]
+            call Context::EmitEffect
+        state303_skip_frame2_effect:
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ah]
+            cmp edx, 4
+            jnz state303_skip_frame4
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ch]
+            test ecx, ecx
+            jnz state303_skip_frame4
+            mov edx, dword ptr [ebp-54h]
+            mov byte ptr [edx+2C8h], 0
+        state303_skip_frame4:
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            cmp ecx, 8
+            jnz state303_skip_frame8_velocity
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ch]
+            test eax, eax
+            jnz state303_skip_frame8_velocity
+            mov ecx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0C0h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+30h]
+        state303_skip_frame8_velocity:
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ah]
+            cmp eax, 9
+            jnz state303_skip_frame9_velocity
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ch]
+            test edx, edx
+            jnz state303_skip_frame9_velocity
+            mov eax, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0A8h
+            _emit 080h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [eax+30h]
+            mov ecx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0B0h
+            _emit 085h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+40h]
+        state303_skip_frame9_velocity:
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ah]
+            cmp eax, 8
+            jng state303_skip_horizontal_integrate
+            mov ecx, dword ptr [ebp-54h]
+            mov edx, dword ptr [ebp-54h]
+            fld qword ptr [ecx+30h]
+            fadd qword ptr [edx+40h]
+            mov eax, dword ptr [ebp-54h]
+            fstp qword ptr [eax+30h]
+            mov ecx, dword ptr [ebp-54h]
+            fld qword ptr [ecx+30h]
+            _emit 0DCh
+            _emit 01Dh
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fnstsw ax
+            test ah, 5
+            jpe state303_skip_horizontal_integrate
+            mov edx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+30h]
+        state303_skip_horizontal_integrate:
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            cmp ecx, 8
+            jnz state303_skip_frame8_result
+            mov edx, dword ptr [ebp-54h]
+            cmp dword ptr [edx+168h], 2
+            jz state303_frame8_skip
+            mov eax, dword ptr [ebp-54h]
+            cmp dword ptr [eax+168h], 5
+            jnz state303_frame8_check_hit
+        state303_frame8_skip:
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+0Ch], 0
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+0Ah], 9
+            jmp state303_exit
+        state303_frame8_check_hit:
+            mov eax, dword ptr [ebp-54h]
+            cmp dword ptr [eax+168h], 3
+            jnz state303_skip_frame8_result
+            mov ecx, dword ptr [ebp-54h]
+            mov edx, dword ptr [ecx+78h]
+            mov eax, dword ptr [edx]
+            mov word ptr [eax+14Ah], 0270Fh
+            mov ecx, dword ptr [ebp-54h]
+            mov edx, dword ptr [ecx]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [edx]
+            mov eax, dword ptr [ebp-54h]
+            mov ecx, dword ptr [eax+78h]
+            mov edx, dword ptr [ecx]
+            mov eax, dword ptr [ebp-54h]
+            mov ecx, dword ptr [eax+78h]
+            mov ecx, dword ptr [ecx]
+            mov edx, dword ptr [edx]
+            call dword ptr [edx]
+            mov eax, dword ptr [ebp-54h]
+            mov ecx, dword ptr [eax+78h]
+            mov edx, dword ptr [ecx]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+28h]
+            mov eax, dword ptr [ebp-54h]
+            mov ecx, dword ptr [eax+78h]
+            mov edx, dword ptr [ecx]
+            mov word ptr [edx+8], 06Ch
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+8], 0132h
+            jmp state303_exit
+        state303_skip_frame8_result:
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ah]
+            test edx, edx
+            jng state303_skip_horizontal_shake
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            cmp ecx, 12h
+            jnl state303_skip_horizontal_shake
+            push 3
+            push 32h
+            mov ecx, dword ptr [ebp-54h]
+            call SetHorizontalShake
+        state303_skip_horizontal_shake:
+            mov edx, dword ptr [ebp-54h]
+            mov ax, word ptr [edx+0Ch]
+            add ax, 1
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+0Ch], ax
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ch]
+            movzx ecx, word ptr [ebp-04h]
+            cmp eax, ecx
+            jl state303_exit
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+0Ch], 0
+            mov eax, dword ptr [ebp-54h]
+            mov cx, word ptr [eax+0Ah]
+            add cx, 1
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+0Ah], cx
+            mov eax, dword ptr [ebp-54h]
+            mov dword ptr [eax+168h], 0
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ah]
+            movzx eax, word ptr [ebp-08h]
+            cmp edx, eax
+            jl state303_exit
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+08h], 0
+            mov edx, dword ptr [ebp-54h]
+            mov eax, dword ptr [edx]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [eax]
+        state303_exit:
+        }
+        return;
+
     }
 }
