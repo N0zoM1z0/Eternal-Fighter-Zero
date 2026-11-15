@@ -496,18 +496,20 @@ the common epilogue with byte-exact displacements), **1,080 original-bound
 COFF calls/float operands +7 independently pinned state256 literal floats**,
 and two original local dispatch addresses. State256 (747 bytes) and state257
 (491 bytes) now match their native instruction bytes, including every x87
-scratch slot. The only explicit code-byte difference is the split stack
-prologue (`sub esp,0x1B8` plus inline `sub esp,0x130`, exact native total
-`0x2E8`); original-bound COFF operand fields remain object-format
-relocation placeholders. No arbitrary branch-target differences or source
-padding are accepted.
+scratch slot. The focused final-image resolver materializes all **1,082 COFF
+relocations / 4,328 operand bytes** to their exact original native values;
+all mapped instruction bytes then match. The only remaining mapped code
+layout difference is the split stack prologue (`sub esp,0x1B8` plus inline
+`sub esp,0x130`, exact native total `0x2E8`). No arbitrary branch-target
+differences or source padding are accepted.
 
 All **138 real live case bodies** now have source coverage. The 139-entry
 jump-table target order, all 325 selector bytes and all 187 shared-return
 displacements are verified exactly. The 14 source-level boss leaf dependencies
 are also **1,918/1,918 native bytes exact, zero differences**. Remaining
-byte differences are limited to the split native stack prologue and
-object-format COFF relocation fields. Evidence: `docs/evidence/character04-slot06-prefix.json`
+mapped code difference is limited to the split native stack prologue; the
+object-file COFF placeholders are independently resolved to exact native
+operands. Evidence: `docs/evidence/character04-slot06-prefix.json`
 and `docs/evidence/character04-slot06-leaf-dependencies-exact.json`. This
 certificate remains **selected-prefix only, NOT whole Exact**; no all-unit
 cold replay.

@@ -89,11 +89,18 @@
     "evidence": "docs/evidence/character04-slot06-leaf-dependencies-exact.json"
   },
   "remaining_nonidentical_object_fields": [
-    "Native prologue is one sub esp,0x2E8; compiler candidate reserves the same 0x2E8 total as sub esp,0x1B8 plus inline sub esp,0x130 after saving ECX.",
-    "COFF relocation operand fields remain object-format placeholders; their original destinations/payloads are independently verified."
+    "The only remaining mapped instruction-layout difference is the split 0x2E8 stack prologue (compiler sub esp,0x1B8 plus inline sub esp,0x130 versus native sub esp,0x2E8).",
+    "The .obj retains COFF relocation placeholders; the focused final-image resolver materializes all 1,082 relocation operands (4,328 bytes) to the exact original native bytes."
   ],
   "validation": {
     "focused_checker": "scripts/repo-python workbench/character04-state/check_prefix.py",
     "full_all_unit_cold_replay": false
+  },
+  "resolved_linked_image": {
+    "coff_relocation_entries": 1082,
+    "relocation_operand_bytes": 4328,
+    "all_operands_resolved_to_original_native_bytes": true,
+    "all_mapped_instruction_bytes_match_original_after_resolution": true,
+    "remaining_code_layout_difference": "The compiler emits sub esp,0x1B8 plus inline sub esp,0x130 instead of the single native sub esp,0x2E8; both reserve the same total stack space."
   }
 }

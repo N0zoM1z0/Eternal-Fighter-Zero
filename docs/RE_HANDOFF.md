@@ -884,9 +884,11 @@ state256 literal x87 operands**, and 2 canonical native-local dispatch
 pointers. State256 (747 bytes) and state257 (491 bytes) now match their native
 instruction bytes, including all scratch slots. All 138 live case bodies,
 the exact 139-entry table/325-byte selector and all 187 direct epilogue
-returns are covered. Only the split stack prologue (`0x1B8` compiler frame
-plus inline `0x130` tail, exact `0x2E8` total) and object-format COFF
-relocation operand fields differ byte-for-byte. Evidence:
+returns are covered. A final-image resolver materializes all **1,082 COFF
+relocations / 4,328 operand bytes** to the exact original native bytes; all
+mapped instruction bytes then match. The only remaining mapped code-layout
+difference is the split stack prologue (`0x1B8` compiler frame plus inline
+`0x130` tail, exact `0x2E8` total). Evidence:
 `docs/evidence/character04-slot06-prefix.json`. Partial prefix evidence
 only, **NOT whole-function Exact**; no cold all-unit replay/push.
 A selected cold replay of the 14 source-level leaf dependencies used by this
