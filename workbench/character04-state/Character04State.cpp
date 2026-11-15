@@ -3675,5 +3675,61 @@ void Character04::Slot06()
         }
         return;
 
+    case 254: // Character04 native 0x00611B49: held-input charge and launch
+        attackCollisionResult = 2;
+        if (buttonHeld[0] > 0) {
+            ++reinterpret_cast<Character04StateFields *>(this)->field313c;
+        }
+        if (field000a == 2 && field000c == 0) {
+            reinterpret_cast<unsigned char *>(this)[0x2c8] = 0;
+            effect.type = 0x20;
+            effect.x = (double)((int)positionX + (int)facing * 60);
+            effect.y = (double)(int)positionY;
+            effect.group = 0;
+            effect.flag0018 = (unsigned char)-facing;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 5 && field000c == 0) {
+            ResetFrame();
+            if (reinterpret_cast<Character04StateFields *>(this)->field313c > 30) {
+                reinterpret_cast<Character04StateFields *>(this)->field3138 = 1;
+            }
+        }
+        velocityX += horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (field000a == 5 && field000c == 0x14 &&
+            reinterpret_cast<Character04StateFields *>(this)->field3138 == 0) {
+            velocityX = -3.0;
+        }
+        if (field000a == 6 && field000c == 0) {
+            velocityX = 1.5;
+            horizontalDeceleration = -0.05;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 6 &&
+                reinterpret_cast<Character04StateFields *>(this)->field3138 == 1) {
+                field000a = 0;
+                field000c = 0;
+                field0008 = 0x105;
+                return;
+            }
+            if (field000a == 6) {
+                positionX = (*opponentSlot)->positionX - (double)((int)facing * 60);
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

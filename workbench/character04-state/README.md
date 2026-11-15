@@ -1,9 +1,9 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
 **PARTIAL: not whole-function Exact.** Authored natural C++ now
-covers original default and **103 genuine live cases**: 1–9,13–16,
+covers original default and **104 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–253. The other **35** native live case IDs remain OPEN.
+230–232,240–241,249–254. The other **34** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -20,9 +20,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00611B49)` now has **41,497
+The original code `[0x00607930,0x00611DB0)` now has **42,112
 original executable bytes**, canonical SHA-256
-`00c1147c94e4655cb5a2e8aa2ab3f02f84338cb84a3d0ec9cc17792a2f06b12a`.
+`b59b98a00bd465a48023b6b26f19fcd1d6c8d49a03c5ded127c02b55047fb370`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -93,6 +93,17 @@ normally advances by the current frame duration. If frame2 inherits
 `field313c==1`, tick21 is an additional early-advance point. Each advance
 clears the collision result; when the animation completes it selects state3
 if `inputY==1`, otherwise state7, then invokes virtual `ResetPose`.
+State254 (`0x00611B49`, 615 bytes) is the held-input charge/launch
+sequence. It sets `attackCollisionResult=2` each tick and increments
+`field313c` while `buttonHeld[0]` is held. Frame2/tick0 clears byte0x2C8
+and emits effect0x20 at `(X+facing×60,Y)` with the opposite facing.
+Frame5/tick0 resets the frame and latches `field3138` once the charge
+counter exceeds30. Horizontal velocity accumulates `horizontalDeceleration`
+and clamps at zero; frame5/tick20 uses `-3.0` if the charge flag is still
+clear, while frame6/tick0 sets velocity1.5 and deceleration−0.05. At the
+frame6 advance it either hands off to state261 when charged, or repositions
+at opponentX−facing×60; normal animation completion faces the opponent and
+resets the pose.
 
 Focused canonical selected-prefix check:
 
@@ -100,9 +111,9 @@ Focused canonical selected-prefix check:
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **11,392 original x86 instruction widths/positions and
-register-abstracted forms**, **1,027 original internal +138 native
-shared-return branch targets**, **902 independently original-bound
+It verifies **11,560 original x86 instruction widths/positions and
+register-abstracted forms**, **1,044 original internal +140 native
+shared-return branch targets**, **912 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. All other reviewed opcode bytes match exactly. Allowed
 exceptions are only the original-width provisional six-byte stack
@@ -111,7 +122,7 @@ the single verified in-prefix jump trampoline), and original-bound COFF
 fields. No arbitrary branch
 target differences or source padding are accepted.
 
-**Next live native state254 starts `0x00611B49`**. The remaining
-35 original live case bodies, full stack, 139-entry jump table,
+**Next live native state255 starts `0x00611DB0`**. The remaining
+34 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
