@@ -532,40 +532,45 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 ### Active second large boss: Character04::Slot06 (NOT full Exact)
 
 The authored `workbench/character04-state/Character04State.cpp`
-now covers original default plus **101 genuine native live states**,
+now covers original default plus **102 genuine native live states**,
 most recently full C++ for states220–221 two-character grab/throw,
 230–232 aerial attack tiers, 240's collision-result-3 grab handoff,
 241's complete multi-stage airborne throw, 249's special-move
-hitstun/effect initialization, 250's airborne startup/frame loop, and
-251's second airborne startup variant. State240 resets both fighters'
-frame/pose state, advances the owner to state241 and the opponent to
-state100, emits effect0 at integer-truncated X+facing×31/Y−82, and
-preserves the native airborne/state-range test for `remainingHitCount`.
-State241 applies horizontal offset/shake `(50,3)`, positions the opponent
-in states103/104/69 at three native offsets, applies `ApplyDamage(1300,
-500.0)`, sets opponent knockback velocities `(-3.0,3.0)`, and loops its
-last two frames until landing. State249 sets `field00dc=4`, `field00de=0xEC`,
-zeroes horizontal velocity, clears guard-input frames, sets hitstun60 and
-remainingHitCount1, and emits effect0x28 at integer-truncated
-X+facing×10/Y−40 with palette0x13. State250's 436 native bytes preserve
-the ground-vs-air startup distinction, frame1 meter/velocity/gravity setup,
-early final-three-tick animation gate for airborne starts, frame11 loop,
-and state253 landing handoff. State251's 471 native bytes use gravity0.035
-on frame1, set the private `field313c` landing flag, clear collision result
-when advancing into frame1, and invoke virtual ResetPose at animation
-completion. The original-bound strict checker caught and corrected
-state220's subtle reset: when animation advances outside pose1, it must
-set `remainingHitCount=0`, not leave it unchanged. Native 221 applies
-1200/750.0 damage and places both fighters at four distinct pose-specific
-coordinates. `check_prefix.py` proves **40,503 continuous native code
-bytes / 11,124 original x86 instruction locations/widths/forms**, **1,002
-native internal and 136 original shared-return branch targets**, **883
-exact original-bound direct call/float operands** and 2 canonical
-native-local dispatch pointers. Only the original-width provisional stack
-immediate (`0x190` vs native `0x2E8`), shared-return routing (including
-one verified in-prefix trampoline) and independently target-bound COFF
-fields differ. **Next native case252 at `0x00611767`**; other 37 live cases,
-full frame, switch/data and return still OPEN. Partial prefix evidence only,
+hitstun/effect initialization, 250's airborne startup/frame loop, 251's
+second airborne startup variant, and 252's charged airborne special.
+State240 resets both fighters' frame/pose state, advances the owner to
+state241 and the opponent to state100, emits effect0 at integer-truncated
+X+facing×31/Y−82, and preserves the native airborne/state-range test for
+`remainingHitCount`. State241 applies horizontal offset/shake `(50,3)`,
+positions the opponent in states103/104/69 at three native offsets,
+applies `ApplyDamage(1300,500.0)`, sets opponent knockback velocities
+`(-3.0,3.0)`, and loops its last two frames until landing. State249 sets
+`field00dc=4`, `field00de=0xEC`, zeroes horizontal velocity, clears
+guard-input frames, sets hitstun60 and remainingHitCount1, and emits
+effect0x28 at integer-truncated X+facing×10/Y−40 with palette0x13.
+State250's 436 native bytes preserve the ground-vs-air startup distinction,
+frame1 meter/velocity/gravity setup, early final-three-tick animation gate
+for airborne starts, frame11 loop, and state253 landing handoff. State251's
+471 native bytes use gravity0.035 on frame1, set private `field313c`, clear
+collision result when advancing into frame1, and invoke virtual ResetPose
+at animation completion. State252's 790 native bytes initialize trail3 and
+effect0x21 at integer-truncated `(X,Y−20)`, apply the field3144/field3148
+or field0120/field0118 resource-cost branch, add25 meter and two remaining
+hits at frame1 with gravity0.025, emit local effect0x1A2 at frame7, and
+preserve the airborne early-frame and state253 landing gates. The original-
+bound strict checker caught and corrected state220's subtle reset: when
+animation advances outside pose1, it must set `remainingHitCount=0`, not
+leave it unchanged. Native 221 applies 1200/750.0 damage and places both
+fighters at four distinct pose-specific coordinates. `check_prefix.py`
+proves **41,293 continuous native code bytes / 11,336 original x86
+instruction locations/widths/forms**, **1,021 native internal and 137
+original shared-return branch targets**, **899 exact original-bound direct
+call/float operands** and 2 canonical native-local dispatch pointers.
+Only the original-width provisional stack immediate (`0x1A0` vs native
+`0x2E8`), shared-return routing (including one verified in-prefix
+trampoline) and independently target-bound COFF fields differ. **Next
+native case253 at `0x00611A7D`**; other 36 live cases, full frame,
+switch/data and return still OPEN. Partial prefix evidence only,
 **NOT whole-function Exact**; no cold all-unit replay/push.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is

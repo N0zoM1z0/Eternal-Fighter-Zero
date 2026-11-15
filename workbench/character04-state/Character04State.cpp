@@ -3589,5 +3589,69 @@ void Character04::Slot06()
         }
         return;
 
+    case 252: // Character04 native 0x00611767: charged airborne special with launch effects
+        if (field000a == 0 && field000c == 0) {
+            if (positionY < 0.0) {
+                reinterpret_cast<Character04StateFields *>(this)->field3138 = 1;
+            }
+            if (positionY == 0.0) {
+                velocityX = 0.0;
+                gravity = 0.0;
+            }
+            effect.type = 0x21;
+            effect.palette = 0x0b;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 0x14);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            StartTrail(3);
+            if (reinterpret_cast<Character04StateFields *>(this)->field3144 == 4) {
+                reinterpret_cast<Character04StateFields *>(this)->field3148 -= 1000;
+                if (reinterpret_cast<Character04StateFields *>(this)->field3148 < 0) {
+                    reinterpret_cast<Character04StateFields *>(this)->field3148 = 0;
+                }
+            } else if (field0120 == 0) {
+                field0118 -= 500.0;
+            } else {
+                field0118 -= 250.0;
+            }
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 0x19);
+            remainingHitCount = 2;
+            velocityX *= 0.5;
+            velocityY *= 0.5;
+            gravity = 0.025;
+        }
+        if (field000a == 7 && field000c == 0) {
+            effect.type = 0x1a2;
+            effect.x = (double)((int)positionX + (int)facing * 0x25);
+            effect.y = (double)((int)positionY - 0x28);
+            effect.group = 2;
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            EmitLocalEffect(&effect);
+        }
+        if (field000a > 1 && velocityY + positionY >= 0.0) {
+            field000a = 0;
+            field000c = 0;
+            field0008 = 0xfd;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration ||
+            (field000c >= timing.frameDuration - 3 &&
+             reinterpret_cast<Character04StateFields *>(this)->field3138 == 1)) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

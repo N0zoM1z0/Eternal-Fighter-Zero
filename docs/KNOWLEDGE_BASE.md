@@ -2286,8 +2286,8 @@ Original vtable `0x00788B94` selects the 59,143-byte native code
 owner `[0x00607930,0x00616037)`, with adjacent 139 DWORD switch
 pointers and 325 selectors (138 live, 187 default IDs).
 `workbench/character04-state/Character04State.cpp` now authors
-**default plus 101 native live cases** (1–9,13–16,47,50–77,81–87,
-96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–251).
+**default plus 102 native live cases** (1–9,13–16,47,50–77,81–87,
+96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–252).
 Cases240–241 reconstruct the collision-result-3 grab handoff and the
 complete airborne throw: opponent states103/104/69, three native
 frame-specific XY offsets, horizontal offset/shake, native
@@ -2300,6 +2300,10 @@ frames three ticks early when its private flag is set, loops to frame11,
 and transitions to state253 on landing. Case251 uses the second airborne
 startup variant with gravity0.035, sets the private landing flag
 `field313c`, and invokes virtual ResetPose when its animation completes.
+Case252 initializes trail3 and effect0x21 at integer-truncated `(X,Y−20)`,
+selects its resource-cost branch from `field3144` and `field0120`, adds25
+meter/two remaining hits at frame1 with gravity0.025, emits local effect
+0x1A2 at frame7, and preserves the airborne early-frame/landing gates.
 Recent original 220–221 reconstruct native multi-opponent throw,
 frame-specific XY placement, native `ApplyDamage(1200,750.0)`, partner
 pose resets, and the pose1-specific hit-count reset branch. Original
@@ -2307,19 +2311,19 @@ cases230–232 implement genuine variant airborne attack speeds, meter
 and sound frame gates.
 
 Dedicated `workbench/character04-state/check_prefix.py` confirms
-**40,503 consecutive native executable code bytes** from
-`[0x00607930,0x00611767)`, original SHA-256
-`28ddd402101a79e74a9fabe7a2ee87281d867572e5451b07f8e36737781fe26c`:
-**11,124 original x86 instruction offsets/widths/forms; 1,002
-internal +136 shared-return native branches; 883 independently
+**41,293 consecutive native executable code bytes** from
+`[0x00607930,0x00611A7D)`, original SHA-256
+`3ca536454e3dd62ff1aa92287bebc665d127e245ea8fbb2a31ac0f0989510cd6`:
+**11,336 original x86 instruction offsets/widths/forms; 1,021
+internal +137 shared-return native branches; 899 independently
 original-bound COFF calls/float operands; two original local
 switch/selector addresses**. All other selected code bytes match;
-only the original-width provisional stack-immediate (`0x190` vs
+only the original-width provisional stack-immediate (`0x1A0` vs
 full native `0x2E8`), shared-return routing (including one verified
 in-prefix trampoline) and target-bound COFF reloc fields are excepted.
-**Selected prefix, NOT full Exact**: 37 real live states, full original
-frame, local tables and return remain OPEN. Next case252 at
-`0x00611767`. No cold all-unit replay.
+**Selected prefix, NOT full Exact**: 36 real live states, full original
+frame, local tables and return remain OPEN. Next case253 at
+`0x00611A7D`. No cold all-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

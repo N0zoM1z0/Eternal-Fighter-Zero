@@ -1,9 +1,9 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
 **PARTIAL: not whole-function Exact.** Authored natural C++ now
-covers original default and **101 genuine live cases**: 1–9,13–16,
+covers original default and **102 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–251. The other **37** native live case IDs remain OPEN.
+230–232,240–241,249–252. The other **36** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -20,9 +20,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00611767)` now has **40,503
+The original code `[0x00607930,0x00611A7D)` now has **41,293
 original executable bytes**, canonical SHA-256
-`28ddd402101a79e74a9fabe7a2ee87281d867572e5451b07f8e36737781fe26c`.
+`3ca536454e3dd62ff1aa92287bebc665d127e245ea8fbb2a31ac0f0989510cd6`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -77,6 +77,16 @@ private `field313c=1` before leaving for state253. Unlike state250's frame11
 loop, state251 clears `attackCollisionResult` only when the animation
 advances into frame1; at animation completion it sets state0 and invokes
 the virtual `ResetPose` slot, which clears the Character04 private counters.
+State252 (`0x00611767`, 790 bytes) is the charged airborne special.
+At frame0/tick0 it latches airborne startup, emits effect `0x21` at
+integer-truncated `(X,Y−20)` with palette `0x0B`, and starts trail3. It
+then consumes 1000 from `field3148` (clamped at zero) when `field3144==4`,
+otherwise subtracts 500 or 250 from `field0118` according to `field0120`.
+Frame1/tick0 adds25 meter, sets two remaining hits, halves both velocity
+components and installs gravity0.025. Frame7/tick0 emits local effect
+`0x1A2` at `(X+facing×37,Y−40)`. Its airborne early-frame gate and landing
+handoff to state253 remain active through the frame-counter update; animation
+completion sets state0 and calls virtual `ResetPose`.
 
 Focused canonical selected-prefix check:
 
@@ -84,9 +94,9 @@ Focused canonical selected-prefix check:
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **11,124 original x86 instruction widths/positions and
-register-abstracted forms**, **1,002 original internal +136 native
-shared-return branch targets**, **883 independently original-bound
+It verifies **11,336 original x86 instruction widths/positions and
+register-abstracted forms**, **1,021 original internal +137 native
+shared-return branch targets**, **899 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. All other reviewed opcode bytes match exactly. Allowed
 exceptions are only the original-width provisional six-byte stack
@@ -95,7 +105,7 @@ the single verified in-prefix jump trampoline), and original-bound COFF
 fields. No arbitrary branch
 target differences or source padding are accepted.
 
-**Next live native state252 starts `0x00611767`**. The remaining
-37 original live case bodies, full stack, 139-entry jump table,
+**Next live native state253 starts `0x00611A7D`**. The remaining
+36 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
