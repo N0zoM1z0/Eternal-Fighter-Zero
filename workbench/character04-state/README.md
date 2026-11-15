@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **131 genuine live cases**: 1–9,13–16,
+the original default and **132 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–269,303–309,312,315–318. The other **7** native live case IDs remain OPEN.
+230–232,240–241,249–269,303–309,312,315–319. The other **6** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x0061552B)` now has **56,315
+The original code `[0x00607930,0x006155C9)` now has **56,473
 original executable bytes**, canonical SHA-256
-`c41244e0d0947993878899637b38296238902a1e81db19b3e855db05ed62b563`.
+`6cdbbc319f5f7909fe62b33945f660c1c7edca4baea22f9d0b85ef947a7dc5b1`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -415,14 +415,20 @@ field0x3144=2. Animation completion clears state and invokes the native
 virtual reset. All 120 native instructions match.
 
 
+State319 (`0x0061552B`, 158 bytes) is a simple aerial recovery reset.
+At frame0/tick0 it zeros velocityX and velocityY. It then advances the
+native tick/frame counters; when animation completes it clears the state
+and invokes the native virtual reset. All 45 native instructions match.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **15,372 original x86 instruction widths/positions and
-register-abstracted forms**, **1,368 original internal +179 native
+It verifies **15,417 original x86 instruction widths/positions and
+register-abstracted forms**, **1,372 original internal +180 native
 shared-return branch targets**, **1,057 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
@@ -433,7 +439,7 @@ bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-**Next live native state319 starts `0x0061552B`**. The remaining
-7 original live case bodies, full stack, 139-entry jump table,
+**Next live native state320 starts `0x006155C9`**. The remaining
+6 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
