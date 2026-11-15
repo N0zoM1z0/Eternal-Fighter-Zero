@@ -1,9 +1,9 @@
 # Character04::Slot06 — original-bound 59,143-byte state boss
 
 **PARTIAL: not whole-function Exact.** Authored natural C++ now
-covers original default and **99 genuine live cases**: 1–9,13–16,
+covers original default and **100 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249. The other **39** native live case IDs remain OPEN.
+230–232,240–241,249–250. The other **38** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -20,9 +20,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x006113DC)` now has **39,596
+The original code `[0x00607930,0x00611590)` now has **40,032
 original executable bytes**, canonical SHA-256
-`df9f18a1016f9d5c26f9a7cd2c09c1ee40f7076543068cdfb138b1cbf6f2a1a0`.
+`93be659a6cdf07979c2b68729f2a3fac3dd15273d5b55f9ef3eb5d0e6df7ce40`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -61,6 +61,15 @@ frames, and sets hitstun to60. It emits effect `0x28` at the native
 integer-truncated `(X+facing×10,Y−40)` position with group2/layer1/palette
 `0x13`. Each animation-frame advance clears the collision result; at
 completion it clears the state, faces the opponent, and resets the pose.
+State250 (`0x006113DC`, 436 bytes) handles the airborne startup and
+frame loop. On frame0/tick0 it zeroes gravity (and horizontal velocity
+when grounded) and records `field3138=1` when already airborne. On
+frame1/tick0 it adds 25 meter, sets `remainingHitCount=1`, halves both
+velocity components, and installs gravity0.025. Frames0–1 always advance;
+airborne frames can advance three ticks early when `field3138==1`. Every
+advance clears the collision result and the animation wraps to frame11.
+Once frame>=2 and `positionY+velocityY` is nonnegative, it clears tick
+and frame and transitions to state253.
 
 Focused canonical selected-prefix check:
 
@@ -68,9 +77,9 @@ Focused canonical selected-prefix check:
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **10,872 original x86 instruction widths/positions and
-register-abstracted forms**, **977 original internal +132 native
-shared-return branch targets**, **865 independently original-bound
+It verifies **10,993 original x86 instruction widths/positions and
+register-abstracted forms**, **989 original internal +134 native
+shared-return branch targets**, **874 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. All other reviewed opcode bytes match exactly. Allowed
 exceptions are only the original-width provisional six-byte stack

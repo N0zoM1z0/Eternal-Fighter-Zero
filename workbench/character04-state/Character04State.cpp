@@ -3509,5 +3509,43 @@ void Character04::Slot06()
         }
         return;
 
+    case 250: // Character04 native 0x006113DC: airborne startup and frame-loop control
+        if (field000a == 0 && field000c == 0) {
+            if (positionY == 0.0) {
+                velocityX = 0.0;
+                gravity = 0.0;
+            }
+            if (positionY < 0.0) {
+                reinterpret_cast<Character04StatePrivate *>(this)->field3138 = 1;
+            }
+            gravity = 0.0;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 0x19);
+            remainingHitCount = 1;
+            velocityX *= 0.5;
+            velocityY *= 0.5;
+            gravity = 0.025;
+        }
+        if (field000a > 1 && velocityY + positionY >= 0.0) {
+            field000c = 0;
+            field000a = 0;
+            field0008 = 0xfd;
+            return;
+        }
+        ++field000c;
+        velocityY += gravity;
+        if (field000c >= timing.frameDuration ||
+            (field000c >= timing.frameDuration - 3 &&
+             reinterpret_cast<Character04StatePrivate *>(this)->field3138 == 1)) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 11;
+            }
+        }
+        return;
+
     }
 }

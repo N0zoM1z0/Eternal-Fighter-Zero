@@ -532,33 +532,38 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 ### Active second large boss: Character04::Slot06 (NOT full Exact)
 
 The authored `workbench/character04-state/Character04State.cpp`
-now covers original default plus **99 genuine native live states**,
+now covers original default plus **100 genuine native live states**,
 most recently full C++ for states220–221 two-character grab/throw,
 230–232 aerial attack tiers, 240's collision-result-3 grab handoff,
-241's complete multi-stage airborne throw, and 249's special-move
-hitstun/effect initialization. State240 resets both fighters' frame/pose
-state, advances the owner to state241 and the opponent to state100, emits
-effect0 at integer-truncated X+facing×31/Y−82, and preserves the native
-airborne/state-range test for `remainingHitCount`. State241 applies
-horizontal offset/shake `(50,3)`, positions the opponent in states103/104/69
-at three native offsets, applies `ApplyDamage(1300,500.0)`, sets opponent
-knockback velocities `(-3.0,3.0)`, and loops its last two frames until
-landing. State249 sets `field00dc=4`, `field00de=0xEC`, zeroes horizontal
-velocity, clears guard-input frames, sets hitstun60 and remainingHitCount1,
-and emits effect0x28 at integer-truncated X+facing×10/Y−40 with palette
-0x13. The original-bound strict checker caught and corrected state220's
-subtle reset: when animation advances outside pose1, it must set
-`remainingHitCount=0`, not leave it unchanged. Native 221 applies
-1200/750.0 damage and places both fighters at four distinct pose-specific
-coordinates. `check_prefix.py` proves **39,596 continuous native code
-bytes / 10,872 original x86 instruction locations/widths/forms**, **977
-native internal and 132 original shared-return branch targets**, **865
-exact original-bound direct call/float operands** and 2 canonical
-native-local dispatch pointers. Only the original-width provisional stack
-immediate (`0x190` vs native `0x2E8`), shared-return routing (including
-one verified in-prefix trampoline) and independently target-bound COFF
-fields differ. **Next native case250 at `0x006113DC`**; other 39 live cases,
-full frame, switch/data and return still OPEN. Partial prefix evidence only,
+241's complete multi-stage airborne throw, 249's special-move
+hitstun/effect initialization, and 250's airborne startup/frame loop.
+State240 resets both fighters' frame/pose state, advances the owner to
+state241 and the opponent to state100, emits effect0 at integer-truncated
+X+facing×31/Y−82, and preserves the native airborne/state-range test for
+`remainingHitCount`. State241 applies horizontal offset/shake `(50,3)`,
+positions the opponent in states103/104/69 at three native offsets,
+applies `ApplyDamage(1300,500.0)`, sets opponent knockback velocities
+`(-3.0,3.0)`, and loops its last two frames until landing. State249 sets
+`field00dc=4`, `field00de=0xEC`, zeroes horizontal velocity, clears
+guard-input frames, sets hitstun60 and remainingHitCount1, and emits
+effect0x28 at integer-truncated X+facing×10/Y−40 with palette0x13.
+State250 records whether startup began airborne, adds25 meter on frame1,
+halves both velocity components, applies gravity0.025, shortens airborne
+frame timing by three ticks, loops to frame11, and transitions to state253
+when the later landing predicate succeeds. The original-bound strict
+checker caught and corrected state220's subtle reset: when animation
+advances outside pose1, it must set `remainingHitCount=0`, not leave it
+unchanged. Native 221 applies 1200/750.0 damage and places both fighters
+at four distinct pose-specific coordinates. `check_prefix.py` proves
+**40,032 continuous native code bytes / 10,993 original x86 instruction
+locations/widths/forms**, **989 native internal and 134 original
+shared-return branch targets**, **874 exact original-bound direct
+call/float operands** and 2 canonical native-local dispatch pointers.
+Only the original-width provisional stack immediate (`0x190` vs native
+`0x2E8`), shared-return routing (including one verified in-prefix
+trampoline) and independently target-bound COFF fields differ. **Next
+native case251 at `0x00611590`**; other 38 live cases, full frame,
+switch/data and return still OPEN. Partial prefix evidence only,
 **NOT whole-function Exact**; no cold all-unit replay/push.
 
 Shiori `Character08::Slot08` original vtable slot0x787E18 is
