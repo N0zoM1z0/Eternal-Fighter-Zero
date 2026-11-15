@@ -51,6 +51,9 @@ then verifies selected code against the canonical PE. Its evidence is
   materializing its **nine original-bound REL32 call operands**. This removes
   the former EAX/ECX/DX register-allocation cascade beginning at
   `0x0041FC1E`.
+- **Case304:** the complete **641-byte** case body is now byte-identical after
+  materializing its original-bound `FaceOpponent` REL32 call. Its final
+  counter/animation/pose-reset tail is pinned to the native register sequence.
 - **Case307:** the 25-byte meter subtraction/store sequence at `0x004205C2`
   now matches exactly, including the accumulator-specific `sub eax,0x7D0`.
 - **Case308:** the 25-byte sequence at `0x004207E0` now matches exactly,
@@ -70,10 +73,9 @@ bytes**. That audit normalizes GPR names and branch operands, so it is only a
 diagnostic, not a strict byte certificate.
 
 A focused per-case relocation-materialized comparison currently finds these
-whole cases byte-exact: **300, 301, 302, 303, 310, 311 and 319**. Cases
-**304–309 and 312–318** still contain register-allocation byte differences;
-307, 308 and 315 have only their meter arithmetic subregions pinned so far.
-The next attack is case304's tail (first remaining mismatch at native
-`0x0041FEFD` (case304 +0x22F)), then continue
-through 305–309 and 312–318. Do not call the whole boss Exact until all code
-bytes and all relocation operands are strictly reconstructed.
+whole cases byte-exact: **300, 301, 302, 303, 304, 310, 311 and 319**. Cases
+**305–309 and 312–318** still contain register-allocation byte differences;
+307, 308 and 315 have their meter arithmetic subregions pinned, but their
+remaining case bodies are still open. The next attack is **case305**, then
+continue through 306–309 and 312–318. Do not call the whole boss Exact until
+all code bytes and all relocation operands are strictly reconstructed.
