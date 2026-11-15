@@ -2286,8 +2286,8 @@ Original vtable `0x00788B94` selects the 59,143-byte native code
 owner `[0x00607930,0x00616037)`, with adjacent 139 DWORD switch
 pointers and 325 selectors (138 live, 187 default IDs).
 `workbench/character04-state/Character04State.cpp` now authors
-**default plus 135 native live cases** (1–9,13–16,47,50–77,81–87,
-96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–269,303–309,312,315–322).
+**default plus 137 native live cases** (1–9,13–16,47,50–77,81–87,
+96–99,150–158,161–171,180,200–216,220–221,230–232,240–241,249–269,303–309,312,315–324).
 Cases240–241 reconstruct the collision-result-3 grab handoff and the
 complete airborne throw: opponent states103/104/69, three native
 frame-specific XY offsets, horizontal offset/shake, native
@@ -2560,7 +2560,24 @@ velocityX/Y. Frame3/tick0 sets field0x14C=120, subtracts3000 from field
 effect0x1BE at (X,Y−15) with owner1, current facing, group2, layer0 and
 lifetime300, and sets field0x3144=2. Animation completion clears state and
 invokes the native virtual reset. All 120 native instructions match.
-case257–269 and 303–309,312,315–322 inline-assembly state blocks use narrow inline assembly
+Case323 is a 158-byte third simple aerial recovery reset. Frame0/tick0
+zeros velocityX/Y, then native tick/frame counters advance; completion
+clears state and invokes native virtual reset. All 45 native instructions
+match.
+Case324 is a 643-byte partner-handoff aerial throw. Before frame5 it applies
+horizontal shake (50,3). Frame0/tick0 resets the frame, sets field0x14C=120,
+subtracts3000 from field0x148, applies tint0xB0 for3 ticks, and emits global
+effects0x46/0x47 at integer (X−facing×19,Y−50) with palette0x40, group2
+and layer1. It sets byte0x2C9=0x25 and clears field0x16C. At frame4 when
+field0x168==3, it zeros owner velocityX/Y and the extra double at +0xB8,
+invokes owner virtual Reset and ResetFrame, resets partner via its virtual
+function, sets owner state0x145 and partner state0x79, and reapplies tint.
+Frame5/tick0 clears field0x3148 and sets field0x16C=1. On each completed
+animation frame it advances the frame counter and clears field0x168; at
+frame4 it compares partner +0x28 to original 0.0 and sets field0x16C.
+Animation completion clears state and invokes native virtual reset. All
+170 native instructions match.
+case257–269 and 303–309,312,315–324 inline-assembly state blocks use narrow inline assembly
 to retain native VC7.1 instruction order. Recent original 220–221
 reconstruct native multi-opponent throw, frame-specific XY placement,
 native `ApplyDamage(1200,750.0)`, partner pose resets, and the pose1-
@@ -2568,11 +2585,11 @@ specific hit-count reset branch. Original cases230–232 implement genuine
 variant airborne attack speeds, meter and sound gates.
 
 Dedicated `workbench/character04-state/check_prefix.py` confirms
-**57,567 consecutive native executable code bytes** from
-`[0x00607930,0x00615A0F)`, original SHA-256
-`d90500386637958adcb02492599b37d65345cf2b3bb8632643f08714e4695495`:
-**15,702 original x86 instruction offsets/widths/forms; 1,388
-internal +183 shared-return native branches; 1,069 independently
+**58,368 consecutive native executable code bytes** from
+`[0x00607930,0x00615D30)`, original SHA-256
+`af41c40d9a23f584368da859a192e62f2886da422d3fecf61cc30463d8be2afc`:
+**15,917 original x86 instruction offsets/widths/forms; 1,404
+internal +185 shared-return native branches; 1,078 independently
 original-bound COFF calls/float operands; two original local
 switch/selector addresses**. All other selected code bytes match;
 only the provisional stack immediate (`0x1C8` vs full native `0x2E8`),
@@ -2580,9 +2597,9 @@ ten explicitly bounded x87 scratch-slot displacement bytes (native
 `EBP-0x1BC` through `EBP-0x1CC` slots shifted by four bytes in the
 provisional frame), shared-return routing (including the verified
 in-prefix return trampoline) and target-bound COFF reloc fields are
-excepted. **Selected prefix, NOT full Exact**: 3 real live states,
-full original frame, local tables and return remain OPEN. Next case323
-at `0x00615A0F`. No cold all-unit replay.
+excepted. **Selected prefix, NOT full Exact**: 1 real live case,
+full original frame, local tables and return remain OPEN. Next case325
+at `0x00615D30`. No cold all-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

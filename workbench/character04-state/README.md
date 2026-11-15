@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **135 genuine live cases**: 1–9,13–16,
+the original default and **137 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–269,303–309,312,315–322. The other **3** native live case IDs remain OPEN.
+230–232,240–241,249–269,303–309,312,315–324. The other **1** native live case ID remains OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00615A0F)` now has **57,567
+The original code `[0x00607930,0x00615D30)` now has **58,368
 original executable bytes**, canonical SHA-256
-`d90500386637958adcb02492599b37d65345cf2b3bb8632643f08714e4695495`.
+`af41c40d9a23f584368da859a192e62f2886da422d3fecf61cc30463d8be2afc`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -446,15 +446,36 @@ field0x3144=2. Animation completion clears state and invokes the native
 virtual reset. All 120 native instructions match.
 
 
+State323 (`0x00615A0F`, 158 bytes) is a third simple aerial recovery reset.
+At frame0/tick0 it zeros velocityX/Y, advances native tick/frame counters,
+then clears state and invokes the native virtual reset at animation
+completion. All 45 native instructions match.
+
+State324 (`0x00615AAD`, 643 bytes) is the partner-handoff aerial throw.
+While the owner is before frame5 it applies horizontal shake `(50,3)`.
+Frame0/tick0 resets the frame, sets field0x14C=120, subtracts3000 from
+field0x148, applies tint0xB0 for3 ticks, and emits global effects0x46 and
+0x47 at integer-truncated `(X−facing×19,Y−50)` with palette0x40, group2
+and layer1. It sets byte0x2C9=0x25 and clears field0x16C. At frame4 when
+field0x168==3, it zeros owner velocityX/Y and the extra double at +0xB8,
+invokes the owner's virtual reset and ResetFrame, resets the partner via
+its virtual function, puts the owner in state0x145 and partner in state0x79,
+and reapplies tint0xB0. Frame5/tick0 clears field0x3148 and sets field0x16C=1.
+At each completed animation frame it advances the frame counter and clears
+field0x168; at frame4 it compares the partner's +0x28 double to original
+0.0 and sets field0x16C accordingly. Animation completion clears state and
+invokes the native virtual reset. All 170 native instructions match.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **15,702 original x86 instruction widths/positions and
-register-abstracted forms**, **1,388 original internal +183 native
-shared-return branch targets**, **1,069 independently original-bound
+It verifies **15,917 original x86 instruction widths/positions and
+register-abstracted forms**, **1,404 original internal +185 native
+shared-return branch targets**, **1,078 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
 stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
@@ -464,7 +485,7 @@ bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-**Next live native state323 starts `0x00615A0F`**. The remaining
-3 original live case bodies, full stack, 139-entry jump table,
+**Next live native state325 starts `0x00615D30`**. The remaining
+1 original live case body, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
