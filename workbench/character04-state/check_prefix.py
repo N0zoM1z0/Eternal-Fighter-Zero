@@ -3,7 +3,7 @@
 
 Only native default plus authored cases 1-9, 13-16, 47, 50-77,
 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221,
-230-232, 240-241, 249-269,303-307 are reviewed. The probe's 14 other live-case marker branches are not source and earn no credit.
+230-232, 240-241, 249-269,303-308 are reviewed. The probe's 13 other live-case marker branches are not source and earn no credit.
 This is a selected code prefix, NOT complete function Exact.
 """
 from pathlib import Path
@@ -14,9 +14,9 @@ sys.path.insert(0,str(ROOT/'scripts'))
 from common import verify_target,target_bytes
 from probe_prefix import BASE,CODE_SIZE,TABLE_BASE,SELECTOR_BASE,run,disasm,normalized
 
-END=0x006147FD
+END=0x00614B6A
 NATIVE_CODE_SHA='200261f2d50fa04663e62d285dd09cd0eeaf601fdee46e08b2798e8cf95b02a1'
-NATIVE_PREFIX_SHA='410ff60275dad6a8bd168cfd8030b8e7283f0a66bf4adac749750735c126c5e1'
+NATIVE_PREFIX_SHA='041e7fb27c4ecd659b1a2c090cd33ec6c761ef48072ef32870e29f50d8ec1e4d'
 EXTERNAL_CALLS={
     '??0EffectSpawn@@QAE@XZ':0x00405490,
     '?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z':0x00413090,
@@ -62,7 +62,7 @@ REAL_CASES={1:0x00607A4D,2:0x00607ABE,3:0x00607B2F,
             210:0x0060F8F1,211:0x0060FB12,212:0x0060FC9A,
             213:0x0060FE22,214:0x0061004F,215:0x0061027C,216:0x006104A9,
             220:0x006105D8,221:0x006107B4,
-            230:0x00610A47,231:0x00610B78,232:0x00610CA9,240:0x00610DDA,241:0x00610FCC,249:0x0061129C,250:0x006113DC,251:0x00611590,252:0x00611767,253:0x00611A7D,254:0x00611B49,255:0x00611DB0,256:0x00612093,257:0x0061237E,258:0x00612569,259:0x00612757,260:0x0061294C,261:0x00612BEE,262:0x00612CDD,263:0x00612DFD,264:0x00612F90,265:0x00613123,266:0x006133B5,267:0x006134F0,268:0x00613632,269:0x00613774,303:0x00613824,304:0x00613B1F,305:0x00613E1A,306:0x006141C6,307:0x006144B9}
+            230:0x00610A47,231:0x00610B78,232:0x00610CA9,240:0x00610DDA,241:0x00610FCC,249:0x0061129C,250:0x006113DC,251:0x00611590,252:0x00611767,253:0x00611A7D,254:0x00611B49,255:0x00611DB0,256:0x00612093,257:0x0061237E,258:0x00612569,259:0x00612757,260:0x0061294C,261:0x00612BEE,262:0x00612CDD,263:0x00612DFD,264:0x00612F90,265:0x00613123,266:0x006133B5,267:0x006134F0,268:0x00613632,269:0x00613774,303:0x00613824,304:0x00613B1F,305:0x00613E1A,306:0x006141C6,307:0x006144B9,308:0x006147FD}
 BRANCH=re.compile(r'^j\w+\s+(?:(?:near|short)\s+)?0x([0-9a-f]+)$')
 
 def main():
@@ -72,7 +72,7 @@ def main():
     assert len(whole)==59143 and hashlib.sha256(whole).hexdigest()==NATIVE_CODE_SHA
     assert target_bytes(image,0x00616033,4)==bytes.fromhex('8be55dc3')
     orig=whole[:END-BASE]
-    assert len(orig)==52941 and hashlib.sha256(orig).hexdigest()==NATIVE_PREFIX_SHA
+    assert len(orig)==53818 and hashlib.sha256(orig).hexdigest()==NATIVE_PREFIX_SHA
     # The two state265 x87 resource costs are pinned raw absolute operands;
     # verify both instruction bytes and the original 500/250 constants.
     assert target_bytes(image,0x00787C30,8)==struct.pack('<d',500.0)
@@ -117,6 +117,17 @@ def main():
                    (0x00614652,'dc25e07c7800')):
         raw=bytes.fromhex(raw)
         assert orig[va-BASE:va-BASE+len(raw)]==raw,(hex(va),orig[va-BASE:va-BASE+len(raw)].hex())
+    # State308 additionally scales the opponent's post-hit property from
+    # this owner's comboDamageScale (200 * scale / 10000).
+    for va,value in ((0x00787E70,200.0),(0x00787C00,10000.0)):
+        assert target_bytes(image,va,8)==struct.pack('<d',value),(hex(va),target_bytes(image,va,8).hex())
+    for va,raw in ((0x00614823,'dd05f0727800'),(0x0061487D,'dc05f8727800'),
+                   (0x0061488C,'dd05f8727800'),(0x0061492D,'dd05f8727800'),
+                   (0x00614941,'dd05587d7800'),(0x0061495A,'dd05488b7800'),
+                   (0x00614976,'dd05707e7800'),(0x00614982,'dc35007c7800'),
+                   (0x006149BF,'dc25e07c7800')):
+        raw=bytes.fromhex(raw)
+        assert orig[va-BASE:va-BASE+len(raw)]==raw,(hex(va),orig[va-BASE:va-BASE+len(raw)].hex())
     # State305's capture/throw operands and both post-hit local-effect Y
     # coordinates are independently pinned to original PE data.
     for va,value in ((0x00787C28,10.0),(0x00787C10,20.0),(0x00788530,38.0)):
@@ -137,13 +148,13 @@ def main():
     for case,addr in REAL_CASES.items():
         ordinal=selectors[case-1]
         assert ordinal!=138 and struct.unpack_from('<I',table,4*ordinal)[0]==addr
-    assert [struct.unpack_from('<I',table,i*4)[0] for i in range(124)]==[
-        REAL_CASES[i] for i in list(range(1,10))+[13,14,15,16,47]+list(range(50,78))+list(range(81,88))+list(range(96,100))+list(range(150,159))+list(range(161,172))+[180]+list(range(200,217))+[220,221,230,231,232,240,241,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,303,304,305,306,307]]
-    used,original,compiled,relocs=run(307)
+    assert [struct.unpack_from('<I',table,i*4)[0] for i in range(125)]==[
+        REAL_CASES[i] for i in list(range(1,10))+[13,14,15,16,47]+list(range(50,78))+list(range(81,88))+list(range(96,100))+list(range(150,159))+list(range(161,172))+[180]+list(range(200,217))+[220,221,230,231,232,240,241,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,303,304,305,306,307,308]]
+    used,original,compiled,relocs=run(308)
     assert used==set(REAL_CASES)
     target_ins=disasm(orig)
     candidate_ins=disasm(compiled)
-    assert len(target_ins)==14472 and len(candidate_ins)>len(target_ins)
+    assert len(target_ins)==14706 and len(candidate_ins)>len(target_ins)
     assert target_ins[2][2]=='sub esp,0x2e8'
     assert candidate_ins[2][2]=='sub esp,0x1c8'
     shift=0  # full six-byte opcode form restored; only stack-imm operand differs
@@ -220,11 +231,11 @@ def main():
             ignore_candidate_bytes.update({b[0]+k:'shared return displacement'
                                            for k in range(1,5)})
             outbound+=1
-    assert (internal,outbound)==(1289,169),(internal,outbound)
+    assert (internal,outbound)==(1312,170),(internal,outbound)
     relocations=[r for r in relocs if r['offset']<len(orig)-shift]
     local=[r for r in relocations if 'local_target_offset' in r]
     external=[r for r in relocations if 'local_target_offset' not in r]
-    assert len(relocations)==1037 and len(local)==2 and len(external)==1035
+    assert len(relocations)==1041 and len(local)==2 and len(external)==1039
     expected_locals={SELECTOR_BASE:candidate_table+556,TABLE_BASE:candidate_table}
     for r in relocations:
         off=r['offset'];pos=off+shift
@@ -251,9 +262,9 @@ def main():
                 raw.append((hex(BASE+a[0]+k),a[2],b[2]))
     assert not raw,raw[:15]
     print('Character04 Slot06 selected original-bound prefix PASS (NOT full Exact):')
-    print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221, 230-232, 240-241, 249-269,303-307 + default')
+    print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221, 230-232, 240-241, 249-269,303-308 + default')
     print(f'  {len(orig)} original code bytes, {len(target_ins)} x86 instructions, {internal} native internal + {outbound} shared-return branches')
     print(f'  {len(external)} original-bound calls / IEEE-754 operands + {len(local)} native-local selector/table pointers')
     print('  Remaining explicit exceptions: provisional stack size, ten x87 scratch-slot displacement bytes, shared returns and native-bound COFF fields.')
-    print('  Still OPEN: remaining 14 real cases, original 0x2E8 stack and full original table/shared return; NOT Exact.')
+    print('  Still OPEN: remaining 13 real cases, original 0x2E8 stack and full original table/shared return; NOT Exact.')
 if __name__=='__main__':main()
