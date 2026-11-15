@@ -4352,5 +4352,226 @@ void Character04::Slot06()
         return;
 
 
+    case 260: // Character04 native 0x0061294C: aerial capture and dual-effect setup
+        __asm {
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            test ecx, ecx
+            jnz state260_skip_setup
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ch]
+            test eax, eax
+            jnz state260_skip_setup
+            mov ecx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+30h]
+            mov edx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+38h]
+            mov eax, dword ptr [ebp-54h]
+            mov byte ptr [eax+2C8h], 5
+            mov ecx, dword ptr [ebp-54h]
+            mov dword ptr [ecx+3148h], 02710h
+            mov edx, dword ptr [ebp-54h]
+            mov dword ptr [edx+314Ch], 1
+            mov eax, dword ptr [ebp-54h]
+            mov dword ptr [eax+3150h], 1
+            mov word ptr [ebp-4Ch], 01Fh
+            mov ecx, dword ptr [ebp-54h]
+            fld qword ptr [ecx+20h]
+            call _ftol2
+            mov dword ptr [ebp-200h], eax
+            fild dword ptr [ebp-200h]
+            fstp qword ptr [ebp-48h]
+            mov edx, dword ptr [ebp-54h]
+            fld qword ptr [edx+28h]
+            call _ftol2
+            mov dword ptr [ebp-204h], eax
+            fild dword ptr [ebp-204h]
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h], 0
+            mov byte ptr [ebp-2Fh], 1
+            mov eax, dword ptr [ebp-54h]
+            movsx ecx, byte ptr [eax+50h]
+            sub ecx, -1
+            neg ecx
+            sbb ecx, ecx
+            inc ecx
+            mov dword ptr [ebp-34h], ecx
+            lea edx, [ebp-50h]
+            push edx
+            mov eax, dword ptr [ebp-54h]
+            mov ecx, dword ptr [eax+7Ch]
+            call Context::EmitEffect
+            mov word ptr [ebp-4Ch], 0191h
+            mov ecx, dword ptr [ebp-54h]
+            fld qword ptr [ecx+20h]
+            call _ftol2
+            mov dword ptr [ebp-208h], eax
+            fild dword ptr [ebp-208h]
+            fstp qword ptr [ebp-48h]
+            mov edx, dword ptr [ebp-54h]
+            cmp dword ptr [edx+3140h], 1
+            jnz state260_skip_right_offset
+            mov eax, dword ptr [ebp-54h]
+            fld qword ptr [eax+20h]
+            call _ftol2
+            mov ecx, dword ptr [ebp-54h]
+            movsx edx, byte ptr [ecx+50h]
+            imul edx, edx, 03Ch
+            add eax, edx
+            mov dword ptr [ebp-20Ch], eax
+            fild dword ptr [ebp-20Ch]
+            fstp qword ptr [ebp-48h]
+            mov eax, dword ptr [ebp-54h]
+            fld qword ptr [eax+20h]
+            call _ftol2
+            mov ecx, dword ptr [ebp-54h]
+            movsx edx, byte ptr [ecx+50h]
+            imul edx, edx, 03Ch
+            add eax, edx
+            cmp eax, 0258h
+            jng state260_right_no_top_clamp
+            _emit 0DDh
+            _emit 005h
+            _emit 0C0h
+            _emit 080h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ebp-48h]
+        state260_right_no_top_clamp:
+            mov eax, dword ptr [ebp-54h]
+            fld qword ptr [eax+20h]
+            call _ftol2
+            mov ecx, dword ptr [ebp-54h]
+            movsx edx, byte ptr [ecx+50h]
+            imul edx, edx, 03Ch
+            add eax, edx
+            cmp eax, 028h
+            jnl state260_right_no_bottom_clamp
+            _emit 0DDh
+            _emit 005h
+            _emit 0E0h
+            _emit 07Ch
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ebp-48h]
+        state260_right_no_bottom_clamp:
+        state260_skip_right_offset:
+            mov eax, dword ptr [ebp-54h]
+            cmp dword ptr [eax+3140h], 2
+            jnz state260_skip_left_offset
+            mov ecx, dword ptr [ebp-54h]
+            fld qword ptr [ecx+20h]
+            call _ftol2
+            mov edx, dword ptr [ebp-54h]
+            movsx ecx, byte ptr [edx+50h]
+            imul ecx, ecx, 03Ch
+            sub eax, ecx
+            mov dword ptr [ebp-210h], eax
+            fild dword ptr [ebp-210h]
+            fstp qword ptr [ebp-48h]
+            mov edx, dword ptr [ebp-54h]
+            fld qword ptr [edx+20h]
+            call _ftol2
+            mov ecx, dword ptr [ebp-54h]
+            movsx edx, byte ptr [ecx+50h]
+            imul edx, edx, 03Ch
+            sub eax, edx
+            cmp eax, 0258h
+            jng state260_left_no_top_clamp
+            _emit 0DDh
+            _emit 005h
+            _emit 0C0h
+            _emit 080h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ebp-48h]
+        state260_left_no_top_clamp:
+            mov eax, dword ptr [ebp-54h]
+            fld qword ptr [eax+20h]
+            call _ftol2
+            mov ecx, dword ptr [ebp-54h]
+            movsx edx, byte ptr [ecx+50h]
+            imul edx, edx, 03Ch
+            sub eax, edx
+            cmp eax, 028h
+            jnl state260_left_no_bottom_clamp
+            _emit 0DDh
+            _emit 005h
+            _emit 0E0h
+            _emit 07Ch
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ebp-48h]
+        state260_left_no_bottom_clamp:
+        state260_skip_left_offset:
+            mov eax, dword ptr [ebp-54h]
+            fld qword ptr [eax+28h]
+            call _ftol2
+            sub eax, 011h
+            mov dword ptr [ebp-214h], eax
+            fild dword ptr [ebp-214h]
+            fstp qword ptr [ebp-40h]
+            mov ecx, dword ptr [ebp-54h]
+            mov dl, byte ptr [ecx+50h]
+            mov byte ptr [ebp-38h], dl
+            mov byte ptr [ebp-30h], 2
+            mov byte ptr [ebp-2Fh], 1
+            mov dword ptr [ebp-50h], 1
+            lea eax, [ebp-50h]
+            push eax
+            mov ecx, dword ptr [ebp-54h]
+            mov edx, dword ptr [ecx]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [edx+24h]
+        state260_skip_setup:
+            mov eax, dword ptr [ebp-54h]
+            mov cx, word ptr [eax+0Ch]
+            add cx, 1
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+0Ch], cx
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ch]
+            movzx edx, word ptr [ebp-04h]
+            cmp ecx, edx
+            jl state260_tick_done
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+0Ch], 0
+            mov ecx, dword ptr [ebp-54h]
+            mov dx, word ptr [ecx+0Ah]
+            add dx, 1
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+0Ah], dx
+            mov ecx, dword ptr [ebp-54h]
+            mov dword ptr [ecx+168h], 0
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ah]
+            movzx ecx, word ptr [ebp-08h]
+            cmp eax, ecx
+            jl state260_tick_done
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+08h], 0
+            mov eax, dword ptr [ebp-54h]
+            mov edx, dword ptr [eax]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [edx]
+        }
+        FaceOpponent();
+        __asm {
+        state260_tick_done:
+        }
+        return;
+
     }
 }
