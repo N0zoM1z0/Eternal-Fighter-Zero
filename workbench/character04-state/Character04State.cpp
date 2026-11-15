@@ -4573,5 +4573,103 @@ void Character04::Slot06()
         }
         return;
 
+    case 261: // Character04 native 0x00612BEE: aerial deceleration recovery
+        __asm {
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            test ecx, ecx
+            jnz state261_skip_startup
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ch]
+            test eax, eax
+            jnz state261_skip_startup
+            mov ecx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 028h
+            _emit 073h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ecx+30h]
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+16Ch], 1
+        state261_skip_startup:
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ah]
+            cmp ecx, 6
+            jng state261_skip_decay
+            mov edx, dword ptr [ebp-54h]
+            fld qword ptr [edx+30h]
+            _emit 0DCh
+            _emit 025h
+            _emit 088h
+            _emit 07Fh
+            _emit 078h
+            _emit 000h
+            mov eax, dword ptr [ebp-54h]
+            fstp qword ptr [eax+30h]
+        state261_skip_decay:
+            mov ecx, dword ptr [ebp-54h]
+            fld qword ptr [ecx+30h]
+            _emit 0DCh
+            _emit 01Dh
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fnstsw ax
+            test ah, 05h
+            jpe state261_no_floor
+            mov edx, dword ptr [ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+30h]
+        state261_no_floor:
+            mov eax, dword ptr [ebp-54h]
+            mov cx, word ptr [eax+0Ch]
+            add cx, 1
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+0Ch], cx
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ch]
+            movzx edx, word ptr [ebp-04h]
+            cmp ecx, edx
+            jl state261_tick_done
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+0Ch], 0
+            mov ecx, dword ptr [ebp-54h]
+            mov dx, word ptr [ecx+0Ah]
+            add dx, 1
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+0Ah], dx
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ah]
+            cmp edx, 1
+            jnz state261_skip_collision_clear
+            mov eax, dword ptr [ebp-54h]
+            mov dword ptr [eax+168h], 0
+        state261_skip_collision_clear:
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ah]
+            movzx eax, word ptr [ebp-08h]
+            cmp edx, eax
+            jl state261_tick_done
+            mov ecx, dword ptr [ebp-54h]
+            mov word ptr [ecx+08h], 0
+        }
+        FaceOpponent();
+        __asm {
+            mov edx, dword ptr [ebp-54h]
+            mov eax, dword ptr [edx]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [eax]
+        state261_tick_done:
+        }
+        return;
+
     }
 }
