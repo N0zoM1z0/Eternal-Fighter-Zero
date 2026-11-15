@@ -2,9 +2,9 @@
 
 **PARTIAL: not whole-function Exact.** Authored C++ (with narrowly
 scoped VC7.1 inline assembly for register-sensitive x87 code) covers
-the original default and **126 genuine live cases**: 1–9,13–16,
+the original default and **127 genuine live cases**: 1–9,13–16,
 47,50–77,81–87,96–99,150–158,161–171,180,200–216,220–221,
-230–232,240–241,249–269,303–309. The other **12** native live case IDs remain OPEN.
+230–232,240–241,249–269,303–309,312. The other **11** native live case IDs remain OPEN.
 Throwaway compilation markers never earn original source credit.
 
 ## Original PE ownership and dispatch
@@ -21,9 +21,9 @@ Throwaway compilation markers never earn original source credit.
 
 ## Current audited continuous prefix
 
-The original code `[0x00607930,0x00614D70)` now has **54,336
+The original code `[0x00607930,0x006150C3)` now has **55,187
 original executable bytes**, canonical SHA-256
-`4889bee6b6f3a1f671de989b782aab0be8694670ae5b3c24b0e01ff69b30e79a`.
+`8c554e9c199cd4ad6c709f2faa9e5fa90e7dfab82bf994c2ebd3fa5f7734a3c0`.
 New real C++ cases220–221 reconstruct an actual two-character
 grab and four-stage throw. Case220 zeroes both speeds, transitions
 own pose221 and opponent pose108, triggers original effect0 at
@@ -368,15 +368,33 @@ positive and increments field0x3138. Animation completion clears state
 and invokes the native virtual reset. All 133 native instructions match.
 
 
+State312 (`0x00614D70`, 851 bytes) is the scaled-damage looping throw
+variant of states307/308. Frame0/tick0 clears field0x3138, sets velocityX
+0.3, places owner X at `opponentX+facing×30`, and clears
+attackCollisionResult. Frame9/tick0 sets velocityX=0; frame11/tick0 sets
+byte0x2C9=0x14; frame14/tick0 sets byte0x2C8=2. At frame15/tick0, only
+when field0x3138==7, it puts the opponent in state0x47, clears opponent
+hitstop, sets opponent X=0 and Y=−8.0, sets attackCollisionResult=2,
+applies `ApplyDamage(4200,750.0)`, then writes opponent field0x124 as
+`ftol2(200.0×comboDamageScale/10000.0)`. It emits effect0x34 at
+`(opponentX,opponentY−40)` with palette0x16, group2 and layer1. Frames1–14
+apply horizontal shake `(50,10)`. Frame6 loops back to4 while the counter
+is below9; frame9 adds `facing×80` to owner X and clears the counter;
+frame13 loops back to11 while the counter is below12; frame14 latches12.
+At animation completion, a nonzero counter loops back two frames and
+decrements; only zero clears state and invokes virtual ResetPose. All 230
+native instructions match.
+
+
 Focused canonical selected-prefix check:
 
 ```bash
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-It verifies **14,839 original x86 instruction widths/positions and
-register-abstracted forms**, **1,318 original internal +171 native
-shared-return branch targets**, **1,047 independently original-bound
+It verifies **15,069 original x86 instruction widths/positions and
+register-abstracted forms**, **1,341 original internal +172 native
+shared-return branch targets**, **1,051 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
 addresses. The only explicit differences are the provisional six-byte
 stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
@@ -386,7 +404,7 @@ bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-**Next live native state312 starts `0x00614D70`**. The remaining
-12 original live case bodies, full stack, 139-entry jump table,
+**Next live native state315 starts `0x006150C3`**. The remaining
+11 original live case bodies, full stack, 139-entry jump table,
 325 selector bytes and shared return remain OPEN. This certificate
 is **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
