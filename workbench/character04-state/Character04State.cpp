@@ -7278,6 +7278,154 @@ void Character04::Slot06()
         state308_exit:
         }
         return;
+    case 309: // Character04 native 0x00614B6A: triple-effect capture with looping hitstun
+        // Frame 0 launches global effects 0x46/0x47 at (X,Y-40), then local
+        // effect 0x1AB at (X+facing*20,0). Frame 6 revisits frame 2 while
+        // the 120-frame capture timer remains positive; preserve field3138
+        // as the native loop counter rather than collapsing this into a timer.
+        __asm {
+            push 3h
+            push 32h
+            mov ecx,[ebp-54h]
+            call SetHorizontalShake
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            test ecx,ecx
+            jnz state309_00614CBC
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state309_00614CBC
+            mov ecx,[ebp-54h]
+            mov byte ptr [ecx+2C8h],3h
+            mov ecx,[ebp-54h]
+            call ResetFrame
+            mov edx,[ebp-54h]
+            mov word ptr [edx+14Ch],78h
+            mov eax,[ebp-54h]
+            movsx ecx,word ptr [eax+148h]
+            sub ecx,0BB8h
+            mov edx,[ebp-54h]
+            mov [edx+148h],cx
+            push 3h
+            push 0B0h
+            mov ecx,[ebp-54h]
+            call SetTint
+            mov word ptr [ebp-4Ch],46h
+            mov byte ptr [ebp-24h],40h
+            mov eax,[ebp-54h]
+            fld qword ptr [eax+20h]
+            call _ftol2
+            mov [ebp-298h],eax
+            fild dword ptr [ebp-298h]
+            fstp qword ptr [ebp-48h]
+            mov ecx,[ebp-54h]
+            fld qword ptr [ecx+28h]
+            call _ftol2
+            sub eax,28h
+            mov [ebp-29Ch],eax
+            fild dword ptr [ebp-29Ch]
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h],2h
+            mov dword ptr [ebp-50h],1h
+            mov byte ptr [ebp-2Fh],1h
+            lea edx,[ebp-50h]
+            push edx
+            mov eax,[ebp-54h]
+            mov ecx,[eax+7Ch]
+            call Context::EmitEffect
+            mov word ptr [ebp-4Ch],47h
+            lea ecx,[ebp-50h]
+            push ecx
+            mov edx,[ebp-54h]
+            mov ecx,[edx+7Ch]
+            call Context::EmitEffect
+            mov eax,[ebp-54h]
+            mov byte ptr [eax+2C9h],25h
+            mov word ptr [ebp-4Ch],1ABh
+            mov ecx,[ebp-54h]
+            fld qword ptr [ecx+20h]
+            call _ftol2
+            mov edx,[ebp-54h]
+            movsx ecx,byte ptr [edx+50h]
+            imul ecx,ecx,14h
+            add eax,ecx
+            mov [ebp-2A0h],eax
+            fild dword ptr [ebp-2A0h]
+            fstp qword ptr [ebp-48h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ebp-40h]
+            mov dword ptr [ebp-20h],1h
+            mov edx,[ebp-54h]
+            mov al,[edx+50h]
+            mov [ebp-38h],al
+            mov byte ptr [ebp-30h],2h
+            mov dword ptr [ebp-50h],1h
+            mov byte ptr [ebp-2Fh],1h
+            lea ecx,[ebp-50h]
+            push ecx
+            mov edx,[ebp-54h]
+            mov eax,[edx]
+            mov ecx,[ebp-54h]
+            call dword ptr [eax+24h]
+        state309_00614CBC:
+            mov ecx,[ebp-54h]
+            mov dx,[ecx+0Ch]
+            add dx,1h
+            mov eax,[ebp-54h]
+            mov [eax+0Ch],dx
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ch]
+            movzx eax,word ptr [ebp-4h]
+            cmp edx,eax
+            jl state309_exit
+            mov ecx,[ebp-54h]
+            mov word ptr [ecx+0Ch],0
+            mov edx,[ebp-54h]
+            mov ax,[edx+0Ah]
+            add ax,1h
+            mov ecx,[ebp-54h]
+            mov [ecx+0Ah],ax
+            mov edx,[ebp-54h]
+            mov dword ptr [edx+168h],0
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            cmp ecx,6h
+            jnz state309_00614D49
+            mov edx,[ebp-54h]
+            movsx eax,word ptr [edx+14Ch]
+            test eax,eax
+            jng state309_00614D49
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            sub edx,4h
+            mov eax,[ebp-54h]
+            mov [eax+0Ah],dx
+            mov ecx,[ebp-54h]
+            mov edx,[ecx+3138h]
+            add edx,1h
+            mov eax,[ebp-54h]
+            mov [eax+3138h],edx
+        state309_00614D49:
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            movzx eax,word ptr [ebp-8h]
+            cmp edx,eax
+            jl state309_exit
+            mov ecx,[ebp-54h]
+            mov word ptr [ecx+8h],0
+            mov edx,[ebp-54h]
+            mov eax,[edx]
+            mov ecx,[ebp-54h]
+            call dword ptr [eax]
+        state309_exit:
+        }
+        return;
 
     }
 }
