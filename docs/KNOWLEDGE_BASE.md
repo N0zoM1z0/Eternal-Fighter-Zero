@@ -2606,13 +2606,12 @@ Dedicated `workbench/character04-state/check_prefix.py` confirms
 internal +187 shared-return native branches; 1,087 independently
 original-bound COFF calls/float operands; two original local
 switch/selector addresses**. All other selected code bytes match;
-only the provisional stack immediate (`0x1C8` vs full native `0x2E8`),
+only the split stack prologue (`0x1C8` compiler frame plus inline `0x120` tail, exact `0x2E8` total),
 ten explicitly bounded x87 scratch-slot displacement bytes (native
 `EBP-0x1BC` through `EBP-0x1CC` slots shifted by four bytes in the
 provisional frame), shared-return routing (including the verified
 in-prefix return trampoline) and target-bound COFF reloc fields are
-excepted. **Selected prefix, NOT full Exact**: all 138 real live case bodies,
-full original frame, local tables and return remain OPEN. All live case bodies are covered; exact frame, switch data and shared return remain OPEN. No cold all-unit replay.
+excepted. **Selected prefix, NOT full Exact**: all 138 live case bodies, exact 139-entry jump-table target order and all 325 selector bytes are covered. Remaining byte differences are the single-instruction prologue, ten x87 scratch slots, shared-return layout and target-bound COFF relocations. No cold all-unit replay.
 
 ### Character04 Slot01: 2,248-byte four-layer native Exact renderer
 

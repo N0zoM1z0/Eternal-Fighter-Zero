@@ -494,12 +494,12 @@ It verifies **16,127 original x86 instruction widths/positions and
 register-abstracted forms**, **1,417 original internal +187 native
 shared-return branch targets**, **1,087 independently original-bound
 COFF call/IEEE-754 references**, and two original local dispatch
-addresses. The only explicit differences are the provisional six-byte
-stack immediate (`0x1C8` vs native `0x2E8`), ten low bytes of the
+addresses. The only explicit differences are the split stack prologue (`sub esp,0x1C8`
+plus inline `sub esp,0x120`, reserving the exact native total `0x2E8`), ten low bytes of the
 frame-6/launch x87 integer-conversion scratch-slot displacements (native
 slots `EBP-0x1BC` through `EBP-0x1CC`, provisional slots shifted by four
 bytes), shared-return routing (including the verified in-prefix return
 trampoline), and original-bound COFF fields. No arbitrary branch-target
 differences or source padding are accepted.
 
-All **138 real live case bodies** now have source coverage. Remaining Exactness work is the native `0x2E8` stack allocation, full 139-entry jump table, 325 selector bytes, shared-return layout and the explicitly bounded COFF/x87 differences. This certificate remains **selected-prefix only, NOT whole Exact**; no all-unit cold replay.
+All **138 real live case bodies** now have source coverage. The 139-entry jump-table target order and all 325 selector bytes are verified exactly. Remaining Exactness work is the single-instruction native prologue, ten x87 scratch-slot bytes, shared-return layout and target-bound COFF relocation fields. This certificate remains **selected-prefix only, NOT whole Exact**; no all-unit cold replay.

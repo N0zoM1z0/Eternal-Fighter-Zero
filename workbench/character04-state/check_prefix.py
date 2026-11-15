@@ -222,7 +222,19 @@ def main():
     target_by_offset={x[0]:x for x in target_ins}
     candidate_by_offset={x[0]:x for x in candidate_ins}
     candidate_table=len(compiled)-556-325
+    candidate_selector=candidate_table+556
     candidate_epilogue=candidate_table-4
+    # The compiler-generated 325-byte selector is byte-identical. Its 139
+    # jump-table relocations target the exact original case-entry ordering.
+    assert compiled[candidate_selector:candidate_selector+325]==selectors
+    candidate_table_relocs=sorted(
+        (r for r in relocs if candidate_table<=r['offset']<candidate_table+556),
+        key=lambda r:r['offset'])
+    assert len(candidate_table_relocs)==139
+    for i,r in enumerate(candidate_table_relocs):
+        native_va=struct.unpack_from('<I',table,4*i)[0]
+        assert r['offset']==candidate_table+4*i and r['type']=='DIR32'
+        assert r.get('local_target_offset')==native_va-BASE-code_shift,(i,r,hex(native_va))
     assert candidate_by_offset[candidate_epilogue][2]=='mov esp,ebp'
     assert candidate_by_offset[candidate_epilogue+2][2]=='pop ebp'
     assert candidate_by_offset[candidate_epilogue+3][2]=='ret'
@@ -342,6 +354,7 @@ def main():
     print('  native original 59,143-byte boss; 138 live IDs + 187 defaults; reviewed real states 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 180, 200-216, 220-221, 230-232, 240-241, 249-269,303-309,312,315-325 + default')
     print(f'  {len(orig)} original code bytes, {len(target_ins)} x86 instructions, {internal} native internal + {outbound} shared-return branches')
     print(f'  {len(external)} original-bound calls / IEEE-754 operands + {len(local)} native-local selector/table pointers')
-    print('  Remaining explicit exceptions: provisional stack size, ten x87 scratch-slot displacement bytes, shared returns and native-bound COFF fields.')
-    print('  Still OPEN: no real case bodies; original 0x2E8 stack and full original table/shared return remain NOT Exact.')
+    print(f'  Exact dispatch data: 139-entry table target order + 325 selector bytes; {len(candidate_table_relocs)} table labels bound to original case order')
+    print('  Remaining explicit byte differences: split 0x2E8 stack prologue (0x1C8 + 0x120), ten x87 scratch-slot displacements, shared-return routing and target-bound COFF fields.')
+    print('  All 138 live cases and dispatch data are covered; exact one-instruction prologue, x87 scratch bytes and shared-return layout remain NOT Exact.')
 if __name__=='__main__':main()
