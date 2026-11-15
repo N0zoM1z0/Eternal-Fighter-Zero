@@ -7791,7 +7791,7 @@ void Character04::Slot06()
             mov word ptr [edx+0Ah],0
             // Native near jump to the shared epilogue; preserve E9 rel32 width.
             _emit 0E9h
-            _emit 0FEh
+            _emit 013h
             _emit 000h
             _emit 000h
             _emit 000h
@@ -7806,6 +7806,8 @@ void Character04::Slot06()
         }
         return;
     case 316: // Character04 native 0x0061519F: alternate zero-velocity hitstun recovery
+        // This sibling preserves the same frame-0/1 reset and field3144==1
+        // re-entry gate, but has its own native register and return layout.
         __asm {
             mov eax,[ebp-54h]
             movzx ecx,word ptr [eax+0Ah]
@@ -7872,7 +7874,12 @@ void Character04::Slot06()
             jnz state316_00615263
             mov edx,[ebp-54h]
             mov word ptr [edx+0Ah],0
-            jmp state316_exit
+            // Native near jump to the shared epilogue; preserve E9 rel32 width.
+            _emit 0E9h
+            _emit 013h
+            _emit 000h
+            _emit 000h
+            _emit 000h
         state316_00615263:
             mov eax,[ebp-54h]
             mov word ptr [eax+8h],0
