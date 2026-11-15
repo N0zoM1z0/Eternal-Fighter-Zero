@@ -6707,6 +6707,281 @@ void Character04::Slot06()
         state306_exit:
         }
         return;
+    case 307: // Character04 native 0x006144B9: looping multi-stage aerial throw variant
+        __asm {
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            test edx,edx
+            jnz state307_0061451C
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ch]
+            test ecx,ecx
+            jnz state307_0061451C
+            mov edx,[ebp-54h]
+            mov dword ptr [edx+3138h],0
+            mov eax,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F0h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [eax+30h]
+            mov ecx,[ebp-54h]
+            mov edx,[ecx+78h]
+            mov eax,[edx]
+            mov ecx,[ebp-54h]
+            movsx edx,byte ptr [ecx+50h]
+            imul edx,edx,1Eh
+            mov [ebp-288h],edx
+            fild dword ptr [ebp-288h]
+            fadd qword ptr [eax+20h]
+            mov eax,[ebp-54h]
+            fstp qword ptr [eax+20h]
+            mov ecx,[ebp-54h]
+            mov dword ptr [ecx+168h],0
+        state307_0061451C:
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ah]
+            cmp eax,9h
+            jnz state307_00614551
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ch]
+            test edx,edx
+            jnz state307_00614551
+            mov eax,[ebp-54h]
+            fld qword ptr [eax+20h]
+            _emit 0DCh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            mov ecx,[ebp-54h]
+            fstp qword ptr [ecx+20h]
+            mov edx,[ebp-54h]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+30h]
+        state307_00614551:
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            cmp ecx,0Bh
+            jnz state307_00614572
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ch]
+            test eax,eax
+            jnz state307_00614572
+            mov ecx,[ebp-54h]
+            mov byte ptr [ecx+2C9h],14h
+        state307_00614572:
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ah]
+            cmp eax,0Eh
+            jnz state307_00614593
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ch]
+            test edx,edx
+            jnz state307_00614593
+            mov eax,[ebp-54h]
+            mov byte ptr [eax+2C8h],2h
+        state307_00614593:
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            cmp edx,0Fh
+            jnz state307_00614672
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ch]
+            test ecx,ecx
+            jnz state307_00614672
+            mov edx,[ebp-54h]
+            cmp dword ptr [edx+3138h],7h
+            jnz state307_00614672
+            mov eax,[ebp-54h]
+            mov ecx,[eax+78h]
+            mov edx,[ecx]
+            mov word ptr [edx+8h],47h
+            mov eax,[ebp-54h]
+            mov ecx,[eax+78h]
+            mov edx,[ecx]
+            mov word ptr [edx+14Ah],0
+            mov eax,[ebp-54h]
+            mov ecx,[eax+78h]
+            mov edx,[ecx]
+            _emit 0DDh
+            _emit 005h
+            _emit 0F8h
+            _emit 072h
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+0C0h]
+            mov eax,[ebp-54h]
+            mov ecx,[eax+78h]
+            mov edx,[ecx]
+            _emit 0DDh
+            _emit 005h
+            _emit 058h
+            _emit 07Dh
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [edx+0C8h]
+            mov eax,[ebp-54h]
+            mov dword ptr [eax+168h],2h
+            _emit 0DDh
+            _emit 005h
+            _emit 048h
+            _emit 08Bh
+            _emit 078h
+            _emit 000h
+            sub esp,8h
+            fstp qword ptr [esp]
+            push 0C80h
+            mov ecx,[ebp-54h]
+            call ApplyDamage
+            mov word ptr [ebp-4Ch],34h
+            mov ecx,[ebp-54h]
+            mov edx,[ecx+78h]
+            mov eax,[edx]
+            fld qword ptr [eax+20h]
+            fstp qword ptr [ebp-48h]
+            mov byte ptr [ebp-24h],16h
+            mov ecx,[ebp-54h]
+            mov edx,[ecx+78h]
+            mov eax,[edx]
+            fld qword ptr [eax+28h]
+            _emit 0DCh
+            _emit 025h
+            _emit 0E0h
+            _emit 07Ch
+            _emit 078h
+            _emit 000h
+            fstp qword ptr [ebp-40h]
+            mov byte ptr [ebp-30h],2h
+            mov byte ptr [ebp-2Fh],1h
+            lea ecx,[ebp-50h]
+            push ecx
+            mov edx,[ebp-54h]
+            mov ecx,[edx+7Ch]
+            call Context::EmitEffect
+        state307_00614672:
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            test ecx,ecx
+            jng state307_00614695
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ah]
+            cmp eax,0Fh
+            jnl state307_00614695
+            push 0Ah
+            push 32h
+            mov ecx,[ebp-54h]
+            call SetHorizontalShake
+        state307_00614695:
+            mov ecx,[ebp-54h]
+            mov dx,[ecx+0Ch]
+            add dx,1h
+            mov eax,[ebp-54h]
+            mov [eax+0Ch],dx
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ch]
+            movzx eax,word ptr [ebp-4h]
+            cmp edx,eax
+            jl state307_006147A2
+            mov ecx,[ebp-54h]
+            mov word ptr [ecx+0Ch],0
+            mov edx,[ebp-54h]
+            mov ax,[edx+0Ah]
+            add ax,1h
+            mov ecx,[ebp-54h]
+            mov [ecx+0Ah],ax
+            mov edx,[ebp-54h]
+            mov dword ptr [edx+168h],0
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            cmp ecx,6h
+            jnz state307_00614718
+            mov edx,[ebp-54h]
+            cmp dword ptr [edx+3138h],9h
+            jnl state307_00614718
+            mov eax,[ebp-54h]
+            mov word ptr [eax+0Ah],4h
+            mov ecx,[ebp-54h]
+            mov edx,[ecx+3138h]
+            add edx,1h
+            mov eax,[ebp-54h]
+            mov [eax+3138h],edx
+        state307_00614718:
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            cmp edx,9h
+            jnz state307_00614753
+            mov eax,[ebp-54h]
+            movsx ecx,byte ptr [eax+50h]
+            imul ecx,ecx,50h
+            mov [ebp-28Ch],ecx
+            fild dword ptr [ebp-28Ch]
+            mov edx,[ebp-54h]
+            fadd qword ptr [edx+20h]
+            mov eax,[ebp-54h]
+            fstp qword ptr [eax+20h]
+            mov ecx,[ebp-54h]
+            mov dword ptr [ecx+3138h],0
+        state307_00614753:
+            mov edx,[ebp-54h]
+            movzx eax,word ptr [edx+0Ah]
+            cmp eax,0Dh
+            jnz state307_00614789
+            mov ecx,[ebp-54h]
+            cmp dword ptr [ecx+3138h],0Ch
+            jnl state307_00614789
+            mov edx,[ebp-54h]
+            mov word ptr [edx+0Ah],0Bh
+            mov eax,[ebp-54h]
+            mov ecx,[eax+3138h]
+            add ecx,1h
+            mov edx,[ebp-54h]
+            mov [edx+3138h],ecx
+        state307_00614789:
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            cmp ecx,0Eh
+            jnz state307_006147A2
+            mov edx,[ebp-54h]
+            mov dword ptr [edx+3138h],0Ch
+        state307_006147A2:
+            mov eax,[ebp-54h]
+            movzx ecx,word ptr [eax+0Ah]
+            movzx edx,word ptr [ebp-8h]
+            cmp ecx,edx
+            jl state307_exit
+            mov eax,[ebp-54h]
+            cmp dword ptr [eax+3138h],0
+            jng state307_006147E5
+            mov ecx,[ebp-54h]
+            movzx edx,word ptr [ecx+0Ah]
+            sub edx,2h
+            mov eax,[ebp-54h]
+            mov [eax+0Ah],dx
+            mov ecx,[ebp-54h]
+            mov edx,[ecx+3138h]
+            sub edx,1h
+            mov eax,[ebp-54h]
+            mov [eax+3138h],edx
+            jmp state307_exit
+        state307_006147E5:
+            mov ecx,[ebp-54h]
+            mov word ptr [ecx+8h],0
+            mov edx,[ebp-54h]
+            mov eax,[edx]
+            mov ecx,[ebp-54h]
+            call dword ptr [eax]
+        state307_exit:
+        }
+        return;
 
     }
 }
