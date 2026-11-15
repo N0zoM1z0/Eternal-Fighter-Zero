@@ -1,6 +1,9 @@
 // Private complete source draft; no acceptance credit.
 #include "CharacterViews.h"
 
+static const double ShioriZeroOperand = 0.0;
+
+
 void Character08::Slot06()
 {
   if (field014a > 0 || (*opponentSlot)->field014c > 0) {
@@ -5529,22 +5532,76 @@ void Character08::Slot06()
       }
       break;
     case 318:
-      if ((field000a == 0) && (field000c == 0)) {
-        field0158 = 0;
-        field0030 = 0.0;
-        field0038 = 0.0;
-        field0048 = 0.0;
-      }
-      if ((field000a == 3) && (field000c == 0)) {
-        effect.type = 0x1a3;
-        effect.x = (double)((int(field0020)) + facing * 6);
-        effect.y = (double)((int(field0028)) + -0x34);
-        effect.group = 0;
-        effect.owner = 1;
-        effect.layer = 1;
-        effect.flag0018 = -facing;
-        effect.field0030 = 1;
-        EmitLocalEffect(&effect);
+      __asm {
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        test edx, edx
+        jne state318_after_zero_reset
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ch]
+        test ecx, ecx
+        jne state318_after_zero_reset
+        mov edx, dword ptr [ebp-54h]
+        mov byte ptr [edx+158h], 0
+        mov eax, dword ptr [ebp-54h]
+        fld qword ptr ShioriZeroOperand
+        fstp qword ptr [eax+30h]
+        mov ecx, dword ptr [ebp-54h]
+        fld qword ptr ShioriZeroOperand
+        fstp qword ptr [ecx+38h]
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr ShioriZeroOperand
+        fstp qword ptr [edx+48h]
+    state318_after_zero_reset:
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        cmp ecx, 3
+        jne state318_after_spawn
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ch]
+        test eax, eax
+        jne state318_after_spawn
+        mov word ptr [ebp-4Ch], 1A3h
+        mov ecx, dword ptr [ebp-54h]
+        fld qword ptr [ecx+20h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        mov edx, dword ptr [ebp-54h]
+        movsx ecx, byte ptr [edx+50h]
+        imul ecx, ecx, 6
+        add eax, ecx
+        mov dword ptr [ebp-36Ch], eax
+        fild dword ptr [ebp-36Ch]
+        fstp qword ptr [ebp-48h]
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr [edx+28h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        sub eax, 34h
+        mov dword ptr [ebp-370h], eax
+        fild dword ptr [ebp-370h]
+        fstp qword ptr [ebp-40h]
+        mov byte ptr [ebp-30h], 0
+        mov dword ptr [ebp-50h], 1
+        mov byte ptr [ebp-2Fh], 1
+        mov eax, dword ptr [ebp-54h]
+        movsx ecx, byte ptr [eax+50h]
+        neg ecx
+        mov byte ptr [ebp-38h], cl
+        mov dword ptr [ebp-20h], 1
+        lea edx, [ebp-50h]
+        push edx
+        mov eax, dword ptr [ebp-54h]
+        mov edx, dword ptr [eax]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [edx+24h]
+    state318_after_spawn:
       }
       if (2 < field000a) {
         contextOwner->SetSceneTimer(3);

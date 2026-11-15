@@ -11,8 +11,8 @@
     "native_candidate_extent_size_equal": true
   },
   "build": {
-    "source_sha256": "aa68d3dd627e552604e70dcc98c473c103cd5e19b332ca6f9abe3f39ccd95b39",
-    "object_sha256": "8d19c69f89ca73d70f19efb6ff1d407471d415650f5a42b7960c1bf20783ef54",
+    "source_sha256": "f0e4e261ccf0dfe4d02ca774a6686b72788e3d424ba87d3feb8668cd5c28b755",
+    "object_sha256": "14d4b132b45eb69d6a5666fcb93229ca51c3d98ab6a42b4972c350e68eacee2b",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
   "whole_case_exact": {
@@ -23,6 +23,8 @@
       "relocations_materialized": 13,
       "rel32_calls_materialized": 10,
       "float_operands_materialized": 3,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
       "calls": [
         {
           "offset": "0x41f7f9",
@@ -100,6 +102,8 @@
       "relocations_materialized": 2,
       "rel32_calls_materialized": 0,
       "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
       "calls": [],
       "float_operands": [
         {
@@ -121,6 +125,8 @@
       "relocations_materialized": 2,
       "rel32_calls_materialized": 0,
       "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
       "calls": [],
       "float_operands": [
         {
@@ -142,6 +148,8 @@
       "relocations_materialized": 9,
       "rel32_calls_materialized": 9,
       "float_operands_materialized": 0,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
       "calls": [
         {
           "offset": "0x41fac4",
@@ -198,6 +206,8 @@
       "relocations_materialized": 9,
       "rel32_calls_materialized": 9,
       "float_operands_materialized": 0,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
       "calls": [
         {
           "offset": "0x41fd27",
@@ -254,6 +264,8 @@
       "relocations_materialized": 10,
       "rel32_calls_materialized": 10,
       "float_operands_materialized": 0,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
       "calls": [
         {
           "offset": "0x420043",
@@ -315,6 +327,8 @@
       "relocations_materialized": 8,
       "rel32_calls_materialized": 8,
       "float_operands_materialized": 0,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
       "calls": [
         {
           "offset": "0x420b0d",
@@ -366,6 +380,8 @@
       "relocations_materialized": 9,
       "rel32_calls_materialized": 9,
       "float_operands_materialized": 0,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
       "calls": [
         {
           "offset": "0x420cf1",
@@ -422,6 +438,8 @@
       "relocations_materialized": 24,
       "rel32_calls_materialized": 11,
       "float_operands_materialized": 13,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
       "calls": [
         {
           "offset": "0x420f99",
@@ -547,6 +565,132 @@
         }
       ]
     },
+    "318": {
+      "native_start": "0x4223b8",
+      "bytes": 725,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 12,
+      "rel32_calls_materialized": 9,
+      "float_operands_materialized": 3,
+      "pinned_raw_calls": [
+        {
+          "offset": "0x422423",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x422449",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        }
+      ],
+      "stack_slot_bytes_materialized": [
+        {
+          "case_offset": "0x177",
+          "candidate": "0x94",
+          "native": "0x8c"
+        },
+        {
+          "case_offset": "0x17d",
+          "candidate": "0x94",
+          "native": "0x8c"
+        },
+        {
+          "case_offset": "0x194",
+          "candidate": "0x90",
+          "native": "0x88"
+        },
+        {
+          "case_offset": "0x19a",
+          "candidate": "0x90",
+          "native": "0x88"
+        },
+        {
+          "case_offset": "0x21b",
+          "candidate": "0x8c",
+          "native": "0x84"
+        },
+        {
+          "case_offset": "0x221",
+          "candidate": "0x8c",
+          "native": "0x84"
+        },
+        {
+          "case_offset": "0x238",
+          "candidate": "0x88",
+          "native": "0x80"
+        },
+        {
+          "case_offset": "0x23e",
+          "candidate": "0x88",
+          "native": "0x80"
+        }
+      ],
+      "calls": [
+        {
+          "offset": "0x4224a6",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "target": "0x4080c0"
+        },
+        {
+          "offset": "0x4224b5",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x422508",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x42251d",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x422543",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x422573",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x422592",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x4225c1",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x4225e7",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x4223dd",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4223e9",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4223f5",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
     "319": {
       "native_start": "0x42268d",
       "bytes": 900,
@@ -554,6 +698,19 @@
       "relocations_materialized": 17,
       "rel32_calls_materialized": 6,
       "float_operands_materialized": 11,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [
+        {
+          "case_offset": "0xe0",
+          "candidate": "0x84",
+          "native": "0x7c"
+        },
+        {
+          "case_offset": "0xe6",
+          "candidate": "0x84",
+          "native": "0x7c"
+        }
+      ],
       "calls": [
         {
           "offset": "0x4226b0",
@@ -680,5 +837,10 @@
     "case_entry_order_exact": true,
     "selector_bytes_exact": true
   },
-  "qualification": "Ten complete case bodies are byte-exact after original-bound relocation materialization, and four additional meter arithmetic regions are byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
+  "prologue_normalization": {
+    "candidate_frame": "0x37C",
+    "native_frame": "0x384",
+    "native_prologue_restored": true
+  },
+  "qualification": "Eleven complete case bodies are byte-exact after original-bound relocation materialization, two inline-assembly runtime-call bindings, and native stack-slot normalization. Four additional meter arithmetic regions are byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
 }
