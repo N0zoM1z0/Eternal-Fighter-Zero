@@ -4073,5 +4073,144 @@ void Character04::Slot06()
         }
         return;
 
+    case 258: // Character04 native 0x00612569: wide local-effect follow-through
+        __asm {
+            mov eax, dword ptr [ebp-54h]
+            mov dword ptr [eax+168h], 2
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ah]
+            test edx, edx
+            jnz state258_skip_frame0_reset
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ch]
+            test ecx, ecx
+            jnz state258_skip_frame0_reset
+        }
+        ResetFrame();
+        __asm {
+        state258_skip_frame0_reset:
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ah]
+            cmp eax, 2
+            jnz state258_skip_effect
+            mov ecx, dword ptr [ebp-54h]
+            movzx edx, word ptr [ecx+0Ch]
+            test edx, edx
+            jnz state258_skip_effect
+            mov eax, dword ptr [ebp-54h]
+            cmp dword ptr [eax+3144h], 4
+            jz state258_high_cost
+            mov ecx, dword ptr [ebp-54h]
+            mov dword ptr [ecx+3144h], 2
+            mov word ptr [ebp-4Ch], 019Ch
+            mov edx, dword ptr [ebp-54h]
+            fld qword ptr [edx+20h]
+            call _ftol2
+            mov ecx, dword ptr [ebp-54h]
+            movsx edx, byte ptr [ecx+50h]
+            imul edx, edx, 078h
+            add eax, edx
+            mov dword ptr [ebp-1E0h], eax
+            fild dword ptr [ebp-1E0h]
+            fstp qword ptr [ebp-48h]
+            mov eax, dword ptr [ebp-54h]
+            fld qword ptr [eax+28h]
+            call _ftol2
+            mov dword ptr [ebp-1E4h], eax
+            fild dword ptr [ebp-1E4h]
+            fstp qword ptr [ebp-40h]
+            mov dword ptr [ebp-50h], 1
+            mov byte ptr [ebp-30h], 2
+            mov ecx, dword ptr [ebp-54h]
+            mov dl, byte ptr [ecx+50h]
+            mov byte ptr [ebp-38h], dl
+            mov byte ptr [ebp-2Fh], 1
+            lea eax, [ebp-50h]
+            push eax
+            mov ecx, dword ptr [ebp-54h]
+            mov edx, dword ptr [ecx]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [edx+24h]
+            jmp state258_skip_effect
+        state258_high_cost:
+            mov word ptr [ebp-4Ch], 01A8h
+            mov eax, dword ptr [ebp-54h]
+            mov ecx, dword ptr [eax+3148h]
+            sub ecx, 03E8h
+            mov edx, dword ptr [ebp-54h]
+            mov dword ptr [edx+3148h], ecx
+            mov eax, dword ptr [ebp-54h]
+            cmp dword ptr [eax+3148h], 0
+            jnl state258_high_cost_ready
+            mov ecx, dword ptr [ebp-54h]
+            mov dword ptr [ecx+3148h], 0
+        state258_high_cost_ready:
+            mov edx, dword ptr [ebp-54h]
+            fld qword ptr [edx+20h]
+            call _ftol2
+            mov ecx, dword ptr [ebp-54h]
+            movsx edx, byte ptr [ecx+50h]
+            imul edx, edx, 0A0h
+            add eax, edx
+            mov dword ptr [ebp-1E8h], eax
+            fild dword ptr [ebp-1E8h]
+            fstp qword ptr [ebp-48h]
+            mov eax, dword ptr [ebp-54h]
+            fld qword ptr [eax+28h]
+            call _ftol2
+            mov dword ptr [ebp-1ECh], eax
+            fild dword ptr [ebp-1ECh]
+            fstp qword ptr [ebp-40h]
+            mov dword ptr [ebp-50h], 1
+            mov byte ptr [ebp-30h], 2
+            mov ecx, dword ptr [ebp-54h]
+            mov dl, byte ptr [ecx+50h]
+            mov byte ptr [ebp-38h], dl
+            mov byte ptr [ebp-2Fh], 1
+            lea eax, [ebp-50h]
+            push eax
+            mov ecx, dword ptr [ebp-54h]
+            mov edx, dword ptr [ecx]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [edx+24h]
+        state258_skip_effect:
+            mov eax, dword ptr [ebp-54h]
+            mov cx, word ptr [eax+0Ch]
+            add cx, 1
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+0Ch], cx
+            mov eax, dword ptr [ebp-54h]
+            movzx ecx, word ptr [eax+0Ch]
+            movzx edx, word ptr [ebp-04h]
+            cmp ecx, edx
+            jl state258_tick_done
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+0Ch], 0
+            mov ecx, dword ptr [ebp-54h]
+            mov dx, word ptr [ecx+0Ah]
+            add dx, 1
+            mov eax, dword ptr [ebp-54h]
+            mov word ptr [eax+0Ah], dx
+            mov ecx, dword ptr [ebp-54h]
+            mov dword ptr [ecx+168h], 3
+            mov edx, dword ptr [ebp-54h]
+            movzx eax, word ptr [edx+0Ah]
+            movzx ecx, word ptr [ebp-08h]
+            cmp eax, ecx
+            jl state258_tick_done
+            mov edx, dword ptr [ebp-54h]
+            mov word ptr [edx+08h], 0
+            mov eax, dword ptr [ebp-54h]
+            mov edx, dword ptr [eax]
+            mov ecx, dword ptr [ebp-54h]
+            call dword ptr [edx]
+        }
+        FaceOpponent();
+        __asm {
+        state258_tick_done:
+        }
+        return;
+
+
     }
 }
