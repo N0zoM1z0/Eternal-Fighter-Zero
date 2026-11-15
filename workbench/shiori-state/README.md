@@ -2,10 +2,9 @@
 
 This **tracked, independent workbench** preserves the complete original-branch
 C++ reconstruction for Shiori's 134-case animation dispatcher and true default.
-Four narrowly scoped inline-assembly regions now pin compiler-sensitive native
-register sequences; this remains a workbench, not a production source or an
-accepted whole-function match unit.
-It is **not** a production source or an accepted match unit. The local
+Eight narrowly scoped inline-assembly regions now pin compiler-sensitive
+native register sequences; this remains a workbench, not a production source
+or an accepted whole-function match unit. The local
 `ShioriState.cpp`, `CharacterViews.h`, `Engine.h` and `Input.h`
 preserve the candidate's compilation context. Its headers are provisional;
 keep them separate from the accepted `src/` headers.
@@ -51,19 +50,30 @@ then verifies selected code against the canonical PE. Its evidence is
   materializing its **nine original-bound REL32 call operands**. This removes
   the former EAX/ECX/DX register-allocation cascade beginning at
   `0x0041FC1E`.
-- **Case304:** the complete **641-byte** case body is now byte-identical after
-  materializing its original-bound `FaceOpponent` REL32 call. Its final
-  counter/animation/pose-reset tail is pinned to the native register sequence.
-- **Case307:** the 25-byte meter subtraction/store sequence at `0x004205C2`
-  now matches exactly, including the accumulator-specific `sub eax,0x7D0`.
-- **Case308:** the 25-byte sequence at `0x004207E0` now matches exactly,
-  including `sub eax,0xBB8`.
-- **Case315:** the 26-byte sequence at `0x00421BEB` now matches exactly,
-  including `sub edx,0x3E8`.
+- **Case304:** the complete **796-byte** case body is byte-identical after
+  materializing **nine original-bound REL32 calls**; its frame/loop/pose-reset
+  tail is pinned to the native register sequence.
+- **Case305:** the complete **846-byte** case body is byte-identical after
+  materializing **ten original-bound REL32 calls**; its timed loop and reset
+  tail now match natively.
+- **Case312:** the complete **1,084-byte** case body is byte-identical after
+  materializing **24 relocations** (11 direct calls and 13 original-bound
+  floating-point operands).
+- **Case306:** the 25-byte meter subtraction/store sequence at `0x0042038B`
+  matches exactly, including `sub eax,0x3E8`.
+- **Case307:** the 25-byte sequence at `0x004205C2` matches exactly, including
+  `sub eax,0x7D0`.
+- **Case308:** the 25-byte sequence at `0x004207E0` matches exactly, including
+  `sub eax,0xBB8`.
+- **Case315:** the 26-byte sequence at `0x00421BEB` matches exactly, including
+  `sub edx,0x3E8`.
 
-These four regions use narrowly scoped inline assembly because repeated
-natural-C++ formulations did not recover VC7.1's original register choices.
-The rest of each case remains ordinary C++. No bytes are padded or masked.
+Across the ten complete cases (300–305, 310–312 and 319), **6,201 native code
+bytes** are byte-exact after materializing **103 relocations** (72 calls and
+31 float operands). The four additional meter regions contribute another
+**101 byte-exact bytes**. These eight narrowly scoped inline-assembly regions
+recover compiler-sensitive register lifetimes; the rest of each case remains
+ordinary C++. No bytes are padded or masked.
 
 ## Remaining whole-function work
 
@@ -72,10 +82,11 @@ sequences** identical, and the candidate owner extent is now **63,132/63,132
 bytes**. That audit normalizes GPR names and branch operands, so it is only a
 diagnostic, not a strict byte certificate.
 
-A focused per-case relocation-materialized comparison currently finds these
-whole cases byte-exact: **300, 301, 302, 303, 304, 310, 311 and 319**. Cases
-**305–309 and 312–318** still contain register-allocation byte differences;
-307, 308 and 315 have their meter arithmetic subregions pinned, but their
-remaining case bodies are still open. The next attack is **case305**, then
-continue through 306–309 and 312–318. Do not call the whole boss Exact until
-all code bytes and all relocation operands are strictly reconstructed.
+A focused per-case relocation-materialized comparison now finds ten whole
+cases byte-exact: **300–305, 310–312 and 319** (6,201 code bytes; 103 original-
+bound relocations). Cases **306–309 and 313–318** still contain register-
+allocation byte differences. The meter arithmetic subregions of 306, 307,
+308 and 315 are already exact, but their remaining case bodies are open. Next
+attack case306's register-lifetime differences, then 307–309 and 313–318. Do
+not call the whole boss Exact until all code bytes and all relocation operands
+are strictly reconstructed.

@@ -11,16 +11,137 @@
     "native_candidate_extent_size_equal": true
   },
   "build": {
-    "source_sha256": "6e7f26540b30f52c1bd7973549ac9479a511198e6c6b443c96227399c49c6543",
-    "object_sha256": "46aa0cad0e573c230f79778b62777cb10d6c796b61433d6592d9422aec983140",
+    "source_sha256": "aa68d3dd627e552604e70dcc98c473c103cd5e19b332ca6f9abe3f39ccd95b39",
+    "object_sha256": "8d19c69f89ca73d70f19efb6ff1d407471d415650f5a42b7960c1bf20783ef54",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
-  "exact_cases": {
+  "whole_case_exact": {
+    "300": {
+      "native_start": "0x41f7a0",
+      "bytes": 715,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 13,
+      "rel32_calls_materialized": 10,
+      "float_operands_materialized": 3,
+      "calls": [
+        {
+          "offset": "0x41f7f9",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "target": "0x4080c0"
+        },
+        {
+          "offset": "0x41f84d",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x41f862",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x41f888",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x41f8b8",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x41f8d7",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x41f8e8",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x41f902",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x41f971",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x41f997",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x41f7c5",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41f7d1",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41f7dd",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "301": {
+      "native_start": "0x41377e",
+      "bytes": 123,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 2,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 2,
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x41378d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413799",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "302": {
+      "native_start": "0x41377e",
+      "bytes": 123,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 2,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 2,
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x41378d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413799",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
     "303": {
       "native_start": "0x41fa6b",
       "bytes": 611,
       "whole_case_byte_exact": true,
-      "rel32_relocations_materialized": 9,
+      "relocations_materialized": 9,
+      "rel32_calls_materialized": 9,
+      "float_operands_materialized": 0,
       "calls": [
         {
           "offset": "0x41fac4",
@@ -67,13 +188,16 @@
           "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
           "target": "0x40e630"
         }
-      ]
+      ],
+      "float_operands": []
     },
     "304": {
       "native_start": "0x41fcce",
       "bytes": 796,
       "whole_case_byte_exact": true,
-      "rel32_relocations_materialized": 9,
+      "relocations_materialized": 9,
+      "rel32_calls_materialized": 9,
+      "float_operands_materialized": 0,
       "calls": [
         {
           "offset": "0x41fd27",
@@ -120,6 +244,404 @@
           "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
           "target": "0x40e630"
         }
+      ],
+      "float_operands": []
+    },
+    "305": {
+      "native_start": "0x41ffea",
+      "bytes": 846,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 10,
+      "rel32_calls_materialized": 10,
+      "float_operands_materialized": 0,
+      "calls": [
+        {
+          "offset": "0x420043",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x420058",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x420072",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x4200a2",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x4200c0",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        },
+        {
+          "offset": "0x4200cd",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "target": "0x4080c0"
+        },
+        {
+          "offset": "0x420163",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x420189",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x4202d3",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "target": "0x4108a0"
+        },
+        {
+          "offset": "0x420325",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": []
+    },
+    "310": {
+      "native_start": "0x420af3",
+      "bytes": 484,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 8,
+      "rel32_calls_materialized": 8,
+      "float_operands_materialized": 0,
+      "calls": [
+        {
+          "offset": "0x420b0d",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        },
+        {
+          "offset": "0x420b6b",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x420b80",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x420ba6",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x420bd6",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x420c12",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x420c2c",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x420cc4",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": []
+    },
+    "311": {
+      "native_start": "0x420cd7",
+      "bytes": 519,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 9,
+      "rel32_calls_materialized": 9,
+      "float_operands_materialized": 0,
+      "calls": [
+        {
+          "offset": "0x420cf1",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        },
+        {
+          "offset": "0x420d4f",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x420d64",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x420d8a",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x420dba",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x420ddd",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "target": "0x4080c0"
+        },
+        {
+          "offset": "0x420e19",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x420e33",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x420ecb",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": []
+    },
+    "312": {
+      "native_start": "0x420ede",
+      "bytes": 1084,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 24,
+      "rel32_calls_materialized": 11,
+      "float_operands_materialized": 13,
+      "calls": [
+        {
+          "offset": "0x420f99",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x420fbf",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421008",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x42101d",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421037",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421067",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x42106f",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        },
+        {
+          "offset": "0x42112f",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421153",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "target": "0x4108a0"
+        },
+        {
+          "offset": "0x42117a",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421188",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "target": "0x4108a0"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x420efc",
+          "target": "0x787c50",
+          "payload": "000000000000e03f"
+        },
+        {
+          "offset": "0x420f0e",
+          "target": "0x787c50",
+          "payload": "000000000000e03f"
+        },
+        {
+          "offset": "0x420f1d",
+          "target": "0x787cf0",
+          "payload": "7b14ae47e17a843f"
+        },
+        {
+          "offset": "0x420f56",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x420f66",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x420f94",
+          "target": "0x7875d0",
+          "payload": "0000000000005940"
+        },
+        {
+          "offset": "0x420fab",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x420fba",
+          "target": "0x7875d0",
+          "payload": "0000000000005940"
+        },
+        {
+          "offset": "0x420fd1",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x421095",
+          "target": "0x787cf0",
+          "payload": "7b14ae47e17a843f"
+        },
+        {
+          "offset": "0x4210aa",
+          "target": "0x787cf0",
+          "payload": "7b14ae47e17a843f"
+        },
+        {
+          "offset": "0x421222",
+          "target": "0x787dd8",
+          "payload": "ec51b81e85eba13f"
+        },
+        {
+          "offset": "0x421243",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "319": {
+      "native_start": "0x42268d",
+      "bytes": 900,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 17,
+      "rel32_calls_materialized": 6,
+      "float_operands_materialized": 11,
+      "calls": [
+        {
+          "offset": "0x4226b0",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x422760",
+          "symbol": "?SetVerticalShake@Secondary@@QAEXHH@Z",
+          "target": "0x410a10"
+        },
+        {
+          "offset": "0x42278c",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        },
+        {
+          "offset": "0x42290a",
+          "symbol": "?RequestTransition@Context@@QAEXD@Z",
+          "target": "0x407ce0"
+        },
+        {
+          "offset": "0x42292b",
+          "symbol": "?SetHorizontalShake@Secondary@@QAEXHH@Z",
+          "target": "0x410a80"
+        },
+        {
+          "offset": "0x42297d",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x4226d9",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4226e5",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4226f1",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x422731",
+          "target": "0x787c68",
+          "payload": "0000000000001ac0"
+        },
+        {
+          "offset": "0x422870",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x422887",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x4228c9",
+          "target": "0x787c60",
+          "payload": "0000000000000cc0"
+        },
+        {
+          "offset": "0x4228e4",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x422956",
+          "target": "0x787dd8",
+          "payload": "ec51b81e85eba13f"
+        },
+        {
+          "offset": "0x42296e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x422986",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
       ]
     }
   },
@@ -158,5 +680,5 @@
     "case_entry_order_exact": true,
     "selector_bytes_exact": true
   },
-  "qualification": "These pinned regions are byte-exact after original-bound relocation materialization. Other Shiori Slot06 states still contain register-allocation differences; this is not a whole-function Exact certificate."
+  "qualification": "Ten complete case bodies are byte-exact after original-bound relocation materialization, and four additional meter arithmetic regions are byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
 }

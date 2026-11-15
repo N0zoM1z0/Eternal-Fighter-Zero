@@ -2,8 +2,8 @@
 """Verify pinned byte-exact regions of the Shiori Slot06 workbench object.
 
 This is deliberately a focused-region verifier, not a whole-function Exact
-certificate. It reconstructs selected case REL32/DIR32 operands from the
-canonical PE and checks three late-state meter arithmetic blocks byte-for-byte.
+certificate. It reconstructs ten complete case bodies from original-bound
+COFF operands and checks four late-state meter arithmetic blocks byte-for-byte.
 """
 from __future__ import annotations
 
@@ -30,9 +30,18 @@ CALL_TARGETS = {
     "?ResetFrame@Secondary@@QAEXXZ": 0x0040F1E0,
     "?RandomRange@Secondary@@QAEFFF@Z": 0x004108A0,
     "?FaceOpponent@Secondary@@QAEHXZ": 0x0040E630,
+    "?SetSceneTimer@Context@@QAEXH@Z": 0x004080C0,
+    "?SetVerticalShake@Secondary@@QAEXHH@Z": 0x00410A10,
+    "?SetHorizontalShake@Secondary@@QAEXHH@Z": 0x00410A80,
+    "?RequestTransition@Context@@QAEXD@Z": 0x00407CE0,
 }
-CASE_RELOCATION_COUNTS = {303: 9, 304: 1}
+CASE_RELOCATIONS = {
+    300: (13, 10), 301: (2, 0), 302: (2, 0), 303: (9, 9),
+    304: (9, 9), 305: (10, 10), 310: (8, 8), 311: (9, 9),
+    312: (24, 11), 319: (17, 6),
+}
 PINNED_ARITHMETIC = {
+    306: (0x0042038B, 25, "sub eax,0x3E8"),
     307: (0x004205C2, 25, "sub eax,0x7D0"),
     308: (0x004207E0, 25, "sub eax,0xBB8"),
     315: (0x00421BEB, 26, "sub edx,0x3E8"),
@@ -86,6 +95,7 @@ def main() -> None:
             raise AssertionError((case, candidate_end - candidate_start, native_end - native_start))
         resolved = bytearray(compiled[candidate_start:candidate_end])
         bound_calls = []
+        bound_floats = []
         for reloc in relocations:
             off = reloc["offset"]
             if not candidate_start <= off < candidate_end:
@@ -108,6 +118,8 @@ def main() -> None:
                     payload = bytes.fromhex(reloc["symbol"][len("__real@"):])[::-1]
                     if target_bytes(image, native_target, len(payload)) != payload:
                         raise AssertionError((case, reloc, hex(native_target)))
+                    bound_floats.append({"offset": hex(ADDRESS + native_off),
+                                         "target": hex(native_target), "payload": payload.hex()})
                 elif "local_target_offset" in reloc:
                     if native_target != ADDRESS + reloc["local_target_offset"]:
                         raise AssertionError((case, reloc, hex(native_target)))
@@ -116,16 +128,17 @@ def main() -> None:
             else:
                 raise AssertionError((case, "unknown relocation", reloc))
             resolved[local_off:local_off + 4] = operand
-        expected_relocations = CASE_RELOCATION_COUNTS[case]
-        if len(bound_calls) != expected_relocations:
-            raise AssertionError((case, len(bound_calls), expected_relocations))
+        expected_relocations, expected_calls = CASE_RELOCATIONS[case]
+        if len(bound_calls) != expected_calls or len(bound_calls) + len(bound_floats) != expected_relocations:
+            raise AssertionError((case, len(bound_calls), len(bound_floats), expected_relocations, expected_calls))
         if bytes(resolved) != native_code[native_start:native_end]:
             raise AssertionError((case, "case bytes differ after relocation materialization"))
         return {"native_start": hex(ADDRESS + native_start), "bytes": native_end - native_start,
-                "whole_case_byte_exact": True, "rel32_relocations_materialized": len(bound_calls),
-                "calls": bound_calls}
+                "whole_case_byte_exact": True, "relocations_materialized": expected_relocations,
+                "rel32_calls_materialized": len(bound_calls), "float_operands_materialized": len(bound_floats),
+                "calls": bound_calls, "float_operands": bound_floats}
 
-    exact_cases = {str(case): verify_case(case) for case in CASE_RELOCATION_COUNTS}
+    exact_cases = {str(case): verify_case(case) for case in CASE_RELOCATIONS}
     arithmetic = []
     for case, (native_va, size, operation) in PINNED_ARITHMETIC.items():
         index = native_selector[case - 1]
@@ -152,13 +165,13 @@ def main() -> None:
         "late_meter_arithmetic": arithmetic,
         "dispatch": {"table_relocations": len(table_relocations),
                      "case_entry_order_exact": True, "selector_bytes_exact": True},
-        "qualification": "Cases 303 and 304 are byte-exact after original-bound relocation materialization; three late-state meter arithmetic regions are byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate.",
+        "qualification": "Ten complete case bodies are byte-exact after original-bound relocation materialization, and four additional meter arithmetic regions are byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate.",
     }
     output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(evidence, indent=2) + "\n")
     for case, result in exact_cases.items():
-        print(f"case{case}: {result['bytes']} bytes exact; {result['rel32_relocations_materialized']} original-bound REL32 calls")
+        print(f"case{case}: {result['bytes']} bytes exact; {result['relocations_materialized']} relocations ({result['rel32_calls_materialized']} calls, {result['float_operands_materialized']} floats)")
     print("meter blocks:", ", ".join(f"case{x['case']}={x['bytes']}B exact" for x in arithmetic))
     print("owner extent:", len(compiled), "bytes; table/selector order exact; other cases remain open")
 
