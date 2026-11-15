@@ -532,7 +532,7 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 ### Active second large boss: Character04::Slot06 (NOT full Exact)
 
 The authored `workbench/character04-state/Character04State.cpp`
-now covers original default plus **111 genuine native live states**,
+now covers original default plus **112 genuine native live states**,
 most recently reconstructed states220–221 two-character grab/throw,
 230–232 aerial attack tiers, 240's collision-result-3 grab handoff,
 241's complete multi-stage airborne throw, 249's special-move
@@ -542,7 +542,7 @@ post-landing recovery bridge, 254's held-input charge/launch, 255's
 alternate held-input charge/aerial launch, 256's aerial special
 follow-through, 257's special-effect follow-through, 258's wider
 local-effect follow-through, and 259's farthest-reaching local-effect
-variant, and 260's aerial capture/dual-effect initialization, plus 261's aerial deceleration recovery. State240 resets both fighters' frame/pose state, advances the
+variant, and 260's aerial capture/dual-effect initialization, plus 261's aerial deceleration recovery and 262's aerial fall/landing reset. State240 resets both fighters' frame/pose state, advances the
 owner to state241 and the opponent to state100, emits effect0 at
 integer-truncated X+facing×31/Y−82, and preserves the native airborne/
 state-range test for `remainingHitCount`. State241 applies horizontal
@@ -612,7 +612,7 @@ it sets `field3144=2` and emits effect0x19C at `(X+facing×200,Y)`. Both
 effects use owner1, group2, current facing and layer1. Every frame advance
 sets attackCollisionResult3; animation completion clears state, invokes
 the virtual ResetPose slot and faces the opponent. The case255 x87 launch
-and case257–261 inline-assembly state blocks use narrow inline
+and case257–262 inline-assembly state blocks use narrow inline
 assembly to preserve native VC7.1 instruction order. The original-bound
 State260's 674 native bytes initialize an aerial capture on frame0/tick0:
 they zero both velocities, set byte0x2C8 to5, initialize field3148=10000,
@@ -631,20 +631,27 @@ from horizontalDeceleration and clamp it at zero. Every frame advance
 increments the frame; entering frame1 clears the collision result. At
 animation completion the state is cleared, FaceOpponent runs, and the
 virtual ResetPose slot is invoked.
+State262's 288 native bytes initialize velocityX=1.0, velocityY=0.0 and
+one remaining hit on frame0/tick0. After frame2 they add gravity0.035 to
+velocityY. If positionY+velocityY remains above zero and the frame is
+below12, the state jumps to frame12, clears tick, sets positionY=0 and
+calls ResetFrame. Otherwise it advances the normal frame counter and
+clears collision result on every advance. Animation completion clears
+state, calls FaceOpponent, then invokes virtual ResetPose.
 strict checker caught and corrected state220's subtle reset: when
 animation advances outside pose1, it must set `remainingHitCount=0`, not
 leave it unchanged. Native 221 applies 1200/750.0 damage and places both
 fighters at four distinct pose-specific coordinates. `check_prefix.py`
-proves **45,997 continuous native code bytes / 12,589 original x86
-instruction locations/widths/forms**, **1,129 native internal and 149
-original shared-return branch targets**, **968 exact original-bound
+proves **46,285 continuous native code bytes / 12,669 original x86
+instruction locations/widths/forms**, **1,136 native internal and 151
+original shared-return branch targets**, **970 exact original-bound
 direct call/float operands** and 2 canonical native-local dispatch
 pointers. Only the provisional stack immediate (`0x1C8` vs native
 `0x2E8`), ten explicitly pinned low-byte x87 scratch-slot displacements
 (native `EBP-0x1BC` through `EBP-0x1CC` slots shifted by four bytes in
 the provisional frame), shared-return routing (including the verified
 in-prefix return trampoline) and independently target-bound COFF fields
-differ. **Next native case262 at `0x00612CDD`**; other 27 live cases,
+differ. **Next native case263 at `0x00612DFD`**; other 26 live cases,
 full frame, switch/data and return still OPEN. Partial prefix evidence
 only, **NOT whole-function Exact**; no cold all-unit replay/push.
 
