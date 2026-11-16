@@ -6177,18 +6177,24 @@ uses inherited LoadResources at 0x410B70; other virtual bodies remain unaccepted
 The partial class view is local to the loading creation source. No new character
 behavior/layout claim is inferred beyond the reviewed allocation and accesses.
 
-PrepareBattle at 0x76CA50 remains OPEN. The complete target is 4,029 bytes: 3,893
-code +100 address-table +20 address-table +16 selector bytes, ending at 0x76DA0D.
-The retained complete C++ draft is 4,031 bytes, not a two-byte-away exact claim.
-The first instruction operand difference beyond shifted local-table references
-is at 0x76D743, the first background-constructor argument evaluation; later GPR
-rotation adds a two-byte receiver move before the first LoadResources call.
-Pointer casts/views, destructor declarations and case scopes were byte-neutral;
-do not repeat them without new evidence. The complete draft in `workbench/prepare-battle/` includes random/replay/CPU/stage
-preparation and the disabled BMP branch. The
-confirmed background scale for stage 16 is 0.125, otherwise 1.0; CPU division is
-by 1.5f. These correct the decompiler's lost constant types and initial guesses.
-Use the workbench README for its selected build command.
+PrepareBattle at 0x76CA50 remains OPEN for codegen Exact. The complete target is
+4,029 bytes: 3,893 code +100 address-table +20 address-table +16 selector
+bytes, ending at 0x76DA0D. The current complete natural-C++ candidate is also
+4,029 bytes with 115 relocations (82 external, 33 local); after materializing
+all relocations, both address tables and the selector match. The code still
+differs at 87 bytes across 37 runs, first differing byte 0x76D744 (the first
+constructor instruction begins at 0x76D743). The four constructor branches
+retain a cyclic scratch-register rotation; the first LoadResources dispatch
+uses a different register shuffle: at 0x76D881 the candidate emits
+mov ecx, edx where native emits mov eax, [eax]; the call itself remains at
+0x76D883. The second dispatch sequence matches. The former 4,031-byte / 269-byte-difference candidate is historical.
+Pointer casts/views, destructor declarations, case scopes, base/type changes,
+and additional receiver/local aliases were byte-neutral or worse; do not repeat
+them without new evidence. The complete draft in workbench/prepare-battle/
+includes random/replay/CPU/stage preparation and the disabled BMP branch. The
+confirmed background scale for stage 16 is 0.125, otherwise 1.0; CPU division
+is by 1.5f. Reproduce the current comparison with
+scripts/repo-python workbench/prepare-battle/compare_prepare_battle.py.
 
 ## Animated background owners
 
@@ -6327,9 +6333,11 @@ The entire 10,464-byte result, not a normalized instruction diagnostic, is the
 acceptance authority.
 
 PrepareBattle was tested with the accepted real background layout, base
-inheritance and declarations. Its 4,031/4,029 extent and first GPR divergence
-at `0x76D743` were unchanged. Do not repeat this type/layout hypothesis
-without new evidence.
+inheritance and declarations; changing those types did not improve the earlier
+4,031-byte candidate. The current default-first source form closes the owner
+extent gap (4,029/4,029), but 87 code bytes remain different and the first
+differing byte is 0x76D744. Do not repeat the type/layout hypothesis without
+new evidence.
 
 ## Mizuka circular command recognition
 
@@ -7668,13 +7676,17 @@ boundary/table/caller claim. Origin and complete boundary are now
 reviewed in the ledgers, **not the codegen or Exact source status**.
 
 The complete natural C++ candidate, provisional local headers,
-reproducible VC7.1 build and six tested background-construction
-variants are tracked in `workbench/prepare-battle/`. Its selected
-`/Od /G6 /MT /Gy /GS /W3` compile still has **4,031 bytes with
-115 relocations**, versus the 4,029 original owned bytes; original
-register choices at `0x0076D743` and an extra two-byte receiver move
-remain. No target bytes have been masked, and no full cold replay
-was performed. Do not copy private header views into accepted `src/`.
+reproducible VC7.1 comparison script and source-form findings are tracked in
+workbench/prepare-battle/. Its selected /Od /G6 /MT /Gy /GS /W3
+compile has **4,029 owner bytes (3,893 code bytes) and 115 relocations**.
+After binding all relocations, both tables/selector are exact; code still
+differs at **87 bytes / 37 runs**, first differing byte 0x0076D744.
+The first LoadResources call has a different register shuffle: at
+0x0076D881 the candidate emits mov ecx,edx where native emits mov eax,[eax];
+the indirect call remains at 0x0076D883. The second call's instruction
+sequence matches. The candidate is not codegen Exact. No target
+bytes have been masked, and no full cold replay was performed. Do not copy
+private header views into accepted src/.
 
 ## Shiori state owner boundary and selector review
 

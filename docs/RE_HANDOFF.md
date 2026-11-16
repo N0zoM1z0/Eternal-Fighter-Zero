@@ -5,6 +5,47 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
+## Current handoff — 2026-11-16
+
+**Immediate continuation target: Scene2::PrepareBattle at 0x0076CA50.**
+The complete natural-C++ candidate in workbench/prepare-battle/ is
+**4,029/4,029 owner bytes** (3,893 code + 136 table/selector) with **115
+relocations** (82 external, 33 local). All relocations are materialized;
+both address tables and the selector match the canonical target. The code is
+**not Exact**: 87 bytes differ in 37 runs, first differing byte 0x0076D744.
+The four constructor branches exhibit cyclic scratch-register assignment;
+the first LoadResources virtual dispatch has a different register shuffle:
+at 0x0076D881 the candidate emits mov ecx, edx where native emits mov eax,
+[eax]; the indirect call remains at 0x0076D883. The second dispatch's
+instruction sequence is byte-identical.
+
+Start with:
+
+    scripts/repo-python workbench/prepare-battle/compare_prepare_battle.py
+
+Then inspect the remaining code ranges in
+docs/evidence/prepare-battle-natural-cpp-progress-v2.json and native/candidate
+disassembly around 0x0076D743..0x0076D882. Continue natural-C++ source
+experiments that predict a different VC7.1 /Od register/lifetime result.
+Preserve the complete 4,029-byte owner extent and rebind all 115 relocations
+after every candidate. No inline assembly, _emit, byte patches, inert
+padding, arbitrary normalization, or full all-unit cold replay.
+
+Useful completed dependencies:
+- Four stage constructor leafs: **1,561/1,561 bytes, 44 relocations**,
+  docs/evidence/prepare-battle-background-constructors-exact.json.
+- Full four-stage background lifecycle family: **7,687/7,687 bytes,
+  123 relocations**, docs/evidence/prepare-battle-background-family-exact.json.
+- Scene2::LoadCharacter: **2,651 bytes**, all 76 relocations independently
+  bound (26 local targets, 50 external symbols), proof
+  docs/evidence/scene-loading-character-local-label-exact.json.
+
+The current local branch has recent unpushed gpt-web: commits beyond
+origin/main; do not push without permission. The next agent should inspect
+the live status and preserve any dirty changes before editing. The older Kano
+Character20::Slot06 work below remains another substantial open boss; it is
+not the immediate continuation target for this handoff.
+
 ## Receiving agent — Nayuki state boss completed (2026-11-11)
 
 **Character10::Slot06 now has a COMPLETE original-bound Exact codegen
@@ -31,7 +72,7 @@ Continue attacking other substantial unimplemented functions and
 small exact leaf owners. Preserve dirty edits (single writer).
 Native codegen Exact is *not* a whole-product/runtime completion claim.
 
-## Active next boss: Kano Character20::Slot06 (partial)
+## Other substantial open boss: Kano Character20::Slot06 (partial)
 
 Original Kano `Character20::Slot06` owns **68,853 native code bytes**;
 its authored C++ `workbench/kano-state/Character20State.cpp` now
@@ -1139,7 +1180,7 @@ with the common class declaration remains a separate task.
 | --- | --- | --- |
 | Nayuki Character10::Slot06 state boss | `0x00451850`, 62,693 code bytes + 552/306 local data | `src/Character10State.cpp` and `docs/evidence/character-10-state-slot06-exact.json`: complete native codegen Exact; selected single-unit replay accepted. No whole-project cold replay implied. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: the resolved 63,132-byte owner is byte-for-byte equal to the canonical PE. All 135 unique switch destinations are covered by 136 selector IDs (301/302 alias one default body); the 174-byte entry/dispatch prefix, 62,099 unique case-body bytes, 540-byte switch table and 319-byte selector are exact. All 1,356 COFF relocation sites are classified/materialized exactly once: 375 REL32 calls and 981 DIR32 operands. This includes 18 raw inline-asm `__ftol2` calls, two prefix runtime calls, two prefix local-address operands, and all 135 switch-table entries. Resolved owner SHA-256: `b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded`. The 116 earlier case bodies contribute 49,063 bytes/1,014 relocations; 19 unique late bodies contribute 13,036 bytes/203 relocations. Fourteen direct-call leaf dependencies are separately strict-exact (1,966 bytes, 26 relocations, zero differences; `docs/evidence/shiori-slot06-leaf-dependencies-exact.json`). Source-object Exact remains open: its `0x338` frame is normalized to native `0x384`, and 72 EBP-relative conversion-temp operand bytes are individually restored. Proof: `verify_exact_regions.py`; it distinguishes resolved final-image equality from unmodified VC7.1 object equality. |
-| Scene2::PrepareBattle | 0x0076CA50, 4,029 bytes including two address tables and selector | workbench/prepare-battle/: best natural-C++ candidate compiles to the exact 4,029-byte owner extent (3,893 code bytes) with 115 COFF relocations. Four stage constructors use real Backgrounds.h types and ordinary C++ new. Both LoadResources calls are ordinary C++ virtual syntax; the first has one extra mov ecx,edx before dispatch, while the second instruction sequence is byte-identical. Constructor branches use the same stack temporaries/targets but have a cyclic scratch-register rotation. After materializing all 115 relocations, both tables and selector are byte-exact; code differs at 87 bytes/37 runs, first mismatch 0x0076D744. Reproduce with scripts/repo-python workbench/prepare-battle/compare_prepare_battle.py; detailed evidence docs/evidence/prepare-battle-natural-cpp-progress-v2.json. Four constructor leafs are strict-exact (1,561 bytes/44 relocations); all 16 background lifecycle functions are byte-exact after relocation binding (7,687 bytes/123 relocations). Strict boss codegen remains open. |
+| Scene2::PrepareBattle | 0x0076CA50, 4,029 bytes including two address tables and selector | workbench/prepare-battle/: best natural-C++ candidate compiles to the exact 4,029-byte owner extent (3,893 code bytes) with 115 COFF relocations. Four stage constructors use real Backgrounds.h types and ordinary C++ new. Both LoadResources calls are ordinary C++ virtual syntax; the first has a different register shuffle (candidate mov ecx,edx versus native mov eax,[eax] at 0x0076D881), while the second instruction sequence is byte-identical. Constructor branches use the same stack temporaries/targets but have a cyclic scratch-register rotation. After materializing all 115 relocations, both tables and selector are byte-exact; code differs at 87 bytes/37 runs, first mismatch 0x0076D744. Reproduce with scripts/repo-python workbench/prepare-battle/compare_prepare_battle.py; detailed evidence docs/evidence/prepare-battle-natural-cpp-progress-v2.json. Four constructor leafs are strict-exact (1,561 bytes/44 relocations); all 16 background lifecycle functions are byte-exact after relocation binding (7,687 bytes/123 relocations). Strict boss codegen remains open. |
 
 Focused diagnostic / exact-region commands (no whole-project replay):
 

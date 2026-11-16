@@ -12,7 +12,7 @@
     "source": "workbench/prepare-battle/SceneLoading.cpp",
     "source_sha256": "f2a360b3e39d2b9d6a97d84ed04b9da8a2513d99cedde803123f07a67a69f02c",
     "object": "build/scene-loading/PrepareBattle.default-first-comparison.obj",
-    "object_sha256": "1b868728d619441fa92f0d978e54b5bd1dafd0bb69a74dae0d029e4c633a5746",
+    "object_sha256": "e3aa054aba9a8dc3b3c861417011740407d2a03d651a567616c0e2a8e04b14e9",
     "owner_bytes": 4029,
     "code_bytes": 3893,
     "code_size_delta": 0,
@@ -28,7 +28,7 @@
   },
   "baseline": {
     "object": "build/scene-loading/PrepareBattle.ifelse-comparison.obj",
-    "object_sha256": "0ca636fb9ffb7cae2e986a197e3cd0006b3ed6da4e4e393e9995d5b532077a8e",
+    "object_sha256": "943912f98d1bad363d96326f53a7eed4bc4da2f8c31a0fda992b1a935e602200",
     "code_bytes": 3895,
     "extra_receiver_move_va": "0x76d883",
     "compiler_flags": [
