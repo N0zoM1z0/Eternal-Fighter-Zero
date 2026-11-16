@@ -472,3 +472,4 @@ address,name,source,symbol,status,evidence
 0x0048D940,?LoadAlternateResources@Character00ResourceView@@QAEXXZ,src/Character00AlternatePatterns.cpp,?LoadAlternateResources@Character00ResourceView@@QAEXXZ,complete,docs/evidence/character-00-resources-exact.json
 0x0048ABB0,?LoadResources@Character00@@UAEXXZ,src/Character00Resources.cpp,?LoadResources@Character00@@UAEXXZ,complete,docs/evidence/character-00-resources-exact.json
 0x0048DD00,?Slot01@Character00@@UAEXXZ,src/Character00Render.cpp,?Slot01@Character00@@UAEXXZ,complete,docs/evidence/character-00-slot01-exact.json
+0x0048E290,?Slot02@Character00@@UAEXXZ,src/Character00Commands.cpp,?Slot02@Character00@@UAEXXZ,complete,docs/evidence/character-00-slot02-exact.json

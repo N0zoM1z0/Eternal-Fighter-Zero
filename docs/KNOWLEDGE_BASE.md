@@ -8123,3 +8123,37 @@ differences, and **8/8 original-bound REL32 calls**. Public certificate:
 `docs/evidence/character-00-slot01-exact.json`. The renderer uses a private
 child-field view to avoid invalidating other exact character units. Only this
 unit was rebuilt; no full cold replay or whole-game runtime parity claim.
+
+
+<a id="nanase-command-recognition"></a>
+
+## Nanase 5,108-byte command-recognition boss: complete natural C++ Exact
+
+Nanase's `Character00::Slot02` at `0x0048E290` is now completely authored as
+ordinary C++ in `src/Character00Commands.cpp`, preserving the original
+priority order of **15 input-history scans**, their distinct 45/90/120/135/
+175-frame window starts, history wrap modulo 180, directional mirroring,
+button-bit decoding and each recognized-command return. Its complete original
+virtual slot2 pointer is `0x0078833C -> 0x0048E290`; the 5,108-byte function
+ends with RET at `0x0048F683`, followed by twelve `CC` bytes before the next
+owner's prologue at `0x0048F690`.
+
+The first full 45-frame scan recognizes the high-priority charged motion, and
+the two following 90-frame charged scans are separately gated on the native
+`field344c == 0/1` pattern-bank mode plus the inherited 1000-point meter.
+The second mode uses the **opposite direction test**, expressed naturally as
+`2/6 + (facing == -1 ? 0 : -1)`; a plain `(facing != -1)` rewrite is logically
+similar but produces different VC7.1 instructions. The remaining scans include
+four directional/quarter-circle priorities, the five-frame release-to-button
+pulse, mode-specific 0x60 animation gating and neutral/4/button command tests.
+The exact case-specific order of comparisons, early high-button finishes,
+and signed facing operations is retained; none is replaced by a data table or
+abstracted dispatcher that would alter code generation.
+
+The pinned VC7.1 `/Od /G6 /MT /Gy /W3` source builds the full
+**5,108/5,108 native instruction bytes byte-for-byte Exact**, with **zero COFF
+relocations** and zero byte differences. This is a whole-owner proof, not a
+normalized or partial instruction-structure metric. Public selected strict
+certificate: `docs/evidence/character-00-slot02-exact.json`. No ASM, `_emit`,
+forced opcode bytes, padding or full all-unit cold replay. Nanase's other large
+state/action/effects owners remain separately open.

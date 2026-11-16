@@ -549,6 +549,16 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+The Nanase 5,108-byte input command Boss `Character00::Slot02`
+(`0x0048E290`, virtual slot2) is now **whole-owner byte Exact** from the actual
+15-priority-scan C++ reconstruction in `src/Character00Commands.cpp`. The
+original target and generated COFF are both 5,108 bytes and have zero
+relocations and zero byte differences; original RET at 0x0048F683 and 12
+following INT3 alignment bytes independently checked. The first two mode
+gates use opposite facing orientation and `field344c==0/1` with 1000-point
+meter; the body preserves all original scan windows and returns. Proof:
+`docs/evidence/character-00-slot02-exact.json`. No full cold replay.
+
 Nanase's full dual gauge renderer is now original-bound natural-C++ Exact:
 `src/Character00Render.cpp` reconstructs the original `Character00::Slot01`
 1,080-byte virtual owner at `0x0048DD00` with six `MakeSurfaceRect` and two

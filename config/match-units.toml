@@ -162458,3 +162458,14 @@ type = "REL32"
 symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
 target = 0x00409A90
 evidence = "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048E12F resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90"
+
+
+[units.character-00-slot02]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character00Commands.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-00-slot02/Character00Commands.obj"
+symbol = "?Slot02@Character00@@UAEXXZ"
+target_address = 0x0048E290
+size = 5108
