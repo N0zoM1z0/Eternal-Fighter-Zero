@@ -549,6 +549,14 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Ayu original `InitializeState` (virtual slot12, `0x006E82F0`) is now
+restored as **296/296-byte strictly Exact natural C++** in
+`src/Character01Initialize.cpp`. It clears six Ayu-only state words, restores
+five original collision pairs, zeros three 64-int effect arrays and invokes
+the original base initializer at `0x0040EDF0`. Single-unit proof:
+`docs/evidence/character-01-initialize-exact.json`, including its one original
+REL32 call. No shared header change or all-unit cold replay.
+
 Ayu Character01 now has six natural-C++ exact original vtable leaves in
 `src/Character01Lifecycle.cpp`: ResetPose 58, RemoveLocalEffect 80, Slot03
 19, EmitLocalEffect 47, and empty Slot01/Slot08 (11 each). The original

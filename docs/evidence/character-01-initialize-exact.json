@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "authority": "Original Ayu Character01 virtual slot12 at 0x00788E7C and its 296-byte native owner 0x006E82F0..0x006E8417, original complete RET, and native-bound Secondary initializer at 0x0040EDF0.",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 ordinary C++ source src/Character01Initialize.cpp; one selected-only original-bound strict replay verifies all 296 instruction bytes and the original REL32 call; zero differences, no ASM/emitted code, padding or full cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 296,
+      "matched_bytes": 296,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 288,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "Original Ayu virtual slot12 0x00788E7C selects native owner [0x006E82F0,0x006E8418), original REL32 call at 0x006E840F resolves Secondary::InitializeState 0x0040EDF0, complete RET at 0x006E8417",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "3bb5f6613fb7e268ee1be6404af627bd4b7a1f7fa7b59fe6042c6a1320b227af",
+      "target_extent_sha256": "3bb5f6613fb7e268ee1be6404af627bd4b7a1f7fa7b59fe6042c6a1320b227af",
+      "unit": "character-01-initialize-state",
+      "symbol": "?InitializeState@Character01@@UAEXXZ",
+      "target_address": "0x006E82F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "052b8ac303c3cb24c6a4d47565eb42a14021f6a07a491507532a5ab5657f08aa",
+      "object_sha256": "5dd4c6965657cf078e8afcf97f31c7d5054a360063ebaf36eb0cb3b253deb77e",
+      "source_sha256": "2b64fb61cdc150d86ee80101153a37a3abeb130a8e6a3b4a0161463989a0f2c2",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9f270f708f99bc0ad42d0cb9ab5aa16d9e83303e362f6bec6ec931026d743985",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "66b9ef104cea2f30f5913328c5350dc37926be7efc07212b95154f5c517e2727",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

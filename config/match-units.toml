@@ -163225,3 +163225,21 @@ object = "build/match-units/character-01-slot08/Character01Lifecycle.obj"
 symbol = "?Slot08@Character01@@UAEXXZ"
 target_address = 0x006EAF90
 size = 11
+
+
+[units.character-01-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character01Initialize.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-01-initialize-state/Character01Initialize.obj"
+symbol = "?InitializeState@Character01@@UAEXXZ"
+target_address = 0x006E82F0
+size = 296
+
+[[units.character-01-initialize-state.relocations]]
+offset = 288
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Original Ayu virtual slot12 0x00788E7C selects native owner [0x006E82F0,0x006E8418), original REL32 call at 0x006E840F resolves Secondary::InitializeState 0x0040EDF0, complete RET at 0x006E8417"

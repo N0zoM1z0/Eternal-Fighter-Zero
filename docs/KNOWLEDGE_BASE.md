@@ -8278,3 +8278,27 @@ calls**, and zero differences. `docs/evidence/character-01-lifecycle-exact.json`
 contains the accepted proof, with independently reviewed vtable and return
 boundaries. No shared class headers were edited and no ASM, `_emit`, padding
 or full cold replay were used. Ayu's larger action/state/CPU owners remain open.
+
+
+<a id="ayu-initialize"></a>
+
+## Ayu Character01 original 296-byte state initialization
+
+`Character01::InitializeState` is now recovered as a complete ordinary-C++
+function in `src/Character01Initialize.cpp`. Its canonical vtable slot12 at
+`0x00788E7C` selects the 296-byte native owner `[0x006E82F0,0x006E8418)`.
+It clears Ayu's six child state words `0x3138..0x314C`, restores all five
+collision X/Y pairs `(-17,-51), (13,0), (12,-14), (22,-19), (27,-41)` from
+the original constructor, zeros all three 64-int local-effect arrays at
+`0x3150/0x3250/0x3350`, then invokes original
+`Secondary::InitializeState` at `0x0040EDF0`. The child view is private to
+this TU and does not change previously accepted `Character01`/`Secondary`
+class layouts.
+
+The pinned VC7.1 `/Od /G6 /MT /Gy /W3` **selected single-unit strict replay**
+proves **296/296 executable bytes Exact**, zero differences, and its one
+independently bound original REL32 call. Original complete RET is at
+`0x006E8417`. Certificate:
+`docs/evidence/character-01-initialize-exact.json`. No ASM, `_emit`, padding
+or all-unit cold replay. Ayu's larger Slot02/04/05/06/07 remain separately
+open.

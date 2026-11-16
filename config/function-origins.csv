@@ -469,7 +469,7 @@ address,origin,status,evidence
 0x006D6E40,unknown,unreviewed,
 0x006D93F0,unknown,unreviewed,
 0x006E8130,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
-0x006E82F0,unknown,unreviewed,
+0x006E82F0,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-initialize
 0x006E8420,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle
 0x006E8460,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle
 0x006E84B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle
