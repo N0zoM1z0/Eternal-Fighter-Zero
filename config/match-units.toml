@@ -163986,3 +163986,49 @@ type = "REL32"
 symbol = "?InitializeState@Secondary@@UAEXXZ"
 target = 0x0040EDF0
 evidence = "Original Akane Character02 vtable slot12 at 0x00788EE0 selects full owner [0x00703B70,0x00703C8B), original native REL32 operand at 0x00703C83 to base InitializeState at 0x0040EDF0; original RET 0x00703C8A."
+
+
+[units.character-02-slot02]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character02Commands.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-02-slot02/Character02Commands.obj"
+symbol = "?Slot02@Character02@@UAEXXZ"
+target_address = 0x00706AD0
+size = 4981
+
+[[units.character-02-slot02.relocations]]
+offset = 366
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot2 0x00788EB8 selects full native command owner [0x00706AD0,0x00707E45), original DIR32 operand 0x00706C3E binds the 8-byte 0.0 literal at 0x007872F8, original complete RET 0x00707E44."
+
+[[units.character-02-slot02.relocations]]
+offset = 851
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot2 0x00788EB8 selects full native command owner [0x00706AD0,0x00707E45), original DIR32 operand 0x00706E23 binds the 8-byte 0.0 literal at 0x007872F8, original complete RET 0x00707E44."
+
+[[units.character-02-slot02.relocations]]
+offset = 1395
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot2 0x00788EB8 selects full native command owner [0x00706AD0,0x00707E45), original DIR32 operand 0x00707043 binds the 8-byte 0.0 literal at 0x007872F8, original complete RET 0x00707E44."
+
+[[units.character-02-slot02.relocations]]
+offset = 1920
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot2 0x00788EB8 selects full native command owner [0x00706AD0,0x00707E45), original DIR32 operand 0x00707250 binds the 8-byte 0.0 literal at 0x007872F8, original complete RET 0x00707E44."
+
+[[units.character-02-slot02.relocations]]
+offset = 2317
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot2 0x00788EB8 selects full native command owner [0x00706AD0,0x00707E45), original DIR32 operand 0x007073DD binds the 8-byte 0.0 literal at 0x007872F8, original complete RET 0x00707E44."

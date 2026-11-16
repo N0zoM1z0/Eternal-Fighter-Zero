@@ -490,7 +490,7 @@ address,origin,status,evidence
 0x00706A80,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle
 0x00706A90,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle
 0x00706AA0,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle
-0x00706AD0,unknown,unreviewed,
+0x00706AD0,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-command-recognition
 0x00707E50,unknown,unreviewed,
 0x0070BC00,unknown,unreviewed,
 0x00712500,unknown,unreviewed,

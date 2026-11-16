@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "authority": "Akane Character02 original vtable slot2 at 0x00788EB8 selects 4,981-byte executable owner [0x00706AD0,0x00707E45), raw RET at 0x00707E44 before 11 CC alignment bytes; all five native double zero literal operand targets individually bound.",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles authored 15-priority-scan natural C++ in src/Character02Commands.cpp. Strict single selected-unit normal-COFF replay matches 4,981/4,981 original bytes and 5/5 verified native DIR32 literal operands with zero differences. No ASM, emitted opcodes, padding, linked runtime claim or all-unit cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 4981,
+      "matched_bytes": 4981,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 366,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot2 0x00788EB8 selects full native command owner [0x00706AD0,0x00707E45), original DIR32 operand 0x00706C3E binds the 8-byte 0.0 literal at 0x007872F8, original complete RET 0x00707E44.",
+          "addend": 0
+        },
+        {
+          "offset": 851,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot2 0x00788EB8 selects full native command owner [0x00706AD0,0x00707E45), original DIR32 operand 0x00706E23 binds the 8-byte 0.0 literal at 0x007872F8, original complete RET 0x00707E44.",
+          "addend": 0
+        },
+        {
+          "offset": 1395,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot2 0x00788EB8 selects full native command owner [0x00706AD0,0x00707E45), original DIR32 operand 0x00707043 binds the 8-byte 0.0 literal at 0x007872F8, original complete RET 0x00707E44.",
+          "addend": 0
+        },
+        {
+          "offset": 1920,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot2 0x00788EB8 selects full native command owner [0x00706AD0,0x00707E45), original DIR32 operand 0x00707250 binds the 8-byte 0.0 literal at 0x007872F8, original complete RET 0x00707E44.",
+          "addend": 0
+        },
+        {
+          "offset": 2317,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot2 0x00788EB8 selects full native command owner [0x00706AD0,0x00707E45), original DIR32 operand 0x007073DD binds the 8-byte 0.0 literal at 0x007872F8, original complete RET 0x00707E44.",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "f22b2a9fb447fb5e5f0e632c3fdbb0a007aadc3b5bbf523835b6a663bd8b4232",
+      "target_extent_sha256": "f22b2a9fb447fb5e5f0e632c3fdbb0a007aadc3b5bbf523835b6a663bd8b4232",
+      "unit": "character-02-slot02",
+      "symbol": "?Slot02@Character02@@UAEXXZ",
+      "target_address": "0x00706AD0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "47735eb42aac9fc075809e71b2dfcacb9b4240e3811b473960b6c249b1e8f945",
+      "object_sha256": "9e798ff77c014196af0d31144648e39aa60afa0a00cd53c870107d57cc3f9472",
+      "source_sha256": "21cc36c499482ed926fe821a20725c366eb8ade23611b45700ea01e1221be184",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "3e2494f17c3bc52af50ab372e9ae34e8ba363bfb7c16c4e34d67c0815c589257",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "509e03099b0db56098462784a2601e56a729cee1f30c744cc91bd05b705b8bb4",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

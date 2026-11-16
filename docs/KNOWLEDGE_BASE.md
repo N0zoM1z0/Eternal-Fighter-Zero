@@ -8420,3 +8420,36 @@ alignment, not substituted by padding or emitted instructions. Certificate:
 accepted Akane lifecycle leaves, seven new Akane owners now total
 **509/509 exact bytes**, with five original-bound call relocations. The
 remaining large Akane input/CPU/state owners remain open. No full cold replay.
+
+
+<a id="akane-command-recognition"></a>
+
+## Akane Character02 native 4,981-byte command-recognition boss: strict Exact
+
+Akane's entire `Character02::Slot02` command recognizer at `0x00706AD0` is
+now recovered as **ordinary natural C++** in `src/Character02Commands.cpp`.
+The canonical Akane vtable at `0x00788EB0` selects it through slot2
+`0x00788EB8`. Original executable owner `[0x00706AD0,0x00707E45)` has
+4,981 instruction bytes and ends at `RET` `0x00707E44`, before 11 excluded
+`CC` alignment bytes. This is the complete 15-stage original circular input
+history algorithm, not a stub, translated byte-table, or hand-authored ASM.
+
+Priority order is original: meter-3000 `0x5A` 45-frame opener,
+`0x78` 105-frame motion, `0x6E` and 100 families at 90 frames,
+`0x14` at 120 frames, then 135-frame `0x0A/0x28/0x1E`, followed by
+`6/0x35/0x34/0x33/0x32/1/0` end priorities. The four Akane-only grounded
+scan guards for `0x78/0x6E/100/0x14` and the first scanner's meter-3000
+neutral-ground condition were reconstructed from the actual native logic.
+The facing test is written as `2 + (facing == -1 ? 0 : -1)`; this natural
+ternary compiles into the original `sub/neg/sbb/add` sequence, whereas a
+boolean subtraction changes the native register/allocation instruction bytes.
+
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` **selected-only strict normal COFF
+replay** reports **4,981/4,981 original executable bytes Exact**, zero
+differences, with **5/5 original-bound DIR32 double-literal operands**
+(all verified against the eight zero bytes at `0x007872F8`). Certificate:
+`docs/evidence/character-02-slot02-exact.json`. Together with Akane's six
+accepted lifecycle leaves and full initializer, this brings the character
+to **eight accepted functions totalling 5,490 original executable bytes**.
+The large Akane Slot04/Slot05/Slot06/Slot07 owners remain open. No full
+cold replay, inline ASM, `_emit` or artificial padding was used.

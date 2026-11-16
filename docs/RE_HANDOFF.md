@@ -549,6 +549,18 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Akane's complete **4,981-byte** original command-recognition boss
+`Character02::Slot02` at `0x00706AD0` is now **strict natural-C++ Exact**
+in `src/Character02Commands.cpp`: all 15 ordered native history scans,
+`0x5A`/`0x78`/`0x6E`/100/`0x14`/`0x0A`/`0x28`/`0x1E` command families,
+original grounded-only gates and precise direction-test expression. Native
+vtable slot2 `0x00788EB8`, original RET `0x00707E44`. Selected strict
+replay verifies **4,981/4,981 native bytes, zero differences, five native
+zero-double literal DIR32 relocations**. Formal proof
+`docs/evidence/character-02-slot02-exact.json`. Combined with seven earlier
+Akane leaves/init, eight complete Akane functions now cover **5,490 exact
+bytes**. No full cold replay.
+
 Akane `Character02::InitializeState` at `0x00703B70` (original virtual
 slot12) is now accepted **283/283-byte Exact** in ordinary
 `src/Character02Initialize.cpp`: original five collision pairs, five child
