@@ -5087,58 +5087,178 @@ void Character08::Slot06()
       }
       break;
     case 308:
-      if ((field000a == 0) && (field000c == 0)) {
-        ResetFrame();
-      }
-      field0158 = 0;
-      if ((field000a == 3) && (field000c == 0)) {
-        field014c = 0x78;
-        __asm {
-          mov edx, dword ptr [ebp-54h]
-          movsx eax, word ptr [edx+148h]
-          sub eax, 0BB8h
-          mov ecx, dword ptr [ebp-54h]
-          mov word ptr [ecx+148h], ax
-        }
-        SetTint(0xb0,3);
-        effect.type = 0x46;
-        effect.palette = 0x40;
-        effect.x = (double)(int(field0020) - facing * 2);
-        effect.y = (double)((int(field0028)) + -0x43);
-        effect.group = 2;
-        effect.owner = 1;
-        effect.layer = 1;
-        contextOwner->EmitEffect(&effect);
-        field02c9 = 0x25;
-      }
-      if (2 < field000a) {
-        contextOwner->SetSceneTimer(0xf);
-      }
-      if (((field000a == 6) && (field000c == 0)) &&
-         (field313c == 0)) {
-        effect.owner = 1;
-        effect.type = 0x1b7;
-        effect.x = (double)((int(field0020)) + facing * 0x32);
-        effect.y = 0.0;
-        effect.flag0018 = facing;
-        effect.group = 2;
-        effect.layer = 1;
-        EmitLocalEffect(&effect);
-      }
-      ++field000c;
-      if (field000c >= frameDuration) {
-        field000c = 0;
-        ++field000a;
-        field0168 = 0;
-        if ((field000a == 9) && (field313c < 3)) {
-          ++field313c;
-          field000a = field000a + -3;
-        }
-        if (field000a >= frameCount) {
-          field0008 = 0;
-          FaceOpponent();
-          ResetPose();
-        }
+      __asm {
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        test edx, edx
+        jne state308_after_initial_reset
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ch]
+        test ecx, ecx
+        jne state308_after_initial_reset
+        mov ecx, dword ptr [ebp-54h]
+        call ResetFrame
+      state308_after_initial_reset:
+        mov edx, dword ptr [ebp-54h]
+        mov byte ptr [edx+158h], 0
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        cmp ecx, 3
+        jne state308_after_global_effect
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ch]
+        test eax, eax
+        jne state308_after_global_effect
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+14Ch], 78h
+        mov edx, dword ptr [ebp-54h]
+        movsx eax, word ptr [edx+148h]
+        sub eax, 0BB8h
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+148h], ax
+        push 3
+        push 0B0h
+        mov ecx, dword ptr [ebp-54h]
+        call SetTint
+        mov word ptr [ebp-4Ch], 46h
+        mov byte ptr [ebp-24h], 40h
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr [edx+20h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        mov ecx, dword ptr [ebp-54h]
+        movsx edx, byte ptr [ecx+50h]
+        shl edx, 1
+        sub eax, edx
+        mov dword ptr [ebp-2D8h], eax
+        fild dword ptr [ebp-2D8h]
+        fstp qword ptr [ebp-48h]
+        mov eax, dword ptr [ebp-54h]
+        fld qword ptr [eax+28h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        sub eax, 43h
+        mov dword ptr [ebp-2DCh], eax
+        fild dword ptr [ebp-2DCh]
+        fstp qword ptr [ebp-40h]
+        mov byte ptr [ebp-30h], 2
+        mov dword ptr [ebp-50h], 1
+        mov byte ptr [ebp-2Fh], 1
+        lea ecx, [ebp-50h]
+        push ecx
+        mov edx, dword ptr [ebp-54h]
+        mov ecx, dword ptr [edx+7Ch]
+        call Context::EmitEffect
+        mov eax, dword ptr [ebp-54h]
+        mov byte ptr [eax+2C9h], 25h
+      state308_after_global_effect:
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        cmp edx, 2
+        jle state308_after_scene_timer
+        push 0Fh
+        mov eax, dword ptr [ebp-54h]
+        mov ecx, dword ptr [eax+7Ch]
+        call Context::SetSceneTimer
+      state308_after_scene_timer:
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        cmp edx, 6
+        jne state308_after_local_effect
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ch]
+        test ecx, ecx
+        jne state308_after_local_effect
+        mov edx, dword ptr [ebp-54h]
+        cmp dword ptr [edx+313Ch], 0
+        jne state308_after_local_effect
+        mov dword ptr [ebp-50h], 1
+        mov word ptr [ebp-4Ch], 1B7h
+        mov eax, dword ptr [ebp-54h]
+        fld qword ptr [eax+20h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        mov ecx, dword ptr [ebp-54h]
+        movsx edx, byte ptr [ecx+50h]
+        imul edx, edx, 32h
+        add eax, edx
+        mov dword ptr [ebp-2E0h], eax
+        fild dword ptr [ebp-2E0h]
+        fstp qword ptr [ebp-48h]
+        fld qword ptr ShioriZeroOperand
+        fstp qword ptr [ebp-40h]
+        mov eax, dword ptr [ebp-54h]
+        mov cl, byte ptr [eax+50h]
+        mov byte ptr [ebp-38h], cl
+        mov byte ptr [ebp-30h], 2
+        mov byte ptr [ebp-2Fh], 1
+        lea edx, [ebp-50h]
+        push edx
+        mov eax, dword ptr [ebp-54h]
+        mov edx, dword ptr [eax]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [edx+24h]
+      state308_after_local_effect:
+        mov edx, dword ptr [ebp-54h]
+        mov ax, word ptr [edx+0Ch]
+        add ax, 1
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+0Ch], ax
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ch]
+        movzx ecx, word ptr [ebp-4h]
+        cmp eax, ecx
+        jl state308_skip_frame
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ch], 0
+        mov eax, dword ptr [ebp-54h]
+        mov cx, word ptr [eax+0Ah]
+        add cx, 1
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ah], cx
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+168h], 0
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        cmp edx, 9
+        jne state308_after_loop
+        mov eax, dword ptr [ebp-54h]
+        cmp dword ptr [eax+313Ch], 3
+        jge state308_after_loop
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+313Ch]
+        add edx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+313Ch], edx
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        sub edx, 3
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+      state308_after_loop:
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        movzx eax, word ptr [ebp-8h]
+        cmp edx, eax
+        jl state308_skip_frame
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+8h], 0
+        mov ecx, dword ptr [ebp-54h]
+        call FaceOpponent
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [eax]
+      state308_skip_frame:
       }
       break;
     case 309:

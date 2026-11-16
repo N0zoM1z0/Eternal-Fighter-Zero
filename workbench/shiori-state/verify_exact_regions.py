@@ -2,7 +2,7 @@
 """Verify pinned byte-exact regions of the Shiori Slot06 workbench object.
 
 This is deliberately a focused-region verifier, not a whole-function Exact
-certificate. It reconstructs thirteen complete case bodies from original-bound
+certificate. It reconstructs fourteen complete case bodies from original-bound
 COFF operands, raw runtime-call operands and native stack-slot normalization.
 """
 from __future__ import annotations
@@ -38,36 +38,40 @@ CALL_TARGETS = {
 CASE_RELOCATIONS = {
     300: (13, 10), 301: (2, 0), 302: (2, 0), 303: (9, 9),
     304: (9, 9), 305: (10, 10), 306: (8, 7), 307: (5, 4),
-    310: (8, 8), 311: (9, 9), 312: (24, 11), 318: (12, 9), 319: (17, 6),
+    308: (6, 5), 310: (8, 8), 311: (9, 9), 312: (24, 11),
+    318: (12, 9), 319: (17, 6),
 }
-PINNED_ASM_CALLS = {307: (0x004205FA, 0x0042061F, 0x0042068A),
-                    318: (0x00422423, 0x00422449)}
+PINNED_ASM_CALLS = {
+    307: (0x004205FA, 0x0042061F, 0x0042068A),
+    308: (0x00420818, 0x0042083D, 0x004208CB),
+    318: (0x00422423, 0x00422449),
+}
 STACK_SLOT_PATCHES = {
-    310: ((0x09F, 0x20, 0x14), (0x0A5, 0x20, 0x14),
-          (0x0BC, 0x1C, 0x10), (0x0C2, 0x1C, 0x10),
-          (0x125, 0x18, 0x0C), (0x12B, 0x18, 0x0C),
-          (0x13F, 0x14, 0x08), (0x145, 0x14, 0x08)),
-    311: ((0x09F, 0x10, 0x04), (0x0A5, 0x10, 0x04),
-          (0x0BC, 0x0C, 0x00), (0x0C2, 0x0C, 0x00),
-          (0x148, 0x08, 0xFC), (0x149, 0xFD, 0xFC),
-          (0x14E, 0x08, 0xFC), (0x14F, 0xFD, 0xFC),
-          (0x162, 0x04, 0xF8), (0x163, 0xFD, 0xFC),
-          (0x168, 0x04, 0xF8), (0x169, 0xFD, 0xFC)),
-    312: ((0x145, 0x00, 0xF4), (0x146, 0xFD, 0xFC),
-          (0x14B, 0x00, 0xF4), (0x14C, 0xFD, 0xFC),
-          (0x162, 0xFC, 0xF0), (0x168, 0xFC, 0xF0),
-          (0x288, 0xF8, 0xEC), (0x28E, 0xF8, 0xEC),
-          (0x2B7, 0xF4, 0xE8), (0x2BD, 0xF4, 0xE8)),
-    318: ((0x177, 0xA0, 0x8C), (0x17D, 0xA0, 0x8C),
-          (0x194, 0x9C, 0x88), (0x19A, 0x9C, 0x88),
-          (0x21B, 0x98, 0x84), (0x221, 0x98, 0x84),
-          (0x238, 0x94, 0x80), (0x23E, 0x94, 0x80)),
-    319: ((0x0E0, 0x90, 0x7C), (0x0E6, 0x90, 0x7C)),
+    310: ((0x09F, 0x2C, 0x14), (0x0A5, 0x2C, 0x14),
+          (0x0BC, 0x28, 0x10), (0x0C2, 0x28, 0x10),
+          (0x125, 0x24, 0x0C), (0x12B, 0x24, 0x0C),
+          (0x13F, 0x20, 0x08), (0x145, 0x20, 0x08)),
+    311: ((0x09F, 0x1C, 0x04), (0x0A5, 0x1C, 0x04),
+          (0x0BC, 0x18, 0x00), (0x0C2, 0x18, 0x00),
+          (0x148, 0x14, 0xFC), (0x149, 0xFD, 0xFC),
+          (0x14E, 0x14, 0xFC), (0x14F, 0xFD, 0xFC),
+          (0x162, 0x10, 0xF8), (0x163, 0xFD, 0xFC),
+          (0x168, 0x10, 0xF8), (0x169, 0xFD, 0xFC)),
+    312: ((0x145, 0x0C, 0xF4), (0x146, 0xFD, 0xFC),
+          (0x14B, 0x0C, 0xF4), (0x14C, 0xFD, 0xFC),
+          (0x162, 0x08, 0xF0), (0x163, 0xFD, 0xFC),
+          (0x168, 0x08, 0xF0), (0x169, 0xFD, 0xFC),
+          (0x288, 0x04, 0xEC), (0x289, 0xFD, 0xFC),
+          (0x28E, 0x04, 0xEC), (0x28F, 0xFD, 0xFC),
+          (0x2B7, 0x00, 0xE8), (0x2B8, 0xFD, 0xFC),
+          (0x2BD, 0x00, 0xE8), (0x2BE, 0xFD, 0xFC)),
+    318: ((0x177, 0xAC, 0x8C), (0x17D, 0xAC, 0x8C),
+          (0x194, 0xA8, 0x88), (0x19A, 0xA8, 0x88),
+          (0x21B, 0xA4, 0x84), (0x221, 0xA4, 0x84),
+          (0x238, 0xA0, 0x80), (0x23E, 0xA0, 0x80)),
+    319: ((0x0E0, 0x9C, 0x7C), (0x0E6, 0x9C, 0x7C)),
 }
 PINNED_ARITHMETIC = {
-    306: (0x0042038B, 25, "sub eax,0x3E8"),
-    307: (0x004205C2, 25, "sub eax,0x7D0"),
-    308: (0x004207E0, 25, "sub eax,0xBB8"),
     315: (0x00421BEB, 26, "sub edx,0x3E8"),
 }
 
@@ -100,7 +104,7 @@ def main() -> None:
     candidate_code = bytearray(compiled)
     if native_code[:9] != bytes.fromhex("558bec81ec84030000"):
         raise AssertionError("unexpected native Slot06 stack prologue")
-    if candidate_code[:9] != bytes.fromhex("558bec81ec70030000"):
+    if candidate_code[:9] != bytes.fromhex("558bec81ec64030000"):
         raise AssertionError(("unexpected candidate Slot06 stack prologue", candidate_code[:9].hex()))
     candidate_code[3:9] = native_code[3:9]
     compiled = bytes(candidate_code)
@@ -227,16 +231,16 @@ def main() -> None:
         "late_meter_arithmetic": arithmetic,
         "dispatch": {"table_relocations": len(table_relocations),
                      "case_entry_order_exact": True, "selector_bytes_exact": True},
-        "prologue_normalization": {"candidate_frame": "0x370", "native_frame": "0x384",
+        "prologue_normalization": {"candidate_frame": "0x364", "native_frame": "0x384",
                                    "native_prologue_restored": True},
-        "qualification": "Thirteen complete case bodies are byte-exact after original-bound relocation materialization, five inline-assembly __ftol2 call bindings, and native stack-slot normalization. Two additional meter arithmetic regions are byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate.",
+        "qualification": "Fourteen complete case bodies are byte-exact after original-bound relocation materialization, eight inline-assembly __ftol2 call bindings, and native stack-slot normalization. One additional meter arithmetic region is byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate.",
     }
     output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(evidence, indent=2) + "\n")
     for case, result in exact_cases.items():
         print(f"case{case}: {result['bytes']} bytes exact; {result['relocations_materialized']} relocations ({result['rel32_calls_materialized']} calls, {result['float_operands_materialized']} floats)")
-    print("stack frame: candidate 0x370 normalized to native 0x384; stack-temp operands restored for cases310/311/312/318/319")
+    print("stack frame: candidate 0x364 normalized to native 0x384; stack-temp operands restored for cases310/311/312/318/319")
     print("meter blocks:", ", ".join(f"case{x['case']}={x['bytes']}B exact" for x in arithmetic))
     print("owner extent:", len(compiled), "bytes; table/selector order exact; other cases remain open")
 

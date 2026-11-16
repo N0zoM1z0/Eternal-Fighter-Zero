@@ -11,8 +11,8 @@
     "native_candidate_extent_size_equal": true
   },
   "build": {
-    "source_sha256": "ddbbb1888543e1f2771bc91a7a55eac94432e52ea65f2ec447d132edd1b4d96b",
-    "object_sha256": "1dcfea88230106c7f151284fc94ccfc900316c6e5c3cb1db1a9003ac55b61cc2",
+    "source_sha256": "28f45385f7e77e9c57153dc9f39caee19779264608a07cd07dd0d8820555d168",
+    "object_sha256": "f0c28a005cc653e0a2806bd683268dc549db4b425f470290732b6ef84a0b14a8",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
   "whole_case_exact": {
@@ -429,6 +429,66 @@
         }
       ]
     },
+    "308": {
+      "native_start": "0x42078d",
+      "bytes": 577,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 6,
+      "rel32_calls_materialized": 5,
+      "float_operands_materialized": 1,
+      "pinned_raw_calls": [
+        {
+          "offset": "0x420818",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x42083d",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x4208cb",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        }
+      ],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x4207a7",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        },
+        {
+          "offset": "0x420804",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x42086e",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x420891",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "target": "0x4080c0"
+        },
+        {
+          "offset": "0x4209bb",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x4208ed",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
     "310": {
       "native_start": "0x420af3",
       "bytes": 484,
@@ -440,42 +500,42 @@
       "stack_slot_bytes_materialized": [
         {
           "case_offset": "0x9f",
-          "candidate": "0x20",
+          "candidate": "0x2c",
           "native": "0x14"
         },
         {
           "case_offset": "0xa5",
-          "candidate": "0x20",
+          "candidate": "0x2c",
           "native": "0x14"
         },
         {
           "case_offset": "0xbc",
-          "candidate": "0x1c",
+          "candidate": "0x28",
           "native": "0x10"
         },
         {
           "case_offset": "0xc2",
-          "candidate": "0x1c",
+          "candidate": "0x28",
           "native": "0x10"
         },
         {
           "case_offset": "0x125",
-          "candidate": "0x18",
+          "candidate": "0x24",
           "native": "0xc"
         },
         {
           "case_offset": "0x12b",
-          "candidate": "0x18",
+          "candidate": "0x24",
           "native": "0xc"
         },
         {
           "case_offset": "0x13f",
-          "candidate": "0x14",
+          "candidate": "0x20",
           "native": "0x8"
         },
         {
           "case_offset": "0x145",
-          "candidate": "0x14",
+          "candidate": "0x20",
           "native": "0x8"
         }
       ],
@@ -534,27 +594,27 @@
       "stack_slot_bytes_materialized": [
         {
           "case_offset": "0x9f",
-          "candidate": "0x10",
+          "candidate": "0x1c",
           "native": "0x4"
         },
         {
           "case_offset": "0xa5",
-          "candidate": "0x10",
+          "candidate": "0x1c",
           "native": "0x4"
         },
         {
           "case_offset": "0xbc",
-          "candidate": "0xc",
+          "candidate": "0x18",
           "native": "0x0"
         },
         {
           "case_offset": "0xc2",
-          "candidate": "0xc",
+          "candidate": "0x18",
           "native": "0x0"
         },
         {
           "case_offset": "0x148",
-          "candidate": "0x8",
+          "candidate": "0x14",
           "native": "0xfc"
         },
         {
@@ -564,7 +624,7 @@
         },
         {
           "case_offset": "0x14e",
-          "candidate": "0x8",
+          "candidate": "0x14",
           "native": "0xfc"
         },
         {
@@ -574,7 +634,7 @@
         },
         {
           "case_offset": "0x162",
-          "candidate": "0x4",
+          "candidate": "0x10",
           "native": "0xf8"
         },
         {
@@ -584,7 +644,7 @@
         },
         {
           "case_offset": "0x168",
-          "candidate": "0x4",
+          "candidate": "0x10",
           "native": "0xf8"
         },
         {
@@ -653,7 +713,7 @@
       "stack_slot_bytes_materialized": [
         {
           "case_offset": "0x145",
-          "candidate": "0x0",
+          "candidate": "0xc",
           "native": "0xf4"
         },
         {
@@ -663,7 +723,7 @@
         },
         {
           "case_offset": "0x14b",
-          "candidate": "0x0",
+          "candidate": "0xc",
           "native": "0xf4"
         },
         {
@@ -673,33 +733,63 @@
         },
         {
           "case_offset": "0x162",
-          "candidate": "0xfc",
+          "candidate": "0x8",
           "native": "0xf0"
+        },
+        {
+          "case_offset": "0x163",
+          "candidate": "0xfd",
+          "native": "0xfc"
         },
         {
           "case_offset": "0x168",
-          "candidate": "0xfc",
+          "candidate": "0x8",
           "native": "0xf0"
         },
         {
+          "case_offset": "0x169",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
           "case_offset": "0x288",
-          "candidate": "0xf8",
+          "candidate": "0x4",
           "native": "0xec"
+        },
+        {
+          "case_offset": "0x289",
+          "candidate": "0xfd",
+          "native": "0xfc"
         },
         {
           "case_offset": "0x28e",
-          "candidate": "0xf8",
+          "candidate": "0x4",
           "native": "0xec"
         },
         {
+          "case_offset": "0x28f",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
           "case_offset": "0x2b7",
-          "candidate": "0xf4",
+          "candidate": "0x0",
           "native": "0xe8"
         },
         {
+          "case_offset": "0x2b8",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
           "case_offset": "0x2bd",
-          "candidate": "0xf4",
+          "candidate": "0x0",
           "native": "0xe8"
+        },
+        {
+          "case_offset": "0x2be",
+          "candidate": "0xfd",
+          "native": "0xfc"
         }
       ],
       "calls": [
@@ -849,42 +939,42 @@
       "stack_slot_bytes_materialized": [
         {
           "case_offset": "0x177",
-          "candidate": "0xa0",
+          "candidate": "0xac",
           "native": "0x8c"
         },
         {
           "case_offset": "0x17d",
-          "candidate": "0xa0",
+          "candidate": "0xac",
           "native": "0x8c"
         },
         {
           "case_offset": "0x194",
-          "candidate": "0x9c",
+          "candidate": "0xa8",
           "native": "0x88"
         },
         {
           "case_offset": "0x19a",
-          "candidate": "0x9c",
+          "candidate": "0xa8",
           "native": "0x88"
         },
         {
           "case_offset": "0x21b",
-          "candidate": "0x98",
+          "candidate": "0xa4",
           "native": "0x84"
         },
         {
           "case_offset": "0x221",
-          "candidate": "0x98",
+          "candidate": "0xa4",
           "native": "0x84"
         },
         {
           "case_offset": "0x238",
-          "candidate": "0x94",
+          "candidate": "0xa0",
           "native": "0x80"
         },
         {
           "case_offset": "0x23e",
-          "candidate": "0x94",
+          "candidate": "0xa0",
           "native": "0x80"
         }
       ],
@@ -964,12 +1054,12 @@
       "stack_slot_bytes_materialized": [
         {
           "case_offset": "0xe0",
-          "candidate": "0x90",
+          "candidate": "0x9c",
           "native": "0x7c"
         },
         {
           "case_offset": "0xe6",
-          "candidate": "0x90",
+          "candidate": "0x9c",
           "native": "0x7c"
         }
       ],
@@ -1066,27 +1156,6 @@
   },
   "late_meter_arithmetic": [
     {
-      "case": 306,
-      "native_va": "0x42038b",
-      "bytes": 25,
-      "operation": "sub eax,0x3E8",
-      "byte_exact": true
-    },
-    {
-      "case": 307,
-      "native_va": "0x4205c2",
-      "bytes": 25,
-      "operation": "sub eax,0x7D0",
-      "byte_exact": true
-    },
-    {
-      "case": 308,
-      "native_va": "0x4207e0",
-      "bytes": 25,
-      "operation": "sub eax,0xBB8",
-      "byte_exact": true
-    },
-    {
       "case": 315,
       "native_va": "0x421beb",
       "bytes": 26,
@@ -1100,9 +1169,9 @@
     "selector_bytes_exact": true
   },
   "prologue_normalization": {
-    "candidate_frame": "0x370",
+    "candidate_frame": "0x364",
     "native_frame": "0x384",
     "native_prologue_restored": true
   },
-  "qualification": "Thirteen complete case bodies are byte-exact after original-bound relocation materialization, five inline-assembly __ftol2 call bindings, and native stack-slot normalization. Two additional meter arithmetic regions are byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
+  "qualification": "Fourteen complete case bodies are byte-exact after original-bound relocation materialization, eight inline-assembly __ftol2 call bindings, and native stack-slot normalization. One additional meter arithmetic region is byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
 }
