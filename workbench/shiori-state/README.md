@@ -139,6 +139,36 @@ random range and transition request. Evidence:
 `docs/evidence/shiori-slot06-leaf-dependencies-exact.json`. Only these fourteen
 units were replayed; no full-project cold replay was run.
 
+## Natural C++ conversion experiment — cases306–309 (2026-11-16)
+
+`ShioriState-natural-cases306-309.cpp` is a separate full-translation-unit
+copy of the current Shiori workbench. It preserves the surrounding compilation
+context and changes only original cases306–309. All four case bodies are now
+ordinary C++: there is no `__asm` or `_emit` in those four bodies. The other
+cases in this copy remain the pre-existing pinned workbench source; this is a
+scoped conversion experiment, not a natural whole-function source or an Exact
+claim. The file is unchanged outside those four case bodies relative to
+`ShioriState.cpp` apart from trailing-whitespace normalization.
+
+Built only this TU with VC7.1 `/Od /G6 /MT /Gy /W3`. The candidate owner is
+63,151 bytes (62,292 code + 540 table + 319 selector) versus the native
+63,132 bytes (62,273 code + 540 table + 319 selector). Per-case comparison:
+
+| Case | Native bytes | Candidate bytes | Native / candidate instructions | COFF relocations | Result |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 306 | 567 | 567 | 149 / 149 | 8 / 8 original-bound | Register differences; 45 non-relocation bytes remain |
+| 307 | 542 | 543 | 144 / 144 | 8 / 8 original-bound | One instruction-width byte and register differences remain |
+| 308 | 577 | 595 | 154 / 157 | 11 present, not yet fully bound | Three extra instructions; alignment and codegen remain open |
+| 309 | 293 | 293 | 80 / 80 | 4 / 4 original-bound | Register differences remain |
+
+The original-bound calls include the three `__ftol2` conversions in case306,
+three in case307, and two in case309; these are ordinary compiler-generated
+COFF relocations, not inline assembly. The case308 conversions are also normal
+COFF calls, but its changed instruction layout means its relocation mapping
+still needs a dedicated alignment review. None of these four cases is promoted
+to the Exact ledger. Continue by resolving natural source/register and local
+stack-lifetime differences, not by adding assembly or padding.
+
 ## Remaining source-object work
 
 The complete resolved final image is now byte-for-byte equal to the canonical
