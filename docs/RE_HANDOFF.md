@@ -549,6 +549,18 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+The next Ayu action Boss `Character01::Slot04` (`0x006E84D0`,
+**10,923 original bytes**) now has a compilable ordinary-C++ workbench in
+`workbench/ayu-action/Character01Action-natural.cpp`. The first ten
+priority families were restored in original `0x5D`, `0x7A`, `0x70`, `0x66`
+order, and **the first 11 state IDs** after `ClearBufferedButtons` match
+native disassembly, including aerial variants for `0x70`. The candidate
+remains **not Exact** (11,972 bytes, 102 COFF sites, 43 candidate vs 38
+native clear calls). Rebuild only with
+`scripts/repo-python workbench/ayu-action/verify_action_progress.py --rebuild`;
+evidence `docs/evidence/ayu-slot04-natural-progress.json`. Later Ayu action
+families must still be reconstructed, no all-unit cold replay.
+
 Ayu's complete **4,482-byte** virtual command-recognition boss
 `Character01::Slot02` (`0x006EAFD0`) has been reconstructed as 14
 prioritized natural-C++ history scans in `src/Character01Commands.cpp`.

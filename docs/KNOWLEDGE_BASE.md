@@ -8330,3 +8330,29 @@ virtual entry. The selected single-unit strict replay is recorded at
 `docs/evidence/character-01-slot02-exact.json`. No ASM, `_emit`,
 padding, synthetic opcode injection or full cold all-unit replay.
 Ayu's Slot04/05/06/07 bosses remain open.
+
+
+<a id="ayu-action-progress"></a>
+
+## Ayu 10,923-byte action-selection boss: original priority workbench
+
+`Character01::Slot04` at `0x006E84D0` (vtable slot4 `0x00788E5C`)
+is open. A real ordinary-C++ workbench candidate at
+`workbench/ayu-action/Character01Action-natural.cpp` has been rebuilt
+with the original first ten Ayu-specific high-priority command families in
+native order, rather than copying the Mayu states. The first **eleven**
+subsequent state destinations are verified against native `ClearBufferedButtons`
+call disassembly: `0xA7, 0x13E, 0x134, 0x133, 0x132, 0x12E, 0x12D,
+0x12C, 0x13D, 0x13C, 0x13B`. The `0x70/6F/6E` family restores original
+air/ground alternate state changes. This is source-level progress on the
+**large boss**, not a tiny test stub.
+
+Pinned VC7.1 compilation yields **11,972 candidate bytes** against
+**10,923 original** (+1,049), with 102 normal COFF relocations. The native
+function contains 38 original button-buffer clearing calls, while the
+candidate still contains 43 because later Mayu-specific branches have not
+been converted to Ayu behavior. Therefore **not Exact**, no formal owner
+ledger or whole-control-flow claim. Reproduce only this TU via
+`workbench/ayu-action/verify_action_progress.py --rebuild`; evidence:
+`docs/evidence/ayu-slot04-natural-progress.json`. Continue normal C++
+reconstruction, no ASM/PADDING or full cold replay.

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "status": "natural-cpp-ayu-action-workbench-not-exact",
+  "original": {
+    "owner": "Character01::Slot04",
+    "address": "0x6e84d0",
+    "vtable_slot4": "0x788e5c",
+    "bytes": 10923,
+    "sha256": "94407817f9952baefe53414d594515a78e4391119246ae4bb9e0aac13044877f",
+    "instruction_count": 2765,
+    "clear_calls": 38
+  },
+  "candidate": {
+    "source": "workbench/ayu-action/Character01Action-natural.cpp",
+    "source_sha256": "80e32dce677be8d1ce537e5d89ebc48b9dae7d201ad2debef1c681518931db04",
+    "object": "build/ayu-action/Character01Action-natural.obj",
+    "object_sha256": "eb19ad91989a18bd40ab07f3761ea3d5ed400d1dae2853761070ab7dff2bc07a",
+    "compiler_flags": [
+      "/Od",
+      "/G6",
+      "/MT",
+      "/Gy",
+      "/W3"
+    ],
+    "bytes": 11972,
+    "size_delta": 1049,
+    "instruction_count": 3040,
+    "coff_relocations": 102,
+    "clear_calls": 43,
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287"
+  },
+  "native_first_11_high_priority_states_match": true,
+  "first_11_transitions": [
+    {
+      "ordinal": 1,
+      "native_call_va": "0x6e8600",
+      "candidate_call_offset": "0x130",
+      "candidate_minus_original": 0,
+      "native_first_state": "0xa7",
+      "candidate_first_state": "0xa7"
+    },
+    {
+      "ordinal": 2,
+      "native_call_va": "0x6e8704",
+      "candidate_call_offset": "0x230",
+      "candidate_minus_original": -4,
+      "native_first_state": "0x13e",
+      "candidate_first_state": "0x13e"
+    },
+    {
+      "ordinal": 3,
+      "native_call_va": "0x6e87f2",
+      "candidate_call_offset": "0x31e",
+      "candidate_minus_original": -4,
+      "native_first_state": "0x134",
+      "candidate_first_state": "0x134"
+    },
+    {
+      "ordinal": 4,
+      "native_call_va": "0x6e88ef",
+      "candidate_call_offset": "0x41b",
+      "candidate_minus_original": -4,
+      "native_first_state": "0x133",
+      "candidate_first_state": "0x133"
+    },
+    {
+      "ordinal": 5,
+      "native_call_va": "0x6e89fa",
+      "candidate_call_offset": "0x526",
+      "candidate_minus_original": -4,
+      "native_first_state": "0x132",
+      "candidate_first_state": "0x132"
+    },
+    {
+      "ordinal": 6,
+      "native_call_va": "0x6e8ad3",
+      "candidate_call_offset": "0x5ff",
+      "candidate_minus_original": -4,
+      "native_first_state": "0x12e",
+      "candidate_first_state": "0x12e"
+    },
+    {
+      "ordinal": 7,
+      "native_call_va": "0x6e8bd7",
+      "candidate_call_offset": "0x703",
+      "candidate_minus_original": -4,
+      "native_first_state": "0x12d",
+      "candidate_first_state": "0x12d"
+    },
+    {
+      "ordinal": 8,
+      "native_call_va": "0x6e8cea",
+      "candidate_call_offset": "0x816",
+      "candidate_minus_original": -4,
+      "native_first_state": "0x12c",
+      "candidate_first_state": "0x12c"
+    },
+    {
+      "ordinal": 9,
+      "native_call_va": "0x6e8df4",
+      "candidate_call_offset": "0x920",
+      "candidate_minus_original": -4,
+      "native_first_state": "0x13d",
+      "candidate_first_state": "0x13d"
+    },
+    {
+      "ordinal": 10,
+      "native_call_va": "0x6e8ef1",
+      "candidate_call_offset": "0xa1d",
+      "candidate_minus_original": -4,
+      "native_first_state": "0x13c",
+      "candidate_first_state": "0x13c"
+    },
+    {
+      "ordinal": 11,
+      "native_call_va": "0x6e8ffc",
+      "candidate_call_offset": "0xb28",
+      "candidate_minus_original": -4,
+      "native_first_state": "0x13b",
+      "candidate_first_state": "0x13b"
+    }
+  ],
+  "source_has_asm_or_emitted_opcodes": false,
+  "whole_owner_exact": false,
+  "qualification": "Only the first eleven high-priority branches have native-grounded command/state ordering. Later Mayu-derived branches remain wrong: 43 candidate versus 38 native ClearBufferedButtons sites; different code extents and instruction count. No original-bound COFF replay or whole-owner Exact assertion. Keep outside match/implemented ledgers."
+}
