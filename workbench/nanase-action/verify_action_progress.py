@@ -104,6 +104,8 @@ def main():
          'candidate_minus_native_offset':candidate_calls[i][1]-native_calls[i][1],
          'native_state':hex(n),'candidate_state':hex(c)}
         for i,(n,c) in enumerate(zip(native_states,candidate_states))]
+    aligned_count=sum(n[1]==c[1] for n,c in zip(native_calls,candidate_calls))
+    aligned_prefix=next((i for i,(n,c) in enumerate(zip(native_calls,candidate_calls)) if n[1]!=c[1]),len(native_calls))
     evidence={
         'schema_version':1,
         'status':'natural-cpp-boss-progress-not-exact',
@@ -123,18 +125,20 @@ def main():
         'native_action_clear_calls':len(native_calls),
         'candidate_action_clear_calls':len(candidate_calls),
         'all_39_first_action_state_targets_match_in_order':True,
+        'native_call_offsets_aligned_count':aligned_count,
+        'native_call_offsets_aligned_prefix':aligned_prefix,
         'transitions':transition_rows,
         'source_has_asm_or_emitted_opcodes':False,
         'whole_owner_exact':candidate==original,
         'qualification':(
-            'All 39 native first post-ClearBufferedButtons action destinations now match '
-            'in their original order. The two sides now decode to the same '
-            '2,873 instruction count, although the candidate is 27 bytes '
-            'shorter. Instruction mnemonics, control-flow edges, register '
-            'allocation and whole-owner bytes are not equivalent. Its COFF '
-            'calls/data still need '
-            'individual target binding and full byte equivalence. This is an '
-            'unaccepted natural-C++ boss workbench, never an Exact receipt.'),
+            'All 39 first post-ClearBufferedButtons states match in native order; '
+            f'{aligned_prefix} initial ClearBufferedButtons sites match native offsets. '
+            f'Both sides decode to {len(native_rows)} instructions, but the '
+            f'candidate differs by {len(candidate)-LENGTH:+d} bytes. '
+            'Equal instruction counts and matching call offsets do not establish '
+            'code/control-flow/semantics equivalence. Every COFF relocation still '
+            'requires original-bound verification; this is a natural C++ boss '
+            'workbench, not an Exact receipt.'),
     }
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps(evidence,indent=2)+'\n')
