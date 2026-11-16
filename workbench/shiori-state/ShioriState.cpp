@@ -5262,31 +5262,97 @@ void Character08::Slot06()
       }
       break;
     case 309:
-      if ((field000a == 0) && (field000c == 0)) {
-        ResetFrame();
-      }
-      field0158 = 0;
-      if ((field000a == 5) && (field000c == 0)) {
-        field314c = 0xe10;
-        effect.owner = 1;
-        effect.type = 0x1a7;
-        effect.x = (double)(int(field0020));
-        effect.y = (double)(int(field0028));
-        effect.flag0018 = facing;
-        effect.group = 2;
-        effect.layer = 1;
-        EmitLocalEffect(&effect);
-      }
-      ++field000c;
-      if (field000c >= frameDuration) {
-        field000c = 0;
-        ++field000a;
-        field0168 = 0;
-        if (field000a >= frameCount) {
-          field0008 = 3;
-          FaceOpponent();
-          ResetPose();
-        }
+      __asm {
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        test edx, edx
+        jne state309_after_initial_reset
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ch]
+        test ecx, ecx
+        jne state309_after_initial_reset
+        mov ecx, dword ptr [ebp-54h]
+        call ResetFrame
+      state309_after_initial_reset:
+        mov edx, dword ptr [ebp-54h]
+        mov byte ptr [edx+158h], 0
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        cmp ecx, 5
+        jne state309_after_local_effect
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ch]
+        test eax, eax
+        jne state309_after_local_effect
+        mov ecx, dword ptr [ebp-54h]
+        mov dword ptr [ecx+314Ch], 0E10h
+        mov dword ptr [ebp-50h], 1
+        mov word ptr [ebp-4Ch], 1A7h
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr [edx+20h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        mov dword ptr [ebp-2E4h], eax
+        fild dword ptr [ebp-2E4h]
+        fstp qword ptr [ebp-48h]
+        mov eax, dword ptr [ebp-54h]
+        fld qword ptr [eax+28h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        mov dword ptr [ebp-2E8h], eax
+        fild dword ptr [ebp-2E8h]
+        fstp qword ptr [ebp-40h]
+        mov ecx, dword ptr [ebp-54h]
+        mov dl, byte ptr [ecx+50h]
+        mov byte ptr [ebp-38h], dl
+        mov byte ptr [ebp-30h], 2
+        mov byte ptr [ebp-2Fh], 1
+        lea eax, [ebp-50h]
+        push eax
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [edx+24h]
+      state309_after_local_effect:
+        mov eax, dword ptr [ebp-54h]
+        mov cx, word ptr [eax+0Ch]
+        add cx, 1
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ch], cx
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ch]
+        movzx edx, word ptr [ebp-4h]
+        cmp ecx, edx
+        jl state309_skip_frame
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ch], 0
+        mov ecx, dword ptr [ebp-54h]
+        mov dx, word ptr [ecx+0Ah]
+        add dx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+        mov ecx, dword ptr [ebp-54h]
+        mov dword ptr [ecx+168h], 0
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ah]
+        movzx ecx, word ptr [ebp-8h]
+        cmp eax, ecx
+        jl state309_skip_frame
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+8h], 3
+        mov ecx, dword ptr [ebp-54h]
+        call FaceOpponent
+        mov eax, dword ptr [ebp-54h]
+        mov edx, dword ptr [eax]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [edx]
+      state309_skip_frame:
       }
       break;
     case 310:
