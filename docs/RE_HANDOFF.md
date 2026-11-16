@@ -1248,8 +1248,15 @@ Case316 now uses the native repetition cap 8 and has the same normalized
 instruction sequence (105 register-encoding bytes still differ). Case318's
 EffectSpawn store order now matches native and its relocation-offset-materialized
 difference is down from 114 to 36 bytes. Cases 312/313/314 and 317 still have
-register/codegen differences, and 315 is one byte short. Do not call Slot06
-complete. Reproduce only this TU with
+register/codegen differences, and 315 is one byte short. A stronger whole-owner
+instruction-alignment audit now decodes 16,876 instructions on both sides; the
+global sequence is identical after GPR and relocation-placeholder normalization.
+All 1,568 direct branch targets map to matching instruction indices, and all
+206 relocation sites inside cases 303-319 are paired with and verified against
+native instruction operands (zero unverified). All 17 case instruction shapes
+match; 1,082 instruction bytes still differ after relocation binding and the
+owner remains +1 byte. This is structural alignment, not semantic equivalence
+or whole-owner Exact. Do not call Slot06 complete. Reproduce only this TU with
 `scripts/repo-python workbench/shiori-state/verify_natural_case_progress.py --rebuild`;
 report: `docs/evidence/shiori-slot06-natural-cases303-319-progress.json`.
 

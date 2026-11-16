@@ -4411,6 +4411,19 @@ this TU with:
 scripts/repo-python workbench/shiori-state/verify_natural_case_progress.py --rebuild
 ```
 
+A stronger instruction-alignment audit now covers the whole selected owner:
+original and candidate both decode to **16,876 instructions**. After normalizing
+GPR identities and COFF placeholder operands, the global instruction sequence
+is identical; **1,568 direct branch targets** map to the same instruction
+indices, and all **206** case-local COFF relocation sites are paired with and
+verified against their original native instruction operands (zero unverified).
+All 17 selected cases have matching instruction shapes. There are still three
+instruction-length mismatches (307/308/315), 1,082 instruction-byte differences
+after relocation binding, and a +1-byte owner extent delta. This is a structural
+alignment proof, not semantic equivalence or whole-owner Exact; only case319 is
+byte Exact. The report explicitly separates normalized instruction shape,
+branch-target mapping, relocation-target verification and raw byte Exactness.
+
 The natural source remains outside `matches.csv` and `implemented.csv`; do not
 promote the case-level Exact result to a whole-owner claim. Continue with the
 remaining codegen differences and preserve ordinary C++ only.
