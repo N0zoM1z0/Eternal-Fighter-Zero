@@ -44,33 +44,41 @@ print(len(code), len(rels))  # 4031, 115; this is not Exact
 PY2
 ```
 
-The repaired draft now compiles reproducibly to **4,031 bytes and 112 COFF
-relocations** under VC7.1; the target is 4,029 bytes. Three constructor calls
-are deliberately emitted as raw `E8` sites and must be bound to the native
-`LoadingBackground01` (`0x00751370`), `LoadingBackground10` (`0x00751A40`)
-and `LoadingBackground16` (`0x00752900`) entry points. The first remaining
-post-relocation mismatch is the `this` spill at `0x0076CA63`: candidate
-`[ebp-0x78]` versus native `[ebp-0x6c]`. The later resource-load virtual call
-still needs a strict receiver/register comparison. The two-byte owner-size
-difference is not a permissible tail mask. Both switch tables must remain in
-the strict comparison; never treat an apparent length match as byte-level proof.
+The natural-C++ draft compiles reproducibly under VC7.1 to **4,031 bytes and
+115 COFF relocations**; the canonical owner is 4,029 bytes. The candidate has
+3,895 code bytes versus 3,893 native code bytes. All four stage constructors
+are now ordinary C++ `new Background01/10/12/16(videoOwner)` expressions using
+the reviewed `Backgrounds.h` class declarations. Their four constructor calls
+are normal COFF REL32 relocations; there are no raw call operands, inline
+assembly blocks, or `_emit` directives. The first `LoadResources` call is also
+a normal C++ virtual call.
 
-### Targeted new source-form experiments
+A focused relocation-bound comparison classifies **85 code relocations and
+30 table relocations**. After binding those original operands, both switch
+address tables and the 16-byte selector are byte-exact. The remaining code
+comparison reports **269 differing bytes across 64 runs**; the first is at
+`0x0076D744`, in the first background-constructor argument setup. The owner is
+two bytes longer than native. These are still open strict-codegen differences,
+not bytes to mask or overwrite. The workbench source currently contains no
+inline assembly or emitted opcodes.
 
-The first background allocation has been lowered to explicit allocation /
-constructor sequencing while keeping the natural C++ owner. A previous
-compiler-symbol call spelling for the three constructors did not compile under
-VC7.1; those calls now use pinned raw `E8` operands, while the C++ allocation
-literal is corrected to `0x1C`. The selected workbench translation unit builds
-again. The candidate remains unaccepted and still needs the `this` spill and
-later virtual receiver resolved.
+### Source-form experiments and remaining work
 
-Remaining tasks: restore the native `this` stack slot without changing the
-rest of the frame; pin the later virtual-load receiver; materialize and verify
-all 112 COFF relocations plus the three raw constructor calls; then compare
-both address tables and selector byte-for-byte. Also reconcile the provisional
-view with the current accepted header graph **by targeted consumers**, never
-by overwriting `src/`.
+The previous local placeholder background classes were removed in favor of
+the real `Background01`, `Background10`, `Background12`, and `Background16`
+declarations from `Backgrounds.h`. This also replaced three raw constructor
+call sites and the handwritten vtable dispatch with normal C++ expressions.
+A trial using explicit placement-new locals expanded the frame and code, so it
+was discarded; the simple typed `new` expressions are retained. A trial local
+`Video *` alias also expanded the frame and was discarded.
+
+Next, continue with C++-only experiments around constructor argument
+expressions, temporary lifetimes, and the `LoadResources` virtual-call receiver.
+Review each remaining mismatch against native disassembly, then materialize
+all 115 relocations and retain the strict table/selector checks. Do not add
+inline assembly, `_emit`, byte patches, or arbitrary normalization. Reconcile
+the provisional view with accepted headers only through targeted consumers;
+never overwrite `src/` wholesale.
 
 ## Reviewed authored boundary is separately registered
 
@@ -79,4 +87,4 @@ of the 4,029-byte function/tables were independently checked. The
 reviewed boundary and authored origin now have formal registry entries
 and a reproducible target-only certificate at
 `docs/evidence/prepare-battle-boundary-review.json`. That progress
-**does not** imply codegen Exact for this 4,031-byte draft.
+**does not** imply codegen Exact for this 4,031-byte natural-C++ draft.

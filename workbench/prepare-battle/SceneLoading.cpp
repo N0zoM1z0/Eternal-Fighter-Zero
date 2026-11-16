@@ -1,5 +1,6 @@
 // Loading interlude and battle resource preparation.
 #include "Engine.h"
+#include "Backgrounds.h"
 #include <cstring>
 #include <cstdlib>
 extern SurfaceRect __cdecl MakeSurfaceRect(int, int, int, int);
@@ -9,35 +10,6 @@ extern const char loadingReplayPrefix[], loadingReplaySeparator[], loadingReplay
 extern const char loadingBgZeroDat[], loadingBgDat[], loadingBgExtension[], loadingBgLayerDat[];
 extern const char loadingBgLayerZeroDat[], loadingBgLayerPrefixDat[];
 extern const char loadingBgZeroBmp[], loadingBgBmp[], loadingBgBitmapExtension[], loadingBgLayerBmp[];
-class LoadingBackground01 {
-    unsigned char unknown_0004[24];
-public:
-    LoadingBackground01(Video *);
-    ~LoadingBackground01();
-    virtual void Update(); virtual void Render(int, int, unsigned char);
-};
-class LoadingBackground10 {
-    unsigned char unknown_0004[24];
-public:
-    LoadingBackground10(Video *);
-    ~LoadingBackground10();
-    virtual void Update(); virtual void Render(int, int, unsigned char);
-};
-class LoadingBackground12 {
-    unsigned char unknown_0004[24];
-public:
-    LoadingBackground12(Video *);
-    ~LoadingBackground12();
-    virtual void Update(); virtual void Render(int, int, unsigned char);
-};
-class LoadingBackground16 {
-    unsigned char unknown_0004[24];
-public:
-    LoadingBackground16(Video *);
-    ~LoadingBackground16();
-    virtual void Update(); virtual void Render(int, int, unsigned char);
-};
-
 Scene2::Scene2(HWND handle, Secondary **first, Secondary **second, Context *context, Video *video, Input *input, Audio *audio)
 : Scene(handle, first, second, context, video, input, audio)
 {
@@ -237,107 +209,14 @@ void Scene2::PrepareBattle()
                 videoOwner->LoadSurface(&contextOwner->extraB, path, 175);
             }
             switch (contextOwner->flag0f32) {
-            case 1: {
-        void *allocation = ::operator new(0x1C);
-        void *constructed;
-        if (allocation) {
-          __asm {
-            mov ecx, dword ptr [ebp-6Ch]
-            mov edx, dword ptr [ecx+20h]
-            push edx
-            mov ecx, allocation
-            _emit 0E8h
-            _emit 0
-            _emit 0
-            _emit 0
-            _emit 0
-            mov constructed, eax
-          }
-        } else {
-          __asm {
-            mov dword ptr constructed, 0
-          }
-        }
-        __asm {
-          mov eax, dword ptr [ebp-6Ch]
-          mov ecx, dword ptr [eax+1Ch]
-          mov edx, constructed
-          mov dword ptr [ecx+137Ch], edx
-        }
-        break;
-      }
-            case 10: {
-        void *allocation10 = ::operator new(0x1C);
-        void *constructed10;
-        if (allocation10) {
-          __asm {
-            mov eax, dword ptr [ebp-6Ch]
-            mov ecx, dword ptr [eax+20h]
-            push ecx
-            mov ecx, allocation10
-            _emit 0E8h
-            _emit 0
-            _emit 0
-            _emit 0
-            _emit 0
-            mov constructed10, eax
-          }
-        } else {
-          __asm {
-            mov dword ptr constructed10, 0
-          }
-        }
-        __asm {
-          mov eax, dword ptr [ebp-6Ch]
-          mov ecx, dword ptr [eax+1Ch]
-          mov edx, constructed10
-          mov dword ptr [ecx+137Ch], edx
-        }
-        break;
-      }
-            case 12: { contextOwner->blob = reinterpret_cast<unsigned char *>(new LoadingBackground12(videoOwner)); break; }
-            case 16: {
-        void *allocation16 = ::operator new(0x1C);
-        void *constructed16;
-        if (allocation16) {
-          __asm {
-            mov edx, dword ptr [ebp-6Ch]
-            mov eax, dword ptr [edx+20h]
-            push eax
-            mov ecx, allocation16
-            _emit 0E8h
-            _emit 0
-            _emit 0
-            _emit 0
-            _emit 0
-            mov constructed16, eax
-          }
-        } else {
-          __asm {
-            mov dword ptr constructed16, 0
-          }
-        }
-        __asm {
-          mov eax, dword ptr [ebp-6Ch]
-          mov ecx, dword ptr [eax+1Ch]
-          mov edx, constructed16
-          mov dword ptr [ecx+137Ch], edx
-        }
-        break;
-      }
+            case 1: { contextOwner->blob = reinterpret_cast<unsigned char *>(new Background01(videoOwner)); break; }
+            case 10: { contextOwner->blob = reinterpret_cast<unsigned char *>(new Background10(videoOwner)); break; }
+            case 12: { contextOwner->blob = reinterpret_cast<unsigned char *>(new Background12(videoOwner)); break; }
+            case 16: { contextOwner->blob = reinterpret_cast<unsigned char *>(new Background16(videoOwner)); break; }
             }
             if (contextOwner->flag0f32 == 16) contextOwner->backgroundScale = 0.125;
             else contextOwner->backgroundScale = 1.0;
-            __asm {
-    mov ecx, dword ptr [ebp-6Ch]
-    mov edx, dword ptr [ecx+14h]
-    mov eax, dword ptr [edx]
-    mov ecx, dword ptr [ebp-6Ch]
-    mov edx, dword ptr [ecx+14h]
-    mov ecx, dword ptr [edx]
-    mov eax, dword ptr [eax]
-    call dword ptr [eax+2Ch]
-  }
+            (*secondarySlotA)->LoadResources();
             (*secondarySlotB)->LoadResources();
             if (contextOwner->mode1364 == 2) {
                 (*secondarySlotA)->field00a8 = (float)contextOwner->flag1358 / 1.5f;
