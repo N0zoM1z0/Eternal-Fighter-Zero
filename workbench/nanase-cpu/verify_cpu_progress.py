@@ -33,6 +33,11 @@ FLOAT_ORIGINALS={
     0x00787CE8:60.0,
     0x00787EE0:80.0,
     0x00787368:120.0,
+    0x007875D0:100.0,
+    0x00787370:160.0,
+    0x00787ED0:220.0,
+    0x007882B8:-60.0,
+    0x00787EF0:150.0,
 }
 
 
@@ -55,7 +60,9 @@ def main():
         'recognizedCommand = 0x46;',
         'C00->field344c == 1',
         'buttonPulse[2] = 1;',
-        'buttonPulse[3] = 1;',
+        'buttonPulse[0] = 1;',
+        'buttonPulse[1] = 1;',
+        'buttonPulse[2] = 1;',
     )
     missing=[value for value in required if value not in text]
     if missing:

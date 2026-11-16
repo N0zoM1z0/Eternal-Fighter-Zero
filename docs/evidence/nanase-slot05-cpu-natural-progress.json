@@ -11,9 +11,9 @@
   },
   "candidate": {
     "source": "workbench/nanase-cpu/Character00Cpu-natural.cpp",
-    "source_sha256": "54fc4b1137eabbb6b9535fae9ad48ebfa5f3db018496877374ea22e82944cb45",
+    "source_sha256": "55e43dfce43c7ec9eb87291973176567cbd9a71e837acf1cc5e54ec972be336f",
     "object": "build/nanase-cpu/Character00Cpu-natural.obj",
-    "object_sha256": "128f80df1ffdf03f40f8abb5a08d95c87092bbcf3f0a5805a0635bf157e31441",
+    "object_sha256": "51ba526d28fc7a8f5506c428f71b104c82d6b2566247ee1c261574d225832652",
     "compiler_flags": [
       "/Od",
       "/G6",
@@ -21,10 +21,10 @@
       "/Gy",
       "/W3"
     ],
-    "bytes": 14922,
-    "size_delta": 820,
-    "stack_frame_bytes": 212,
-    "coff_relocations": 293,
+    "bytes": 15173,
+    "size_delta": 1071,
+    "stack_frame_bytes": 224,
+    "coff_relocations": 298,
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287"
   },
   "native_double_operand_sites_verified": [
@@ -59,6 +59,26 @@
     {
       "address": "0x787368",
       "native_double": 120.0
+    },
+    {
+      "address": "0x7875d0",
+      "native_double": 100.0
+    },
+    {
+      "address": "0x787370",
+      "native_double": 160.0
+    },
+    {
+      "address": "0x787ed0",
+      "native_double": 220.0
+    },
+    {
+      "address": "0x7882b8",
+      "native_double": -60.0
+    },
+    {
+      "address": "0x787ef0",
+      "native_double": 150.0
     }
   ],
   "prototype_has_original_bank0_air_intercept": true,

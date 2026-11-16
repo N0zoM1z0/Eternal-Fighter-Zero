@@ -553,11 +553,17 @@ Nanase CPU boss is now opened as actual ordinary C++ workbench code:
 `workbench/nanase-cpu/Character00Cpu-natural.cpp`, target `0x0048F690`
 (**14,102 bytes**, original slot5). The native-only bank0 `0xFB` aerial
 intercept and `0xA8` startup pressure branches have been reconstructed with
-original float thresholds and command/button choices. Focused verifier:
+original float thresholds and command/button choices. A further native-driven
+C++ revision now restores all six `0xA8/0xA9` close-range follow-up tests,
+160/220-distance mid/far commands, and the `0xAA` one-frame startup options.
+Crucially `inputX/inputY` (`0x188/0x189`) were separated from true
+`buttonPulse[]` (`0x18A..0x18D`), fixing semantic byte-field confusion.
+Focused verifier:
 `scripts/repo-python workbench/nanase-cpu/verify_cpu_progress.py --rebuild`.
-Its 14,922-byte candidate is **not Exact** (+820 bytes, 0xD4 vs 0xEC
-frame, 293 COFF relocations not yet bound). Keep the source outside the exact
-ledgers. See `docs/evidence/nanase-slot05-cpu-natural-progress.json`.
+Its 15,173-byte candidate is **not Exact** (+1,071 bytes, 0xE0 vs 0xEC
+frame, 298 COFF relocations not yet bound); the additional length reflects
+native-specific branches, not padding. Keep outside the exact ledgers.
+See `docs/evidence/nanase-slot05-cpu-natural-progress.json`.
 
 Nanase's complete **11,424-byte** action-selection Boss
 `Character00::Slot04` at `0x0048ACA0` is now **strict natural-C++ Exact**.

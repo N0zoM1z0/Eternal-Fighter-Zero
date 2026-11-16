@@ -114,15 +114,15 @@ void Character00::Slot05()
             if (distance.forward < 60.0 &&
                 (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f &&
                 C00->field344c == 0) {
-                buttonPulse[2] = 1;
-                buttonPulse[1] = 0;
+                buttonPulse[0] = 1;
+                inputY = 0;
                 return;
             }
             if (distance.forward < 60.0 &&
                 (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f &&
                 C00->field344c == 1) {
-                buttonPulse[2] = 1;
-                buttonPulse[1] = 1;
+                buttonPulse[0] = 1;
+                inputY = 1;
                 return;
             }
         }
@@ -134,101 +134,99 @@ void Character00::Slot05()
             (*opponentSlot)->remainingHitCount == 0) {
             if (40.0 < distance.forward && distance.forward < 80.0 &&
                 (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) {
-                buttonPulse[3] = 1;
-                buttonPulse[1] = 0;
-                buttonPulse[0] = 0;
+                buttonPulse[1] = 1;
+                inputY = 0;
+                inputX = 0;
                 return;
             }
             if (60.0 < distance.forward && distance.forward < 120.0 &&
                 (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) {
-                buttonPulse[2] = 1;
-                buttonPulse[1] = 1;
+                buttonPulse[0] = 1;
+                inputY = 1;
                 return;
             }
         }
     }
     if ((field0008 == 0xa8) || (field0008 == 0xa9)) {
-        if (distance.forward < 80.0) {
-            if (((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) &&
-                (field0118 > 500.0)) {
-                recognizedCommand = 0x16;
+        if (distance.forward < 100.0) {
+            if ((float)(unsigned short)RandomRange(0, 100) < 2.0f * field00a8 &&
+                (*opponentSlot)->positionY == 0.0 &&
+                distance.forward < 40.0 &&
+                (*opponentSlot)->positionY == 0.0) {
+                recognizedCommand = 0x46;
                 return;
             }
-            if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f + (float)((field0118 > 500.0 ? 1 : 0) << 1)) {
+            if ((float)(unsigned short)RandomRange(0, 100) < 3.0f * field00a8 &&
+                field0118 > 500.0 && C00->field344c == 0) {
+                recognizedCommand = 0x14;
+                return;
+            }
+            if ((float)(unsigned short)RandomRange(0, 100) <
+                 3.0f * field00a8 + (float)((field0118 > 500.0 ? 1 : 0) << 1) &&
+                C00->field344c == 0 && (*opponentSlot)->positionY == 0.0) {
                 recognizedCommand = 0xc;
                 return;
             }
-            if ((((float)(unsigned short)RandomRange(0, 100) < field00a8 * 4.0f) &&
-                (meter >= 1000)) &&
-                ((*opponentSlot)->positionY == 0.0)) {
-                recognizedCommand = (unsigned short)RandomRange(0, 3) + 100;
+            if ((float)(unsigned short)RandomRange(0, 100) <
+                 3.0f * field00a8 + (float)((field0118 > 500.0 ? 1 : 0) << 1) &&
+                C00->field344c == 0) {
+                recognizedCommand = 0x20 - (unsigned short)(RandomRange(0, 1) != 1);
                 return;
             }
-            if ((((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) &&
-                (meter == 3000)) &&
-                ((*opponentSlot)->positionY < -30.0)) {
-                recognizedCommand = 0x7a;
+            if ((float)(unsigned short)RandomRange(0, 100) < 3.0f * field00a8 &&
+                meter >= 1000 && C00->field344c == 0 &&
+                (*opponentSlot)->positionY == 0.0) {
+                recognizedCommand = 0x6e;
+                return;
+            }
+            if ((float)(unsigned short)RandomRange(0, 100) < 3.0f * field00a8 &&
+                distance.forward < 150.0 && meter >= 1000 &&
+                C00->field344c == 1 && (*opponentSlot)->positionY == 0.0) {
+                recognizedCommand = 100;
                 return;
             }
         }
-        if (((distance.forward < 120.0) &&
-            (
-            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f)) &&
-            (field0118 > 500.0)) {
+        if (distance.forward < 160.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < 3.0f * field00a8 &&
+            field0118 > 500.0) {
             recognizedCommand = 0xc;
             return;
         }
-        if (distance.forward > 120.0) {
-            if (((float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f) &&
-                (field0118 > 500.0)) {
-                recognizedCommand = 0xc;
-                return;
-            }
-            if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f) {
-                recognizedCommand = (unsigned short)RandomRange(0, 0) * 2 + 0x1e;
-                return;
-            }
+        if (160.0 < distance.forward && distance.forward < 220.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < field00a8) {
+            recognizedCommand = (unsigned short)RandomRange(0, 2) + 10;
+            return;
+        }
+        if (220.0 < distance.forward &&
+            (float)(unsigned short)RandomRange(0, 100) < field00a8 &&
+            field0118 > 500.0) {
+            recognizedCommand = (unsigned short)RandomRange(0, 2) + 10;
+            return;
         }
     }
-    if (((field0008 == 0xaa) && (field000a == 1)) &&
-        ((unsigned short)field000c == 0)) {
-        if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f) {
+    if ((field0008 == 0xaa) && (field000a == 1) && (field000c == 0)) {
+        if ((float)(unsigned short)RandomRange(0, 100) < 5.0f * field00a8) {
             field3114 = 3;
             return;
         }
-        if (((positionY - (*opponentSlot)->positionY <
-            0.0) &&
-            (-40.0 < positionY - (*opponentSlot)->positionY
-            )) && ((distance.forward < 60.0 &&
-            (
-            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f)))) {
+        if ((positionY - (*opponentSlot)->positionY < 0.0) &&
+            (-60.0 < positionY - (*opponentSlot)->positionY) &&
+            distance.forward < 80.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < 5.0f * field00a8) {
             buttonPulse[0] = 1;
             return;
         }
-        if (((-40.0 <
-            positionY - (*opponentSlot)->positionY) &&
-            (positionY - (*opponentSlot)->positionY < 0.0
-            )) && ((distance.forward < 70.0 &&
-            (
-            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f)))) {
+        if ((distance.vertical < 80.0) && (distance.forward < 100.0) &&
+            (float)(unsigned short)RandomRange(0, 100) < 5.0f * field00a8 &&
+            C00->field344c == 0) {
             buttonPulse[1] = 1;
             return;
         }
-        if ((((-60.0 <
-            positionY - (*opponentSlot)->positionY) &&
-            (positionY - (*opponentSlot)->positionY <
-            30.0)) && (distance.vertical > 80.0)) &&
-            ((distance.forward < 80.0 &&
-            (
-            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f)))) {
+        if ((positionY - (*opponentSlot)->positionY < 0.0) &&
+            (-60.0 < positionY - (*opponentSlot)->positionY) &&
+            distance.forward < 80.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < 5.0f * field00a8) {
             buttonPulse[2] = 1;
-            inputY = 0;
-            return;
-        }
-        if (((distance.vertical < 50.0) && (distance.forward < 100.0)) &&
-            (
-            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f)) {
-            recognizedCommand = 0x1e;
             return;
         }
     }

@@ -8161,6 +8161,28 @@ state/action/effects owners remain separately open.
 
 
 <a id="nanase-action-natural"></a>
+<a id="nanase-cpu-a8-aa-progress"></a>
+
+### Nanase Slot05 original A8/A9/AA CPU decision branches — source progress
+
+The still-open `Character00::Slot05` 14,102-byte original CPU boss has a
+separately compiled ordinary-C++ prototype at
+`workbench/nanase-cpu/Character00Cpu-natural.cpp`. Native Ghidra review
+now covers the `0xFB` air-intercept, the six `0xA8/0xA9` close command
+possibilities (bank-0 and bank-1), native 160/220 forward-distance mid/far
+fallbacks, the `0xA8` startup charge and counter-response pulses, and
+`0xAA` one-frame startup. `inputX/inputY` at 0x188/0x189 are distinct
+from `buttonPulse[0..3]` at 0x18A..0x18D; the natural source now writes
+the exact independently decompiled target fields. The candidate compiles
+with VC7.1 `/Od /G6 /MT /Gy /W3` to 15,173 bytes, original 14,102,
+with natural stack frame 0xE0 versus original 0xEC and 298 COFF sites.
+**This source remains nonexact**, the remainder still depends on a
+character-relative CPU template and needs native branch and relocation
+reconstruction. Selected focused original proof checks 13 native numeric
+literal values and the original slot5 vtable; see
+`docs/evidence/nanase-slot05-cpu-natural-progress.json`. No all-unit
+cold replay or ASM/PADDING.
+
 <a id="nanase-action-exact"></a>
 
 ## Nanase Character00 Slot04 action-selection boss — 11,424-byte strict Exact
