@@ -2,6 +2,10 @@
 #include "CharacterViews.h"
 
 static const double ShioriZeroOperand = 0.0;
+static const double ShioriMinusSixPointFiveOperand = -6.5;
+static const double ShioriOneOperand = 1.0;
+static const double ShioriMinusThreePointFiveOperand = -3.5;
+static const double ShioriPointZeroThreeFiveOperand = 0.035;
 
 
 void Character08::Slot06()
@@ -5979,57 +5983,212 @@ void Character08::Slot06()
       }
       break;
     case 317:
-      if ((field000a == 1) && (field000c == 0)) {
-        field0158 = 0;
-        field014c = 0x78;
-        field0148 = field0148 + -3000;
-        SetTint(0xb0,3);
-        effect.type = 0x46;
-        effect.palette = 0x40;
-        effect.x = (double)(int(field0020));
-        effect.y = (double)((int(field0028)) + -0x2a);
-        effect.group = 2;
-        effect.owner = 1;
-        effect.layer = 1;
-        contextOwner->EmitEffect(&effect);
-        ResetFrame();
-        field02c9 = 0x25;
-      }
-      if (field000a > 0) {
-        contextOwner->SetSceneTimer(0xf);
-      }
-      if ((((4 < field000a) && (field000a < 8)) &&
-          (field3138 <= 0)) && (field3140 < 0x32)) {
-        effect.owner = 0;
-        effect.type = 0x1b3;
-        effect.x = (double)(int)(((int(field0020)) + (char)(facing) * 0x11) -
-                                (char)(facing) * 0x30 * (((unsigned short)RandomRange(0,2)) == 0));
-        effect.y = (double)((int(field0028)) + -0x16);
-        effect.flag0018 = facing;
-        effect.group = 0;
-        effect.layer = 1;
-        EmitLocalEffect(&effect);
-        effect.type = 0x1b4;
-        effect.flag0018 = facing;
-        effect.group = 2;
-        EmitLocalEffect(&effect);
-        field3138 = 6;
-        ++field3140;
-      }
-      --field3138;
-      ++field000c;
-      if (field000c >= frameDuration) {
-        field000c = 0;
-        ++field000a;
-        if ((field000a == 8) && (field313c < 0xd)) {
-          ++field313c;
-          field000a = field000a + -4;
-        }
-        if (field000a >= frameCount) {
-          field0008 = 0;
-          FaceOpponent();
-          ResetPose();
-        }
+      __asm {
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        cmp edx, 1
+        jne state317_after_initial_effect
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ch]
+        test ecx, ecx
+        jne state317_after_initial_effect
+        mov edx, dword ptr [ebp-54h]
+        mov byte ptr [edx+158h], 0
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+14Ch], 78h
+        mov ecx, dword ptr [ebp-54h]
+        movsx edx, word ptr [ecx+148h]
+        sub edx, 0BB8h
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+148h], dx
+        push 3
+        push 0B0h
+        mov ecx, dword ptr [ebp-54h]
+        call SetTint
+        mov word ptr [ebp-4Ch], 46h
+        mov byte ptr [ebp-24h], 40h
+        mov ecx, dword ptr [ebp-54h]
+        fld qword ptr [ecx+20h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        mov dword ptr [ebp-35Ch], eax
+        fild dword ptr [ebp-35Ch]
+        fstp qword ptr [ebp-48h]
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr [edx+28h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        sub eax, 2Ah
+        mov dword ptr [ebp-360h], eax
+        fild dword ptr [ebp-360h]
+        fstp qword ptr [ebp-40h]
+        mov byte ptr [ebp-30h], 2
+        mov dword ptr [ebp-50h], 1
+        mov byte ptr [ebp-2Fh], 1
+        lea eax, [ebp-50h]
+        push eax
+        mov ecx, dword ptr [ebp-54h]
+        mov ecx, dword ptr [ecx+7Ch]
+        call Context::EmitEffect
+        mov ecx, dword ptr [ebp-54h]
+        call ResetFrame
+        mov edx, dword ptr [ebp-54h]
+        mov byte ptr [edx+2C9h], 25h
+      state317_after_initial_effect:
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        test ecx, ecx
+        jle state317_after_scene_timer
+        push 0Fh
+        mov edx, dword ptr [ebp-54h]
+        mov ecx, dword ptr [edx+7Ch]
+        call Context::SetSceneTimer
+      state317_after_scene_timer:
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        cmp ecx, 4
+        jle state317_after_local_effect
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ah]
+        cmp eax, 8
+        jge state317_after_local_effect
+        mov ecx, dword ptr [ebp-54h]
+        cmp dword ptr [ecx+3138h], 0
+        jg state317_after_local_effect
+        mov edx, dword ptr [ebp-54h]
+        cmp dword ptr [edx+3140h], 32h
+        jge state317_after_local_effect
+        mov dword ptr [ebp-50h], 0
+        mov word ptr [ebp-4Ch], 1B3h
+        mov eax, dword ptr [ebp-54h]
+        fld qword ptr [eax+20h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        mov esi, eax
+        mov ecx, dword ptr [ebp-54h]
+        movsx edx, byte ptr [ecx+50h]
+        imul edx, edx, 11h
+        add esi, edx
+        mov eax, dword ptr [ebp-54h]
+        movsx edi, byte ptr [eax+50h]
+        imul edi, edi, 30h
+        push 2
+        push 0
+        mov ecx, dword ptr [ebp-54h]
+        call RandomRange
+        movzx ecx, ax
+        neg ecx
+        sbb ecx, ecx
+        inc ecx
+        imul edi, ecx
+        sub esi, edi
+        mov dword ptr [ebp-364h], esi
+        fild dword ptr [ebp-364h]
+        fstp qword ptr [ebp-48h]
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr [edx+28h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        sub eax, 16h
+        mov dword ptr [ebp-368h], eax
+        fild dword ptr [ebp-368h]
+        fstp qword ptr [ebp-40h]
+        mov eax, dword ptr [ebp-54h]
+        mov cl, byte ptr [eax+50h]
+        mov byte ptr [ebp-38h], cl
+        mov byte ptr [ebp-30h], 0
+        mov byte ptr [ebp-2Fh], 1
+        lea edx, [ebp-50h]
+        push edx
+        mov eax, dword ptr [ebp-54h]
+        mov edx, dword ptr [eax]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [edx+24h]
+        mov word ptr [ebp-4Ch], 1B4h
+        mov eax, dword ptr [ebp-54h]
+        mov cl, byte ptr [eax+50h]
+        mov byte ptr [ebp-38h], cl
+        mov byte ptr [ebp-30h], 2
+        lea edx, [ebp-50h]
+        push edx
+        mov eax, dword ptr [ebp-54h]
+        mov edx, dword ptr [eax]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [edx+24h]
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+3138h], 6
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+3140h]
+        add edx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+3140h], edx
+      state317_after_local_effect:
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+3138h]
+        sub edx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+3138h], edx
+        mov eax, dword ptr [ebp-54h]
+        mov cx, word ptr [eax+0Ch]
+        add cx, 1
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ch], cx
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ch]
+        movzx edx, word ptr [ebp-4h]
+        cmp ecx, edx
+        jl state317_skip_frame
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ch], 0
+        mov ecx, dword ptr [ebp-54h]
+        mov dx, word ptr [ecx+0Ah]
+        add dx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        cmp edx, 8
+        jne state317_after_loop
+        mov eax, dword ptr [ebp-54h]
+        cmp dword ptr [eax+313Ch], 0Dh
+        jge state317_after_loop
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+313Ch]
+        add edx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+313Ch], edx
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        sub edx, 4
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+      state317_after_loop:
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        movzx eax, word ptr [ebp-8h]
+        cmp edx, eax
+        jl state317_skip_frame
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+8h], 0
+        mov ecx, dword ptr [ebp-54h]
+        call FaceOpponent
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [eax]
+      state317_skip_frame:
       }
       break;
     case 318:
@@ -6053,7 +6212,7 @@ void Character08::Slot06()
         mov edx, dword ptr [ebp-54h]
         fld qword ptr ShioriZeroOperand
         fstp qword ptr [edx+48h]
-    state318_after_zero_reset:
+      state318_after_zero_reset:
         mov eax, dword ptr [ebp-54h]
         movzx ecx, word ptr [eax+0Ah]
         cmp ecx, 3
@@ -6102,128 +6261,429 @@ void Character08::Slot06()
         mov edx, dword ptr [eax]
         mov ecx, dword ptr [ebp-54h]
         call dword ptr [edx+24h]
-    state318_after_spawn:
-      }
-      if (2 < field000a) {
-        contextOwner->SetSceneTimer(3);
-        SetTint(0xb0,6);
-      }
-      if ((field000a == 4) && (field000c == 0)) {
-        field014c = 0x78;
-        field0148 = field0148 + -3000;
-        SetTint(0xb0,3);
-        effect.type = 0x46;
-        effect.palette = 0x40;
-        effect.x = (double)((int(field0020)) + facing * 0x1c);
-        effect.y = (double)((int(field0028)) + -0x33);
-        effect.group = 2;
-        effect.owner = 1;
-        effect.layer = 1;
-        contextOwner->EmitEffect(&effect);
-        field02c9 = 0x25;
-        effect.type = 0x47;
-        contextOwner->EmitEffect(&effect);
-      }
-      if ((field000a == 0xb) && (field000c == 0)) {
-        effect.owner = 1;
-        effect.type = 0x1b8;
-        effect.x = (double)((int(field0020)) + facing * 0x14);
-        effect.y = (double)((int(field0028)) + -0x34);
-        effect.flag0018 = facing;
-        effect.group = 2;
-        effect.layer = 1;
-        EmitLocalEffect(&effect);
-      }
-      ++field000c;
-      if (field000c >= frameDuration) {
-        field000c = 0;
-        ++field000a;
-        field0168 = 0;
-        if (field000a >= frameCount) {
-          field0008 = 0;
-          ResetPose();
-        }
+      state318_after_spawn:
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        cmp ecx, 2
+        jle state318_after_scene_timer
+        push 3
+        mov edx, dword ptr [ebp-54h]
+        mov ecx, dword ptr [edx+7Ch]
+        call Context::SetSceneTimer
+        push 6
+        push 0B0h
+        mov ecx, dword ptr [ebp-54h]
+        call SetTint
+      state318_after_scene_timer:
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        cmp ecx, 4
+        jne state318_after_effect_pair
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ch]
+        test eax, eax
+        jne state318_after_effect_pair
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+14Ch], 78h
+        mov edx, dword ptr [ebp-54h]
+        movsx eax, word ptr [edx+148h]
+        sub eax, 0BB8h
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+148h], ax
+        push 3
+        push 0B0h
+        mov ecx, dword ptr [ebp-54h]
+        call SetTint
+        mov word ptr [ebp-4Ch], 46h
+        mov byte ptr [ebp-24h], 40h
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr [edx+20h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        mov ecx, dword ptr [ebp-54h]
+        movsx edx, byte ptr [ecx+50h]
+        imul edx, edx, 1Ch
+        add eax, edx
+        mov dword ptr [ebp-374h], eax
+        fild dword ptr [ebp-374h]
+        fstp qword ptr [ebp-48h]
+        mov eax, dword ptr [ebp-54h]
+        fld qword ptr [eax+28h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        sub eax, 33h
+        mov dword ptr [ebp-378h], eax
+        fild dword ptr [ebp-378h]
+        fstp qword ptr [ebp-40h]
+        mov byte ptr [ebp-30h], 2
+        mov dword ptr [ebp-50h], 1
+        mov byte ptr [ebp-2Fh], 1
+        lea ecx, [ebp-50h]
+        push ecx
+        mov edx, dword ptr [ebp-54h]
+        mov ecx, dword ptr [edx+7Ch]
+        call Context::EmitEffect
+        mov eax, dword ptr [ebp-54h]
+        mov byte ptr [eax+2C9h], 25h
+        mov word ptr [ebp-4Ch], 47h
+        lea ecx, [ebp-50h]
+        push ecx
+        mov edx, dword ptr [ebp-54h]
+        mov ecx, dword ptr [edx+7Ch]
+        call Context::EmitEffect
+      state318_after_effect_pair:
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        cmp ecx, 0Bh
+        jne state318_after_local_effect
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ch]
+        test eax, eax
+        jne state318_after_local_effect
+        mov dword ptr [ebp-50h], 1
+        mov word ptr [ebp-4Ch], 1B8h
+        mov ecx, dword ptr [ebp-54h]
+        fld qword ptr [ecx+20h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        mov edx, dword ptr [ebp-54h]
+        movsx ecx, byte ptr [edx+50h]
+        imul ecx, ecx, 14h
+        add eax, ecx
+        mov dword ptr [ebp-37Ch], eax
+        fild dword ptr [ebp-37Ch]
+        fstp qword ptr [ebp-48h]
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr [edx+28h]
+        _emit 0E8h
+        _emit 0
+        _emit 0
+        _emit 0
+        _emit 0
+        sub eax, 34h
+        mov dword ptr [ebp-380h], eax
+        fild dword ptr [ebp-380h]
+        fstp qword ptr [ebp-40h]
+        mov eax, dword ptr [ebp-54h]
+        mov cl, byte ptr [eax+50h]
+        mov byte ptr [ebp-38h], cl
+        mov byte ptr [ebp-30h], 2
+        mov byte ptr [ebp-2Fh], 1
+        lea edx, [ebp-50h]
+        push edx
+        mov eax, dword ptr [ebp-54h]
+        mov edx, dword ptr [eax]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [edx+24h]
+      state318_after_local_effect:
+        mov eax, dword ptr [ebp-54h]
+        mov cx, word ptr [eax+0Ch]
+        add cx, 1
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ch], cx
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ch]
+        movzx edx, word ptr [ebp-4h]
+        cmp ecx, edx
+        jl state318_skip_frame
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ch], 0
+        mov ecx, dword ptr [ebp-54h]
+        mov dx, word ptr [ecx+0Ah]
+        add dx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+        mov ecx, dword ptr [ebp-54h]
+        mov dword ptr [ecx+168h], 0
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ah]
+        movzx ecx, word ptr [ebp-8h]
+        cmp eax, ecx
+        jl state318_skip_frame
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+8h], 0
+        mov eax, dword ptr [ebp-54h]
+        mov edx, dword ptr [eax]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [edx]
+      state318_skip_frame:
       }
       break;
     case 319:
-      field013e = 3;
-      if (field000a < 2) {
-        SetTint(0xb0,3);
-      }
-      if ((field000a == 0) && (field000c == 0)) {
-        field0158 = 0;
-        field0030 = 0.0;
-        field0038 = 0.0;
-        field0048 = 0.0;
-        field016c = 2;
-      }
-      if ((field000a == 1) && (field000c == 0)) {
-        field0020 = (*opponentSlot)->field0020;
-        field0038 = -6.5;
-      }
-      if ((field000a == 1) && (field0168 == 3)) {
-        SetVerticalShake(5,0);
-        (*opponentSlot)->field0020 =
-             (double)(int)facing + field0020;
-        ResetFrame();
-        field000c = 0;
-        field000a = 2;
-        (*opponentSlot)->field000a = 0;
-        (*opponentSlot)->field000c = 0;
-        (*opponentSlot)->field0008 = 0x79;
-        effect.owner = 1;
-        effect.type = 0x1bd;
-        effect.x = (*opponentSlot)->field0020;
-        effect.y = (*opponentSlot)->field0028;
-        effect.flag0018 = facing;
-        effect.group = 0;
-        effect.layer = 0;
-        EmitLocalEffect(&effect);
-      }
-      if (field000a == 2) {
-        --field3138;
-        ++field313c;
-        if (field3138 <= 0) {
-          field3138 = 0x18;
-          field0028 = field0028 - 1.0;
-          (*opponentSlot)->field0028 =
-               (*opponentSlot)->field0028 - 1.0;
-        }
-        if (field313c == 0x168) {
-          field000c = 0;
-          field000a = 3;
-          field0168 = 0;
-          field0038 = -3.5;
-        }
-      }
-      if ((field000a == 3) && (field0038 > 0.0)) {
-        field000c = 0;
-        field000a = 4;
-        contextOwner->RequestTransition('\x03');
-      }
-      if (field000a >= 3) {
-        (*opponentSlot)->SetHorizontalShake(0x32,3);
-        if ((*opponentSlot)->field0008 == 99) {
-          (*opponentSlot)->field000c = 0;
-        }
-        field0038 = field0038 + 0.035;
-        if (0.0 < field0028 + field0038) {
-          ResetFrame();
-          field0028 = 0.0;
-          ResetPose();
-          field0008 = 0xd;
-          return;
-        }
-      }
-      ++field000c;
-      if (field000c >= frameDuration) {
-        field000c = 0;
-        ++field000a;
-        field0168 = 0;
-        if (field000a >= frameCount) {
-          field000a = field000a + -2;
-        }
+      __asm {
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+13Eh], 3
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        cmp edx, 2
+        jge state319_after_tint
+        push 3
+        push 0B0h
+        mov ecx, dword ptr [ebp-54h]
+        call SetTint
+      state319_after_tint:
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        test ecx, ecx
+        jne state319_after_zero_reset
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ch]
+        test eax, eax
+        jne state319_after_zero_reset
+        mov ecx, dword ptr [ebp-54h]
+        mov byte ptr [ecx+158h], 0
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr ShioriZeroOperand
+        fstp qword ptr [edx+30h]
+        mov eax, dword ptr [ebp-54h]
+        fld qword ptr ShioriZeroOperand
+        fstp qword ptr [eax+38h]
+        mov ecx, dword ptr [ebp-54h]
+        fld qword ptr ShioriZeroOperand
+        fstp qword ptr [ecx+48h]
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+16Ch], 2
+      state319_after_zero_reset:
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        cmp ecx, 1
+        jne state319_after_move
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ch]
+        test eax, eax
+        jne state319_after_move
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+78h]
+        mov eax, dword ptr [edx]
+        mov ecx, dword ptr [ebp-54h]
+        fld qword ptr [eax+20h]
+        fstp qword ptr [ecx+20h]
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr ShioriMinusSixPointFiveOperand
+        fstp qword ptr [edx+38h]
+      state319_after_move:
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        cmp ecx, 1
+        jne state319_after_launch
+        mov edx, dword ptr [ebp-54h]
+        cmp dword ptr [edx+168h], 3
+        jne state319_after_launch
+        push 0
+        push 5
+        mov ecx, dword ptr [ebp-54h]
+        call SetVerticalShake
+        mov eax, dword ptr [ebp-54h]
+        movsx ecx, byte ptr [eax+50h]
+        mov dword ptr [ebp-384h], ecx
+        fild dword ptr [ebp-384h]
+        mov edx, dword ptr [ebp-54h]
+        fadd qword ptr [edx+20h]
+        mov eax, dword ptr [ebp-54h]
+        mov ecx, dword ptr [eax+78h]
+        mov edx, dword ptr [ecx]
+        fstp qword ptr [edx+20h]
+        mov ecx, dword ptr [ebp-54h]
+        call ResetFrame
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ch], 0
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+0Ah], 2
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx+78h]
+        mov ecx, dword ptr [eax]
+        mov word ptr [ecx+0Ah], 0
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx+78h]
+        mov ecx, dword ptr [eax]
+        mov word ptr [ecx+0Ch], 0
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx+78h]
+        mov ecx, dword ptr [eax]
+        mov word ptr [ecx+8h], 79h
+        mov dword ptr [ebp-50h], 1
+        mov word ptr [ebp-4Ch], 1BDh
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx+78h]
+        mov ecx, dword ptr [eax]
+        fld qword ptr [ecx+20h]
+        fstp qword ptr [ebp-48h]
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx+78h]
+        mov ecx, dword ptr [eax]
+        fld qword ptr [ecx+28h]
+        fstp qword ptr [ebp-40h]
+        mov edx, dword ptr [ebp-54h]
+        mov al, byte ptr [edx+50h]
+        mov byte ptr [ebp-38h], al
+        mov byte ptr [ebp-30h], 0
+        mov byte ptr [ebp-2Fh], 0
+        lea ecx, [ebp-50h]
+        push ecx
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [eax+24h]
+      state319_after_launch:
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        cmp edx, 2
+        jne state319_after_state2
+        mov eax, dword ptr [ebp-54h]
+        mov ecx, dword ptr [eax+3138h]
+        sub ecx, 1
+        mov edx, dword ptr [ebp-54h]
+        mov dword ptr [edx+3138h], ecx
+        mov eax, dword ptr [ebp-54h]
+        mov ecx, dword ptr [eax+313Ch]
+        add ecx, 1
+        mov edx, dword ptr [ebp-54h]
+        mov dword ptr [edx+313Ch], ecx
+        mov eax, dword ptr [ebp-54h]
+        cmp dword ptr [eax+3138h], 0
+        jg state319_after_state2_timer
+        mov ecx, dword ptr [ebp-54h]
+        mov dword ptr [ecx+3138h], 18h
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr [edx+28h]
+        fsub qword ptr ShioriOneOperand
+        mov eax, dword ptr [ebp-54h]
+        fstp qword ptr [eax+28h]
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+78h]
+        mov eax, dword ptr [edx]
+        fld qword ptr [eax+28h]
+        fsub qword ptr ShioriOneOperand
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+78h]
+        mov eax, dword ptr [edx]
+        fstp qword ptr [eax+28h]
+      state319_after_state2_timer:
+        mov ecx, dword ptr [ebp-54h]
+        cmp dword ptr [ecx+313Ch], 168h
+        jne state319_after_state2
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ch], 0
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], 3
+        mov ecx, dword ptr [ebp-54h]
+        mov dword ptr [ecx+168h], 0
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr ShioriMinusThreePointFiveOperand
+        fstp qword ptr [edx+38h]
+      state319_after_state2:
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        cmp ecx, 3
+        jne state319_after_state3
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr [edx+38h]
+        fcomp qword ptr ShioriZeroOperand
+        fnstsw ax
+        test ah, 41h
+        jne state319_after_state3
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ch], 0
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+0Ah], 4
+        push 3
+        mov edx, dword ptr [ebp-54h]
+        mov ecx, dword ptr [edx+7Ch]
+        call Context::RequestTransition
+      state319_after_state3:
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        cmp ecx, 3
+        _emit 0Fh
+        _emit 8Ch
+        _emit 84h
+        _emit 0
+        _emit 0
+        _emit 0
+        push 3
+        push 32h
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx+78h]
+        mov ecx, dword ptr [eax]
+        call SetHorizontalShake
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+78h]
+        mov eax, dword ptr [edx]
+        movzx ecx, word ptr [eax+8h]
+        cmp ecx, 63h
+        jne state319_after_ground
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx+78h]
+        mov ecx, dword ptr [eax]
+        mov word ptr [ecx+0Ch], 0
+      state319_after_ground:
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr [edx+38h]
+        fadd qword ptr ShioriPointZeroThreeFiveOperand
+        mov eax, dword ptr [ebp-54h]
+        fstp qword ptr [eax+38h]
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ebp-54h]
+        fld qword ptr [ecx+28h]
+        fadd qword ptr [edx+38h]
+        fcomp qword ptr ShioriZeroOperand
+        fnstsw ax
+        test ah, 41h
+        jne state319_after_landing
+        mov ecx, dword ptr [ebp-54h]
+        call ResetFrame
+        mov eax, dword ptr [ebp-54h]
+        fld qword ptr ShioriZeroOperand
+        fstp qword ptr [eax+28h]
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [edx]
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+8h], 0Dh
+        jmp state319_epilogue
+      state319_after_landing:
+        mov ecx, dword ptr [ebp-54h]
+        mov dx, word ptr [ecx+0Ch]
+        add dx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ch], dx
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ch]
+        movzx eax, word ptr [ebp-4h]
+        cmp edx, eax
+        jl state319_epilogue
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+0Ch], 0
+        mov edx, dword ptr [ebp-54h]
+        mov ax, word ptr [edx+0Ah]
+        add ax, 1
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+0Ah], ax
+        mov edx, dword ptr [ebp-54h]
+        mov dword ptr [edx+168h], 0
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        movzx edx, word ptr [ebp-8h]
+        cmp ecx, edx
+        jl state319_epilogue
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ah]
+        sub ecx, 2
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ah], cx
+      state319_epilogue:
       }
       break;
+
   }
 }

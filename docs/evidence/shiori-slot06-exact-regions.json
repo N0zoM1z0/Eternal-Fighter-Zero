@@ -11,8 +11,8 @@
     "native_candidate_extent_size_equal": true
   },
   "build": {
-    "source_sha256": "ff416a96bab8a3bf7cd12d30ed26a7fb7fd95c7a74ecaaa446d8750d805bc2cf",
-    "object_sha256": "ff232db2d1bde73e57cca8b42f4747f485e064058a92aec8f3194a12fa2ed497",
+    "source_sha256": "b16400d494601e944551d25574e1f3d75ecc77948794d29636f7a788c6e7aa7d",
+    "object_sha256": "00fcb9181342a77aed8631fe56a9627b2335486641e6891554dcf53d3d4c16f0",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
   "whole_case_exact": {
@@ -1524,12 +1524,76 @@
       ],
       "float_operands": []
     },
+    "317": {
+      "native_start": "0x4220f6",
+      "bytes": 706,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 6,
+      "rel32_calls_materialized": 6,
+      "float_operands_materialized": 0,
+      "pinned_raw_calls": [
+        {
+          "offset": "0x422164",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x42217e",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x422230",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x42227b",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        }
+      ],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x422150",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x4221af",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x4221b7",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        },
+        {
+          "offset": "0x4221d9",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "target": "0x4080c0"
+        },
+        {
+          "offset": "0x422255",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "target": "0x4108a0"
+        },
+        {
+          "offset": "0x4223a5",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": []
+    },
     "318": {
       "native_start": "0x4223b8",
       "bytes": 725,
       "whole_case_byte_exact": true,
-      "relocations_materialized": 12,
-      "rel32_calls_materialized": 9,
+      "relocations_materialized": 8,
+      "rel32_calls_materialized": 5,
       "float_operands_materialized": 3,
       "pinned_raw_calls": [
         {
@@ -1541,50 +1605,29 @@
           "offset": "0x422449",
           "target": "0x7783b8",
           "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x42251c",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x422542",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x4225c0",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x4225e6",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
         }
       ],
-      "stack_slot_bytes_materialized": [
-        {
-          "case_offset": "0x177",
-          "candidate": "0xb4",
-          "native": "0x8c"
-        },
-        {
-          "case_offset": "0x17d",
-          "candidate": "0xb4",
-          "native": "0x8c"
-        },
-        {
-          "case_offset": "0x194",
-          "candidate": "0xb0",
-          "native": "0x88"
-        },
-        {
-          "case_offset": "0x19a",
-          "candidate": "0xb0",
-          "native": "0x88"
-        },
-        {
-          "case_offset": "0x21b",
-          "candidate": "0xac",
-          "native": "0x84"
-        },
-        {
-          "case_offset": "0x221",
-          "candidate": "0xac",
-          "native": "0x84"
-        },
-        {
-          "case_offset": "0x238",
-          "candidate": "0xa8",
-          "native": "0x80"
-        },
-        {
-          "case_offset": "0x23e",
-          "candidate": "0xa8",
-          "native": "0x80"
-        }
-      ],
+      "stack_slot_bytes_materialized": [],
       "calls": [
         {
           "offset": "0x4224a6",
@@ -1602,16 +1645,6 @@
           "target": "0x410b10"
         },
         {
-          "offset": "0x42251d",
-          "symbol": "__ftol2",
-          "target": "0x7783b8"
-        },
-        {
-          "offset": "0x422543",
-          "symbol": "__ftol2",
-          "target": "0x7783b8"
-        },
-        {
           "offset": "0x422573",
           "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
           "target": "0x407100"
@@ -1620,16 +1653,6 @@
           "offset": "0x422592",
           "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
           "target": "0x407100"
-        },
-        {
-          "offset": "0x4225c1",
-          "symbol": "__ftol2",
-          "target": "0x7783b8"
-        },
-        {
-          "offset": "0x4225e7",
-          "symbol": "__ftol2",
-          "target": "0x7783b8"
         }
       ],
       "float_operands": [
@@ -1658,18 +1681,7 @@
       "rel32_calls_materialized": 6,
       "float_operands_materialized": 11,
       "pinned_raw_calls": [],
-      "stack_slot_bytes_materialized": [
-        {
-          "case_offset": "0xe0",
-          "candidate": "0xa4",
-          "native": "0x7c"
-        },
-        {
-          "case_offset": "0xe6",
-          "candidate": "0xa4",
-          "native": "0x7c"
-        }
-      ],
+      "stack_slot_bytes_materialized": [],
       "calls": [
         {
           "offset": "0x4226b0",
@@ -1768,9 +1780,9 @@
     "selector_bytes_exact": true
   },
   "prologue_normalization": {
-    "candidate_frame": "0x35C",
+    "candidate_frame": "0x338",
     "native_frame": "0x384",
     "native_prologue_restored": true
   },
-  "qualification": "Nineteen complete case bodies are byte-exact after original-bound relocation materialization, ten inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; case315 is covered as a complete body. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
+  "qualification": "Twenty complete case bodies (the full selected late-state range 300-319) are byte-exact after original-bound relocation materialization, eighteen inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; all reviewed meter arithmetic is included in complete bodies. Unselected Slot06 states are not covered. This is not a whole-function Exact certificate."
 }

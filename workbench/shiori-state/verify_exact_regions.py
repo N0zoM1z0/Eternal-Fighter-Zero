@@ -2,7 +2,7 @@
 """Verify pinned byte-exact regions of the Shiori Slot06 workbench object.
 
 This is deliberately a focused-region verifier, not a whole-function Exact
-certificate. It reconstructs nineteen complete case bodies from original-bound
+certificate. It reconstructs twenty complete case bodies from original-bound
 COFF operands, raw runtime-call operands and native stack-slot normalization.
 """
 from __future__ import annotations
@@ -35,19 +35,26 @@ CALL_TARGETS = {
     "?SetHorizontalShake@Secondary@@QAEXHH@Z": 0x00410A80,
     "?RequestTransition@Context@@QAEXD@Z": 0x00407CE0,
 }
+FLOAT_SYMBOL_TARGETS = {
+    "_ShioriMinusSixPointFiveOperand": (0x00787C68, bytes.fromhex("0000000000001ac0")),
+    "_ShioriOneOperand": (0x007875C0, bytes.fromhex("000000000000f03f")),
+    "_ShioriMinusThreePointFiveOperand": (0x00787C60, bytes.fromhex("0000000000000cc0")),
+    "_ShioriPointZeroThreeFiveOperand": (0x00787DD8, bytes.fromhex("ec51b81e85eba13f")),
+}
 CASE_RELOCATIONS = {
     300: (13, 10), 301: (2, 0), 302: (2, 0), 303: (9, 9),
     304: (9, 9), 305: (10, 10), 306: (8, 7), 307: (5, 4),
     308: (6, 5), 309: (2, 2), 310: (8, 8), 311: (9, 9),
     312: (24, 11), 313: (24, 11), 314: (25, 12), 315: (9, 9),
-    316: (9, 9),
-    318: (12, 9), 319: (17, 6),
+    316: (9, 9), 317: (6, 6), 318: (8, 5), 319: (17, 6),
 }
 PINNED_ASM_CALLS = {
     307: (0x004205FA, 0x0042061F, 0x0042068A),
     308: (0x00420818, 0x0042083D, 0x004208CB),
     309: (0x00420A2D, 0x00420A47),
-    318: (0x00422423, 0x00422449),
+    318: (0x00422423, 0x00422449, 0x0042251C, 0x00422542,
+          0x004225C0, 0x004225E6),
+    317: (0x00422164, 0x0042217E, 0x00422230, 0x0042227B),
 }
 STACK_SLOT_PATCHES = {
     310: ((0x09F, 0x34, 0x14), (0x0A5, 0x34, 0x14),
@@ -86,15 +93,6 @@ STACK_SLOT_PATCHES = {
           (0x092, 0xD0, 0xB0), (0x098, 0xD0, 0xB0),
           (0x150, 0xCC, 0xAC), (0x156, 0xCC, 0xAC),
           (0x16D, 0xC8, 0xA8), (0x173, 0xC8, 0xA8)),
-    316: ((0x075, 0xD4, 0xB4), (0x07B, 0xD4, 0xB4),
-          (0x092, 0xD0, 0xB0), (0x098, 0xD0, 0xB0),
-          (0x150, 0xCC, 0xAC), (0x156, 0xCC, 0xAC),
-          (0x16D, 0xC8, 0xA8), (0x173, 0xC8, 0xA8)),
-    318: ((0x177, 0xB4, 0x8C), (0x17D, 0xB4, 0x8C),
-          (0x194, 0xB0, 0x88), (0x19A, 0xB0, 0x88),
-          (0x21B, 0xAC, 0x84), (0x221, 0xAC, 0x84),
-          (0x238, 0xA8, 0x80), (0x23E, 0xA8, 0x80)),
-    319: ((0x0E0, 0xA4, 0x7C), (0x0E6, 0xA4, 0x7C)),
 }
 PINNED_ARITHMETIC = {}
 
@@ -121,13 +119,13 @@ def main() -> None:
     native_starts = [x - ADDRESS for x in struct.unpack("<135I", native_table)]
 
     compiled, relocations = object_function(OBJECT, SYMBOL)
-    # The relocatable object reserves 0x35C bytes; the original reserves 0x384.
+    # The relocatable object reserves 0x338 bytes; the original reserves 0x384.
     # This final-image normalization keeps the VC7.1 instruction width while
     # restoring the native frame before native EBP-relative scratch slots are used.
     candidate_code = bytearray(compiled)
     if native_code[:9] != bytes.fromhex("558bec81ec84030000"):
         raise AssertionError("unexpected native Slot06 stack prologue")
-    if candidate_code[:9] != bytes.fromhex("558bec81ec5c030000"):
+    if candidate_code[:9] != bytes.fromhex("558bec81ec38030000"):
         raise AssertionError(("unexpected candidate Slot06 stack prologue", candidate_code[:9].hex()))
     candidate_code[3:9] = native_code[3:9]
     compiled = bytes(candidate_code)
@@ -185,6 +183,12 @@ def main() -> None:
                     payload = bytes(8)
                     if native_target != 0x007872F8 or target_bytes(image, native_target, 8) != payload:
                         raise AssertionError((case, reloc, hex(native_target)))
+                    bound_floats.append({"offset": hex(ADDRESS + native_off),
+                                         "target": hex(native_target), "payload": payload.hex()})
+                elif reloc["symbol"] in FLOAT_SYMBOL_TARGETS:
+                    expected_target, payload = FLOAT_SYMBOL_TARGETS[reloc["symbol"]]
+                    if native_target != expected_target or target_bytes(image, native_target, len(payload)) != payload:
+                        raise AssertionError((case, reloc, hex(native_target), hex(expected_target)))
                     bound_floats.append({"offset": hex(ADDRESS + native_off),
                                          "target": hex(native_target), "payload": payload.hex()})
                 elif "local_target_offset" in reloc:
@@ -254,16 +258,16 @@ def main() -> None:
         "late_meter_arithmetic": arithmetic,
         "dispatch": {"table_relocations": len(table_relocations),
                      "case_entry_order_exact": True, "selector_bytes_exact": True},
-        "prologue_normalization": {"candidate_frame": "0x35C", "native_frame": "0x384",
+        "prologue_normalization": {"candidate_frame": "0x338", "native_frame": "0x384",
                                    "native_prologue_restored": True},
-        "qualification": "Nineteen complete case bodies are byte-exact after original-bound relocation materialization, ten inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; case315 is covered as a complete body. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate.",
+        "qualification": "Twenty complete case bodies (the full selected late-state range 300-319) are byte-exact after original-bound relocation materialization, eighteen inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; all reviewed meter arithmetic is included in complete bodies. Unselected Slot06 states are not covered. This is not a whole-function Exact certificate.",
     }
     output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(evidence, indent=2) + "\n")
     for case, result in exact_cases.items():
         print(f"case{case}: {result['bytes']} bytes exact; {result['relocations_materialized']} relocations ({result['rel32_calls_materialized']} calls, {result['float_operands_materialized']} floats)")
-    print("stack frame: candidate 0x35C normalized to native 0x384; stack-temp operands restored for cases310/311/312/313/314/315/316/318/319")
+    print("stack frame: candidate 0x338 normalized to native 0x384; stack-temp operands restored for cases310/311/312/313/314/315/316")
     print("meter-only regions: none; case-local arithmetic is included in whole-case matches")
     print("owner extent:", len(compiled), "bytes; table/selector order exact; other cases remain open")
 
