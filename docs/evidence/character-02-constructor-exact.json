@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "authority": "complete native VC7.1 code generation under target-bound explicit relocations",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 413,
+      "matched_bytes": 413,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "resources/EFZ.exe @ 0x007039F4: direct call to reviewed Secondary constructor; all six constructor arguments match",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7900848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character02@@6B@",
+          "evidence": "resources/EFZ.exe @ 0x007039FE: original Character02 child vptr store; vtable address is the constructor's independently reviewed original value",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7900840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62363",
+          "evidence": "resources/EFZ.exe @ 0x00703A04: original resource-name argument; exact akane NUL bytes verified at 0x788EA8",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "resources/EFZ.exe @ 0x00703A11: direct call to CRT strcpy; destination is Secondary.resourceName at +0x94",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d278ad5339a4d7337daf22b6b61e5dff5539768915eb2b23d8a108ec5dfbef87",
+      "target_extent_sha256": "d278ad5339a4d7337daf22b6b61e5dff5539768915eb2b23d8a108ec5dfbef87",
+      "unit": "character-02-constructor",
+      "symbol": "??0Character02@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x007039D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "5abc5feef84743ca645cbe716578d14de1153fc117f41ae507c8272c3f68243d",
+      "source_sha256": "f067943d4571ee0d8ef0c179a5328df081c77c1729c824cef8fad78728039e1f",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "4a0b18d2bdda2ce8a056e564c82bb70255c02659fff83b11b6b6b3f50ac45ba1",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "22fe64377e4ed54333383c6f0d470142b0cf960396f0a11da8782a1ff8c5a9ad",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "Fresh selected VC7.1 /Od /G6 /MT /Gy /W3 compile and complete strict COFF vs EFZ.exe; original constructor bytes, base constructor, child vtable, resource string and strcpy target independently bound. No full cold replay."
+}

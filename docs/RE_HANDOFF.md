@@ -541,6 +541,14 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Character02's selection-ID 4 constructor (`akane`) is now natural C++ in
+`src/Character02Constructor.cpp`: vtable `0x00788EB0`, **413/413 bytes exact**
+with four original-bound relocations (Secondary base ctor, vtable, resource
+string and `strcpy`). It initializes five collision pairs, command bytes and
+three 64-entry arrays at the native offsets. Proof:
+`docs/evidence/character-02-constructor-exact.json`; only the selected TU was
+rebuilt, no full cold replay.
+
 Character01's selection-ID 1 constructor (`ayu`) is now natural C++ in
 `src/Character01Constructor.cpp`: vtable `0x00788E4C`, **436/436 bytes exact**
 with four original-bound relocations (Secondary base ctor, vtable, resource
