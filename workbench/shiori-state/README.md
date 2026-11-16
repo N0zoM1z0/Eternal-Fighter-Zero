@@ -66,9 +66,9 @@ then verifies selected code against the canonical PE. Its evidence is
   materializing 17 COFF relocations (6 calls and 11 float operands) and two
   native stack-temporary bytes.
 - The final-image resolver restores the native `sub esp,0x384` frame from the
-  compiler's `sub esp,0x35C`. Forty-six stack-slot operand bytes are restored
+  compiler's `sub esp,0x35C`. Fifty-eight stack-slot operand bytes are restored
   only for independently disassembled conversion temporaries in
-  cases310/311/312 and 318/319; every patch is checked against its native byte.
+  cases310/311/312/313 and 318/319; every patch is checked against its native byte.
 - **Case306:** the complete **567-byte** case body is byte-identical after
   materializing eight original-bound relocations (seven calls and one zero
   float operand); its 25-byte meter subtraction/store is included.
@@ -83,6 +83,10 @@ then verifies selected code against the canonical PE. Its evidence is
 - **Case309:** the complete **293-byte** case body is byte-identical after
   materializing its two COFF calls (`ResetFrame` and `FaceOpponent`) and two
   raw `__ftol2` calls; its frame-completion tail already compiles exactly.
+- **Case313:** the complete **1,085-byte** case body is byte-identical after
+  materializing 24 original-bound COFF relocations (11 calls and 13 float
+  operands) and restoring its twelve conversion-temp operand bytes; its
+  dual-phase frame rollback is pinned to the native register sequence.
 - **Case315:** the 26-byte sequence at `0x00421BEB` matches exactly, including
   `sub edx,0x3E8`.
 
@@ -100,10 +104,10 @@ sequences** identical, and the candidate owner extent is now **63,132/63,132
 bytes**. That audit normalizes GPR names and branch operands, so it is only a
 diagnostic, not a strict byte certificate.
 
-A focused per-case final-image comparison now finds fifteen whole cases
-byte-exact: **300–312 and 318–319** (8,905 code bytes; 136 COFF relocations
-plus ten pinned runtime calls). Cases **313–317** still contain
+A focused per-case final-image comparison now finds sixteen whole cases
+byte-exact: **300–313 and 318–319** (9,990 code bytes; 160 COFF relocations
+plus ten pinned runtime calls). Cases **314–317** still contain
 register-allocation byte differences. The meter arithmetic subregion of 315
-is exact but its remaining case body is open. Next attack case313, then 314–317.
+is exact but its remaining case body is open. Next attack case314, then 315–317.
 Do not call the whole boss Exact until all code bytes and all relocation
 operands are strictly reconstructed.

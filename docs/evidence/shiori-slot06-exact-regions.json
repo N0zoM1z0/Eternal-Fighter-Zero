@@ -11,8 +11,8 @@
     "native_candidate_extent_size_equal": true
   },
   "build": {
-    "source_sha256": "92c41c56097cde589ec480724798d94f4eb8d31657d0c74ae94c80c1a5efa4cb",
-    "object_sha256": "08d165ad604a38deba0b97f0fb5425b0e1489b576974de525d4b87f22b08a57e",
+    "source_sha256": "2b0ec2db33f66eb20359f0d273559a849f4bbf68c0ac2aa3994c782b72e491db",
+    "object_sha256": "3d3134b3d722d2af485c497e9941c118fdc72ed452f90dcb6f5c1ad1e1ee3fdd",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
   "whole_case_exact": {
@@ -951,6 +951,201 @@
         }
       ]
     },
+    "313": {
+      "native_start": "0x42131a",
+      "bytes": 1085,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 24,
+      "rel32_calls_materialized": 11,
+      "float_operands_materialized": 13,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [
+        {
+          "case_offset": "0x146",
+          "candidate": "0x4",
+          "native": "0xe4"
+        },
+        {
+          "case_offset": "0x147",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
+          "case_offset": "0x14c",
+          "candidate": "0x4",
+          "native": "0xe4"
+        },
+        {
+          "case_offset": "0x14d",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
+          "case_offset": "0x163",
+          "candidate": "0x0",
+          "native": "0xe0"
+        },
+        {
+          "case_offset": "0x164",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
+          "case_offset": "0x169",
+          "candidate": "0x0",
+          "native": "0xe0"
+        },
+        {
+          "case_offset": "0x16a",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
+          "case_offset": "0x289",
+          "candidate": "0xfc",
+          "native": "0xdc"
+        },
+        {
+          "case_offset": "0x28f",
+          "candidate": "0xfc",
+          "native": "0xdc"
+        },
+        {
+          "case_offset": "0x2b8",
+          "candidate": "0xf8",
+          "native": "0xd8"
+        },
+        {
+          "case_offset": "0x2be",
+          "candidate": "0xf8",
+          "native": "0xd8"
+        }
+      ],
+      "calls": [
+        {
+          "offset": "0x4213d5",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x4213fb",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421445",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x42145a",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421474",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x4214a4",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x4214ac",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        },
+        {
+          "offset": "0x42156c",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421590",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "target": "0x4108a0"
+        },
+        {
+          "offset": "0x4215b7",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x4215c5",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "target": "0x4108a0"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x421338",
+          "target": "0x787c50",
+          "payload": "000000000000e03f"
+        },
+        {
+          "offset": "0x42134a",
+          "target": "0x787c50",
+          "payload": "000000000000e03f"
+        },
+        {
+          "offset": "0x421359",
+          "target": "0x787cf0",
+          "payload": "7b14ae47e17a843f"
+        },
+        {
+          "offset": "0x421392",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x4213a2",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x4213d0",
+          "target": "0x7875d0",
+          "payload": "0000000000005940"
+        },
+        {
+          "offset": "0x4213e7",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4213f6",
+          "target": "0x7875d0",
+          "payload": "0000000000005940"
+        },
+        {
+          "offset": "0x42140d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4214d2",
+          "target": "0x787cf0",
+          "payload": "7b14ae47e17a843f"
+        },
+        {
+          "offset": "0x4214e7",
+          "target": "0x787cf0",
+          "payload": "7b14ae47e17a843f"
+        },
+        {
+          "offset": "0x42165f",
+          "target": "0x787dd8",
+          "payload": "ec51b81e85eba13f"
+        },
+        {
+          "offset": "0x421680",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
     "318": {
       "native_start": "0x4223b8",
       "bytes": 725,
@@ -1207,5 +1402,5 @@
     "native_frame": "0x384",
     "native_prologue_restored": true
   },
-  "qualification": "Fifteen complete case bodies are byte-exact after original-bound relocation materialization, eight inline-assembly __ftol2 call bindings, and native stack-slot normalization. One additional meter arithmetic region is byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
+  "qualification": "Sixteen complete case bodies are byte-exact after original-bound relocation materialization, ten inline-assembly __ftol2 call bindings, and native stack-slot normalization. One additional meter arithmetic region is byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
 }
