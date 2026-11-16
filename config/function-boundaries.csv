@@ -142,6 +142,7 @@ address,end,size,status,evidence
 0x004463E0,0x00446583,419,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00461090,0x00461257,455,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x0048A720,0x0048A9A2,642,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
+0x0048E140,0x0048E241,257,reviewed,docs/KNOWLEDGE_BASE.md#nanase-mode-switch
 0x004ADD90,0x004ADF95,517,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x004D2850,0x004D29DC,396,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00519E00,0x0051A067,615,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners

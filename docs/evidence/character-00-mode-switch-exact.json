@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "authority": "Complete original native code generation under explicit original COFF relocation bindings; full function extent independently compared.",
+  "method": "Selected VC7.1 /Od /G6 /MT /Gy /W3 normal-COFF replay of the Nanase constructor/mode-switch source. Only the two affected units were built; no all-unit cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 257,
+      "matched_bytes": 257,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "2803796f7a85c33b66b1a55dfbfb608af21ec9916e69441b15be4442a54ee1a1",
+      "target_extent_sha256": "2803796f7a85c33b66b1a55dfbfb608af21ec9916e69441b15be4442a54ee1a1",
+      "unit": "character-00-mode-switch",
+      "symbol": "?SetAlternateMode@Character00Layout@@QAEXD@Z",
+      "target_address": "0x0048E140",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b87b48e8db53752b89de8412f430b2459ae71a0a368cf7793b70db8fedd9559c",
+      "object_sha256": "163628cb6ca80ac66eb6f541d476d50c0fa8720560ca3cfb99af20a2edec9e9c",
+      "source_sha256": "8551b86f601ab7d2d033adcbd7626c4204238721cae844b5aa78804218d96423",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "d1ab4e052c800eeb369acd184d54845fafeeafc7da403465e0f7e60a60a68a72",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ea77886552ad253c9cb2e447e65245e78bb72f2c8eebf85eb85a57994bbf470b",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

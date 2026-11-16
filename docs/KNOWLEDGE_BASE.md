@@ -1470,12 +1470,12 @@ body, final RET 0x18 included, a common base-constructor call to 0x40EAE0 in the
 first 64 bytes, and a byte player argument at the sixth original stack slot.
 Each dispatcher table entry was separately decoded and checked against its
 allocation immediate and constructor call. This establishes 23 reviewed
-boundary/origin rows. Four constructors now also have natural C++ source and
-complete selected exact credit: selection ID1 `Character01::Character01` (436
-bytes), selection ID2 `Character04::Character04` (442 bytes), selection ID4
-`Character02::Character02` (413 bytes), and selection ID13
-`Character13::Character13` (383 bytes). The remaining 19 are still boundary/origin
-only. Resource identifiers below are original asset
+boundary/origin rows. Five constructors now also have natural C++ source and
+complete selected exact credit: selection ID0 `Character00::Character00` (642
+bytes), selection ID1 `Character01::Character01` (436 bytes), selection ID2
+`Character04::Character04` (442 bytes), selection ID4 `Character02::Character02`
+(413 bytes), and selection ID13 `Character13::Character13` (383 bytes). The
+remaining 18 are still boundary/origin only. Resource identifiers below are original asset
 strings, not claims about original C++ class names. Character00..Character23
 remain provisional names, with no separate Character22 declaration because that
 case reuses Character10.
@@ -1506,6 +1506,37 @@ case reuses Character10.
 | 21 | minagi | 0x3458 | 0x005A9FA0 | 469 |
 | 22 | nayuki | 0x3460 | 0x00461090 | 455 |
 | 23 | misuzu | 0x3488 | 0x00519E00 | 615 |
+
+### Character00 Nanase constructor and alternate pattern-bank switch: two complete exact functions (2026-11-16)
+
+The selection-ID 0 Nanase constructor at `0x0048A720` is now natural C++ in
+`src/Character00Constructor.cpp`, matching **642/642 original bytes** with
+zero differences and all **11 original-bound relocations**. It forwards the
+six original base-constructor arguments, installs the `0x00788334` vtable and
+`nanase` resource string, then allocates two genuine 505-element arrays with
+ordinary `new PatternSequence[0x1F9]` and `new SecondarySequence[0x1F9]`.
+The compiler-generated array cookies, two original element constructors and
+two vector-constructor-iterator calls are all retained and bound to the
+original addresses. The constructor also initializes the three original
+child state words at `0x3138..0x3148`, three mode words at `0x344C..0x3454`,
+five collision X/Y pairs, command count 5 and the observed command bytes,
+then clears three 64-int arrays at `0x314C`, `0x324C` and `0x334C`.
+
+The constructor calls a second complete authored function at `0x0048E140`,
+represented by the private `Character00Layout::SetAlternateMode` method in
+the same source. Its **257/257 bytes** match with no relocations. Mode 1
+switches the active pattern pointer, all 64 effect-slot pattern pointers
+(stride `0x98`) and active sequence pointer to the base bank when the flag is
+zero. Mode 0 performs the corresponding alternate-bank switch only when the
+flag is one. The constructor's initial `SetAlternateMode(0)` call is retained
+even though its just-initialized zero flag makes that call a no-op. The helper's
+complete native extent is `[0x0048E140,0x0048E241)`; its return and all internal
+branches were reviewed. This is ordinary C++ and compiler-generated `new[]`
+codegen, not assembly or padding.
+
+Selected strict receipts: `docs/evidence/character-00-constructor-exact.json`
+and `docs/evidence/character-00-mode-switch-exact.json`. Only these two units
+were built and replayed; no all-unit cold replay.
 
 ### Character01 constructor (selection ID1 / `ayu`): complete exact native code generation (2026-11-16)
 

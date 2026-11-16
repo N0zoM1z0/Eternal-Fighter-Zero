@@ -161876,3 +161876,101 @@ type = "REL32"
 symbol = "_strcpy"
 target = 0x00778080
 evidence = "resources/EFZ.exe @ 0x00703A11: direct call to CRT strcpy; destination is Secondary.resourceName at +0x94"
+
+
+[units.character-00-constructor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character00Constructor.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-00-constructor/Character00Constructor.obj"
+symbol = "??0Character00@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target_address = 0x0048A720
+size = 642
+
+[[units.character-00-constructor.relocations]]
+offset = 37
+type = "REL32"
+symbol = "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x0040EAE0
+evidence = "resources/EFZ.exe @ 0x0048A744: direct call to reviewed Secondary constructor; all six constructor arguments match"
+
+[[units.character-00-constructor.relocations]]
+offset = 46
+type = "DIR32"
+symbol = "??_7Character00@@6B@"
+target = 0x00788334
+evidence = "resources/EFZ.exe @ 0x0048A74C: original Character00 child vptr store; vtable entries independently inspected"
+
+[[units.character-00-constructor.relocations]]
+offset = 51
+type = "DIR32"
+symbol = "$SG62405"
+target = 0x00788318
+evidence = "resources/EFZ.exe @ 0x0048A752: original resource-name argument; exact nanase NUL bytes verified at 0x788318"
+
+[[units.character-00-constructor.relocations]]
+offset = 66
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "resources/EFZ.exe @ 0x0048A761: direct call to CRT strcpy; destination is Secondary.resourceName at +0x94"
+
+[[units.character-00-constructor.relocations]]
+offset = 88
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "resources/EFZ.exe @ 0x0048A777: first 0xFCC array allocation calls original operator new"
+
+[[units.character-00-constructor.relocations]]
+offset = 114
+type = "DIR32"
+symbol = "??0PatternSequence@@QAE@XZ"
+target = 0x00408310
+evidence = "resources/EFZ.exe @ 0x0048A791: vector constructor iterator receives original PatternSequence constructor"
+
+[[units.character-00-constructor.relocations]]
+offset = 133
+type = "REL32"
+symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
+target = 0x00408380
+evidence = "resources/EFZ.exe @ 0x0048A7A4: first 505-element, 8-byte-stride vector constructor iterator call"
+
+[[units.character-00-constructor.relocations]]
+offset = 173
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "resources/EFZ.exe @ 0x0048A7CC: second 0xFCC array allocation calls original operator new"
+
+[[units.character-00-constructor.relocations]]
+offset = 199
+type = "DIR32"
+symbol = "??0SecondarySequence@@QAE@XZ"
+target = 0x00412820
+evidence = "resources/EFZ.exe @ 0x0048A7E6: vector constructor iterator receives original SecondarySequence constructor"
+
+[[units.character-00-constructor.relocations]]
+offset = 218
+type = "REL32"
+symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
+target = 0x00408380
+evidence = "resources/EFZ.exe @ 0x0048A7F9: second 505-element, 8-byte-stride vector constructor iterator call"
+
+[[units.character-00-constructor.relocations]]
+offset = 372
+type = "REL32"
+symbol = "?SetAlternateMode@Character00Layout@@QAEXD@Z"
+target = 0x0048E140
+evidence = "resources/EFZ.exe @ 0x0048A893: direct call to the independently reviewed Nanase mode-switch helper"
+
+[units.character-00-mode-switch]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character00Constructor.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-00-mode-switch/Character00Constructor.obj"
+symbol = "?SetAlternateMode@Character00Layout@@QAEXD@Z"
+target_address = 0x0048E140
+size = 257

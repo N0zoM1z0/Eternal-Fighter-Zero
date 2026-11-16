@@ -541,6 +541,18 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Nanase `Character00` now has two more natural-C++ exact owners in
+`src/Character00Constructor.cpp`: the **642-byte constructor** at
+`0x0048A720` (11/11 original-bound relocations) and the **257-byte
+`SetAlternateMode` helper** at `0x0048E140` (zero relocations). The constructor
+uses two genuine 505-element `new[]` arrays for PatternSequence and
+SecondarySequence; their array cookies and compiler-generated constructor
+iterators match the original. The mode switch updates the active pattern bank,
+all 64 effect slots and the active sequence pointer with the original mode/flag
+gates. Proofs: `docs/evidence/character-00-constructor-exact.json` and
+`docs/evidence/character-00-mode-switch-exact.json`; only these two units were
+rebuilt, no full cold replay.
+
 Character02's selection-ID 4 constructor (`akane`) is now natural C++ in
 `src/Character02Constructor.cpp`: vtable `0x00788EB0`, **413/413 bytes exact**
 with four original-bound relocations (Secondary base ctor, vtable, resource

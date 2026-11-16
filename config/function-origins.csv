@@ -243,7 +243,7 @@ address,origin,status,evidence
 0x0048ACA0,unknown,unreviewed,
 0x0048D940,unknown,unreviewed,
 0x0048DD00,unknown,unreviewed,
-0x0048E140,unknown,unreviewed,
+0x0048E140,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-mode-switch
 0x0048E250,unknown,unreviewed,
 0x0048E260,unknown,unreviewed,
 0x0048E290,unknown,unreviewed,

@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "authority": "Complete original native code generation under explicit original COFF relocation bindings; full function extent independently compared.",
+  "method": "Selected VC7.1 /Od /G6 /MT /Gy /W3 normal-COFF replay of the Nanase constructor/mode-switch source. Only the two affected units were built; no all-unit cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 642,
+      "matched_bytes": 642,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "resources/EFZ.exe @ 0x0048A744: direct call to reviewed Secondary constructor; all six constructor arguments match",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7897908,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character00@@6B@",
+          "evidence": "resources/EFZ.exe @ 0x0048A74C: original Character00 child vptr store; vtable entries independently inspected",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7897880,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62405",
+          "evidence": "resources/EFZ.exe @ 0x0048A752: original resource-name argument; exact nanase NUL bytes verified at 0x788318",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "resources/EFZ.exe @ 0x0048A761: direct call to CRT strcpy; destination is Secondary.resourceName at +0x94",
+          "addend": 0
+        },
+        {
+          "offset": 88,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "resources/EFZ.exe @ 0x0048A777: first 0xFCC array allocation calls original operator new",
+          "addend": 0
+        },
+        {
+          "offset": 114,
+          "target": 4227856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??0PatternSequence@@QAE@XZ",
+          "evidence": "resources/EFZ.exe @ 0x0048A791: vector constructor iterator receives original PatternSequence constructor",
+          "addend": 0
+        },
+        {
+          "offset": 133,
+          "target": 4227968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_H@YGXPAXIHP6EPAX0@Z@Z",
+          "evidence": "resources/EFZ.exe @ 0x0048A7A4: first 505-element, 8-byte-stride vector constructor iterator call",
+          "addend": 0
+        },
+        {
+          "offset": 173,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "resources/EFZ.exe @ 0x0048A7CC: second 0xFCC array allocation calls original operator new",
+          "addend": 0
+        },
+        {
+          "offset": 199,
+          "target": 4270112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??0SecondarySequence@@QAE@XZ",
+          "evidence": "resources/EFZ.exe @ 0x0048A7E6: vector constructor iterator receives original SecondarySequence constructor",
+          "addend": 0
+        },
+        {
+          "offset": 218,
+          "target": 4227968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_H@YGXPAXIHP6EPAX0@Z@Z",
+          "evidence": "resources/EFZ.exe @ 0x0048A7F9: second 505-element, 8-byte-stride vector constructor iterator call",
+          "addend": 0
+        },
+        {
+          "offset": 372,
+          "target": 4776256,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetAlternateMode@Character00Layout@@QAEXD@Z",
+          "evidence": "resources/EFZ.exe @ 0x0048A893: direct call to the independently reviewed Nanase mode-switch helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d9e7c9602efaca8178e934098781048070697027a1da9399dd6ed5025e18c5ed",
+      "target_extent_sha256": "d9e7c9602efaca8178e934098781048070697027a1da9399dd6ed5025e18c5ed",
+      "unit": "character-00-constructor",
+      "symbol": "??0Character00@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x0048A720",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b87b48e8db53752b89de8412f430b2459ae71a0a368cf7793b70db8fedd9559c",
+      "object_sha256": "f5531ce6ea4e175ebc3f90cf9e76ff3d509e146cecf069bd13e65a22a0a0757d",
+      "source_sha256": "8551b86f601ab7d2d033adcbd7626c4204238721cae844b5aa78804218d96423",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "d1ab4e052c800eeb369acd184d54845fafeeafc7da403465e0f7e60a60a68a72",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "f58067f791396a027ff87f1ea4f2227abd3a9ecfa253019ef74ece3dbeb67ea8",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
