@@ -8097,3 +8097,29 @@ Exact** and **41/41 originally bound relocations**, preserved at
 `docs/evidence/character-00-resources-exact.json`. No ASM, `_emit`,
 artificial padding, whole-game linkage claim or full cold replay. Remaining
 Nanase state/action/render owners remain separately open.
+
+
+<a id="nanase-gauge-render"></a>
+
+## Nanase Character00 dual gauge renderer
+
+`Character00::Slot01` is now fully recovered as ordinary natural C++ in
+`src/Character00Render.cpp`. Its canonical virtual slot1 at `0x00788338`
+selects the original complete **1,080-byte owner at `0x0048DD00`**, ending
+at RET `0x0048E137` before the following INT3 alignment. The function uses
+original pattern sprites 43 and 44, sharing the one Nanase `field3148`
+charge meter at child offset `0x3148`: the first sprite is drawn full, while
+the second sprite is horizontally clipped by `field3148 * frame.width / 3000`
+with the same original source and destination widths. It retains the exact
+player-dependent positions `(49-u, 31-v)` and `(u+271-width, 31-v)` and
+the six original `MakeSurfaceRect` calls at `0x0040C590` and two
+`Video::DrawSurface` calls at `0x00409A90`. This is the real original visual
+behavior, including integer multiplication order; no target bytes or no-op
+padding are added.
+
+A complete selected native comparison using the pinned VC7.1
+`/Od /G6 /MT /Gy /W3` toolchain yields **1,080/1,080 bytes Exact**, zero
+differences, and **8/8 original-bound REL32 calls**. Public certificate:
+`docs/evidence/character-00-slot01-exact.json`. The renderer uses a private
+child-field view to avoid invalidating other exact character units. Only this
+unit was rebuilt; no full cold replay or whole-game runtime parity claim.

@@ -549,6 +549,15 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Nanase's full dual gauge renderer is now original-bound natural-C++ Exact:
+`src/Character00Render.cpp` reconstructs the original `Character00::Slot01`
+1,080-byte virtual owner at `0x0048DD00` with six `MakeSurfaceRect` and two
+`Video::DrawSurface` calls, all 8 direct native operands bound. It draws
+patterns43/44 and clips the second one by original
+`field3148 * frame.width / 3000`, preserving left/right player coordinates.
+Selected proof: `docs/evidence/character-00-slot01-exact.json`; no full cold
+replay. The larger Nanase action/state/render-effects owners remain open.
+
 Nanase alternate pattern parsing and resource forwarding are now **strict
 natural-C++ Exact**. `src/Character00AlternatePatterns.cpp` reconstructs the
 complete 949-byte original parser at `0x0048D940`, including original

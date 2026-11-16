@@ -162391,3 +162391,70 @@ type = "REL32"
 symbol = "?LoadResources@Secondary@@UAEXXZ"
 target = 0x00410B70
 evidence = "Original Nanase LoadResources vtable slot11 at 0x00788360, REL32 operand 0x0048ABC3 to exact alternate parser or base resource loader at 0x00410B70"
+
+
+[units.character-00-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character00Render.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-00-slot01/Character00Render.obj"
+symbol = "?Slot01@Character00@@UAEXXZ"
+target_address = 0x0048DD00
+size = 1080
+
+[[units.character-00-slot01.relocations]]
+offset = 86
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DD56 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-00-slot01.relocations]]
+offset = 196
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DDC4 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-00-slot01.relocations]]
+offset = 299
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DE2B resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-00-slot01.relocations]]
+offset = 451
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DEC3 resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90"
+
+[[units.character-00-slot01.relocations]]
+offset = 553
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DF29 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-00-slot01.relocations]]
+offset = 717
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DFCD resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-00-slot01.relocations]]
+offset = 895
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048E07F resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590"
+
+[[units.character-00-slot01.relocations]]
+offset = 1071
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048E12F resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90"

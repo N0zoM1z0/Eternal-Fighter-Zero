@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "authority": "Original Nanase Character00 virtual slot1 at vtable address 0x00788338 selects complete render owner 0x0048DD00, with 1080 native code bytes and eight original-bound MakeSurfaceRect/Video::DrawSurface calls.",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 natural authored C++ in src/Character00Render.cpp; one strict selected normal-COFF native replay matches full 1080-byte owner, all 8 original REL32 destinations, zero differences; no ASM, emitted opcodes, artificial padding or all-unit cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1080,
+      "matched_bytes": 1080,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 86,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DD56 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 196,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DDC4 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 299,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DE2B resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 451,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DEC3 resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 553,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DF29 resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 717,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048DFCD resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 895,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048E07F resolves ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1071,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Nanase Character00 original vtable slot01 0x00788338 selects complete owner 0x0048DD00; original REL32 call operand at 0x0048E12F resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0b7ff6ff0417ed4264c9f90062af98c77f74ac97e9c9268f114ff824a4c2d4c9",
+      "target_extent_sha256": "0b7ff6ff0417ed4264c9f90062af98c77f74ac97e9c9268f114ff824a4c2d4c9",
+      "unit": "character-00-slot01",
+      "symbol": "?Slot01@Character00@@UAEXXZ",
+      "target_address": "0x0048DD00",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "69025bf4b3ca133a98dce9e4d7963e9bf94ac00588fce91440bc4d72d5a650c2",
+      "object_sha256": "6569fe3709192810a896e9b3cd02a877a6e0edd1cf8559f4607a394db8e629e5",
+      "source_sha256": "63a594fe73a1aaae582b40c36aa4727c5ea1ff8c64bbeaacae2736fded6588cc",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "775c501af6844374cb310f22800421fcc31abbab7fc62808160a40b9b4cdbb5d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "60f138366a2500d26dcbb7583ffd22e2373e9c466c1b99afa8da692b20fa0b0f",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
