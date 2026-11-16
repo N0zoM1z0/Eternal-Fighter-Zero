@@ -61,7 +61,22 @@ relocations, has **87 differing code bytes across 37 runs**. All 136 bytes of
 both switch tables and the selector remain byte-exact. The first remaining
 code difference is still at 0x0076D744, in constructor argument register
 selection. This is a measured reduction, not an Exact certificate. Detailed
-comparison: docs/evidence/prepare-battle-natural-cpp-progress-v2.json.
+comparison: docs/evidence/prepare-battle-natural-cpp-progress-v2.json. Rebuild
+and reproduce the complete relocation-bound comparison with:
+
+    scripts/repo-python workbench/prepare-battle/compare_prepare_battle.py
+
+The remaining differences are now localized by operation. Each of the four
+background-constructor branches has the same stack temporary and native
+constructor target, but the candidate rotates the three scratch registers
+relative to native (for example native ECX/EDX versus candidate EDX/EAX at
+0x0076D743). The first LoadResources virtual dispatch has one extra
+`mov ecx, edx` immediately before the call; the second dispatch's complete
+instruction sequence is byte-identical. The default-first scale assignment
+closes the two-byte owner-extent gap, but its branch layout differs from the
+native condition-first if/else. The if/else candidate retains the extra
+two-byte receiver copy and is therefore 4,031 bytes; it is not accepted as a
+better source form.
 
 The four constructor leafs reached by this switch have also been independently
 cold-built and strictly matched: **1,561/1,561 bytes**, **44 relocations**, zero
@@ -93,7 +108,12 @@ Video pointer alias also expanded the frame and was discarded.
 The current best code-size candidate uses the default-first background-scale
 assignment described above. The original if/else expression is retained in
 the comparison build only; the tracked source uses the improved form. Both are
-ordinary C++ and neither alters the native data tables.
+ordinary C++ and neither alters the native data tables. Additional C++-only
+experiments covered alternate switch case order, explicit base qualification,
+pointer/reference aliases, const/volatile member qualifiers, local lifetimes,
+register hints, placement new, inline accessors, and targeted compiler flags.
+None improved the relocation-bound candidate; variants that introduced
+additional temporaries expanded the frame or code and were discarded.
 
 Next, continue with C++-only experiments around constructor argument
 expressions, temporary lifetimes, and the `LoadResources` virtual-call receiver.
@@ -110,4 +130,4 @@ of the 4,029-byte function/tables were independently checked. The
 reviewed boundary and authored origin now have formal registry entries
 and a reproducible target-only certificate at
 `docs/evidence/prepare-battle-boundary-review.json`. That progress
-**does not** imply codegen Exact for this 4,031-byte natural-C++ draft.
+**does not** imply codegen Exact for this 4,029-byte natural-C++ candidate.
