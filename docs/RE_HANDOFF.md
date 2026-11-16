@@ -1234,6 +1234,22 @@ with the common class declaration remains a separate task.
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: the resolved 63,132-byte owner is byte-for-byte equal to the canonical PE. All 135 unique switch destinations are covered by 136 selector IDs (301/302 alias one default body); the 174-byte entry/dispatch prefix, 62,099 unique case-body bytes, 540-byte switch table and 319-byte selector are exact. All 1,356 COFF relocation sites are classified/materialized exactly once: 375 REL32 calls and 981 DIR32 operands. This includes 18 raw inline-asm `__ftol2` calls, two prefix runtime calls, two prefix local-address operands, and all 135 switch-table entries. Resolved owner SHA-256: `b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded`. The 116 earlier case bodies contribute 49,063 bytes/1,014 relocations; 19 unique late bodies contribute 13,036 bytes/203 relocations. Fourteen direct-call leaf dependencies are separately strict-exact (1,966 bytes, 26 relocations, zero differences; `docs/evidence/shiori-slot06-leaf-dependencies-exact.json`). A separate natural-C++ workbench copy `workbench/shiori-state/ShioriState-natural-cases303-309.cpp` rewrites cases303–309 without inline asm or `_emit`; native/candidate extents are 611/611, 796/796, 846/846, 567/567, 542/543, 577/578 and 293/293 bytes. Cases303–309 have 57 original-bound COFF relocations in total; none of the seven cases is Exact yet. Native review corrected case308 to a 3000-point meter cost, effect type0x46 and palette0x40, shrinking its candidate by 17 bytes. Existing natural case300 is 715/715 bytes with 13 original-bound relocations; default aliases 288–299/301–302 share a 123/123-byte body. Source-object Exact remains open: its `0x338` frame is normalized to native `0x384`, and 72 EBP-relative conversion-temp operand bytes are individually restored. Proof: `verify_exact_regions.py`; it distinguishes resolved final-image equality from unmodified VC7.1 object equality. |
 | Scene2::PrepareBattle | 0x0076CA50, 4,029 bytes including two address tables and selector | workbench/prepare-battle/: best natural-C++ candidate compiles to the exact 4,029-byte owner extent (3,893 code bytes) with 115 COFF relocations. Four stage constructors use real Backgrounds.h types and ordinary C++ new. Both LoadResources calls are ordinary C++ virtual syntax; the first has a different register shuffle (candidate mov ecx,edx versus native mov eax,[eax] at 0x0076D881), while the second instruction sequence is byte-identical. Constructor branches use the same stack temporaries/targets but have a cyclic scratch-register rotation. After materializing all 115 relocations, both tables and selector are byte-exact; code differs at 87 bytes/37 runs, first mismatch 0x0076D744. Reproduce with scripts/repo-python workbench/prepare-battle/compare_prepare_battle.py; detailed evidence docs/evidence/prepare-battle-natural-cpp-progress-v2.json. Four constructor leafs are strict-exact (1,561 bytes/44 relocations); all 16 background lifecycle functions are byte-exact after relocation binding (7,687 bytes/123 relocations). Strict boss codegen remains open. |
 
+Expanded natural-C++ Slot06 progress (2026-11-16):
+`workbench/shiori-state/ShioriState-natural-cases303-319.cpp` rewrites cases
+303-319 as ordinary C++ with no inline assembly or emitted opcodes. The
+compiler's unmodified frame is exactly **0x384**; the switch selector is byte
+exact and all 135 unique destinations remain present. The candidate owner is
+63,133 bytes (+1); 14/17 case extents match (307/308 +1, 315 -1). Case319 is
+**900/900 bytes Exact** with all 17 relocation targets verified. Its positive
+velocity/landing tests, shake argument order and `0.035` x87 operand order were
+corrected from native evidence. Remaining case codegen differences are still
+open; in particular 310/311 each differ by one epilogue displacement byte,
+312/313/314 and 316/317/318 have register/codegen differences, and 315 is one
+byte short. Do not call Slot06 complete. Reproduce only this TU with
+`scripts/repo-python workbench/shiori-state/verify_natural_case_progress.py --rebuild`;
+report: `docs/evidence/shiori-slot06-natural-cases303-319-progress.json`.
+
+
 Focused diagnostic / exact-region commands (no whole-project replay):
 
 ```bash

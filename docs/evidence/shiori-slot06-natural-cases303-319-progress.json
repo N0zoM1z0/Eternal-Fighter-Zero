@@ -1,0 +1,1838 @@
+{
+  "schema_version": 1,
+  "status": "natural-cpp-progress-not-exact",
+  "owner": "?Slot06@Character08@@UAEXXZ",
+  "target": {
+    "address": "0x4136d0",
+    "code_bytes": 62273,
+    "table_bytes": 540,
+    "selector_bytes": 319,
+    "owner_bytes": 63132,
+    "sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
+  },
+  "candidate": {
+    "source": "workbench/shiori-state/ShioriState-natural-cases303-319.cpp",
+    "source_sha256": "df8548f191cf69e3b45e0a24d352438a08d9fcf0bec8312daf74da8242b70e7f",
+    "object": "build/shiori-state/ShioriState-natural-cases303-319.obj",
+    "object_sha256": "badd54c1962e04bd10a2c12089ac6f43e234a40b6166f67e6d2827d0dbccb0c2",
+    "owner_bytes": 63133,
+    "code_bytes": 62274,
+    "compiler_flags": [
+      "/Od",
+      "/G6",
+      "/MT",
+      "/Gy",
+      "/W3"
+    ],
+    "frame_bytes": 900,
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287"
+  },
+  "natural_cpp_cases": [
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319
+  ],
+  "source_has_inline_assembly_or_emitted_opcodes": false,
+  "frame": {
+    "native_bytes": 900,
+    "candidate_bytes": 900,
+    "byte_exact": true
+  },
+  "switch": {
+    "native_unique_destinations": 135,
+    "candidate_unique_destinations": 135,
+    "table_relocations": 135,
+    "selector_byte_equal": true
+  },
+  "relocation_accounting": {
+    "total_coff_relocations": 1374,
+    "case_relocations_offset_compared": 206,
+    "case_relocation_targets_verified": 178,
+    "unverified_relocation_sites": [
+      {
+        "case": 318,
+        "relocation": {
+          "offset": 60764,
+          "type_id": 20,
+          "type": "REL32",
+          "symbol": "__ftol2"
+        },
+        "target": "0x508ce23e",
+        "kind": "rel32-target-mismatch"
+      },
+      {
+        "case": 318,
+        "relocation": {
+          "offset": 60802,
+          "type_id": 20,
+          "type": "REL32",
+          "symbol": "__ftol2"
+        },
+        "target": "0xfcd2a9de",
+        "kind": "rel32-target-mismatch"
+      }
+    ]
+  },
+  "summary": {
+    "natural_cpp_cases": 17,
+    "case_extents_equal": 14,
+    "case_bodies_byte_exact": 1,
+    "case_extent_mismatch_bytes": 1,
+    "candidate_code_size_delta": 1,
+    "candidate_owner_size_delta": 1
+  },
+  "cases": [
+    {
+      "case": 303,
+      "native_start": "0x41fa6b",
+      "candidate_start_offset": "0xc39b",
+      "candidate_start_delta": 0,
+      "native_bytes": 611,
+      "candidate_bytes": 611,
+      "extent_equal": true,
+      "coff_relocations": 9,
+      "relocation_operands_offset_materialized": 9,
+      "relocation_targets_verified": 9,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xc3f4",
+          "native_va": "0x41fac4",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xc409",
+          "native_va": "0x41fad9",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xc423",
+          "native_va": "0x41faf3",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xc453",
+          "native_va": "0x41fb23",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xc467",
+          "native_va": "0x41fb37",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xc49e",
+          "native_va": "0x41fb6e",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xc4c4",
+          "native_va": "0x41fb94",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xc599",
+          "native_va": "0x41fc69",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4108a0"
+        },
+        {
+          "candidate_offset": "0xc5eb",
+          "native_va": "0x41fcbb",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40e630"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 38,
+      "difference_runs": 36,
+      "first_mismatch_va": "0x41fc1f",
+      "whole_case_exact": false
+    },
+    {
+      "case": 304,
+      "native_start": "0x41fcce",
+      "candidate_start_offset": "0xc5fe",
+      "candidate_start_delta": 0,
+      "native_bytes": 796,
+      "candidate_bytes": 796,
+      "extent_equal": true,
+      "coff_relocations": 9,
+      "relocation_operands_offset_materialized": 9,
+      "relocation_targets_verified": 9,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xc657",
+          "native_va": "0x41fd27",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xc66c",
+          "native_va": "0x41fd3c",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xc686",
+          "native_va": "0x41fd56",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xc6b6",
+          "native_va": "0x41fd86",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xc6ca",
+          "native_va": "0x41fd9a",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xc75a",
+          "native_va": "0x41fe2a",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xc780",
+          "native_va": "0x41fe50",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xc8b5",
+          "native_va": "0x41ff85",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4108a0"
+        },
+        {
+          "candidate_offset": "0xc907",
+          "native_va": "0x41ffd7",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40e630"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 105,
+      "difference_runs": 103,
+      "first_mismatch_va": "0x41fccf",
+      "whole_case_exact": false
+    },
+    {
+      "case": 305,
+      "native_start": "0x41ffea",
+      "candidate_start_offset": "0xc91a",
+      "candidate_start_delta": 0,
+      "native_bytes": 846,
+      "candidate_bytes": 846,
+      "extent_equal": true,
+      "coff_relocations": 10,
+      "relocation_operands_offset_materialized": 10,
+      "relocation_targets_verified": 10,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xc973",
+          "native_va": "0x420043",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xc988",
+          "native_va": "0x420058",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xc9a2",
+          "native_va": "0x420072",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xc9d2",
+          "native_va": "0x4200a2",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xc9f0",
+          "native_va": "0x4200c0",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xc9fd",
+          "native_va": "0x4200cd",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4080c0"
+        },
+        {
+          "candidate_offset": "0xca93",
+          "native_va": "0x420163",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xcab9",
+          "native_va": "0x420189",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xcc03",
+          "native_va": "0x4202d3",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4108a0"
+        },
+        {
+          "candidate_offset": "0xcc55",
+          "native_va": "0x420325",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40e630"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 99,
+      "difference_runs": 99,
+      "first_mismatch_va": "0x41ffeb",
+      "whole_case_exact": false
+    },
+    {
+      "case": 306,
+      "native_start": "0x420338",
+      "candidate_start_offset": "0xcc68",
+      "candidate_start_delta": 0,
+      "native_bytes": 567,
+      "candidate_bytes": 567,
+      "extent_equal": true,
+      "coff_relocations": 8,
+      "relocation_operands_offset_materialized": 8,
+      "relocation_targets_verified": 8,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xcc82",
+          "native_va": "0x420352",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xccdf",
+          "native_va": "0x4203af",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xccf4",
+          "native_va": "0x4203c4",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xcd19",
+          "native_va": "0x4203e9",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xcd49",
+          "native_va": "0x420419",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xcd88",
+          "native_va": "0x420458",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xcda9",
+          "native_va": "0x420479",
+          "symbol": "__real@0000000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xce8c",
+          "native_va": "0x42055c",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40e630"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 45,
+      "difference_runs": 43,
+      "first_mismatch_va": "0x4204b6",
+      "whole_case_exact": false
+    },
+    {
+      "case": 307,
+      "native_start": "0x42056f",
+      "candidate_start_offset": "0xce9f",
+      "candidate_start_delta": 0,
+      "native_bytes": 542,
+      "candidate_bytes": 543,
+      "extent_equal": false,
+      "coff_relocations": 8,
+      "relocation_operands_materialized": 0,
+      "difference_bytes_after_offset_operand_materialization": null,
+      "difference_runs": null,
+      "whole_case_exact": false,
+      "qualification": "case extents differ; no offset-based relocation comparison claimed"
+    },
+    {
+      "case": 308,
+      "native_start": "0x42078d",
+      "candidate_start_offset": "0xd0be",
+      "candidate_start_delta": 1,
+      "native_bytes": 577,
+      "candidate_bytes": 578,
+      "extent_equal": false,
+      "coff_relocations": 9,
+      "relocation_operands_materialized": 0,
+      "difference_bytes_after_offset_operand_materialization": null,
+      "difference_runs": null,
+      "whole_case_exact": false,
+      "qualification": "case extents differ; no offset-based relocation comparison claimed"
+    },
+    {
+      "case": 309,
+      "native_start": "0x4209ce",
+      "candidate_start_offset": "0xd300",
+      "candidate_start_delta": 2,
+      "native_bytes": 293,
+      "candidate_bytes": 293,
+      "extent_equal": true,
+      "coff_relocations": 4,
+      "relocation_operands_offset_materialized": 4,
+      "relocation_targets_verified": 4,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xd31a",
+          "native_va": "0x4209e8",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xd360",
+          "native_va": "0x420a2e",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd37a",
+          "native_va": "0x420a48",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd412",
+          "native_va": "0x420ae0",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40e630"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 28,
+      "difference_runs": 28,
+      "first_mismatch_va": "0x4209cf",
+      "whole_case_exact": false
+    },
+    {
+      "case": 310,
+      "native_start": "0x420af3",
+      "candidate_start_offset": "0xd425",
+      "candidate_start_delta": 2,
+      "native_bytes": 484,
+      "candidate_bytes": 484,
+      "extent_equal": true,
+      "coff_relocations": 8,
+      "relocation_operands_offset_materialized": 8,
+      "relocation_targets_verified": 8,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xd43f",
+          "native_va": "0x420b0d",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xd49d",
+          "native_va": "0x420b6b",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xd4b2",
+          "native_va": "0x420b80",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd4d8",
+          "native_va": "0x420ba6",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd508",
+          "native_va": "0x420bd6",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xd544",
+          "native_va": "0x420c12",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd55e",
+          "native_va": "0x420c2c",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd5f6",
+          "native_va": "0x420cc4",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40e630"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 1,
+      "difference_runs": 1,
+      "first_mismatch_va": "0x420cd3",
+      "whole_case_exact": false
+    },
+    {
+      "case": 311,
+      "native_start": "0x420cd7",
+      "candidate_start_offset": "0xd609",
+      "candidate_start_delta": 2,
+      "native_bytes": 519,
+      "candidate_bytes": 519,
+      "extent_equal": true,
+      "coff_relocations": 9,
+      "relocation_operands_offset_materialized": 9,
+      "relocation_targets_verified": 9,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xd623",
+          "native_va": "0x420cf1",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xd681",
+          "native_va": "0x420d4f",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xd696",
+          "native_va": "0x420d64",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd6bc",
+          "native_va": "0x420d8a",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd6ec",
+          "native_va": "0x420dba",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xd70f",
+          "native_va": "0x420ddd",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4080c0"
+        },
+        {
+          "candidate_offset": "0xd74b",
+          "native_va": "0x420e19",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd765",
+          "native_va": "0x420e33",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd7fd",
+          "native_va": "0x420ecb",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40e630"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 1,
+      "difference_runs": 1,
+      "first_mismatch_va": "0x420eda",
+      "whole_case_exact": false
+    },
+    {
+      "case": 312,
+      "native_start": "0x420ede",
+      "candidate_start_offset": "0xd810",
+      "candidate_start_delta": 2,
+      "native_bytes": 1084,
+      "candidate_bytes": 1084,
+      "extent_equal": true,
+      "coff_relocations": 24,
+      "relocation_operands_offset_materialized": 24,
+      "relocation_targets_verified": 24,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xd82e",
+          "native_va": "0x420efc",
+          "symbol": "__real@3fe0000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787c50"
+        },
+        {
+          "candidate_offset": "0xd840",
+          "native_va": "0x420f0e",
+          "symbol": "__real@3fe0000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787c50"
+        },
+        {
+          "candidate_offset": "0xd84f",
+          "native_va": "0x420f1d",
+          "symbol": "__real@3f847ae147ae147b",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787cf0"
+        },
+        {
+          "candidate_offset": "0xd888",
+          "native_va": "0x420f56",
+          "symbol": "__real@3fc999999999999a",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787300"
+        },
+        {
+          "candidate_offset": "0xd898",
+          "native_va": "0x420f66",
+          "symbol": "__real@3fc999999999999a",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787300"
+        },
+        {
+          "candidate_offset": "0xd8c6",
+          "native_va": "0x420f94",
+          "symbol": "__real@4059000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7875d0"
+        },
+        {
+          "candidate_offset": "0xd8cb",
+          "native_va": "0x420f99",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd8dd",
+          "native_va": "0x420fab",
+          "symbol": "__real@0000000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xd8ec",
+          "native_va": "0x420fba",
+          "symbol": "__real@4059000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7875d0"
+        },
+        {
+          "candidate_offset": "0xd8f1",
+          "native_va": "0x420fbf",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd903",
+          "native_va": "0x420fd1",
+          "symbol": "__real@0000000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xd93a",
+          "native_va": "0x421008",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xd94f",
+          "native_va": "0x42101d",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd969",
+          "native_va": "0x421037",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xd999",
+          "native_va": "0x421067",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xd9a1",
+          "native_va": "0x42106f",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xd9c7",
+          "native_va": "0x421095",
+          "symbol": "__real@3f847ae147ae147b",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787cf0"
+        },
+        {
+          "candidate_offset": "0xd9dc",
+          "native_va": "0x4210aa",
+          "symbol": "__real@3f847ae147ae147b",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787cf0"
+        },
+        {
+          "candidate_offset": "0xda61",
+          "native_va": "0x42112f",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xda85",
+          "native_va": "0x421153",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4108a0"
+        },
+        {
+          "candidate_offset": "0xdaac",
+          "native_va": "0x42117a",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xdaba",
+          "native_va": "0x421188",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4108a0"
+        },
+        {
+          "candidate_offset": "0xdb54",
+          "native_va": "0x421222",
+          "symbol": "__real@3fa1eb851eb851ec",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787dd8"
+        },
+        {
+          "candidate_offset": "0xdb75",
+          "native_va": "0x421243",
+          "symbol": "__real@0000000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7872f8"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 44,
+      "difference_runs": 42,
+      "first_mismatch_va": "0x421262",
+      "whole_case_exact": false
+    },
+    {
+      "case": 313,
+      "native_start": "0x42131a",
+      "candidate_start_offset": "0xdc4c",
+      "candidate_start_delta": 2,
+      "native_bytes": 1085,
+      "candidate_bytes": 1085,
+      "extent_equal": true,
+      "coff_relocations": 24,
+      "relocation_operands_offset_materialized": 24,
+      "relocation_targets_verified": 24,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xdc6a",
+          "native_va": "0x421338",
+          "symbol": "__real@3fe0000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787c50"
+        },
+        {
+          "candidate_offset": "0xdc7c",
+          "native_va": "0x42134a",
+          "symbol": "__real@3fe0000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787c50"
+        },
+        {
+          "candidate_offset": "0xdc8b",
+          "native_va": "0x421359",
+          "symbol": "__real@3f847ae147ae147b",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787cf0"
+        },
+        {
+          "candidate_offset": "0xdcc4",
+          "native_va": "0x421392",
+          "symbol": "__real@3fc999999999999a",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787300"
+        },
+        {
+          "candidate_offset": "0xdcd4",
+          "native_va": "0x4213a2",
+          "symbol": "__real@3fc999999999999a",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787300"
+        },
+        {
+          "candidate_offset": "0xdd02",
+          "native_va": "0x4213d0",
+          "symbol": "__real@4059000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7875d0"
+        },
+        {
+          "candidate_offset": "0xdd07",
+          "native_va": "0x4213d5",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xdd19",
+          "native_va": "0x4213e7",
+          "symbol": "__real@0000000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xdd28",
+          "native_va": "0x4213f6",
+          "symbol": "__real@4059000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7875d0"
+        },
+        {
+          "candidate_offset": "0xdd2d",
+          "native_va": "0x4213fb",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xdd3f",
+          "native_va": "0x42140d",
+          "symbol": "__real@0000000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xdd77",
+          "native_va": "0x421445",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xdd8c",
+          "native_va": "0x42145a",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xdda6",
+          "native_va": "0x421474",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xddd6",
+          "native_va": "0x4214a4",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xddde",
+          "native_va": "0x4214ac",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xde04",
+          "native_va": "0x4214d2",
+          "symbol": "__real@3f847ae147ae147b",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787cf0"
+        },
+        {
+          "candidate_offset": "0xde19",
+          "native_va": "0x4214e7",
+          "symbol": "__real@3f847ae147ae147b",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787cf0"
+        },
+        {
+          "candidate_offset": "0xde9e",
+          "native_va": "0x42156c",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xdec2",
+          "native_va": "0x421590",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4108a0"
+        },
+        {
+          "candidate_offset": "0xdee9",
+          "native_va": "0x4215b7",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xdef7",
+          "native_va": "0x4215c5",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4108a0"
+        },
+        {
+          "candidate_offset": "0xdf91",
+          "native_va": "0x42165f",
+          "symbol": "__real@3fa1eb851eb851ec",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787dd8"
+        },
+        {
+          "candidate_offset": "0xdfb2",
+          "native_va": "0x421680",
+          "symbol": "__real@0000000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7872f8"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 84,
+      "difference_runs": 82,
+      "first_mismatch_va": "0x42131b",
+      "whole_case_exact": false
+    },
+    {
+      "case": 314,
+      "native_start": "0x421757",
+      "candidate_start_offset": "0xe089",
+      "candidate_start_delta": 2,
+      "native_bytes": 1119,
+      "candidate_bytes": 1119,
+      "extent_equal": true,
+      "coff_relocations": 25,
+      "relocation_operands_offset_materialized": 25,
+      "relocation_targets_verified": 25,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xe0a7",
+          "native_va": "0x421775",
+          "symbol": "__real@3fe0000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787c50"
+        },
+        {
+          "candidate_offset": "0xe0b9",
+          "native_va": "0x421787",
+          "symbol": "__real@3fe0000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787c50"
+        },
+        {
+          "candidate_offset": "0xe0c8",
+          "native_va": "0x421796",
+          "symbol": "__real@3f847ae147ae147b",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787cf0"
+        },
+        {
+          "candidate_offset": "0xe0f6",
+          "native_va": "0x4217c4",
+          "symbol": "__real@4059000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7875d0"
+        },
+        {
+          "candidate_offset": "0xe0fb",
+          "native_va": "0x4217c9",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xe10d",
+          "native_va": "0x4217db",
+          "symbol": "__real@0000000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xe11c",
+          "native_va": "0x4217ea",
+          "symbol": "__real@4059000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7875d0"
+        },
+        {
+          "candidate_offset": "0xe121",
+          "native_va": "0x4217ef",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xe133",
+          "native_va": "0x421801",
+          "symbol": "__real@0000000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xe16b",
+          "native_va": "0x421839",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xe180",
+          "native_va": "0x42184e",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xe19a",
+          "native_va": "0x421868",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xe1ca",
+          "native_va": "0x421898",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xe1d2",
+          "native_va": "0x4218a0",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xe1f4",
+          "native_va": "0x4218c2",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4080c0"
+        },
+        {
+          "candidate_offset": "0xe22a",
+          "native_va": "0x4218f8",
+          "symbol": "__real@3fc999999999999a",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787300"
+        },
+        {
+          "candidate_offset": "0xe23a",
+          "native_va": "0x421908",
+          "symbol": "__real@3fc999999999999a",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787300"
+        },
+        {
+          "candidate_offset": "0xe263",
+          "native_va": "0x421931",
+          "symbol": "__real@3f847ae147ae147b",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787cf0"
+        },
+        {
+          "candidate_offset": "0xe278",
+          "native_va": "0x421946",
+          "symbol": "__real@3f847ae147ae147b",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787cf0"
+        },
+        {
+          "candidate_offset": "0xe2fd",
+          "native_va": "0x4219cb",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xe321",
+          "native_va": "0x4219ef",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4108a0"
+        },
+        {
+          "candidate_offset": "0xe348",
+          "native_va": "0x421a16",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xe356",
+          "native_va": "0x421a24",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4108a0"
+        },
+        {
+          "candidate_offset": "0xe3f0",
+          "native_va": "0x421abe",
+          "symbol": "__real@3fa1eb851eb851ec",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787dd8"
+        },
+        {
+          "candidate_offset": "0xe411",
+          "native_va": "0x421adf",
+          "symbol": "__real@0000000000000000",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x7872f8"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 68,
+      "difference_runs": 66,
+      "first_mismatch_va": "0x421758",
+      "whole_case_exact": false
+    },
+    {
+      "case": 315,
+      "native_start": "0x421bb6",
+      "candidate_start_offset": "0xe4e8",
+      "candidate_start_delta": 2,
+      "native_bytes": 672,
+      "candidate_bytes": 671,
+      "extent_equal": false,
+      "coff_relocations": 9,
+      "relocation_operands_materialized": 0,
+      "difference_bytes_after_offset_operand_materialization": null,
+      "difference_runs": null,
+      "whole_case_exact": false,
+      "qualification": "case extents differ; no offset-based relocation comparison claimed"
+    },
+    {
+      "case": 316,
+      "native_start": "0x421e56",
+      "candidate_start_offset": "0xe787",
+      "candidate_start_delta": 1,
+      "native_bytes": 672,
+      "candidate_bytes": 672,
+      "extent_equal": true,
+      "coff_relocations": 9,
+      "relocation_operands_offset_materialized": 9,
+      "relocation_targets_verified": 9,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xe7e1",
+          "native_va": "0x421eb0",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xe7f6",
+          "native_va": "0x421ec5",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xe810",
+          "native_va": "0x421edf",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xe840",
+          "native_va": "0x421f0f",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xe848",
+          "native_va": "0x421f17",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xe8a0",
+          "native_va": "0x421f6f",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xe8c4",
+          "native_va": "0x421f93",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4108a0"
+        },
+        {
+          "candidate_offset": "0xe8eb",
+          "native_va": "0x421fba",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xea14",
+          "native_va": "0x4220e3",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40e630"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 106,
+      "difference_runs": 103,
+      "first_mismatch_va": "0x421e57",
+      "whole_case_exact": false
+    },
+    {
+      "case": 317,
+      "native_start": "0x4220f6",
+      "candidate_start_offset": "0xea27",
+      "candidate_start_delta": 1,
+      "native_bytes": 706,
+      "candidate_bytes": 706,
+      "extent_equal": true,
+      "coff_relocations": 10,
+      "relocation_operands_offset_materialized": 10,
+      "relocation_targets_verified": 10,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xea81",
+          "native_va": "0x422150",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xea96",
+          "native_va": "0x422165",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xeab0",
+          "native_va": "0x42217f",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xeae0",
+          "native_va": "0x4221af",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xeae8",
+          "native_va": "0x4221b7",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xeb0a",
+          "native_va": "0x4221d9",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4080c0"
+        },
+        {
+          "candidate_offset": "0xeb62",
+          "native_va": "0x422231",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xeb86",
+          "native_va": "0x422255",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4108a0"
+        },
+        {
+          "candidate_offset": "0xebad",
+          "native_va": "0x42227c",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xecd6",
+          "native_va": "0x4223a5",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40e630"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 112,
+      "difference_runs": 109,
+      "first_mismatch_va": "0x4220f7",
+      "whole_case_exact": false
+    },
+    {
+      "case": 318,
+      "native_start": "0x4223b8",
+      "candidate_start_offset": "0xece9",
+      "candidate_start_delta": 1,
+      "native_bytes": 725,
+      "candidate_bytes": 725,
+      "extent_equal": true,
+      "coff_relocations": 14,
+      "relocation_operands_offset_materialized": 14,
+      "relocation_targets_verified": 12,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xed0e",
+          "native_va": "0x4223dd",
+          "symbol": "_ShioriZeroOperand",
+          "kind": "bound-zero",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xed1a",
+          "native_va": "0x4223e9",
+          "symbol": "_ShioriZeroOperand",
+          "kind": "bound-zero",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xed26",
+          "native_va": "0x4223f5",
+          "symbol": "_ShioriZeroOperand",
+          "kind": "bound-zero",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xed5c",
+          "native_va": "0x42242b",
+          "symbol": "__ftol2",
+          "kind": "rel32-target-mismatch",
+          "target_verified": false,
+          "target": "0x508ce23e"
+        },
+        {
+          "candidate_offset": "0xed82",
+          "native_va": "0x422451",
+          "symbol": "__ftol2",
+          "kind": "rel32-target-mismatch",
+          "target_verified": false,
+          "target": "0xfcd2a9de"
+        },
+        {
+          "candidate_offset": "0xedd7",
+          "native_va": "0x4224a6",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x4080c0"
+        },
+        {
+          "candidate_offset": "0xede6",
+          "native_va": "0x4224b5",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xee39",
+          "native_va": "0x422508",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xee4e",
+          "native_va": "0x42251d",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xee74",
+          "native_va": "0x422543",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xeea4",
+          "native_va": "0x422573",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xeec3",
+          "native_va": "0x422592",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407100"
+        },
+        {
+          "candidate_offset": "0xeef2",
+          "native_va": "0x4225c1",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        },
+        {
+          "candidate_offset": "0xef18",
+          "native_va": "0x4225e7",
+          "symbol": "__ftol2",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 114,
+      "difference_runs": 29,
+      "first_mismatch_va": "0x4223b9",
+      "whole_case_exact": false
+    },
+    {
+      "case": 319,
+      "native_start": "0x42268d",
+      "candidate_start_offset": "0xefbe",
+      "candidate_start_delta": 1,
+      "native_bytes": 900,
+      "candidate_bytes": 900,
+      "extent_equal": true,
+      "coff_relocations": 17,
+      "relocation_operands_offset_materialized": 17,
+      "relocation_targets_verified": 17,
+      "relocation_bindings": [
+        {
+          "candidate_offset": "0xefe1",
+          "native_va": "0x4226b0",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410b10"
+        },
+        {
+          "candidate_offset": "0xf00a",
+          "native_va": "0x4226d9",
+          "symbol": "_ShioriZeroOperand",
+          "kind": "bound-zero",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xf016",
+          "native_va": "0x4226e5",
+          "symbol": "_ShioriZeroOperand",
+          "kind": "bound-zero",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xf022",
+          "native_va": "0x4226f1",
+          "symbol": "_ShioriZeroOperand",
+          "kind": "bound-zero",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xf062",
+          "native_va": "0x422731",
+          "symbol": "_ShioriMinusSixPointFiveOperand",
+          "kind": "bound-named-float",
+          "target_verified": true,
+          "target": "0x787c68"
+        },
+        {
+          "candidate_offset": "0xf091",
+          "native_va": "0x422760",
+          "symbol": "?SetVerticalShake@Secondary@@QAEXHH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410a10"
+        },
+        {
+          "candidate_offset": "0xf0bd",
+          "native_va": "0x42278c",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xf1a1",
+          "native_va": "0x422870",
+          "symbol": "_ShioriOneOperand",
+          "kind": "bound-named-float",
+          "target_verified": true,
+          "target": "0x7875c0"
+        },
+        {
+          "candidate_offset": "0xf1b8",
+          "native_va": "0x422887",
+          "symbol": "_ShioriOneOperand",
+          "kind": "bound-named-float",
+          "target_verified": true,
+          "target": "0x7875c0"
+        },
+        {
+          "candidate_offset": "0xf1fa",
+          "native_va": "0x4228c9",
+          "symbol": "_ShioriMinusThreePointFiveOperand",
+          "kind": "bound-named-float",
+          "target_verified": true,
+          "target": "0x787c60"
+        },
+        {
+          "candidate_offset": "0xf215",
+          "native_va": "0x4228e4",
+          "symbol": "_ShioriZeroOperand",
+          "kind": "bound-zero",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xf23b",
+          "native_va": "0x42290a",
+          "symbol": "?RequestTransition@Context@@QAEXD@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x407ce0"
+        },
+        {
+          "candidate_offset": "0xf25c",
+          "native_va": "0x42292b",
+          "symbol": "?SetHorizontalShake@Secondary@@QAEXHH@Z",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x410a80"
+        },
+        {
+          "candidate_offset": "0xf287",
+          "native_va": "0x422956",
+          "symbol": "__real@3fa1eb851eb851ec",
+          "kind": "bound-literal",
+          "target_verified": true,
+          "target": "0x787dd8"
+        },
+        {
+          "candidate_offset": "0xf29f",
+          "native_va": "0x42296e",
+          "symbol": "_ShioriZeroOperand",
+          "kind": "bound-zero",
+          "target_verified": true,
+          "target": "0x7872f8"
+        },
+        {
+          "candidate_offset": "0xf2ae",
+          "native_va": "0x42297d",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x40f1e0"
+        },
+        {
+          "candidate_offset": "0xf2b7",
+          "native_va": "0x422986",
+          "symbol": "_ShioriZeroOperand",
+          "kind": "bound-zero",
+          "target_verified": true,
+          "target": "0x7872f8"
+        }
+      ],
+      "difference_bytes_after_offset_operand_materialization": 0,
+      "difference_runs": 0,
+      "first_mismatch_va": null,
+      "whole_case_exact": true
+    }
+  ],
+  "qualification": "The 17 selected case bodies are ordinary C++ with no inline assembly or emitted opcodes. The compiler naturally reproduces the native 0x384-byte frame. This is progress evidence, not a whole-owner Exact certificate; case extents and instruction bytes still differ."
+}

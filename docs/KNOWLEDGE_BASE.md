@@ -4380,6 +4380,37 @@ and pinned toolchain execution checks passed; all final accepted-unit builds and
 comparisons above succeeded. Original translation-unit context and private draft
 field/helper views remain hypotheses requiring fresh evidence before integration.
 
+### Expanded natural-C++ Slot06 candidate: cases 303-319 (progress, not whole-owner Exact)
+
+`workbench/shiori-state/ShioriState-natural-cases303-319.cpp` now expresses all
+17 consecutive cases 303-319 as ordinary C++; none contains `__asm`, `_emit` or
+`__emit`. The pinned VC7.1 compiler naturally emits the native **0x384-byte
+stack frame**, without prologue rewriting or EBP-slot patching. Its 135 switch
+table relocations cover 135 unique destinations and the 319-byte selector is
+byte-identical. The candidate is **63,133 bytes** versus the 63,132-byte native
+owner (62,274 code bytes versus 62,273); 14/17 selected case extents match, with
+only +1/+1/-1 byte deltas in cases 307/308/315.
+
+Case 319 is now a genuine natural-C++ **900/900-byte case Exact**: all 17 COFF
+relocation targets are verified and the relocation-materialized case has zero
+differences. Native review corrected its positive-velocity transition and
+landing comparisons, shake argument order, and the `0.035` x87 operand order.
+This is one exact case inside an unfinished boss, not a whole-function
+acceptance. Cases 310/311 still have one-byte epilogue displacement differences;
+312/313/314 and 316/317/318 still have codegen differences; 315 remains one byte
+short. The focused progress verifier is
+`workbench/shiori-state/verify_natural_case_progress.py`, with report
+`docs/evidence/shiori-slot06-natural-cases303-319-progress.json`. Rebuild only
+this TU with:
+
+```bash
+scripts/repo-python workbench/shiori-state/verify_natural_case_progress.py --rebuild
+```
+
+The natural source remains outside `matches.csv` and `implemented.csv`; do not
+promote the case-level Exact result to a whole-owner claim. Continue with the
+remaining codegen differences and preserve ordinary C++ only.
+
 <a id="secondary-facing-explicit-x-coordinate"></a>
 
 ## Secondary explicit-X facing update: 116-byte strict Exact
