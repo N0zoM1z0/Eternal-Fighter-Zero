@@ -8340,19 +8340,19 @@ Ayu's Slot04/05/06/07 bosses remain open.
 is open. A real ordinary-C++ workbench candidate at
 `workbench/ayu-action/Character01Action-natural.cpp` has been rebuilt
 with the original first ten Ayu-specific high-priority command families in
-native order, rather than copying the Mayu states. The first **eleven**
-subsequent state destinations are verified against native `ClearBufferedButtons`
-call disassembly: `0xA7, 0x13E, 0x134, 0x133, 0x132, 0x12E, 0x12D,
-0x12C, 0x13D, 0x13C, 0x13B`. The `0x70/6F/6E` family restores original
-air/ground alternate state changes. This is source-level progress on the
-**large boss**, not a tiny test stub.
+native order, rather than copying the Mayu states. The first **21** original priority state destinations now match the native
+ClearBufferedButtons order:
+`0xA7,0x13E,0x134,0x133,0x132,0x12E,0x12D,0x12C,0x13D,0x13C,0x13B,`
+`0x132,0xFB,0xFC,0xFA,0x102,0x101,0x100,0x106,0x105,0x104`.
+The extra Ayu-only `0x78` high-charge priority was inserted, and five
+Mayu-only command branches removed. The `0x70/6F/6E` family preserves its
+original air/ground alternate states. This is natural C++ boss progress.
 
-Pinned VC7.1 compilation yields **11,972 candidate bytes** against
-**10,923 original** (+1,049), with 102 normal COFF relocations. The native
-function contains 38 original button-buffer clearing calls, while the
-candidate still contains 43 because later Mayu-specific branches have not
-been converted to Ayu behavior. Therefore **not Exact**, no formal owner
-ledger or whole-control-flow claim. Reproduce only this TU via
+Pinned VC7.1 compilation now yields **10,963 candidate bytes** versus
+**10,923 original** (+40), with 89 normal COFF relocations. The native
+owner has 38 ClearBufferedButtons calls; the candidate has 39 because later
+dash/air-action paths still differ. **Not Exact**, no formal match ledger
+or whole-control-flow claim. Reproduce only this TU via
 `workbench/ayu-action/verify_action_progress.py --rebuild`; evidence:
 `docs/evidence/ayu-slot04-natural-progress.json`. Continue normal C++
 reconstruction, no ASM/PADDING or full cold replay.

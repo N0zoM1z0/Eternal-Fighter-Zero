@@ -7,20 +7,21 @@ starts at `0x006E84D0`, size **10,923 code bytes**, and virtual slot4 is at
 `Character01Action-natural.cpp` compiles to **11,972 bytes** (delta +1,049),
 with 102 normal COFF relocations; it is **not Exact**.
 
-The candidate began with the shared Mayu action-selection control flow and
-reconstructed the original first **ten high-priority Ayu command families**
-from native disassembly/decompile. In native order these are `0x5D`,
-`0x7A/79/78`, `0x70/6F/6E`, and `0x66/65/64`. This restores the original
-first **eleven** post-ClearBufferedButtons state values in order:
-`0xA7, 0x13E, 0x134, 0x133, 0x132, 0x12E, 0x12D, 0x12C, 0x13D, 0x13C,
-0x13B`. The `0x70` family also changes state on aerial activation, preserving
-original separate air/ground destinations. The source remains ordinary C++;
-no compiler directives, ASM, `_emit` or opcode padding were used.
+The candidate began with shared Mayu action-selection control flow, then
+reconstructed Ayu's high-priority families in native order: `0x5D`,
+`0x7A/79/78`, `0x70/6F/6E`, `0x66/65/64`. The second pass removed five
+Mayu-only high-priority paths, inserted Ayu's extra `0x78` meter-3000
+priority and recovered the original `0x16/15/14`, `0x20/1F/1E`, and
+`0x0C/0B/0A` actions. The **first 21** native post-clear state IDs now
+match in order, including the aerial alternate `0x10B` and the `0x70`
+air/ground state variants. The source remains ordinary C++; no compiler
+directives, ASM, `_emit` or opcode padding were used.
 
 **Still unresolved:** the full native owner contains 38
-ClearBufferedButtons calls, whereas the uncorrected later Mayu branches give
-the candidate 43. Later input/air-action state families, all COFF targets,
-control flow and byte layout must be reconstructed before strict acceptance.
+ClearBufferedButtons calls, whereas this candidate has 39. The **10,963-byte**
+code extent is just 40 bytes longer than the 10,923-byte native owner, but
+later dash/air-action state families are misordered; original-bound COFF
+targets, branch edges and all machine code still need strict verification.
 Do not promote this workbench candidate to `src/`, `matches.csv`, or
 `implemented.csv` and do not call it Exact just because the first states match.
 

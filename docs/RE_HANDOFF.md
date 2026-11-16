@@ -553,10 +553,11 @@ The next Ayu action Boss `Character01::Slot04` (`0x006E84D0`,
 **10,923 original bytes**) now has a compilable ordinary-C++ workbench in
 `workbench/ayu-action/Character01Action-natural.cpp`. The first ten
 priority families were restored in original `0x5D`, `0x7A`, `0x70`, `0x66`
-order, and **the first 11 state IDs** after `ClearBufferedButtons` match
-native disassembly, including aerial variants for `0x70`. The candidate
-remains **not Exact** (11,972 bytes, 102 COFF sites, 43 candidate vs 38
-native clear calls). Rebuild only with
+order. The further native-driven rewrite now matches **21** ordered
+post-ClearBufferedButtons states, including the repeated `0x78` priority and
+`0x16`, `0x20`, `0x0C` command families. The candidate remains **not Exact**
+(10,963 bytes versus 10,923 original, 89 COFF sites, 39 candidate versus 38
+native clear calls). Later dash/air-action paths are still open. Rebuild with
 `scripts/repo-python workbench/ayu-action/verify_action_progress.py --rebuild`;
 evidence `docs/evidence/ayu-slot04-natural-progress.json`. Later Ayu action
 families must still be reconstructed, no all-unit cold replay.

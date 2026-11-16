@@ -79,11 +79,14 @@ def main():
     native_calls=native_clear_calls(n)
     reloc_sites={r['offset']-1 for r in relocs if r['symbol']==CLEAR}
     candidate_calls=[(i,off) for i,(off,_,_) in enumerate(c) if off in reloc_sites]
-    if len(native_calls)!=38 or len(candidate_calls)!=43:
+    if len(native_calls)!=38 or len(candidate_calls)!=39:
         raise AssertionError(('unexpected original/candidate clear sites',len(native_calls),len(candidate_calls)))
     nstates=[state(n,i) for i,_ in native_calls]
     cstates=[state(c,i) for i,_ in candidate_calls]
-    expected=[0xa7,0x13e,0x134,0x133,0x132,0x12e,0x12d,0x12c,0x13d,0x13c,0x13b]
+    expected=[
+        0xa7,0x13e,0x134,0x133,0x132,0x12e,0x12d,0x12c,0x13d,0x13c,0x13b,
+        0x132,0xfb,0xfc,0xfa,0x102,0x101,0x100,0x106,0x105,0x104,
+    ]
     if nstates[:len(expected)]!=expected or cstates[:len(expected)]!=expected:
         raise AssertionError(('native high-priority transition order mismatch',nstates[:11],cstates[:11]))
     rows=[{'ordinal':i+1,'native_call_va':hex(ADDRESS+native_calls[i][1]),
@@ -108,16 +111,19 @@ def main():
                      'coff_relocations':len(relocs),
                      'clear_calls':len(candidate_calls),
                      'toolchain_lock_sha256':receipt['toolchain_lock_sha256']},
-        'native_first_11_high_priority_states_match':True,
-        'first_11_transitions':rows,
+        'native_first_21_high_priority_states_match':True,
+        'first_21_transitions':rows,
         'source_has_asm_or_emitted_opcodes':False,
         'whole_owner_exact':False,
-        'qualification':('Only the first eleven high-priority branches have '
-                         'native-grounded command/state ordering. Later Mayu-derived '
-                         'branches remain wrong: 43 candidate versus 38 native '
-                         'ClearBufferedButtons sites; different code extents and '
-                         'instruction count. No original-bound COFF replay or '
-                         'whole-owner Exact assertion. Keep outside match/implemented ledgers.'),
+        'qualification':('The first 21 original priority transition state IDs '
+                         'match in source/codegen order, and the first 21 clear '
+                         'call offsets are all 4 bytes or fewer below native. '
+                         'The candidate still has 39 versus 38 native clear '
+                         'sites and a +40-byte code extent. Following dash, '
+                         'air-action and ordinary button paths remain derived '
+                         'from Mayu, not Ayu. Not an Exact owner; full local '
+                         'control-flow and original-bound relocation parity '
+                         'are not proven. Keep outside the formal ledgers.'),
     }
     REPORT.parent.mkdir(parents=True,exist_ok=True)
     REPORT.write_text(json.dumps(evidence,indent=2)+'\n')
@@ -125,7 +131,7 @@ def main():
                       'candidate_bytes':len(candidate),
                       'native_clear_calls':len(native_calls),
                       'candidate_clear_calls':len(candidate_calls),
-                      'first_11_state_codes':[hex(v) for v in expected],
+                      'first_21_state_codes':[hex(v) for v in expected],
                       'relocations':len(relocs)},indent=2))
 
 if __name__=='__main__':main()
