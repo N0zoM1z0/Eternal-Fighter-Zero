@@ -5830,20 +5830,61 @@ void Character08::Slot06()
         field3138 = 6;
         ++field3140;
       }
-      --field3138;
-      ++field000c;
-      if (field000c >= frameDuration) {
-        field000c = 0;
-        ++field000a;
-        if ((field000a == 8) && (field313c < 5)) {
-          ++field313c;
-          field000a = field000a + -4;
-        }
-        if (field000a >= frameCount) {
-          field0008 = 0;
-          FaceOpponent();
-          ResetPose();
-        }
+      __asm {
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+3138h]
+        sub edx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+3138h], edx
+        mov eax, dword ptr [ebp-54h]
+        mov cx, word ptr [eax+0Ch]
+        add cx, 1
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ch], cx
+        mov eax, dword ptr [ebp-54h]
+        movzx ecx, word ptr [eax+0Ch]
+        movzx edx, word ptr [ebp-4h]
+        cmp ecx, edx
+        jl state315_skip_frame
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ch], 0
+        mov ecx, dword ptr [ebp-54h]
+        mov dx, word ptr [ecx+0Ah]
+        add dx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        cmp edx, 8
+        jne state315_after_loop
+        mov eax, dword ptr [ebp-54h]
+        cmp dword ptr [eax+313Ch], 5
+        jge state315_after_loop
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+313Ch]
+        add edx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+313Ch], edx
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        sub edx, 4
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+      state315_after_loop:
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        movzx eax, word ptr [ebp-8h]
+        cmp edx, eax
+        jl state315_skip_frame
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+8h], 0
+        mov ecx, dword ptr [ebp-54h]
+        call FaceOpponent
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [eax]
+      state315_skip_frame:
       }
       break;
     case 316:

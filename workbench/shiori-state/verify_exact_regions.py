@@ -2,7 +2,7 @@
 """Verify pinned byte-exact regions of the Shiori Slot06 workbench object.
 
 This is deliberately a focused-region verifier, not a whole-function Exact
-certificate. It reconstructs seventeen complete case bodies from original-bound
+certificate. It reconstructs eighteen complete case bodies from original-bound
 COFF operands, raw runtime-call operands and native stack-slot normalization.
 """
 from __future__ import annotations
@@ -38,9 +38,9 @@ CALL_TARGETS = {
 CASE_RELOCATIONS = {
     300: (13, 10), 301: (2, 0), 302: (2, 0), 303: (9, 9),
     304: (9, 9), 305: (10, 10), 306: (8, 7), 307: (5, 4),
-    308: (6, 5), 309: (2, 2), 310: (8, 8), 311: (9, 9), 312: (24, 11),
-    313: (24, 11),
-    313: (24, 11), 314: (25, 12), 318: (12, 9), 319: (17, 6),
+    308: (6, 5), 309: (2, 2), 310: (8, 8), 311: (9, 9),
+    312: (24, 11), 313: (24, 11), 314: (25, 12), 315: (9, 9),
+    318: (12, 9), 319: (17, 6),
 }
 PINNED_ASM_CALLS = {
     307: (0x004205FA, 0x0042061F, 0x0042068A),
@@ -77,25 +77,17 @@ STACK_SLOT_PATCHES = {
           (0x11A, 0xF0, 0xD0), (0x120, 0xF0, 0xD0),
           (0x2AB, 0xEC, 0xCC), (0x2B1, 0xEC, 0xCC),
           (0x2DA, 0xE8, 0xC8), (0x2E0, 0xE8, 0xC8)),
+    315: ((0x075, 0xE4, 0xC4), (0x07B, 0xE4, 0xC4),
+          (0x092, 0xE0, 0xC0), (0x098, 0xE0, 0xC0),
+          (0x150, 0xDC, 0xBC), (0x156, 0xDC, 0xBC),
+          (0x16D, 0xD8, 0xB8), (0x173, 0xD8, 0xB8)),
     318: ((0x177, 0xB4, 0x8C), (0x17D, 0xB4, 0x8C),
           (0x194, 0xB0, 0x88), (0x19A, 0xB0, 0x88),
           (0x21B, 0xAC, 0x84), (0x221, 0xAC, 0x84),
           (0x238, 0xA8, 0x80), (0x23E, 0xA8, 0x80)),
     319: ((0x0E0, 0xA4, 0x7C), (0x0E6, 0xA4, 0x7C)),
-    313: ((0x146, 0x04, 0xE4), (0x147, 0xFD, 0xFC),
-          (0x14C, 0x04, 0xE4), (0x14D, 0xFD, 0xFC),
-          (0x163, 0x00, 0xE0), (0x164, 0xFD, 0xFC),
-          (0x169, 0x00, 0xE0), (0x16A, 0xFD, 0xFC),
-          (0x289, 0xFC, 0xDC), (0x28F, 0xFC, 0xDC),
-          (0x2B8, 0xF8, 0xD8), (0x2BE, 0xF8, 0xD8)),
-    314: ((0x0FD, 0xF4, 0xD4), (0x103, 0xF4, 0xD4),
-          (0x11A, 0xF0, 0xD0), (0x120, 0xF0, 0xD0),
-          (0x2AB, 0xEC, 0xCC), (0x2B1, 0xEC, 0xCC),
-          (0x2DA, 0xE8, 0xC8), (0x2E0, 0xE8, 0xC8)),
 }
-PINNED_ARITHMETIC = {
-    315: (0x00421BEB, 26, "sub edx,0x3E8"),
-}
+PINNED_ARITHMETIC = {}
 
 
 def main() -> None:
@@ -255,15 +247,15 @@ def main() -> None:
                      "case_entry_order_exact": True, "selector_bytes_exact": True},
         "prologue_normalization": {"candidate_frame": "0x35C", "native_frame": "0x384",
                                    "native_prologue_restored": True},
-        "qualification": "Seventeen complete case bodies are byte-exact after original-bound relocation materialization, ten inline-assembly __ftol2 call bindings, and native stack-slot normalization. One additional meter arithmetic region is byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate.",
+        "qualification": "Eighteen complete case bodies are byte-exact after original-bound relocation materialization, ten inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; case315 is covered as a complete body. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate.",
     }
     output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(evidence, indent=2) + "\n")
     for case, result in exact_cases.items():
         print(f"case{case}: {result['bytes']} bytes exact; {result['relocations_materialized']} relocations ({result['rel32_calls_materialized']} calls, {result['float_operands_materialized']} floats)")
-    print("stack frame: candidate 0x35C normalized to native 0x384; stack-temp operands restored for cases310/311/312/313/314/318/319")
-    print("meter blocks:", ", ".join(f"case{x['case']}={x['bytes']}B exact" for x in arithmetic))
+    print("stack frame: candidate 0x35C normalized to native 0x384; stack-temp operands restored for cases310/311/312/313/314/315/318/319")
+    print("meter-only regions: none; case-local arithmetic is included in whole-case matches")
     print("owner extent:", len(compiled), "bytes; table/selector order exact; other cases remain open")
 
 

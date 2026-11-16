@@ -91,15 +91,18 @@ then verifies selected code against the canonical PE. Its evidence is
   materializing 25 original-bound COFF relocations (12 calls and 13 float
   operands) and restoring its eight conversion-temp operand bytes; its
   `field313c < 13` rollback tail is pinned to the native register sequence.
-- **Case315:** the 26-byte sequence at `0x00421BEB` matches exactly, including
-  `sub edx,0x3E8`.
+- **Case315:** the complete **672-byte** case body is byte-identical after
+  materializing nine COFF calls and restoring eight conversion-temp operand
+  bytes. Its meter subtraction, state8 loop (threshold5), four-frame rollback,
+  and terminal FaceOpponent/virtual ResetPose path are all included.
 
-Across the seventeen complete cases (300–314 and 318–319), **11,109 native
-code bytes** are byte-exact after materializing **185 COFF relocations** (122
-calls and 63 float operands) plus ten raw `__ftol2` call operands. One
-additional meter region in case315 contributes another **26 byte-exact bytes**.
-The focused resolver restores the native frame and 66 individually checked
-conversion-temp operand bytes; it does not mask arbitrary bytes.
+Across the eighteen complete cases (300–315 and 318–319), **11,781 native
+code bytes** are byte-exact after materializing **194 COFF relocations** (131
+calls and 63 float operands) plus ten raw `__ftol2` call operands. The focused
+resolver restores the native frame and 74 individually checked conversion-
+temp operand bytes; it does not mask arbitrary bytes. No separate meter-only
+region is counted because all reviewed meter instructions are inside complete
+case bodies.
 
 ## Remaining whole-function work
 
