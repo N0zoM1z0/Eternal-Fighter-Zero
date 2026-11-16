@@ -8178,14 +8178,15 @@ candidate-only `0xd2` reset branch. This also preserves the original
 normal-button and air-action transition order.
 
 After native-driven rewriting of five conditional post-state branches and
-restoring the original operand evaluation order within the first ten priority
-checks, the VC7.1 `/Od /G6 /MT /Gy /W3` candidate is **11,421 bytes** versus
-11,424 native bytes. Both sides decode to **2,873 instructions**. More
-importantly, the **first 11 ClearBufferedButtons calls now have exactly the
-original offsets**, and all 39 post-call state destinations remain in native
-order. This is not whole-owner Exact: a -3-byte net extent, unresolved
-instruction/register/branch differences and COFF original-target bindings
-remain. Keep the source unaccepted until complete strict verification.
+restoring the original operand evaluation order in the ten priority checks,
+the `0x16` action and the three `0x0C/0x0B/0x0A` command guards, the VC7.1
+`/Od /G6 /MT /Gy /W3` source now compiles to exactly **11,424/11,424 bytes**
+and **2,873/2,873 decoded instructions**. All **39 ClearBufferedButtons call
+offsets** and their first post-call state IDs also match the original. This
+is an important structural milestone, but **not whole-owner Exact**: the
+register/instruction bytes, complete local branch destinations and all COFF
+relocation targets are not yet proven identical. Retain this candidate outside
+`matches.csv` / `implemented.csv` pending complete strict verification.
 This is **not** an accepted owner and must not appear in `matches.csv` or
 `implemented.csv`. Rebuild only this TU via
 `workbench/nanase-action/verify_action_progress.py --rebuild`; evidence:

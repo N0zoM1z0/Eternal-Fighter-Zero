@@ -7,19 +7,18 @@ translation unit that remains outside the exact tracking ledgers.
 The candidate is adapted from the already reconstructed Makoto action selector,
 then corrected against Nanase's original executable for the 22 priority
 special-action transitions and the final button/air transition groups. Its
-normal VC7.1 `/Od /G6 /MT /Gy /W3` build has **11,421 code bytes** (native
-11,424) and 2,873 decoded instructions (native 2,873). The **first 11 native ClearBufferedButtons call sites now align at identical
+normal VC7.1 `/Od /G6 /MT /Gy /W3` build has **11,424 code bytes** (native
+11,424) and 2,873 decoded instructions (native 2,873). All **39 native ClearBufferedButtons call sites now align at identical
 offsets**, thanks to restoring the original evaluation order of the ten
-high-priority C++ conditions. All **39 native
+high-priority C++ conditions and the three final command guards (`0xC/0xB/0xA`). All **39 native
 first-after-ClearBufferedButtons action state IDs**, including 0x133/0x136,
 the 0x66 and 0x70 multi-command banks, 0x102/0x101/0x100, the 0xfa group,
 and the ordinary button/air states, are represented **in matching native order**.
 
 Not Exact! The count and state-ID alignment does not establish every input
-guard, fallthrough, side effect, branch target or relocation binding. The
-natural candidate retains a -3-byte layout difference despite having the
-same instruction *count*. Instructions, registers and branches are not
-identical; native-specific fallthroughs remain unverified in the final
+guard, fallthrough, side effect, branch target or relocation binding. The natural candidate now matches the **whole-owner extent and instruction
+count**, but not yet the machine code. Instructions, registers, branch
+destinations and COFF relocations still require full byte-level validation; native-specific fallthroughs remain unverified in the final
 button/air paths. Do not promote this
 source to `src/`, `implemented.csv` or `matches.csv` until independently
 reviewed full-function native matching; never use ASM or artificial padding.

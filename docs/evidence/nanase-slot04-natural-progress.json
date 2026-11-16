@@ -11,9 +11,9 @@
   },
   "candidate": {
     "source": "workbench/nanase-action/Character00Action-natural.cpp",
-    "source_sha256": "3a58dbca491f6eaff00f1bb5adbd2ae802c4f1e48da9571456d4bf0f0aaff89d",
+    "source_sha256": "6edd8867f087f2681eed0d15dec242cd57ae34016577717791faba9539bb7900",
     "object": "build/nanase-action/Character00Action-natural.obj",
-    "object_sha256": "9dd5b6be1be992e47acddfefce4ae7de603274cf4c8c29277d227af8816d4194",
+    "object_sha256": "3a29032d5193286a49038d5c604a5b41cd817aeb09c2ca538d35e1cb3825b384",
     "compiler_flags": [
       "/Od",
       "/G6",
@@ -21,8 +21,8 @@
       "/Gy",
       "/W3"
     ],
-    "code_bytes": 11421,
-    "code_size_delta": -3,
+    "code_bytes": 11424,
+    "code_size_delta": 0,
     "instruction_count": 2873,
     "instruction_count_delta": 0,
     "coff_relocations": 93,
@@ -44,8 +44,8 @@
   "native_action_clear_calls": 39,
   "candidate_action_clear_calls": 39,
   "all_39_first_action_state_targets_match_in_order": true,
-  "native_call_offsets_aligned_count": 11,
-  "native_call_offsets_aligned_prefix": 11,
+  "native_call_offsets_aligned_count": 39,
+  "native_call_offsets_aligned_prefix": 39,
   "transitions": [
     {
       "ordinal": 1,
@@ -138,229 +138,229 @@
     {
       "ordinal": 12,
       "native_call_va": "0x48ba11",
-      "candidate_call_offset": "0xd6d",
-      "candidate_minus_native_offset": -4,
+      "candidate_call_offset": "0xd71",
+      "candidate_minus_native_offset": 0,
       "native_state": "0x102",
       "candidate_state": "0x102"
     },
     {
       "ordinal": 13,
       "native_call_va": "0x48bb2a",
-      "candidate_call_offset": "0xe86",
-      "candidate_minus_native_offset": -4,
+      "candidate_call_offset": "0xe8a",
+      "candidate_minus_native_offset": 0,
       "native_state": "0x101",
       "candidate_state": "0x101"
     },
     {
       "ordinal": 14,
       "native_call_va": "0x48bc27",
-      "candidate_call_offset": "0xf83",
-      "candidate_minus_native_offset": -4,
+      "candidate_call_offset": "0xf87",
+      "candidate_minus_native_offset": 0,
       "native_state": "0x100",
       "candidate_state": "0x100"
     },
     {
       "ordinal": 15,
       "native_call_va": "0x48bd60",
-      "candidate_call_offset": "0x10bc",
-      "candidate_minus_native_offset": -4,
+      "candidate_call_offset": "0x10c0",
+      "candidate_minus_native_offset": 0,
       "native_state": "0x105",
       "candidate_state": "0x105"
     },
     {
       "ordinal": 16,
       "native_call_va": "0x48be58",
-      "candidate_call_offset": "0x11b4",
-      "candidate_minus_native_offset": -4,
+      "candidate_call_offset": "0x11b8",
+      "candidate_minus_native_offset": 0,
       "native_state": "0x104",
       "candidate_state": "0x104"
     },
     {
       "ordinal": 17,
       "native_call_va": "0x48bf40",
-      "candidate_call_offset": "0x129c",
-      "candidate_minus_native_offset": -4,
+      "candidate_call_offset": "0x12a0",
+      "candidate_minus_native_offset": 0,
       "native_state": "0x103",
       "candidate_state": "0x103"
     },
     {
       "ordinal": 18,
       "native_call_va": "0x48c01d",
-      "candidate_call_offset": "0x1379",
-      "candidate_minus_native_offset": -4,
+      "candidate_call_offset": "0x137d",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xfa",
       "candidate_state": "0xfa"
     },
     {
       "ordinal": 19,
       "native_call_va": "0x48c10e",
-      "candidate_call_offset": "0x146a",
-      "candidate_minus_native_offset": -4,
+      "candidate_call_offset": "0x146e",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xfa",
       "candidate_state": "0xfa"
     },
     {
       "ordinal": 20,
       "native_call_va": "0x48c1fc",
-      "candidate_call_offset": "0x1558",
-      "candidate_minus_native_offset": -4,
+      "candidate_call_offset": "0x155c",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xfa",
       "candidate_state": "0xfa"
     },
     {
       "ordinal": 21,
       "native_call_va": "0x48c30c",
-      "candidate_call_offset": "0x1669",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x166c",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xff",
       "candidate_state": "0xff"
     },
     {
       "ordinal": 22,
       "native_call_va": "0x48c404",
-      "candidate_call_offset": "0x1760",
-      "candidate_minus_native_offset": -4,
+      "candidate_call_offset": "0x1764",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xfe",
       "candidate_state": "0xfe"
     },
     {
       "ordinal": 23,
       "native_call_va": "0x48c4ec",
-      "candidate_call_offset": "0x1849",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x184c",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xfd",
       "candidate_state": "0xfd"
     },
     {
       "ordinal": 24,
       "native_call_va": "0x48cc02",
-      "candidate_call_offset": "0x1f5f",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x1f62",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xe",
       "candidate_state": "0xe"
     },
     {
       "ordinal": 25,
       "native_call_va": "0x48cccb",
-      "candidate_call_offset": "0x2028",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x202b",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xe6",
       "candidate_state": "0xe6"
     },
     {
       "ordinal": 26,
       "native_call_va": "0x48cda6",
-      "candidate_call_offset": "0x2103",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x2106",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xcf",
       "candidate_state": "0xcf"
     },
     {
       "ordinal": 27,
       "native_call_va": "0x48ce87",
-      "candidate_call_offset": "0x21e4",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x21e7",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xcc",
       "candidate_state": "0xcc"
     },
     {
       "ordinal": 28,
       "native_call_va": "0x48cf68",
-      "candidate_call_offset": "0x22c5",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x22c8",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xc8",
       "candidate_state": "0xc8"
     },
     {
       "ordinal": 29,
       "native_call_va": "0x48cfdf",
-      "candidate_call_offset": "0x233c",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x233f",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xe7",
       "candidate_state": "0xe7"
     },
     {
       "ordinal": 30,
       "native_call_va": "0x48d0ba",
-      "candidate_call_offset": "0x2417",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x241a",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xd0",
       "candidate_state": "0xd0"
     },
     {
       "ordinal": 31,
       "native_call_va": "0x48d19c",
-      "candidate_call_offset": "0x24f9",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x24fc",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xcd",
       "candidate_state": "0xcd"
     },
     {
       "ordinal": 32,
       "native_call_va": "0x48d2bc",
-      "candidate_call_offset": "0x2619",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x261c",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xc9",
       "candidate_state": "0xc9"
     },
     {
       "ordinal": 33,
       "native_call_va": "0x48d36c",
-      "candidate_call_offset": "0x26c9",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x26cc",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xca",
       "candidate_state": "0xca"
     },
     {
       "ordinal": 34,
       "native_call_va": "0x48d3e3",
-      "candidate_call_offset": "0x2740",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x2743",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xe8",
       "candidate_state": "0xe8"
     },
     {
       "ordinal": 35,
       "native_call_va": "0x48d576",
-      "candidate_call_offset": "0x28d3",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x28d6",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xf8",
       "candidate_state": "0xf8"
     },
     {
       "ordinal": 36,
       "native_call_va": "0x48d622",
-      "candidate_call_offset": "0x297f",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x2982",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xd1",
       "candidate_state": "0xd1"
     },
     {
       "ordinal": 37,
       "native_call_va": "0x48d704",
-      "candidate_call_offset": "0x2a61",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x2a64",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xce",
       "candidate_state": "0xce"
     },
     {
       "ordinal": 38,
       "native_call_va": "0x48d881",
-      "candidate_call_offset": "0x2bde",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x2be1",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xdc",
       "candidate_state": "0xdc"
     },
     {
       "ordinal": 39,
       "native_call_va": "0x48d92e",
-      "candidate_call_offset": "0x2c8b",
-      "candidate_minus_native_offset": -3,
+      "candidate_call_offset": "0x2c8e",
+      "candidate_minus_native_offset": 0,
       "native_state": "0xcb",
       "candidate_state": "0xcb"
     }
   ],
   "source_has_asm_or_emitted_opcodes": false,
   "whole_owner_exact": false,
-  "qualification": "All 39 first post-ClearBufferedButtons states match in native order; 11 initial ClearBufferedButtons sites match native offsets. Both sides decode to 2873 instructions, but the candidate differs by -3 bytes. Equal instruction counts and matching call offsets do not establish code/control-flow/semantics equivalence. Every COFF relocation still requires original-bound verification; this is a natural C++ boss workbench, not an Exact receipt."
+  "qualification": "All 39 first post-ClearBufferedButtons states match in native order; 39 initial ClearBufferedButtons sites match native offsets. Both sides decode to 2873 instructions, but the candidate extent delta is +0 bytes. Equal instruction counts and matching call offsets do not establish code/control-flow/semantics equivalence. Every COFF relocation still requires original-bound verification; this is a natural C++ boss workbench, not an Exact receipt."
 }

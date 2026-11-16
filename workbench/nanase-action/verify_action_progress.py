@@ -134,7 +134,7 @@ def main():
             'All 39 first post-ClearBufferedButtons states match in native order; '
             f'{aligned_prefix} initial ClearBufferedButtons sites match native offsets. '
             f'Both sides decode to {len(native_rows)} instructions, but the '
-            f'candidate differs by {len(candidate)-LENGTH:+d} bytes. '
+            f'candidate extent delta is {len(candidate)-LENGTH:+d} bytes. '
             'Equal instruction counts and matching call offsets do not establish '
             'code/control-flow/semantics equivalence. Every COFF relocation still '
             'requires original-bound verification; this is a natural C++ boss '

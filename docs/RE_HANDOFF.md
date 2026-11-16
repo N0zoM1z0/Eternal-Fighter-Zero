@@ -555,12 +555,13 @@ The next Nanase action Boss, `Character00::Slot04` at `0x0048ACA0`
 native order of all 39 first-after-ClearBufferedButtons state transitions,
 including both bank-mode charge chains, special air-state fallbacks, and the
 final button group. Rewriting five post-state conditions and restoring the
-native evaluation order of ten priority tests aligned the first 11 native
-ClearBufferedButtons call offsets. The focused audit now shows **11,421
-candidate bytes / 2,873 instructions** versus native 11,424 / 2,873; all 39
-post-call state targets still match. **Not Exact**: instruction counts and
-selected call offsets are not byte/control-flow equivalence; a -3-byte net
-delta and register/branch/COFF differences remain. No ledger promotion.
+native evaluation order of ten priority tests, the `0x16` action and three
+`0x0C/0x0B/0x0A` guards yields a candidate with exactly **11,424/11,424 code
+bytes** and **2,873/2,873 decoded instructions**. All **39/39 native
+ClearBufferedButtons call offsets and subsequent first state IDs** agree.
+**Not Exact:** matching extents, counts and selected call offsets are not byte
+or whole-control-flow equivalence; register/branch/COFF differences remain.
+No formal ledger promotion.
 Rebuild only that TU with
 `scripts/repo-python workbench/nanase-action/verify_action_progress.py --rebuild`;
 evidence `docs/evidence/nanase-slot04-natural-progress.json`.
