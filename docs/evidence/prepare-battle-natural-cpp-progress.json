@@ -68,5 +68,16 @@
     "relocations": 44,
     "differences": 0,
     "all_four_constructor_symbols_resolve_to_exact_leafs": true
+  },
+  "background_polymorphic_family": {
+    "evidence": "docs/evidence/prepare-battle-background-family-exact.json",
+    "units": 16,
+    "native_code_bytes": 7687,
+    "matched_bytes": 7687,
+    "relocations": 123,
+    "differences": 0,
+    "strict_replay_units": 15,
+    "local_label_materialized_units": 1,
+    "all_constructor_destructor_update_render_bodies_byte_exact": true
   }
 }

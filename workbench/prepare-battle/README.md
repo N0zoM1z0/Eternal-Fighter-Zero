@@ -69,6 +69,16 @@ differences across `Background01`, `Background10`, `Background12`, and
 `0x00751A40`, `0x007520B0`, and `0x00752900`. Only these four selected units
 were replayed. Evidence: `docs/evidence/prepare-battle-background-constructors-exact.json`.
 
+The full four-stage polymorphic family is now covered as well: all **16
+constructor/destructor/update/render functions**, **7,687/7,687 bytes**,
+**123 relocations**, zero byte differences. Fifteen units pass the strict
+replay workflow. `Background16::Update` is separately checked because VC7.1
+assigned different names to five local COFF labels; every relocation site and
+nonlocal symbol is identical, all five local target offsets match the recorded
+native addresses, and the complete 604-byte relocated body is byte-exact.
+No all-project cold replay was run. Evidence:
+`docs/evidence/prepare-battle-background-family-exact.json`.
+
 ### Source-form experiments and remaining work
 
 The previous local placeholder background classes were removed in favor of
