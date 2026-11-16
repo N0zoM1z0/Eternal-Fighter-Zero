@@ -549,6 +549,14 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Akane Character02 now has six selected **strict natural-C++ exact**
+lifecycle/effect/empty virtual leaf owners in `src/Character02Lifecycle.cpp`:
+ResetPose 58, RemoveLocalEffect 80, Slot03 19, EmitLocalEffect 47, empty
+Slot01/Slot08 11 each. Original vtable `0x00788EB0` selects all six;
+**226/226 native bytes and four original-bound REL32 calls** are exact.
+Evidence: `docs/evidence/character-02-lifecycle-exact.json`. The private
+child arrays begin at `0x314C/0x324C/0x334C`. No all-unit cold replay.
+
 Ayu's full `Character01::Slot04` action-selection Boss at `0x006E84D0`
 is now accepted **whole-owner strict natural-C++ Exact**. Authoritative source:
 `src/Character01Action.cpp`, **10,923 / 10,923 original executable bytes**,

@@ -8372,3 +8372,29 @@ unaccepted proof remain in `workbench/ayu-action/` as history; only the
 `src/Character01Action.cpp` selected strict receipt certifies the complete
 owner. Ayu Slot05/Slot06/Slot07 and other unaccepted work remain OPEN.
 No ASM, PADDING or all-unit cold replay was used.
+
+
+<a id="akane-lifecycle"></a>
+
+## Akane Character02 original lifecycle and local-effect leaves
+
+Akane's canonical original vtable at `0x00788EB0` selects six fully recovered
+native functions implemented as **ordinary C++** in
+`src/Character02Lifecycle.cpp`. Slot0 `ResetPose` is 58 bytes at
+`0x00703C90`; slot10 `RemoveLocalEffect` is 80 bytes at `0x00703CD0`;
+slot3 `Slot03` locomotion forwarding is 19 bytes at `0x00703D20`;
+slot9 `EmitLocalEffect` is 47 bytes at `0x00706AA0`; and virtual slots1/8
+are true original 11-byte empty overrides at `0x00706A80` and `0x00706A90`.
+The original `Character02Constructor` establishes the same child-state
+offsets as Nanase: three reset words at `0x3138..0x3140`, and 64-element
+local effect arrays beginning at `0x314C/0x324C/0x334C`. The accepted natural
+functions clear the actual child slots, forward to original base methods,
+use the correct original `effectWrite` field and preserve both empty owners.
+
+Six selected-only normal-COFF strict VC7.1 `/Od /G6 /MT /Gy /W3` replays
+prove **226/226 native executable bytes Exact, zero differences, 4/4
+independently bound REL32 native calls**. Public proof:
+`docs/evidence/character-02-lifecycle-exact.json`. No shared class layout
+modification, injected opcodes, ASM, artificial padding or all-unit cold
+replay. Akane's full initialization and larger command/action/CPU/state
+owners remain distinct, to be validated separately.

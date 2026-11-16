@@ -163874,3 +163874,97 @@ type = "REL32"
 symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
 target = 0x0040F170
 evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EAF6A independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+
+[units.character-02-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character02Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-02-reset-pose/Character02Lifecycle.obj"
+symbol = "?ResetPose@Character02@@UAEXXZ"
+target_address = 0x00703C90
+size = 58
+
+[[units.character-02-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Akane vtable slot0 original 0x00788EB0 selects 58-byte native owner 0x00703C90, original REL32 at 0x00703CC2 resolves ?ResetPose@Secondary@@UAEXXZ to 0x0040F110; whole RET boundary reviewed."
+
+
+[units.character-02-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character02Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-02-remove-local-effect/Character02Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character02@@UAEXF@Z"
+target_address = 0x00703CD0
+size = 80
+
+[[units.character-02-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Akane vtable slot10 original 0x00788EB0 selects 80-byte native owner 0x00703CD0, original REL32 at 0x00703D16 resolves ?RemoveLocalEffect@Secondary@@UAEXF@Z to 0x00412E60; whole RET boundary reviewed."
+
+
+[units.character-02-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character02Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-02-slot03/Character02Lifecycle.obj"
+symbol = "?Slot03@Character02@@UAEXXZ"
+target_address = 0x00703D20
+size = 19
+
+[[units.character-02-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "Akane vtable slot3 original 0x00788EB0 selects 19-byte native owner 0x00703D20, original REL32 at 0x00703D2B resolves ?UpdateLocomotionState@Secondary@@QAEXXZ to 0x0040E740; whole RET boundary reviewed."
+
+
+[units.character-02-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character02Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-02-emit-local-effect/Character02Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character02@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x00706AA0
+size = 47
+
+[[units.character-02-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Akane vtable slot9 original 0x00788EB0 selects 47-byte native owner 0x00706AA0, original REL32 at 0x00706AC5 resolves ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10; whole RET boundary reviewed."
+
+
+[units.character-02-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character02Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-02-slot01/Character02Lifecycle.obj"
+symbol = "?Slot01@Character02@@UAEXXZ"
+target_address = 0x00706A80
+size = 11
+
+
+[units.character-02-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character02Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-02-slot08/Character02Lifecycle.obj"
+symbol = "?Slot08@Character02@@UAEXXZ"
+target_address = 0x00706A90
+size = 11

@@ -509,3 +509,9 @@ address,end,size,status,evidence
 0x006E82F0,0x006E8418,296,reviewed,docs/KNOWLEDGE_BASE.md#ayu-initialize; original Ayu slot12 RET at 0x006E8417 and complete 296-byte owner
 0x006EAFD0,0x006EC152,4482,reviewed,docs/KNOWLEDGE_BASE.md#ayu-command-recognizer; original complete body RET 0x006EC151 and 14 subsequent CC alignment bytes excluded
 0x006E84D0,0x006EAF7B,10923,reviewed,docs/KNOWLEDGE_BASE.md#ayu-action-exact; original complete RET at 0x006EAF7A before five CC alignment bytes and next owner at 0x006EAF80
+0x00703C90,0x00703CCA,58,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle; full original Akane vtable slot0 native RET boundary excludes following CC alignment
+0x00703CD0,0x00703D20,80,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle; full original Akane vtable slot10 native RET boundary excludes following CC alignment
+0x00703D20,0x00703D33,19,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle; full original Akane vtable slot3 native RET boundary excludes following CC alignment
+0x00706AA0,0x00706ACF,47,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle; full original Akane vtable slot9 native RET boundary excludes following CC alignment
+0x00706A80,0x00706A8B,11,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle; full original Akane vtable slot1 native RET boundary excludes following CC alignment
+0x00706A90,0x00706A9B,11,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle; full original Akane vtable slot8 native RET boundary excludes following CC alignment
