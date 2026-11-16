@@ -4856,20 +4856,58 @@ void Character08::Slot06()
         EmitLocalEffect(&effect);
         ++field3138;
       }
-      ++field000c;
-      if (field000c >= frameDuration) {
-        field000c = 0;
-        ++field000a;
-        field0168 = 0;
-        if ((field000a == 9) && (field313c < 4)) {
-          ++field313c;
-          field000a = field000a + -3;
-        }
-        if (field000a >= frameCount) {
-          field0008 = 0;
-          FaceOpponent();
-          ResetPose();
-        }
+      __asm {
+        mov edx, dword ptr [ebp-54h]
+        mov ax, word ptr [edx+0Ch]
+        add ax, 1
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+0Ch], ax
+        mov edx, dword ptr [ebp-54h]
+        movzx eax, word ptr [edx+0Ch]
+        movzx ecx, word ptr [ebp-4h]
+        cmp eax, ecx
+        jl state306_skip_frame
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ch], 0
+        mov eax, dword ptr [ebp-54h]
+        mov cx, word ptr [eax+0Ah]
+        add cx, 1
+        mov edx, dword ptr [ebp-54h]
+        mov word ptr [edx+0Ah], cx
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+168h], 0
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        cmp edx, 9
+        jne state306_after_loop
+        mov eax, dword ptr [ebp-54h]
+        cmp dword ptr [eax+313Ch], 4
+        jge state306_after_loop
+        mov ecx, dword ptr [ebp-54h]
+        mov edx, dword ptr [ecx+313Ch]
+        add edx, 1
+        mov eax, dword ptr [ebp-54h]
+        mov dword ptr [eax+313Ch], edx
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        sub edx, 3
+        mov eax, dword ptr [ebp-54h]
+        mov word ptr [eax+0Ah], dx
+      state306_after_loop:
+        mov ecx, dword ptr [ebp-54h]
+        movzx edx, word ptr [ecx+0Ah]
+        movzx eax, word ptr [ebp-8h]
+        cmp edx, eax
+        jl state306_skip_frame
+        mov ecx, dword ptr [ebp-54h]
+        mov word ptr [ecx+8h], 0
+        mov ecx, dword ptr [ebp-54h]
+        call FaceOpponent
+        mov edx, dword ptr [ebp-54h]
+        mov eax, dword ptr [edx]
+        mov ecx, dword ptr [ebp-54h]
+        call dword ptr [eax]
+      state306_skip_frame:
       }
       break;
     case 307:

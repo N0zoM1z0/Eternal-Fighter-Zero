@@ -2,7 +2,7 @@
 
 This **tracked, independent workbench** preserves the complete original-branch
 C++ reconstruction for Shiori's 134-case animation dispatcher and true default.
-Eight narrowly scoped inline-assembly regions now pin compiler-sensitive
+Ten narrowly scoped inline-assembly regions now pin compiler-sensitive
 native register sequences; this remains a workbench, not a production source
 or an accepted whole-function match unit. The local
 `ShioriState.cpp`, `CharacterViews.h`, `Engine.h` and `Input.h`
@@ -77,13 +77,14 @@ then verifies selected code against the canonical PE. Its evidence is
 - **Case315:** the 26-byte sequence at `0x00421BEB` matches exactly, including
   `sub edx,0x3E8`.
 
-Across the eleven complete cases (300–305, 310–312 and 318–319), **6,926
-native code bytes** are byte-exact after materializing **115 COFF relocations**
-(81 calls and 34 float operands) plus two raw `__ftol2` call operands. The four
-additional meter regions contribute another **101 byte-exact bytes**. Nine
-narrowly scoped inline-assembly regions recover compiler-sensitive register
-lifetimes. The final-image resolver also restores the native frame and the ten
-identified conversion-temp displacements; it does not mask arbitrary bytes.
+Across the twelve complete cases (300–306, 310–312 and 318–319), **7,493
+native code bytes** are byte-exact after materializing **123 COFF relocations**
+(88 calls and 35 float operands) plus two raw `__ftol2` call operands. Three
+additional meter regions in cases307, 308 and 315 contribute another **76
+byte-exact bytes**. Ten narrowly scoped inline-assembly regions recover
+compiler-sensitive register lifetimes. The final-image resolver also restores
+the native frame and the ten identified conversion-temp displacements; it does
+not mask arbitrary bytes.
 
 ## Remaining whole-function work
 

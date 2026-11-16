@@ -37,8 +37,8 @@ CALL_TARGETS = {
 }
 CASE_RELOCATIONS = {
     300: (13, 10), 301: (2, 0), 302: (2, 0), 303: (9, 9),
-    304: (9, 9), 305: (10, 10), 310: (8, 8), 311: (9, 9),
-    312: (24, 11), 318: (12, 9), 319: (17, 6),
+    304: (9, 9), 305: (10, 10), 306: (8, 7), 310: (8, 8),
+    311: (9, 9), 312: (24, 11), 318: (12, 9), 319: (17, 6),
 }
 PINNED_ASM_CALLS = {318: (0x00422423, 0x00422449)}
 STACK_SLOT_PATCHES = {
@@ -213,7 +213,7 @@ def main() -> None:
                      "case_entry_order_exact": True, "selector_bytes_exact": True},
         "prologue_normalization": {"candidate_frame": "0x37C", "native_frame": "0x384",
                                    "native_prologue_restored": True},
-        "qualification": "Eleven complete case bodies are byte-exact after original-bound relocation materialization, two inline-assembly runtime-call bindings, and native stack-slot normalization. Four additional meter arithmetic regions are byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate.",
+        "qualification": "Twelve complete case bodies are byte-exact after original-bound relocation materialization, two inline-assembly runtime-call bindings, and native stack-slot normalization. Three additional meter arithmetic regions are byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate.",
     }
     output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
