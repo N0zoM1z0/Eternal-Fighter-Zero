@@ -12,10 +12,2670 @@
   },
   "build": {
     "source_sha256": "b16400d494601e944551d25574e1f3d75ecc77948794d29636f7a788c6e7aa7d",
-    "object_sha256": "0c03dd4dd6af47310fc361da123067134caeb718aabf10367864d332404d18cb",
+    "object_sha256": "d66aef59c3b110e895149f97f5889cac8eff08a89dea3d2a629883dd2236a898",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
   "whole_case_exact": {
+    "50": {
+      "native_start": "0x4144c4",
+      "bytes": 497,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 18,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 18,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x4144dd",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x414531",
+          "target": "0x787c00",
+          "payload": "000000000088c340"
+        },
+        {
+          "offset": "0x414537",
+          "target": "0x787328",
+          "payload": "0000000000000040"
+        },
+        {
+          "offset": "0x41453d",
+          "target": "0x787db0",
+          "payload": "9a9999999999f1bf"
+        },
+        {
+          "offset": "0x414560",
+          "target": "0x787c28",
+          "payload": "0000000000002440"
+        },
+        {
+          "offset": "0x414572",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41457e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41458d",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x41459f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4145af",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4145be",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x4145c4",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4145d7",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x4145dd",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x4145f0",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414610",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x414616",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x414630",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "51": {
+      "native_start": "0x4146b5",
+      "bytes": 497,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 18,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 18,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x4146ce",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x414722",
+          "target": "0x787c00",
+          "payload": "000000000088c340"
+        },
+        {
+          "offset": "0x414728",
+          "target": "0x787328",
+          "payload": "0000000000000040"
+        },
+        {
+          "offset": "0x41472e",
+          "target": "0x787d98",
+          "payload": "000000000000f8bf"
+        },
+        {
+          "offset": "0x414751",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x414763",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41476f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41477e",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x414790",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4147a0",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4147af",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x4147b5",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4147c8",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x4147ce",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x4147e1",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414801",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x414807",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x414821",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "52": {
+      "native_start": "0x4148a6",
+      "bytes": 497,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 18,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 18,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x4148bf",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x414913",
+          "target": "0x787c00",
+          "payload": "000000000088c340"
+        },
+        {
+          "offset": "0x414919",
+          "target": "0x787328",
+          "payload": "0000000000000040"
+        },
+        {
+          "offset": "0x41491f",
+          "target": "0x787d90",
+          "payload": "cdccccccccccfcbf"
+        },
+        {
+          "offset": "0x414942",
+          "target": "0x787d88",
+          "payload": "0000000000003e40"
+        },
+        {
+          "offset": "0x414954",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414960",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41496f",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x414981",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414991",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4149a0",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x4149a6",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4149b9",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x4149bf",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x4149d2",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4149f2",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x4149f8",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x414a12",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "53": {
+      "native_start": "0x414a97",
+      "bytes": 497,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 18,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 18,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x414ab0",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x414b04",
+          "target": "0x787c00",
+          "payload": "000000000088c340"
+        },
+        {
+          "offset": "0x414b0a",
+          "target": "0x787328",
+          "payload": "0000000000000040"
+        },
+        {
+          "offset": "0x414b10",
+          "target": "0x787db0",
+          "payload": "9a9999999999f1bf"
+        },
+        {
+          "offset": "0x414b33",
+          "target": "0x787c28",
+          "payload": "0000000000002440"
+        },
+        {
+          "offset": "0x414b45",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414b51",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414b60",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x414b72",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414b82",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414b91",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x414b97",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414baa",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x414bb0",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x414bc3",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414be3",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x414be9",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x414c03",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "54": {
+      "native_start": "0x414c88",
+      "bytes": 497,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 18,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 18,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x414ca1",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x414cf5",
+          "target": "0x787c00",
+          "payload": "000000000088c340"
+        },
+        {
+          "offset": "0x414cfb",
+          "target": "0x787328",
+          "payload": "0000000000000040"
+        },
+        {
+          "offset": "0x414d01",
+          "target": "0x787d98",
+          "payload": "000000000000f8bf"
+        },
+        {
+          "offset": "0x414d24",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x414d36",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414d42",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414d51",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x414d63",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414d73",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414d82",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x414d88",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414d9b",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x414da1",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x414db4",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414dd4",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x414dda",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x414df4",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "55": {
+      "native_start": "0x414e79",
+      "bytes": 487,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 18,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 18,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x414e92",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x414edc",
+          "target": "0x787c00",
+          "payload": "000000000088c340"
+        },
+        {
+          "offset": "0x414ee2",
+          "target": "0x787328",
+          "payload": "0000000000000040"
+        },
+        {
+          "offset": "0x414ee8",
+          "target": "0x787d90",
+          "payload": "cdccccccccccfcbf"
+        },
+        {
+          "offset": "0x414f0b",
+          "target": "0x787d88",
+          "payload": "0000000000003e40"
+        },
+        {
+          "offset": "0x414f1d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414f29",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414f38",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x414f4a",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414f5a",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414f69",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x414f6f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414f82",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x414f88",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x414f9b",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414fbb",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x414fc1",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x414fdb",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "56": {
+      "native_start": "0x415060",
+      "bytes": 473,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 18,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 18,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x415079",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x4150cd",
+          "target": "0x787c00",
+          "payload": "000000000088c340"
+        },
+        {
+          "offset": "0x4150d3",
+          "target": "0x787328",
+          "payload": "0000000000000040"
+        },
+        {
+          "offset": "0x4150d9",
+          "target": "0x787db0",
+          "payload": "9a9999999999f1bf"
+        },
+        {
+          "offset": "0x4150fc",
+          "target": "0x787c28",
+          "payload": "0000000000002440"
+        },
+        {
+          "offset": "0x41510e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41511a",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415129",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x41513b",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41514b",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41515a",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x415160",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415173",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x415179",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x41518c",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4151ac",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x4151b2",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x4151cc",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "57": {
+      "native_start": "0x415239",
+      "bytes": 473,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 18,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 18,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x415252",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x4152a6",
+          "target": "0x787c00",
+          "payload": "000000000088c340"
+        },
+        {
+          "offset": "0x4152ac",
+          "target": "0x787328",
+          "payload": "0000000000000040"
+        },
+        {
+          "offset": "0x4152b2",
+          "target": "0x787d98",
+          "payload": "000000000000f8bf"
+        },
+        {
+          "offset": "0x4152d5",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x4152e7",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4152f3",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415302",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x415314",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415324",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415333",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x415339",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41534c",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x415352",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x415365",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415385",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x41538b",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x4153a5",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "58": {
+      "native_start": "0x415412",
+      "bytes": 473,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 18,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 18,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x41542b",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x41547f",
+          "target": "0x787c00",
+          "payload": "000000000088c340"
+        },
+        {
+          "offset": "0x415485",
+          "target": "0x787328",
+          "payload": "0000000000000040"
+        },
+        {
+          "offset": "0x41548b",
+          "target": "0x787d90",
+          "payload": "cdccccccccccfcbf"
+        },
+        {
+          "offset": "0x4154ae",
+          "target": "0x787d88",
+          "payload": "0000000000003e40"
+        },
+        {
+          "offset": "0x4154c0",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4154cc",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4154db",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x4154ed",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4154fd",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41550c",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x415512",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415525",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x41552b",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x41553e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41555e",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x415564",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x41557e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "59": {
+      "native_start": "0x4155eb",
+      "bytes": 511,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 11,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 11,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x415604",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x41565d",
+          "target": "0x787d78",
+          "payload": "000000000000e83f"
+        },
+        {
+          "offset": "0x415678",
+          "target": "0x787d70",
+          "payload": "00000000000000c0"
+        },
+        {
+          "offset": "0x415688",
+          "target": "0x787d70",
+          "payload": "00000000000000c0"
+        },
+        {
+          "offset": "0x415699",
+          "target": "0x787d68",
+          "payload": "000000000000e0bf"
+        },
+        {
+          "offset": "0x4156a9",
+          "target": "0x787d68",
+          "payload": "000000000000e0bf"
+        },
+        {
+          "offset": "0x4156b5",
+          "target": "0x787d60",
+          "payload": "fca9f1d24d62a03f"
+        },
+        {
+          "offset": "0x4156c4",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4156e9",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41578e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4157aa",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "60": {
+      "native_start": "0x4157ea",
+      "bytes": 511,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 11,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 11,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x415803",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x41585c",
+          "target": "0x787d78",
+          "payload": "000000000000e83f"
+        },
+        {
+          "offset": "0x415877",
+          "target": "0x787d58",
+          "payload": "00000000000010c0"
+        },
+        {
+          "offset": "0x415887",
+          "target": "0x787d58",
+          "payload": "00000000000010c0"
+        },
+        {
+          "offset": "0x415898",
+          "target": "0x787d68",
+          "payload": "000000000000e0bf"
+        },
+        {
+          "offset": "0x4158a8",
+          "target": "0x787d68",
+          "payload": "000000000000e0bf"
+        },
+        {
+          "offset": "0x4158b4",
+          "target": "0x787d60",
+          "payload": "fca9f1d24d62a03f"
+        },
+        {
+          "offset": "0x4158c3",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4158e8",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41598d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4159a9",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "61": {
+      "native_start": "0x4159e9",
+      "bytes": 511,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 11,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 11,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x415a02",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x415a5b",
+          "target": "0x787d78",
+          "payload": "000000000000e83f"
+        },
+        {
+          "offset": "0x415a76",
+          "target": "0x787d50",
+          "payload": "00000000000018c0"
+        },
+        {
+          "offset": "0x415a86",
+          "target": "0x787d50",
+          "payload": "00000000000018c0"
+        },
+        {
+          "offset": "0x415a97",
+          "target": "0x787d68",
+          "payload": "000000000000e0bf"
+        },
+        {
+          "offset": "0x415aa7",
+          "target": "0x787d68",
+          "payload": "000000000000e0bf"
+        },
+        {
+          "offset": "0x415ab3",
+          "target": "0x787d60",
+          "payload": "fca9f1d24d62a03f"
+        },
+        {
+          "offset": "0x415ac2",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415ae7",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415b8c",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415ba8",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "62": {
+      "native_start": "0x415be8",
+      "bytes": 439,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 7,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 7,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x415c01",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x415c52",
+          "target": "0x787d78",
+          "payload": "000000000000e83f"
+        },
+        {
+          "offset": "0x415c6a",
+          "target": "0x787d60",
+          "payload": "fca9f1d24d62a03f"
+        },
+        {
+          "offset": "0x415c79",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415c9e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415d43",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415d5f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "63": {
+      "native_start": "0x415d9f",
+      "bytes": 427,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 6,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 6,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x415db8",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x415e15",
+          "target": "0x787d60",
+          "payload": "fca9f1d24d62a03f"
+        },
+        {
+          "offset": "0x415e24",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415e49",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415eee",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x415f0a",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "64": {
+      "native_start": "0x415f4a",
+      "bytes": 561,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 12,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 11,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x415f7f",
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "target": "0x40ff70"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x415f63",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x415fee",
+          "target": "0x787d78",
+          "payload": "000000000000e83f"
+        },
+        {
+          "offset": "0x416009",
+          "target": "0x787d70",
+          "payload": "00000000000000c0"
+        },
+        {
+          "offset": "0x416019",
+          "target": "0x787d70",
+          "payload": "00000000000000c0"
+        },
+        {
+          "offset": "0x41602a",
+          "target": "0x787d68",
+          "payload": "000000000000e0bf"
+        },
+        {
+          "offset": "0x41603a",
+          "target": "0x787d68",
+          "payload": "000000000000e0bf"
+        },
+        {
+          "offset": "0x416046",
+          "target": "0x787d60",
+          "payload": "fca9f1d24d62a03f"
+        },
+        {
+          "offset": "0x416055",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41607a",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41611f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41613b",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "65": {
+      "native_start": "0x41617b",
+      "bytes": 561,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 12,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 11,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x4161b0",
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "target": "0x40ff70"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x416194",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x41621f",
+          "target": "0x787d78",
+          "payload": "000000000000e83f"
+        },
+        {
+          "offset": "0x41623a",
+          "target": "0x787d58",
+          "payload": "00000000000010c0"
+        },
+        {
+          "offset": "0x41624a",
+          "target": "0x787d58",
+          "payload": "00000000000010c0"
+        },
+        {
+          "offset": "0x41625b",
+          "target": "0x787d68",
+          "payload": "000000000000e0bf"
+        },
+        {
+          "offset": "0x41626b",
+          "target": "0x787d68",
+          "payload": "000000000000e0bf"
+        },
+        {
+          "offset": "0x416277",
+          "target": "0x787d60",
+          "payload": "fca9f1d24d62a03f"
+        },
+        {
+          "offset": "0x416286",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4162ab",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416350",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41636c",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "66": {
+      "native_start": "0x4163ac",
+      "bytes": 489,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 8,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 7,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x4163e1",
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "target": "0x40ff70"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x4163c5",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x416448",
+          "target": "0x787d78",
+          "payload": "000000000000e83f"
+        },
+        {
+          "offset": "0x416460",
+          "target": "0x787d60",
+          "payload": "fca9f1d24d62a03f"
+        },
+        {
+          "offset": "0x41646f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416494",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416539",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416555",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "67": {
+      "native_start": "0x416595",
+      "bytes": 477,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 7,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 6,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x4165ca",
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "target": "0x40ff70"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x4165ae",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x41663d",
+          "target": "0x787d60",
+          "payload": "fca9f1d24d62a03f"
+        },
+        {
+          "offset": "0x41664c",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416671",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416716",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416732",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "68": {
+      "native_start": "0x416772",
+      "bytes": 316,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 4,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 3,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x4167e3",
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "target": "0x40ff70"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x41678b",
+          "target": "0x787d48",
+          "payload": "000000000000f83f"
+        },
+        {
+          "offset": "0x41685e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41686e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "69": {
+      "native_start": "0x4168ae",
+      "bytes": 277,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 3,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 3,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x4168c7",
+          "target": "0x787d48",
+          "payload": "000000000000f83f"
+        },
+        {
+          "offset": "0x416973",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416983",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "70": {
+      "native_start": "0x4169c3",
+      "bytes": 480,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 9,
+      "rel32_calls_materialized": 3,
+      "float_operands_materialized": 6,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x416a95",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x416aa9",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x416acf",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x4169dc",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x416a5f",
+          "target": "0x787c50",
+          "payload": "000000000000e03f"
+        },
+        {
+          "offset": "0x416a6b",
+          "target": "0x787d40",
+          "payload": "00000000000004c0"
+        },
+        {
+          "offset": "0x416a77",
+          "target": "0x787d38",
+          "payload": "9a9999999999993f"
+        },
+        {
+          "offset": "0x416b47",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416b63",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "71": {
+      "native_start": "0x416ba3",
+      "bytes": 427,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 6,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 6,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x416bbc",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x416c19",
+          "target": "0x787d30",
+          "payload": "3bdf4f8d976eb23f"
+        },
+        {
+          "offset": "0x416c28",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416c4d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416cf2",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416d0e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "72": {
+      "native_start": "0x416d4e",
+      "bytes": 341,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 11,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 11,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x416d67",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x416d83",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416d8f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416d9e",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x416da4",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416db7",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x416dbd",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x416dd5",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416dfe",
+          "target": "0x787d28",
+          "payload": "000000000000d03f"
+        },
+        {
+          "offset": "0x416e04",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x416e1e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "73": {
+      "native_start": "0x416ea3",
+      "bytes": 341,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 11,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 11,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x416ebc",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x416ed8",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416ee4",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416ef3",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x416ef9",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416f0c",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x416f12",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x416f2a",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x416f53",
+          "target": "0x787d28",
+          "payload": "000000000000d03f"
+        },
+        {
+          "offset": "0x416f59",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x416f73",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "74": {
+      "native_start": "0x416ff8",
+      "bytes": 317,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 11,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 11,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x417011",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x41702d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417039",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417048",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x41704e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417061",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x417067",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x41707f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4170a8",
+          "target": "0x787d28",
+          "payload": "000000000000d03f"
+        },
+        {
+          "offset": "0x4170ae",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x4170c8",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "75": {
+      "native_start": "0x417135",
+      "bytes": 509,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 17,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 17,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x41714e",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x4171ab",
+          "target": "0x787d88",
+          "payload": "0000000000003e40"
+        },
+        {
+          "offset": "0x4171bd",
+          "target": "0x787d20",
+          "payload": "9a99999999990140"
+        },
+        {
+          "offset": "0x4171c9",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4171d5",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4171e1",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4171ed",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x41720e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41721e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41722d",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x417233",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417246",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x41724c",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x417264",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41728d",
+          "target": "0x787d28",
+          "payload": "000000000000d03f"
+        },
+        {
+          "offset": "0x417293",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x4172ad",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "76": {
+      "native_start": "0x417332",
+      "bytes": 509,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 17,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 17,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x41734b",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x4173a8",
+          "target": "0x787d88",
+          "payload": "0000000000003e40"
+        },
+        {
+          "offset": "0x4173ba",
+          "target": "0x787d20",
+          "payload": "9a99999999990140"
+        },
+        {
+          "offset": "0x4173c6",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4173d2",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4173de",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4173ea",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x41740b",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41741b",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41742a",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x417430",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417443",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x417449",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x417461",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41748a",
+          "target": "0x787d28",
+          "payload": "000000000000d03f"
+        },
+        {
+          "offset": "0x417490",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x4174aa",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "77": {
+      "native_start": "0x41752f",
+      "bytes": 485,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 17,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 17,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x417548",
+          "target": "0x787db8",
+          "payload": "333333333333e33f"
+        },
+        {
+          "offset": "0x4175a5",
+          "target": "0x787d88",
+          "payload": "0000000000003e40"
+        },
+        {
+          "offset": "0x4175b7",
+          "target": "0x787d20",
+          "payload": "9a99999999990140"
+        },
+        {
+          "offset": "0x4175c3",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4175cf",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4175db",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4175e7",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x417608",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417618",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417627",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x41762d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417640",
+          "target": "0x787c10",
+          "payload": "0000000000003440"
+        },
+        {
+          "offset": "0x417646",
+          "target": "0x787da0",
+          "payload": "0000000000f88340"
+        },
+        {
+          "offset": "0x41765e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417687",
+          "target": "0x787d28",
+          "payload": "000000000000d03f"
+        },
+        {
+          "offset": "0x41768d",
+          "target": "0x7875c0",
+          "payload": "000000000000f03f"
+        },
+        {
+          "offset": "0x4176a7",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "81": {
+      "native_start": "0x417714",
+      "bytes": 485,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 9,
+      "rel32_calls_materialized": 2,
+      "float_operands_materialized": 7,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x417765",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x41777f",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x41772d",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x4177e8",
+          "target": "0x787d60",
+          "payload": "fca9f1d24d62a03f"
+        },
+        {
+          "offset": "0x4177f7",
+          "target": "0x787d18",
+          "payload": "7b14ae47e17a943f"
+        },
+        {
+          "offset": "0x41781b",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41782b",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41789d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4178b9",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "82": {
+      "native_start": "0x4178f9",
+      "bytes": 546,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 7,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 7,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x417912",
+          "target": "0x787d80",
+          "payload": "9a9999999999e93f"
+        },
+        {
+          "offset": "0x417950",
+          "target": "0x787d10",
+          "payload": "cdccccccccccdcbf"
+        },
+        {
+          "offset": "0x41795c",
+          "target": "0x787d08",
+          "payload": "9a9999999999b9bf"
+        },
+        {
+          "offset": "0x4179c9",
+          "target": "0x787d60",
+          "payload": "fca9f1d24d62a03f"
+        },
+        {
+          "offset": "0x4179d8",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417abf",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417adb",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "83": {
+      "native_start": "0x417b1b",
+      "bytes": 581,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 15,
+      "rel32_calls_materialized": 3,
+      "float_operands_materialized": 12,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x417b52",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x417b6c",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x417d57",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x417bcc",
+          "target": "0x787d88",
+          "payload": "0000000000003e40"
+        },
+        {
+          "offset": "0x417be8",
+          "target": "0x787d98",
+          "payload": "000000000000f8bf"
+        },
+        {
+          "offset": "0x417bf4",
+          "target": "0x787d00",
+          "payload": "9a9999999999e9bf"
+        },
+        {
+          "offset": "0x417c1a",
+          "target": "0x787cf8",
+          "payload": "7b14ae47e17aa43f"
+        },
+        {
+          "offset": "0x417c3d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417c4d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417c59",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417c8b",
+          "target": "0x787cf0",
+          "payload": "7b14ae47e17a843f"
+        },
+        {
+          "offset": "0x417cb1",
+          "target": "0x787d70",
+          "payload": "00000000000000c0"
+        },
+        {
+          "offset": "0x417ccc",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x417cde",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417cee",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "84": {
+      "native_start": "0x417d60",
+      "bytes": 581,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 15,
+      "rel32_calls_materialized": 3,
+      "float_operands_materialized": 12,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x417d97",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x417db1",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x417f9c",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x417e11",
+          "target": "0x787d88",
+          "payload": "0000000000003e40"
+        },
+        {
+          "offset": "0x417e2d",
+          "target": "0x787d98",
+          "payload": "000000000000f8bf"
+        },
+        {
+          "offset": "0x417e39",
+          "target": "0x787d00",
+          "payload": "9a9999999999e9bf"
+        },
+        {
+          "offset": "0x417e5f",
+          "target": "0x787cf8",
+          "payload": "7b14ae47e17aa43f"
+        },
+        {
+          "offset": "0x417e82",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417e92",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417e9e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417ed0",
+          "target": "0x787cf0",
+          "payload": "7b14ae47e17a843f"
+        },
+        {
+          "offset": "0x417ef6",
+          "target": "0x787d70",
+          "payload": "00000000000000c0"
+        },
+        {
+          "offset": "0x417f11",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x417f23",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x417f33",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "85": {
+      "native_start": "0x417fa5",
+      "bytes": 467,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 7,
+      "rel32_calls_materialized": 3,
+      "float_operands_materialized": 4,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x417fdc",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x417ff6",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x418116",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x418056",
+          "target": "0x787d88",
+          "payload": "0000000000003e40"
+        },
+        {
+          "offset": "0x4180aa",
+          "target": "0x787cf8",
+          "payload": "7b14ae47e17aa43f"
+        },
+        {
+          "offset": "0x418128",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x418138",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "86": {
+      "native_start": "0x418178",
+      "bytes": 482,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 6,
+      "rel32_calls_materialized": 2,
+      "float_operands_materialized": 4,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x4181af",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x4181c9",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x418235",
+          "target": "0x787d88",
+          "payload": "0000000000003e40"
+        },
+        {
+          "offset": "0x41829e",
+          "target": "0x787da8",
+          "payload": "b81e85eb51b8ae3f"
+        },
+        {
+          "offset": "0x41830a",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41831a",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "87": {
+      "native_start": "0x41835a",
+      "bytes": 179,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 2,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x418378",
+          "target": "0x787ce8",
+          "payload": "0000000000004e40"
+        },
+        {
+          "offset": "0x418381",
+          "target": "0x787ce0",
+          "payload": "0000000000004440"
+        }
+      ]
+    },
+    "96": {
+      "native_start": "0x41840d",
+      "bytes": 149,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 1,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 0,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x41845f",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": []
+    },
+    "97": {
+      "native_start": "0x4184a2",
+      "bytes": 248,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 6,
+      "rel32_calls_materialized": 4,
+      "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x4184d8",
+          "symbol": "?SetVerticalShake@Secondary@@QAEXHH@Z",
+          "target": "0x410a10"
+        },
+        {
+          "offset": "0x4184e9",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x418503",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x418529",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x4184a7",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4184b3",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "98": {
+      "native_start": "0x41859a",
+      "bytes": 248,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 6,
+      "rel32_calls_materialized": 4,
+      "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x4185d0",
+          "symbol": "?SetVerticalShake@Secondary@@QAEXHH@Z",
+          "target": "0x410a10"
+        },
+        {
+          "offset": "0x4185e1",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x4185fb",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x418621",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x41859f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4185ab",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "99": {
+      "native_start": "0x418692",
+      "bytes": 186,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 1,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 0,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x418721",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": []
+    },
     "150": {
       "native_start": "0x41874c",
       "bytes": 428,
@@ -5233,5 +7893,5 @@
     "native_frame": "0x384",
     "native_prologue_restored": true
   },
-  "qualification": "Eighty-three complete case bodies across 150-158, 161-171, 178, 180, 200-209, 220-221, 230-235, 248-270 and 300-319 are byte-exact after original-bound relocation materialization, eighteen inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; all reviewed meter arithmetic is included in complete bodies. Other Slot06 cases are not covered. This is not a whole-function Exact certificate."
+  "qualification": "One hundred twenty-two complete case bodies across 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180, 200-209, 220-221, 230-235, 248-270 and 300-319 are byte-exact after original-bound relocation materialization, eighteen inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; all reviewed meter arithmetic is included in complete bodies. Twelve other Slot06 cases remain open. This is not a whole-function Exact certificate."
 }
