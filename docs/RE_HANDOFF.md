@@ -40,6 +40,14 @@ Useful completed dependencies:
   bound (26 local targets, 50 external symbols), proof
   docs/evidence/scene-loading-character-local-label-exact.json.
 
+Makoto's ten selected Character03 owners were freshly rebuilt and revalidated
+on 2026-11-16 (**17,018/17,018 bytes**, 105 relocations). The constructor recipe
+at `0x005F6D90` had the wrong COFF string symbol `$SG62194`; the selected
+VC7.1 object actually emits `$SG62346` at relocation `+0x33` for `makoto\0`
+at `0x00788AC0`. `config/match-units.toml`, the constructor exact ledger and
+all ten reports in `docs/evidence/makoto-exact.json` now use fresh selected
+replays. Focused proof validation passes for all ten units. No full cold replay.
+
 The current local branch has recent unpushed gpt-web: commits beyond
 origin/main; do not push without permission. The next agent should inspect
 the live status and preserve any dirty changes before editing. The older Kano

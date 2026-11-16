@@ -7636,9 +7636,14 @@ removal5F7080/80,locomotion5F70D0/19,input5F70F0/11312,empty slots01/08
 at5F9D20/11 and5F9D30/11,emitter5F9D40/47,commands5F9D70/4804. Sources:
 `src/Character03Frame.cpp`, `src/Character03Input.cpp`,
 `src/Character03Commands.cpp`; profile:vc71-od-static; public proof:
-`docs/evidence/makoto-exact.json`. These ten bodies were first built complete
-before target-backed refinements; source formatting receives the selected final
-cold complete comparison.
+`docs/evidence/makoto-exact.json`. The 393-byte constructor was reselected
+on 2026-11-16 after a stale string-literal COFF symbol binding was found in its
+recipe. The source/object emits `$SG62346` at relocation `+0x33` for the exact
+`makoto\0` literal at `0x788AC0`; the former `$SG62194` declaration was wrong.
+The selected single-unit VC7.1 replay now reports **393/393 bytes exact**, zero
+differences and all four relocations independently bound. The public aggregate
+certificate and exact-ledger digests were refreshed from that replay. This was
+a focused constructor replay, not a whole-project cold replay.
 
 Both original creation paths select constructor5F6D90 for character ID3, push
 allocation3450 at758849/76DB58 and CALL the constructor at758892/76DB95. The

@@ -113501,7 +113501,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owner
 [[units.character-03-constructor.relocations]]
 offset = 51
 type = "DIR32"
-symbol = "$SG62194"
+symbol = "$SG62346"
 target = 0x00788ac0
 evidence = "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original resource literal at788ac0 and complete native COFF makoto NUL-terminated bytes independently verified"
 
