@@ -66,9 +66,9 @@ then verifies selected code against the canonical PE. Its evidence is
   materializing 17 COFF relocations (6 calls and 11 float operands) and two
   native stack-temporary bytes.
 - The final-image resolver restores the native `sub esp,0x384` frame from the
-  compiler's `sub esp,0x370`. Forty stack-slot operand bytes are restored only
-  for independently disassembled conversion temporaries in cases310/311/312
-  and 318/319; every patch is checked against its native byte.
+  compiler's `sub esp,0x35C`. Forty-six stack-slot operand bytes are restored
+  only for independently disassembled conversion temporaries in
+  cases310/311/312 and 318/319; every patch is checked against its native byte.
 - **Case306:** the complete **567-byte** case body is byte-identical after
   materializing eight original-bound relocations (seven calls and one zero
   float operand); its 25-byte meter subtraction/store is included.
@@ -90,7 +90,7 @@ Across the fifteen complete cases (300–312 and 318–319), **8,905 native code
 bytes** are byte-exact after materializing **136 COFF relocations** (99 calls
 and 37 float operands) plus ten raw `__ftol2` call operands. One additional
 meter region in case315 contributes another **26 byte-exact bytes**. The
-focused resolver restores the native frame and 40 individually checked
+focused resolver restores the native frame and 46 individually checked
 conversion-temp operand bytes; it does not mask arbitrary bytes.
 
 ## Remaining whole-function work
