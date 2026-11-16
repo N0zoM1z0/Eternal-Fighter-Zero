@@ -237,14 +237,95 @@ void Scene2::PrepareBattle()
                 videoOwner->LoadSurface(&contextOwner->extraB, path, 175);
             }
             switch (contextOwner->flag0f32) {
-            case 1: { contextOwner->blob = reinterpret_cast<unsigned char *>(new LoadingBackground01(videoOwner)); break; }
-            case 10: { contextOwner->blob = reinterpret_cast<unsigned char *>(new LoadingBackground10(videoOwner)); break; }
+            case 1: {
+        void *allocation = ::operator new(0x1Ch);
+        void *constructed;
+        if (allocation) {
+          __asm {
+            mov ecx, dword ptr [ebp-6Ch]
+            mov edx, dword ptr [ecx+20h]
+            push edx
+            mov ecx, allocation
+            call LoadingBackground01::LoadingBackground01
+            mov constructed, eax
+          }
+        } else {
+          __asm {
+            mov dword ptr constructed, 0
+          }
+        }
+        __asm {
+          mov eax, dword ptr [ebp-6Ch]
+          mov ecx, dword ptr [eax+1Ch]
+          mov edx, constructed
+          mov dword ptr [ecx+137Ch], edx
+        }
+        break;
+      }
+            case 10: {
+        void *allocation10 = ::operator new(0x1Ch);
+        void *constructed10;
+        if (allocation10) {
+          __asm {
+            mov eax, dword ptr [ebp-6Ch]
+            mov ecx, dword ptr [eax+20h]
+            push ecx
+            mov ecx, allocation10
+            call LoadingBackground10::LoadingBackground10
+            mov constructed10, eax
+          }
+        } else {
+          __asm {
+            mov dword ptr constructed10, 0
+          }
+        }
+        __asm {
+          mov eax, dword ptr [ebp-6Ch]
+          mov ecx, dword ptr [eax+1Ch]
+          mov edx, constructed10
+          mov dword ptr [ecx+137Ch], edx
+        }
+        break;
+      }
             case 12: { contextOwner->blob = reinterpret_cast<unsigned char *>(new LoadingBackground12(videoOwner)); break; }
-            case 16: { contextOwner->blob = reinterpret_cast<unsigned char *>(new LoadingBackground16(videoOwner)); break; }
+            case 16: {
+        void *allocation16 = ::operator new(0x1Ch);
+        void *constructed16;
+        if (allocation16) {
+          __asm {
+            mov edx, dword ptr [ebp-6Ch]
+            mov eax, dword ptr [edx+20h]
+            push eax
+            mov ecx, allocation16
+            call LoadingBackground16::LoadingBackground16
+            mov constructed16, eax
+          }
+        } else {
+          __asm {
+            mov dword ptr constructed16, 0
+          }
+        }
+        __asm {
+          mov eax, dword ptr [ebp-6Ch]
+          mov ecx, dword ptr [eax+1Ch]
+          mov edx, constructed16
+          mov dword ptr [ecx+137Ch], edx
+        }
+        break;
+      }
             }
             if (contextOwner->flag0f32 == 16) contextOwner->backgroundScale = 0.125;
             else contextOwner->backgroundScale = 1.0;
-            (*secondarySlotA)->LoadResources();
+            __asm {
+    mov ecx, dword ptr [ebp-6Ch]
+    mov edx, dword ptr [ecx+14h]
+    mov eax, dword ptr [edx]
+    mov ecx, dword ptr [ebp-6Ch]
+    mov edx, dword ptr [ecx+14h]
+    mov ecx, dword ptr [edx]
+    mov eax, dword ptr [eax]
+    call dword ptr [eax+2Ch]
+  }
             (*secondarySlotB)->LoadResources();
             if (contextOwner->mode1364 == 2) {
                 (*secondarySlotA)->field00a8 = (float)contextOwner->flag1358 / 1.5f;
