@@ -162046,3 +162046,39 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "Native Character00 vtable slot 9 at 0x00788334: full 47-byte function at 0x0048E260, direct original REL32 call at 0x0048E284 to ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z 0x00412B10; raw RET boundary reviewed"
+
+
+[units.character-00-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character00Initialize.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-00-initialize-state/Character00Initialize.obj"
+symbol = "?InitializeState@Character00@@UAEXXZ"
+target_address = 0x0048A9B0
+size = 332
+
+[[units.character-00-initialize-state.relocations]]
+offset = 119
+type = "REL32"
+symbol = "?SetAlternateMode@Character00Layout@@QAEXD@Z"
+target = 0x0048E140
+evidence = "Canonical Nanase vtable slot 12 at 0x00788334 selects native owner 0x0048A9B0 (332 bytes); direct original REL32 call at 0x0048AA26 resolves ?SetAlternateMode@Character00Layout@@QAEXD@Z to 0x0048E140"
+
+[[units.character-00-initialize-state.relocations]]
+offset = 324
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Canonical Nanase vtable slot 12 at 0x00788334 selects native owner 0x0048A9B0 (332 bytes); direct original REL32 call at 0x0048AAF3 resolves ?InitializeState@Secondary@@UAEXXZ to 0x0040EDF0"
+
+
+[units.character-00-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character00Initialize.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-00-slot08/Character00Initialize.obj"
+symbol = "?Slot08@Character00@@UAEXXZ"
+target_address = 0x0048E250
+size = 11

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "authority": "Original Nanase Character00 vtable 0x00788334 slot12 and slot8; complete code owner and raw RET/INT3 boundary with independent native call operand bindings.",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 natural C++ selected strict original-bound replay; all 343 native code bytes and both original call relocations matched exactly; no full cold replay, ASM or padding.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 332,
+      "matched_bytes": 332,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 119,
+          "target": 4776256,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetAlternateMode@Character00Layout@@QAEXD@Z",
+          "evidence": "Canonical Nanase vtable slot 12 at 0x00788334 selects native owner 0x0048A9B0 (332 bytes); direct original REL32 call at 0x0048AA26 resolves ?SetAlternateMode@Character00Layout@@QAEXD@Z to 0x0048E140",
+          "addend": 0
+        },
+        {
+          "offset": 324,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "Canonical Nanase vtable slot 12 at 0x00788334 selects native owner 0x0048A9B0 (332 bytes); direct original REL32 call at 0x0048AAF3 resolves ?InitializeState@Secondary@@UAEXXZ to 0x0040EDF0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "de625199f130526daa5b17033aa1d890b9a6133bcd53653fe1d82a1c081bfcbc",
+      "target_extent_sha256": "de625199f130526daa5b17033aa1d890b9a6133bcd53653fe1d82a1c081bfcbc",
+      "unit": "character-00-initialize-state",
+      "symbol": "?InitializeState@Character00@@UAEXXZ",
+      "target_address": "0x0048A9B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b42fde128a3719d0c05de7c07db5b20fece21718ef3f1c3587efc54a740cd285",
+      "object_sha256": "239465f4bdd8bc43350893580545cd310f8c23e2b43cf9e865f59237051cf317",
+      "source_sha256": "a1cb1ffe3317b5cd0e4f48a8a92ac51cbcd457639c88cb8525969884f6ff7cec",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "1493b1cd1e05127cc53268f5edff24db08fad4df279184378d76ede06ec01d17",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "133314e359047e9fde731f04f53dcb0ef3eeca36cd0903ce510f00f389677795",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "character-00-slot08",
+      "symbol": "?Slot08@Character00@@UAEXXZ",
+      "target_address": "0x0048E250",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b42fde128a3719d0c05de7c07db5b20fece21718ef3f1c3587efc54a740cd285",
+      "object_sha256": "2b7077b4e4a24cfaa62604f8a6a539810589a4104a9fc9f8196cc5e7097106ed",
+      "source_sha256": "a1cb1ffe3317b5cd0e4f48a8a92ac51cbcd457639c88cb8525969884f6ff7cec",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "1493b1cd1e05127cc53268f5edff24db08fad4df279184378d76ede06ec01d17",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "46b9088318a23be3d6d33d5d50716f5a2284ba7601df46d541bfeea5f71dad6d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -493,3 +493,5 @@ address,end,size,status,evidence
 0x0048AC30,0x0048AC80,80,reviewed,docs/KNOWLEDGE_BASE.md#nanase-lifecycle; original RET and following CC alignment explicitly reviewed
 0x0048AC80,0x0048AC93,19,reviewed,docs/KNOWLEDGE_BASE.md#nanase-lifecycle; original RET and following CC alignment explicitly reviewed
 0x0048E260,0x0048E28F,47,reviewed,docs/KNOWLEDGE_BASE.md#nanase-lifecycle; original RET and following CC alignment explicitly reviewed
+0x0048A9B0,0x0048AAFC,332,reviewed,docs/KNOWLEDGE_BASE.md#nanase-initialize; canonical RET and subsequent INT3 alignment reviewed
+0x0048E250,0x0048E25B,11,reviewed,docs/KNOWLEDGE_BASE.md#nanase-initialize; canonical RET and subsequent INT3 alignment reviewed

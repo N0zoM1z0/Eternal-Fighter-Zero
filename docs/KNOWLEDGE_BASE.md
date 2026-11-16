@@ -8040,3 +8040,26 @@ one original-bound REL32 relocation, yielding **204/204 native executable bytes
 Exact, 4/4 relocation targets**. The four strict selected receipts are in
 `docs/evidence/character-00-lifecycle-exact.json`. Only these units were
 replayed, not the full cold replay. Other Nanase methods remain separately open.
+
+
+<a id="nanase-initialize"></a>
+
+## Nanase reset-bank initialization and no-op render leaf
+
+Nanase's original vtable at `0x00788334` slot12 selects complete
+`Character00::InitializeState` at `0x0048A9B0` (332 executable bytes), and
+slot8 selects `Slot08` at `0x0048E250` (11 bytes). Ordinary natural C++ in
+`src/Character00Initialize.cpp` restores both without inline assembly,
+emitted opcodes or artificial storage. InitializeState clears the five child
+state words at `0x3138..0x3148` and three at `0x344C..0x3454`, calls the
+independently exact `Character00Layout::SetAlternateMode(0)` at `0x0048E140`,
+restores five collision X/Y pairs, zeros three 64-int arrays at
+`0x314C/0x324C/0x334C`, then calls `Secondary::InitializeState` at
+`0x0040EDF0`. Slot08 is an actual empty virtual override, not missing source.
+
+The pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected strict replay proves all
+**343/343 native executable bytes Exact** and both independently checked
+original call targets (2/2 REL32); the 11-byte Slot08 has no relocations.
+Exact proof: `docs/evidence/character-00-initialize-exact.json`. Source is
+in a separate TU so that previously accepted constructor/lifecycle receipts
+are not invalidated by changing a shared header. No full cold replay.

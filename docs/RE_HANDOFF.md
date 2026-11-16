@@ -549,6 +549,15 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Nanase's larger InitializeState owner at `0x0048A9B0` now also has
+strict exact natural C++ in `src/Character00Initialize.cpp`: **332/332 bytes**
+with two bound calls (mode-switch `0x0048E140` and base initializer
+`0x0040EDF0`). The actual no-op Slot08 at `0x0048E250` is **11/11 bytes**
+with no relocations. The two new selected proofs cover **343/343 bytes** in
+`docs/evidence/character-00-initialize-exact.json`. This TU is separate from
+the earlier Nanase constructor/lifecycle sources to preserve their proofs;
+no full cold replay or shared-header changes.
+
 Nanase's original vtable 0x00788334 now also has four complete selected
 natural-C++ exact leaf owners in `src/Character00Lifecycle.cpp`: ResetPose
 58 bytes, RemoveLocalEffect 80, Slot03 locomotion delegate 19, and

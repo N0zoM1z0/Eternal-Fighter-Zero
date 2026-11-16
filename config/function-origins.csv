@@ -234,7 +234,7 @@ address,origin,status,evidence
 0x0046D970,unknown,unreviewed,
 0x0047C130,unknown,unreviewed,
 0x0048A720,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
-0x0048A9B0,unknown,unreviewed,
+0x0048A9B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-initialize
 0x0048AB00,unknown,unreviewed,
 0x0048ABB0,unknown,unreviewed,
 0x0048ABF0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-lifecycle
@@ -244,7 +244,7 @@ address,origin,status,evidence
 0x0048D940,unknown,unreviewed,
 0x0048DD00,unknown,unreviewed,
 0x0048E140,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-mode-switch
-0x0048E250,unknown,unreviewed,
+0x0048E250,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-initialize
 0x0048E260,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-lifecycle
 0x0048E290,unknown,unreviewed,
 0x0048F690,unknown,unreviewed,
