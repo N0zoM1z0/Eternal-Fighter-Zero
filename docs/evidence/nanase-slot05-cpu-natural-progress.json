@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "natural-cpp-cpu-prototype-not-exact",
+  "owner": "Character00::Slot05",
+  "original": {
+    "address": "0x48f690",
+    "vtable_slot": "0x788348",
+    "bytes": 14102,
+    "sha256": "b6d8e23bced43a9af7ad66ae0b7771284818a361dc0175253140e6b503ddd003",
+    "stack_frame_bytes": 236
+  },
+  "candidate": {
+    "source": "workbench/nanase-cpu/Character00Cpu-natural.cpp",
+    "source_sha256": "54fc4b1137eabbb6b9535fae9ad48ebfa5f3db018496877374ea22e82944cb45",
+    "object": "build/nanase-cpu/Character00Cpu-natural.obj",
+    "object_sha256": "128f80df1ffdf03f40f8abb5a08d95c87092bbcf3f0a5805a0635bf157e31441",
+    "compiler_flags": [
+      "/Od",
+      "/G6",
+      "/MT",
+      "/Gy",
+      "/W3"
+    ],
+    "bytes": 14922,
+    "size_delta": 820,
+    "stack_frame_bytes": 212,
+    "coff_relocations": 293,
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287"
+  },
+  "native_double_operand_sites_verified": [
+    {
+      "address": "0x788370",
+      "native_double": -280.0
+    },
+    {
+      "address": "0x788368",
+      "native_double": -220.0
+    },
+    {
+      "address": "0x787fa0",
+      "native_double": -20.0
+    },
+    {
+      "address": "0x7875c8",
+      "native_double": -100.0
+    },
+    {
+      "address": "0x787ce0",
+      "native_double": 40.0
+    },
+    {
+      "address": "0x787ce8",
+      "native_double": 60.0
+    },
+    {
+      "address": "0x787ee0",
+      "native_double": 80.0
+    },
+    {
+      "address": "0x787368",
+      "native_double": 120.0
+    }
+  ],
+  "prototype_has_original_bank0_air_intercept": true,
+  "prototype_has_original_a8_startup_pulse_choices": true,
+  "source_has_inline_asm_or_emitted_opcodes": false,
+  "whole_owner_byte_exact": false,
+  "qualification": "The original native 0xFB bank0 velocity/height/air-intercept and 0xA8 startup button/command decisions were reconstructed as C++. The rest of the owner is still based on the Mayu CPU architecture and contains unresolved Nanase-specific decisions. Neither 14,102-byte codegen nor frame layout nor original bound COFF relocations currently match. This is a workbench only, not a formal Exact receipt."
+}

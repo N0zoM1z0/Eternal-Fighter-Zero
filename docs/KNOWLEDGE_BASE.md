@@ -8200,3 +8200,29 @@ history; formal acceptance is anchored to `src/Character00Action.cpp` and
 its selected strict proof. This does **not** imply Nanase's still-open
 Slot05/Slot06/Slot07 have reached whole-owner Exact. No full cold replay,
 `__asm`, `_emit`, synthetic instruction bytes or padding were used.
+
+
+<a id="nanase-cpu-natural"></a>
+
+## Nanase Character00 Slot05 CPU boss: native-specific natural C++ prototype
+
+The **14,102-byte** Nanase `Character00::Slot05` CPU state selector at
+`0x0048F690` (vtable slot5 `0x00788348`) has a compilable pure C++
+workbench prototype at `workbench/nanase-cpu/Character00Cpu-natural.cpp`.
+It starts from the structurally related Mayu CPU owner but reconstructs
+real Nanase-only behavior: the bank0 `0xFB` interception guard (positive
+opponent X velocity, special `-280/-220/-20/-100` height windows, random
+thresholds and command selection), and both `0xA8` startup sequences, which
+use Nanase-specific command `0x46` and bank0/bank1 button pulse choices.
+The original 40/60/80/120 distance thresholds and all eight floating-point
+literal target values were checked against the original EFZ executable.
+
+The pinned VC7.1 `/Od /G6 /MT /Gy /W3` prototype compiles to 14,922 bytes,
+**820 bytes longer** than native, with a **0xD4** frame versus native **0xEC**
+and 293 COFF relocations. The code is not byte Exact and still has unresolved
+Mayu-derived decisions in later CPU branches. The diagnostic evidence is
+`docs/evidence/nanase-slot05-cpu-natural-progress.json`, produced only by
+`workbench/nanase-cpu/verify_cpu_progress.py --rebuild`. This candidate is
+not registered in the formal exact ledgers, never uses ASM or padding,
+and is not evidence of complete Nanase CPU parity. Further natural C++
+source reconstruction is required.

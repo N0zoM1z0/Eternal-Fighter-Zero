@@ -549,6 +549,16 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Nanase CPU boss is now opened as actual ordinary C++ workbench code:
+`workbench/nanase-cpu/Character00Cpu-natural.cpp`, target `0x0048F690`
+(**14,102 bytes**, original slot5). The native-only bank0 `0xFB` aerial
+intercept and `0xA8` startup pressure branches have been reconstructed with
+original float thresholds and command/button choices. Focused verifier:
+`scripts/repo-python workbench/nanase-cpu/verify_cpu_progress.py --rebuild`.
+Its 14,922-byte candidate is **not Exact** (+820 bytes, 0xD4 vs 0xEC
+frame, 293 COFF relocations not yet bound). Keep the source outside the exact
+ledgers. See `docs/evidence/nanase-slot05-cpu-natural-progress.json`.
+
 Nanase's complete **11,424-byte** action-selection Boss
 `Character00::Slot04` at `0x0048ACA0` is now **strict natural-C++ Exact**.
 The accepted source is `src/Character00Action.cpp`, not just the previous
