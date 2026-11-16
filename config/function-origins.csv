@@ -477,7 +477,7 @@ address,origin,status,evidence
 0x006EAF80,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle
 0x006EAF90,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle
 0x006EAFA0,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle
-0x006EAFD0,unknown,unreviewed,
+0x006EAFD0,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-command-recognizer
 0x006EC160,unknown,unreviewed,
 0x006EF410,unknown,unreviewed,
 0x006F2F20,unknown,unreviewed,

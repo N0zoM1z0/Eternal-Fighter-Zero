@@ -8302,3 +8302,31 @@ independently bound original REL32 call. Original complete RET is at
 `docs/evidence/character-01-initialize-exact.json`. No ASM, `_emit`, padding
 or all-unit cold replay. Ayu's larger Slot02/04/05/06/07 remain separately
 open.
+
+
+<a id="ayu-command-recognizer"></a>
+
+## Ayu 4,482-byte command-recognition boss — whole-owner strict Exact
+
+The complete Ayu `Character01::Slot02` action recognizer at `0x006EAFD0`
+(original vtable slot2 at `0x00788E54`) is reconstructed in ordinary
+natural C++ as `src/Character01Commands.cpp`. It contains the original
+**14 sequential input-history windows**, not a lookup dispatcher or patched
+machine code. Original priority begins with meter-3000 `0x5D` charge start
+using the 45-frame history window, followed by the 105-frame `0x78`
+chain, the 90-frame `0x6E/0x64` families, 120-frame `0x14`, 135-frame
+`0x0A/0x1E`, and the native final release/neutral/4-button states
+`6/0x35/0x34/0x33/0x32/1/0`. All directional comparisons,
+`(facing == -1)` polarity, history modulo-180 wrap, button masks,
+command priority and early returns are preserved in the exact original
+control-flow order.
+
+The original owner is **4,482 executable bytes** ending at `RET`
+`0x006EC151`; trailing CC bytes before the next owner at `0x006EC160`
+are not included. Normal pinned VC7.1 `/Od /G6 /MT /Gy /W3`
+compilation yields **4,482/4,482 byte-for-byte Exact** with **zero COFF
+relocations**, zero instruction-byte differences and the original exact
+virtual entry. The selected single-unit strict replay is recorded at
+`docs/evidence/character-01-slot02-exact.json`. No ASM, `_emit`,
+padding, synthetic opcode injection or full cold all-unit replay.
+Ayu's Slot04/05/06/07 bosses remain open.

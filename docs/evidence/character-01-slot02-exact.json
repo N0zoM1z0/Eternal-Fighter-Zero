@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "authority": "Original Ayu Character01 virtual slot2 0x00788E54 selects 4482-byte native owner [0x006EAFD0,0x006EC152), with raw RET at 0x006EC151 and following CC bytes excluded.",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiler builds src/Character01Commands.cpp (14 natural C++ original-priority circular input scans); selected-only strict native comparison verifies all 4482 original bytes byte-for-byte Exact, zero relocations, no ASM, emitted instructions or padding, no full cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 4482,
+      "matched_bytes": 4482,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "5b07fd7a19758114c647c9d78b382fae4963d30bb9e83bbf90b30dd0c5d91d60",
+      "target_extent_sha256": "5b07fd7a19758114c647c9d78b382fae4963d30bb9e83bbf90b30dd0c5d91d60",
+      "unit": "character-01-slot02",
+      "symbol": "?Slot02@Character01@@UAEXXZ",
+      "target_address": "0x006EAFD0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "7af2ffdb9293b581da0dfb4dd35ebed65c55f5e83930cc8a9a1c3bee2b6bbf6e",
+      "object_sha256": "2898a9ddb2300fb999545b903d5e6e1ff37ff35fabbc17198ace34701b6f4f49",
+      "source_sha256": "b24ec722c49cc4e057a0798cf00356938f1e4b588430284db4643595ef164db0",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "0e4d853e1bf478b49e3bcff3c387a5d31de62e8cf7c369c6a9faf9be2be4b0f1",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ee035339e3629dffcf0ff42dde70c76441e044696a59ca9c10fb84dd3c70129b",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

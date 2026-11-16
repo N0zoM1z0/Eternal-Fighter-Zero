@@ -163243,3 +163243,14 @@ type = "REL32"
 symbol = "?InitializeState@Secondary@@UAEXXZ"
 target = 0x0040EDF0
 evidence = "Original Ayu virtual slot12 0x00788E7C selects native owner [0x006E82F0,0x006E8418), original REL32 call at 0x006E840F resolves Secondary::InitializeState 0x0040EDF0, complete RET at 0x006E8417"
+
+
+[units.character-01-slot02]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character01Commands.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-01-slot02/Character01Commands.obj"
+symbol = "?Slot02@Character01@@UAEXXZ"
+target_address = 0x006EAFD0
+size = 4482

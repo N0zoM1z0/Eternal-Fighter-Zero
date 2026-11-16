@@ -549,6 +549,17 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Ayu's complete **4,482-byte** virtual command-recognition boss
+`Character01::Slot02` (`0x006EAFD0`) has been reconstructed as 14
+prioritized natural-C++ history scans in `src/Character01Commands.cpp`.
+The original `0x5D` 45-frame charge opener, `0x78` 105-frame chain,
+`0x6E/0x64` 90-frame families and 120/135-frame final chains are retained.
+The canonical vtable at `0x00788E54` selects this complete owner and
+native RET `0x006EC151` ends the 4,482-byte body before CC alignment.
+Selected-only pinned normal VC7.1 strict replay proves **4,482/4,482
+bytes Exact**, zero relocations and zero differences. Formal proof:
+`docs/evidence/character-01-slot02-exact.json`.
+
 Ayu original `InitializeState` (virtual slot12, `0x006E82F0`) is now
 restored as **296/296-byte strictly Exact natural C++** in
 `src/Character01Initialize.cpp`. It clears six Ayu-only state words, restores

@@ -481,3 +481,4 @@ address,name,source,symbol,status,evidence
 0x006EAF80,?Slot01@Character01@@UAEXXZ,src/Character01Lifecycle.cpp,?Slot01@Character01@@UAEXXZ,complete,docs/evidence/character-01-lifecycle-exact.json
 0x006EAF90,?Slot08@Character01@@UAEXXZ,src/Character01Lifecycle.cpp,?Slot08@Character01@@UAEXXZ,complete,docs/evidence/character-01-lifecycle-exact.json
 0x006E82F0,?InitializeState@Character01@@UAEXXZ,src/Character01Initialize.cpp,?InitializeState@Character01@@UAEXXZ,complete,docs/evidence/character-01-initialize-exact.json
+0x006EAFD0,?Slot02@Character01@@UAEXXZ,src/Character01Commands.cpp,?Slot02@Character01@@UAEXXZ,complete,docs/evidence/character-01-slot02-exact.json
