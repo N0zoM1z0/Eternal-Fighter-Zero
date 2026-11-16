@@ -17,11 +17,17 @@ match in order, including the aerial alternate `0x10B` and the `0x70`
 air/ground state variants. The source remains ordinary C++; no compiler
 directives, ASM, `_emit` or opcode padding were used.
 
-**Still unresolved:** the full native owner contains 38
-ClearBufferedButtons calls, whereas this candidate has 39. The **10,963-byte**
-code extent is just 40 bytes longer than the 10,923-byte native owner, but
-later dash/air-action state families are misordered; original-bound COFF
-targets, branch edges and all machine code still need strict verification.
+The next native-driven C++ pass reconstructed **all 16** original
+A/B/C/D-button and aerial action transitions, removing the remaining
+Mayu-only 230/231/232/248 states, restoring Ayu's 240/212/40 special
+branches and placing the original command-6 air action before dashes.
+**All 38 native button-clear state transitions now match in order.**
+The candidate is **10,904 bytes** versus 10,923 original (-19), with
+2,758 decoded instructions versus 2,765 native and 86 COFF relocation
+sites. Equal transition lists are not an Exact proof: the exact
+machine instructions, branch edges and original target binding remain
+unresolved.
+
 Do not promote this workbench candidate to `src/`, `matches.csv`, or
 `implemented.csv` and do not call it Exact just because the first states match.
 

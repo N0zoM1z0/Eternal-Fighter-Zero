@@ -8352,7 +8352,15 @@ Pinned VC7.1 compilation now yields **10,963 candidate bytes** versus
 **10,923 original** (+40), with 89 normal COFF relocations. The native
 owner has 38 ClearBufferedButtons calls; the candidate has 39 because later
 dash/air-action paths still differ. **Not Exact**, no formal match ledger
-or whole-control-flow claim. Reproduce only this TU via
+or whole-control-flow claim. The subsequent native-driven C++ rewrite now
+restores all 16 original A/B/C/D-button and air-action state paths, removes
+Mayu-only states 230/231/232/248, inserts native Ayu states 240/212/40,
+and places the command-6 aerial action before dash selection. The focused
+audit verifies **all 38 native post-clear state destinations in the exact
+original order**, with 38 candidate calls. Its new code extent is
+**10,904 vs 10,923 bytes** (-19), with **2,758 vs 2,765 decoded
+instructions** and 86 COFF references. This remains **not Exact**: full
+byte layout, branch edges and relocation binding are not yet proven. Reproduce only this TU via
 `workbench/ayu-action/verify_action_progress.py --rebuild`; evidence:
 `docs/evidence/ayu-slot04-natural-progress.json`. Continue normal C++
 reconstruction, no ASM/PADDING or full cold replay.

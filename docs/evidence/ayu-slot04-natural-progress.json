@@ -12,9 +12,9 @@
   },
   "candidate": {
     "source": "workbench/ayu-action/Character01Action-natural.cpp",
-    "source_sha256": "ecc6f05faa42c8b7b8c64f60cefcce0d7fcf8ca064036f7aa8d55da4bf1a1a61",
+    "source_sha256": "67d0ff0386ede05618cc9ef7d2193614700fe4ff8a83a861af6b17245dc1a6fc",
     "object": "build/ayu-action/Character01Action-natural.obj",
-    "object_sha256": "cdc06e10ff993179030d8789d9e7db9970c863dd8b56bb1b0d66d4a9f424667a",
+    "object_sha256": "923dca49c4e705523ff6fcbeb565e27e2a193505c702d20a846f4eaf96e956c2",
     "compiler_flags": [
       "/Od",
       "/G6",
@@ -22,15 +22,15 @@
       "/Gy",
       "/W3"
     ],
-    "bytes": 10963,
-    "size_delta": 40,
-    "instruction_count": 2783,
-    "coff_relocations": 89,
-    "clear_calls": 39,
+    "bytes": 10904,
+    "size_delta": -19,
+    "instruction_count": 2758,
+    "coff_relocations": 86,
+    "clear_calls": 38,
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287"
   },
-  "native_first_21_high_priority_states_match": true,
-  "first_21_transitions": [
+  "all_38_native_action_state_targets_match_in_order": true,
+  "all_38_action_transitions": [
     {
       "ordinal": 1,
       "native_call_va": "0x6e8600",
@@ -198,9 +198,145 @@
       "candidate_minus_original": -4,
       "native_first_state": "0x104",
       "candidate_first_state": "0x104"
+    },
+    {
+      "ordinal": 22,
+      "native_call_va": "0x6e99b3",
+      "candidate_call_offset": "0x14df",
+      "candidate_minus_original": -4,
+      "native_first_state": "0xe",
+      "candidate_first_state": "0xe"
+    },
+    {
+      "ordinal": 23,
+      "native_call_va": "0x6ea12b",
+      "candidate_call_offset": "0x1c23",
+      "candidate_minus_original": -56,
+      "native_first_state": "0xcf",
+      "candidate_first_state": "0xcf"
+    },
+    {
+      "ordinal": 24,
+      "native_call_va": "0x6ea20c",
+      "candidate_call_offset": "0x1d04",
+      "candidate_minus_original": -56,
+      "native_first_state": "0xcc",
+      "candidate_first_state": "0xcc"
+    },
+    {
+      "ordinal": 25,
+      "native_call_va": "0x6ea2ed",
+      "candidate_call_offset": "0x1de5",
+      "candidate_minus_original": -56,
+      "native_first_state": "0xc8",
+      "candidate_first_state": "0xc8"
+    },
+    {
+      "ordinal": 26,
+      "native_call_va": "0x6ea3e1",
+      "candidate_call_offset": "0x1ee8",
+      "candidate_minus_original": -41,
+      "native_first_state": "0xd0",
+      "candidate_first_state": "0xd0"
+    },
+    {
+      "ordinal": 27,
+      "native_call_va": "0x6ea4c3",
+      "candidate_call_offset": "0x1fca",
+      "candidate_minus_original": -41,
+      "native_first_state": "0xcd",
+      "candidate_first_state": "0xcd"
+    },
+    {
+      "ordinal": 28,
+      "native_call_va": "0x6ea5b8",
+      "candidate_call_offset": "0x20c3",
+      "candidate_minus_original": -37,
+      "native_first_state": "0xd2",
+      "candidate_first_state": "0xd2"
+    },
+    {
+      "ordinal": 29,
+      "native_call_va": "0x6ea6a8",
+      "candidate_call_offset": "0x21b3",
+      "candidate_minus_original": -37,
+      "native_first_state": "0xc9",
+      "candidate_first_state": "0xc9"
+    },
+    {
+      "ordinal": 30,
+      "native_call_va": "0x6ea758",
+      "candidate_call_offset": "0x2263",
+      "candidate_minus_original": -37,
+      "native_first_state": "0xca",
+      "candidate_first_state": "0xca"
+    },
+    {
+      "ordinal": 31,
+      "native_call_va": "0x6ea904",
+      "candidate_call_offset": "0x240f",
+      "candidate_minus_original": -37,
+      "native_first_state": "0xf0",
+      "candidate_first_state": "0xf0"
+    },
+    {
+      "ordinal": 32,
+      "native_call_va": "0x6ea9c4",
+      "candidate_call_offset": "0x24ec",
+      "candidate_minus_original": -8,
+      "native_first_state": "0xd4",
+      "candidate_first_state": "0xd4"
+    },
+    {
+      "ordinal": 33,
+      "native_call_va": "0x6eaa6c",
+      "candidate_call_offset": "0x25a3",
+      "candidate_minus_original": 7,
+      "native_first_state": "0xd1",
+      "candidate_first_state": "0xd1"
+    },
+    {
+      "ordinal": 34,
+      "native_call_va": "0x6eab4e",
+      "candidate_call_offset": "0x2685",
+      "candidate_minus_original": 7,
+      "native_first_state": "0xce",
+      "candidate_first_state": "0xce"
+    },
+    {
+      "ordinal": 35,
+      "native_call_va": "0x6eace9",
+      "candidate_call_offset": "0x2802",
+      "candidate_minus_original": -23,
+      "native_first_state": "0xdc",
+      "candidate_first_state": "0xdc"
+    },
+    {
+      "ordinal": 36,
+      "native_call_va": "0x6eadae",
+      "candidate_call_offset": "0x28cb",
+      "candidate_minus_original": -19,
+      "native_first_state": "0xd3",
+      "candidate_first_state": "0xd3"
+    },
+    {
+      "ordinal": 37,
+      "native_call_va": "0x6eae5f",
+      "candidate_call_offset": "0x297c",
+      "candidate_minus_original": -19,
+      "native_first_state": "0xcb",
+      "candidate_first_state": "0xcb"
+    },
+    {
+      "ordinal": 38,
+      "native_call_va": "0x6eaf69",
+      "candidate_call_offset": "0x2a86",
+      "candidate_minus_original": -19,
+      "native_first_state": "0x28",
+      "candidate_first_state": "0x28"
     }
   ],
   "source_has_asm_or_emitted_opcodes": false,
   "whole_owner_exact": false,
-  "qualification": "The first 21 original priority transition state IDs match in source/codegen order, and the first 21 clear call offsets are all 4 bytes or fewer below native. The candidate still has 39 versus 38 native clear sites and a +40-byte code extent. Following dash, air-action and ordinary button paths remain derived from Mayu, not Ayu. Not an Exact owner; full local control-flow and original-bound relocation parity are not proven. Keep outside the formal ledgers."
+  "qualification": "All 38 native ClearBufferedButtons action call sites and their first post-call state IDs are reproduced in the original order, including the Ayu-only 0xF0/0xD4/0x28 air/button transitions. The candidate differs in actual machine instructions (2758 vs 2765), code extent (10904 vs 10923), local branch edges and relocation targets. This is a natural C++ workbench checkpoint, not an accepted whole-owner Exact receipt."
 }

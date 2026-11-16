@@ -557,7 +557,13 @@ order. The further native-driven rewrite now matches **21** ordered
 post-ClearBufferedButtons states, including the repeated `0x78` priority and
 `0x16`, `0x20`, `0x0C` command families. The candidate remains **not Exact**
 (10,963 bytes versus 10,923 original, 89 COFF sites, 39 candidate versus 38
-native clear calls). Later dash/air-action paths are still open. Rebuild with
+native clear calls) at the earlier checkpoint. The next C++ pass restores
+all 16 original Ayu A/B/C/D-button and air-action transitions and places
+command-6 aerial action ahead of dashes. **All 38 original
+ClearBufferedButtons calls and state IDs now match in order**. The latest
+candidate is 10,904 bytes (native 10,923), 2,758 vs 2,765 instructions,
+86 COFF sites, **not Exact**. Continue resolving codegen width/branch edges
+and native relocation bindings. Rebuild with
 `scripts/repo-python workbench/ayu-action/verify_action_progress.py --rebuild`;
 evidence `docs/evidence/ayu-slot04-natural-progress.json`. Later Ayu action
 families must still be reconstructed, no all-unit cold replay.
