@@ -12,7 +12,7 @@
   },
   "build": {
     "source_sha256": "b16400d494601e944551d25574e1f3d75ecc77948794d29636f7a788c6e7aa7d",
-    "object_sha256": "a4d10d97bed8bf893ae5cf22a9009d0eede038fce3eac3177d43c6f96e583de8",
+    "object_sha256": "eda4f85d6166821a3869cee87c9328bbd1794c40d6f71689b02618d175b15ebc",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
   "whole_case_exact": {
@@ -8424,6 +8424,129 @@
       ]
     }
   },
+  "direct_call_leaf_dependencies": {
+    "evidence": "docs/evidence/shiori-slot06-leaf-dependencies-exact.json",
+    "units": 14,
+    "native_code_bytes": 1966,
+    "matched_bytes": 1966,
+    "relocations": 26,
+    "differences": 0,
+    "all_call_targets_bound_to_exact_leafs": true,
+    "reports": [
+      {
+        "unit": "effect-spawn-construct",
+        "symbol": "??0EffectSpawn@@QAE@XZ",
+        "target_address": "0x00405490",
+        "size": 30,
+        "relocations": 1,
+        "relocated_sha256": "6e29f4e9f7c18111358377512b098e4c62371280882858f2b58d016499f01c06"
+      },
+      {
+        "unit": "secondary-reset-local-effect-spawn",
+        "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+        "target_address": "0x00413090",
+        "size": 106,
+        "relocations": 0,
+        "relocated_sha256": "d153ebc761db797569978ad370059e1c2eefbd7a03b3d64412f071fcbdcf22eb"
+      },
+      {
+        "unit": "secondary-face-opponent",
+        "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+        "target_address": "0x0040E630",
+        "size": 130,
+        "relocations": 0,
+        "relocated_sha256": "0d648ef993a2dfb8d12aea59d30ab59273239a1e67b7bf1b46b57fd1f1a60b24"
+      },
+      {
+        "unit": "secondary-collision-side",
+        "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+        "target_address": "0x0040FF70",
+        "size": 222,
+        "relocations": 6,
+        "relocated_sha256": "712b502bbb3ed80cebc804305342091aa7e30d9c2df22cfa7dde8b877bbe0f7c"
+      },
+      {
+        "unit": "context-emit-effect",
+        "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+        "target_address": "0x00407100",
+        "size": 406,
+        "relocations": 1,
+        "relocated_sha256": "d97676fb10b9883ba7c45746c1e00fd06725ae62a687f833ac0c6e8f39e1b0bc"
+      },
+      {
+        "unit": "secondary-set-vertical-shake",
+        "symbol": "?SetVerticalShake@Secondary@@QAEXHH@Z",
+        "target_address": "0x00410A10",
+        "size": 43,
+        "relocations": 0,
+        "relocated_sha256": "63da85902d6263e7193af3404095c4d02ef40cca48833408fd9da477906829e0"
+      },
+      {
+        "unit": "secondary-reset-frame",
+        "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+        "target_address": "0x0040F1E0",
+        "size": 74,
+        "relocations": 5,
+        "relocated_sha256": "c58eb72d276316816771d28a5b91ad81ecdc5e6effe516176be860ba898b015a"
+      },
+      {
+        "unit": "secondary-start-trail",
+        "symbol": "?StartTrail@Secondary@@QAEXE@Z",
+        "target_address": "0x004109D0",
+        "size": 61,
+        "relocations": 1,
+        "relocated_sha256": "1aa178496d085210d246adfb963eb3c1cdb9ffd5ef3db01ef589887ea98b24c8"
+      },
+      {
+        "unit": "secondary-set-tint",
+        "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+        "target_address": "0x00410B10",
+        "size": 96,
+        "relocations": 0,
+        "relocated_sha256": "066017b2635b99dabc12568eae6d1c76abd8d7bbeaca851b177d0948164aa974"
+      },
+      {
+        "unit": "secondary-set-horizontal-shake",
+        "symbol": "?SetHorizontalShake@Secondary@@QAEXHH@Z",
+        "target_address": "0x00410A80",
+        "size": 63,
+        "relocations": 0,
+        "relocated_sha256": "1050a8f8fb16f1e56320fa69a1c3e05d0f2e32b6a4e29a39a81965ecce2a15b0"
+      },
+      {
+        "unit": "context-scene-timer",
+        "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+        "target_address": "0x004080C0",
+        "size": 60,
+        "relocations": 0,
+        "relocated_sha256": "32590a886a5f6bcc4aa65b9b9c0173a3e211eb3ea224fe53202d18e12cab2e2c"
+      },
+      {
+        "unit": "secondary-apply-damage",
+        "symbol": "?ApplyDamage@Secondary@@QAEXHN@Z",
+        "target_address": "0x004105A0",
+        "size": 489,
+        "relocations": 9,
+        "relocated_sha256": "d31b9db18b71723b6b6c4afbf2da728b14fa49ef3e8c6d8caf38f80c58454d57"
+      },
+      {
+        "unit": "secondary-random-range",
+        "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+        "target_address": "0x004108A0",
+        "size": 148,
+        "relocations": 3,
+        "relocated_sha256": "747130457267c92c4ba6ba2f527a64348c212e8a764413bf119eec56cd8e557b"
+      },
+      {
+        "unit": "context-request-transition",
+        "symbol": "?RequestTransition@Context@@QAEXD@Z",
+        "target_address": "0x00407CE0",
+        "size": 38,
+        "relocations": 0,
+        "relocated_sha256": "d4c9ef5e5d73ee16d40e775d805bddb4db24e5baf3f76120d399e24afc888af8"
+      }
+    ]
+  },
   "late_meter_arithmetic": [],
   "dispatch": {
     "table_relocations": 135,
@@ -8490,5 +8613,5 @@
     "native_frame": "0x384",
     "native_prologue_restored": true
   },
-  "qualification": "The resolved 63,132-byte Slot06 owner is byte-for-byte equal to the canonical PE after explicit relocation materialization, eighteen inline-assembly __ftol2 call bindings, native prologue restoration (candidate frame 0x338 to native 0x384), and 72 independently checked stack-slot operand restorations. All 135 distinct switch destinations are covered by 136 selector IDs (301/302 share the default body); the 174-byte entry/dispatch prefix, 62,099 bytes of unique case bodies, 540-byte switch table, and 319-byte selector are all compared byte-for-byte. This is a resolved-final-image proof, not an unmodified VC7.1 source-object Exact certificate: the source object still requires the explicitly recorded prologue and stack-slot normalization."
+  "qualification": "The resolved 63,132-byte Slot06 owner is byte-for-byte equal to the canonical PE after explicit relocation materialization, eighteen inline-assembly __ftol2 call bindings, native prologue restoration (candidate frame 0x338 to native 0x384), and 72 independently checked stack-slot operand restorations. All 135 distinct switch destinations are covered by 136 selector IDs (301/302 share the default body); the 174-byte entry/dispatch prefix, 62,099 bytes of unique case bodies, 540-byte switch table, and 319-byte selector are all compared byte-for-byte. All fourteen direct-call leaf dependencies are separately strict-exact (1,966 bytes, 26 relocations, zero differences). This is a resolved-final-image proof, not an unmodified VC7.1 source-object Exact certificate: the source object still requires the explicitly recorded prologue and stack-slot normalization."
 }

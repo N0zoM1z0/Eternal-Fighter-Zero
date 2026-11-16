@@ -130,6 +130,15 @@ individually checked and restored. No arbitrary code bytes are masked.
 Resolved owner SHA-256: `b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded`
 (native owner hash is identical).
 
+The fourteen direct-call leaf dependencies have also been cold-built and
+strictly compared as individually selected normal-COFF units: **1,966/1,966
+native bytes**, **26 original-bound relocations**, zero differences. This set
+covers the EffectSpawn constructor, local-effect defaults, facing/collision,
+global effect emission, frame/tint/shake helpers, trail, scene timer, damage,
+random range and transition request. Evidence:
+`docs/evidence/shiori-slot06-leaf-dependencies-exact.json`. Only these fourteen
+units were replayed; no full-project cold replay was run.
+
 ## Remaining source-object work
 
 The complete resolved final image is now byte-for-byte equal to the canonical

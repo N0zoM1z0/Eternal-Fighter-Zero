@@ -152,6 +152,34 @@ def main() -> None:
         raise SystemExit("stale workbench object receipt; use --rebuild")
 
     image = verify_target()
+    leaf_path = ROOT / "docs/evidence/shiori-slot06-leaf-dependencies-exact.json"
+    leaf_evidence = json.loads(leaf_path.read_text())
+    leaf_reports = leaf_evidence["reports"]
+    expected_leaf_targets = {symbol: address for symbol, address in CALL_TARGETS.items()
+                             if symbol != "__ftol2"}
+    leaf_by_symbol = {report["symbol"]: report for report in leaf_reports}
+    if set(leaf_by_symbol) != set(expected_leaf_targets):
+        raise AssertionError(("Shiori direct-call leaf coverage mismatch",
+                              sorted(set(expected_leaf_targets) - set(leaf_by_symbol)),
+                              sorted(set(leaf_by_symbol) - set(expected_leaf_targets))))
+    for symbol, address in expected_leaf_targets.items():
+        report = leaf_by_symbol[symbol]
+        if (report["result"] != "exact" or report["difference_count"] != 0
+                or report["matched_bytes"] != report["size"]
+                or int(report["target_address"], 16) != address):
+            raise AssertionError(("Shiori direct-call leaf is not exact", symbol, report))
+    leaf_summary = {
+        "units": len(leaf_reports),
+        "native_code_bytes": sum(report["size"] for report in leaf_reports),
+        "matched_bytes": sum(report["matched_bytes"] for report in leaf_reports),
+        "relocations": sum(len(report["relocations"]) for report in leaf_reports),
+        "differences": sum(report["difference_count"] for report in leaf_reports),
+    }
+    if leaf_summary != leaf_evidence["summary"] or leaf_summary != {
+            "units": 14, "native_code_bytes": 1966, "matched_bytes": 1966,
+            "relocations": 26, "differences": 0}:
+        raise AssertionError(("Shiori direct-call leaf summary mismatch", leaf_summary))
+
     native_code = target_bytes(image, ADDRESS, CODE_SIZE)
     native_table = target_bytes(image, ADDRESS + CODE_SIZE, TABLE_SIZE)
     native_selector = target_bytes(image, ADDRESS + CODE_SIZE + TABLE_SIZE, SELECTOR_SIZE)
@@ -388,6 +416,20 @@ def main() -> None:
         "build": {"source_sha256": sha256(SOURCE), "object_sha256": sha256(OBJECT),
                   "target_image_sha256": hashlib.sha256(native_code + native_table + native_selector).hexdigest()},
         "whole_case_exact": exact_cases,
+        "direct_call_leaf_dependencies": {
+            "evidence": "docs/evidence/shiori-slot06-leaf-dependencies-exact.json",
+            "units": leaf_summary["units"],
+            "native_code_bytes": leaf_summary["native_code_bytes"],
+            "matched_bytes": leaf_summary["matched_bytes"],
+            "relocations": leaf_summary["relocations"],
+            "differences": leaf_summary["differences"],
+            "all_call_targets_bound_to_exact_leafs": True,
+            "reports": [{"unit": report["unit"], "symbol": report["symbol"],
+                         "target_address": report["target_address"],
+                         "size": report["size"], "relocations": len(report["relocations"]),
+                         "relocated_sha256": report["relocated_sha256"]}
+                        for report in leaf_reports],
+        },
         "late_meter_arithmetic": arithmetic,
         "dispatch": {"table_relocations": len(table_relocations),
                      "case_entry_order_exact": True, "selector_bytes_exact": True,
@@ -413,7 +455,7 @@ def main() -> None:
                             "case_body_bytes_covered": unique_case_bytes},
         "prologue_normalization": {"candidate_frame": "0x338", "native_frame": "0x384",
                                    "native_prologue_restored": True},
-        "qualification": "The resolved 63,132-byte Slot06 owner is byte-for-byte equal to the canonical PE after explicit relocation materialization, eighteen inline-assembly __ftol2 call bindings, native prologue restoration (candidate frame 0x338 to native 0x384), and 72 independently checked stack-slot operand restorations. All 135 distinct switch destinations are covered by 136 selector IDs (301/302 share the default body); the 174-byte entry/dispatch prefix, 62,099 bytes of unique case bodies, 540-byte switch table, and 319-byte selector are all compared byte-for-byte. This is a resolved-final-image proof, not an unmodified VC7.1 source-object Exact certificate: the source object still requires the explicitly recorded prologue and stack-slot normalization.",
+        "qualification": "The resolved 63,132-byte Slot06 owner is byte-for-byte equal to the canonical PE after explicit relocation materialization, eighteen inline-assembly __ftol2 call bindings, native prologue restoration (candidate frame 0x338 to native 0x384), and 72 independently checked stack-slot operand restorations. All 135 distinct switch destinations are covered by 136 selector IDs (301/302 share the default body); the 174-byte entry/dispatch prefix, 62,099 bytes of unique case bodies, 540-byte switch table, and 319-byte selector are all compared byte-for-byte. All fourteen direct-call leaf dependencies are separately strict-exact (1,966 bytes, 26 relocations, zero differences). This is a resolved-final-image proof, not an unmodified VC7.1 source-object Exact certificate: the source object still requires the explicitly recorded prologue and stack-slot normalization.",
     }
     output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -425,6 +467,9 @@ def main() -> None:
     print("prefix:", prefix_end, "bytes exact; relocations:", len(prefix_records))
     print("COFF relocations classified:", len(consumed_relocation_offsets), "/", len(relocations))
     print("resolved owner:", len(resolved_image), "bytes byte-for-byte exact; sha256:", resolved_owner_sha256)
+    print("direct-call leaf dependencies:", leaf_summary["units"], "units,",
+          leaf_summary["matched_bytes"], "bytes,", leaf_summary["relocations"], "relocations,",
+          leaf_summary["differences"], "differences")
     print("qualification: resolved final-image exact after explicit normalization; source-object Exact remains open")
 
 
