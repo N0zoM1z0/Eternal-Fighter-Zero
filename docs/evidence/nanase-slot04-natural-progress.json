@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "natural-cpp-boss-progress-not-exact",
+  "status": "workbench-original-bound-byte-parity-formal-proof-separate",
   "owner": "Character00::Slot04",
   "original": {
     "address": "0x48aca0",
@@ -11,9 +11,9 @@
   },
   "candidate": {
     "source": "workbench/nanase-action/Character00Action-natural.cpp",
-    "source_sha256": "cba7e577f318e21cf6f33f992d6a241d2bcf196839a21b35c1276b7a1d2cd24f",
+    "source_sha256": "bff529beceee7feea4ac6229f2d96fa8223a716b399c355a263a8052cbd64144",
     "object": "build/nanase-action/Character00Action-natural.obj",
-    "object_sha256": "e54134b650df31e9165783580adf93a1d58116575915506cf46fc6e85420f5ad",
+    "object_sha256": "6209b943f6e614d94f4fb973eef86d0f4a1d660ce8d63ec83e4b52230f4e28ba",
     "compiler_flags": [
       "/Od",
       "/G6",
@@ -53,222 +53,11 @@
     "unverified_sites": [],
     "code_extent_equal": true,
     "comparison_qualification": "Only original byte positions of independently verified COFF operands are materialized for diagnostic comparison; no candidate source or executable is patched.",
-    "materialized_difference_bytes": 668,
-    "materialized_mismatch_runs": 33,
-    "first_mismatch_va": "0x48bac5",
-    "first_mismatch_runs": [
-      {
-        "original_offset": "0xe25",
-        "original_va": "0x48bac5",
-        "length": 28,
-        "native_hex": "8b55fc8b82640100000fbf4cc8028b55fc8b82640100000fbf900808",
-        "candidate_hex": "81f9c80000007c188b55fc83ba68010000027c0c8b45fc83b8680100"
-      },
-      {
-        "original_offset": "0xe42",
-        "original_va": "0x48bae2",
-        "length": 15,
-        "native_hex": "003bca7f7f8b45fc0fb7480881f9c8",
-        "candidate_hex": "06750f8b4dfc0fb7510881fac80000"
-      },
-      {
-        "original_offset": "0xe52",
-        "original_va": "0x48baf2",
-        "length": 38,
-        "native_hex": "00007c188b55fc83ba68010000027c0c8b45fc83b86801000006750f8b4dfc0fb7510881fac8",
-        "candidate_hex": "7d728b45fc0fb748088b55fc8b82640100000fbf4cc8028b55fc8b82640100000fbf90080800"
-      },
-      {
-        "original_offset": "0xe79",
-        "original_va": "0x48bb19",
-        "length": 3,
-        "native_hex": "00007d",
-        "candidate_hex": "3bca7f"
-      },
-      {
-        "original_offset": "0xf22",
-        "original_va": "0x48bbc2",
-        "length": 28,
-        "native_hex": "8b55fc8b82640100000fbf4cc8028b55fc8b82640100000fbf900008",
-        "candidate_hex": "81f9c80000007c188b55fc83ba68010000027c0c8b45fc83b8680100"
-      },
-      {
-        "original_offset": "0xf3f",
-        "original_va": "0x48bbdf",
-        "length": 15,
-        "native_hex": "003bca7f7f8b45fc0fb7480881f9c8",
-        "candidate_hex": "06750f8b4dfc0fb7510881fac80000"
-      },
-      {
-        "original_offset": "0xf4f",
-        "original_va": "0x48bbef",
-        "length": 38,
-        "native_hex": "00007c188b55fc83ba68010000027c0c8b45fc83b86801000006750f8b4dfc0fb7510881fac8",
-        "candidate_hex": "7d728b45fc0fb748088b55fc8b82640100000fbf4cc8028b55fc8b82640100000fbf90000800"
-      },
-      {
-        "original_offset": "0xf76",
-        "original_va": "0x48bc16",
-        "length": 3,
-        "native_hex": "00007d",
-        "candidate_hex": "3bca7f"
-      },
-      {
-        "original_offset": "0x105c",
-        "original_va": "0x48bcfc",
-        "length": 28,
-        "native_hex": "8b45fc8b88640100000fbf54d1028b45fc8b88640100000fbf812808",
-        "candidate_hex": "81fac80000007c188b45fc83b868010000027c0c8b4dfc83b9680100"
-      },
-      {
-        "original_offset": "0x1079",
-        "original_va": "0x48bd19",
-        "length": 4,
-        "native_hex": "003bd07f",
-        "candidate_hex": "06750e8b"
-      },
-      {
-        "original_offset": "0x107e",
-        "original_va": "0x48bd1e",
-        "length": 42,
-        "native_hex": "8b4dfc0fb7510881fac80000007c188b45fc83b868010000027c0c8b4dfc83b96801000006750e8b55fc",
-        "candidate_hex": "fc0fb742083dc80000007d498b4dfc0fb751088b45fc8b88640100000fbf54d1028b45fc8b8864010000"
-      },
-      {
-        "original_offset": "0x10a9",
-        "original_va": "0x48bd49",
-        "length": 5,
-        "native_hex": "b742083dc8",
-        "candidate_hex": "bf81280800"
-      },
-      {
-        "original_offset": "0x10af",
-        "original_va": "0x48bd4f",
-        "length": 3,
-        "native_hex": "00007d",
-        "candidate_hex": "3bd07f"
-      },
-      {
-        "original_offset": "0x1153",
-        "original_va": "0x48bdf3",
-        "length": 28,
-        "native_hex": "8b55fc8b82640100000fbf4cc8028b55fc8b82640100000fbf902008",
-        "candidate_hex": "81f9c80000007c188b55fc83ba68010000027c0c8b45fc83b8680100"
-      },
-      {
-        "original_offset": "0x1170",
-        "original_va": "0x48be10",
-        "length": 15,
-        "native_hex": "003bca7f568b45fc0fb7480881f9c8",
-        "candidate_hex": "06750f8b4dfc0fb7510881fac80000"
-      },
-      {
-        "original_offset": "0x1180",
-        "original_va": "0x48be20",
-        "length": 38,
-        "native_hex": "00007c188b55fc83ba68010000027c0c8b45fc83b86801000006750f8b4dfc0fb7510881fac8",
-        "candidate_hex": "7d498b45fc0fb748088b55fc8b82640100000fbf4cc8028b55fc8b82640100000fbf90200800"
-      },
-      {
-        "original_offset": "0x11a7",
-        "original_va": "0x48be47",
-        "length": 3,
-        "native_hex": "00007d",
-        "candidate_hex": "3bca7f"
-      },
-      {
-        "original_offset": "0x123c",
-        "original_va": "0x48bedc",
-        "length": 28,
-        "native_hex": "8b45fc8b88640100000fbf54d1028b45fc8b88640100000fbf811808",
-        "candidate_hex": "81fac80000007c188b45fc83b868010000027c0c8b4dfc83b9680100"
-      },
-      {
-        "original_offset": "0x1259",
-        "original_va": "0x48bef9",
-        "length": 4,
-        "native_hex": "003bd07f",
-        "candidate_hex": "06750e8b"
-      },
-      {
-        "original_offset": "0x125e",
-        "original_va": "0x48befe",
-        "length": 42,
-        "native_hex": "8b4dfc0fb7510881fac80000007c188b45fc83b868010000027c0c8b4dfc83b96801000006750e8b55fc",
-        "candidate_hex": "fc0fb742083dc80000007d498b4dfc0fb751088b45fc8b88640100000fbf54d1028b45fc8b8864010000"
-      },
-      {
-        "original_offset": "0x1289",
-        "original_va": "0x48bf29",
-        "length": 5,
-        "native_hex": "b742083dc8",
-        "candidate_hex": "bf81180800"
-      },
-      {
-        "original_offset": "0x128f",
-        "original_va": "0x48bf2f",
-        "length": 3,
-        "native_hex": "00007d",
-        "candidate_hex": "3bd07f"
-      },
-      {
-        "original_offset": "0x1318",
-        "original_va": "0x48bfb8",
-        "length": 28,
-        "native_hex": "8b55fc8b82640100000fbf4cc8028b55fc8b82640100000fbf90d007",
-        "candidate_hex": "81f9c80000007c188b55fc83ba68010000027c0c8b45fc83b8680100"
-      },
-      {
-        "original_offset": "0x1335",
-        "original_va": "0x48bfd5",
-        "length": 15,
-        "native_hex": "003bca7f6b8b45fc0fb7480881f9c8",
-        "candidate_hex": "06750f8b4dfc0fb7510881fac80000"
-      },
-      {
-        "original_offset": "0x1345",
-        "original_va": "0x48bfe5",
-        "length": 38,
-        "native_hex": "00007c188b55fc83ba68010000027c0c8b45fc83b86801000006750f8b4dfc0fb7510881fac8",
-        "candidate_hex": "7d5e8b45fc0fb748088b55fc8b82640100000fbf4cc8028b55fc8b82640100000fbf90d00700"
-      },
-      {
-        "original_offset": "0x136c",
-        "original_va": "0x48c00c",
-        "length": 3,
-        "native_hex": "00007d",
-        "candidate_hex": "3bca7f"
-      },
-      {
-        "original_offset": "0x140a",
-        "original_va": "0x48c0aa",
-        "length": 43,
-        "native_hex": "8b4dfc8b91640100000fbf44c2028b4dfc8b91640100000fbf8ad00700003bc17f6a8b55fc0fb742083dc8",
-        "candidate_hex": "3dc80000007c188b4dfc83b968010000027c0c8b55fc83ba6801000006750f8b45fc0fb7480881f9c80000"
-      },
-      {
-        "original_offset": "0x1436",
-        "original_va": "0x48c0d6",
-        "length": 38,
-        "native_hex": "00007c188b4dfc83b968010000027c0c8b55fc83ba6801000006750f8b45fc0fb7480881f9c8",
-        "candidate_hex": "7d5e8b55fc0fb742088b4dfc8b91640100000fbf44c2028b4dfc8b91640100000fbf8ad00700"
-      },
-      {
-        "original_offset": "0x145d",
-        "original_va": "0x48c0fd",
-        "length": 3,
-        "native_hex": "00007d",
-        "candidate_hex": "3bc17f"
-      },
-      {
-        "original_offset": "0x14f7",
-        "original_va": "0x48c197",
-        "length": 28,
-        "native_hex": "8b55fc8b82640100000fbf4cc8028b55fc8b82640100000fbf90d007",
-        "candidate_hex": "81f9c80000007c188b55fc83ba68010000027c0c8b45fc83b8680100"
-      }
-    ],
-    "materialized_byte_exact": false
+    "materialized_difference_bytes": 0,
+    "materialized_mismatch_runs": 0,
+    "first_mismatch_va": null,
+    "first_mismatch_runs": [],
+    "materialized_byte_exact": true
   },
   "transitions": [
     {
@@ -585,6 +374,8 @@
     }
   ],
   "source_has_asm_or_emitted_opcodes": false,
-  "whole_owner_exact": false,
-  "qualification": "All 39 first post-ClearBufferedButtons states match in native order; 39 initial ClearBufferedButtons sites match native offsets. Both sides decode to 2873 instructions, but the candidate extent delta is +0 bytes. Equal instruction counts and matching call offsets do not establish code/control-flow/semantics equivalence. Every COFF relocation still requires original-bound verification; this is a natural C++ boss workbench, not an Exact receipt."
+  "raw_coff_object_byte_equal": false,
+  "whole_owner_original_bound_byte_exact": true,
+  "formal_selected_exact_proof": "docs/evidence/character-00-slot04-exact.json",
+  "qualification": "The complete workbench C++ candidate has zero differences after 93 independently checked original call/literal relocations are materialized at their original machine-code operands. The accepted formal proof is the independent selected strict replay recorded in docs/evidence/character-00-slot04-exact.json. The raw COFF object still contains unlinked relocation placeholders."
 }

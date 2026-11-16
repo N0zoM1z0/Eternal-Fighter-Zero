@@ -8161,40 +8161,42 @@ state/action/effects owners remain separately open.
 
 
 <a id="nanase-action-natural"></a>
+<a id="nanase-action-exact"></a>
 
-## Nanase Slot04 natural-C++ action boss (progress only)
+## Nanase Character00 Slot04 action-selection boss — 11,424-byte strict Exact
 
-The 11,424-byte Nanase `Character00::Slot04` action input selector at
-`0x0048ACA0` (original vtable slot4 `0x00788344`) has a full, compilable,
-**ordinary C++ workbench candidate** in
-`workbench/nanase-action/Character00Action-natural.cpp`. It restores the
-original 39 ordered first-after-ClearBufferedButtons state transitions, rather
-than copying the incorrect Makoto command priorities. Nanase-specific work
-includes the `0x96..0x99` bank0 power-up chain with the 252–255 state
-exception, the mutually gated `0x64..0x66` bank1 versus `0x6e..0x70`
-bank0 charge chains, the original `0x100..0x105` options and their air-state
-fallback, the shared `0xfa` command family, and removal of Makoto's
-candidate-only `0xd2` reset branch. This also preserves the original
-normal-button and air-action transition order.
+Nanase's complete **11,424-byte** `Character00::Slot04` action-selection boss
+at `0x0048ACA0` is now recovered as **ordinary natural C++** in
+`src/Character00Action.cpp`. The original `Character00` virtual slot4
+`0x00788344` points to this native owner, whose final `RET` is at
+`0x0048D93F`, directly before the next body at `0x0048D940`; no alignment
+or padding is included in the reconstructed source or matching extent.
 
-After native-driven rewriting of five conditional post-state branches and
-restoring the original operand evaluation order in the ten priority checks,
-the `0x16` action and the three `0x0C/0x0B/0x0A` command guards, the VC7.1
-`/Od /G6 /MT /Gy /W3` source now compiles to exactly **11,424/11,424 bytes**
-and **2,873/2,873 decoded instructions**. All **39 ClearBufferedButtons call
-offsets** and their first post-call state IDs also match the original. This
-is an important structural milestone, but **not whole-owner Exact**.
-Further native-ordered short-circuit tests on the three `0x70/0x6f/0x6e`
-charge tiers bind all **93/93 candidate COFF relocation targets** directly
-to the original native call operands and literal payloads. The fully
-original-operand-materialized candidate differs by **668 bytes / 33 runs**
-(previous equal-extent candidate: 918/44). These are diagnostic comparisons:
-no original bytes are inserted into C++ or the compiled object. Remaining
-register/instruction and local branch differences prevent whole-owner Exact.
-Retain the workbench outside `matches.csv` / `implemented.csv` pending strict
-complete byte parity.
-This is **not** an accepted owner and must not appear in `matches.csv` or
-`implemented.csv`. Rebuild only this TU via
-`workbench/nanase-action/verify_action_progress.py --rebuild`; evidence:
-`docs/evidence/nanase-slot04-natural-progress.json`. Continue correcting
-natural C++ against the native branch conditions, no ASM/PADDING.
+The body reproduces all **39** prioritized action transitions, the original
+`ClearBufferedButtons` call positions, four `FaceOpponent` calls, and the
+Nanase-specific `0x96..0x99` / `0x64..0x66` / `0x6e..0x70` command banks.
+It preserves the mode-bank condition at child offset `0x344C`, the
+`0xFC..0xFF` special transition exception, the jump/air-dash handling,
+`0x48/0x47/0x46` projectile-state fallthrough and the complete ordinary
+button/air-action paths. The exact **short-circuit evaluation order** matters:
+restoring the sequence-duration comparisons ahead of the active-state
+eligibility checks in the `0x70` family, `0x15/0x14`, `0x20/0x1F/0x1E`,
+`0x0C/0x0B/0x0A`, and finally `0x48/0x47/0x46` removed 668 remaining
+native comparison-byte differences naturally, without hand-authoring ASM.
+
+The pinned VC7.1 `/Od /G6 /MT /Gy /W3` **selected single-unit strict replay**
+reports **11,424/11,424 executable bytes Exact**, **zero differences**,
+and **93/93 independently bound original COFF relocations**: 39 direct
+`Secondary::ClearBufferedButtons` calls (target `0x0040F170`), four
+`Secondary::FaceOpponent` calls (target `0x0040E630`), and 50 `DIR32`
+original IEEE-754 constant operands. All floating literal bytes were
+independently verified at their native target addresses. Formal accepted
+certificate: `docs/evidence/character-00-slot04-exact.json`; recipe and
+hashes are in `config/match-units.toml` and `config/matches.csv`.
+
+The former workbench candidate and focused diagnostic verifier remain in
+`workbench/nanase-action/` to preserve the source-level experimentation
+history; formal acceptance is anchored to `src/Character00Action.cpp` and
+its selected strict proof. This does **not** imply Nanase's still-open
+Slot05/Slot06/Slot07 have reached whole-owner Exact. No full cold replay,
+`__asm`, `_emit`, synthetic instruction bytes or padding were used.

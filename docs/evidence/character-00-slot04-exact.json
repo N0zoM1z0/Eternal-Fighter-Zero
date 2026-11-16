@@ -1,0 +1,873 @@
+{
+  "schema_version": 1,
+  "authority": "Canonical Character00 Nanase slot4 vtable operand 0x00788344 -> 0x0048ACA0, complete [0x0048ACA0,0x0048D940) original function ending at RET 0x0048D93F without padding; 39 ClearBufferedButtons calls and 4 FaceOpponent calls independently bound to native, 50 floating constant references checked against original literal bytes.",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 natural authored C++ (15+kb 11,424-byte owner) in src/Character00Action.cpp. One selected-only strict original-bound normal COFF replay proves all 11,424 native code bytes and 93/93 original relocations; no inline ASM, emitted opcodes, artificial padding or full cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 11424,
+      "matched_bytes": 11424,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 135,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048AD27 resolves __real@407f400000000000 at 0x00787C30; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 297,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048ADC9 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 318,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048ADDE resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 477,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048AE7D resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 617,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048AF09 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 734,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048AF7E resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 920,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B038 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 1054,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B0BE resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 1240,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B178 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 1391,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B20F resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 1576,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B2C8 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 1640,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B308 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 1831,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B3C7 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 1909,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B415 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 2099,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B4D3 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 2192,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B530 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 2382,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B5EE resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 2446,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B62E resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 2636,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B6EC resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 2714,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B73A resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 2904,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B7F8 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 2997,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B855 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 3187,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B913 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 3235,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B943 resolves __real@407f400000000000 at 0x00787C30; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 3442,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BA12 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 3463,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BA27 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 3723,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BB2B resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 3744,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BB40 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 3976,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BC28 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 3997,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BC3D resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 4065,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BC81 resolves __real@407f400000000000 at 0x00787C30; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 4149,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BCD5 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 4289,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BD61 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 4396,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BDCC resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 4537,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BE59 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 4629,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BEB5 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 4769,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BF41 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 4861,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BF9D resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 4990,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C01E resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 5103,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C08F resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 5231,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C10F resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 5344,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C180 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 5469,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C1FD resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 5517,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C22D resolves __real@407f400000000000 at 0x00787C30; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 5601,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C281 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 5741,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C30D resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 5848,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C378 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 5989,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C405 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 6081,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C461 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 6221,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C4ED resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 6296,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C538 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 6376,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C588 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 6406,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C5A6 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 6531,
+          "target": 7896648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c044000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C623 resolves __real@c044000000000000 at 0x00787E48; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 6687,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C6BF resolves ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 6794,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C72A resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 6824,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C748 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 7079,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C847 resolves ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 7145,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C889 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 7261,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C8FD resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 7291,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C91B resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 7481,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C9D9 resolves ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 7567,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CA2F resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 7597,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CA4D resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 7780,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CB04 resolves ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 7892,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CB74 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 8035,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CC03 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 8236,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CCCC resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 8286,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CCFE resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 8455,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CDA7 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 8680,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CE88 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 8905,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CF69 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 9024,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CFE0 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 9074,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D012 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 9243,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D0BB resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 9469,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D19D resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 9649,
+          "target": 7896640,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c051800000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D251 resolves __real@c051800000000000 at 0x00787E40; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 9679,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D26F resolves __real@4051800000000000 at 0x00787E38; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 9757,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D2BD resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 9933,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D36D resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 10052,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D3E4 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 10102,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D416 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 10179,
+          "target": 7894472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c059000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D463 resolves __real@c059000000000000 at 0x007875C8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 10213,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D485 resolves __real@4059000000000000 at 0x007875D0; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 10241,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D4A1 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 10455,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D577 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 10627,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D623 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 10853,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D705 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 10947,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D763 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 10986,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D78A resolves __real@c03e000000000000 at 0x00787E30; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 11020,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D7AC resolves __real@403e000000000000 at 0x00787D88; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 11234,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D882 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        },
+        {
+          "offset": 11407,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D92F resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked.",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "1a5803d5d30668182c50e3cd38b72810566501758cb35b1134503aea4ebbfcdf",
+      "target_extent_sha256": "1a5803d5d30668182c50e3cd38b72810566501758cb35b1134503aea4ebbfcdf",
+      "unit": "character-00-slot04",
+      "symbol": "?Slot04@Character00@@UAEXXZ",
+      "target_address": "0x0048ACA0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "81328a806cf654bfe7466d0d942526a7f64b43a36f274f981e15876c9860cde5",
+      "object_sha256": "18b2500cb8d2180f86c69d75f7c9d00f3a64aae5f06b0b71c5685cf8e0563779",
+      "source_sha256": "407487a4cd3df623159e4a9e199421e363bc3a4d4a38207a4f62f3d295e7c5a0",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c18adc8432353d05fcc667c597fcbcdfd91295a220c57d29bd950bebb3dd7f5c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "53f230bd3fd4d71e8298efef6ba22464fdf773a2ca448267ae59f535972cf3da",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

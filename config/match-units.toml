@@ -162469,3 +162469,665 @@ object = "build/match-units/character-00-slot02/Character00Commands.obj"
 symbol = "?Slot02@Character00@@UAEXXZ"
 target_address = 0x0048E290
 size = 5108
+
+
+[units.character-00-slot04]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character00Action.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-00-slot04/Character00Action.obj"
+symbol = "?Slot04@Character00@@UAEXXZ"
+target_address = 0x0048ACA0
+size = 11424
+
+[[units.character-00-slot04.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048AD27 resolves __real@407f400000000000 at 0x00787C30; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 297
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048ADC9 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 318
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048ADDE resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 477
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048AE7D resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 617
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048AF09 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 734
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048AF7E resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 920
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B038 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 1054
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B0BE resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 1240
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B178 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 1391
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B20F resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 1576
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B2C8 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 1640
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B308 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 1831
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B3C7 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 1909
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B415 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 2099
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B4D3 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 2192
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B530 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 2382
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B5EE resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 2446
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B62E resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 2636
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B6EC resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 2714
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B73A resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 2904
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B7F8 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 2997
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B855 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 3187
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B913 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 3235
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048B943 resolves __real@407f400000000000 at 0x00787C30; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 3442
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BA12 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 3463
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BA27 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 3723
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BB2B resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 3744
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BB40 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 3976
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BC28 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 3997
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BC3D resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 4065
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BC81 resolves __real@407f400000000000 at 0x00787C30; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 4149
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BCD5 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 4289
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BD61 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 4396
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BDCC resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 4537
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BE59 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 4629
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BEB5 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 4769
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BF41 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 4861
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048BF9D resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 4990
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C01E resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 5103
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C08F resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 5231
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C10F resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 5344
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C180 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 5469
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C1FD resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 5517
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C22D resolves __real@407f400000000000 at 0x00787C30; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 5601
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C281 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 5741
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C30D resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 5848
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C378 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 5989
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C405 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 6081
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C461 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 6221
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C4ED resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 6296
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C538 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 6376
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C588 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 6406
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C5A6 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 6531
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787E48
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C623 resolves __real@c044000000000000 at 0x00787E48; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 6687
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C6BF resolves ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 6794
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C72A resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 6824
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C748 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 7079
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C847 resolves ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 7145
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C889 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 7261
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C8FD resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 7291
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C91B resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 7481
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048C9D9 resolves ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 7567
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CA2F resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 7597
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CA4D resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 7780
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CB04 resolves ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 7892
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CB74 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 8035
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CC03 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 8236
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CCCC resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 8286
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CCFE resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 8455
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CDA7 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 8680
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CE88 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 8905
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CF69 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 9024
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048CFE0 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 9074
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D012 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 9243
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D0BB resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 9469
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D19D resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 9649
+type = "DIR32"
+symbol = "__real@c051800000000000"
+target = 0x00787E40
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D251 resolves __real@c051800000000000 at 0x00787E40; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 9679
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D26F resolves __real@4051800000000000 at 0x00787E38; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 9757
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D2BD resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 9933
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D36D resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 10052
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D3E4 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 10102
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D416 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 10179
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875C8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D463 resolves __real@c059000000000000 at 0x007875C8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 10213
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D485 resolves __real@4059000000000000 at 0x007875D0; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 10241
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D4A1 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 10455
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D577 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 10627
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D623 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 10853
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D705 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 10947
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D763 resolves __real@0000000000000000 at 0x007872F8; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 10986
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787E30
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D78A resolves __real@c03e000000000000 at 0x00787E30; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 11020
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787D88
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D7AC resolves __real@403e000000000000 at 0x00787D88; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 11234
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D882 resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+[[units.character-00-slot04.relocations]]
+offset = 11407
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D92F resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."

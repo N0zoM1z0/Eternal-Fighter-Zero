@@ -549,25 +549,21 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
-The next Nanase action Boss, `Character00::Slot04` at `0x0048ACA0`
-(11,424 native bytes), now has ordinary-C++ workbench code at
-`workbench/nanase-action/Character00Action-natural.cpp`. It reproduces the
-native order of all 39 first-after-ClearBufferedButtons state transitions,
-including both bank-mode charge chains, special air-state fallbacks, and the
-final button group. Rewriting five post-state conditions and restoring the
-native evaluation order of ten priority tests, the `0x16` action and three
-`0x0C/0x0B/0x0A` guards yields a candidate with exactly **11,424/11,424 code
-bytes** and **2,873/2,873 decoded instructions**. All **39/39 native
-ClearBufferedButtons call offsets and subsequent first state IDs** agree.
-**Not Exact:** matching extents, counts and selected call offsets are not
-whole-code byte or control-flow equivalence. Reordering the three bank0
-`0x70/0x6f/0x6e` short-circuit guards now verifies **93/93 original-bound
-COFF targets** and reduces materialized differences from 918/44 to **668
-bytes / 33 runs**. Register/branch/other instruction bytes remain open.
-No formal ledger promotion.
-Rebuild only that TU with
-`scripts/repo-python workbench/nanase-action/verify_action_progress.py --rebuild`;
-evidence `docs/evidence/nanase-slot04-natural-progress.json`.
+Nanase's complete **11,424-byte** action-selection Boss
+`Character00::Slot04` at `0x0048ACA0` is now **strict natural-C++ Exact**.
+The accepted source is `src/Character00Action.cpp`, not just the previous
+workbench prototype; all 39 ordered action call sites and state IDs match.
+The pinned VC7.1 selected-only replay verifies **11,424/11,424 native code
+bytes, zero differences, all 93 original call/literal relocations** (39
+ClearBufferedButtons, 4 FaceOpponent, 50 IEEE-754 operands). Recovered
+short-circuit ordering across the final `0x70`, `0x15`, `0x20`, `0x0C`, and
+`0x48` command families eliminated the remaining 668 mismatched bytes with
+ordinary C++, not ASM or padding. The complete native owner ends at
+`0x0048D93F` (RET), directly adjacent to the next function. Formal proof:
+`docs/evidence/character-00-slot04-exact.json`; exact ledger entry:
+`character-00-slot04`. Retain the workbench diagnostic history under
+`workbench/nanase-action/`; do not infer Slot05/Slot06/Slot07 acceptance.
+No all-unit cold replay.
 
 The Nanase 5,108-byte input command Boss `Character00::Slot02`
 (`0x0048E290`, virtual slot2) is now **whole-owner byte Exact** from the actual

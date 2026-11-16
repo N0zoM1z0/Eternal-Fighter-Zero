@@ -168,9 +168,10 @@ def main():
         for i,(n,c) in enumerate(zip(native_states,candidate_states))]
     aligned_count=sum(n[1]==c[1] for n,c in zip(native_calls,candidate_calls))
     aligned_prefix=next((i for i,(n,c) in enumerate(zip(native_calls,candidate_calls)) if n[1]!=c[1]),len(native_calls))
+    original_bound_match=(len(candidate)==LENGTH and relocation_audit.get('materialized_byte_exact',False) and relocation_audit['original_targets_verified']==len(relocs))
     evidence={
         'schema_version':1,
-        'status':'natural-cpp-boss-progress-not-exact',
+        'status':('workbench-original-bound-byte-parity-formal-proof-separate' if original_bound_match else 'natural-cpp-boss-progress-not-exact'),
         'owner':'Character00::Slot04',
         'original':{'address':hex(ADDRESS),'code_bytes':LENGTH,'vtable_slot4':hex(0x00788344),
                     'sha256':hashlib.sha256(original).hexdigest(),
@@ -192,16 +193,19 @@ def main():
         'original_bound_relocation_diagnostic':relocation_audit,
         'transitions':transition_rows,
         'source_has_asm_or_emitted_opcodes':False,
-        'whole_owner_exact':candidate==original,
+        'raw_coff_object_byte_equal':candidate==original,
+        'whole_owner_original_bound_byte_exact':original_bound_match,
+        'formal_selected_exact_proof':'docs/evidence/character-00-slot04-exact.json',
         'qualification':(
-            'All 39 first post-ClearBufferedButtons states match in native order; '
-            f'{aligned_prefix} initial ClearBufferedButtons sites match native offsets. '
-            f'Both sides decode to {len(native_rows)} instructions, but the '
-            f'candidate extent delta is {len(candidate)-LENGTH:+d} bytes. '
-            'Equal instruction counts and matching call offsets do not establish '
-            'code/control-flow/semantics equivalence. Every COFF relocation still '
-            'requires original-bound verification; this is a natural C++ boss '
-            'workbench, not an Exact receipt.'),
+            'The complete workbench C++ candidate has zero differences after '
+            '93 independently checked original call/literal relocations are '
+            'materialized at their original machine-code operands. The accepted '
+            'formal proof is the independent selected strict replay recorded in '
+            'docs/evidence/character-00-slot04-exact.json. The raw COFF object '
+            'still contains unlinked relocation placeholders.'
+            if original_bound_match else
+            'This ordinary C++ workbench still differs from native after '
+            'original target verification. Do not infer whole-owner Exact.'),
     }
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps(evidence,indent=2)+'\n')
@@ -213,6 +217,6 @@ def main():
                       'original_targets_verified':relocation_audit['original_targets_verified'],
                       'materialized_difference_bytes':relocation_audit.get('materialized_difference_bytes'),
                       'materialized_mismatch_runs':relocation_audit.get('materialized_mismatch_runs'),
-                      'whole_owner_exact':evidence['whole_owner_exact']},indent=2))
+                      'whole_owner_original_bound_byte_exact':evidence['whole_owner_original_bound_byte_exact']},indent=2))
 
 if __name__=='__main__':main()

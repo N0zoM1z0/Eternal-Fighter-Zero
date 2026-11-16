@@ -499,3 +499,4 @@ address,end,size,status,evidence
 0x0048ABB0,0x0048ABEC,60,reviewed,docs/KNOWLEDGE_BASE.md#nanase-alternate-patterns; native return and following INT3 excluded
 0x0048DD00,0x0048E138,1080,reviewed,docs/KNOWLEDGE_BASE.md#nanase-gauge-render; complete RET at 0x0048E137 and following INT3 excluded
 0x0048E290,0x0048F684,5108,reviewed,docs/KNOWLEDGE_BASE.md#nanase-command-recognition; complete original RET 0x0048F683 followed by 12 CC bytes before 0x0048F690
+0x0048ACA0,0x0048D940,11424,reviewed,docs/KNOWLEDGE_BASE.md#nanase-action-exact; original 11424-byte complete body RET at 0x0048D93F before next function at 0x0048D940; no padding

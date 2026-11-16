@@ -1,40 +1,37 @@
-# Nanase Character00::Slot04 — natural C++ action selection (open boss)
+# Nanase Character00::Slot04 — accepted strict natural-C++ boss
 
-Native complete owner: `0x0048ACA0`, 11,424 bytes, vtable slot4 at
-`0x00788344`. Candidate: `Character00Action-natural.cpp`, a genuine C++
-translation unit that remains outside the exact tracking ledgers.
+The complete native `Character00::Slot04` owner at `0x0048ACA0` (11,424 bytes,
+original vtable slot4 at `0x00788344`) has now been promoted to **accepted
+ordinary C++** in `src/Character00Action.cpp`. The pinned VC7.1 normal-COFF
+selected replay reports **11,424/11,424 bytes Exact**, zero differences and
+**93/93 original-bound relocations** (39 buffered-button clearing calls,
+4 facing calls, 50 floating literals). See the authoritative
+`docs/evidence/character-00-slot04-exact.json` and formal matching recipe
+`config/match-units.toml` (`character-00-slot04`). No inline assembly,
+artificial instruction emission or padding was used.
 
-The candidate is adapted from the already reconstructed Makoto action selector,
-then corrected against Nanase's original executable for the 22 priority
-special-action transitions and the final button/air transition groups. Its
-normal VC7.1 `/Od /G6 /MT /Gy /W3` build has **11,424 code bytes** (native
-11,424) and 2,873 decoded instructions (native 2,873). All **39 native ClearBufferedButtons call sites now align at identical
-offsets**, thanks to restoring the original evaluation order of the ten
-high-priority C++ conditions and the three final command guards (`0xC/0xB/0xA`). All **39 native
-first-after-ClearBufferedButtons action state IDs**, including 0x133/0x136,
-the 0x66 and 0x70 multi-command banks, 0x102/0x101/0x100, the 0xfa group,
-and the ordinary button/air states, are represented **in matching native order**.
+`Character00Action-natural.cpp` remains as the exploratory workbench history.
+It reconstructs all 39 action paths, Nanase's bank0/bank1 command priorities,
+separate air recovery, and special projectile-action fallthrough. The decisive
+natural codegen corrections were the short-circuit ordering of original
+sequence-duration and active-state eligibility guards in the `0x70`, `0x15`,
+`0x20`, `0x0C` and `0x48` action families. Earlier intermediate artifacts
+were 918, 668 and 252 relocation-bound differing bytes; all reached zero
+without manually changing compiled machine code.
 
-Not Exact! The count and state-ID alignment does not establish every input
-guard, fallthrough, side effect, branch target or relocation binding. The natural candidate now matches the **whole-owner extent and instruction
-count**, but not yet the machine code. Instructions, registers, branch
-destinations and COFF relocations still require full byte-level validation; native-specific fallthroughs remain unverified in the final
-button/air paths. The native-order predicates of the three 0x70-family
-priority branches reduced original-bound, relocation-materialized differences
-from 918 to **668 bytes / 33 runs**, with **93/93 native COFF targets verified**
-(all compile-time float literals and 43 direct calls). No executable or C++
-source is patched by the diagnostic materializer. Do not promote this
-source to `src/`, `implemented.csv` or `matches.csv` until independently
-reviewed full-function native matching; never use ASM or artificial padding.
-
-Rebuild/audit only the touched TU:
+Only this workbench TU may be rebuilt diagnostically with:
 
 ```bash
 scripts/repo-python workbench/nanase-action/verify_action_progress.py --rebuild
 ```
 
-Progress proof:
-`docs/evidence/nanase-slot04-natural-progress.json`. The verifier checks the
-canonical original SHA, vtable slot, pinned object receipt, full instruction
-counts and all 39 original first action state transitions, without performing a
-cold all-unit replay. The temporary probe sources remain under `.analysis/`.
+The diagnostic proof is `docs/evidence/nanase-slot04-natural-progress.json`.
+The **accepted** strict replay is instead:
+
+```bash
+scripts/repo-python scripts/replay-exact-units.py --unit character-00-slot04
+scripts/repo-python scripts/validate-tracking.py --check-proofs --unit character-00-slot04
+```
+
+The other Nanase Slot05/Slot06/Slot07 bosses remain open; no full all-unit cold
+replay was performed.

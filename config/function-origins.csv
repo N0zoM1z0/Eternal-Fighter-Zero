@@ -240,7 +240,7 @@ address,origin,status,evidence
 0x0048ABF0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-lifecycle
 0x0048AC30,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-lifecycle
 0x0048AC80,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-lifecycle
-0x0048ACA0,unknown,unreviewed,
+0x0048ACA0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-action-exact
 0x0048D940,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-alternate-patterns
 0x0048DD00,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-gauge-render
 0x0048E140,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-mode-switch
