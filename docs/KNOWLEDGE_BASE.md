@@ -8158,3 +8158,32 @@ normalized or partial instruction-structure metric. Public selected strict
 certificate: `docs/evidence/character-00-slot02-exact.json`. No ASM, `_emit`,
 forced opcode bytes, padding or full all-unit cold replay. Nanase's other large
 state/action/effects owners remain separately open.
+
+
+<a id="nanase-action-natural"></a>
+
+## Nanase Slot04 natural-C++ action boss (progress only)
+
+The 11,424-byte Nanase `Character00::Slot04` action input selector at
+`0x0048ACA0` (original vtable slot4 `0x00788344`) has a full, compilable,
+**ordinary C++ workbench candidate** in
+`workbench/nanase-action/Character00Action-natural.cpp`. It restores the
+original 39 ordered first-after-ClearBufferedButtons state transitions, rather
+than copying the incorrect Makoto command priorities. Nanase-specific work
+includes the `0x96..0x99` bank0 power-up chain with the 252–255 state
+exception, the mutually gated `0x64..0x66` bank1 versus `0x6e..0x70`
+bank0 charge chains, the original `0x100..0x105` options and their air-state
+fallback, the shared `0xfa` command family, and removal of Makoto's
+candidate-only `0xd2` reset branch. This also preserves the original
+normal-button and air-action transition order.
+
+The current pinned VC7.1 `/Od /G6 /MT /Gy /W3` candidate is **11,426 bytes**
+versus the 11,424 native bytes and decodes into **2,878 versus 2,873**
+instructions. All **39** native first state destinations and their order are
+confirmed by a focused original-bound verifier, but 5 instruction and 2-byte
+net differences remain and the full control flow/COFF bindings are not Exact.
+This is **not** an accepted owner and must not appear in `matches.csv` or
+`implemented.csv`. Rebuild only this TU via
+`workbench/nanase-action/verify_action_progress.py --rebuild`; evidence:
+`docs/evidence/nanase-slot04-natural-progress.json`. Continue correcting
+natural C++ against the native branch conditions, no ASM/PADDING.

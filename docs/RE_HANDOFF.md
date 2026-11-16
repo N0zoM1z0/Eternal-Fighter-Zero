@@ -549,6 +549,18 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+The next Nanase action Boss, `Character00::Slot04` at `0x0048ACA0`
+(11,424 native bytes), now has ordinary-C++ workbench code at
+`workbench/nanase-action/Character00Action-natural.cpp`. It reproduces the
+native order of all 39 first-after-ClearBufferedButtons state transitions,
+including both bank-mode charge chains, special air-state fallbacks, and the
+final button group. Target-backed focused audit shows 11,426 candidate bytes
+and 2,878 instructions versus native 11,424 / 2,873. **Not Exact**: 5
+instruction/+2-byte net mismatch plus unresolved branches/relocs, so no
+formal ledger promotion. Rebuild only that TU with
+`scripts/repo-python workbench/nanase-action/verify_action_progress.py --rebuild`;
+evidence `docs/evidence/nanase-slot04-natural-progress.json`.
+
 The Nanase 5,108-byte input command Boss `Character00::Slot02`
 (`0x0048E290`, virtual slot2) is now **whole-owner byte Exact** from the actual
 15-priority-scan C++ reconstruction in `src/Character00Commands.cpp`. The
