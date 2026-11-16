@@ -1470,10 +1470,11 @@ body, final RET 0x18 included, a common base-constructor call to 0x40EAE0 in the
 first 64 bytes, and a byte player argument at the sixth original stack slot.
 Each dispatcher table entry was separately decoded and checked against its
 allocation immediate and constructor call. This establishes 23 reviewed
-boundary/origin rows. Two constructors now also have natural C++ source and
-complete selected exact credit: selection ID2 `Character04::Character04` (442
-bytes) and selection ID13 `Character13::Character13` (383 bytes). The remaining
-21 are still boundary/origin only. Resource identifiers below are original asset
+boundary/origin rows. Three constructors now also have natural C++ source and
+complete selected exact credit: selection ID1 `Character01::Character01` (436
+bytes), selection ID2 `Character04::Character04` (442 bytes), and selection ID13
+`Character13::Character13` (383 bytes). The remaining 20 are still boundary/origin
+only. Resource identifiers below are original asset
 strings, not claims about original C++ class names. Character00..Character23
 remain provisional names, with no separate Character22 declaration because that
 case reuses Character10.
@@ -1504,6 +1505,24 @@ case reuses Character10.
 | 21 | minagi | 0x3458 | 0x005A9FA0 | 469 |
 | 22 | nayuki | 0x3460 | 0x00461090 | 455 |
 | 23 | misuzu | 0x3488 | 0x00519E00 | 615 |
+
+### Character01 constructor (selection ID1 / `ayu`): complete exact native code generation (2026-11-16)
+
+The reviewed selection-ID 1 constructor at `0x006E8130` is the provisional
+`Character01::Character01` owner (vtable `0x00788E4C`, resource string `ayu`).
+Its natural implementation is `src/Character01Constructor.cpp`. The selected
+VC7.1 `/Od /G6 /MT /Gy /W3` unit matches **436/436 native bytes**, with zero
+differences and four original-bound relocations: `Secondary` base construction
+at `0x0040EAE0`, the Character01 vtable at `0x00788E4C`, the NUL-terminated
+`ayu` string at `0x00788E48`, and CRT `strcpy` at `0x00778080`.
+
+The constructor sets `surfaceCount=0x2CA`, initializes six child integers and
+five collision X/Y pairs, writes command count 4 and the observed command bytes
+at indices 0 and 2–6 (leaving index 1 untouched), and clears three 64-int arrays
+at offsets `0x3150`, `0x3250` and `0x3350`. Its private local field view preserves
+the allocation-bounded `0x3450` object extent without changing shared headers.
+Proof: `docs/evidence/character-01-constructor-exact.json`. Only this one TU was
+built and compared; no full cold replay.
 
 ### Character04 constructor (selection ID2 / `mai`): complete exact native code generation (2026-11-16)
 

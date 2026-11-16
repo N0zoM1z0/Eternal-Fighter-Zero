@@ -161800,3 +161800,41 @@ type = "REL32"
 symbol = "_strcpy"
 target = 0x00778080
 evidence = "resources/EFZ.exe @ 0x006163F1: direct call to CRT strcpy; destination is Secondary.resourceName at +0x94"
+
+[units.character-01-constructor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character01Constructor.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-01-constructor/Character01Constructor.obj"
+symbol = "??0Character01@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target_address = 0x006E8130
+size = 436
+
+[[units.character-01-constructor.relocations]]
+offset = 37
+type = "REL32"
+symbol = "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x0040EAE0
+evidence = "resources/EFZ.exe @ 0x006E8154: direct call to reviewed Secondary constructor; all six constructor arguments match"
+
+[[units.character-01-constructor.relocations]]
+offset = 46
+type = "DIR32"
+symbol = "??_7Character01@@6B@"
+target = 0x00788E4C
+evidence = "resources/EFZ.exe @ 0x006E815E: original Character01 child vptr store; the selected vtable is independently referenced by this constructor"
+
+[[units.character-01-constructor.relocations]]
+offset = 51
+type = "DIR32"
+symbol = "$SG62363"
+target = 0x00788E48
+evidence = "resources/EFZ.exe @ 0x006E8163: original resource-name argument; exact ayu NUL bytes verified at 0x788E48"
+
+[[units.character-01-constructor.relocations]]
+offset = 66
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "resources/EFZ.exe @ 0x006E8171: direct call to CRT strcpy; destination is Secondary.resourceName at +0x94"
