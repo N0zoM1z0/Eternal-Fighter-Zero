@@ -559,8 +559,11 @@ native evaluation order of ten priority tests, the `0x16` action and three
 `0x0C/0x0B/0x0A` guards yields a candidate with exactly **11,424/11,424 code
 bytes** and **2,873/2,873 decoded instructions**. All **39/39 native
 ClearBufferedButtons call offsets and subsequent first state IDs** agree.
-**Not Exact:** matching extents, counts and selected call offsets are not byte
-or whole-control-flow equivalence; register/branch/COFF differences remain.
+**Not Exact:** matching extents, counts and selected call offsets are not
+whole-code byte or control-flow equivalence. Reordering the three bank0
+`0x70/0x6f/0x6e` short-circuit guards now verifies **93/93 original-bound
+COFF targets** and reduces materialized differences from 918/44 to **668
+bytes / 33 runs**. Register/branch/other instruction bytes remain open.
 No formal ledger promotion.
 Rebuild only that TU with
 `scripts/repo-python workbench/nanase-action/verify_action_progress.py --rebuild`;

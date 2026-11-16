@@ -19,7 +19,11 @@ Not Exact! The count and state-ID alignment does not establish every input
 guard, fallthrough, side effect, branch target or relocation binding. The natural candidate now matches the **whole-owner extent and instruction
 count**, but not yet the machine code. Instructions, registers, branch
 destinations and COFF relocations still require full byte-level validation; native-specific fallthroughs remain unverified in the final
-button/air paths. Do not promote this
+button/air paths. The native-order predicates of the three 0x70-family
+priority branches reduced original-bound, relocation-materialized differences
+from 918 to **668 bytes / 33 runs**, with **93/93 native COFF targets verified**
+(all compile-time float literals and 43 direct calls). No executable or C++
+source is patched by the diagnostic materializer. Do not promote this
 source to `src/`, `implemented.csv` or `matches.csv` until independently
 reviewed full-function native matching; never use ASM or artificial padding.
 

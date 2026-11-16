@@ -8183,10 +8183,16 @@ the `0x16` action and the three `0x0C/0x0B/0x0A` command guards, the VC7.1
 `/Od /G6 /MT /Gy /W3` source now compiles to exactly **11,424/11,424 bytes**
 and **2,873/2,873 decoded instructions**. All **39 ClearBufferedButtons call
 offsets** and their first post-call state IDs also match the original. This
-is an important structural milestone, but **not whole-owner Exact**: the
-register/instruction bytes, complete local branch destinations and all COFF
-relocation targets are not yet proven identical. Retain this candidate outside
-`matches.csv` / `implemented.csv` pending complete strict verification.
+is an important structural milestone, but **not whole-owner Exact**.
+Further native-ordered short-circuit tests on the three `0x70/0x6f/0x6e`
+charge tiers bind all **93/93 candidate COFF relocation targets** directly
+to the original native call operands and literal payloads. The fully
+original-operand-materialized candidate differs by **668 bytes / 33 runs**
+(previous equal-extent candidate: 918/44). These are diagnostic comparisons:
+no original bytes are inserted into C++ or the compiled object. Remaining
+register/instruction and local branch differences prevent whole-owner Exact.
+Retain the workbench outside `matches.csv` / `implemented.csv` pending strict
+complete byte parity.
 This is **not** an accepted owner and must not appear in `matches.csv` or
 `implemented.csv`. Rebuild only this TU via
 `workbench/nanase-action/verify_action_progress.py --rebuild`; evidence:

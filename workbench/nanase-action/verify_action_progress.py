@@ -98,6 +98,68 @@ def main():
     for r in relocs:relocs_by_symbol[r['symbol']]=relocs_by_symbol.get(r['symbol'],0)+1
     if relocs_by_symbol.get('?FaceOpponent@Secondary@@QAEHXZ')!=4:
         raise AssertionError('Expected four natural FaceOpponent calls')
+
+    relocation_audit = {
+        'source_rel32_sites':sum(r['type']=='REL32' for r in relocs),
+        'source_dir32_sites':sum(r['type']=='DIR32' for r in relocs),
+        'original_targets_verified':0,
+        'unverified_sites':[],
+        'code_extent_equal':len(candidate)==LENGTH,
+        'comparison_qualification':'Only original byte positions of independently verified COFF operands are materialized for diagnostic comparison; no candidate source or executable is patched.',
+    }
+    materialized=bytearray(candidate)
+    supported_calls={
+        '?ClearBufferedButtons@Secondary@@QAEXXZ':0x0040F170,
+        '?FaceOpponent@Secondary@@QAEHXZ':0x0040E630,
+    }
+    if len(candidate)==LENGTH:
+        for r in relocs:
+            off=r['offset']
+            if off+4>LENGTH:
+                raise AssertionError(('out-of-bound relocation',r))
+            operand=original[off:off+4]
+            if r['type']=='REL32':
+                target=(ADDRESS+off+4+struct.unpack('<i',operand)[0])&0xffffffff
+                verified=(target==supported_calls.get(r['symbol']))
+            elif r['type']=='DIR32' and r['symbol'].startswith('__real@'):
+                target=struct.unpack('<I',operand)[0]
+                payload=bytes.fromhex(r['symbol'][7:])[::-1]
+                verified=target_bytes(image,target,len(payload))==payload
+            else:
+                target=0
+                verified=False
+            if verified:
+                relocation_audit['original_targets_verified']+=1
+                materialized[off:off+4]=operand
+            else:
+                relocation_audit['unverified_sites'].append({
+                    'offset':hex(off),'symbol':r['symbol'],
+                    'original_target':hex(target), 'type':r['type']})
+        if relocation_audit['unverified_sites']:
+            raise AssertionError(('Not all original relocation targets were verified',
+                                  relocation_audit['unverified_sites']))
+        differences=[i for i,(a,b) in enumerate(zip(materialized,original)) if a!=b]
+        groups=[]
+        i=0
+        while i<LENGTH:
+            if materialized[i]==original[i]:
+                i+=1
+                continue
+            start=i
+            while i<LENGTH and materialized[i]!=original[i]:
+                i+=1
+            groups.append({'original_offset':hex(start),
+                           'original_va':hex(ADDRESS+start),
+                           'length':i-start,
+                           'native_hex':original[start:i].hex(),
+                           'candidate_hex':bytes(materialized[start:i]).hex()})
+        relocation_audit.update({
+            'materialized_difference_bytes':len(differences),
+            'materialized_mismatch_runs':len(groups),
+            'first_mismatch_va':groups[0]['original_va'] if groups else None,
+            'first_mismatch_runs':groups[:30],
+            'materialized_byte_exact':not differences,
+        })
     transition_rows=[
         {'ordinal':i+1,'native_call_va':hex(ADDRESS+native_calls[i][1]),
          'candidate_call_offset':hex(candidate_calls[i][1]),
@@ -127,6 +189,7 @@ def main():
         'all_39_first_action_state_targets_match_in_order':True,
         'native_call_offsets_aligned_count':aligned_count,
         'native_call_offsets_aligned_prefix':aligned_prefix,
+        'original_bound_relocation_diagnostic':relocation_audit,
         'transitions':transition_rows,
         'source_has_asm_or_emitted_opcodes':False,
         'whole_owner_exact':candidate==original,
@@ -147,6 +210,9 @@ def main():
                       'native_instruction_count':len(native_rows),
                       'action_transitions':len(transition_rows),
                       'code_size_delta':len(candidate)-LENGTH,
+                      'original_targets_verified':relocation_audit['original_targets_verified'],
+                      'materialized_difference_bytes':relocation_audit.get('materialized_difference_bytes'),
+                      'materialized_mismatch_runs':relocation_audit.get('materialized_mismatch_runs'),
                       'whole_owner_exact':evidence['whole_owner_exact']},indent=2))
 
 if __name__=='__main__':main()

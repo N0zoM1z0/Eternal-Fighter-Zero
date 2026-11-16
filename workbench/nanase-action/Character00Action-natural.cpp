@@ -70,19 +70,19 @@ void Character00::Slot04()
             field0008 = 0x12f;
             return;
         }
-        if ((recognizedCommand == 0x70) && (meter >= 3000) && (positionY == 0.0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (C00->field344c == 0) && (((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) && (sequences[field0008].field0002 <= sequences[302].field0000)) {
+        if ((recognizedCommand == 0x70) && (meter >= 3000) && (positionY == 0.0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (C00->field344c == 0) && (sequences[field0008].field0002 <= sequences[302].field0000) && (((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x12e;
             return;
         }
-        if (((recognizedCommand == 0x6f || recognizedCommand == 0x70)) && (meter >= 2000) && (positionY == 0.0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (C00->field344c == 0) && (((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) && (sequences[field0008].field0002 <= sequences[301].field0000)) {
+        if (((recognizedCommand == 0x6f || recognizedCommand == 0x70)) && (meter >= 2000) && (positionY == 0.0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (C00->field344c == 0) && (sequences[field0008].field0002 <= sequences[301].field0000) && (((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x12d;
             return;
         }
-        if (((recognizedCommand == 0x6e || recognizedCommand == 0x6f || recognizedCommand == 0x70)) && (meter >= 1000) && (positionY == 0.0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (C00->field344c == 0) && (((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) && (sequences[field0008].field0002 <= sequences[300].field0000)) {
+        if (((recognizedCommand == 0x6e || recognizedCommand == 0x6f || recognizedCommand == 0x70)) && (meter >= 1000) && (positionY == 0.0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (C00->field344c == 0) && (sequences[field0008].field0002 <= sequences[300].field0000) && (((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 300;
