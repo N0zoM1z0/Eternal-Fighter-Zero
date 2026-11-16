@@ -46,12 +46,13 @@ extent and dispatch data do not by themselves establish whole-function Exact.
 then verifies selected code against the canonical PE. Its evidence is
 `docs/evidence/shiori-slot06-exact-regions.json`.
 
-- **Earlier selected groups:** 63 complete bodies across **150–158, 161–171,
-  178, 180, 200–209, 220–221, 230–235 and 248–270** are now byte-exact.
-  Together they contribute **28,756 native code bytes** and **516 original-bound
-  COFF relocations** (187 calls and 329 float operands). This includes case203
-  at 808 bytes, case252 at 909 bytes and case264 at 937 bytes; every call and
-  float operand is bound to the canonical PE, not inferred from opcode similarity.
+- **Earlier selected groups:** 102 complete bodies across **50–77, 81–87,
+  96–99, 150–158, 161–171, 178, 180, 200–209, 220–221, 230–235 and 248–270**
+  are now byte-exact. Together they contribute **45,788 native code bytes**
+  and **944 original-bound COFF relocations** (218 calls and 726 float
+  operands). This includes case203 at 808 bytes, case252 at 909 bytes and
+  case264 at 937 bytes; every call and float operand is bound to the canonical
+  PE, not inferred from opcode similarity.
 - **Case303:** the complete **611-byte** case body is byte-identical after
   materializing its **nine original-bound REL32 call operands**. This removes
   the former EAX/ECX/DX register-allocation cascade beginning at
@@ -115,13 +116,14 @@ then verifies selected code against the canonical PE. Its evidence is
   The distinct 2000-point meter cost, effect0x45, local-effect pair and
   threshold8 loop all match the original instruction order.
 
-Across the eighty-three complete cases (150–158, 161–171, 178, 180, 200–209,
-220–221, 230–235, 248–270 and 300–319), **41,915 native code bytes** are
-byte-exact after materializing **721 COFF relocations** (329 calls and 392
-float operands) plus eighteen raw `__ftol2` call operands. The focused resolver
-restores the native frame and 72 individually checked conversion-temp operand
-bytes; it does not mask arbitrary bytes. No separate meter-only region is
-counted because all reviewed meter instructions are inside complete case bodies.
+Across the one hundred twenty-two complete cases (50–77, 81–87, 96–99,
+150–158, 161–171, 178, 180, 200–209, 220–221, 230–235, 248–270 and 300–319),
+**58,947 native code bytes** are byte-exact after materializing **1,149 COFF
+relocations** (360 calls and 789 float operands) plus eighteen raw `__ftol2`
+call operands. The focused resolver restores the native frame and 72
+individually checked conversion-temp operand bytes; it does not mask arbitrary
+bytes. No separate meter-only region is counted because all reviewed meter
+instructions are inside complete case bodies.
 
 ## Remaining whole-function work
 
@@ -130,10 +132,9 @@ sequences** identical, and the candidate owner extent is now **63,132/63,132
 bytes**. That audit normalizes GPR names and branch operands, so it is only a
 diagnostic, not a strict byte certificate.
 
-A focused per-case final-image comparison now finds eighty-three whole cases
-byte-exact across **150–158, 161–171, 178, 180, 200–209, 220–221, 230–235,
-248–270 and 300–319** (41,915 code bytes; 721 COFF relocations plus eighteen
-pinned runtime calls). The complete selected late-state range and eight earlier
-case groups are certified; all other Slot06 states remain open. Do not call
-the whole boss Exact until all code bytes and all relocation operands are
-strictly reconstructed.
+A focused per-case final-image comparison now finds **122 of 134** whole cases
+byte-exact across **50–77, 81–87, 96–99, 150–158, 161–171, 178, 180, 200–209,
+220–221, 230–235, 248–270 and 300–319** (58,947 code bytes; 1,149 COFF
+relocations plus eighteen pinned runtime calls). Twelve case bodies remain
+open. Do not call the whole boss Exact until all code bytes and all relocation
+operands are strictly reconstructed.
