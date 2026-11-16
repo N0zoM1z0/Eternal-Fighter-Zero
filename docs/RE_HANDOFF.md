@@ -541,6 +541,14 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Character04's missing constructor is now recovered in natural C++ at
+`src/Character04Constructor.cpp`: selection ID2 / resource `mai`, original
+vtable `0x00788B7C`, **442/442 bytes exact** with four original-bound
+relocations (Secondary base ctor, vtable, string and `strcpy`). Its 64-entry
+arrays and collision pairs follow the constructor's native offsets. Proof:
+`docs/evidence/character-04-constructor-exact.json`; only the selected TU was
+rebuilt, no full cold replay.
+
 Character04 has five more complete original Exact lifecycle/effect
 owners in `src/Character04Lifecycle.cpp`: InitializeState322,
 ResetPose58, RemoveLocalEffect80, Slot03 19, EmitLocalEffect47,

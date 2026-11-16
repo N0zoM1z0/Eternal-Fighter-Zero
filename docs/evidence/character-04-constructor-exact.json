@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "authority": "Complete native function code generation with all four original relocation operands independently bound to EFZ.exe destinations.",
+  "method": "Selected single-unit VC7.1 /Od /G6 /MT /Gy /W3 normal-COFF build and strict full-extent replay. No whole-project or full cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 442,
+      "matched_bytes": 442,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "resources/EFZ.exe @ 0x006163D4: direct call to reviewed Secondary constructor; all six constructor arguments match",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7900028,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character04@@6B@",
+          "evidence": "resources/EFZ.exe @ 0x006163DC: original Character04 child vptr store; the selected vtable is independently used by Character04 virtual slots",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7900024,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62365",
+          "evidence": "resources/EFZ.exe @ 0x006163E2: original resource-name argument; exact mai NUL bytes verified at 0x788B78",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "resources/EFZ.exe @ 0x006163F1: direct call to CRT strcpy; destination is Secondary.resourceName at +0x94",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "04fc81b5eedb1d567331bb371e04804452beb67b81091c74d0d53325f4215cc0",
+      "target_extent_sha256": "04fc81b5eedb1d567331bb371e04804452beb67b81091c74d0d53325f4215cc0",
+      "unit": "character-04-constructor",
+      "symbol": "??0Character04@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x006163B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f57cc5b693efac9b8478bb8800839d1a901ed9ad8940859cbc7bff23f574946b",
+      "object_sha256": "14b161406d383ad74b75df8610f07d3d7c35080ed370b0daa1ae55fae63142ae",
+      "source_sha256": "77ad36090fba72502c39a8c1d1b3b68164bf735e52518e3b4e4b0a24f613d0f4",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6f3e09cb249c95d621a638451694db4415720f18fb5e3dd5786481a88d4e7242",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "150b57b8f3046cce166bb4338e2ec7781b2bc5af20ee1bd3685ec8b740d192ec",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

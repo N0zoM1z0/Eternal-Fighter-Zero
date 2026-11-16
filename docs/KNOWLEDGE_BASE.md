@@ -1469,11 +1469,14 @@ complete original boundaries, with every direct branch landing inside the
 body, final RET 0x18 included, a common base-constructor call to 0x40EAE0 in the
 first 64 bytes, and a byte player argument at the sixth original stack slot.
 Each dispatcher table entry was separately decoded and checked against its
-allocation immediate and constructor call. This adds 23 reviewed boundary/origin
-rows only: none of these constructors has source implementation or exact credit.
-Resource identifiers below are original asset strings, not claims about original
-C++ class names. Character00..Character23 remain provisional names, with no
-separate Character22 declaration because that case reuses Character10.
+allocation immediate and constructor call. This establishes 23 reviewed
+boundary/origin rows. Two constructors now also have natural C++ source and
+complete selected exact credit: selection ID2 `Character04::Character04` (442
+bytes) and selection ID13 `Character13::Character13` (383 bytes). The remaining
+21 are still boundary/origin only. Resource identifiers below are original asset
+strings, not claims about original C++ class names. Character00..Character23
+remain provisional names, with no separate Character22 declaration because that
+case reuses Character10.
 
 | Selection ID | Resource | Allocation | Constructor | Reviewed code bytes |
 | --- | --- | ---: | --- | ---: |
@@ -1501,6 +1504,24 @@ separate Character22 declaration because that case reuses Character10.
 | 21 | minagi | 0x3458 | 0x005A9FA0 | 469 |
 | 22 | nayuki | 0x3460 | 0x00461090 | 455 |
 | 23 | misuzu | 0x3488 | 0x00519E00 | 615 |
+
+### Character04 constructor (selection ID2 / `mai`): complete exact native code generation (2026-11-16)
+
+The reviewed selection-ID 2 constructor at `0x006163B0` is the provisional
+`Character04::Character04` owner (vtable `0x00788B7C`, resource string `mai`).
+Its natural implementation is `src/Character04Constructor.cpp`. The selected
+VC7.1 `/Od /G6 /MT /Gy /W3` unit matches **442/442 native bytes**, with zero
+differences and four original-bound relocations: `Secondary` base construction
+at `0x0040EAE0`, the Character04 vtable at `0x00788B7C`, the NUL-terminated
+`mai` string at `0x00788B78`, and CRT `strcpy` at `0x00778080`.
+
+The constructor sets `surfaceCount=0x3A0`, initializes the five collision X/Y
+pairs, clears the eight child integers, installs command count 3 with command
+bytes `[0,1,9,2]`, and clears the three 64-int arrays at offsets `0x3158`,
+`0x3258` and `0x3358`. The constructor's local field view remains private to the
+new source file; no shared class layout or other accepted function was changed.
+Proof: `docs/evidence/character-04-constructor-exact.json`. Only this one TU was
+built and compared; no full cold replay.
 
 ### Kaori constructor: complete exact native code generation (2026-11-09)
 
