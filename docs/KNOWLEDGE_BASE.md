@@ -8333,34 +8333,42 @@ Ayu's Slot04/05/06/07 bosses remain open.
 
 
 <a id="ayu-action-progress"></a>
+<a id="ayu-action-exact"></a>
 
-## Ayu 10,923-byte action-selection boss: original priority workbench
+## Ayu 10,923-byte action-selection boss: natural C++ whole-owner Exact
 
-`Character01::Slot04` at `0x006E84D0` (vtable slot4 `0x00788E5C`)
-is open. A real ordinary-C++ workbench candidate at
-`workbench/ayu-action/Character01Action-natural.cpp` has been rebuilt
-with the original first ten Ayu-specific high-priority command families in
-native order, rather than copying the Mayu states. The first **21** original priority state destinations now match the native
-ClearBufferedButtons order:
-`0xA7,0x13E,0x134,0x133,0x132,0x12E,0x12D,0x12C,0x13D,0x13C,0x13B,`
-`0x132,0xFB,0xFC,0xFA,0x102,0x101,0x100,0x106,0x105,0x104`.
-The extra Ayu-only `0x78` high-charge priority was inserted, and five
-Mayu-only command branches removed. The `0x70/6F/6E` family preserves its
-original air/ground alternate states. This is natural C++ boss progress.
+Ayu `Character01::Slot04` at `0x006E84D0` is **strict whole-owner Exact**.
+The original character vtable slot4 (`0x00788E5C`) selects the complete
+10,923-byte executable range `[0x006E84D0, 0x006EAF7B)`; its last instruction
+is `RET` at `0x006EAF7A`, followed by five `CC` alignment bytes that are
+excluded. The accepted **ordinary C++** translation unit is
+`src/Character01Action.cpp`; it is not a jump table, hand-patched object,
+inline assembly or an emitted-opcode substitute.
 
-Pinned VC7.1 compilation now yields **10,963 candidate bytes** versus
-**10,923 original** (+40), with 89 normal COFF relocations. The native
-owner has 38 ClearBufferedButtons calls; the candidate has 39 because later
-dash/air-action paths still differ. **Not Exact**, no formal match ledger
-or whole-control-flow claim. The subsequent native-driven C++ rewrite now
-restores all 16 original A/B/C/D-button and air-action state paths, removes
-Mayu-only states 230/231/232/248, inserts native Ayu states 240/212/40,
-and places the command-6 aerial action before dash selection. The focused
-audit verifies **all 38 native post-clear state destinations in the exact
-original order**, with 38 candidate calls. Its new code extent is
-**10,904 vs 10,923 bytes** (-19), with **2,758 vs 2,765 decoded
-instructions** and 86 COFF references. This remains **not Exact**: full
-byte layout, branch edges and relocation binding are not yet proven. Reproduce only this TU via
-`workbench/ayu-action/verify_action_progress.py --rebuild`; evidence:
-`docs/evidence/ayu-slot04-natural-progress.json`. Continue normal C++
-reconstruction, no ASM/PADDING or full cold replay.
+The full state machine reproduces all **38 original ClearBufferedButtons
+calls and their ordered action states**, the original four FaceOpponent
+calls, and Ayu-specific command priorities `0x5D`, `0x7A/79/78`,
+`0x70/6F/6E`, `0x66/65/64`, `0x16/15/14`, `0x20/1F/1E` and `0x0C/0B/0A`.
+The actual airborne and ground A/B/C/D-button decision trees include Ayu's
+`0xCF/0xCC/0xC8`, `0xD0/0xCD/0xD2/0xC9/0xCA`,
+`0xF0/0xD4/0xD1/0xCE/0xDC/0xD3/0xCB` and final `0x28` actions. Recovered
+side effects include both `airDashCount` and `airActionCount` increments for
+airborne dashes, the second grounded dash's momentum increment, the original
+secondary grounded-opponent test, and the nested conditional shared returns.
+Normal VC7.1 short-circuit expression ordering mattered in seven remaining
+floating/guard predicate families; reordering the natural C++ comparisons to
+the native source evaluation pattern eliminated all remaining codegen differences.
+
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` **selected-only strict replay** verifies
+**10,923 / 10,923 executable bytes Exact, zero differences** after binding
+all **87/87 original COFF relocations**: 38 clearing calls, four facing calls
+and 45 original floating literal operands. Float targets are verified against
+original native literal bytes (including the shared zero operand). Formal
+certificate: `docs/evidence/character-01-slot04-exact.json`; recipe and
+hashes are in `config/match-units.toml` / `config/matches.csv`.
+
+Previous reconstruction variants, selected scope-limited tests and an
+unaccepted proof remain in `workbench/ayu-action/` as history; only the
+`src/Character01Action.cpp` selected strict receipt certifies the complete
+owner. Ayu Slot05/Slot06/Slot07 and other unaccepted work remain OPEN.
+No ASM, PADDING or all-unit cold replay was used.

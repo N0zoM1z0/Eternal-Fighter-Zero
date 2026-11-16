@@ -473,7 +473,7 @@ address,origin,status,evidence
 0x006E8420,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle
 0x006E8460,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle
 0x006E84B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle
-0x006E84D0,unknown,unreviewed,
+0x006E84D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-action-exact
 0x006EAF80,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle
 0x006EAF90,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle
 0x006EAFA0,authored,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle

@@ -549,24 +549,19 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
-The next Ayu action Boss `Character01::Slot04` (`0x006E84D0`,
-**10,923 original bytes**) now has a compilable ordinary-C++ workbench in
-`workbench/ayu-action/Character01Action-natural.cpp`. The first ten
-priority families were restored in original `0x5D`, `0x7A`, `0x70`, `0x66`
-order. The further native-driven rewrite now matches **21** ordered
-post-ClearBufferedButtons states, including the repeated `0x78` priority and
-`0x16`, `0x20`, `0x0C` command families. The candidate remains **not Exact**
-(10,963 bytes versus 10,923 original, 89 COFF sites, 39 candidate versus 38
-native clear calls) at the earlier checkpoint. The next C++ pass restores
-all 16 original Ayu A/B/C/D-button and air-action transitions and places
-command-6 aerial action ahead of dashes. **All 38 original
-ClearBufferedButtons calls and state IDs now match in order**. The latest
-candidate is 10,904 bytes (native 10,923), 2,758 vs 2,765 instructions,
-86 COFF sites, **not Exact**. Continue resolving codegen width/branch edges
-and native relocation bindings. Rebuild with
-`scripts/repo-python workbench/ayu-action/verify_action_progress.py --rebuild`;
-evidence `docs/evidence/ayu-slot04-natural-progress.json`. Later Ayu action
-families must still be reconstructed, no all-unit cold replay.
+Ayu's full `Character01::Slot04` action-selection Boss at `0x006E84D0`
+is now accepted **whole-owner strict natural-C++ Exact**. Authoritative source:
+`src/Character01Action.cpp`, **10,923 / 10,923 original executable bytes**,
+zero differences, **87 / 87 independently bound COFF relocation targets**
+(38 `ClearBufferedButtons`, 4 `FaceOpponent`, 45 floating literals).
+The full 38-state priority/action program includes native airborne-dash
+side effects, original A/B/C/D button trees and shared early-return guards.
+Target vtable slot4 is `0x00788E5C`, final `RET` at `0x006EAF7A` with
+alignment excluded. Formally accepted single-unit selected proof:
+`docs/evidence/character-01-slot04-exact.json` (`character-01-slot04`).
+The 10,904/10,963/11,001-byte workbench iterations are retained for history;
+do not confuse their earlier nonexact progress audits with final acceptance.
+No full cold replay, inline ASM or padding. Other Ayu boss owners remain open.
 
 Ayu's complete **4,482-byte** virtual command-recognition boss
 `Character01::Slot02` (`0x006EAFD0`) has been reconstructed as 14

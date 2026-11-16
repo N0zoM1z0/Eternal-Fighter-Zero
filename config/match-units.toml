@@ -163254,3 +163254,623 @@ object = "build/match-units/character-01-slot02/Character01Commands.obj"
 symbol = "?Slot02@Character01@@UAEXXZ"
 target_address = 0x006EAFD0
 size = 4482
+
+
+[units.character-01-slot04]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character01Action.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-01-slot04/Character01Action.obj"
+symbol = "?Slot04@Character01@@UAEXXZ"
+target_address = 0x006E84D0
+size = 10923
+
+[[units.character-01-slot04.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8557 independently verifies __real@407f400000000000 target 0x00787C30, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 305
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8601 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 326
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8616 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 432
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8680 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 565
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8705 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 629
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8745 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 803
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E87F3 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 882
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8842 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 1056
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E88F0 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 1149
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E894D independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 1323
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E89FB independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 1540
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8AD4 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 1561
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8AE9 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 1800
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8BD8 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 1821
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8BED independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 2075
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8CEB independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 2096
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8D00 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 2167
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8D47 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 2341
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8DF5 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 2420
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8E44 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 2594
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8EF2 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 2687
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8F4F independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 2861
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E8FFD independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 2925
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E903D independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 3099
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E90EB independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 3147
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E911B independently verifies __real@407f400000000000 target 0x00787C30, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 3335
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E91D7 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 3356
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E91EC independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 3570
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E92C2 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 3761
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9381 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 3809
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E93B1 independently verifies __real@407f400000000000 target 0x00787C30, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 3993
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9469 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 4199
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9537 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 4390
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E95F6 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 4438
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9626 independently verifies __real@407f400000000000 target 0x00787C30, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 4522
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E967A independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 4646
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E96F6 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 4753
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9761 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 4877
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E97DD independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 4969
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9839 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 5093
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E98B5 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 5204
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9924 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 5348
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E99B4 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 5506
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9A52 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 5586
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9AA2 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 5616
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9AC0 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 5742
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787E48
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9B3E independently verifies __real@c044000000000000 target 0x00787E48, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 5897
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9BD9 independently verifies ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 6004
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9C44 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 6034
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9C62 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 6289
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9D61 independently verifies ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 6355
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9DA3 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 6471
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9E17 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 6501
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9E35 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 6691
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9EF3 independently verifies ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 6777
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9F49 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 6807
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006E9F67 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 6994
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA022 independently verifies ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 7091
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA083 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 7260
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA12C independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 7485
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA20D independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 7710
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA2EE independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 7785
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA339 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 7954
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA3E2 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 8180
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA4C4 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 8425
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA5B9 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 8557
+type = "DIR32"
+symbol = "__real@c051800000000000"
+target = 0x00787E40
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA63D independently verifies __real@c051800000000000 target 0x00787E40, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 8587
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA65B independently verifies __real@4051800000000000 target 0x00787E38, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 8665
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA6A9 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 8841
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA759 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 8916
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA7A4 independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 8993
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875C8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA7F1 independently verifies __real@c059000000000000 target 0x007875C8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 9027
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA813 independently verifies __real@4059000000000000 target 0x007875D0, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 9055
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA82F independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 9269
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA905 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 9461
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EA9C5 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 9629
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EAA6D independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 9855
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EAB4F independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 9949
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EABAD independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 9988
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787E30
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EABD4 independently verifies __real@c03e000000000000 target 0x00787E30, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 10022
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787D88
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EABF6 independently verifies __real@403e000000000000 target 0x00787D88, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 10092
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EAC3C independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 10266
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EACEA independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 10463
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EADAF independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 10640
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EAE60 independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 10828
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EAF1C independently verifies __real@0000000000000000 target 0x007872F8, complete 10923-byte owner."
+
+[[units.character-01-slot04.relocations]]
+offset = 10906
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Ayu Character01 Slot04 vtable 0x00788E5C points to 0x006E84D0; original native COFF operand at 0x006EAF6A independently verifies ?ClearBufferedButtons@Secondary@@QAEXXZ target 0x0040F170, complete 10923-byte owner."
