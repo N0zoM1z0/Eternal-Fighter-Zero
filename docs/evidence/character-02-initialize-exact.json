@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "authority": "Original Akane Character02 vtable 0x00788EB0 slot12 at 0x00788EE0 selects complete 283-byte native InitializeState owner [0x00703B70,0x00703C8B), raw RET at 0x00703C8A, original direct Secondary::InitializeState call 0x0040EDF0.",
+  "method": "One selected pinned VC7.1 /Od /G6 /MT /Gy /W3 normal C++ translation unit src/Character02Initialize.cpp. Original-bound strict COFF replay matches 283/283 original bytes, zero differences and independently bound original REL32 call. No ASM, opcode emission, padding or full cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 283,
+      "matched_bytes": 283,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 275,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot12 at 0x00788EE0 selects full owner [0x00703B70,0x00703C8B), original native REL32 operand at 0x00703C83 to base InitializeState at 0x0040EDF0; original RET 0x00703C8A.",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "7ed27ec295cd9c00d6018dfb654ffeb05e996260db91665d279814ace17eb192",
+      "target_extent_sha256": "7ed27ec295cd9c00d6018dfb654ffeb05e996260db91665d279814ace17eb192",
+      "unit": "character-02-initialize-state",
+      "symbol": "?InitializeState@Character02@@UAEXXZ",
+      "target_address": "0x00703B70",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "5dc8515fd27f658450be538e690461fde2a4fd6ec3cae0f3196dc95e702f2aff",
+      "object_sha256": "eb7272303a9077f75833997f4d56e6e4ab2224fc7fd760f7154cf7aac749838b",
+      "source_sha256": "5e6b3dc89f7d1b8af60d54d7a8b59be0515219837de80083e03ba5d012030902",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7a7ab480bef06b4f6934ceef0d3409f5bfd53ea6aacce53a37149c2b0b03c8bf",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "54cb4b53b065bcab027425e3fb4b9b8d6030c6ef0d53913f04a8250d8f96ec93",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

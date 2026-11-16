@@ -515,3 +515,4 @@ address,end,size,status,evidence
 0x00706AA0,0x00706ACF,47,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle; full original Akane vtable slot9 native RET boundary excludes following CC alignment
 0x00706A80,0x00706A8B,11,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle; full original Akane vtable slot1 native RET boundary excludes following CC alignment
 0x00706A90,0x00706A9B,11,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle; full original Akane vtable slot8 native RET boundary excludes following CC alignment
+0x00703B70,0x00703C8B,283,reviewed,docs/KNOWLEDGE_BASE.md#akane-initialize; original Akane vtable slot12 owner with native RET 0x00703C8A; CC excluded

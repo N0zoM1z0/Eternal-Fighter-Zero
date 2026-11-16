@@ -8398,3 +8398,25 @@ independently bound REL32 native calls**. Public proof:
 modification, injected opcodes, ASM, artificial padding or all-unit cold
 replay. Akane's full initialization and larger command/action/CPU/state
 owners remain distinct, to be validated separately.
+
+
+<a id="akane-initialize"></a>
+
+## Akane Character02 original 283-byte full initializer Exact
+
+`Character02::InitializeState` (`0x00703B70`, original vtable slot12
+`0x00788EE0`) is now naturally authored in `src/Character02Initialize.cpp`.
+The original 283-byte function clears Akane's five child state words at
+`0x3138..0x3148`, restores the five native collision XY pairs
+`(-8,-53), (21,0), (0,-5), (2,-13), (31,-29)`, zeroes the three
+64-element local effect arrays at offsets `0x314C/0x324C/0x334C`, then
+calls original `Secondary::InitializeState` at `0x0040EDF0`.
+
+One selected-only pinned VC7.1 `/Od /G6 /MT /Gy /W3` strict replay proves
+**283/283 native code bytes Exact**, zero differences, and **1/1 original
+REL32 relocation**. The original body ends at RET `0x00703C8A` before CC
+alignment, not substituted by padding or emitted instructions. Certificate:
+`docs/evidence/character-02-initialize-exact.json`. Along with the six
+accepted Akane lifecycle leaves, seven new Akane owners now total
+**509/509 exact bytes**, with five original-bound call relocations. The
+remaining large Akane input/CPU/state owners remain open. No full cold replay.

@@ -163968,3 +163968,21 @@ object = "build/match-units/character-02-slot08/Character02Lifecycle.obj"
 symbol = "?Slot08@Character02@@UAEXXZ"
 target_address = 0x00706A90
 size = 11
+
+
+[units.character-02-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character02Initialize.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-02-initialize-state/Character02Initialize.obj"
+symbol = "?InitializeState@Character02@@UAEXXZ"
+target_address = 0x00703B70
+size = 283
+
+[[units.character-02-initialize-state.relocations]]
+offset = 275
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Original Akane Character02 vtable slot12 at 0x00788EE0 selects full owner [0x00703B70,0x00703C8B), original native REL32 operand at 0x00703C83 to base InitializeState at 0x0040EDF0; original RET 0x00703C8A."

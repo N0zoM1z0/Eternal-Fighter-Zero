@@ -482,7 +482,7 @@ address,origin,status,evidence
 0x006EF410,unknown,unreviewed,
 0x006F2F20,unknown,unreviewed,
 0x007039D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
-0x00703B70,unknown,unreviewed,
+0x00703B70,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-initialize
 0x00703C90,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle
 0x00703CD0,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle
 0x00703D20,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle

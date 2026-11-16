@@ -549,6 +549,16 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Akane `Character02::InitializeState` at `0x00703B70` (original virtual
+slot12) is now accepted **283/283-byte Exact** in ordinary
+`src/Character02Initialize.cpp`: original five collision pairs, five child
+state words, three 64-entry local effect arrays and exact base call at
+`0x0040EDF0`. Selected proof:
+`docs/evidence/character-02-initialize-exact.json`. Together with six
+lifecycle leaves, Akane now has seven accepted complete functions totaling
+**509 exact native bytes and 5 original-bound REL32 calls**; no full cold
+replay or ASM/PADDING.
+
 Akane Character02 now has six selected **strict natural-C++ exact**
 lifecycle/effect/empty virtual leaf owners in `src/Character02Lifecycle.cpp`:
 ResetPose 58, RemoveLocalEffect 80, Slot03 19, EmitLocalEffect 47, empty

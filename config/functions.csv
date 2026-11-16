@@ -482,7 +482,7 @@ address,size,span_end,body_size,current_name,is_thunk,body_ranges,boundary_statu
 0x006EF410,14906,0x006F2E49,14906,FUN_006ef410,false,0x006EF410:0x006F2E49,unreviewed
 0x006F2F20,67400,0x00703667,67400,FUN_006f2f20,false,0x006F2F20:0x00703667,unreviewed
 0x007039D0,413,0x00703B6C,413,Character02::Character02,false,0x007039D0:0x00703B6C,reviewed
-0x00703B70,283,0x00703C8A,283,FUN_00703b70,false,0x00703B70:0x00703C8A,unreviewed
+0x00703B70,283,0x00703C8A,283,Character02::InitializeState,false,0x00703B70:0x00703C8A,reviewed
 0x00703C90,58,0x00703CC9,58,Character02::ResetPose,false,0x00703C90:0x00703CC9,reviewed
 0x00703CD0,80,0x00703D1F,80,Character02::RemoveLocalEffect,false,0x00703CD0:0x00703D1F,reviewed
 0x00703D20,19,0x00703D32,19,Character02::Slot03,false,0x00703D20:0x00703D32,reviewed
