@@ -62,6 +62,13 @@ two bytes longer than native. These are still open strict-codegen differences,
 not bytes to mask or overwrite. The workbench source currently contains no
 inline assembly or emitted opcodes.
 
+The four constructor leafs reached by this switch have also been independently
+cold-built and strictly matched: **1,561/1,561 bytes**, **44 relocations**, zero
+differences across `Background01`, `Background10`, `Background12`, and
+`Background16`. Their native entry points are respectively `0x00751370`,
+`0x00751A40`, `0x007520B0`, and `0x00752900`. Only these four selected units
+were replayed. Evidence: `docs/evidence/prepare-battle-background-constructors-exact.json`.
+
 ### Source-form experiments and remaining work
 
 The previous local placeholder background classes were removed in favor of
