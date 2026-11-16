@@ -6141,6 +6141,10 @@ review covers 1,173 instructions, 85 direct internal branches, one computed
 switch jump, 74 direct calls, three genuine virtual/COM calls and all 110
 relocation fields. Complete RET boundaries and following CC alignment are
 checked independently. Public proof: `docs/evidence/scene-loading-exact.json`.
+The complete `Scene2::LoadCharacter` owner at 0x76DA20 is also independently
+relocation-bound: all 2,651 bytes match after resolving 76 relocations (26
+local target offsets and 50 external symbols); only compiler-local label
+spellings differ. See `docs/evidence/scene-loading-character-local-label-exact.json`.
 The constructor, destructor, Step and no-op keyboard use the pinned static
 /Od /GS recipe; renderer and creation/character constructors use static /Od.
 Profiles remain per-unit codegen evidence, not original TU/build attribution.
