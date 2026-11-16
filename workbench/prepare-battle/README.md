@@ -87,3 +87,12 @@ placement new, alternate case order, scale spellings and compiler flags did
 not improve the relocation-bound result. Do not repeat them without new
 evidence. Do not add assembly, _emit, byte patches, inert padding or arbitrary
 normalization. Preserve accepted src/ files and avoid a full all-unit replay.
+
+Two additional syntax/type hypotheses were tested on 2026-11-16 and rejected
+by a complete scoped rebuild: (1) forward-declaring `BattleBackground`, typing
+`Context::blob` as `BattleBackground *`, and assigning each derived `new`
+expression without a cast; (2) spelling the first virtual call as
+`secondarySlotA[0]->LoadResources()` rather than `(*secondarySlotA)->LoadResources()`.
+Both retained the 4,029-byte owner, all 115 relocations and the same 87-byte /
+37-run code mismatch. The original opaque `unsigned char *` field and call
+syntax are restored. Do not repeat these no-effect forms.
