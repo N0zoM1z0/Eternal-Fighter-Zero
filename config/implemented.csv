@@ -469,3 +469,5 @@ address,name,source,symbol,status,evidence
 0x0048E260,?EmitLocalEffect@Character00@@UAEXPAUSecondaryEffectSpawn@@@Z,src/Character00Lifecycle.cpp,?EmitLocalEffect@Character00@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-00-lifecycle-exact.json
 0x0048A9B0,?InitializeState@Character00@@UAEXXZ,src/Character00Initialize.cpp,?InitializeState@Character00@@UAEXXZ,complete,docs/evidence/character-00-initialize-exact.json
 0x0048E250,?Slot08@Character00@@UAEXXZ,src/Character00Initialize.cpp,?Slot08@Character00@@UAEXXZ,complete,docs/evidence/character-00-initialize-exact.json
+0x0048D940,?LoadAlternateResources@Character00ResourceView@@QAEXXZ,src/Character00AlternatePatterns.cpp,?LoadAlternateResources@Character00ResourceView@@QAEXXZ,complete,docs/evidence/character-00-resources-exact.json
+0x0048ABB0,?LoadResources@Character00@@UAEXXZ,src/Character00Resources.cpp,?LoadResources@Character00@@UAEXXZ,complete,docs/evidence/character-00-resources-exact.json

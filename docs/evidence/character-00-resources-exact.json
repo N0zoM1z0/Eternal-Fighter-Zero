@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "authority": "Full native Nanase alternate pattern reader [0x0048D940,0x0048DCF5), vtable slot11 LoadResources [0x0048ABB0,0x0048ABEC), independently reviewed complete native extents and all original call/constant operands.",
+  "method": "Two pinned VC7.1 /Od /G6 /MT /Gy /W3 natural-C++ translation units compile the complete 949-byte alternate pattern parser and the 60-byte resource wrapper. Strict selected only original-bound oracle compares all 1,009 executable bytes, 41 original COFF relocations, and original filename/IEEE-754 targets; zero differences. No ASM, padding, or all-unit cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 949,
+      "matched_bytes": 949,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7897888,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62359",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048D94C to $SG62359 0x00788320; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 20,
+          "target": 4227888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0PatternReader@@QAE@PBDH@Z",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048D954 to ??0PatternReader@@QAE@PBDH@Z 0x00408330; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 28,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048D95C to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 69,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048D985 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 80,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048D990 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 104,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048D9A8 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 129,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048D9C1 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 187,
+          "target": 4270800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Allocate@SecondarySequence@@QAEXH@Z",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048D9FB to ?Allocate@SecondarySequence@@QAEXH@Z 0x00412AD0; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 211,
+          "target": 4227792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Allocate@PatternSequence@@QAEXH@Z",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DA13 to ?Allocate@PatternSequence@@QAEXH@Z 0x004082D0; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 302,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DA6E to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 322,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DA82 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 337,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DA91 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 352,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DAA0 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 367,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DAAF to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 382,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DABE to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 397,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DACD to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 415,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DADF to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 433,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DAF1 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 451,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DB03 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 469,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DB15 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 487,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DB27 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 505,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DB39 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 523,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DB4B to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 541,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DB5D to ?ReadShort@PatternReader@@QAEFXZ 0x00405720; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 574,
+          "target": 7896156,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@42c80000",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DB7E to __real@42c80000 0x00787C5C; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 591,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DB8F to ?ReadShort@PatternReader@@QAEFXZ 0x00405720; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 624,
+          "target": 7896152,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c2c80000",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DBB0 to __real@c2c80000 0x00787C58; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 641,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DBC1 to ?ReadShort@PatternReader@@QAEFXZ 0x00405720; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 658,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DBD2 to ?ReadShort@PatternReader@@QAEFXZ 0x00405720; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 675,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DBE3 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 693,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DBF5 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 711,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DC07 to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 734,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DC1E to ?ReadInt@PatternReader@@QAEHXZ 0x00405700; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 764,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DC3C to ?Read@PatternReader@@QAEHPAXH@Z 0x00405600; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 808,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DC68 to ?Read@PatternReader@@QAEHPAXH@Z 0x00405600; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 827,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DC7B to ?Read@PatternReader@@QAEHPAXH@Z 0x00405600; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 871,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DCA7 to ?Read@PatternReader@@QAEHPAXH@Z 0x00405600; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 921,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DCD9 to ?Read@PatternReader@@QAEHPAXH@Z 0x00405600; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        },
+        {
+          "offset": 941,
+          "target": 4227936,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1PatternReader@@QAE@XZ",
+          "evidence": "Original Nanase resource parser at 0x0048D940, native COFF operand 0x0048DCED to ??1PatternReader@@QAE@XZ 0x00408360; pinned exact 949-byte resource format, original reader or IEEE-754 literal bound independently",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "33e8d687757b6755cc8024ab45c5ba1b0e4e6688ef22cdd650d5712a030e6e4a",
+      "target_extent_sha256": "33e8d687757b6755cc8024ab45c5ba1b0e4e6688ef22cdd650d5712a030e6e4a",
+      "unit": "character-00-alternate-patterns",
+      "symbol": "?LoadAlternateResources@Character00ResourceView@@QAEXXZ",
+      "target_address": "0x0048D940",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "387f3fe16b2b86ee93489cabdcf8148da062ad7c0c927fc183eb222e1430c2fb",
+      "object_sha256": "c73d6028be883c8a4ee048fb120c61b0a6aa2f6b5ce25318baf3d40a5baac344",
+      "source_sha256": "c91f7f2bb8bae22e26c6307a970b46f2c04c7afa89b432db36f25853b87aa36c",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5",
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "bbdb4ceb4498c0cb432a6434fd08891df20b428e84428f71db60371d1a77a462",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "5b14fdb27b1e41f5dbb29d3f81812f21721ba1089412ffe31eb018e1e4c4ab1d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 60,
+      "matched_bytes": 60,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4774208,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadAlternateResources@Character00ResourceView@@QAEXXZ",
+          "evidence": "Original Nanase LoadResources vtable slot11 at 0x00788360, REL32 operand 0x0048ABBB to exact alternate parser or base resource loader at 0x0048D940",
+          "addend": 0
+        },
+        {
+          "offset": 19,
+          "target": 4262768,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadResources@Secondary@@UAEXXZ",
+          "evidence": "Original Nanase LoadResources vtable slot11 at 0x00788360, REL32 operand 0x0048ABC3 to exact alternate parser or base resource loader at 0x00410B70",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "78a347b1460321c96c0b6f92fa9f0b33f6cc38e85749e84cb876353c6f8f2e18",
+      "target_extent_sha256": "78a347b1460321c96c0b6f92fa9f0b33f6cc38e85749e84cb876353c6f8f2e18",
+      "unit": "character-00-load-resources",
+      "symbol": "?LoadResources@Character00@@UAEXXZ",
+      "target_address": "0x0048ABB0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "387f3fe16b2b86ee93489cabdcf8148da062ad7c0c927fc183eb222e1430c2fb",
+      "object_sha256": "097adb631ddd8d8c7b4ff836cf71ced6a84f3573bf29612cfaeca66a663240d5",
+      "source_sha256": "6afce8d6e70e3694e811b08bf34062577776958a9fcf55bc9fae06ad31f069cc",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "bbdb4ceb4498c0cb432a6434fd08891df20b428e84428f71db60371d1a77a462",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "68445e69d1bd3429e7106b09ada07436950e75db877a16da723098408567fbed",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

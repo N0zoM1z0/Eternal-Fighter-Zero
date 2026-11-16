@@ -8063,3 +8063,37 @@ original call targets (2/2 REL32); the 11-byte Slot08 has no relocations.
 Exact proof: `docs/evidence/character-00-initialize-exact.json`. Source is
 in a separate TU so that previously accepted constructor/lifecycle receipts
 are not invalidated by changing a shared header. No full cold replay.
+
+
+<a id="nanase-alternate-patterns"></a>
+
+## Nanase full alternate pattern parser and LoadResources wrapper
+
+The **949-byte** Nanase nonvirtual pattern-bank loader at `0x0048D940`
+reads the literal `nanase\nanase2.pat` (canonical string at `0x00788320`).
+It parses the original 505-entry `PatternSequence` and `SecondarySequence`
+banks at Nanase offsets `0x345C/0x3460` rather than Ikumi's `0x3464/0x3468`.
+The natural C++ member `Character00ResourceView::LoadAlternateResources`
+in `src/Character00AlternatePatterns.cpp` retains the exact original parser's
+field read order, frame-duration conversion, two signed scaling divisors,
+eight attack/guard fields and rectangle serialization order. The review
+compared all **39 original relocation operands**, including original filename,
+reader calls, pattern allocators and IEEE-754 constants, with the independently
+exact Ikumi parser's method pattern and the canonical EFZ.exe operands.
+It compiles with VC7.1 `/Od /G6 /MT /Gy /W3` to **949/949 executable bytes
+Exact**, with zero difference after complete relocation binding.
+
+Nanase's vtable slot11 at `0x00788360` selects the **60-byte**
+`Character00::LoadResources` wrapper at `0x0048ABB0`: it first invokes the
+nonvirtual alternate parser, then `Secondary::LoadResources` at `0x00410B70`,
+and saves current pattern/sequence pointers at Nanase offsets `0x3464/0x3468`.
+Both of its direct calls bind the original destinations. The normal
+C++ source is `src/Character00Resources.cpp`, with **60/60-byte** strict exact
+replay. Both TUs use an identical private layout view, avoiding changes to
+shared class declarations or previously accepted source receipts.
+
+The two strict selected units produce **1,009/1,009 native executable bytes
+Exact** and **41/41 originally bound relocations**, preserved at
+`docs/evidence/character-00-resources-exact.json`. No ASM, `_emit`,
+artificial padding, whole-game linkage claim or full cold replay. Remaining
+Nanase state/action/render owners remain separately open.

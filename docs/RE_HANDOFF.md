@@ -549,6 +549,18 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Nanase alternate pattern parsing and resource forwarding are now **strict
+natural-C++ Exact**. `src/Character00AlternatePatterns.cpp` reconstructs the
+complete 949-byte original parser at `0x0048D940`, including original
+`nanase\nanase2.pat`, 505-entry pattern/sequence banks, exact field read order,
+short-to-float conversions and all 39 original call/data operands.
+`src/Character00Resources.cpp` reconstructs the original slot11 wrapper at
+`0x0048ABB0` (60 bytes, two bound calls), saving the active pattern bank
+pointers after base loading. Selected strict receipts:
+`docs/evidence/character-00-resources-exact.json`, 1,009/1,009 bytes and 41/41
+bound relocations. No shared class layout edits or whole cold replay; larger
+Nanase action/state/render owners remain OPEN.
+
 Nanase's larger InitializeState owner at `0x0048A9B0` now also has
 strict exact natural C++ in `src/Character00Initialize.cpp`: **332/332 bytes**
 with two bound calls (mode-switch `0x0048E140` and base initializer

@@ -236,12 +236,12 @@ address,origin,status,evidence
 0x0048A720,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x0048A9B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-initialize
 0x0048AB00,unknown,unreviewed,
-0x0048ABB0,unknown,unreviewed,
+0x0048ABB0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-alternate-patterns
 0x0048ABF0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-lifecycle
 0x0048AC30,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-lifecycle
 0x0048AC80,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-lifecycle
 0x0048ACA0,unknown,unreviewed,
-0x0048D940,unknown,unreviewed,
+0x0048D940,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-alternate-patterns
 0x0048DD00,unknown,unreviewed,
 0x0048E140,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-mode-switch
 0x0048E250,authored,reviewed,docs/KNOWLEDGE_BASE.md#nanase-initialize
