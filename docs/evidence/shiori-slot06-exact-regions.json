@@ -11,8 +11,8 @@
     "native_candidate_extent_size_equal": true
   },
   "build": {
-    "source_sha256": "2b0ec2db33f66eb20359f0d273559a849f4bbf68c0ac2aa3994c782b72e491db",
-    "object_sha256": "3d3134b3d722d2af485c497e9941c118fdc72ed452f90dcb6f5c1ad1e1ee3fdd",
+    "source_sha256": "c62e985569a01c42a3455db315d96be93aa9b287e0e4c2d5b58546d34e1e3896",
+    "object_sha256": "7784cb46bdd7e02a24fb58febf70763c1b9af878f7c82dcba1a6dc649dda6806",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
   "whole_case_exact": {
@@ -1146,6 +1146,186 @@
         }
       ]
     },
+    "314": {
+      "native_start": "0x421757",
+      "bytes": 1119,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 25,
+      "rel32_calls_materialized": 12,
+      "float_operands_materialized": 13,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [
+        {
+          "case_offset": "0xfd",
+          "candidate": "0xf4",
+          "native": "0xd4"
+        },
+        {
+          "case_offset": "0x103",
+          "candidate": "0xf4",
+          "native": "0xd4"
+        },
+        {
+          "case_offset": "0x11a",
+          "candidate": "0xf0",
+          "native": "0xd0"
+        },
+        {
+          "case_offset": "0x120",
+          "candidate": "0xf0",
+          "native": "0xd0"
+        },
+        {
+          "case_offset": "0x2ab",
+          "candidate": "0xec",
+          "native": "0xcc"
+        },
+        {
+          "case_offset": "0x2b1",
+          "candidate": "0xec",
+          "native": "0xcc"
+        },
+        {
+          "case_offset": "0x2da",
+          "candidate": "0xe8",
+          "native": "0xc8"
+        },
+        {
+          "case_offset": "0x2e0",
+          "candidate": "0xe8",
+          "native": "0xc8"
+        }
+      ],
+      "calls": [
+        {
+          "offset": "0x4217c9",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x4217ef",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421839",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x42184e",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421868",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421898",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x4218a0",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        },
+        {
+          "offset": "0x4218c2",
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "target": "0x4080c0"
+        },
+        {
+          "offset": "0x4219cb",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x4219ef",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "target": "0x4108a0"
+        },
+        {
+          "offset": "0x421a16",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421a24",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "target": "0x4108a0"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x421775",
+          "target": "0x787c50",
+          "payload": "000000000000e03f"
+        },
+        {
+          "offset": "0x421787",
+          "target": "0x787c50",
+          "payload": "000000000000e03f"
+        },
+        {
+          "offset": "0x421796",
+          "target": "0x787cf0",
+          "payload": "7b14ae47e17a843f"
+        },
+        {
+          "offset": "0x4217c4",
+          "target": "0x7875d0",
+          "payload": "0000000000005940"
+        },
+        {
+          "offset": "0x4217db",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4217ea",
+          "target": "0x7875d0",
+          "payload": "0000000000005940"
+        },
+        {
+          "offset": "0x421801",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4218f8",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x421908",
+          "target": "0x787300",
+          "payload": "9a9999999999c93f"
+        },
+        {
+          "offset": "0x421931",
+          "target": "0x787cf0",
+          "payload": "7b14ae47e17a843f"
+        },
+        {
+          "offset": "0x421946",
+          "target": "0x787cf0",
+          "payload": "7b14ae47e17a843f"
+        },
+        {
+          "offset": "0x421abe",
+          "target": "0x787dd8",
+          "payload": "ec51b81e85eba13f"
+        },
+        {
+          "offset": "0x421adf",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
     "318": {
       "native_start": "0x4223b8",
       "bytes": 725,
@@ -1402,5 +1582,5 @@
     "native_frame": "0x384",
     "native_prologue_restored": true
   },
-  "qualification": "Sixteen complete case bodies are byte-exact after original-bound relocation materialization, ten inline-assembly __ftol2 call bindings, and native stack-slot normalization. One additional meter arithmetic region is byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
+  "qualification": "Seventeen complete case bodies are byte-exact after original-bound relocation materialization, ten inline-assembly __ftol2 call bindings, and native stack-slot normalization. One additional meter arithmetic region is byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
 }
