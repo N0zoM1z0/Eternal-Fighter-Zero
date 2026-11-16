@@ -214,8 +214,8 @@ void Scene2::PrepareBattle()
             case 12: { contextOwner->blob = reinterpret_cast<unsigned char *>(new Background12(videoOwner)); break; }
             case 16: { contextOwner->blob = reinterpret_cast<unsigned char *>(new Background16(videoOwner)); break; }
             }
+            contextOwner->backgroundScale = 1.0;
             if (contextOwner->flag0f32 == 16) contextOwner->backgroundScale = 0.125;
-            else contextOwner->backgroundScale = 1.0;
             (*secondarySlotA)->LoadResources();
             (*secondarySlotB)->LoadResources();
             if (contextOwner->mode1364 == 2) {

@@ -1,0 +1,373 @@
+{
+  "schema_version": 1,
+  "status": "natural-cpp-candidate-progress-not-exact",
+  "owner": "Scene2::PrepareBattle",
+  "target": {
+    "address": "0x76ca50",
+    "owner_bytes": 4029,
+    "code_bytes": 3893,
+    "sha256": "1b529588799198f4fd6d913e877c029fe53e129cccb391a928cea0a1dae03d99"
+  },
+  "candidate": {
+    "source": "workbench/prepare-battle/SceneLoading.cpp",
+    "source_sha256": "f2a360b3e39d2b9d6a97d84ed04b9da8a2513d99cedde803123f07a67a69f02c",
+    "object": "build/scene-loading/SceneLoading.tracked-workbench.obj",
+    "object_sha256": "b5840e7987c7130940ac1e30c5276dae711ab667b8d95b22637af35996f7d309",
+    "owner_bytes": 4029,
+    "code_bytes": 3893,
+    "code_size_delta": 0,
+    "compiler_flags": [
+      "/Od",
+      "/G6",
+      "/MT",
+      "/Gy",
+      "/GS",
+      "/W3"
+    ],
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287"
+  },
+  "baseline": {
+    "object": "build/scene-loading/SceneLoading.baseline-comparison.obj",
+    "object_sha256": "cc213db8c7edf203c6dc392951ab8a1256df55d1defd51abf144778d201324e6",
+    "code_bytes": 3895,
+    "extra_receiver_move_va": "0x0076D883",
+    "compiler_flags": [
+      "/Od",
+      "/G6",
+      "/MT",
+      "/Gy",
+      "/GS",
+      "/W3"
+    ]
+  },
+  "coff_relocations": {
+    "total": 115,
+    "code": 85,
+    "tables": 30,
+    "materialized_external": 82,
+    "materialized_local": 33,
+    "all_candidate_relocations_resolved": true
+  },
+  "comparison": {
+    "method": "Materialize all candidate COFF relocations. External symbol targets are resolved from the previous natural-C++ object against canonical target operands, accounting for its known two-byte receiver-move offset; compiler-local labels use their candidate COFF target offsets. Compare the complete 3,893-byte candidate code and all 136 table bytes against the canonical PE.",
+    "mismatch_bytes": 87,
+    "mismatch_runs": 37,
+    "first_mismatch_va": "0x76d744",
+    "strict_exact": false,
+    "switch_tables_and_selector_exact": true,
+    "table_bytes": 136,
+    "table_sha256": "3771fe0c840f18ae8d25a20e59aca4068996a889b4c7785f90272baee6610200",
+    "runs": [
+      {
+        "start_offset": 3316,
+        "end_offset": 3317,
+        "va": "0x76d744",
+        "length": 1,
+        "native_hex": "4d",
+        "candidate_hex": "55"
+      },
+      {
+        "start_offset": 3319,
+        "end_offset": 3320,
+        "va": "0x76d747",
+        "length": 1,
+        "native_hex": "51",
+        "candidate_hex": "42"
+      },
+      {
+        "start_offset": 3321,
+        "end_offset": 3322,
+        "va": "0x76d749",
+        "length": 1,
+        "native_hex": "52",
+        "candidate_hex": "50"
+      },
+      {
+        "start_offset": 3343,
+        "end_offset": 3344,
+        "va": "0x76d75f",
+        "length": 1,
+        "native_hex": "45",
+        "candidate_hex": "4d"
+      },
+      {
+        "start_offset": 3346,
+        "end_offset": 3347,
+        "va": "0x76d762",
+        "length": 1,
+        "native_hex": "48",
+        "candidate_hex": "51"
+      },
+      {
+        "start_offset": 3349,
+        "end_offset": 3350,
+        "va": "0x76d765",
+        "length": 1,
+        "native_hex": "55",
+        "candidate_hex": "45"
+      },
+      {
+        "start_offset": 3352,
+        "end_offset": 3353,
+        "va": "0x76d768",
+        "length": 1,
+        "native_hex": "91",
+        "candidate_hex": "82"
+      },
+      {
+        "start_offset": 3382,
+        "end_offset": 3383,
+        "va": "0x76d786",
+        "length": 1,
+        "native_hex": "45",
+        "candidate_hex": "4d"
+      },
+      {
+        "start_offset": 3385,
+        "end_offset": 3386,
+        "va": "0x76d789",
+        "length": 1,
+        "native_hex": "48",
+        "candidate_hex": "51"
+      },
+      {
+        "start_offset": 3387,
+        "end_offset": 3388,
+        "va": "0x76d78b",
+        "length": 1,
+        "native_hex": "51",
+        "candidate_hex": "52"
+      },
+      {
+        "start_offset": 3409,
+        "end_offset": 3410,
+        "va": "0x76d7a1",
+        "length": 1,
+        "native_hex": "55",
+        "candidate_hex": "45"
+      },
+      {
+        "start_offset": 3412,
+        "end_offset": 3413,
+        "va": "0x76d7a4",
+        "length": 1,
+        "native_hex": "42",
+        "candidate_hex": "48"
+      },
+      {
+        "start_offset": 3415,
+        "end_offset": 3416,
+        "va": "0x76d7a7",
+        "length": 1,
+        "native_hex": "4d",
+        "candidate_hex": "55"
+      },
+      {
+        "start_offset": 3418,
+        "end_offset": 3419,
+        "va": "0x76d7aa",
+        "length": 1,
+        "native_hex": "88",
+        "candidate_hex": "91"
+      },
+      {
+        "start_offset": 3448,
+        "end_offset": 3449,
+        "va": "0x76d7c8",
+        "length": 1,
+        "native_hex": "55",
+        "candidate_hex": "45"
+      },
+      {
+        "start_offset": 3451,
+        "end_offset": 3452,
+        "va": "0x76d7cb",
+        "length": 1,
+        "native_hex": "42",
+        "candidate_hex": "48"
+      },
+      {
+        "start_offset": 3453,
+        "end_offset": 3454,
+        "va": "0x76d7cd",
+        "length": 1,
+        "native_hex": "50",
+        "candidate_hex": "51"
+      },
+      {
+        "start_offset": 3475,
+        "end_offset": 3476,
+        "va": "0x76d7e3",
+        "length": 1,
+        "native_hex": "4d",
+        "candidate_hex": "55"
+      },
+      {
+        "start_offset": 3478,
+        "end_offset": 3479,
+        "va": "0x76d7e6",
+        "length": 1,
+        "native_hex": "51",
+        "candidate_hex": "42"
+      },
+      {
+        "start_offset": 3481,
+        "end_offset": 3482,
+        "va": "0x76d7e9",
+        "length": 1,
+        "native_hex": "45",
+        "candidate_hex": "4d"
+      },
+      {
+        "start_offset": 3484,
+        "end_offset": 3485,
+        "va": "0x76d7ec",
+        "length": 1,
+        "native_hex": "82",
+        "candidate_hex": "88"
+      },
+      {
+        "start_offset": 3511,
+        "end_offset": 3512,
+        "va": "0x76d807",
+        "length": 1,
+        "native_hex": "4d",
+        "candidate_hex": "55"
+      },
+      {
+        "start_offset": 3514,
+        "end_offset": 3515,
+        "va": "0x76d80a",
+        "length": 1,
+        "native_hex": "51",
+        "candidate_hex": "42"
+      },
+      {
+        "start_offset": 3516,
+        "end_offset": 3517,
+        "va": "0x76d80c",
+        "length": 1,
+        "native_hex": "52",
+        "candidate_hex": "50"
+      },
+      {
+        "start_offset": 3544,
+        "end_offset": 3545,
+        "va": "0x76d828",
+        "length": 1,
+        "native_hex": "45",
+        "candidate_hex": "4d"
+      },
+      {
+        "start_offset": 3547,
+        "end_offset": 3548,
+        "va": "0x76d82b",
+        "length": 1,
+        "native_hex": "48",
+        "candidate_hex": "51"
+      },
+      {
+        "start_offset": 3550,
+        "end_offset": 3551,
+        "va": "0x76d82e",
+        "length": 1,
+        "native_hex": "95",
+        "candidate_hex": "85"
+      },
+      {
+        "start_offset": 3556,
+        "end_offset": 3557,
+        "va": "0x76d834",
+        "length": 1,
+        "native_hex": "91",
+        "candidate_hex": "82"
+      },
+      {
+        "start_offset": 3562,
+        "end_offset": 3563,
+        "va": "0x76d83a",
+        "length": 1,
+        "native_hex": "45",
+        "candidate_hex": "4d"
+      },
+      {
+        "start_offset": 3565,
+        "end_offset": 3566,
+        "va": "0x76d83d",
+        "length": 1,
+        "native_hex": "48",
+        "candidate_hex": "51"
+      },
+      {
+        "start_offset": 3567,
+        "end_offset": 3572,
+        "va": "0x76d83f",
+        "length": 5,
+        "native_hex": "0fbe91320f",
+        "candidate_hex": "dd05c07578"
+      },
+      {
+        "start_offset": 3573,
+        "end_offset": 3579,
+        "va": "0x76d845",
+        "length": 6,
+        "native_hex": "0083fa107514",
+        "candidate_hex": "dd9a58420100"
+      },
+      {
+        "start_offset": 3585,
+        "end_offset": 3590,
+        "va": "0x76d851",
+        "length": 5,
+        "native_hex": "dd05f88678",
+        "candidate_hex": "0fbe91320f"
+      },
+      {
+        "start_offset": 3591,
+        "end_offset": 3623,
+        "va": "0x76d857",
+        "length": 32,
+        "native_hex": "dd9958420100eb128b55948b421cdd05c0757800dd98584201008b4d948b5114",
+        "candidate_hex": "0083fa1075128b45948b481cdd05f8867800dd99584201008b55948b42148b08"
+      },
+      {
+        "start_offset": 3624,
+        "end_offset": 3631,
+        "va": "0x76d878",
+        "length": 7,
+        "native_hex": "028b4d948b5114",
+        "candidate_hex": "55948b42148b10"
+      },
+      {
+        "start_offset": 3632,
+        "end_offset": 3633,
+        "va": "0x76d880",
+        "length": 1,
+        "native_hex": "0a",
+        "candidate_hex": "01"
+      },
+      {
+        "start_offset": 3634,
+        "end_offset": 3635,
+        "va": "0x76d882",
+        "length": 1,
+        "native_hex": "00",
+        "candidate_hex": "ca"
+      }
+    ]
+  },
+  "source_has_inline_assembly": false,
+  "qualification": "The natural-C++ candidate now has the exact original owner and code extents. The two switch tables and selector are exact after relocation materialization. The code still differs at 87 bytes in 37 runs; this is progress evidence, not a codegen Exact certificate.",
+  "improvement_from_previous_candidate": {
+    "previous_code_bytes": 3895,
+    "previous_owner_bytes": 4031,
+    "previous_relocation_aware_code_mismatch_bytes": 269,
+    "previous_mismatch_runs": 64,
+    "current_code_bytes": 3893,
+    "current_owner_bytes": 4029,
+    "current_relocation_aware_code_mismatch_bytes": 87,
+    "current_mismatch_runs": 37,
+    "owner_extent_gap_closed": true,
+    "mismatch_bytes_reduced_by": 182
+  }
+}

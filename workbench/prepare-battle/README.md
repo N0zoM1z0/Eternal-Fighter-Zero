@@ -40,27 +40,28 @@ obj = ROOT/'build/scene-loading/SceneLoading.tracked-workbench.obj'
 compile_source(src, obj, ['/Od','/G6','/MT','/Gy','/GS','/W3'],
                ROOT/'.analysis/build/prepare-tracked-workbench.log')
 code, rels = object_function(obj, '?PrepareBattle@Scene2@@QAEXXZ')
-print(len(code), len(rels))  # 4031, 115; this is not Exact
+print(len(code), len(rels))  # 4029, 115; this is not Exact
 PY2
 ```
 
-The natural-C++ draft compiles reproducibly under VC7.1 to **4,031 bytes and
-115 COFF relocations**; the canonical owner is 4,029 bytes. The candidate has
-3,895 code bytes versus 3,893 native code bytes. All four stage constructors
-are now ordinary C++ `new Background01/10/12/16(videoOwner)` expressions using
-the reviewed `Backgrounds.h` class declarations. Their four constructor calls
-are normal COFF REL32 relocations; there are no raw call operands, inline
-assembly blocks, or `_emit` directives. The first `LoadResources` call is also
-a normal C++ virtual call.
+The natural-C++ draft compiles reproducibly under VC7.1. Its current best
+source form is **4,029 bytes with 115 COFF relocations**, exactly the original
+owner extent: **3,893 code bytes plus 136 switch-table/selector bytes**. All
+four stage constructors are ordinary C++ new Background01/10/12/16(videoOwner)
+expressions using the reviewed Backgrounds.h class declarations. Their
+constructor calls are normal COFF REL32 relocations; there are no raw call
+operands, inline assembly blocks, or _emit directives. Both LoadResources
+expressions are ordinary C++ virtual calls.
 
-A focused relocation-bound comparison classifies **85 code relocations and
-30 table relocations**. After binding those original operands, both switch
-address tables and the 16-byte selector are byte-exact. The remaining code
-comparison reports **269 differing bytes across 64 runs**; the first is at
-`0x0076D744`, in the first background-constructor argument setup. The owner is
-two bytes longer than native. These are still open strict-codegen differences,
-not bytes to mask or overwrite. The workbench source currently contains no
-inline assembly or emitted opcodes.
+A source-order experiment changed the scale assignment from if/else to a
+natural default-first form (backgroundScale = 1.0; if stage == 16, assign
+0.125). The previous candidate was 4,031 bytes with 269 differing code bytes;
+this candidate is exactly 4,029 bytes and, after materializing all 115 COFF
+relocations, has **87 differing code bytes across 37 runs**. All 136 bytes of
+both switch tables and the selector remain byte-exact. The first remaining
+code difference is still at 0x0076D744, in constructor argument register
+selection. This is a measured reduction, not an Exact certificate. Detailed
+comparison: docs/evidence/prepare-battle-natural-cpp-progress-v2.json.
 
 The four constructor leafs reached by this switch have also been independently
 cold-built and strictly matched: **1,561/1,561 bytes**, **44 relocations**, zero
@@ -82,12 +83,17 @@ No all-project cold replay was run. Evidence:
 ### Source-form experiments and remaining work
 
 The previous local placeholder background classes were removed in favor of
-the real `Background01`, `Background10`, `Background12`, and `Background16`
-declarations from `Backgrounds.h`. This also replaced three raw constructor
+the real Background01, Background10, Background12, and Background16
+declarations from Backgrounds.h. This also replaced three raw constructor
 call sites and the handwritten vtable dispatch with normal C++ expressions.
 A trial using explicit placement-new locals expanded the frame and code, so it
-was discarded; the simple typed `new` expressions are retained. A trial local
-`Video *` alias also expanded the frame and was discarded.
+was discarded; the simple typed new expressions are retained. A trial local
+Video pointer alias also expanded the frame and was discarded.
+
+The current best code-size candidate uses the default-first background-scale
+assignment described above. The original if/else expression is retained in
+the comparison build only; the tracked source uses the improved form. Both are
+ordinary C++ and neither alters the native data tables.
 
 Next, continue with C++-only experiments around constructor argument
 expressions, temporary lifetimes, and the `LoadResources` virtual-call receiver.
