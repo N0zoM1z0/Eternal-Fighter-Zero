@@ -554,9 +554,11 @@ The next Nanase action Boss, `Character00::Slot04` at `0x0048ACA0`
 `workbench/nanase-action/Character00Action-natural.cpp`. It reproduces the
 native order of all 39 first-after-ClearBufferedButtons state transitions,
 including both bank-mode charge chains, special air-state fallbacks, and the
-final button group. Target-backed focused audit shows 11,426 candidate bytes
-and 2,878 instructions versus native 11,424 / 2,873. **Not Exact**: 5
-instruction/+2-byte net mismatch plus unresolved branches/relocs, so no
+final button group. Rewriting five native post-state conditions eliminated
+five candidate-only instructions. The focused audit now shows 11,397 candidate
+bytes / 2,873 decoded instructions versus native 11,424 / 2,873. **Not Exact**:
+matching instruction counts are not instruction equivalence; the -27-byte
+layout delta and remaining register/control-flow/COFF differences still forbid
 formal ledger promotion. Rebuild only that TU with
 `scripts/repo-python workbench/nanase-action/verify_action_progress.py --rebuild`;
 evidence `docs/evidence/nanase-slot04-natural-progress.json`.

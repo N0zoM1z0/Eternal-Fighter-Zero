@@ -8177,11 +8177,14 @@ fallback, the shared `0xfa` command family, and removal of Makoto's
 candidate-only `0xd2` reset branch. This also preserves the original
 normal-button and air-action transition order.
 
-The current pinned VC7.1 `/Od /G6 /MT /Gy /W3` candidate is **11,426 bytes**
-versus the 11,424 native bytes and decodes into **2,878 versus 2,873**
-instructions. All **39** native first state destinations and their order are
-confirmed by a focused original-bound verifier, but 5 instruction and 2-byte
-net differences remain and the full control flow/COFF bindings are not Exact.
+After further native-driven rewriting of the five conditional post-state
+branches, the current pinned VC7.1 `/Od /G6 /MT /Gy /W3` candidate is
+**11,397 bytes** versus 11,424 native bytes and both sides decode to exactly
+**2,873 instructions**. This is equal *count*, not equal instructions or byte
+layout. All **39** native first state destinations and their order are
+confirmed by a focused original-bound verifier, but a -27-byte layout delta,
+additional instruction/register differences, and unresolved control-flow/COFF
+bindings remain. It is not Exact.
 This is **not** an accepted owner and must not appear in `matches.csv` or
 `implemented.csv`. Rebuild only this TU via
 `workbench/nanase-action/verify_action_progress.py --rebuild`; evidence:

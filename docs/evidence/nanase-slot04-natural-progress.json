@@ -11,9 +11,9 @@
   },
   "candidate": {
     "source": "workbench/nanase-action/Character00Action-natural.cpp",
-    "source_sha256": "d5232ee9e065cbcf4adfccc5e0aeb4580d88a668971b598cedaad88cdeb7cff5",
+    "source_sha256": "f995685d7270e8b6f4e59b6d3b23053ebde5313dcbab9eb52dd078d5cc933f08",
     "object": "build/nanase-action/Character00Action-natural.obj",
-    "object_sha256": "0011b09cc10543d9b0b55a40d4ac3c311f28261cb1bd4c896581da469e979ad2",
+    "object_sha256": "75e39d0dfe90e12360d47eca0a6a0734b1c9cf6f96b8844b42b005f7411220dd",
     "compiler_flags": [
       "/Od",
       "/G6",
@@ -21,10 +21,10 @@
       "/Gy",
       "/W3"
     ],
-    "code_bytes": 11426,
-    "code_size_delta": 2,
-    "instruction_count": 2878,
-    "instruction_count_delta": 5,
+    "code_bytes": 11397,
+    "code_size_delta": -27,
+    "instruction_count": 2873,
+    "instruction_count_delta": 0,
     "coff_relocations": 93,
     "coff_symbols": {
       "__real@407f400000000000": 4,
@@ -136,229 +136,229 @@
     {
       "ordinal": 12,
       "native_call_va": "0x48ba11",
-      "candidate_call_offset": "0xd59",
-      "candidate_minus_native_offset": -24,
+      "candidate_call_offset": "0xd55",
+      "candidate_minus_native_offset": -28,
       "native_state": "0x102",
       "candidate_state": "0x102"
     },
     {
       "ordinal": 13,
       "native_call_va": "0x48bb2a",
-      "candidate_call_offset": "0xe77",
-      "candidate_minus_native_offset": -19,
+      "candidate_call_offset": "0xe6e",
+      "candidate_minus_native_offset": -28,
       "native_state": "0x101",
       "candidate_state": "0x101"
     },
     {
       "ordinal": 14,
       "native_call_va": "0x48bc27",
-      "candidate_call_offset": "0xf79",
-      "candidate_minus_native_offset": -14,
+      "candidate_call_offset": "0xf6b",
+      "candidate_minus_native_offset": -28,
       "native_state": "0x100",
       "candidate_state": "0x100"
     },
     {
       "ordinal": 15,
       "native_call_va": "0x48bd60",
-      "candidate_call_offset": "0x10b7",
-      "candidate_minus_native_offset": -9,
+      "candidate_call_offset": "0x10a4",
+      "candidate_minus_native_offset": -28,
       "native_state": "0x105",
       "candidate_state": "0x105"
     },
     {
       "ordinal": 16,
       "native_call_va": "0x48be58",
-      "candidate_call_offset": "0x11af",
-      "candidate_minus_native_offset": -9,
+      "candidate_call_offset": "0x119c",
+      "candidate_minus_native_offset": -28,
       "native_state": "0x104",
       "candidate_state": "0x104"
     },
     {
       "ordinal": 17,
       "native_call_va": "0x48bf40",
-      "candidate_call_offset": "0x1297",
-      "candidate_minus_native_offset": -9,
+      "candidate_call_offset": "0x1284",
+      "candidate_minus_native_offset": -28,
       "native_state": "0x103",
       "candidate_state": "0x103"
     },
     {
       "ordinal": 18,
       "native_call_va": "0x48c01d",
-      "candidate_call_offset": "0x1374",
-      "candidate_minus_native_offset": -9,
+      "candidate_call_offset": "0x1361",
+      "candidate_minus_native_offset": -28,
       "native_state": "0xfa",
       "candidate_state": "0xfa"
     },
     {
       "ordinal": 19,
       "native_call_va": "0x48c10e",
-      "candidate_call_offset": "0x146a",
-      "candidate_minus_native_offset": -4,
+      "candidate_call_offset": "0x1452",
+      "candidate_minus_native_offset": -28,
       "native_state": "0xfa",
       "candidate_state": "0xfa"
     },
     {
       "ordinal": 20,
       "native_call_va": "0x48c1fc",
-      "candidate_call_offset": "0x155d",
-      "candidate_minus_native_offset": 1,
+      "candidate_call_offset": "0x1540",
+      "candidate_minus_native_offset": -28,
       "native_state": "0xfa",
       "candidate_state": "0xfa"
     },
     {
       "ordinal": 21,
       "native_call_va": "0x48c30c",
-      "candidate_call_offset": "0x166e",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x1651",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xff",
       "candidate_state": "0xff"
     },
     {
       "ordinal": 22,
       "native_call_va": "0x48c404",
-      "candidate_call_offset": "0x1765",
-      "candidate_minus_native_offset": 1,
+      "candidate_call_offset": "0x1748",
+      "candidate_minus_native_offset": -28,
       "native_state": "0xfe",
       "candidate_state": "0xfe"
     },
     {
       "ordinal": 23,
       "native_call_va": "0x48c4ec",
-      "candidate_call_offset": "0x184e",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x1831",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xfd",
       "candidate_state": "0xfd"
     },
     {
       "ordinal": 24,
       "native_call_va": "0x48cc02",
-      "candidate_call_offset": "0x1f64",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x1f47",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xe",
       "candidate_state": "0xe"
     },
     {
       "ordinal": 25,
       "native_call_va": "0x48cccb",
-      "candidate_call_offset": "0x202d",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x2010",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xe6",
       "candidate_state": "0xe6"
     },
     {
       "ordinal": 26,
       "native_call_va": "0x48cda6",
-      "candidate_call_offset": "0x2108",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x20eb",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xcf",
       "candidate_state": "0xcf"
     },
     {
       "ordinal": 27,
       "native_call_va": "0x48ce87",
-      "candidate_call_offset": "0x21e9",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x21cc",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xcc",
       "candidate_state": "0xcc"
     },
     {
       "ordinal": 28,
       "native_call_va": "0x48cf68",
-      "candidate_call_offset": "0x22ca",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x22ad",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xc8",
       "candidate_state": "0xc8"
     },
     {
       "ordinal": 29,
       "native_call_va": "0x48cfdf",
-      "candidate_call_offset": "0x2341",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x2324",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xe7",
       "candidate_state": "0xe7"
     },
     {
       "ordinal": 30,
       "native_call_va": "0x48d0ba",
-      "candidate_call_offset": "0x241c",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x23ff",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xd0",
       "candidate_state": "0xd0"
     },
     {
       "ordinal": 31,
       "native_call_va": "0x48d19c",
-      "candidate_call_offset": "0x24fe",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x24e1",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xcd",
       "candidate_state": "0xcd"
     },
     {
       "ordinal": 32,
       "native_call_va": "0x48d2bc",
-      "candidate_call_offset": "0x261e",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x2601",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xc9",
       "candidate_state": "0xc9"
     },
     {
       "ordinal": 33,
       "native_call_va": "0x48d36c",
-      "candidate_call_offset": "0x26ce",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x26b1",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xca",
       "candidate_state": "0xca"
     },
     {
       "ordinal": 34,
       "native_call_va": "0x48d3e3",
-      "candidate_call_offset": "0x2745",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x2728",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xe8",
       "candidate_state": "0xe8"
     },
     {
       "ordinal": 35,
       "native_call_va": "0x48d576",
-      "candidate_call_offset": "0x28d8",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x28bb",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xf8",
       "candidate_state": "0xf8"
     },
     {
       "ordinal": 36,
       "native_call_va": "0x48d622",
-      "candidate_call_offset": "0x2984",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x2967",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xd1",
       "candidate_state": "0xd1"
     },
     {
       "ordinal": 37,
       "native_call_va": "0x48d704",
-      "candidate_call_offset": "0x2a66",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x2a49",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xce",
       "candidate_state": "0xce"
     },
     {
       "ordinal": 38,
       "native_call_va": "0x48d881",
-      "candidate_call_offset": "0x2be3",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x2bc6",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xdc",
       "candidate_state": "0xdc"
     },
     {
       "ordinal": 39,
       "native_call_va": "0x48d92e",
-      "candidate_call_offset": "0x2c90",
-      "candidate_minus_native_offset": 2,
+      "candidate_call_offset": "0x2c73",
+      "candidate_minus_native_offset": -27,
       "native_state": "0xcb",
       "candidate_state": "0xcb"
     }
   ],
   "source_has_asm_or_emitted_opcodes": false,
   "whole_owner_exact": false,
-  "qualification": "All 39 native first post-ClearBufferedButtons action destinations now match in their original order. The candidate is 2 bytes longer and 5 instructions different in total. Its COFF calls/data still need individual target binding and full byte equivalence. This is an unaccepted natural-C++ boss workbench, never an Exact receipt."
+  "qualification": "All 39 native first post-ClearBufferedButtons action destinations now match in their original order. The two sides now decode to the same 2,873 instruction count, although the candidate is 27 bytes shorter. Instruction mnemonics, control-flow edges, register allocation and whole-owner bytes are not equivalent. Its COFF calls/data still need individual target binding and full byte equivalence. This is an unaccepted natural-C++ boss workbench, never an Exact receipt."
 }

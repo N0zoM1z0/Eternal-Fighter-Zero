@@ -128,8 +128,11 @@ def main():
         'whole_owner_exact':candidate==original,
         'qualification':(
             'All 39 native first post-ClearBufferedButtons action destinations now match '
-            'in their original order. The candidate is 2 bytes longer and 5 '
-            'instructions different in total. Its COFF calls/data still need '
+            'in their original order. The two sides now decode to the same '
+            '2,873 instruction count, although the candidate is 27 bytes '
+            'shorter. Instruction mnemonics, control-flow edges, register '
+            'allocation and whole-owner bytes are not equivalent. Its COFF '
+            'calls/data still need '
             'individual target binding and full byte equivalence. This is an '
             'unaccepted natural-C++ boss workbench, never an Exact receipt.'),
     }
