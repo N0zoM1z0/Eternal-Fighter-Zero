@@ -151,7 +151,7 @@ claim. The file is unchanged outside those seven case bodies relative to
 `ShioriState.cpp` apart from trailing-whitespace normalization.
 
 Built only this TU with VC7.1 `/Od /G6 /MT /Gy /W3`. The candidate owner is
-63,151 bytes (62,292 code + 540 table + 319 selector) versus the native
+63,134 bytes (62,275 code + 540 table + 319 selector) versus the native
 63,132 bytes (62,273 code + 540 table + 319 selector). Per-case comparison:
 
 | Case | Native bytes | Candidate bytes | Native / candidate instructions | COFF relocations | Result |
@@ -161,18 +161,27 @@ Built only this TU with VC7.1 `/Od /G6 /MT /Gy /W3`. The candidate owner is
 | 305 | 846 | 846 | 217 / 217 | 10 / 10 original-bound | No width differences; 11 GPR-abstracted instruction differences remain |
 | 306 | 567 | 567 | 149 / 149 | 8 / 8 original-bound | No width differences; 10 GPR-abstracted instruction differences remain |
 | 307 | 542 | 543 | 144 / 144 | 8 / 8 original-bound | One instruction-width byte and register differences remain |
-| 308 | 577 | 595 | 154 / 157 | 11 present, not yet fully bound | Three extra instructions; alignment and codegen remain open |
+| 308 | 577 | 578 | 154 / 154 | 9 / 9 original-bound | One instruction-width byte and register differences remain |
 | 309 | 293 | 293 | 80 / 80 | 4 / 4 original-bound | No width differences; 8 GPR-abstracted differences remain |
 
-The original-bound calls include all nine case303 relocations, all nine
-case304 relocations, all ten case305 relocations, the three `__ftol2`
-conversions in case306, three in case307, and two in case309; these are ordinary
-compiler-generated COFF relocations, not inline assembly. The case308
-conversions are also normal COFF calls, but its changed instruction layout
-means its relocation mapping still needs a dedicated alignment review. None of
-these seven cases is promoted to the Exact ledger. Continue by resolving
-natural source/register and local stack-lifetime differences, not by adding
-assembly or padding.
+The case308 dirty edit was retained and checked against the native disassembly:
+its meter cost is 3000 (not 2000), global effect type is `0x46` (not `0x45`),
+and palette is `0x40` (not `5`). That correction removed three extra candidate
+instructions and reduced the body from 595 to 578 bytes. All nine resulting
+case308 COFF relocations now bind to original call/float operands. The original-
+bound calls include all nine case303 relocations, all nine case304 relocations,
+all ten case305 relocations, the three `__ftol2` conversions in case306, three
+in case307, three in case308, and two in case309; these are ordinary
+compiler-generated COFF relocations, not inline assembly. None of these seven
+cases is promoted to the Exact ledger. Continue by resolving natural
+source/register and local stack-lifetime differences, not by adding assembly or
+padding.
+
+The immediately adjacent existing natural bodies are also measured in this
+TU: case300 is 715/715 bytes, 190/190 instructions and 13/13 original-bound
+relocations; IDs 288–299 and 301–302 alias the existing 123-byte default body,
+which is 123/123 bytes, 33/33 instructions and 2/2 original-bound relocations.
+They are unchanged from `ShioriState.cpp`, not extra edits in this experiment.
 
 ## Remaining source-object work
 
