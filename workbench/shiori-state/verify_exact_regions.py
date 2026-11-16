@@ -2,7 +2,7 @@
 """Verify pinned byte-exact regions of the Shiori Slot06 workbench object.
 
 This is deliberately a focused-region verifier, not a whole-function Exact
-certificate. It reconstructs twenty complete case bodies from original-bound
+certificate. It reconstructs eighty-three complete case bodies from original-bound
 COFF operands, raw runtime-call operands and native stack-slot normalization.
 """
 from __future__ import annotations
@@ -34,6 +34,8 @@ CALL_TARGETS = {
     "?SetVerticalShake@Secondary@@QAEXHH@Z": 0x00410A10,
     "?SetHorizontalShake@Secondary@@QAEXHH@Z": 0x00410A80,
     "?RequestTransition@Context@@QAEXD@Z": 0x00407CE0,
+    "?ApplyDamage@Secondary@@QAEXHN@Z": 0x004105A0,
+    "?StartTrail@Secondary@@QAEXE@Z": 0x004109D0,
 }
 FLOAT_SYMBOL_TARGETS = {
     "_ShioriMinusSixPointFiveOperand": (0x00787C68, bytes.fromhex("0000000000001ac0")),
@@ -42,6 +44,25 @@ FLOAT_SYMBOL_TARGETS = {
     "_ShioriPointZeroThreeFiveOperand": (0x00787DD8, bytes.fromhex("ec51b81e85eba13f")),
 }
 CASE_RELOCATIONS = {
+    150: (13, 1), 151: (13, 1), 152: (13, 1),
+    153: (13, 1), 154: (13, 1), 155: (13, 1),
+    156: (6, 1), 157: (9, 4), 158: (9, 4),
+    161: (5, 4), 162: (10, 5), 163: (4, 1), 164: (12, 2),
+    165: (10, 3), 166: (10, 3), 167: (12, 8), 168: (10, 4), 169: (10, 4),
+    170: (14, 3), 171: (15, 6), 178: (3, 0),
+    180: (11, 2),
+    200: (6, 1), 201: (6, 1), 202: (6, 1), 203: (8, 3),
+    204: (6, 1), 205: (6, 1), 206: (6, 1),
+    207: (2, 0), 208: (2, 0), 209: (2, 0),
+    220: (11, 5), 221: (8, 3),
+    230: (4, 1), 231: (5, 1), 232: (9, 2),
+    233: (4, 1), 234: (4, 1), 235: (5, 1),
+    248: (7, 5), 249: (8, 2),
+    250: (3, 3), 251: (3, 3), 252: (16, 9), 253: (3, 0), 254: (3, 0),
+    255: (10, 5), 256: (14, 4), 257: (14, 4), 258: (19, 7), 259: (4, 4),
+    260: (4, 4), 261: (9, 7), 262: (5, 2), 263: (5, 2),
+    264: (14, 9), 265: (8, 8), 266: (8, 8), 267: (8, 8),
+    268: (6, 2), 269: (6, 2), 270: (11, 5),
     300: (13, 10), 301: (2, 0), 302: (2, 0), 303: (9, 9),
     304: (9, 9), 305: (10, 10), 306: (8, 7), 307: (5, 4),
     308: (6, 5), 309: (2, 2), 310: (8, 8), 311: (9, 9),
@@ -260,7 +281,7 @@ def main() -> None:
                      "case_entry_order_exact": True, "selector_bytes_exact": True},
         "prologue_normalization": {"candidate_frame": "0x338", "native_frame": "0x384",
                                    "native_prologue_restored": True},
-        "qualification": "Twenty complete case bodies (the full selected late-state range 300-319) are byte-exact after original-bound relocation materialization, eighteen inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; all reviewed meter arithmetic is included in complete bodies. Unselected Slot06 states are not covered. This is not a whole-function Exact certificate.",
+        "qualification": "Eighty-three complete case bodies across 150-158, 161-171, 178, 180, 200-209, 220-221, 230-235, 248-270 and 300-319 are byte-exact after original-bound relocation materialization, eighteen inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; all reviewed meter arithmetic is included in complete bodies. Other Slot06 cases are not covered. This is not a whole-function Exact certificate.",
     }
     output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
