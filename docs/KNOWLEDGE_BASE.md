@@ -6352,6 +6352,18 @@ retain a cyclic scratch-register rotation; the first LoadResources dispatch
 uses a different register shuffle: at 0x76D881 the candidate emits
 mov ecx, edx where native emits mov eax, [eax]; the call itself remains at
 0x76D883. The second dispatch sequence matches. The former 4,031-byte / 269-byte-difference candidate is historical.
+A separate condition-first natural-C++ alternative now lives at
+`workbench/prepare-battle/SceneLoading-ifelse.cpp`. Its scoped verifier is
+`scripts/repo-python workbench/prepare-battle/compare_prepare_battle_ifelse.py`.
+It compiles to 4,031 bytes (+2), materializes all 115 relocations and keeps
+both switch tables/selector exact. It has a candidate-only `mov ecx, edx` at
+0x0076D883. After explicitly deleting that two-byte instruction for diagnostic
+alignment only, and rebasing local targets, it has **48 differing code bytes
+in 48 runs**. This is not a strict comparison or Exact result; the extra move
+remains a real mismatch. The previous 45-byte diagnostic count was superseded
+by the corrected local-target relocation mapping. The 4,029-byte default-first
+candidate remains the selected strict-extent variant at 87 bytes / 37 runs.
+
 Pointer casts/views, destructor declarations, case scopes, base/type changes,
 and additional receiver/local aliases were byte-neutral or worse; do not repeat
 them without new evidence. The complete draft in workbench/prepare-battle/

@@ -53,11 +53,23 @@ relative to native. At the first LoadResources dispatch, the candidate emits
 mov ecx, edx at 0x0076D881 where native emits mov eax, [eax]; the indirect
 call remains at 0x0076D883. The second dispatch instruction sequence matches.
 
-The selected source form sets backgroundScale to 1.0 first, then overrides
-it to 0.125 for stage 16. The older condition-first if/else form emits a
-4,031-byte owner. Removing its extra two-byte receiver move for diagnostic
-alignment still leaves 45 differing code bytes; that alignment is not an
-accepted comparison and the larger candidate is not retained.
+The selected `SceneLoading.cpp` form sets backgroundScale to 1.0 first, then
+overrides it to 0.125 for stage 16. A second, separately retained natural-C++
+form is `SceneLoading-ifelse.cpp`; it uses the target's condition-first
+if/else scale assignment. Its focused driver is:
+
+    scripts/repo-python workbench/prepare-battle/compare_prepare_battle_ifelse.py
+
+This alternate compiles to a **4,031-byte owner** (3,895 code bytes), exactly
+two bytes larger than native. All 115 relocations are materialized and both
+switch tables/selector are exact. It contains one explicit candidate-only
+`mov ecx, edx` at candidate offset `0xE33` / target VA `0x0076D883`. For
+structural diagnosis only, the verifier removes exactly that two-byte
+instruction, rebases local branch/table targets, and then measures **48 byte
+differences in 48 runs** across the native 3,893-byte code range. The move is
+still a real mismatch; this normalization is not Exact and the alternate is
+not accepted. The prior note's 45-byte diagnostic count was superseded by the
+corrected relocation/local-target rebasing audit (48 bytes).
 
 ## Completed dependencies
 
