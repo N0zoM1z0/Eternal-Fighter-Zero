@@ -115,13 +115,25 @@ register hints, placement new, inline accessors, and targeted compiler flags.
 None improved the relocation-bound candidate; variants that introduced
 additional temporaries expanded the frame or code and were discarded.
 
-Next, continue with C++-only experiments around constructor argument
-expressions, temporary lifetimes, and the `LoadResources` virtual-call receiver.
-Review each remaining mismatch against native disassembly, then materialize
-all 115 relocations and retain the strict table/selector checks. Do not add
-inline assembly, `_emit`, byte patches, or arbitrary normalization. Reconcile
-the provisional view with accepted headers only through targeted consumers;
-never overwrite `src/` wholesale.
+The condition-first if/else source form is still useful diagnostically: it
+produces 3,895 code bytes, and after a non-acceptance diagnostic alignment
+that removes its extra two-byte receiver copy, 45 code bytes still differ.
+It is not a valid owner candidate because its extent is two bytes too large.
+The inverse-default spelling (assign 0.125, then override to 1.0 when the stage
+is not 16) compiles to the same code as the retained default-first form.
+Changing only braces, splitting the condition into two independent ifs, using
+a ternary, or using a switch did not improve the comparison. /G5 and /Oy-
+did not change the register rotation; /O1, /O2, and /Og produced
+substantially shorter functions (2,184, 2,700, and 2,404 code bytes), so they
+do not describe this target's build profile.
+
+Next, continue from the reproducible comparison script and investigate the
+source-level cause of the cyclic constructor/virtual-call register allocation.
+Any new form must retain the complete owner extent and all 115 relocation
+checks; compare all code bytes and both tables, not just instruction snippets.
+Do not add inline assembly, _emit, byte patches, or arbitrary normalization.
+Reconcile the provisional view with accepted headers only through targeted
+consumers; never overwrite src/ wholesale.
 
 ## Reviewed authored boundary is separately registered
 
