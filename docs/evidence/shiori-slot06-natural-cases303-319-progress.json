@@ -12,9 +12,9 @@
   },
   "candidate": {
     "source": "workbench/shiori-state/ShioriState-natural-cases303-319.cpp",
-    "source_sha256": "df8548f191cf69e3b45e0a24d352438a08d9fcf0bec8312daf74da8242b70e7f",
+    "source_sha256": "06592161de9fba972fa9217c447602b55237e82511552d60cbac3091ed60de19",
     "object": "build/shiori-state/ShioriState-natural-cases303-319.obj",
-    "object_sha256": "badd54c1962e04bd10a2c12089ac6f43e234a40b6166f67e6d2827d0dbccb0c2",
+    "object_sha256": "e839caf5980bde7bbfa2fe0f3bd143e38ab0b862b2e56e54fb84b298842b3758",
     "owner_bytes": 63133,
     "code_bytes": 62274,
     "compiler_flags": [
@@ -61,31 +61,8 @@
   "relocation_accounting": {
     "total_coff_relocations": 1374,
     "case_relocations_offset_compared": 206,
-    "case_relocation_targets_verified": 178,
-    "unverified_relocation_sites": [
-      {
-        "case": 318,
-        "relocation": {
-          "offset": 60764,
-          "type_id": 20,
-          "type": "REL32",
-          "symbol": "__ftol2"
-        },
-        "target": "0x508ce23e",
-        "kind": "rel32-target-mismatch"
-      },
-      {
-        "case": 318,
-        "relocation": {
-          "offset": 60802,
-          "type_id": 20,
-          "type": "REL32",
-          "symbol": "__ftol2"
-        },
-        "target": "0xfcd2a9de",
-        "kind": "rel32-target-mismatch"
-      }
-    ]
+    "case_relocation_targets_verified": 180,
+    "unverified_relocation_sites": []
   },
   "summary": {
     "natural_cpp_cases": 17,
@@ -1446,8 +1423,8 @@
           "target": "0x40e630"
         }
       ],
-      "difference_bytes_after_offset_operand_materialization": 106,
-      "difference_runs": 103,
+      "difference_bytes_after_offset_operand_materialization": 105,
+      "difference_runs": 102,
       "first_mismatch_va": "0x421e57",
       "whole_case_exact": false
     },
@@ -1559,7 +1536,7 @@
       "extent_equal": true,
       "coff_relocations": 14,
       "relocation_operands_offset_materialized": 14,
-      "relocation_targets_verified": 12,
+      "relocation_targets_verified": 14,
       "relocation_bindings": [
         {
           "candidate_offset": "0xed0e",
@@ -1586,20 +1563,20 @@
           "target": "0x7872f8"
         },
         {
-          "candidate_offset": "0xed5c",
-          "native_va": "0x42242b",
+          "candidate_offset": "0xed55",
+          "native_va": "0x422424",
           "symbol": "__ftol2",
-          "kind": "rel32-target-mismatch",
-          "target_verified": false,
-          "target": "0x508ce23e"
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
         },
         {
-          "candidate_offset": "0xed82",
-          "native_va": "0x422451",
+          "candidate_offset": "0xed7b",
+          "native_va": "0x42244a",
           "symbol": "__ftol2",
-          "kind": "rel32-target-mismatch",
-          "target_verified": false,
-          "target": "0xfcd2a9de"
+          "kind": "bound-call",
+          "target_verified": true,
+          "target": "0x7783b8"
         },
         {
           "candidate_offset": "0xedd7",
@@ -1674,8 +1651,8 @@
           "target": "0x7783b8"
         }
       ],
-      "difference_bytes_after_offset_operand_materialization": 114,
-      "difference_runs": 29,
+      "difference_bytes_after_offset_operand_materialization": 36,
+      "difference_runs": 36,
       "first_mismatch_va": "0x4223b9",
       "whole_case_exact": false
     },

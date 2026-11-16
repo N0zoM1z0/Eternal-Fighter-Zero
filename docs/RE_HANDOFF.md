@@ -1243,9 +1243,13 @@ exact and all 135 unique destinations remain present. The candidate owner is
 **900/900 bytes Exact** with all 17 relocation targets verified. Its positive
 velocity/landing tests, shake argument order and `0.035` x87 operand order were
 corrected from native evidence. Remaining case codegen differences are still
-open; in particular 310/311 each differ by one epilogue displacement byte,
-312/313/314 and 316/317/318 have register/codegen differences, and 315 is one
-byte short. Do not call Slot06 complete. Reproduce only this TU with
+open; in particular 310/311 each differ by one epilogue displacement byte.
+Case316 now uses the native repetition cap 8 and has the same normalized
+instruction sequence (105 register-encoding bytes still differ). Case318's
+EffectSpawn store order now matches native and its relocation-offset-materialized
+difference is down from 114 to 36 bytes. Cases 312/313/314 and 317 still have
+register/codegen differences, and 315 is one byte short. Do not call Slot06
+complete. Reproduce only this TU with
 `scripts/repo-python workbench/shiori-state/verify_natural_case_progress.py --rebuild`;
 report: `docs/evidence/shiori-slot06-natural-cases303-319-progress.json`.
 

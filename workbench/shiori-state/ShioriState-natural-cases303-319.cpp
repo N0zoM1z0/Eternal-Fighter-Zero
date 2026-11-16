@@ -5263,7 +5263,7 @@ void Character08::Slot06()
       if (field000c >= frameDuration) {
         field000c = 0;
         ++field000a;
-        if ((field000a == 8) && (field313c < 13)) {
+        if ((field000a == 8) && (field313c < 8)) {
           ++field313c;
           field000a -= 4;
         }
@@ -5336,13 +5336,13 @@ void Character08::Slot06()
         field0048 = ShioriZeroOperand;
       }
       if ((field000a == 3) && (field000c == 0)) {
-        effect.owner = 1;
         effect.type = 0x1a3;
         effect.x = (double)((int(field0020)) + (char)facing * 6);
         effect.y = (double)(int(field0028) - 0x34);
-        effect.flag0018 = -facing;
         effect.group = 0;
+        effect.owner = 1;
         effect.layer = 1;
+        effect.flag0018 = -facing;
         effect.field0030 = 1;
         EmitLocalEffect(&effect);
       }

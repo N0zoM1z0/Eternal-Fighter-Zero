@@ -4396,9 +4396,13 @@ relocation targets are verified and the relocation-materialized case has zero
 differences. Native review corrected its positive-velocity transition and
 landing comparisons, shake argument order, and the `0.035` x87 operand order.
 This is one exact case inside an unfinished boss, not a whole-function
-acceptance. Cases 310/311 still have one-byte epilogue displacement differences;
-312/313/314 and 316/317/318 still have codegen differences; 315 remains one byte
-short. The focused progress verifier is
+acceptance. Cases 310/311 still have one-byte epilogue displacement differences.
+Case 316's repetition limit is now corrected to the native value 8 and its
+normalized instruction sequence matches, although 105 register-encoding bytes
+remain different. Case 318's EffectSpawn store order now follows the native order;
+its relocation-offset-materialized difference is down from 114 to 36 bytes.
+Cases 312/313/314 and 317 still have codegen differences, and 315 remains one
+byte short. The focused progress verifier is
 `workbench/shiori-state/verify_natural_case_progress.py`, with report
 `docs/evidence/shiori-slot06-natural-cases303-319-progress.json`. Rebuild only
 this TU with:
