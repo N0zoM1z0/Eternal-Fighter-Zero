@@ -12,7 +12,7 @@
   },
   "build": {
     "source_sha256": "c62e985569a01c42a3455db315d96be93aa9b287e0e4c2d5b58546d34e1e3896",
-    "object_sha256": "7784cb46bdd7e02a24fb58febf70763c1b9af878f7c82dcba1a6dc649dda6806",
+    "object_sha256": "f7f2197d129b3bd03acc2673d95d8c5f58c5f6826cd1f4d5c18e0b47a99bd6d1",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
   "whole_case_exact": {

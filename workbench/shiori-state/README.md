@@ -94,11 +94,11 @@ then verifies selected code against the canonical PE. Its evidence is
 - **Case315:** the 26-byte sequence at `0x00421BEB` matches exactly, including
   `sub edx,0x3E8`.
 
-Across the sixteen complete cases (300–313 and 318–319), **9,990 native code
-bytes** are byte-exact after materializing **160 COFF relocations** (110 calls
-and 50 float operands) plus ten raw `__ftol2` call operands. One additional
-meter region in case315 contributes another **26 byte-exact bytes**. The
-focused resolver restores the native frame and 58 individually checked
+Across the seventeen complete cases (300–314 and 318–319), **11,109 native
+code bytes** are byte-exact after materializing **185 COFF relocations** (122
+calls and 63 float operands) plus ten raw `__ftol2` call operands. One
+additional meter region in case315 contributes another **26 byte-exact bytes**.
+The focused resolver restores the native frame and 66 individually checked
 conversion-temp operand bytes; it does not mask arbitrary bytes.
 
 ## Remaining whole-function work
