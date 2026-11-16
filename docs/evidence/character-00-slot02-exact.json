@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "authority": "Complete Nanase Character00 virtual Slot02 command recognition at vtable slot2 (0x0078833C -> 0x0048E290), reviewed original RET at 0x0048F683 and 12 CC alignment bytes. Entire native function extent 5108 bytes.",
-  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 source from 15 ordinary C++ priority input-history scans; selected single-unit normal COFF strict replay proves all 5108 native executable bytes byte-identical, zero relocations/differences. No target bytes, artificial padding, inline assembly or emitted opcodes.",
+  "authority": "Canonical Nanase Character00 vtable 0x00788334 slot2 at 0x0078833C selects complete 5,108-byte owner [0x0048E290,0x0048F684), ending at raw RET 0x0048F683 before twelve CC alignment bytes.",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles authored ordinary natural C++ from src/Character00Commands.cpp, preserving all 15 prioritized input-history scans. Strict selected-only original-bound replay matches all 5,108 native executable bytes with zero relocations and zero differences; no ASM, padding or all-unit cold replay.",
   "reports": [
     {
       "result": "exact",

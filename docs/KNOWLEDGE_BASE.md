@@ -8131,8 +8131,9 @@ unit was rebuilt; no full cold replay or whole-game runtime parity claim.
 
 Nanase's `Character00::Slot02` at `0x0048E290` is now completely authored as
 ordinary C++ in `src/Character00Commands.cpp`, preserving the original
-priority order of **15 input-history scans**, their distinct 45/90/120/135/
-175-frame window starts, history wrap modulo 180, directional mirroring,
+priority order of **15 input-history scans**, their distinct
+`0x2D/0x5A/0x78/0x87/0xAF` offsets within the 180-frame circular history,
+directional mirroring,
 button-bit decoding and each recognized-command return. Its complete original
 virtual slot2 pointer is `0x0078833C -> 0x0048E290`; the 5,108-byte function
 ends with RET at `0x0048F683`, followed by twelve `CC` bytes before the next
