@@ -1556,6 +1556,20 @@ the allocation-bounded `0x3450` object extent without changing shared headers.
 Proof: `docs/evidence/character-01-constructor-exact.json`. Only this one TU was
 built and compared; no full cold replay.
 
+### Character00 / Nanase constructor natural-C++ experiment (2026-11-16)
+
+The reviewed 642-byte constructor at `0x0048A720` (selection ID0, resource
+`nanase`, vtable `0x00788334`, allocation size `0x3470`) now has an independent
+natural-C++ workbench candidate at
+`workbench/character00/Character00Constructor-natural.cpp`. It reconstructs
+the two 505-entry sequence arrays, cookie/iterator initialization, child
+counters, three 64-entry arrays, collision pairs, command bytes and the
+mode-toggle helper at `0x0048E140`. The current constructor object is 684 bytes
+with 11 relocation sites; the 257-byte helper has one remaining raw instruction
+byte difference. This is a semantic reconstruction experiment only, **not**
+Exact and not included in the authored implementation ledger. See the workbench
+README for current evidence and next steps. No ASM/padding is used.
+
 ### Character02 constructor (selection ID4 / `akane`): complete exact native code generation (2026-11-16)
 
 The reviewed selection-ID 4 constructor at `0x007039D0` is the provisional

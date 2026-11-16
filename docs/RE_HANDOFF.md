@@ -553,6 +553,14 @@ gates. Proofs: `docs/evidence/character-00-constructor-exact.json` and
 `docs/evidence/character-00-mode-switch-exact.json`; only these two units were
 rebuilt, no full cold replay.
 
+Character00 / Nanase is the next constructor-sized recovery target. Its
+natural C++ experiment is preserved at
+`workbench/character00/Character00Constructor-natural.cpp`: the 642-byte
+native constructor is currently 684 candidate bytes with two distinct
+505-entry arrays and the 257-byte mode-toggle helper represented in C++.
+It is not Exact yet (the helper retains one instruction-byte mismatch), and
+has not been added to the implementation ledger. See its README for details.
+
 Character02's selection-ID 4 constructor (`akane`) is now natural C++ in
 `src/Character02Constructor.cpp`: vtable `0x00788EB0`, **413/413 bytes exact**
 with four original-bound relocations (Secondary base ctor, vtable, resource
