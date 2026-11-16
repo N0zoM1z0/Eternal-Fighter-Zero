@@ -2,7 +2,7 @@
 """Verify pinned byte-exact regions of the Shiori Slot06 workbench object.
 
 This is deliberately a focused-region verifier, not a whole-function Exact
-certificate. It reconstructs eighteen complete case bodies from original-bound
+certificate. It reconstructs nineteen complete case bodies from original-bound
 COFF operands, raw runtime-call operands and native stack-slot normalization.
 """
 from __future__ import annotations
@@ -40,6 +40,7 @@ CASE_RELOCATIONS = {
     304: (9, 9), 305: (10, 10), 306: (8, 7), 307: (5, 4),
     308: (6, 5), 309: (2, 2), 310: (8, 8), 311: (9, 9),
     312: (24, 11), 313: (24, 11), 314: (25, 12), 315: (9, 9),
+    316: (9, 9),
     318: (12, 9), 319: (17, 6),
 }
 PINNED_ASM_CALLS = {
@@ -81,6 +82,14 @@ STACK_SLOT_PATCHES = {
           (0x092, 0xE0, 0xC0), (0x098, 0xE0, 0xC0),
           (0x150, 0xDC, 0xBC), (0x156, 0xDC, 0xBC),
           (0x16D, 0xD8, 0xB8), (0x173, 0xD8, 0xB8)),
+    316: ((0x075, 0xD4, 0xB4), (0x07B, 0xD4, 0xB4),
+          (0x092, 0xD0, 0xB0), (0x098, 0xD0, 0xB0),
+          (0x150, 0xCC, 0xAC), (0x156, 0xCC, 0xAC),
+          (0x16D, 0xC8, 0xA8), (0x173, 0xC8, 0xA8)),
+    316: ((0x075, 0xD4, 0xB4), (0x07B, 0xD4, 0xB4),
+          (0x092, 0xD0, 0xB0), (0x098, 0xD0, 0xB0),
+          (0x150, 0xCC, 0xAC), (0x156, 0xCC, 0xAC),
+          (0x16D, 0xC8, 0xA8), (0x173, 0xC8, 0xA8)),
     318: ((0x177, 0xB4, 0x8C), (0x17D, 0xB4, 0x8C),
           (0x194, 0xB0, 0x88), (0x19A, 0xB0, 0x88),
           (0x21B, 0xAC, 0x84), (0x221, 0xAC, 0x84),
@@ -247,14 +256,14 @@ def main() -> None:
                      "case_entry_order_exact": True, "selector_bytes_exact": True},
         "prologue_normalization": {"candidate_frame": "0x35C", "native_frame": "0x384",
                                    "native_prologue_restored": True},
-        "qualification": "Eighteen complete case bodies are byte-exact after original-bound relocation materialization, ten inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; case315 is covered as a complete body. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate.",
+        "qualification": "Nineteen complete case bodies are byte-exact after original-bound relocation materialization, ten inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; case315 is covered as a complete body. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate.",
     }
     output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(evidence, indent=2) + "\n")
     for case, result in exact_cases.items():
         print(f"case{case}: {result['bytes']} bytes exact; {result['relocations_materialized']} relocations ({result['rel32_calls_materialized']} calls, {result['float_operands_materialized']} floats)")
-    print("stack frame: candidate 0x35C normalized to native 0x384; stack-temp operands restored for cases310/311/312/313/314/315/318/319")
+    print("stack frame: candidate 0x35C normalized to native 0x384; stack-temp operands restored for cases310/311/312/313/314/315/316/318/319")
     print("meter-only regions: none; case-local arithmetic is included in whole-case matches")
     print("owner extent:", len(compiled), "bytes; table/selector order exact; other cases remain open")
 

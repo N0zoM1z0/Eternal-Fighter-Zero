@@ -11,8 +11,8 @@
     "native_candidate_extent_size_equal": true
   },
   "build": {
-    "source_sha256": "4b5dbfff647682a78de2c97c853cb3bf3d72c9f2a7181749cb1705deb1b13094",
-    "object_sha256": "0eb76245f882d9cb7f1deb658f90494741afbe602aaf95fb142adddf95745238",
+    "source_sha256": "ff416a96bab8a3bf7cd12d30ed26a7fb7fd95c7a74ecaaa446d8750d805bc2cf",
+    "object_sha256": "ff232db2d1bde73e57cca8b42f4747f485e064058a92aec8f3194a12fa2ed497",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
   "whole_case_exact": {
@@ -1425,6 +1425,105 @@
       ],
       "float_operands": []
     },
+    "316": {
+      "native_start": "0x421e56",
+      "bytes": 672,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 9,
+      "rel32_calls_materialized": 9,
+      "float_operands_materialized": 0,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [
+        {
+          "case_offset": "0x75",
+          "candidate": "0xd4",
+          "native": "0xb4"
+        },
+        {
+          "case_offset": "0x7b",
+          "candidate": "0xd4",
+          "native": "0xb4"
+        },
+        {
+          "case_offset": "0x92",
+          "candidate": "0xd0",
+          "native": "0xb0"
+        },
+        {
+          "case_offset": "0x98",
+          "candidate": "0xd0",
+          "native": "0xb0"
+        },
+        {
+          "case_offset": "0x150",
+          "candidate": "0xcc",
+          "native": "0xac"
+        },
+        {
+          "case_offset": "0x156",
+          "candidate": "0xcc",
+          "native": "0xac"
+        },
+        {
+          "case_offset": "0x16d",
+          "candidate": "0xc8",
+          "native": "0xa8"
+        },
+        {
+          "case_offset": "0x173",
+          "candidate": "0xc8",
+          "native": "0xa8"
+        }
+      ],
+      "calls": [
+        {
+          "offset": "0x421eb0",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x421ec5",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421edf",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421f0f",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x421f17",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        },
+        {
+          "offset": "0x421f6f",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x421f93",
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "target": "0x4108a0"
+        },
+        {
+          "offset": "0x421fba",
+          "symbol": "__ftol2",
+          "target": "0x7783b8"
+        },
+        {
+          "offset": "0x4220e3",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": []
+    },
     "318": {
       "native_start": "0x4223b8",
       "bytes": 725,
@@ -1673,5 +1772,5 @@
     "native_frame": "0x384",
     "native_prologue_restored": true
   },
-  "qualification": "Eighteen complete case bodies are byte-exact after original-bound relocation materialization, ten inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; case315 is covered as a complete body. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
+  "qualification": "Nineteen complete case bodies are byte-exact after original-bound relocation materialization, ten inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; case315 is covered as a complete body. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
 }
