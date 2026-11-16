@@ -4424,6 +4424,19 @@ alignment proof, not semantic equivalence or whole-owner Exact; only case319 is
 byte Exact. The report explicitly separates normalized instruction shape,
 branch-target mapping, relocation-target verification and raw byte Exactness.
 
+This is now a **whole-translation-unit natural-C++ candidate**, not merely a
+17-case fragment: it retains all **134 explicit case labels plus the default**.
+The original workbench source had 25 `__asm` blocks and 96 `_emit` sites; the
+natural candidate has **zero** `__asm`, `_emit` or `__emit` occurrences anywhere
+in the translation unit. All **1,239 code relocations** (including the two
+prefix references to the switch tables) and all **135 switch-table entries**
+are individually bound to their native targets: **1,374/1,374 verified**, with
+zero unverified relocation sites. The table targets map to the same native
+instruction indices, and the selector remains byte-identical. The whole owner
+is still 63,133/63,132 bytes, so this is not whole-owner Exact; keep it as a
+separate natural-C++ candidate and continue resolving the remaining register
+and instruction-width differences.
+
 The natural source remains outside `matches.csv` and `implemented.csv`; do not
 promote the case-level Exact result to a whole-owner claim. Continue with the
 remaining codegen differences and preserve ordinary C++ only.

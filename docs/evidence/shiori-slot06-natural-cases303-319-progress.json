@@ -14,7 +14,7 @@
     "source": "workbench/shiori-state/ShioriState-natural-cases303-319.cpp",
     "source_sha256": "06592161de9fba972fa9217c447602b55237e82511552d60cbac3091ed60de19",
     "object": "build/shiori-state/ShioriState-natural-cases303-319.obj",
-    "object_sha256": "8a656d8d525fdeaabaf707593e4259ae20ba0efe7f72820230e0caa8b33c9833",
+    "object_sha256": "0ffa16bf618b79022ca1d63819d509264167f55e8f1ca8ee46c11d8b60f47133",
     "owner_bytes": 63133,
     "code_bytes": 62274,
     "compiler_flags": [
@@ -46,6 +46,22 @@
     318,
     319
   ],
+  "whole_translation_unit": {
+    "explicit_case_labels": 134,
+    "explicit_case_labels_unique": 134,
+    "default_labels": 1,
+    "candidate_assembly_counts": {
+      "__asm": 0,
+      "_emit": 0,
+      "__emit": 0
+    },
+    "baseline_assembly_counts": {
+      "__asm": 25,
+      "_emit": 96,
+      "__emit": 0
+    },
+    "candidate_has_no_inline_assembly_or_emitted_opcodes": true
+  },
   "source_has_inline_assembly_or_emitted_opcodes": false,
   "frame": {
     "native_bytes": 900,
@@ -67,12 +83,1102 @@
   },
   "relocation_accounting": {
     "total_coff_relocations": 1374,
+    "code_relocations": 1239,
+    "code_relocation_targets_verified": 1239,
+    "switch_table_relocations": 135,
+    "switch_table_targets_verified": 135,
     "case_relocations_instruction_aligned": 206,
     "case_relocation_targets_verified": 206,
     "unverified_relocation_sites": []
   },
+  "switch_table_bindings": [
+    {
+      "index": 0,
+      "candidate_offset": "0xf342",
+      "expected_candidate_offset": "0xf342",
+      "native_target": "0x4137f9",
+      "expected_native_target": "0x4137f9",
+      "target_verified": true
+    },
+    {
+      "index": 1,
+      "candidate_offset": "0xf346",
+      "expected_candidate_offset": "0xf346",
+      "native_target": "0x413874",
+      "expected_native_target": "0x413874",
+      "target_verified": true
+    },
+    {
+      "index": 2,
+      "candidate_offset": "0xf34a",
+      "expected_candidate_offset": "0xf34a",
+      "native_target": "0x4138ef",
+      "expected_native_target": "0x4138ef",
+      "target_verified": true
+    },
+    {
+      "index": 3,
+      "candidate_offset": "0xf34e",
+      "expected_candidate_offset": "0xf34e",
+      "native_target": "0x413972",
+      "expected_native_target": "0x413972",
+      "target_verified": true
+    },
+    {
+      "index": 4,
+      "candidate_offset": "0xf352",
+      "expected_candidate_offset": "0xf352",
+      "native_target": "0x413ad5",
+      "expected_native_target": "0x413ad5",
+      "target_verified": true
+    },
+    {
+      "index": 5,
+      "candidate_offset": "0xf356",
+      "expected_candidate_offset": "0xf356",
+      "native_target": "0x413c44",
+      "expected_native_target": "0x413c44",
+      "target_verified": true
+    },
+    {
+      "index": 6,
+      "candidate_offset": "0xf35a",
+      "expected_candidate_offset": "0xf35a",
+      "native_target": "0x413d8e",
+      "expected_native_target": "0x413d8e",
+      "target_verified": true
+    },
+    {
+      "index": 7,
+      "candidate_offset": "0xf35e",
+      "expected_candidate_offset": "0xf35e",
+      "native_target": "0x413e1b",
+      "expected_native_target": "0x413e1b",
+      "target_verified": true
+    },
+    {
+      "index": 8,
+      "candidate_offset": "0xf362",
+      "expected_candidate_offset": "0xf362",
+      "native_target": "0x413ea8",
+      "expected_native_target": "0x413ea8",
+      "target_verified": true
+    },
+    {
+      "index": 9,
+      "candidate_offset": "0xf366",
+      "expected_candidate_offset": "0xf366",
+      "native_target": "0x413f5f",
+      "expected_native_target": "0x413f5f",
+      "target_verified": true
+    },
+    {
+      "index": 10,
+      "candidate_offset": "0xf36a",
+      "expected_candidate_offset": "0xf36a",
+      "native_target": "0x414004",
+      "expected_native_target": "0x414004",
+      "target_verified": true
+    },
+    {
+      "index": 11,
+      "candidate_offset": "0xf36e",
+      "expected_candidate_offset": "0xf36e",
+      "native_target": "0x414138",
+      "expected_native_target": "0x414138",
+      "target_verified": true
+    },
+    {
+      "index": 12,
+      "candidate_offset": "0xf372",
+      "expected_candidate_offset": "0xf372",
+      "native_target": "0x41426c",
+      "expected_native_target": "0x41426c",
+      "target_verified": true
+    },
+    {
+      "index": 13,
+      "candidate_offset": "0xf376",
+      "expected_candidate_offset": "0xf376",
+      "native_target": "0x414394",
+      "expected_native_target": "0x414394",
+      "target_verified": true
+    },
+    {
+      "index": 14,
+      "candidate_offset": "0xf37a",
+      "expected_candidate_offset": "0xf37a",
+      "native_target": "0x4144c4",
+      "expected_native_target": "0x4144c4",
+      "target_verified": true
+    },
+    {
+      "index": 15,
+      "candidate_offset": "0xf37e",
+      "expected_candidate_offset": "0xf37e",
+      "native_target": "0x4146b5",
+      "expected_native_target": "0x4146b5",
+      "target_verified": true
+    },
+    {
+      "index": 16,
+      "candidate_offset": "0xf382",
+      "expected_candidate_offset": "0xf382",
+      "native_target": "0x4148a6",
+      "expected_native_target": "0x4148a6",
+      "target_verified": true
+    },
+    {
+      "index": 17,
+      "candidate_offset": "0xf386",
+      "expected_candidate_offset": "0xf386",
+      "native_target": "0x414a97",
+      "expected_native_target": "0x414a97",
+      "target_verified": true
+    },
+    {
+      "index": 18,
+      "candidate_offset": "0xf38a",
+      "expected_candidate_offset": "0xf38a",
+      "native_target": "0x414c88",
+      "expected_native_target": "0x414c88",
+      "target_verified": true
+    },
+    {
+      "index": 19,
+      "candidate_offset": "0xf38e",
+      "expected_candidate_offset": "0xf38e",
+      "native_target": "0x414e79",
+      "expected_native_target": "0x414e79",
+      "target_verified": true
+    },
+    {
+      "index": 20,
+      "candidate_offset": "0xf392",
+      "expected_candidate_offset": "0xf392",
+      "native_target": "0x415060",
+      "expected_native_target": "0x415060",
+      "target_verified": true
+    },
+    {
+      "index": 21,
+      "candidate_offset": "0xf396",
+      "expected_candidate_offset": "0xf396",
+      "native_target": "0x415239",
+      "expected_native_target": "0x415239",
+      "target_verified": true
+    },
+    {
+      "index": 22,
+      "candidate_offset": "0xf39a",
+      "expected_candidate_offset": "0xf39a",
+      "native_target": "0x415412",
+      "expected_native_target": "0x415412",
+      "target_verified": true
+    },
+    {
+      "index": 23,
+      "candidate_offset": "0xf39e",
+      "expected_candidate_offset": "0xf39e",
+      "native_target": "0x4155eb",
+      "expected_native_target": "0x4155eb",
+      "target_verified": true
+    },
+    {
+      "index": 24,
+      "candidate_offset": "0xf3a2",
+      "expected_candidate_offset": "0xf3a2",
+      "native_target": "0x4157ea",
+      "expected_native_target": "0x4157ea",
+      "target_verified": true
+    },
+    {
+      "index": 25,
+      "candidate_offset": "0xf3a6",
+      "expected_candidate_offset": "0xf3a6",
+      "native_target": "0x4159e9",
+      "expected_native_target": "0x4159e9",
+      "target_verified": true
+    },
+    {
+      "index": 26,
+      "candidate_offset": "0xf3aa",
+      "expected_candidate_offset": "0xf3aa",
+      "native_target": "0x415be8",
+      "expected_native_target": "0x415be8",
+      "target_verified": true
+    },
+    {
+      "index": 27,
+      "candidate_offset": "0xf3ae",
+      "expected_candidate_offset": "0xf3ae",
+      "native_target": "0x415d9f",
+      "expected_native_target": "0x415d9f",
+      "target_verified": true
+    },
+    {
+      "index": 28,
+      "candidate_offset": "0xf3b2",
+      "expected_candidate_offset": "0xf3b2",
+      "native_target": "0x415f4a",
+      "expected_native_target": "0x415f4a",
+      "target_verified": true
+    },
+    {
+      "index": 29,
+      "candidate_offset": "0xf3b6",
+      "expected_candidate_offset": "0xf3b6",
+      "native_target": "0x41617b",
+      "expected_native_target": "0x41617b",
+      "target_verified": true
+    },
+    {
+      "index": 30,
+      "candidate_offset": "0xf3ba",
+      "expected_candidate_offset": "0xf3ba",
+      "native_target": "0x4163ac",
+      "expected_native_target": "0x4163ac",
+      "target_verified": true
+    },
+    {
+      "index": 31,
+      "candidate_offset": "0xf3be",
+      "expected_candidate_offset": "0xf3be",
+      "native_target": "0x416595",
+      "expected_native_target": "0x416595",
+      "target_verified": true
+    },
+    {
+      "index": 32,
+      "candidate_offset": "0xf3c2",
+      "expected_candidate_offset": "0xf3c2",
+      "native_target": "0x416772",
+      "expected_native_target": "0x416772",
+      "target_verified": true
+    },
+    {
+      "index": 33,
+      "candidate_offset": "0xf3c6",
+      "expected_candidate_offset": "0xf3c6",
+      "native_target": "0x4168ae",
+      "expected_native_target": "0x4168ae",
+      "target_verified": true
+    },
+    {
+      "index": 34,
+      "candidate_offset": "0xf3ca",
+      "expected_candidate_offset": "0xf3ca",
+      "native_target": "0x4169c3",
+      "expected_native_target": "0x4169c3",
+      "target_verified": true
+    },
+    {
+      "index": 35,
+      "candidate_offset": "0xf3ce",
+      "expected_candidate_offset": "0xf3ce",
+      "native_target": "0x416ba3",
+      "expected_native_target": "0x416ba3",
+      "target_verified": true
+    },
+    {
+      "index": 36,
+      "candidate_offset": "0xf3d2",
+      "expected_candidate_offset": "0xf3d2",
+      "native_target": "0x416d4e",
+      "expected_native_target": "0x416d4e",
+      "target_verified": true
+    },
+    {
+      "index": 37,
+      "candidate_offset": "0xf3d6",
+      "expected_candidate_offset": "0xf3d6",
+      "native_target": "0x416ea3",
+      "expected_native_target": "0x416ea3",
+      "target_verified": true
+    },
+    {
+      "index": 38,
+      "candidate_offset": "0xf3da",
+      "expected_candidate_offset": "0xf3da",
+      "native_target": "0x416ff8",
+      "expected_native_target": "0x416ff8",
+      "target_verified": true
+    },
+    {
+      "index": 39,
+      "candidate_offset": "0xf3de",
+      "expected_candidate_offset": "0xf3de",
+      "native_target": "0x417135",
+      "expected_native_target": "0x417135",
+      "target_verified": true
+    },
+    {
+      "index": 40,
+      "candidate_offset": "0xf3e2",
+      "expected_candidate_offset": "0xf3e2",
+      "native_target": "0x417332",
+      "expected_native_target": "0x417332",
+      "target_verified": true
+    },
+    {
+      "index": 41,
+      "candidate_offset": "0xf3e6",
+      "expected_candidate_offset": "0xf3e6",
+      "native_target": "0x41752f",
+      "expected_native_target": "0x41752f",
+      "target_verified": true
+    },
+    {
+      "index": 42,
+      "candidate_offset": "0xf3ea",
+      "expected_candidate_offset": "0xf3ea",
+      "native_target": "0x417714",
+      "expected_native_target": "0x417714",
+      "target_verified": true
+    },
+    {
+      "index": 43,
+      "candidate_offset": "0xf3ee",
+      "expected_candidate_offset": "0xf3ee",
+      "native_target": "0x4178f9",
+      "expected_native_target": "0x4178f9",
+      "target_verified": true
+    },
+    {
+      "index": 44,
+      "candidate_offset": "0xf3f2",
+      "expected_candidate_offset": "0xf3f2",
+      "native_target": "0x417b1b",
+      "expected_native_target": "0x417b1b",
+      "target_verified": true
+    },
+    {
+      "index": 45,
+      "candidate_offset": "0xf3f6",
+      "expected_candidate_offset": "0xf3f6",
+      "native_target": "0x417d60",
+      "expected_native_target": "0x417d60",
+      "target_verified": true
+    },
+    {
+      "index": 46,
+      "candidate_offset": "0xf3fa",
+      "expected_candidate_offset": "0xf3fa",
+      "native_target": "0x417fa5",
+      "expected_native_target": "0x417fa5",
+      "target_verified": true
+    },
+    {
+      "index": 47,
+      "candidate_offset": "0xf3fe",
+      "expected_candidate_offset": "0xf3fe",
+      "native_target": "0x418178",
+      "expected_native_target": "0x418178",
+      "target_verified": true
+    },
+    {
+      "index": 48,
+      "candidate_offset": "0xf402",
+      "expected_candidate_offset": "0xf402",
+      "native_target": "0x41835a",
+      "expected_native_target": "0x41835a",
+      "target_verified": true
+    },
+    {
+      "index": 49,
+      "candidate_offset": "0xf406",
+      "expected_candidate_offset": "0xf406",
+      "native_target": "0x41840d",
+      "expected_native_target": "0x41840d",
+      "target_verified": true
+    },
+    {
+      "index": 50,
+      "candidate_offset": "0xf40a",
+      "expected_candidate_offset": "0xf40a",
+      "native_target": "0x4184a2",
+      "expected_native_target": "0x4184a2",
+      "target_verified": true
+    },
+    {
+      "index": 51,
+      "candidate_offset": "0xf40e",
+      "expected_candidate_offset": "0xf40e",
+      "native_target": "0x41859a",
+      "expected_native_target": "0x41859a",
+      "target_verified": true
+    },
+    {
+      "index": 52,
+      "candidate_offset": "0xf412",
+      "expected_candidate_offset": "0xf412",
+      "native_target": "0x418692",
+      "expected_native_target": "0x418692",
+      "target_verified": true
+    },
+    {
+      "index": 53,
+      "candidate_offset": "0xf416",
+      "expected_candidate_offset": "0xf416",
+      "native_target": "0x41874c",
+      "expected_native_target": "0x41874c",
+      "target_verified": true
+    },
+    {
+      "index": 54,
+      "candidate_offset": "0xf41a",
+      "expected_candidate_offset": "0xf41a",
+      "native_target": "0x4188f8",
+      "expected_native_target": "0x4188f8",
+      "target_verified": true
+    },
+    {
+      "index": 55,
+      "candidate_offset": "0xf41e",
+      "expected_candidate_offset": "0xf41e",
+      "native_target": "0x418aa4",
+      "expected_native_target": "0x418aa4",
+      "target_verified": true
+    },
+    {
+      "index": 56,
+      "candidate_offset": "0xf422",
+      "expected_candidate_offset": "0xf422",
+      "native_target": "0x418c50",
+      "expected_native_target": "0x418c50",
+      "target_verified": true
+    },
+    {
+      "index": 57,
+      "candidate_offset": "0xf426",
+      "expected_candidate_offset": "0xf426",
+      "native_target": "0x418de4",
+      "expected_native_target": "0x418de4",
+      "target_verified": true
+    },
+    {
+      "index": 58,
+      "candidate_offset": "0xf42a",
+      "expected_candidate_offset": "0xf42a",
+      "native_target": "0x418f78",
+      "expected_native_target": "0x418f78",
+      "target_verified": true
+    },
+    {
+      "index": 59,
+      "candidate_offset": "0xf42e",
+      "expected_candidate_offset": "0xf42e",
+      "native_target": "0x41910c",
+      "expected_native_target": "0x41910c",
+      "target_verified": true
+    },
+    {
+      "index": 60,
+      "candidate_offset": "0xf432",
+      "expected_candidate_offset": "0xf432",
+      "native_target": "0x41921c",
+      "expected_native_target": "0x41921c",
+      "target_verified": true
+    },
+    {
+      "index": 61,
+      "candidate_offset": "0xf436",
+      "expected_candidate_offset": "0xf436",
+      "native_target": "0x419368",
+      "expected_native_target": "0x419368",
+      "target_verified": true
+    },
+    {
+      "index": 62,
+      "candidate_offset": "0xf43a",
+      "expected_candidate_offset": "0xf43a",
+      "native_target": "0x4194b4",
+      "expected_native_target": "0x4194b4",
+      "target_verified": true
+    },
+    {
+      "index": 63,
+      "candidate_offset": "0xf43e",
+      "expected_candidate_offset": "0xf43e",
+      "native_target": "0x4195c8",
+      "expected_native_target": "0x4195c8",
+      "target_verified": true
+    },
+    {
+      "index": 64,
+      "candidate_offset": "0xf442",
+      "expected_candidate_offset": "0xf442",
+      "native_target": "0x4197b3",
+      "expected_native_target": "0x4197b3",
+      "target_verified": true
+    },
+    {
+      "index": 65,
+      "candidate_offset": "0xf446",
+      "expected_candidate_offset": "0xf446",
+      "native_target": "0x4199c3",
+      "expected_native_target": "0x4199c3",
+      "target_verified": true
+    },
+    {
+      "index": 66,
+      "candidate_offset": "0xf44a",
+      "expected_candidate_offset": "0xf44a",
+      "native_target": "0x419b61",
+      "expected_native_target": "0x419b61",
+      "target_verified": true
+    },
+    {
+      "index": 67,
+      "candidate_offset": "0xf44e",
+      "expected_candidate_offset": "0xf44e",
+      "native_target": "0x419d12",
+      "expected_native_target": "0x419d12",
+      "target_verified": true
+    },
+    {
+      "index": 68,
+      "candidate_offset": "0xf452",
+      "expected_candidate_offset": "0xf452",
+      "native_target": "0x419ec7",
+      "expected_native_target": "0x419ec7",
+      "target_verified": true
+    },
+    {
+      "index": 69,
+      "candidate_offset": "0xf456",
+      "expected_candidate_offset": "0xf456",
+      "native_target": "0x41a0af",
+      "expected_native_target": "0x41a0af",
+      "target_verified": true
+    },
+    {
+      "index": 70,
+      "candidate_offset": "0xf45a",
+      "expected_candidate_offset": "0xf45a",
+      "native_target": "0x41a1f9",
+      "expected_native_target": "0x41a1f9",
+      "target_verified": true
+    },
+    {
+      "index": 71,
+      "candidate_offset": "0xf45e",
+      "expected_candidate_offset": "0xf45e",
+      "native_target": "0x41a343",
+      "expected_native_target": "0x41a343",
+      "target_verified": true
+    },
+    {
+      "index": 72,
+      "candidate_offset": "0xf462",
+      "expected_candidate_offset": "0xf462",
+      "native_target": "0x41a50c",
+      "expected_native_target": "0x41a50c",
+      "target_verified": true
+    },
+    {
+      "index": 73,
+      "candidate_offset": "0xf466",
+      "expected_candidate_offset": "0xf466",
+      "native_target": "0x41a6eb",
+      "expected_native_target": "0x41a6eb",
+      "target_verified": true
+    },
+    {
+      "index": 74,
+      "candidate_offset": "0xf46a",
+      "expected_candidate_offset": "0xf46a",
+      "native_target": "0x41a817",
+      "expected_native_target": "0x41a817",
+      "target_verified": true
+    },
+    {
+      "index": 75,
+      "candidate_offset": "0xf46e",
+      "expected_candidate_offset": "0xf46e",
+      "native_target": "0x41a989",
+      "expected_native_target": "0x41a989",
+      "target_verified": true
+    },
+    {
+      "index": 76,
+      "candidate_offset": "0xf472",
+      "expected_candidate_offset": "0xf472",
+      "native_target": "0x41ab5c",
+      "expected_native_target": "0x41ab5c",
+      "target_verified": true
+    },
+    {
+      "index": 77,
+      "candidate_offset": "0xf476",
+      "expected_candidate_offset": "0xf476",
+      "native_target": "0x41ad2f",
+      "expected_native_target": "0x41ad2f",
+      "target_verified": true
+    },
+    {
+      "index": 78,
+      "candidate_offset": "0xf47a",
+      "expected_candidate_offset": "0xf47a",
+      "native_target": "0x41ae69",
+      "expected_native_target": "0x41ae69",
+      "target_verified": true
+    },
+    {
+      "index": 79,
+      "candidate_offset": "0xf47e",
+      "expected_candidate_offset": "0xf47e",
+      "native_target": "0x41b191",
+      "expected_native_target": "0x41b191",
+      "target_verified": true
+    },
+    {
+      "index": 80,
+      "candidate_offset": "0xf482",
+      "expected_candidate_offset": "0xf482",
+      "native_target": "0x41b37c",
+      "expected_native_target": "0x41b37c",
+      "target_verified": true
+    },
+    {
+      "index": 81,
+      "candidate_offset": "0xf486",
+      "expected_candidate_offset": "0xf486",
+      "native_target": "0x41b567",
+      "expected_native_target": "0x41b567",
+      "target_verified": true
+    },
+    {
+      "index": 82,
+      "candidate_offset": "0xf48a",
+      "expected_candidate_offset": "0xf48a",
+      "native_target": "0x41b6b9",
+      "expected_native_target": "0x41b6b9",
+      "target_verified": true
+    },
+    {
+      "index": 83,
+      "candidate_offset": "0xf48e",
+      "expected_candidate_offset": "0xf48e",
+      "native_target": "0x41b88f",
+      "expected_native_target": "0x41b88f",
+      "target_verified": true
+    },
+    {
+      "index": 84,
+      "candidate_offset": "0xf492",
+      "expected_candidate_offset": "0xf492",
+      "native_target": "0x41baa7",
+      "expected_native_target": "0x41baa7",
+      "target_verified": true
+    },
+    {
+      "index": 85,
+      "candidate_offset": "0xf496",
+      "expected_candidate_offset": "0xf496",
+      "native_target": "0x41bccb",
+      "expected_native_target": "0x41bccb",
+      "target_verified": true
+    },
+    {
+      "index": 86,
+      "candidate_offset": "0xf49a",
+      "expected_candidate_offset": "0xf49a",
+      "native_target": "0x41beb1",
+      "expected_native_target": "0x41beb1",
+      "target_verified": true
+    },
+    {
+      "index": 87,
+      "candidate_offset": "0xf49e",
+      "expected_candidate_offset": "0xf49e",
+      "native_target": "0x41c04e",
+      "expected_native_target": "0x41c04e",
+      "target_verified": true
+    },
+    {
+      "index": 88,
+      "candidate_offset": "0xf4a2",
+      "expected_candidate_offset": "0xf4a2",
+      "native_target": "0x41c163",
+      "expected_native_target": "0x41c163",
+      "target_verified": true
+    },
+    {
+      "index": 89,
+      "candidate_offset": "0xf4a6",
+      "expected_candidate_offset": "0xf4a6",
+      "native_target": "0x41c323",
+      "expected_native_target": "0x41c323",
+      "target_verified": true
+    },
+    {
+      "index": 90,
+      "candidate_offset": "0xf4aa",
+      "expected_candidate_offset": "0xf4aa",
+      "native_target": "0x41c4b8",
+      "expected_native_target": "0x41c4b8",
+      "target_verified": true
+    },
+    {
+      "index": 91,
+      "candidate_offset": "0xf4ae",
+      "expected_candidate_offset": "0xf4ae",
+      "native_target": "0x41c5cd",
+      "expected_native_target": "0x41c5cd",
+      "target_verified": true
+    },
+    {
+      "index": 92,
+      "candidate_offset": "0xf4b2",
+      "expected_candidate_offset": "0xf4b2",
+      "native_target": "0x41c6e2",
+      "expected_native_target": "0x41c6e2",
+      "target_verified": true
+    },
+    {
+      "index": 93,
+      "candidate_offset": "0xf4b6",
+      "expected_candidate_offset": "0xf4b6",
+      "native_target": "0x41c809",
+      "expected_native_target": "0x41c809",
+      "target_verified": true
+    },
+    {
+      "index": 94,
+      "candidate_offset": "0xf4ba",
+      "expected_candidate_offset": "0xf4ba",
+      "native_target": "0x41ca24",
+      "expected_native_target": "0x41ca24",
+      "target_verified": true
+    },
+    {
+      "index": 95,
+      "candidate_offset": "0xf4be",
+      "expected_candidate_offset": "0xf4be",
+      "native_target": "0x41cbcb",
+      "expected_native_target": "0x41cbcb",
+      "target_verified": true
+    },
+    {
+      "index": 96,
+      "candidate_offset": "0xf4c2",
+      "expected_candidate_offset": "0xf4c2",
+      "native_target": "0x41cd48",
+      "expected_native_target": "0x41cd48",
+      "target_verified": true
+    },
+    {
+      "index": 97,
+      "candidate_offset": "0xf4c6",
+      "expected_candidate_offset": "0xf4c6",
+      "native_target": "0x41cec5",
+      "expected_native_target": "0x41cec5",
+      "target_verified": true
+    },
+    {
+      "index": 98,
+      "candidate_offset": "0xf4ca",
+      "expected_candidate_offset": "0xf4ca",
+      "native_target": "0x41d252",
+      "expected_native_target": "0x41d252",
+      "target_verified": true
+    },
+    {
+      "index": 99,
+      "candidate_offset": "0xf4ce",
+      "expected_candidate_offset": "0xf4ce",
+      "native_target": "0x41d3df",
+      "expected_native_target": "0x41d3df",
+      "target_verified": true
+    },
+    {
+      "index": 100,
+      "candidate_offset": "0xf4d2",
+      "expected_candidate_offset": "0xf4d2",
+      "native_target": "0x41d55e",
+      "expected_native_target": "0x41d55e",
+      "target_verified": true
+    },
+    {
+      "index": 101,
+      "candidate_offset": "0xf4d6",
+      "expected_candidate_offset": "0xf4d6",
+      "native_target": "0x41d80e",
+      "expected_native_target": "0x41d80e",
+      "target_verified": true
+    },
+    {
+      "index": 102,
+      "candidate_offset": "0xf4da",
+      "expected_candidate_offset": "0xf4da",
+      "native_target": "0x41da84",
+      "expected_native_target": "0x41da84",
+      "target_verified": true
+    },
+    {
+      "index": 103,
+      "candidate_offset": "0xf4de",
+      "expected_candidate_offset": "0xf4de",
+      "native_target": "0x41dcfa",
+      "expected_native_target": "0x41dcfa",
+      "target_verified": true
+    },
+    {
+      "index": 104,
+      "candidate_offset": "0xf4e2",
+      "expected_candidate_offset": "0xf4e2",
+      "native_target": "0x41e026",
+      "expected_native_target": "0x41e026",
+      "target_verified": true
+    },
+    {
+      "index": 105,
+      "candidate_offset": "0xf4e6",
+      "expected_candidate_offset": "0xf4e6",
+      "native_target": "0x41e182",
+      "expected_native_target": "0x41e182",
+      "target_verified": true
+    },
+    {
+      "index": 106,
+      "candidate_offset": "0xf4ea",
+      "expected_candidate_offset": "0xf4ea",
+      "native_target": "0x41e2e9",
+      "expected_native_target": "0x41e2e9",
+      "target_verified": true
+    },
+    {
+      "index": 107,
+      "candidate_offset": "0xf4ee",
+      "expected_candidate_offset": "0xf4ee",
+      "native_target": "0x41e4f0",
+      "expected_native_target": "0x41e4f0",
+      "target_verified": true
+    },
+    {
+      "index": 108,
+      "candidate_offset": "0xf4f2",
+      "expected_candidate_offset": "0xf4f2",
+      "native_target": "0x41e69d",
+      "expected_native_target": "0x41e69d",
+      "target_verified": true
+    },
+    {
+      "index": 109,
+      "candidate_offset": "0xf4f6",
+      "expected_candidate_offset": "0xf4f6",
+      "native_target": "0x41e84a",
+      "expected_native_target": "0x41e84a",
+      "target_verified": true
+    },
+    {
+      "index": 110,
+      "candidate_offset": "0xf4fa",
+      "expected_candidate_offset": "0xf4fa",
+      "native_target": "0x41ebf3",
+      "expected_native_target": "0x41ebf3",
+      "target_verified": true
+    },
+    {
+      "index": 111,
+      "candidate_offset": "0xf4fe",
+      "expected_candidate_offset": "0xf4fe",
+      "native_target": "0x41eddf",
+      "expected_native_target": "0x41eddf",
+      "target_verified": true
+    },
+    {
+      "index": 112,
+      "candidate_offset": "0xf502",
+      "expected_candidate_offset": "0xf502",
+      "native_target": "0x41efd1",
+      "expected_native_target": "0x41efd1",
+      "target_verified": true
+    },
+    {
+      "index": 113,
+      "candidate_offset": "0xf506",
+      "expected_candidate_offset": "0xf506",
+      "native_target": "0x41f1c3",
+      "expected_native_target": "0x41f1c3",
+      "target_verified": true
+    },
+    {
+      "index": 114,
+      "candidate_offset": "0xf50a",
+      "expected_candidate_offset": "0xf50a",
+      "native_target": "0x41f382",
+      "expected_native_target": "0x41f382",
+      "target_verified": true
+    },
+    {
+      "index": 115,
+      "candidate_offset": "0xf50e",
+      "expected_candidate_offset": "0xf50e",
+      "native_target": "0x41f541",
+      "expected_native_target": "0x41f541",
+      "target_verified": true
+    },
+    {
+      "index": 116,
+      "candidate_offset": "0xf512",
+      "expected_candidate_offset": "0xf512",
+      "native_target": "0x41f7a0",
+      "expected_native_target": "0x41f7a0",
+      "target_verified": true
+    },
+    {
+      "index": 117,
+      "candidate_offset": "0xf516",
+      "expected_candidate_offset": "0xf516",
+      "native_target": "0x41fa6b",
+      "expected_native_target": "0x41fa6b",
+      "target_verified": true
+    },
+    {
+      "index": 118,
+      "candidate_offset": "0xf51a",
+      "expected_candidate_offset": "0xf51a",
+      "native_target": "0x41fcce",
+      "expected_native_target": "0x41fcce",
+      "target_verified": true
+    },
+    {
+      "index": 119,
+      "candidate_offset": "0xf51e",
+      "expected_candidate_offset": "0xf51e",
+      "native_target": "0x41ffea",
+      "expected_native_target": "0x41ffea",
+      "target_verified": true
+    },
+    {
+      "index": 120,
+      "candidate_offset": "0xf522",
+      "expected_candidate_offset": "0xf522",
+      "native_target": "0x420338",
+      "expected_native_target": "0x420338",
+      "target_verified": true
+    },
+    {
+      "index": 121,
+      "candidate_offset": "0xf526",
+      "expected_candidate_offset": "0xf526",
+      "native_target": "0x42056f",
+      "expected_native_target": "0x42056f",
+      "target_verified": true
+    },
+    {
+      "index": 122,
+      "candidate_offset": "0xf52a",
+      "expected_candidate_offset": "0xf52a",
+      "native_target": "0x42078d",
+      "expected_native_target": "0x42078d",
+      "target_verified": true
+    },
+    {
+      "index": 123,
+      "candidate_offset": "0xf52e",
+      "expected_candidate_offset": "0xf52e",
+      "native_target": "0x4209ce",
+      "expected_native_target": "0x4209ce",
+      "target_verified": true
+    },
+    {
+      "index": 124,
+      "candidate_offset": "0xf532",
+      "expected_candidate_offset": "0xf532",
+      "native_target": "0x420af3",
+      "expected_native_target": "0x420af3",
+      "target_verified": true
+    },
+    {
+      "index": 125,
+      "candidate_offset": "0xf536",
+      "expected_candidate_offset": "0xf536",
+      "native_target": "0x420cd7",
+      "expected_native_target": "0x420cd7",
+      "target_verified": true
+    },
+    {
+      "index": 126,
+      "candidate_offset": "0xf53a",
+      "expected_candidate_offset": "0xf53a",
+      "native_target": "0x420ede",
+      "expected_native_target": "0x420ede",
+      "target_verified": true
+    },
+    {
+      "index": 127,
+      "candidate_offset": "0xf53e",
+      "expected_candidate_offset": "0xf53e",
+      "native_target": "0x42131a",
+      "expected_native_target": "0x42131a",
+      "target_verified": true
+    },
+    {
+      "index": 128,
+      "candidate_offset": "0xf542",
+      "expected_candidate_offset": "0xf542",
+      "native_target": "0x421757",
+      "expected_native_target": "0x421757",
+      "target_verified": true
+    },
+    {
+      "index": 129,
+      "candidate_offset": "0xf546",
+      "expected_candidate_offset": "0xf546",
+      "native_target": "0x421bb6",
+      "expected_native_target": "0x421bb6",
+      "target_verified": true
+    },
+    {
+      "index": 130,
+      "candidate_offset": "0xf54a",
+      "expected_candidate_offset": "0xf54a",
+      "native_target": "0x421e56",
+      "expected_native_target": "0x421e56",
+      "target_verified": true
+    },
+    {
+      "index": 131,
+      "candidate_offset": "0xf54e",
+      "expected_candidate_offset": "0xf54e",
+      "native_target": "0x4220f6",
+      "expected_native_target": "0x4220f6",
+      "target_verified": true
+    },
+    {
+      "index": 132,
+      "candidate_offset": "0xf552",
+      "expected_candidate_offset": "0xf552",
+      "native_target": "0x4223b8",
+      "expected_native_target": "0x4223b8",
+      "target_verified": true
+    },
+    {
+      "index": 133,
+      "candidate_offset": "0xf556",
+      "expected_candidate_offset": "0xf556",
+      "native_target": "0x42268d",
+      "expected_native_target": "0x42268d",
+      "target_verified": true
+    },
+    {
+      "index": 134,
+      "candidate_offset": "0xf55a",
+      "expected_candidate_offset": "0xf55a",
+      "native_target": "0x41377e",
+      "expected_native_target": "0x41377e",
+      "target_verified": true
+    }
+  ],
   "summary": {
-    "natural_cpp_cases": 17,
+    "natural_cpp_cases_in_late_range": 17,
+    "whole_translation_unit_explicit_case_labels": 134,
+    "whole_translation_unit_default_labels": 1,
+    "whole_translation_unit_inline_assembly_blocks": 0,
+    "whole_translation_unit_emitted_opcodes": 0,
     "case_extents_equal": 14,
     "case_instruction_shapes_equal": 17,
     "case_bodies_byte_exact": 1,

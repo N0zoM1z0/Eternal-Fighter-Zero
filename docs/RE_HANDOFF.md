@@ -1256,7 +1256,14 @@ All 1,568 direct branch targets map to matching instruction indices, and all
 native instruction operands (zero unverified). All 17 case instruction shapes
 match; 1,082 instruction bytes still differ after relocation binding and the
 owner remains +1 byte. This is structural alignment, not semantic equivalence
-or whole-owner Exact. Do not call Slot06 complete. Reproduce only this TU with
+or whole-owner Exact. This candidate is now natural across the entire
+translation unit: 134 explicit case labels plus default, with all 25 original
+`__asm` blocks and 96 `_emit` sites removed (candidate counts are zero). All
+1,239 code relocations and 135 switch-table entries are bound to their original
+native targets (1,374/1,374; zero unverified), including the prefix's table and
+selector references. The candidate remains one byte larger than the native
+owner and has 1,082 instruction-byte differences after relocation binding.
+Do not call Slot06 complete. Reproduce only this TU with
 `scripts/repo-python workbench/shiori-state/verify_natural_case_progress.py --rebuild`;
 report: `docs/evidence/shiori-slot06-natural-cases303-319-progress.json`.
 

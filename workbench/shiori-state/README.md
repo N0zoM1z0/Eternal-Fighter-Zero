@@ -197,3 +197,40 @@ native owner: the compiler emits a `0x338` stack frame instead of `0x384`, and
 assembly `__ftol2` calls also need their raw rel32 operands materialized from
 the canonical image. Keep these transformations explicit and individually
 validated; do not relabel the unmodified object as source-object Exact.
+
+
+## Whole-translation-unit natural C++ candidate — 2026-11-16
+
+`ShioriState-natural-cases303-319.cpp` is a separate full-TU natural-C++ copy;
+it is not the pinned `ShioriState.cpp` baseline and is not in the production
+source ledger. It retains all **134 explicit case labels plus the default**.
+The baseline contains **25 `__asm` blocks and 96 `_emit` sites**; the natural
+candidate contains **zero** `__asm`, `_emit` or `__emit` occurrences anywhere
+in the translation unit. All former inline-assembly conversion calls now arise
+from ordinary C++ conversions and normal COFF relocations.
+
+Build and audit only this selected translation unit (no full-game cold replay):
+
+```bash
+scripts/repo-python workbench/shiori-state/verify_natural_case_progress.py --rebuild
+```
+
+The natural candidate compiles with VC7.1 `/Od /G6 /MT /Gy /W3` to a **63,133-byte**
+owner versus the **63,132-byte** native owner. The compiler naturally emits the
+native **0x384-byte frame**. Both sides decode to **16,876 instructions**; after
+normalizing GPR identities and relocation placeholders, the entire instruction
+sequence is identical. All **1,568 direct local branch targets** map to matching
+instruction indices. All **1,239 code relocations** and **135 switch-table
+relocations** are individually bound to original native targets (**1,374/1,374**,
+zero unverified); the switch selector is byte-identical and all 135 table targets
+map to the same native instruction indices.
+
+The 17 late cases303-319 all have matching instruction shapes. Fourteen case
+extents match, case319 is **900/900-byte Exact**, and cases307/308/315 account for
+the three instruction-length mismatches. After relocation binding, 1,082
+instruction bytes still differ, predominantly because the compiler's natural
+register allocation differs from the original hand-authored sequences. The
+whole owner is therefore **not Exact** and remains outside `matches.csv` and
+`implemented.csv`. Keep the natural candidate separate from the pinned exact
+baseline; continue with ordinary C++ source changes, never assembly or padding.
+Evidence: `docs/evidence/shiori-slot06-natural-cases303-319-progress.json`.

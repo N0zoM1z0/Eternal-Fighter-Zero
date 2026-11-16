@@ -28,6 +28,7 @@ from native_build import compile_source
 from verify_exact_regions import CALL_TARGETS as _CALL_TARGETS, FLOAT_SYMBOL_TARGETS
 
 SOURCE = ROOT / "workbench/shiori-state/ShioriState-natural-cases303-319.cpp"
+BASELINE_SOURCE = ROOT / "workbench/shiori-state/ShioriState.cpp"
 OBJECT = ROOT / "build/shiori-state/ShioriState-natural-cases303-319.obj"
 FLAGS = ["/Od", "/G6", "/MT", "/Gy", "/W3"]
 FIRST_CASE = 303
@@ -163,6 +164,21 @@ def main() -> None:
         raise SystemExit("stale natural-C++ object receipt; use --rebuild")
 
     source_text = SOURCE.read_text()
+    baseline_text = BASELINE_SOURCE.read_text()
+    source_assembly_counts = {
+        "__asm": source_text.count("__asm"),
+        "_emit": source_text.count("_emit"),
+        "__emit": source_text.count("__emit"),
+    }
+    if any(source_assembly_counts.values()):
+        raise AssertionError(("inline assembly/emission remains in natural translation unit", source_assembly_counts))
+    baseline_assembly_counts = {
+        "__asm": baseline_text.count("__asm"),
+        "_emit": baseline_text.count("_emit"),
+        "__emit": baseline_text.count("__emit"),
+    }
+    source_case_labels = [int(x) for x in re.findall(r"^    case (\d+):", source_text, re.M)]
+    source_default_labels = len(re.findall(r"^    default:", source_text, re.M))
     cases_without_assembly = []
     for case in range(FIRST_CASE, LAST_CASE + 1):
         body = case_body(source_text, case)
@@ -251,8 +267,79 @@ def main() -> None:
             branch_mismatches.append({"instruction": index, "native_target": hex(native_target),
                                       "candidate_target": hex(candidate_target)})
 
-    cases = []
+    # Bind every code relocation in the complete natural translation unit,
+    # not just the late cases. The global instruction alignment gives the
+    # native operand site even when earlier natural cases shift code offsets.
+    if not global_instruction_shape_equal:
+        raise AssertionError("global instruction shape changed; relocation pairing needs a new alignment")
     unverified_relocations = []
+    global_relocation_bindings = {}
+    code_relocations = [r for r in relocations if r["offset"] < table_start]
+    for reloc in code_relocations:
+        candidate_instruction_index = bisect.bisect_right(candidate_offsets, reloc["offset"]) - 1
+        candidate_instruction = candidate_instructions[candidate_instruction_index]
+        native_instruction = native_instructions[candidate_instruction_index]
+        operand_relative_offset = reloc["offset"] - candidate_instruction["offset"]
+        native_operand_offset = native_instruction["offset"] + operand_relative_offset
+        expected_local_target = None
+        if "local_target_offset" in reloc:
+            local_target = reloc["local_target_offset"]
+            if local_target == table_start:
+                expected_local_target = ADDRESS + CODE_SIZE
+            elif local_target == table_start + TABLE_SIZE:
+                expected_local_target = ADDRESS + CODE_SIZE + TABLE_SIZE
+            else:
+                target_index = candidate_index_by_offset.get(local_target)
+                if target_index is not None:
+                    expected_local_target = ADDRESS + native_instructions[target_index]["offset"]
+        if operand_relative_offset + 4 > len(native_instruction["bytes"]):
+            target, kind = None, "paired-native-operand-out-of-range"
+        elif "local_target_offset" in reloc and expected_local_target is None:
+            target, kind = None, "unmapped-local-label"
+        else:
+            target, kind = relocation_target(image, native_code, native_operand_offset,
+                                              reloc, expected_local_target)
+        binding_verified = kind.startswith("bound-")
+        binding = {
+            "candidate_offset": reloc["offset"],
+            "candidate_instruction": candidate_instruction_index,
+            "native_instruction": candidate_instruction_index,
+            "operand_relative_offset": operand_relative_offset,
+            "native_operand_offset": native_operand_offset,
+            "native_va": ADDRESS + native_operand_offset,
+            "symbol": reloc["symbol"],
+            "kind": kind,
+            "target_verified": binding_verified,
+            "target": target,
+        }
+        global_relocation_bindings[reloc["offset"]] = binding
+        if not binding_verified:
+            unverified_relocations.append({
+                "scope": "code", "relocation": reloc,
+                "target": hex(target) if target is not None else None, "kind": kind,
+            })
+
+    table_bindings = []
+    for index, reloc in enumerate(table_relocations):
+        expected_offset = table_start + index * 4
+        target_index = candidate_index_by_offset.get(reloc.get("local_target_offset"))
+        native_target = struct.unpack_from("<I", native_table, index * 4)[0]
+        expected_target = (ADDRESS + native_instructions[target_index]["offset"]
+                           if target_index is not None else None)
+        verified = target_index is not None and native_target == expected_target
+        table_bindings.append({
+            "index": index, "candidate_offset": hex(reloc["offset"]),
+            "expected_candidate_offset": hex(expected_offset),
+            "native_target": hex(native_target),
+            "expected_native_target": hex(expected_target) if expected_target is not None else None,
+            "target_verified": verified,
+        })
+        if reloc["offset"] != expected_offset or not verified:
+            unverified_relocations.append({"scope": "switch-table", "relocation": reloc,
+                                           "target": hex(native_target),
+                                           "kind": "switch-table-target-mismatch"})
+
+    cases = []
     for case in range(FIRST_CASE, LAST_CASE + 1):
         selector_index = native_selector[case - 1]
         native_start = native_starts[selector_index]
@@ -277,28 +364,11 @@ def main() -> None:
             for row in candidate_case_instructions
         }
         for reloc in case_relocations:
-            candidate_instruction_index = bisect.bisect_right(candidate_offsets, reloc["offset"]) - 1
-            candidate_instruction = candidate_instructions[candidate_instruction_index]
-            native_instruction = native_instructions[candidate_instruction_index]
-            operand_relative_offset = reloc["offset"] - candidate_instruction["offset"]
-            native_operand_offset = native_instruction["offset"] + operand_relative_offset
-            expected_local_target = None
-            if "local_target_offset" in reloc:
-                target_index = candidate_index_by_offset.get(reloc["local_target_offset"])
-                if target_index is not None:
-                    expected_local_target = ADDRESS + native_instructions[target_index]["offset"]
-            if operand_relative_offset + 4 > len(native_instruction["bytes"]):
-                target, kind = None, "paired-native-operand-out-of-range"
-            elif "local_target_offset" in reloc and expected_local_target is None:
-                target, kind = None, "unmapped-local-label"
-            else:
-                target, kind = relocation_target(image, native_code, native_operand_offset,
-                                                  reloc, expected_local_target)
-            binding_verified = kind.startswith("bound-")
-            if not binding_verified:
-                unverified_relocations.append({"case": case, "relocation": reloc,
-                                               "target": hex(target) if target is not None else None,
-                                               "kind": kind})
+            global_binding = global_relocation_bindings[reloc["offset"]]
+            candidate_instruction_index = global_binding["candidate_instruction"]
+            operand_relative_offset = global_binding["operand_relative_offset"]
+            native_operand_offset = global_binding["native_operand_offset"]
+            binding_verified = global_binding["target_verified"]
             if operand_relative_offset + 4 <= len(resolved_candidate_instructions[candidate_instruction_index]):
                 operand = native_code[native_operand_offset:native_operand_offset + 4]
                 if len(operand) == 4:
@@ -308,11 +378,11 @@ def main() -> None:
             bindings.append({
                 "candidate_offset": hex(reloc["offset"]),
                 "candidate_instruction": candidate_instruction_index,
-                "native_va": hex(ADDRESS + native_operand_offset),
+                "native_va": hex(global_binding["native_va"]),
                 "symbol": reloc["symbol"],
-                "kind": kind,
+                "kind": global_binding["kind"],
                 "target_verified": binding_verified,
-                "target": hex(target) if target is not None else None,
+                "target": hex(global_binding["target"]) if global_binding["target"] is not None else None,
             })
 
         instruction_byte_differences = 0
@@ -393,6 +463,14 @@ def main() -> None:
                       "compiler_flags": FLAGS, "frame_bytes": candidate_frame,
                       "toolchain_lock_sha256": identity["toolchain_lock_sha256"]},
         "natural_cpp_cases": cases_without_assembly,
+        "whole_translation_unit": {
+            "explicit_case_labels": len(source_case_labels),
+            "explicit_case_labels_unique": len(set(source_case_labels)),
+            "default_labels": source_default_labels,
+            "candidate_assembly_counts": source_assembly_counts,
+            "baseline_assembly_counts": baseline_assembly_counts,
+            "candidate_has_no_inline_assembly_or_emitted_opcodes": not any(source_assembly_counts.values()),
+        },
         "source_has_inline_assembly_or_emitted_opcodes": False,
         "frame": {"native_bytes": native_frame, "candidate_bytes": candidate_frame,
                   "byte_exact": native_frame == candidate_frame},
@@ -409,12 +487,21 @@ def main() -> None:
         },
         "relocation_accounting": {
             "total_coff_relocations": len(relocations),
+            "code_relocations": len(code_relocations),
+            "code_relocation_targets_verified": sum(bool(b["target_verified"]) for b in global_relocation_bindings.values()),
+            "switch_table_relocations": len(table_relocations),
+            "switch_table_targets_verified": sum(bool(b["target_verified"]) for b in table_bindings),
             "case_relocations_instruction_aligned": sum(r["coff_relocations"] for r in cases),
             "case_relocation_targets_verified": sum(r["relocation_targets_verified"] for r in cases),
             "unverified_relocation_sites": unverified_relocations,
         },
+        "switch_table_bindings": table_bindings,
         "summary": {
-            "natural_cpp_cases": len(cases_without_assembly),
+            "natural_cpp_cases_in_late_range": len(cases_without_assembly),
+            "whole_translation_unit_explicit_case_labels": len(source_case_labels),
+            "whole_translation_unit_default_labels": source_default_labels,
+            "whole_translation_unit_inline_assembly_blocks": source_assembly_counts["__asm"],
+            "whole_translation_unit_emitted_opcodes": source_assembly_counts["_emit"],
             "case_extents_equal": sum(r["extent_equal"] for r in cases),
             "case_instruction_shapes_equal": sum(bool(r["instruction_shape_equal_after_gpr_and_relocation_normalization"]) for r in cases),
             "case_bodies_byte_exact": sum(bool(r["whole_case_exact"]) for r in cases),
@@ -442,7 +529,9 @@ def main() -> None:
         "object_sha256": evidence["candidate"]["object_sha256"],
         "frame": evidence["frame"],
         "switch": evidence["switch"],
+        "whole_translation_unit": evidence["whole_translation_unit"],
         "instruction_alignment": evidence["instruction_alignment"],
+        "relocation_accounting": {k: v for k, v in evidence["relocation_accounting"].items() if k != "unverified_relocation_sites"},
         "summary": evidence["summary"],
         "unverified_relocation_sites": len(unverified_relocations),
     }, indent=2))
