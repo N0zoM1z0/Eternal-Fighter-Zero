@@ -11,8 +11,8 @@
     "native_candidate_extent_size_equal": true
   },
   "build": {
-    "source_sha256": "a1da1a48491e42d4a569f99be79ad02c1ec33721fdbe23d73dfc58fb01224c43",
-    "object_sha256": "914f14261f5cd3a32779ebcebac812365552ee2e6d03ded76438bb4b457b5479",
+    "source_sha256": "ddbbb1888543e1f2771bc91a7a55eac94432e52ea65f2ec447d132edd1b4d96b",
+    "object_sha256": "1dcfea88230106c7f151284fc94ccfc900316c6e5c3cb1db1a9003ac55b61cc2",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
   "whole_case_exact": {
@@ -374,6 +374,61 @@
         }
       ]
     },
+    "307": {
+      "native_start": "0x42056f",
+      "bytes": 542,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 5,
+      "rel32_calls_materialized": 4,
+      "float_operands_materialized": 1,
+      "pinned_raw_calls": [
+        {
+          "offset": "0x4205fa",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x42061f",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        },
+        {
+          "offset": "0x42068a",
+          "target": "0x7783b8",
+          "kind": "inline-assembly __ftol2 call"
+        }
+      ],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x420589",
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "target": "0x40f1e0"
+        },
+        {
+          "offset": "0x4205e6",
+          "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+          "target": "0x410b10"
+        },
+        {
+          "offset": "0x420650",
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "target": "0x407100"
+        },
+        {
+          "offset": "0x42077a",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x4206ac",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
     "310": {
       "native_start": "0x420af3",
       "bytes": 484,
@@ -382,7 +437,48 @@
       "rel32_calls_materialized": 8,
       "float_operands_materialized": 0,
       "pinned_raw_calls": [],
-      "stack_slot_bytes_materialized": [],
+      "stack_slot_bytes_materialized": [
+        {
+          "case_offset": "0x9f",
+          "candidate": "0x20",
+          "native": "0x14"
+        },
+        {
+          "case_offset": "0xa5",
+          "candidate": "0x20",
+          "native": "0x14"
+        },
+        {
+          "case_offset": "0xbc",
+          "candidate": "0x1c",
+          "native": "0x10"
+        },
+        {
+          "case_offset": "0xc2",
+          "candidate": "0x1c",
+          "native": "0x10"
+        },
+        {
+          "case_offset": "0x125",
+          "candidate": "0x18",
+          "native": "0xc"
+        },
+        {
+          "case_offset": "0x12b",
+          "candidate": "0x18",
+          "native": "0xc"
+        },
+        {
+          "case_offset": "0x13f",
+          "candidate": "0x14",
+          "native": "0x8"
+        },
+        {
+          "case_offset": "0x145",
+          "candidate": "0x14",
+          "native": "0x8"
+        }
+      ],
       "calls": [
         {
           "offset": "0x420b0d",
@@ -435,7 +531,68 @@
       "rel32_calls_materialized": 9,
       "float_operands_materialized": 0,
       "pinned_raw_calls": [],
-      "stack_slot_bytes_materialized": [],
+      "stack_slot_bytes_materialized": [
+        {
+          "case_offset": "0x9f",
+          "candidate": "0x10",
+          "native": "0x4"
+        },
+        {
+          "case_offset": "0xa5",
+          "candidate": "0x10",
+          "native": "0x4"
+        },
+        {
+          "case_offset": "0xbc",
+          "candidate": "0xc",
+          "native": "0x0"
+        },
+        {
+          "case_offset": "0xc2",
+          "candidate": "0xc",
+          "native": "0x0"
+        },
+        {
+          "case_offset": "0x148",
+          "candidate": "0x8",
+          "native": "0xfc"
+        },
+        {
+          "case_offset": "0x149",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
+          "case_offset": "0x14e",
+          "candidate": "0x8",
+          "native": "0xfc"
+        },
+        {
+          "case_offset": "0x14f",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
+          "case_offset": "0x162",
+          "candidate": "0x4",
+          "native": "0xf8"
+        },
+        {
+          "case_offset": "0x163",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
+          "case_offset": "0x168",
+          "candidate": "0x4",
+          "native": "0xf8"
+        },
+        {
+          "case_offset": "0x169",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        }
+      ],
       "calls": [
         {
           "offset": "0x420cf1",
@@ -493,7 +650,58 @@
       "rel32_calls_materialized": 11,
       "float_operands_materialized": 13,
       "pinned_raw_calls": [],
-      "stack_slot_bytes_materialized": [],
+      "stack_slot_bytes_materialized": [
+        {
+          "case_offset": "0x145",
+          "candidate": "0x0",
+          "native": "0xf4"
+        },
+        {
+          "case_offset": "0x146",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
+          "case_offset": "0x14b",
+          "candidate": "0x0",
+          "native": "0xf4"
+        },
+        {
+          "case_offset": "0x14c",
+          "candidate": "0xfd",
+          "native": "0xfc"
+        },
+        {
+          "case_offset": "0x162",
+          "candidate": "0xfc",
+          "native": "0xf0"
+        },
+        {
+          "case_offset": "0x168",
+          "candidate": "0xfc",
+          "native": "0xf0"
+        },
+        {
+          "case_offset": "0x288",
+          "candidate": "0xf8",
+          "native": "0xec"
+        },
+        {
+          "case_offset": "0x28e",
+          "candidate": "0xf8",
+          "native": "0xec"
+        },
+        {
+          "case_offset": "0x2b7",
+          "candidate": "0xf4",
+          "native": "0xe8"
+        },
+        {
+          "case_offset": "0x2bd",
+          "candidate": "0xf4",
+          "native": "0xe8"
+        }
+      ],
       "calls": [
         {
           "offset": "0x420f99",
@@ -641,42 +849,42 @@
       "stack_slot_bytes_materialized": [
         {
           "case_offset": "0x177",
-          "candidate": "0x94",
+          "candidate": "0xa0",
           "native": "0x8c"
         },
         {
           "case_offset": "0x17d",
-          "candidate": "0x94",
+          "candidate": "0xa0",
           "native": "0x8c"
         },
         {
           "case_offset": "0x194",
-          "candidate": "0x90",
+          "candidate": "0x9c",
           "native": "0x88"
         },
         {
           "case_offset": "0x19a",
-          "candidate": "0x90",
+          "candidate": "0x9c",
           "native": "0x88"
         },
         {
           "case_offset": "0x21b",
-          "candidate": "0x8c",
+          "candidate": "0x98",
           "native": "0x84"
         },
         {
           "case_offset": "0x221",
-          "candidate": "0x8c",
+          "candidate": "0x98",
           "native": "0x84"
         },
         {
           "case_offset": "0x238",
-          "candidate": "0x88",
+          "candidate": "0x94",
           "native": "0x80"
         },
         {
           "case_offset": "0x23e",
-          "candidate": "0x88",
+          "candidate": "0x94",
           "native": "0x80"
         }
       ],
@@ -756,12 +964,12 @@
       "stack_slot_bytes_materialized": [
         {
           "case_offset": "0xe0",
-          "candidate": "0x84",
+          "candidate": "0x90",
           "native": "0x7c"
         },
         {
           "case_offset": "0xe6",
-          "candidate": "0x84",
+          "candidate": "0x90",
           "native": "0x7c"
         }
       ],
@@ -892,9 +1100,9 @@
     "selector_bytes_exact": true
   },
   "prologue_normalization": {
-    "candidate_frame": "0x37C",
+    "candidate_frame": "0x370",
     "native_frame": "0x384",
     "native_prologue_restored": true
   },
-  "qualification": "Eleven complete case bodies are byte-exact after original-bound relocation materialization, two inline-assembly runtime-call bindings, and native stack-slot normalization. Four additional meter arithmetic regions are byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
+  "qualification": "Thirteen complete case bodies are byte-exact after original-bound relocation materialization, five inline-assembly __ftol2 call bindings, and native stack-slot normalization. Two additional meter arithmetic regions are byte-exact. Other Shiori Slot06 states still contain register-allocation differences. This is not a whole-function Exact certificate."
 }
