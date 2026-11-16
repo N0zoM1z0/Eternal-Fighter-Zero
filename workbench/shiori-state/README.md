@@ -46,13 +46,13 @@ extent and dispatch data do not by themselves establish whole-function Exact.
 then verifies selected code against the canonical PE. Its evidence is
 `docs/evidence/shiori-slot06-exact-regions.json`.
 
-- **Earlier selected groups:** 102 complete bodies across **50–77, 81–87,
-  96–99, 150–158, 161–171, 178, 180, 200–209, 220–221, 230–235 and 248–270**
-  are now byte-exact. Together they contribute **45,788 native code bytes**
-  and **944 original-bound COFF relocations** (218 calls and 726 float
-  operands). This includes case203 at 808 bytes, case252 at 909 bytes and
-  case264 at 937 bytes; every call and float operand is bound to the canonical
-  PE, not inferred from opcode similarity.
+- **Earlier selected groups:** 116 complete bodies across **1–9, 13–16, 47,
+  50–77, 81–87, 96–99, 150–158, 161–171, 178, 180, 200–209, 220–221,
+  230–235 and 248–270** are byte-exact. Together they contribute **49,063 unique
+  native code bytes** and **1,014 body COFF relocations** (231 calls and 783
+  float operands). This includes case203 at
+  808 bytes, case252 at 909 bytes and case264 at 937 bytes; every call and
+  float operand is bound to the canonical PE, not inferred from opcode similarity.
 - **Case303:** the complete **611-byte** case body is byte-identical after
   materializing its **nine original-bound REL32 call operands**. This removes
   the former EAX/ECX/DX register-allocation cascade beginning at
@@ -116,25 +116,31 @@ then verifies selected code against the canonical PE. Its evidence is
   The distinct 2000-point meter cost, effect0x45, local-effect pair and
   threshold8 loop all match the original instruction order.
 
-Across the one hundred twenty-two complete cases (50–77, 81–87, 96–99,
-150–158, 161–171, 178, 180, 200–209, 220–221, 230–235, 248–270 and 300–319),
-**58,947 native code bytes** are byte-exact after materializing **1,149 COFF
-relocations** (360 calls and 789 float operands) plus eighteen raw `__ftol2`
-call operands. The focused resolver restores the native frame and 72
-individually checked conversion-temp operand bytes; it does not mask arbitrary
-bytes. No separate meter-only region is counted because all reviewed meter
-instructions are inside complete case bodies.
+The final-image resolver now reconstructs the complete **63,132-byte owner**
+byte-for-byte. It covers the 174-byte entry/dispatch prefix, all 135 unique
+switch destinations (136 selector IDs because 301/302 alias one default body),
+62,099 unique case-body bytes, the 540-byte switch table and 319-byte selector.
+All **1,356 COFF relocation sites** are classified and materialized exactly
+once: 375 REL32 calls and 981 DIR32 operands. This includes 18 raw inline-asm
+`__ftol2` calls, the two prefix runtime calls, two prefix local-address operands,
+and all 135 switch-table entries. The source object's `0x338` frame is explicitly
+restored to native `0x384`; 72 EBP-relative conversion-temp operand bytes are
+individually checked and restored. No arbitrary code bytes are masked.
 
-## Remaining whole-function work
+Resolved owner SHA-256: `b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded`
+(native owner hash is identical).
 
-`audit_case_codegen.py` still reports **20/20 late-state normalized opcode
-sequences** identical, and the candidate owner extent is now **63,132/63,132
-bytes**. That audit normalizes GPR names and branch operands, so it is only a
-diagnostic, not a strict byte certificate.
+## Remaining source-object work
 
-A focused per-case final-image comparison now finds **122 of 134** whole cases
-byte-exact across **50–77, 81–87, 96–99, 150–158, 161–171, 178, 180, 200–209,
-220–221, 230–235, 248–270 and 300–319** (58,947 code bytes; 1,149 COFF
-relocations plus eighteen pinned runtime calls). Twelve case bodies remain
-open. Do not call the whole boss Exact until all code bytes and all relocation
-operands are strictly reconstructed.
+The complete resolved final image is now byte-for-byte equal to the canonical
+63,132-byte PE owner. This is stronger than the previous selected-case proof:
+all 135 unique case destinations, entry/dispatch bytes, table, selector and all
+1,356 COFF relocation sites are covered.
+
+The remaining gap is source-object Exact rather than target-byte coverage. The
+VC7.1 object still needs two explicit normalizations before it equals the
+native owner: the compiler emits a `0x338` stack frame instead of `0x384`, and
+72 conversion-temp operand bytes use different EBP offsets. Eighteen inline-
+assembly `__ftol2` calls also need their raw rel32 operands materialized from
+the canonical image. Keep these transformations explicit and individually
+validated; do not relabel the unmodified object as source-object Exact.

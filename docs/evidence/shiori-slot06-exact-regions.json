@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "focused-exact-regions-not-whole-function",
+  "status": "whole-owner-byte-exact-after-explicit-normalization",
   "owner": {
     "symbol": "?Slot06@Character08@@UAEXXZ",
     "entry": "0x4136d0",
@@ -12,10 +12,552 @@
   },
   "build": {
     "source_sha256": "b16400d494601e944551d25574e1f3d75ecc77948794d29636f7a788c6e7aa7d",
-    "object_sha256": "d66aef59c3b110e895149f97f5889cac8eff08a89dea3d2a629883dd2236a898",
+    "object_sha256": "a4d10d97bed8bf893ae5cf22a9009d0eede038fce3eac3177d43c6f96e583de8",
     "target_image_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
   },
   "whole_case_exact": {
+    "1": {
+      "native_start": "0x4137f9",
+      "bytes": 123,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 2,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x413808",
+          "target": "0x787de8",
+          "payload": "666666666666e63f"
+        },
+        {
+          "offset": "0x413814",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "2": {
+      "native_start": "0x413874",
+      "bytes": 123,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 2,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x413883",
+          "target": "0x787de0",
+          "payload": "666666666666e6bf"
+        },
+        {
+          "offset": "0x41388f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "3": {
+      "native_start": "0x4138ef",
+      "bytes": 131,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 3,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x413915",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x4138f4",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413900",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "4": {
+      "native_start": "0x413972",
+      "bytes": 355,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 8,
+      "rel32_calls_materialized": 2,
+      "float_operands_materialized": 6,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x41399a",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        },
+        {
+          "offset": "0x413ab9",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x4139a3",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4139c6",
+          "target": "0x787dd8",
+          "payload": "ec51b81e85eba13f"
+        },
+        {
+          "offset": "0x4139d2",
+          "target": "0x787dd0",
+          "payload": "cdcccccccccc02c0"
+        },
+        {
+          "offset": "0x4139ed",
+          "target": "0x7872f0",
+          "payload": "333333333333d33f"
+        },
+        {
+          "offset": "0x413a88",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413aa4",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "5": {
+      "native_start": "0x413ad5",
+      "bytes": 367,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 9,
+      "rel32_calls_materialized": 2,
+      "float_operands_materialized": 7,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x413afd",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        },
+        {
+          "offset": "0x413c28",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x413b06",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413b29",
+          "target": "0x787dd8",
+          "payload": "ec51b81e85eba13f"
+        },
+        {
+          "offset": "0x413b35",
+          "target": "0x787dd0",
+          "payload": "cdcccccccccc02c0"
+        },
+        {
+          "offset": "0x413b41",
+          "target": "0x787de8",
+          "payload": "666666666666e63f"
+        },
+        {
+          "offset": "0x413b5c",
+          "target": "0x787dc8",
+          "payload": "9a9999999999f13f"
+        },
+        {
+          "offset": "0x413bf7",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413c13",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "6": {
+      "native_start": "0x413c44",
+      "bytes": 330,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 8,
+      "rel32_calls_materialized": 2,
+      "float_operands_materialized": 6,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x413c6c",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        },
+        {
+          "offset": "0x413d72",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x413c75",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413c98",
+          "target": "0x787dd8",
+          "payload": "ec51b81e85eba13f"
+        },
+        {
+          "offset": "0x413ca4",
+          "target": "0x787dd0",
+          "payload": "cdcccccccccc02c0"
+        },
+        {
+          "offset": "0x413cb0",
+          "target": "0x787de0",
+          "payload": "666666666666e6bf"
+        },
+        {
+          "offset": "0x413d41",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413d5d",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "7": {
+      "native_start": "0x413d8e",
+      "bytes": 141,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 3,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x413db4",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x413d93",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413d9f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "8": {
+      "native_start": "0x413e1b",
+      "bytes": 141,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 3,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x413e41",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x413e20",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413e2c",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "9": {
+      "native_start": "0x413ea8",
+      "bytes": 183,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 2,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x413f26",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413f36",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "13": {
+      "native_start": "0x413f5f",
+      "bytes": 165,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 3,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 2,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x413f85",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x413f64",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x413f70",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "14": {
+      "native_start": "0x414004",
+      "bytes": 308,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 7,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 6,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x41411c",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x414009",
+          "target": "0x787dd8",
+          "payload": "ec51b81e85eba13f"
+        },
+        {
+          "offset": "0x414035",
+          "target": "0x787dd0",
+          "payload": "cdcccccccccc02c0"
+        },
+        {
+          "offset": "0x414041",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41405c",
+          "target": "0x787dc0",
+          "payload": "9a9999999999d93f"
+        },
+        {
+          "offset": "0x4140eb",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414107",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "15": {
+      "native_start": "0x414138",
+      "bytes": 308,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 7,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 6,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x414250",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x41413d",
+          "target": "0x787dd8",
+          "payload": "ec51b81e85eba13f"
+        },
+        {
+          "offset": "0x414169",
+          "target": "0x787dd0",
+          "payload": "cdcccccccccc02c0"
+        },
+        {
+          "offset": "0x414175",
+          "target": "0x787de8",
+          "payload": "666666666666e63f"
+        },
+        {
+          "offset": "0x414190",
+          "target": "0x787dc8",
+          "payload": "9a9999999999f13f"
+        },
+        {
+          "offset": "0x41421f",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41423b",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "16": {
+      "native_start": "0x41426c",
+      "bytes": 296,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 6,
+      "rel32_calls_materialized": 1,
+      "float_operands_materialized": 5,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [
+        {
+          "offset": "0x414378",
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "target": "0x40e630"
+        }
+      ],
+      "float_operands": [
+        {
+          "offset": "0x414271",
+          "target": "0x787dd8",
+          "payload": "ec51b81e85eba13f"
+        },
+        {
+          "offset": "0x41429d",
+          "target": "0x787dd0",
+          "payload": "cdcccccccccc02c0"
+        },
+        {
+          "offset": "0x4142a9",
+          "target": "0x787de0",
+          "payload": "666666666666e6bf"
+        },
+        {
+          "offset": "0x414347",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414363",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
+    "47": {
+      "native_start": "0x414394",
+      "bytes": 304,
+      "whole_case_byte_exact": true,
+      "relocations_materialized": 7,
+      "rel32_calls_materialized": 0,
+      "float_operands_materialized": 7,
+      "pinned_raw_calls": [],
+      "stack_slot_bytes_materialized": [],
+      "calls": [],
+      "float_operands": [
+        {
+          "offset": "0x4143af",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x4143bb",
+          "target": "0x787dd8",
+          "payload": "ec51b81e85eba13f"
+        },
+        {
+          "offset": "0x4143e2",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41441a",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414426",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x414432",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        },
+        {
+          "offset": "0x41443e",
+          "target": "0x7872f8",
+          "payload": "0000000000000000"
+        }
+      ]
+    },
     "50": {
       "native_start": "0x4144c4",
       "bytes": 497,
@@ -7886,12 +8428,67 @@
   "dispatch": {
     "table_relocations": 135,
     "case_entry_order_exact": true,
-    "selector_bytes_exact": true
+    "selector_bytes_exact": true,
+    "unique_destinations": 135,
+    "covered_unique_destinations": 135,
+    "selector_ids_with_evidence": 136,
+    "case_aliases": {
+      "301": "302",
+      "shared_native_start": "0x0041377e"
+    }
+  },
+  "entry_prefix": {
+    "native_bytes": 174,
+    "relocations_materialized": 4,
+    "byte_exact": true,
+    "relocations": [
+      {
+        "offset": "0x413708",
+        "symbol": "??0EffectSpawn@@QAE@XZ",
+        "target": "0x405490",
+        "kind": "call"
+      },
+      {
+        "offset": "0x41374d",
+        "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+        "target": "0x413090",
+        "kind": "call"
+      },
+      {
+        "offset": "0x413773",
+        "symbol": "$L63448",
+        "target": "0x422c2d",
+        "kind": "local-address"
+      },
+      {
+        "offset": "0x41377a",
+        "symbol": "$L63570",
+        "target": "0x422a11",
+        "kind": "local-address"
+      }
+    ]
+  },
+  "relocation_accounting": {
+    "total_coff_relocations": 1356,
+    "case_body_relocations": 1217,
+    "prefix_relocations": 4,
+    "switch_table_relocations": 135,
+    "all_sites_classified_exactly_once": true
+  },
+  "resolved_owner": {
+    "bytes": 63132,
+    "sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded",
+    "native_owner_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded",
+    "byte_for_byte_equal": true,
+    "code_bytes_covered": 62273,
+    "switch_table_bytes_covered": 540,
+    "selector_bytes_covered": 319,
+    "case_body_bytes_covered": 62099
   },
   "prologue_normalization": {
     "candidate_frame": "0x338",
     "native_frame": "0x384",
     "native_prologue_restored": true
   },
-  "qualification": "One hundred twenty-two complete case bodies across 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180, 200-209, 220-221, 230-235, 248-270 and 300-319 are byte-exact after original-bound relocation materialization, eighteen inline-assembly __ftol2 call bindings, and native stack-slot normalization. No additional meter-only region is needed; all reviewed meter arithmetic is included in complete bodies. Twelve other Slot06 cases remain open. This is not a whole-function Exact certificate."
+  "qualification": "The resolved 63,132-byte Slot06 owner is byte-for-byte equal to the canonical PE after explicit relocation materialization, eighteen inline-assembly __ftol2 call bindings, native prologue restoration (candidate frame 0x338 to native 0x384), and 72 independently checked stack-slot operand restorations. All 135 distinct switch destinations are covered by 136 selector IDs (301/302 share the default body); the 174-byte entry/dispatch prefix, 62,099 bytes of unique case bodies, 540-byte switch table, and 319-byte selector are all compared byte-for-byte. This is a resolved-final-image proof, not an unmodified VC7.1 source-object Exact certificate: the source object still requires the explicitly recorded prologue and stack-slot normalization."
 }
