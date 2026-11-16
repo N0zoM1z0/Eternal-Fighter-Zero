@@ -549,6 +549,15 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Ayu Character01 now has six natural-C++ exact original vtable leaves in
+`src/Character01Lifecycle.cpp`: ResetPose 58, RemoveLocalEffect 80, Slot03
+19, EmitLocalEffect 47, and empty Slot01/Slot08 (11 each). The original
+`0x00788E4C` vtable selects each complete owner; selected strict proof covers
+**226/226 native bytes and 4/4 original-bound REL32 calls**. Three local effect
+arrays begin at 0x3150/3250/3350 (the Ayu-only 0x314C word is preserved).
+Evidence: `docs/evidence/character-01-lifecycle-exact.json`; no all-unit cold
+replay or ASM/PADDING. Larger Ayu owners remain open.
+
 Nanase CPU boss is now opened as actual ordinary C++ workbench code:
 `workbench/nanase-cpu/Character00Cpu-natural.cpp`, target `0x0048F690`
 (**14,102 bytes**, original slot5). The native-only bank0 `0xFB` aerial

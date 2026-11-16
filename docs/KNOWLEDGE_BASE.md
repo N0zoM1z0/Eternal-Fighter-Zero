@@ -8248,3 +8248,33 @@ Mayu-derived decisions in later CPU branches. The diagnostic evidence is
 not registered in the formal exact ledgers, never uses ASM or padding,
 and is not evidence of complete Nanase CPU parity. Further natural C++
 source reconstruction is required.
+
+
+<a id="ayu-lifecycle"></a>
+
+## Ayu (Character01) six exact local lifecycle/effect/empty leaves
+
+The reviewed original Character01 `ayu` constructor establishes the canonical
+virtual table at `0x00788E4C`. Six complete owners now reconstruct naturally
+in `src/Character01Lifecycle.cpp`: `ResetPose` (58 native bytes,
+`0x006E8420`, vtable slot0), `RemoveLocalEffect` (80 bytes,
+`0x006E8460`, slot10), `Slot03` locomotion forwarding (19 bytes,
+`0x006E84B0`, slot3), `EmitLocalEffect` (47 bytes, `0x006EAFA0`, slot9),
+and actual empty virtual overrides `Slot01`/`Slot08` (11 bytes each,
+`0x006EAF80`/`0x006EAF90`, slots1/8). These are real complete native owner
+extents, not padding alignment bytes.
+
+The local private child view places three reset state fields at `0x3138..0x3140`
+and local effect slot arrays at `0x3150`, `0x3250`, `0x3350` (Ayu has one
+additional child word at `0x314C` relative to Nanase's layout). The effect
+removal zeroes all three array slots, then invokes the original
+`Secondary::RemoveLocalEffect`; effect emission invokes the virtual removal
+and then forwards to `Secondary::EmitLocalEffect`. All original direct
+callee operands are independently reviewed and normal-COFF materialized.
+
+Six selected-only pinned VC7.1 `/Od /G6 /MT /Gy /W3` strict replays establish
+**226/226 native executable bytes Exact**, **four/four originally bound REL32
+calls**, and zero differences. `docs/evidence/character-01-lifecycle-exact.json`
+contains the accepted proof, with independently reviewed vtable and return
+boundaries. No shared class headers were edited and no ASM, `_emit`, padding
+or full cold replay were used. Ayu's larger action/state/CPU owners remain open.

@@ -500,3 +500,9 @@ address,end,size,status,evidence
 0x0048DD00,0x0048E138,1080,reviewed,docs/KNOWLEDGE_BASE.md#nanase-gauge-render; complete RET at 0x0048E137 and following INT3 excluded
 0x0048E290,0x0048F684,5108,reviewed,docs/KNOWLEDGE_BASE.md#nanase-command-recognition; complete original RET 0x0048F683 followed by 12 CC bytes before 0x0048F690
 0x0048ACA0,0x0048D940,11424,reviewed,docs/KNOWLEDGE_BASE.md#nanase-action-exact; original 11424-byte complete body RET at 0x0048D93F before next function at 0x0048D940; no padding
+0x006E8420,0x006E845A,58,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle; full native RET boundary and next alignment reviewed
+0x006E8460,0x006E84B0,80,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle; full native RET boundary and next alignment reviewed
+0x006E84B0,0x006E84C3,19,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle; full native RET boundary and next alignment reviewed
+0x006EAFA0,0x006EAFCF,47,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle; full native RET boundary and next alignment reviewed
+0x006EAF80,0x006EAF8B,11,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle; full native RET boundary and next alignment reviewed
+0x006EAF90,0x006EAF9B,11,reviewed,docs/KNOWLEDGE_BASE.md#ayu-lifecycle; full native RET boundary and next alignment reviewed

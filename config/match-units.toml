@@ -163131,3 +163131,97 @@ type = "REL32"
 symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
 target = 0x0040F170
 evidence = "Original Character00 vtable slot4 0x00788344 selects owner 0x0048ACA0; native operand at 0x0048D92F resolves ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170; native call/literal independently checked."
+
+
+[units.character-01-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character01Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-01-reset-pose/Character01Lifecycle.obj"
+symbol = "?ResetPose@Character01@@UAEXXZ"
+target_address = 0x006E8420
+size = 58
+
+[[units.character-01-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Character01 vtable at 0x00788E4C virtual slot0 selects full original 0x006E8420 owner (58 bytes); original REL32 operand 0x006E8452 resolves ?ResetPose@Secondary@@UAEXXZ to 0x0040F110, complete RET boundary reviewed"
+
+
+[units.character-01-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character01Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-01-remove-local-effect/Character01Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character01@@UAEXF@Z"
+target_address = 0x006E8460
+size = 80
+
+[[units.character-01-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Character01 vtable at 0x00788E4C virtual slot10 selects full original 0x006E8460 owner (80 bytes); original REL32 operand 0x006E84A6 resolves ?RemoveLocalEffect@Secondary@@UAEXF@Z to 0x00412E60, complete RET boundary reviewed"
+
+
+[units.character-01-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character01Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-01-slot03/Character01Lifecycle.obj"
+symbol = "?Slot03@Character01@@UAEXXZ"
+target_address = 0x006E84B0
+size = 19
+
+[[units.character-01-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "Character01 vtable at 0x00788E4C virtual slot3 selects full original 0x006E84B0 owner (19 bytes); original REL32 operand 0x006E84BB resolves ?UpdateLocomotionState@Secondary@@QAEXXZ to 0x0040E740, complete RET boundary reviewed"
+
+
+[units.character-01-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character01Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-01-emit-local-effect/Character01Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character01@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x006EAFA0
+size = 47
+
+[[units.character-01-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Character01 vtable at 0x00788E4C virtual slot9 selects full original 0x006EAFA0 owner (47 bytes); original REL32 operand 0x006EAFC5 resolves ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z to 0x00412B10, complete RET boundary reviewed"
+
+
+[units.character-01-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character01Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-01-slot01/Character01Lifecycle.obj"
+symbol = "?Slot01@Character01@@UAEXXZ"
+target_address = 0x006EAF80
+size = 11
+
+
+[units.character-01-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character01Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-01-slot08/Character01Lifecycle.obj"
+symbol = "?Slot08@Character01@@UAEXXZ"
+target_address = 0x006EAF90
+size = 11
