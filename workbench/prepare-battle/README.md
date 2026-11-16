@@ -44,30 +44,33 @@ print(len(code), len(rels))  # 4031, 115; this is not Exact
 PY2
 ```
 
-The draft reproducibly emits **4,031 bytes and 115 relocations** under
-VC7.1; the target is 4,029 bytes. The first compiler register divergence is at
-`0x0076D743` while constructing the first background object. At a later
-resource-load virtual call, the candidate adds a two-byte `mov ecx,edx`.
-These are differences in the **complete owner**, not an acceptable
-2-byte tail mask. Both switch tables must remain in a future strict
-comparison. Never treat an apparent length match as byte-level proof.
+The repaired draft now compiles reproducibly to **4,031 bytes and 112 COFF
+relocations** under VC7.1; the target is 4,029 bytes. Three constructor calls
+are deliberately emitted as raw `E8` sites and must be bound to the native
+`LoadingBackground01` (`0x00751370`), `LoadingBackground10` (`0x00751A40`)
+and `LoadingBackground16` (`0x00752900`) entry points. The first remaining
+post-relocation mismatch is the `this` spill at `0x0076CA63`: candidate
+`[ebp-0x78]` versus native `[ebp-0x6c]`. The later resource-load virtual call
+still needs a strict receiver/register comparison. The two-byte owner-size
+difference is not a permissible tail mask. Both switch tables must remain in
+the strict comparison; never treat an apparent length match as byte-level proof.
 
 ### Targeted new source-form experiments
 
-The first background allocation was compiled in six additional natural
-forms: C-style pointer cast, explicit `this->videoOwner`, typed pointer
-local, `const` typed pointer local, `void *` local, and explicit global
-`::new`. The cast / `this` / global-new variants all retained 4,031
-bytes and the same first register mismatch; introducing a named local
-expanded the generated contribution to **4,045 bytes**, worsening the
-codegen. None was copied into the tracked best candidate. The original
-full C++ body remains intact for further work.
+The first background allocation has been lowered to explicit allocation /
+constructor sequencing while keeping the natural C++ owner. A previous
+compiler-symbol call spelling for the three constructors did not compile under
+VC7.1; those calls now use pinned raw `E8` operands, while the C++ allocation
+literal is corrected to `0x1C`. The selected workbench translation unit builds
+again. The candidate remains unaccepted and still needs the `this` spill and
+later virtual receiver resolved.
 
-Remaining tasks: reproduce the original register allocation from the
-new-background allocation through the later virtual-load call; strictly
-bind all relocations and verify both address tables and selector before
-accepting. Also reconcile the provisional view with the current accepted
-header graph **by targeted consumers**, never by overwriting `src/`.
+Remaining tasks: restore the native `this` stack slot without changing the
+rest of the frame; pin the later virtual-load receiver; materialize and verify
+all 112 COFF relocations plus the three raw constructor calls; then compare
+both address tables and selector byte-for-byte. Also reconcile the provisional
+view with the current accepted header graph **by targeted consumers**, never
+by overwriting `src/`.
 
 ## Reviewed authored boundary is separately registered
 

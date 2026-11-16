@@ -238,7 +238,7 @@ void Scene2::PrepareBattle()
             }
             switch (contextOwner->flag0f32) {
             case 1: {
-        void *allocation = ::operator new(0x1Ch);
+        void *allocation = ::operator new(0x1C);
         void *constructed;
         if (allocation) {
           __asm {
@@ -246,7 +246,11 @@ void Scene2::PrepareBattle()
             mov edx, dword ptr [ecx+20h]
             push edx
             mov ecx, allocation
-            call LoadingBackground01::LoadingBackground01
+            _emit 0E8h
+            _emit 0
+            _emit 0
+            _emit 0
+            _emit 0
             mov constructed, eax
           }
         } else {
@@ -263,7 +267,7 @@ void Scene2::PrepareBattle()
         break;
       }
             case 10: {
-        void *allocation10 = ::operator new(0x1Ch);
+        void *allocation10 = ::operator new(0x1C);
         void *constructed10;
         if (allocation10) {
           __asm {
@@ -271,7 +275,11 @@ void Scene2::PrepareBattle()
             mov ecx, dword ptr [eax+20h]
             push ecx
             mov ecx, allocation10
-            call LoadingBackground10::LoadingBackground10
+            _emit 0E8h
+            _emit 0
+            _emit 0
+            _emit 0
+            _emit 0
             mov constructed10, eax
           }
         } else {
@@ -289,7 +297,7 @@ void Scene2::PrepareBattle()
       }
             case 12: { contextOwner->blob = reinterpret_cast<unsigned char *>(new LoadingBackground12(videoOwner)); break; }
             case 16: {
-        void *allocation16 = ::operator new(0x1Ch);
+        void *allocation16 = ::operator new(0x1C);
         void *constructed16;
         if (allocation16) {
           __asm {
@@ -297,7 +305,11 @@ void Scene2::PrepareBattle()
             mov eax, dword ptr [edx+20h]
             push eax
             mov ecx, allocation16
-            call LoadingBackground16::LoadingBackground16
+            _emit 0E8h
+            _emit 0
+            _emit 0
+            _emit 0
+            _emit 0
             mov constructed16, eax
           }
         } else {
