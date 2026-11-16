@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "authority": "Four complete original Nanase Character00 vtable owners, independently checked against the canonical 13-slot vtable at 0x00788334, original RET boundaries and the four original direct call destinations.",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles natural C++ in src/Character00Lifecycle.cpp; four selected only normal-COFF strict replays compare all 204 executable bytes and four independently bound REL32 call operands. No inline assembly, padding, full cold replay or runtime/linkage claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "Native Character00 vtable slot 0 at 0x00788334: full 58-byte function at 0x0048ABF0, direct original REL32 call at 0x0048AC21 to ?ResetPose@Secondary@@UAEXXZ 0x0040F110; raw RET boundary reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "61ec18612e6b0c043499395ab355186c2109b1de4bcdd4b7732e53c8cf7c4b80",
+      "target_extent_sha256": "61ec18612e6b0c043499395ab355186c2109b1de4bcdd4b7732e53c8cf7c4b80",
+      "unit": "character-00-reset-pose",
+      "symbol": "?ResetPose@Character00@@UAEXXZ",
+      "target_address": "0x0048ABF0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0de2455f26b69701dd4675523ed4028c636ae7001339f963e2562fad1ea41e4b",
+      "object_sha256": "bbeaa04e921c88c0ac338cbfa0a4a6ca69303fd6d818388c1b3fdce7d965761e",
+      "source_sha256": "d84775832a9fe01fee37600427eca364f8001b753b5b269abaee5fa3860811fe",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "8cab18f62893ba7a526309c11572d3ce955174af08e5cc44d21fa6b32d731fc8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "292e7bd013dd2263ca631d3080f4de313b74f744de0cbda77770a53cb58c91eb",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "Native Character00 vtable slot 10 at 0x00788334: full 80-byte function at 0x0048AC30, direct original REL32 call at 0x0048AC75 to ?RemoveLocalEffect@Secondary@@UAEXF@Z 0x00412E60; raw RET boundary reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2c930cd2f5e4d8ca57c2af3cf10c92ba0b6043d71db7b254abc186fec74c0633",
+      "target_extent_sha256": "2c930cd2f5e4d8ca57c2af3cf10c92ba0b6043d71db7b254abc186fec74c0633",
+      "unit": "character-00-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character00@@UAEXF@Z",
+      "target_address": "0x0048AC30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0de2455f26b69701dd4675523ed4028c636ae7001339f963e2562fad1ea41e4b",
+      "object_sha256": "a692016d5039e39f254cafa36407b95c4679f544eab6578c25d016e5cd7370b0",
+      "source_sha256": "d84775832a9fe01fee37600427eca364f8001b753b5b269abaee5fa3860811fe",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "8cab18f62893ba7a526309c11572d3ce955174af08e5cc44d21fa6b32d731fc8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "dc1bf5d0c25df1b8e90680795a6ed1c41479f8c45cbb0bfd255c4a2a3d4f875f",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "Native Character00 vtable slot 3 at 0x00788334: full 19-byte function at 0x0048AC80, direct original REL32 call at 0x0048AC8A to ?UpdateLocomotionState@Secondary@@QAEXXZ 0x0040E740; raw RET boundary reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a947409fd2fdf4c01bd06e5b451bb00abedc8cfdb104515cb4d9ed3090c4935e",
+      "target_extent_sha256": "a947409fd2fdf4c01bd06e5b451bb00abedc8cfdb104515cb4d9ed3090c4935e",
+      "unit": "character-00-locomotion",
+      "symbol": "?Slot03@Character00@@UAEXXZ",
+      "target_address": "0x0048AC80",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0de2455f26b69701dd4675523ed4028c636ae7001339f963e2562fad1ea41e4b",
+      "object_sha256": "917ce539c2564b108aa19103ce68ecbd2c01c311d41526a436046438091c6a48",
+      "source_sha256": "d84775832a9fe01fee37600427eca364f8001b753b5b269abaee5fa3860811fe",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "8cab18f62893ba7a526309c11572d3ce955174af08e5cc44d21fa6b32d731fc8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0fd0d31e4a6391d17e776ef028d34c2fda533b050f8fadd72a0e8aeff728fa86",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "Native Character00 vtable slot 9 at 0x00788334: full 47-byte function at 0x0048E260, direct original REL32 call at 0x0048E284 to ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z 0x00412B10; raw RET boundary reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8bfe5871fb5665878016e5518532c9f02fd36e8a30569ba2135bc18dfc320e8a",
+      "target_extent_sha256": "8bfe5871fb5665878016e5518532c9f02fd36e8a30569ba2135bc18dfc320e8a",
+      "unit": "character-00-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character00@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x0048E260",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0de2455f26b69701dd4675523ed4028c636ae7001339f963e2562fad1ea41e4b",
+      "object_sha256": "4b93d0b6aa4d85812a4650b1847b8981f9e40f53d5522d049457026773b61a14",
+      "source_sha256": "d84775832a9fe01fee37600427eca364f8001b753b5b269abaee5fa3860811fe",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "8cab18f62893ba7a526309c11572d3ce955174af08e5cc44d21fa6b32d731fc8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "f3ffffcc0e585f5c79debe92ebb975a5b1baec734f61599a5ee249678194a024",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

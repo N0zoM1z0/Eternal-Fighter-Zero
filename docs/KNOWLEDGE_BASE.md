@@ -8011,3 +8011,32 @@ independently checked against EFZ.exe. A successful strict receipt is kept
 in docs/evidence/legacy-object-converter-exact.json; it covers **all** bytes
 and relocation sites, not merely the disassembled instruction forms. Neither
 whole-product linkage nor runtime equivalence is established by this owner.
+
+
+<a id="nanase-lifecycle"></a>
+
+## Nanase Character00 local effect and locomotion lifecycle
+
+Four additional native Nanase `Character00` vtable owners are recovered as
+**ordinary C++** in `src/Character00Lifecycle.cpp`. The canonical vtable at
+`0x00788334` selects `ResetPose` slot0 (`0x0048ABF0`, 58 bytes),
+`RemoveLocalEffect` slot10 (`0x0048AC30`, 80 bytes), `Slot03` slot3
+(`0x0048AC80`, 19 bytes), and `EmitLocalEffect` slot9 (`0x0048E260`,
+47 bytes). Full reviewed original RET boundaries and call targets establish
+these 204 executable bytes; the intervening INT3 alignment is excluded.
+
+`ResetPose` clears Nanase's three child state words at `0x3138..0x3140`
+before `Secondary::ResetPose` at `0x0040F110`. `RemoveLocalEffect(short)` clears
+three 64-int per-slot arrays at `0x314C`, `0x324C`, `0x334C` before calling
+`Secondary::RemoveLocalEffect` at `0x00412E60`. `Slot03` forwards directly
+to `Secondary::UpdateLocomotionState` at `0x0040E740`. `EmitLocalEffect`
+performs the virtual slot10 removal using the original `effectWrite` field
+at `0x02CA`, then calls `Secondary::EmitLocalEffect` at `0x00412B10`.
+
+The child fields are private offset-preserving views within this translation
+unit; shared class layouts and existing exact units are not modified. Each
+normal VC7.1 `/Od /G6 /MT /Gy /W3` object has the exact original size and
+one original-bound REL32 relocation, yielding **204/204 native executable bytes
+Exact, 4/4 relocation targets**. The four strict selected receipts are in
+`docs/evidence/character-00-lifecycle-exact.json`. Only these units were
+replayed, not the full cold replay. Other Nanase methods remain separately open.

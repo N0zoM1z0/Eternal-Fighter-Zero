@@ -161974,3 +161974,75 @@ object = "build/match-units/character-00-mode-switch/Character00Constructor.obj"
 symbol = "?SetAlternateMode@Character00Layout@@QAEXD@Z"
 target_address = 0x0048E140
 size = 257
+
+
+[units.character-00-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character00Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-00-reset-pose/Character00Lifecycle.obj"
+symbol = "?ResetPose@Character00@@UAEXXZ"
+target_address = 0x0048ABF0
+size = 58
+
+[[units.character-00-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Native Character00 vtable slot 0 at 0x00788334: full 58-byte function at 0x0048ABF0, direct original REL32 call at 0x0048AC21 to ?ResetPose@Secondary@@UAEXXZ 0x0040F110; raw RET boundary reviewed"
+
+
+[units.character-00-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character00Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-00-remove-local-effect/Character00Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character00@@UAEXF@Z"
+target_address = 0x0048AC30
+size = 80
+
+[[units.character-00-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Native Character00 vtable slot 10 at 0x00788334: full 80-byte function at 0x0048AC30, direct original REL32 call at 0x0048AC75 to ?RemoveLocalEffect@Secondary@@UAEXF@Z 0x00412E60; raw RET boundary reviewed"
+
+
+[units.character-00-locomotion]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character00Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-00-locomotion/Character00Lifecycle.obj"
+symbol = "?Slot03@Character00@@UAEXXZ"
+target_address = 0x0048AC80
+size = 19
+
+[[units.character-00-locomotion.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "Native Character00 vtable slot 3 at 0x00788334: full 19-byte function at 0x0048AC80, direct original REL32 call at 0x0048AC8A to ?UpdateLocomotionState@Secondary@@QAEXXZ 0x0040E740; raw RET boundary reviewed"
+
+
+[units.character-00-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character00Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-00-emit-local-effect/Character00Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character00@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x0048E260
+size = 47
+
+[[units.character-00-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Native Character00 vtable slot 9 at 0x00788334: full 47-byte function at 0x0048E260, direct original REL32 call at 0x0048E284 to ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z 0x00412B10; raw RET boundary reviewed"

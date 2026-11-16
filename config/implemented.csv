@@ -463,3 +463,7 @@ address,name,source,symbol,status,evidence
 0x007039D0,Character02::Character02,src/Character02Constructor.cpp,??0Character02@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/character-02-constructor-exact.json
 0x0048A720,Character00::Character00,src/Character00Constructor.cpp,??0Character00@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/character-00-constructor-exact.json
 0x0048E140,Character00Layout::SetAlternateMode,src/Character00Constructor.cpp,?SetAlternateMode@Character00Layout@@QAEXD@Z,complete,docs/evidence/character-00-mode-switch-exact.json
+0x0048ABF0,?ResetPose@Character00@@UAEXXZ,src/Character00Lifecycle.cpp,?ResetPose@Character00@@UAEXXZ,complete,docs/evidence/character-00-lifecycle-exact.json
+0x0048AC30,?RemoveLocalEffect@Character00@@UAEXF@Z,src/Character00Lifecycle.cpp,?RemoveLocalEffect@Character00@@UAEXF@Z,complete,docs/evidence/character-00-lifecycle-exact.json
+0x0048AC80,?Slot03@Character00@@UAEXXZ,src/Character00Lifecycle.cpp,?Slot03@Character00@@UAEXXZ,complete,docs/evidence/character-00-lifecycle-exact.json
+0x0048E260,?EmitLocalEffect@Character00@@UAEXPAUSecondaryEffectSpawn@@@Z,src/Character00Lifecycle.cpp,?EmitLocalEffect@Character00@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-00-lifecycle-exact.json

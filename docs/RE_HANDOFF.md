@@ -549,6 +549,16 @@ wrong float constant, independently rejected by native binding.
 Certificate `docs/evidence/character-04-slot08-exact.json`.
 No all-unit cold replay.
 
+Nanase's original vtable 0x00788334 now also has four complete selected
+natural-C++ exact leaf owners in `src/Character00Lifecycle.cpp`: ResetPose
+58 bytes, RemoveLocalEffect 80, Slot03 locomotion delegate 19, and
+EmitLocalEffect 47; **204/204 executable bytes exact and 4/4 bound direct
+calls**. The three 64-int local effect arrays are zeroed at 0x314C/324C/334C;
+EmitLocalEffect retains the actual virtual RemoveLocalEffect call before the
+base forwarding call. The four unit-specific strict receipts are in
+`docs/evidence/character-00-lifecycle-exact.json` and do not assert any
+unaccepted Nanase state/action boss completion. No all-unit replay.
+
 Nanase `Character00` now has two more natural-C++ exact owners in
 `src/Character00Constructor.cpp`: the **642-byte constructor** at
 `0x0048A720` (11/11 original-bound relocations) and the **257-byte
