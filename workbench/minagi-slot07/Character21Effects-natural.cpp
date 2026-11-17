@@ -261,13 +261,13 @@ void Character21::Slot07()
           field3148 = 1;
           // The common idle-frame advancement is also entered when the
           // active character state stops matching the temporary attack.
-          bool advanceIdleFrames = effects[effectIndex].frame < 8 ||
-                                   effects[effectIndex].frame > 16;
-          if (!advanceIdleFrames) {
+          if (effects[effectIndex].frame >= 8 &&
+              effects[effectIndex].frame < 17) {
             field3148 = 3;
             if ((field0008 == 0xfa) && (field000a == 0)) {
               effects[effectIndex].tick = 0;
               effects[effectIndex].frame = 0x11;
+              break;
             }
             else if (((field0008 == 0xfd) && (field000a == 2)) ||
                     ((field0008 == 0x109 && (field000a == 3)))) {
@@ -275,6 +275,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1a6;
               effects[effectIndex].frame = 8;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0xfe) && (field000a == 2)) ||
                     ((field0008 == 0x10a && (field000a == 3)))) {
@@ -282,6 +283,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1a7;
               effects[effectIndex].frame = 8;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0xff) && (field000a == 2)) ||
                     ((field0008 == 0x10b && (field000a == 3)))) {
@@ -289,6 +291,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1a8;
               effects[effectIndex].frame = 8;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x100) && (field000a == 2)) ||
                     ((field0008 == 0x10d && (field000a == 3)))) {
@@ -296,6 +299,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x197;
               effects[effectIndex].frame = 8;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x101) && (field000a == 2)) ||
                     ((field0008 == 0x10e && (field000a == 3)))) {
@@ -303,6 +307,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x198;
               effects[effectIndex].frame = 8;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x102) && (field000a == 2)) ||
                     ((field0008 == 0x10f && (field000a == 3)))) {
@@ -310,6 +315,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x199;
               effects[effectIndex].frame = 8;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x103) && (field000a == 2)) ||
                     ((field0008 == 0x110 && (field000a == 3)))) {
@@ -317,6 +323,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1aa;
               effects[effectIndex].frame = 8;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x104) && (field000a == 2)) ||
                     ((field0008 == 0x111 && (field000a == 3)))) {
@@ -324,6 +331,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1ab;
               effects[effectIndex].frame = 8;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x105) && (field000a == 2)) ||
                     ((field0008 == 0x112 && (field000a == 3)))) {
@@ -331,24 +339,28 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1ac;
               effects[effectIndex].frame = 8;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if ((field0008 == 0x113) && (field000a == 2)) {
               field3148 = 4;
               effects[effectIndex].type = 0x1d2;
               effects[effectIndex].frame = 9;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if ((field0008 == 0x114) && (field000a == 2)) {
               field3148 = 4;
               effects[effectIndex].type = 0x1d3;
               effects[effectIndex].frame = 9;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if ((field0008 == 0x115) && (field000a == 2)) {
               field3148 = 4;
               effects[effectIndex].type = 0x1d4;
               effects[effectIndex].frame = 9;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 300) && (field000a == 2)) ||
                     ((field0008 == 0x132 && (field000a == 1)))) {
@@ -356,6 +368,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1c6;
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x12d) && (field000a == 2)) ||
                     ((field0008 == 0x133 && (field000a == 1)))) {
@@ -363,6 +376,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1c7;
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x12e) && (field000a == 2)) ||
                     ((field0008 == 0x134 && (field000a == 1)))) {
@@ -370,6 +384,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1c8;
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x12f) && (field000a == 2)) ||
                     ((field0008 == 0x135 && (field000a == 1)))) {
@@ -377,6 +392,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1a1;
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x130) && (field000a == 2)) ||
                     ((field0008 == 0x136 && (field000a == 1)))) {
@@ -384,6 +400,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1a3;
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x131) && (field000a == 2)) ||
                     ((field0008 == 0x137 && (field000a == 1)))) {
@@ -391,6 +408,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1a5;
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if ((((field0008 == 0x138) || (field0008 == 0x139)) ||
                      (field0008 == 0x13a)) && (field000a == 2)) {
@@ -398,12 +416,14 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1b5;
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if ((field0008 == 0x13b) && (field000a == 3)) {
               field3148 = 4;
               effects[effectIndex].type = 0x1be;
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x13c) && (field000a == 2)) ||
                     ((field0008 == 0x13f && (field000a == 1)))) {
@@ -411,6 +431,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1c9;
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x13d) && (field000a == 2)) ||
                     ((field0008 == 0x140 && (field000a == 1)))) {
@@ -418,6 +439,7 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1ca;
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
+              break;
             }
             else if (((field0008 == 0x13e) && (field000a == 2)) ||
                     ((field0008 == 0x141 && (field000a == 1)))) {
@@ -425,11 +447,9 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1cb;
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
+              break;
             }
-            else if (field0008 != 0x7b) {
-              advanceIdleFrames = true;
-            }
-            else {
+            else if (field0008 == 0x7b) {
               field3148 = 4;
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -438,29 +458,28 @@ void Character21::Slot07()
               effects[effectIndex].type = 0x1d5;
               effects[effectIndex].frame = 0xb;
               effects[effectIndex].tick = 0;
+              break;
             }
           }
-          if (advanceIdleFrames) {
-            if ((field0008 == 0xfb) || (field0008 == 0xfc)) {
-              field3148 = 1;
-              effects[effectIndex].type = 0x192;
-              effects[effectIndex].frame = 0;
+          if ((field0008 == 0xfb) || (field0008 == 0xfc)) {
+            field3148 = 1;
+            effects[effectIndex].type = 0x192;
+            effects[effectIndex].frame = 0;
+            effects[effectIndex].tick = 0;
+          }
+          else {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-            }
-            else {
-              ++effects[effectIndex].tick;
-              if (effects[effectIndex].tick >= frameDuration) {
-                effects[effectIndex].tick = 0;
-                ++effects[effectIndex].frame;
-                effects[effectIndex].field0080 = 0;
-                if (effects[effectIndex].frame == 0x11) {
-                  effects[effectIndex].frame = 8;
-                }
-                if (effects[effectIndex].frame >= frameCount) {
-                  effects[effectIndex].frame = 0;
-                  effects[effectIndex].type = 400;
-                  field3148 = 0;
-                }
+              ++effects[effectIndex].frame;
+              effects[effectIndex].field0080 = 0;
+              if (effects[effectIndex].frame == 0x11) {
+                effects[effectIndex].frame = 8;
+              }
+              if (effects[effectIndex].frame >= frameCount) {
+                effects[effectIndex].frame = 0;
+                effects[effectIndex].type = 400;
+                field3148 = 0;
               }
             }
           }

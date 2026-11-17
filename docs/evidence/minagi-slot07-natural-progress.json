@@ -297,20 +297,25 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot07/Character21Effects-natural.cpp",
-    "source_sha256": "b67e056af400f395b2d64b43069dbdc76ce13faa185d8283158bbe30fa06b861",
+    "source_sha256": "a1a2a6513fbaa5f89fb1b49a3ac139fb24761e5320d3a68ddeb418cb8363f257",
     "unsigned_field0008_equality_and_inequality": true,
     "unsigned_effect_tick_zero_equality": true,
     "unsigned_effect_type_switch": true,
+    "effect191_half_open_frame_range": [
+      8,
+      17
+    ],
+    "effect191_direct_transition_exits": 25,
     "instruction_shape_audit": {
       "native_decoded_instructions": 18977,
-      "candidate_decoded_instructions": 19196,
-      "matching_normalized_instructions_between_float_anchors": 13676,
-      "changed_regions": 430,
+      "candidate_decoded_instructions": 19184,
+      "matching_normalized_instructions_between_float_anchors": 14062,
+      "changed_regions": 425,
       "regions_compared": 790,
       "alignment_is_provisional_diagnostic_only": true
     },
     "object": "build/minagi-slot07/Character21Effects-natural.obj",
-    "function_body_sha256": "f2be866b5ed376fd343188e7cd113f81859b191969eda902c800e40edf80df11",
+    "function_body_sha256": "8df8568a2fdd2b57b922626e8bada6d625465d75fdddcdf6fa1f7196537c19ae",
     "compiler_flags": [
       "/Od",
       "/G6",
@@ -319,8 +324,8 @@
       "/W3"
     ],
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-    "compiled_function_bytes": 88174,
-    "native_size_delta": 376,
+    "compiled_function_bytes": 88137,
+    "native_size_delta": 339,
     "dispatch_cases": 68,
     "dispatch_ids_match_original": true,
     "coff_relocations": 954,

@@ -282,6 +282,15 @@ def main():
             raise AssertionError(('unsigned source comparison cast reappeared',bad_cast))
     if 'switch(effects[effectIndex].type)' not in source:
         raise AssertionError('wrong signed Minagi effect dispatch type')
+    # Native case 0x191 skips active transitions outside [8,17). All 25
+    # successfully handled action states exit the effect switch directly;
+    # only an unmatched state reaches the common frame-advance path.
+    case191=source.split('case 0x191: {',1)[1].split('case 0x192:',1)[0]
+    if ('advanceIdleFrames' in case191
+            or case191.count('break;')!=26
+            or 'effects[effectIndex].frame >= 8' not in case191
+            or 'effects[effectIndex].frame < 17' not in case191):
+        raise AssertionError('Minagi effect 0x191 direct transition exits regressed')
     forbidden=('__asm', '_emit', '__emit', 'reinterpret_cast',
                'param_1', 'FUN_', '_DAT_', 'PADDING', 'goto ', 'LAB_')
     for token in forbidden:
@@ -392,7 +401,7 @@ def main():
     # with relocation binding could satisfy the separate strict Oracle.
     structural_audit=instruction_shape_alignment(native,candidate)
     if (structural_audit['matching_normalized_instructions_between_float_anchors']
-            < 13676):
+            < 14062):
         raise AssertionError(('Minagi instruction structure regressed',
                               structural_audit))
 
@@ -450,6 +459,8 @@ def main():
             'unsigned_field0008_equality_and_inequality':True,
             'unsigned_effect_tick_zero_equality':True,
             'unsigned_effect_type_switch':True,
+            'effect191_half_open_frame_range':[8,17],
+            'effect191_direct_transition_exits':25,
             'instruction_shape_audit':structural_audit,
             'object':str(OBJECT.relative_to(ROOT)),
             # Whole-COFF object hashes can change with compiler-local symbols,
