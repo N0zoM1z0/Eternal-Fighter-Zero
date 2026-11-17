@@ -2771,7 +2771,7 @@ void Character21::Slot07()
             field3154[effectIndex] = 0x1e;
           }
           if (((char)effects[effectIndex].group == '\x01') &&
-             (field3154[effectIndex] = field3154[effectIndex] + -1, field3154[effectIndex] < 0
+             (--field3154[effectIndex] < 0
              )) {
             RemoveLocalEffect((short)effectIndex);
             field314c = 0;
@@ -2814,7 +2814,7 @@ void Character21::Slot07()
             field3154[effectIndex] = 0x1e;
           }
           if (((char)effects[effectIndex].group == '\x01') &&
-             (field3154[effectIndex] = field3154[effectIndex] + -1, field3154[effectIndex] < 0
+             (--field3154[effectIndex] < 0
              )) {
             RemoveLocalEffect((short)effectIndex);
             field314c = 0;
@@ -2839,8 +2839,7 @@ void Character21::Slot07()
           }
           break;
         case 0x1af:
-          iVar7 = (int)(effects[effectIndex].x);
-          field3150 = iVar7;
+          field3150 = (int)(effects[effectIndex].x);
           if (((effects[effectIndex].frame == 0) &&
               ((short)effects[effectIndex].tick == 0)) && (field3254[effectIndex] == 0)) {
             effects[effectIndex].field0084 = 2;
@@ -2860,7 +2859,7 @@ void Character21::Slot07()
             field3154[effectIndex] = 0x1e;
           }
           if (((char)effects[effectIndex].group == '\x01') &&
-             (field3154[effectIndex] = field3154[effectIndex] + -1, field3154[effectIndex] < 0
+             (--field3154[effectIndex] < 0
              )) {
             RemoveLocalEffect((short)effectIndex);
             field314c = 0;
@@ -3141,8 +3140,7 @@ void Character21::Slot07()
             }
             if (((3 < effects[effectIndex].frame) &&
                 (effects[effectIndex].frame < 8)) &&
-               (field3354[effectIndex] = field3354[effectIndex] + -1,
-               field3354[effectIndex] < 1)) {
+               (--field3354[effectIndex] < 1)) {
               spawn.type = 0x1bb;
               iVar7 = (int)(effects[effectIndex].x);
               spawn.x = (double)(iVar7 + (char)effects[effectIndex].flag0048 * 0x17);
@@ -3339,8 +3337,7 @@ void Character21::Slot07()
             }
             if (((9 < effects[effectIndex].frame) &&
                 (effects[effectIndex].frame < 0x16)) &&
-               (field3354[effectIndex] = field3354[effectIndex] + -1,
-               field3354[effectIndex] < 1)) {
+               (--field3354[effectIndex] < 1)) {
               spawn.type = 0x1bf;
               spawn.owner = 1;
               spawn.x = ((positionX - (double)(unsigned short)RandomRange(0,0x1e0)) + 240.0) -
