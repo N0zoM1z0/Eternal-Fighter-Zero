@@ -8,8 +8,6 @@ void Character21::Slot05()
   bool airborneForGuard;
   double forwardSeparation;
   char wallCollision;
-  short randomChoice;
-  unsigned int randomValue;
   double verticalSeparation;
   int local_f4;
   int local_ec;
@@ -41,7 +39,7 @@ void Character21::Slot05()
   airborneForGuard = positionY < 0.0;
 
   if ((float)(unsigned short)RandomRange(0,1000) <
-      (float)(unsigned char)(airborneForGuard * '\x1e') * field00a8 +
+      (float)(airborneForGuard * 30) * field00a8 +
       25.0f * field00a8 +
       (float)((unsigned int)(field3114 == 3) * 400) +
       (float)((unsigned int)(field0008 == 0xaa) * 300)) {
@@ -268,8 +266,7 @@ void Character21::Slot05()
              ( (float)(unsigned short)RandomRange(0,100) < 15.0f * field00a8
              )) && ((field3114 != 2 &&
                     ((*opponentSlot)->hitstunFrames == 0)))))) {
-          randomValue = RandomRange(0,100);
-          field3110 = randomValue & 0xffff;
+          field3110 = (unsigned short)RandomRange(0,100);
           if ((field3110 < 3) && (500.0 < field0118)) {
             recognizedCommand = 0x20;
             return;
@@ -301,8 +298,7 @@ void Character21::Slot05()
               (float)(unsigned short)RandomRange(0,100) < 15.0f * field00a8)) &&
              (field3114 != 2)) &&
             ((*opponentSlot)->hitstunFrames == 0)))) {
-          randomValue = RandomRange(0,100);
-          field3110 = randomValue & 0xffff;
+          field3110 = (unsigned short)RandomRange(0,100);
           if ((field3110 < 2) && (500.0 < field0118)) {
             recognizedCommand = 0x20;
             return;
@@ -319,9 +315,9 @@ void Character21::Slot05()
              (((*opponentSlot)->field0008 < 0x96 ||
               (0x9c < (*opponentSlot)->field0008)))))) ||
            (((field0008 != 0xfb &&
-             ((field0008 != 0xe8 || (randomChoice = RandomRange(0,10), randomChoice != 0)))) &&
+             ((field0008 != 0xe8 || ((unsigned short)RandomRange(0,10) != 0)))) &&
             (((field0008 != 0xfa || ( 1 < (unsigned short)RandomRange(0,100))) &&
-             ((field0008 != 0xeb || (randomChoice = RandomRange(0,7), randomChoice != 0)))))))) {
+             ((field0008 != 0xeb || ((unsigned short)RandomRange(0,7) != 0)))))))) {
           if ((0 < field3114) &&
              ((0x31 < field0008 && (field0008 < 0x9e)))) {
             field3114 = 0;
@@ -441,8 +437,7 @@ void Character21::Slot05()
                   (
                   (float)(unsigned short)RandomRange(0,100) < field00a8 * 25.0f)) &&
                  ((field3114 != 1 && (field3114 != 2)))) {
-                randomValue = RandomRange(0,1000);
-                field3110 = randomValue & 0xffff;
+                field3110 = (unsigned short)RandomRange(0,1000);
                 if (field0008 == 200) {
                   if (((*opponentSlot)->positionY < 0.0) &&
                      (field3110 < 300)) {
@@ -956,8 +951,7 @@ void Character21::Slot05()
               }
 
               if ((float)(unsigned short)RandomRange(0,100) < 25.0f * field00a8) {
-                randomValue = RandomRange(0,1000);
-                field3110 = randomValue & 0xffff;
+                field3110 = (unsigned short)RandomRange(0,1000);
                 if (positionY == 0.0) {
                   if (((*opponentSlot)->positionY == 0.0) &&
                      ((*opponentSlot)->field0008 != 99)) {
@@ -1328,16 +1322,14 @@ void Character21::Slot05()
                       }
                     }
                     if (cpuMoveRightFrames > 0) {
-                      wallCollision = CollisionSide();
-                      if ((wallCollision != '\0') && (0xf < cpuMoveRightFrames)) {
+                      if ((CollisionSide() != '\0') && (0xf < cpuMoveRightFrames)) {
                         cpuMoveRightFrames = 0xf;
                       }
                       inputX = 1;
                       return;
                     }
                     if (cpuMoveLeftFrames > 0) {
-                      wallCollision = CollisionSide();
-                      if ((wallCollision != '\0') && (0xf < cpuMoveLeftFrames)) {
+                      if ((CollisionSide() != '\0') && (0xf < cpuMoveLeftFrames)) {
                         cpuMoveLeftFrames = 0xf;
                       }
                       inputX = 0xff;
