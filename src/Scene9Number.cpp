@@ -2,7 +2,7 @@
 // 16-pixel-wide digits in the sprite sheet's row 455..474, right-to-left.
 #include "Engine.h"
 
-typedef char Scene9ResultNumberLayout[(sizeof(Scene9)==0x460) ? 1 : -1];
+typedef char Scene9ResultNumberLayout[(sizeof(Scene9)==0x474) ? 1 : -1];
 
 void Scene9::DrawResultNumber(int x, int y, unsigned int value)
 {

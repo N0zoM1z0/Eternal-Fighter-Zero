@@ -5,7 +5,7 @@
 extern const char resultsWinnerDat[], resultsSummaryDat[];
 extern const char resultsWinnerBmp[], resultsSummaryBmp[];
 
-typedef char Scene9ConstructorLocalLayout[(sizeof(Scene9)==0x460) ? 1 : -1];
+typedef char Scene9ConstructorLocalLayout[(sizeof(Scene9)==0x474) ? 1 : -1];
 
 Scene9::Scene9(HWND handle, Secondary **first, Secondary **second, Context *context,
                Video *video, Input *input, Audio *audio)

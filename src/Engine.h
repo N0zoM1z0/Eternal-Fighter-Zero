@@ -738,12 +738,18 @@ class Scene9 : public Scene {
     IUnknown *resultSurface;
     IUnknown *resultOverlaySurface;
     IUnknown *resultBackdropSurface;
-    unsigned char unknown_0444[0x45f - 0x444];
-    unsigned char resultTransitionState; // original byte +0x45f
+    short field0444, field0446, field0448, field044a;
+    short field044c, field044e, field0450, field0452;
+    short field0454, field0456, field0458, field045a, field045c;
+    char resultPhase;                 // native byte 0x45e
+    unsigned char resultTransitionState; // native byte 0x45f
+    unsigned char unknown_0460[4];
+    unsigned int healthBonus, comboBonus, damageBonus, winBonus;
 public:
     Scene9(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
     ~Scene9();
     void DrawResultNumber(int x, int y, unsigned int value);
+    void PrepareResults();
     virtual void Slot0();
     virtual unsigned char Step();
     virtual void PollKeyboard();

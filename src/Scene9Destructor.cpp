@@ -3,7 +3,7 @@
 // 0x00772800 / 0x007714E0 / 0x00775750.
 #include "Engine.h"
 
-typedef char Scene9MinimumNativeLayout[(sizeof(Scene9)==0x460) ? 1 : -1];
+typedef char Scene9MinimumNativeLayout[(sizeof(Scene9)==0x474) ? 1 : -1];
 
 Scene9::~Scene9()
 {

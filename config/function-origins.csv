@@ -613,7 +613,7 @@ address,origin,status,evidence
 0x007714E0,unknown,unreviewed,
 0x00772800,unknown,unreviewed,
 0x00774A10,authored,reviewed,docs/evidence/scene9-result-number-exact.json
-0x00774B00,unknown,unreviewed,
+0x00774B00,authored,reviewed,docs/evidence/scene9-prepare-results-exact.json
 0x00775750,authored,reviewed,docs/evidence/scene9-keyboard-exact.json
 0x00775810,unknown,unreviewed,
 0x00775830,unknown,unreviewed,
