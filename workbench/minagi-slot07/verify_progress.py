@@ -486,6 +486,9 @@ def main():
             or 'uVar6 = RandomRange(0,0x1e)' in fragments
             or 'uVar6 = RandomRange(0,0x28)' in fragments):
         raise AssertionError('native fragment position RNG expressions reverted')
+    case456=source.split('case 0x1c8:',1)[1].split('case 0x1c9:',1)[0]
+    if case456.count('int firstHeavyFragment = 0x46 < (unsigned short)RandomRange(0,100);')!=1:
+        raise AssertionError('Minagi 456 primary RNG decision moved')
     # Native case 0x191 skips active transitions outside [8,17). All 25
     # successfully handled action states exit the effect switch directly;
     # only an unmatched state reaches the common frame-advance path.
@@ -540,7 +543,7 @@ def main():
         key=lambda r:r['offset'])
     effect_fragment_sizes={}
     for kind,maximum_delta,original_size in (
-        (454,6,1580),(455,6,1606),(456,19,1635)
+        (454,6,1580),(455,6,1606),(456,15,1635)
     ):
         slot=pe_ids[kind-400]
         native_span=pe_pointers[slot+1]-pe_pointers[slot]
@@ -553,6 +556,39 @@ def main():
             'native_case_bytes':native_span,
             'candidate_case_bytes':candidate_span,
             'candidate_minus_native':candidate_span-native_span}
+    # The original 456 fragment case decides the 70% choice before
+    # its next 100-bound random draw; the second 30% choice follows it.
+    # Both real PE and pinned VC7.1 instructions must preserve this order.
+    case456_index=pe_ids[456-400]
+    def comparison_order_456(body:bytes,begin:int,end:int,label:str):
+        path=ROOT/'.analysis/probes/minagi-slot07'/f'{label}-compare-456.bin'
+        path.parent.mkdir(parents=True,exist_ok=True)
+        path.write_bytes(body[begin:end])
+        asm=subprocess.run(
+            ['objdump','-w','-z','-D','-b','binary','-m','i386','-Mintel',str(path)],
+            capture_output=True,text=True,check=True).stdout
+        ops=[]
+        for line in asm.splitlines():
+            m=re.match(r'^\s*[0-9a-f]+:\s+((?:[0-9a-f]{2}\s+)+)\s+(.+)',line)
+            if m:ops.append(m[2].strip())
+        calls=[i for i,op in enumerate(ops) if op.startswith('call ')]
+        above70=[i for i,op in enumerate(ops) if re.search(r'^cmp\s+[^,]+,0x46$',op)]
+        above30=[i for i,op in enumerate(ops) if re.search(r'^cmp\s+[^,]+,0x1e$',op)]
+        if not (len(calls)==5 and len(above70)==len(above30)==1
+                and calls[0]<above70[0]<calls[1]<above30[0]<calls[2]):
+            raise AssertionError(('original/candidate 456 RNG decision order',
+                                  label,calls,above70,above30))
+        return {'call_sites':len(calls),'70_compare_between_first_two_calls':True,
+                '30_compare_after_second_call':True}
+    original_rng_order=comparison_order_456(
+        native,pe_pointers[case456_index]-ORIGINAL_START,
+        pe_pointers[case456_index+1]-ORIGINAL_START,'original-456')
+    candidate_rng_order=comparison_order_456(
+        candidate,local_case_relocs[case456_index]['local_target_offset'],
+        local_case_relocs[case456_index+1]['local_target_offset'],
+        'candidate-456')
+    if original_rng_order!=candidate_rng_order:
+        raise AssertionError('compiled 456 decision order differs from original PE')
     actual_relocations=collections.Counter(r['symbol'] for r in relocations)
     for (symbol,target),count in EXPECTED_CALLS.items():
         if actual_relocations[symbol]!=count:
@@ -637,7 +673,7 @@ def main():
         raise AssertionError(('native vs candidate real x86 instruction count regressed',
                               structural_audit))
     if (structural_audit['matching_normalized_instructions_between_float_anchors']
-            < 14259):
+            < 14261):
         raise AssertionError(('Minagi instruction structure regressed',
                               structural_audit))
 
@@ -702,6 +738,7 @@ def main():
             'instruction_shape_audit':structural_audit,
             'compiler_switch_table_audit':compiler_table_audit,
             'effect_454_456_PE_bound_case_span_audit':effect_fragment_sizes,
+            'effect_456_native_first_decision_before_second_rng':candidate_rng_order,
             'original_pe_compact_case_index_bytes_exact':True,
             'executable_code_byte_delta_from_original':
                 len(candidate_code)-ORIGINAL_SIZE,

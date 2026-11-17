@@ -3728,10 +3728,9 @@ effects[effectIndex].frame < 8 &&
                 ++effects[effectIndex].frame;
                 if ((3 < effects[effectIndex].frame) &&
                    (effects[effectIndex].frame < 9)) {
-                  frameDuration = RandomRange(0,100);
-                  uVar5 = RandomRange(0,100);
-
-                  spawn.type = (0x46 < frameDuration) + 0x1cf + (unsigned short)(0x1e < uVar5);
+                  int firstHeavyFragment = 0x46 < (unsigned short)RandomRange(0,100);
+                  spawn.type = firstHeavyFragment + 0x1cf +
+                               (unsigned short)(0x1e < (unsigned short)RandomRange(0,100));
                   spawn.x = effects[effectIndex].x +
                              (double)(int)((((unsigned int)RandomRange(0,0x28)) & 0xffff) *
                                           (int)(char)effects[effectIndex].flag0048);
