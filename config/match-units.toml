@@ -165808,3 +165808,139 @@ object = "build/match-units/video-frame-rectangle/VideoFrameRectangle.obj"
 symbol = "?FrameRectangle@Video@@QAEHUSurfaceRect@@E@Z"
 target_address = 0x0040b110
 size = 485
+
+[units.scene6-reload-selected-preview]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Scene6PreviewReload.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/Scene6PreviewPaths.cpp"]
+object = "build/match-units/scene6-reload-selected-preview/Scene6PreviewReload.obj"
+symbol = "?ReloadSelectedPreview@Scene6@@QAEXXZ"
+target_address = 0x0075d400
+size = 375
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "independently decoded original native PE operand at 0x0075D407; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 18
+type = "DIR32"
+symbol = "?scene6PreviewPrefix@@3QBDB"
+target = 0x00789564
+evidence = "independently decoded original native PE operand at 0x0075D412; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 27
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "independently decoded original native PE operand at 0x0075D41B; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 63
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "independently decoded original native PE operand at 0x0075D43F; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 71
+type = "DIR32"
+symbol = "?scene6PreviewDirectorySeparator@@3QBDB"
+target = 0x0078956c
+evidence = "independently decoded original native PE operand at 0x0075D447; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 80
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "independently decoded original native PE operand at 0x0075D450; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 116
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "independently decoded original native PE operand at 0x0075D474; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 133
+type = "DIR32"
+symbol = "?scene6PreviewDataExtension@@3QBDB"
+target = 0x00789570
+evidence = "independently decoded original native PE operand at 0x0075D485; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 142
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "independently decoded original native PE operand at 0x0075D48E; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 176
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "independently decoded original native PE operand at 0x0075D4B0; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 207
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "independently decoded original native PE operand at 0x0075D4CF; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 214
+type = "DIR32"
+symbol = "?scene6PreviewBitmapExtension@@3QBDB"
+target = 0x00789578
+evidence = "independently decoded original native PE operand at 0x0075D4D6; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 223
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "independently decoded original native PE operand at 0x0075D4DF; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 260
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "independently decoded original native PE operand at 0x0075D504; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 291
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "independently decoded original native PE operand at 0x0075D523; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 312
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040bcc0
+evidence = "independently decoded original native PE operand at 0x0075D538; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 359
+type = "REL32"
+symbol = "?Read@CharacterStatistics@@QAEXPBD@Z"
+target = 0x00405cf0
+evidence = "independently decoded original native PE operand at 0x0075D567; CRT/string/data or existing authored callee verified"
+
+[[units.scene6-reload-selected-preview.relocations]]
+offset = 367
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "independently decoded original native PE operand at 0x0075D56F; CRT/string/data or existing authored callee verified"

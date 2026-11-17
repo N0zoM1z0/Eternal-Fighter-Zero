@@ -680,10 +680,16 @@ class Scene3;
 DECLARE_SCENE(Scene5, 0x474)
 class Scene6 : public Scene {
     // Original settings UI easing value at native object offset 0x754.
-    unsigned char unknown_0430[0x440 - sizeof(Scene)];
-    IUnknown *numberSurface;
-    unsigned char unknown_0444[0x741 - 0x444];
-    unsigned char numberColorKey;
+    unsigned char unknown_0430[0x43c - sizeof(Scene)];
+    IUnknown *previewSurface; // native offset 0x43C
+    IUnknown *numberSurface;  // native offset 0x440
+    unsigned char unknown_0444[0x449 - 0x444];
+    char previewSelection;    // native offset 0x449
+    unsigned char unknown_044a[0x450 - 0x44a];
+    CharacterStatistics previewStatistics; // native offset 0x450
+    char previewNames[24][30]; // native offset 0x470, 30-byte name stride
+    unsigned char previewColorKey; // 0x740
+    unsigned char numberColorKey;  // 0x741
     unsigned char unknown_0742[0x750 - 0x742];
     int settingsPulseOffset;
     int settingsSlideOffset;

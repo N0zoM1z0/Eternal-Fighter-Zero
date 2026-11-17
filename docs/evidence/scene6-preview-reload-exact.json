@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "authority": "full native 375-byte PE code identity with independently bound 18 CRT and authored relocations",
+  "method": "selected Scene6 normal VC7.1 /Od /G6 /MT /Gy /W3 /GS COFF owner and exact original PE comparison; no full cold replay",
+  "source": "src/Scene6PreviewReload.cpp",
+  "resource_data_source": "src/Scene6PreviewPaths.cpp",
+  "owner": "Scene6 config/settings UI with preview surface +0x43C, selected index +0x449, CharacterStatistics +0x450, names +0x470, preview palette color key +0x740",
+  "original_extent": {
+    "address": "0x0075D400",
+    "exclusive_end": "0x0075D577",
+    "size": 375
+  },
+  "native_strings": [
+    {
+      "address": "0x00789564",
+      "value": "system\\"
+    },
+    {
+      "address": "0x0078956C",
+      "value": "\\"
+    },
+    {
+      "address": "0x00789570",
+      "value": ".dat"
+    },
+    {
+      "address": "0x00789578",
+      "value": ".bmp"
+    }
+  ],
+  "behavior": "Build system\\\\<name>\\\\<name>.dat; load packed preview object and 40 palette entries, retain original compiled alternate .bmp path, then update color key and read selected character statistics",
+  "no_inline_assembly_or_machine_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 375,
+      "matched_bytes": 375,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "independently decoded original native PE operand at 0x0075D407; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 18,
+          "target": 7902564,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6PreviewPrefix@@3QBDB",
+          "evidence": "independently decoded original native PE operand at 0x0075D412; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 27,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "independently decoded original native PE operand at 0x0075D41B; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 63,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "independently decoded original native PE operand at 0x0075D43F; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 71,
+          "target": 7902572,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6PreviewDirectorySeparator@@3QBDB",
+          "evidence": "independently decoded original native PE operand at 0x0075D447; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 80,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "independently decoded original native PE operand at 0x0075D450; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 116,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "independently decoded original native PE operand at 0x0075D474; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 133,
+          "target": 7902576,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6PreviewDataExtension@@3QBDB",
+          "evidence": "independently decoded original native PE operand at 0x0075D485; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 142,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "independently decoded original native PE operand at 0x0075D48E; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 176,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "independently decoded original native PE operand at 0x0075D4B0; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 207,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "independently decoded original native PE operand at 0x0075D4CF; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 214,
+          "target": 7902584,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6PreviewBitmapExtension@@3QBDB",
+          "evidence": "independently decoded original native PE operand at 0x0075D4D6; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 223,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "independently decoded original native PE operand at 0x0075D4DF; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 260,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "independently decoded original native PE operand at 0x0075D504; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 291,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "independently decoded original native PE operand at 0x0075D523; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 312,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "independently decoded original native PE operand at 0x0075D538; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 359,
+          "target": 4218096,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@CharacterStatistics@@QAEXPBD@Z",
+          "evidence": "independently decoded original native PE operand at 0x0075D567; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        },
+        {
+          "offset": 367,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "independently decoded original native PE operand at 0x0075D56F; CRT/string/data or existing authored callee verified",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c7d553579672f0c3b6056b81048cee900d306b6668280749cb3e1a903a666b66",
+      "target_extent_sha256": "c7d553579672f0c3b6056b81048cee900d306b6668280749cb3e1a903a666b66",
+      "unit": "scene6-reload-selected-preview",
+      "symbol": "?ReloadSelectedPreview@Scene6@@QAEXXZ",
+      "target_address": "0x0075D400",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "9684496eea28ef6da16ca76e0976c478b440ddc318b39432c3be7f7b6588ceb0",
+      "object_sha256": "0c0b63d1c31b617b44a6b5ad8b2230576e3565ed61e55268f615759a89cb512f",
+      "source_sha256": "4c8739a216019784c35f525ac35eb81ede8ac64cc2bca2cfed25eb585dbaaa8c",
+      "dependencies": {
+        "src/Engine.h": "dd776e47b9051f76a63b644fe340c97c5905708a7972eb56db45015f03c5a4ab",
+        "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448",
+        "src/Scene6PreviewPaths.cpp": "b2d037de839ab8019f19e47811e67b2450b6039b4132974c2dd012c491d11f09"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e107e4c70ed86048a0c7871b45a3976201965702dc4d2a9252c890d743eef0a6",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "cd42cefa9495a6f5add13603400fb3bf2fa3ac1286efdd4bc226b489d4d2c4da",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -506,3 +506,4 @@ address,name,source,symbol,status,evidence
 0x0075D350,Scene6::PollKeyboard,src/Scene6Keyboard.cpp,?PollKeyboard@Scene6@@UAEXXZ,complete,docs/evidence/scene6-keyboard-exact.json
 0x0075D260,Scene6::DrawConfigNumber,src/Scene6Number.cpp,?DrawConfigNumber@Scene6@@QAEXHHI@Z,complete,docs/evidence/scene6-config-number-exact.json
 0x0040B110,Video::FrameRectangle,src/VideoFrameRectangle.cpp,?FrameRectangle@Video@@QAEHUSurfaceRect@@E@Z,complete,docs/evidence/video-frame-rectangle-exact.json
+0x0075D400,Scene6::ReloadSelectedPreview,src/Scene6PreviewReload.cpp,?ReloadSelectedPreview@Scene6@@QAEXXZ,complete,docs/evidence/scene6-preview-reload-exact.json
