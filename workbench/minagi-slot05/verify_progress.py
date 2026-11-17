@@ -169,11 +169,23 @@ def main():
         [(off,target) for off,target,_ in called])
     call_bounds_in_order=sum(a==b for a,b in zip(
         native_signatures,candidate_signatures))
-    if call_bounds_in_order!=111:
-        raise AssertionError(('CPU direct helper call / RNG argument order',
-                              call_bounds_in_order,111))
+    # Record honest positional ordering as a progress metric; no false
+    # "all in order" assertion before the original CPU branch layout is solved.
+    # Stronger invariant: every native helper target and every RandomRange
+    # upper bound occurs with the same multiplicity in the compiled candidate.
+    native_signature_counts=collections.Counter(native_signatures)
+    candidate_signature_counts=collections.Counter(candidate_signatures)
+    if native_signature_counts!=candidate_signature_counts:
+        raise AssertionError(('CPU native/candidate helper target and random bounds differ',
+                              native_signature_counts-candidate_signature_counts,
+                              candidate_signature_counts-native_signature_counts))
+    if call_bounds_in_order!=len(native_calls):
+        raise AssertionError(('CPU helper target / RandomRange argument order differs',
+                              call_bounds_in_order,len(native_calls)))
     call_signature_sha=hashlib.sha256(json.dumps(
         native_signatures,separators=(',',':')).encode()).hexdigest()
+    candidate_call_signature_sha=hashlib.sha256(json.dumps(
+        candidate_signatures,separators=(',',':')).encode()).hexdigest()
     if len(native_literals)!=207 or len(candidate_literals)!=207:
         raise AssertionError(('unexpected native/candidate static literals',
                               len(native_literals),len(candidate_literals)))
@@ -185,6 +197,9 @@ def main():
                               candidate_values-original_values))
     literal_order_matches=sum((width,bits)==given
                               for (width,bits,_),given in zip(native_literals,candidate_literals))
+    if literal_order_matches!=len(native_literals):
+        raise AssertionError(('CPU original static float reference order differs',
+                              literal_order_matches,len(native_literals)))
     hist=[{'bits':f'{bits:0{2*width}x}','bytes':width,'count':count}
           for (width,bits),count in sorted(original_values.items())]
     histogram_sha=hashlib.sha256(
@@ -220,7 +235,9 @@ def main():
             'direct_calls_in_original_order':call_in_order,
             'direct_calls_out_of_original_order':len(native_calls)-call_in_order,
             'direct_calls_with_rng_bounds_in_original_order':call_bounds_in_order,
-            'direct_call_with_rng_bound_order_sha256':call_signature_sha,
+            'direct_calls_with_rng_bounds_out_of_original_order':len(native_calls)-call_bounds_in_order,
+            'direct_calls_and_rng_bounds_multiset_match_original':True,
+            'direct_call_with_rng_bound_order_sha256':candidate_call_signature_sha,
             'static_floating_literal_refs':len(candidate_literals),
             'static_floating_literals_values_match_native':True,
             'static_floating_literals_in_original_order':literal_order_matches,
@@ -234,10 +251,11 @@ def main():
             'This is a full natural-C++ CPU decision candidate, with 111 native '
             'external helper calls matched by target multiplicity and 207 x87 '
             'static floating references matched by IEEE-754 value and count. '
-            'All 111 helper targets, including all 108 RandomRange immediate '
-            'bounds, are matched in original call order, as are all 207 '
-            'floating literal values, widths, and reference order. '
-            'Code size, instruction identity, side-effect order, and full '
+            'All 111 helper targets and all 108 RandomRange immediate bounds '
+            'match the original in instruction order. All 207 original static '
+            'floating references match value, width and order. The full '
+            'code size, instruction identity, branch-specific side-effect '
+            'ordering and '
             'branch equivalence remain unproven. This source stays outside '
             'accepted Exact and implemented-function ledgers.'
         )
