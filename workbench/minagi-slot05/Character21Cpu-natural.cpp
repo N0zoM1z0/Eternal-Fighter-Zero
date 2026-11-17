@@ -144,13 +144,13 @@ void Character21::Slot05()
           if (forwardSeparation < 100.0) {
 
             if (((float)(unsigned short)RandomRange(0,100) < field00a8 * 4.0f) &&
-               (500.0 < field0118)) {
+               (field0118 > 500.0)) {
               recognizedCommand = 0x20;
               return;
             }
 
             if (((float)(unsigned short)RandomRange(0,100) < field00a8 + field00a8) &&
-               (500.0 < field0118)) {
+               (field0118 > 500.0)) {
               recognizedCommand = 0xc;
               return;
             }
@@ -177,7 +177,7 @@ void Character21::Slot05()
           if ((forwardSeparation < 150.0) && (100.0 < forwardSeparation)) {
 
             if (((float)(unsigned short)RandomRange(0,100) < field00a8 * 3.0f) &&
-               (500.0 < field0118)) {
+               (field0118 > 500.0)) {
               recognizedCommand = 0xc;
               return;
             }
@@ -205,7 +205,7 @@ void Character21::Slot05()
           if (150.0 < forwardSeparation) {
 
             if (((float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f) &&
-               (500.0 < field0118)) {
+               (field0118 > 500.0)) {
               recognizedCommand = (unsigned short)RandomRange(0,2) + 0x1e;
               return;
             }
@@ -269,11 +269,11 @@ void Character21::Slot05()
              )) && ((field3114 != 2 &&
                     ((*opponentSlot)->hitstunFrames == 0)))))) {
           field3110 = (unsigned short)RandomRange(0,100);
-          if ((field3110 < 3) && (500.0 < field0118)) {
+          if ((field3110 < 3) && (field0118 > 500.0)) {
             recognizedCommand = 0x20;
             return;
           }
-          if ((field3110 < 5) && (500.0 < field0118)) {
+          if ((field3110 < 5) && (field0118 > 500.0)) {
             recognizedCommand = 0xc;
             return;
           }
@@ -301,7 +301,7 @@ void Character21::Slot05()
              (field3114 != 2)) &&
             ((*opponentSlot)->hitstunFrames == 0)))) {
           field3110 = (unsigned short)RandomRange(0,100);
-          if ((field3110 < 2) && (500.0 < field0118)) {
+          if ((field3110 < 2) && (field0118 > 500.0)) {
             recognizedCommand = 0x20;
             return;
           }
@@ -622,7 +622,7 @@ void Character21::Slot05()
                     return;
                   }
                   if (((600 < field3110) && (field3110 < 0x28a))
-                     && (500.0 < field0118)) {
+                     && (field0118 > 500.0)) {
                     recognizedCommand = 0x1f;
                     return;
                   }
@@ -767,7 +767,7 @@ void Character21::Slot05()
                     return;
                   }
                   if (((800 < field3110) && (field3110 < 0x352))
-                     && (500.0 < field0118)) {
+                     && (field0118 > 500.0)) {
                     recognizedCommand = 0x1f;
                     return;
                   }
@@ -852,7 +852,7 @@ void Character21::Slot05()
                     return;
                   }
                   if (((600 < field3110) && (field3110 < 0x28a))
-                     && (500.0 < field0118)) {
+                     && (field0118 > 500.0)) {
                     recognizedCommand = 0x1f;
                     return;
                   }
@@ -917,7 +917,7 @@ void Character21::Slot05()
                     return;
                   }
                   if (((600 < field3110) && (field3110 < 0x28a))
-                     && (500.0 < field0118)) {
+                     && (field0118 > 500.0)) {
                     recognizedCommand = 0x1f;
                     return;
                   }
@@ -1114,7 +1114,7 @@ void Character21::Slot05()
                     }
                     if (((forwardSeparation < 80.0) && (field3110 < 0xeb)) &&
                        ((0xdc < field3110 &&
-                        ((500.0 < field0118 &&
+                        ((field0118 > 500.0 &&
                          (199 < (*opponentSlot)->field0008)))))) {
                       recognizedCommand = 0x20;
                       return;
@@ -1154,7 +1154,7 @@ void Character21::Slot05()
                     if ((((90.0 < forwardSeparation) && (forwardSeparation < 140.0)) &&
                         (field3110 < 0x154)) &&
                        ((0x14a < field3110 &&
-                        (500.0 < field0118)))) {
+                        (field0118 > 500.0)))) {
                       recognizedCommand = 0x1f;
                       return;
                     }
@@ -1177,7 +1177,7 @@ void Character21::Slot05()
                     if (0.0 < (*opponentSlot)->velocityY) {
                       if (((forwardSeparation < 90.0) && (verticalSeparation < 140.0)) &&
                          (((80.0 < verticalSeparation && (field3110 < 6)) &&
-                          ((500.0 < field0118 ||
+                          ((field0118 > 500.0 ||
                            ('\0' < field0120)))))) {
                         recognizedCommand = 0x16;
                         return;

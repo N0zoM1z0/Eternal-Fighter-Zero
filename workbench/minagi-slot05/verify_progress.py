@@ -7,6 +7,7 @@ and all 207 canonical x87 float/double constant references by value/multiplicity
 from __future__ import annotations
 import argparse
 import collections
+from difflib import SequenceMatcher
 import hashlib
 import json
 import re
@@ -162,6 +163,57 @@ def native_fp_operation_window(code: bytes, name: str, offset: int,
         raise AssertionError(('second native CPU guard comparison not found',name,offset,floating))
     return floating
 
+def normalized_instruction_progress(native:bytes, candidate:bytes)->dict:
+    """207-float-anchor structural diagnostic; never an Exact certificate.
+
+    A compiler-private register or stack allocation may differ despite
+    restored C++ semantics. Branch operands and data-reference addresses are
+    intentionally masked, but instruction widths and mnemonics are retained.
+    """
+    def decode(data:bytes, name:str):
+        instructions=[]
+        constants=[]
+        for line in disasm(data,f'{name}-shape.bin'):
+            m=re.match(r'^\s*[0-9a-f]+:\s+((?:[0-9a-f]{2}\s+)+)\s+(.+)',line)
+            if m is None:continue
+            asm=m[2].strip()
+            if 'ds:0x' in asm:constants.append(len(instructions))
+            parts=asm.lower().split(None,1)
+            op=parts[0]
+            operand=parts[1] if len(parts)>1 else ''
+            if op in ('call','jmp','je','jne','jz','jnz','jg','jge','jl','jle',
+                      'ja','jae','jb','jbe','jo','jno','js','jns','jp','jnp','jecxz'):
+                operand='<rel>'
+            operand=re.sub(r'0x[0-9a-f]+','<hex>',operand)
+            operand=re.sub(r'\[ebp(?:-|\+)0x[0-9a-f]+\]','[ebp+LOCAL]',operand)
+            instructions.append(op+' '+operand)
+        if len(constants)!=207:
+            raise AssertionError(('native 207 constant anchors changed',name,len(constants)))
+        return instructions,constants
+    na,nn=decode(native,'original')
+    ca,cc=decode(candidate,'candidate')
+    a=[-1]+nn+[len(na)]
+    b=[-1]+cc+[len(ca)]
+    equal=0
+    changed=0
+    for i in range(208):
+        lhs=na[a[i]+1:a[i+1]]
+        rhs=ca[b[i]+1:b[i+1]]
+        common=sum(x2-x1 for kind,x1,x2,y1,y2 in
+                   SequenceMatcher(None,lhs,rhs,autojunk=False).get_opcodes()
+                   if kind=='equal')
+        equal+=common
+        if common!=len(lhs) or common!=len(rhs):changed+=1
+    return {
+        'native_decoded_instructions':len(na),
+        'candidate_decoded_instructions':len(ca),
+        'normalized_instructions_matching_between_207_float_anchors':equal,
+        'changed_float_anchor_regions':changed,
+        'float_anchor_regions_compared':208,
+        'provisional_structural_diagnostic_only':True,
+    }
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rebuild',action='store_true')
@@ -169,6 +221,8 @@ def main():
     text=SOURCE.read_text()
     if 'void Character21::Slot05()' not in text:
         raise AssertionError('missing natural C++ Minagi CPU Slot05 owner')
+    if text.count('field0118 > 500.0')!=14 or '500.0 < field0118' in text:
+        raise AssertionError('native CPU distance/load first x87 comparisons regressed')
     for name in ['__asm','_emit','__emit','reinterpret_cast','PADDING',
                  'param_1','FUN_','_DAT_']:
         if name in text:
@@ -285,6 +339,10 @@ def main():
     if literal_order_matches!=len(native_literals):
         raise AssertionError(('CPU original static float reference order differs',
                               literal_order_matches,len(native_literals)))
+    structural_progress=normalized_instruction_progress(native,candidate)
+    if structural_progress['normalized_instructions_matching_between_207_float_anchors']<2807:
+        raise AssertionError(('Minagi CPU 500.0 x87 instruction order regression',
+                              structural_progress))
     hist=[{'bits':f'{bits:0{2*width}x}','bytes':width,'count':count}
           for (width,bits),count in sorted(original_values.items())]
     histogram_sha=hashlib.sha256(
@@ -334,6 +392,8 @@ def main():
             'static_floating_literals_out_of_original_order':len(native_literals)-literal_order_matches,
             'cpu_guard_and_distance_x87_operation_order_matches_original':True,
             'five_rng_first_scaled_float_comparisons_match_native':True,
+            'fourteen_native_cpu_distance_threshold_comparisons_restored':True,
+            'instruction_shape_audit':structural_progress,
             'cpu_guard_and_distance_x87_sequence_sha256':fp_operation_hash,
             'static_floating_literal_histogram_sha256':histogram_sha,
         },
@@ -366,6 +426,8 @@ def main():
         'static_literals_in_native_order':literal_order_matches,
         'cpu_guard_and_distance_x87_order_matches_original':True,
         'rng_first_scaled_float_sites_verified':len(rng_first_sites),
+        'native_order_cpu_distance_threshold_compares':14,
+        'structural_instruction_alignment':structural_progress['normalized_instructions_matching_between_207_float_anchors'],
         'exact':False
     },indent=2))
 
