@@ -1,0 +1,608 @@
+{
+  "schema_version": 1,
+  "authority": "Complete original EFZ PE 5,619-byte Scene8 renderer identity from authored, natural VC7.1 C++ and independently original-bound COFF operands",
+  "owner": "Scene8::Slot0 replay browser video renderer",
+  "native_extent": {
+    "address": "0x0076F780",
+    "exclusive_end": "0x00770D73",
+    "bytes": 5619
+  },
+  "method": "Focused selected /Od /G6 /MT /Gy /W3 compilation and full-function original-PE comparison; all 61 actual COFF relocations verified against seven original targets; no masked, prefix-only or length-only acceptance; no ASM, padding or full cold replay",
+  "control_flow": "Replay background surface and selection bar; row header selector; record-overwrite confirmation panel; three selector choices with shared source/target rectangles; per-row selected/unselected branches; available-file pair of portrait thumbnails; two cosine-eased menu motions; final Present.",
+  "compiler_shape": {
+    "native_stack_frame_bytes": 1108,
+    "candidate_stack_frame_bytes": 1108,
+    "native_x86_instruction_count": 1475
+  },
+  "source_characteristics": "One local typed RenderWork aggregate for 2 common SurfaceRect regions and three active scalar temporaries; exact 33 per-function MakeSurfaceRect returns and 14 DrawSurface calls. The source uses the normal VC7.1 cos and integer conversion and never supplies synthetic machine bytes.",
+  "relocation_inventory": {
+    "count": 61,
+    "make_surface_rect": 33,
+    "draw_surface": 14,
+    "cos": 2,
+    "ftol2": 5,
+    "original_double_divisor_57_29579143313326": 2,
+    "original_double_160": 4,
+    "present": 1
+  },
+  "natural_cpp_without_asm_or_code_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 5619,
+      "matched_bytes": 5619,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 35,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076F7A3 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 108,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076F7EC operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 245,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0076F875 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 268,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076F88C operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 341,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076F8D5 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 513,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0076F981 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 573,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076F9BD operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 685,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076FA2D operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 802,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076FAA2 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 914,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076FB12 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1086,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0076FBBE operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 1126,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "Original EFZ PE 0x0076FBE6 operand: __real@404ca5dc7e61df46 bound to 0x00787FF8",
+          "addend": 0
+        },
+        {
+          "offset": 1137,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "Original EFZ PE 0x0076FBF1 operand: _cos bound to 0x007782B4",
+          "addend": 0
+        },
+        {
+          "offset": 1146,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "Original EFZ PE 0x0076FBFA operand: __real@4064000000000000 bound to 0x00787370",
+          "addend": 0
+        },
+        {
+          "offset": 1152,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "Original EFZ PE 0x0076FC00 operand: __real@4064000000000000 bound to 0x00787370",
+          "addend": 0
+        },
+        {
+          "offset": 1157,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Original EFZ PE 0x0076FC05 operand: __ftol2 bound to 0x007783B8",
+          "addend": 0
+        },
+        {
+          "offset": 1210,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076FC3A operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1312,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076FCA0 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1414,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076FD06 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1586,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0076FDB2 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 1630,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076FDDE operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1732,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076FE44 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1837,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076FEAD operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2009,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0076FF59 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 2053,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076FF85 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2155,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0076FFEB operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2260,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x00770054 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2432,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x00770100 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 2485,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x00770135 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2582,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x00770196 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2754,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x00770242 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 2798,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0077026E operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2898,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x007702D2 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3070,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0077037E operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 3161,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x007703D9 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3268,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Original EFZ PE 0x00770444 operand: __ftol2 bound to 0x007783B8",
+          "addend": 0
+        },
+        {
+          "offset": 3285,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x00770455 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3457,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x00770501 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 3641,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x007705B9 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3745,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Original EFZ PE 0x00770621 operand: __ftol2 bound to 0x007783B8",
+          "addend": 0
+        },
+        {
+          "offset": 3762,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x00770632 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3934,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x007706DE operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 4057,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x00770759 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 4161,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Original EFZ PE 0x007707C1 operand: __ftol2 bound to 0x007783B8",
+          "addend": 0
+        },
+        {
+          "offset": 4181,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x007707D5 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 4353,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x00770881 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 4376,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "Original EFZ PE 0x00770898 operand: __real@404ca5dc7e61df46 bound to 0x00787FF8",
+          "addend": 0
+        },
+        {
+          "offset": 4387,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "Original EFZ PE 0x007708A3 operand: _cos bound to 0x007782B4",
+          "addend": 0
+        },
+        {
+          "offset": 4396,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "Original EFZ PE 0x007708AC operand: __real@4064000000000000 bound to 0x00787370",
+          "addend": 0
+        },
+        {
+          "offset": 4402,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "Original EFZ PE 0x007708B2 operand: __real@4064000000000000 bound to 0x00787370",
+          "addend": 0
+        },
+        {
+          "offset": 4407,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Original EFZ PE 0x007708B7 operand: __ftol2 bound to 0x007783B8",
+          "addend": 0
+        },
+        {
+          "offset": 4444,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x007708DC operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 4553,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x00770949 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 4725,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x007709F5 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 4909,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x00770AAD operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 5015,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x00770B17 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 5187,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x00770BC3 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 5310,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x00770C3E operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 5419,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x00770CAB operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 5591,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x00770D57 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 5610,
+          "target": 4240864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Present@Video@@QAEHXZ",
+          "evidence": "Original EFZ PE 0x00770D6A operand: ?Present@Video@@QAEHXZ bound to 0x0040B5E0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2c0830c414cfc8149797896a84e3eee0425d4767b5cb892d16c305f92f79b575",
+      "target_extent_sha256": "2c0830c414cfc8149797896a84e3eee0425d4767b5cb892d16c305f92f79b575",
+      "unit": "scene8-render",
+      "symbol": "?Slot0@Scene8@@UAEXXZ",
+      "target_address": "0x0076F780",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "be6167b0d8bbf16b525b82af3e139e404e694036019fd4d5096823d269c59efe",
+      "object_sha256": "37472bd1c275b4ee5622ddfbfdce69be2d80917994c0ff284bd70266a4657644",
+      "source_sha256": "264f4cb2960756de1924ff14e5432a87075de752ef1952373f1d359d7d6549e9",
+      "dependencies": {
+        "src/Engine.h": "a508397d82be7c3411b924582bf4fb57715e51836603f4f233611c296582bc7b",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "f09e598d7a1cf09980b37c8f475651cf649348e007a2dad95373983df5b732bd",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9ecfae3f041c49807b142c926d7afcad63fe01fefbfc6d096d38a859b07dda64",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

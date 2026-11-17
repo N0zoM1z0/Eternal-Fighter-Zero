@@ -168696,3 +168696,440 @@ type = "REL32"
 symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
 target = 0x0040c590
 evidence = "EFZ canonical PE owner operand at 0x0076EF75; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+
+[units.scene8-render]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene8Render.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene8-render/Scene8Render.obj"
+symbol = "?Slot0@Scene8@@UAEXXZ"
+target_address = 0x0076f780
+size = 5619
+
+[[units.scene8-render.relocations]]
+offset = 35
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076F7A3 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 108
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076F7EC operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 245
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0076F875 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 268
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076F88C operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 341
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076F8D5 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 513
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0076F981 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 573
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076F9BD operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 685
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076FA2D operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 802
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076FAA2 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 914
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076FB12 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 1086
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0076FBBE operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 1126
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "Original EFZ PE 0x0076FBE6 operand: __real@404ca5dc7e61df46 bound to 0x00787FF8"
+
+[[units.scene8-render.relocations]]
+offset = 1137
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "Original EFZ PE 0x0076FBF1 operand: _cos bound to 0x007782B4"
+
+[[units.scene8-render.relocations]]
+offset = 1146
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "Original EFZ PE 0x0076FBFA operand: __real@4064000000000000 bound to 0x00787370"
+
+[[units.scene8-render.relocations]]
+offset = 1152
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "Original EFZ PE 0x0076FC00 operand: __real@4064000000000000 bound to 0x00787370"
+
+[[units.scene8-render.relocations]]
+offset = 1157
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "Original EFZ PE 0x0076FC05 operand: __ftol2 bound to 0x007783B8"
+
+[[units.scene8-render.relocations]]
+offset = 1210
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076FC3A operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 1312
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076FCA0 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 1414
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076FD06 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 1586
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0076FDB2 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 1630
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076FDDE operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 1732
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076FE44 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 1837
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076FEAD operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 2009
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0076FF59 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 2053
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076FF85 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 2155
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0076FFEB operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 2260
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x00770054 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 2432
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x00770100 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 2485
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x00770135 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 2582
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x00770196 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 2754
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x00770242 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 2798
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0077026E operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 2898
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x007702D2 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 3070
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0077037E operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 3161
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x007703D9 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 3268
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "Original EFZ PE 0x00770444 operand: __ftol2 bound to 0x007783B8"
+
+[[units.scene8-render.relocations]]
+offset = 3285
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x00770455 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 3457
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x00770501 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 3641
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x007705B9 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 3745
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "Original EFZ PE 0x00770621 operand: __ftol2 bound to 0x007783B8"
+
+[[units.scene8-render.relocations]]
+offset = 3762
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x00770632 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 3934
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x007706DE operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 4057
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x00770759 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 4161
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "Original EFZ PE 0x007707C1 operand: __ftol2 bound to 0x007783B8"
+
+[[units.scene8-render.relocations]]
+offset = 4181
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x007707D5 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 4353
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x00770881 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 4376
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "Original EFZ PE 0x00770898 operand: __real@404ca5dc7e61df46 bound to 0x00787FF8"
+
+[[units.scene8-render.relocations]]
+offset = 4387
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "Original EFZ PE 0x007708A3 operand: _cos bound to 0x007782B4"
+
+[[units.scene8-render.relocations]]
+offset = 4396
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "Original EFZ PE 0x007708AC operand: __real@4064000000000000 bound to 0x00787370"
+
+[[units.scene8-render.relocations]]
+offset = 4402
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "Original EFZ PE 0x007708B2 operand: __real@4064000000000000 bound to 0x00787370"
+
+[[units.scene8-render.relocations]]
+offset = 4407
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "Original EFZ PE 0x007708B7 operand: __ftol2 bound to 0x007783B8"
+
+[[units.scene8-render.relocations]]
+offset = 4444
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x007708DC operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 4553
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x00770949 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 4725
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x007709F5 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 4909
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x00770AAD operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 5015
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x00770B17 operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 5187
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x00770BC3 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 5310
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x00770C3E operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 5419
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x00770CAB operand: ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z bound to 0x0040C590"
+
+[[units.scene8-render.relocations]]
+offset = 5591
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x00770D57 operand: ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z bound to 0x00409A90"
+
+[[units.scene8-render.relocations]]
+offset = 5610
+type = "REL32"
+symbol = "?Present@Video@@QAEHXZ"
+target = 0x0040b5e0
+evidence = "Original EFZ PE 0x00770D6A operand: ?Present@Video@@QAEHXZ bound to 0x0040B5E0"

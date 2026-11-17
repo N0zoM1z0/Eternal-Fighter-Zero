@@ -734,7 +734,7 @@ class Scene8 : public Scene {
     char replayOverwriteChoice; // 0x46c
     char replayRow; // 0x46d
     char replayAvailable[9][9]; // 0x46e
-    unsigned char replayCharacters[9][9][2]; // 0x4bf
+    char replayCharacters[9][9][2]; // 0x4bf
     unsigned char unknown_0561[3];
     SurfaceRect replayChoiceRects[14];   // +0x564 through +0x643
     unsigned char unknown_0644[0x684-0x644];

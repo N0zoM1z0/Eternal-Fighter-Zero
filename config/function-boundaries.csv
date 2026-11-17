@@ -550,3 +550,4 @@ address,end,size,status,evidence
 0x00770E30,0x00771164,820,reviewed,docs/evidence/scene8-prepare-replay-list-exact.json
 0x0076F060,0x0076F77C,1820,reviewed,docs/evidence/scene8-step-exact.json
 0x0076E480,0x0076EFD9,2905,reviewed,docs/evidence/scene8-constructor-exact.json
+0x0076F780,0x00770D73,5619,reviewed,docs/evidence/scene8-render-exact.json

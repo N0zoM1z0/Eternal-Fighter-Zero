@@ -22,17 +22,24 @@ The menu-selection/record-overwrite branch ordering, signed submenu threshold,
 compound byte arithmetic and original held-input Boolean lifetime yield the
 native 490-instruction body and 0x18 stack frame without ASM or padding.
 
-Five other Scene8 exact owners were selectively rebuilt after typing the
-native signed/unsigned replay menu fields and still have zero differences.
-Their real codegen reports, source dependency hashes, and proof rows were
-refreshed; no all-unit cold replay was run. The next substantive Scene8 owners
-are its `Slot0` renderer at `0x0076F780` (5,619 bytes), still open.
-`Scene8::Scene8` at `0x0076E480` is now strict Exact for **2,905/2,905**
-native bytes and **40/40 original-bound relocations**, including 19 normal
+`Scene8::Scene8` at `0x0076E480` is strict Exact for **2,905/2,905**
+native bytes with **40 original-bound relocations**, including 19 normal
 `MakeSurfaceRect` calls, eight distinct resource strings, and original DAT/BMP
-alternatives. Its accepted source is `src/Scene8Constructor.cpp`; the typed
-replay sprite rectangle fields preserve the native object layout. Six affected
-Scene8 owners were selectively recompiled and remain strict Exact.
+alternatives. Accepted source: `src/Scene8Constructor.cpp`.
+
+The other substantial Scene8 boss, `Scene8::Slot0` renderer at `0x0076F780`,
+is also strict Exact: **5,619/5,619 bytes**, **61 independently bound COFF
+relocations**, with 33 native rectangle constructors, 14 DrawSurface calls,
+actual cos/ftol2 math, and a 0x454-byte stack frame. The source is
+`src/Scene8Render.cpp`. Its real local `RenderWork` structure recovers the
+original shared source/destination rectangle allocation, not ASM or padding.
+The original UI shows background, menu choices, replay-slot thumbnails and
+cosine-eased scrolling. The two stored character IDs are signed `char` in the
+shared native `Scene8` layout. After that signedness correction, all seven
+other accepted Scene8 functions were individually rebuilt and remained Exact.
+Together the eight accepted Scene8 owners contribute **11,823 exact bytes**
+and **173 independently original-bound relocations**. No all-unit cold replay
+was run; this does not imply whole-product closure.
 
 ## Scene9 results bosses accepted — 2026-11-17
 

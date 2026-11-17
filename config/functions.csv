@@ -603,7 +603,7 @@ address,size,span_end,body_size,current_name,is_thunk,body_ranges,boundary_statu
 0x0076E480,2905,0x0076EFD8,2905,Scene8::Scene8,false,0x0076E480:0x0076EFD8,reviewed
 0x0076EFE0,118,0x0076F055,118,Scene8::~Scene8,false,0x0076EFE0:0x0076F055,reviewed
 0x0076F060,1800,0x0076F767,1800,Scene8::Step,false,0x0076F060:0x0076F767,reviewed
-0x0076F780,5619,0x00770D72,5619,FUN_0076f780,false,0x0076F780:0x00770D72,unreviewed
+0x0076F780,5619,0x00770D72,5619,Scene8::Slot0,false,0x0076F780:0x00770D72,reviewed
 0x00770D80,171,0x00770E2A,171,Scene8::PollKeyboard,false,0x00770D80:0x00770E2A,reviewed
 0x00770E30,820,0x00771163,820,Scene8::PrepareReplayList,false,0x00770E30:0x00771163,reviewed
 0x00771170,185,0x00771228,185,Scene8::FadeReplayPaletteOut,false,0x00771170:0x00771228,reviewed

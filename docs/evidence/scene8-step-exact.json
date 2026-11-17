@@ -319,15 +319,15 @@
       "symbol": "?Step@Scene8@@UAEEXZ",
       "target_address": "0x0076F060",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "e2c0d096d85753336516b4f9d5942f6d879b682bf034075476d74434a27e2d30",
-      "object_sha256": "837ef8764fbcc5e416428a062cc9c92b9adb751daf38709571feefc87b490f18",
+      "boundary_ledger_sha256": "be6167b0d8bbf16b525b82af3e139e404e694036019fd4d5096823d269c59efe",
+      "object_sha256": "fbf899ed787c8828c74bc81877eb8f9ac569d3d4f2fe7be95844fe424c15f016",
       "source_sha256": "5fa955a160486b466f65b085e1159ebb30b8db3cf84633403ec315c71ffe775b",
       "dependencies": {
-        "src/Engine.h": "90e408ec1a008f967dbb1dfb9a5dff49ce10f4b8cb99b45408454431f6fc9875",
+        "src/Engine.h": "a508397d82be7c3411b924582bf4fb57715e51836603f4f233611c296582bc7b",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "fd9dfac41949a0d71fc0e01302f065feaf143e89b78de1a65b9004ed94a31a13",
+      "units_manifest_sha256": "f09e598d7a1cf09980b37c8f475651cf649348e007a2dad95373983df5b732bd",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "937dd43dbb974f36bc66077d707ef2345ef8b7b6b9ec5bc0b46defaeba8ba466",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -335,5 +335,7 @@
     }
   ],
   "selected_replay_after_scene8_constructor_2026_11_17": "Five affected receipts refreshed from actual complete selected VC7.1 builds after native Scene8 constructor rectangle layouts. Scene8::Step six local-label names changed while all original addresses and all function bytes remained exact.",
-  "replay_after_scene8_ctor_layout_refinement": "Focused complete original-bound replay of affected Scene8 owner after recovering typed native replay rectangle members, with zero bytes different; fresh source/dependency COFF receipts."
+  "replay_after_scene8_ctor_layout_refinement": "Focused complete original-bound replay of affected Scene8 owner after recovering typed native replay rectangle members, with zero bytes different; fresh source/dependency COFF receipts.",
+  "selected_replay_after_scene8_render_2026_11_17": "Fresh selected full-function original-bound native comparisons after Scene8 replay-character signedness was recovered for the exact renderer; no all-unit replay or hash-only proof changes.",
+  "scene8_signed_replay_character_selected_replay": "Seven affected Scene8 owners selectively rebuilt from accepted shared native signed-char header after complete renderer recovery. Original PE complete owner and relocation comparisons all remain strict Exact."
 }
