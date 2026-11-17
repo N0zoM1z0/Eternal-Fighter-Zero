@@ -165501,3 +165501,35 @@ type = "REL32"
 symbol = "_fabs"
 target = 0x0077842D
 evidence = "Canonical EFZ.exe original E8 at 0x0040543D has REL32 operand at 0x0040543E targeting CRT fabs at 0x0077842D; complete reviewed float core [0x00405430,0x0040544C)."
+
+[units.float-load-wrapper]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/FloatLoad.cpp"
+object = "build/match-units/float-load-wrapper/FloatLoad.obj"
+symbol = "_FloatLoad"
+target_address = 0x00405450
+size = 17
+
+[[units.float-load-wrapper.relocations]]
+offset = 8
+type = "REL32"
+symbol = "_FloatLoadCore"
+target = 0x00405470
+evidence = "Canonical EFZ.exe original E8 at 0x00405457 has REL32 operand at 0x00405458 targeting 0x00405470; reviewed wrapper [0x00405450,0x00405461)."
+
+[units.float-load-core]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/FloatLoad.cpp"
+object = "build/match-units/float-load-core/FloatLoad.obj"
+symbol = "_FloatLoadCore"
+target_address = 0x00405470
+size = 28
+
+[[units.float-load-core.relocations]]
+offset = 14
+type = "REL32"
+symbol = "_RuntimeLoadDouble"
+target = 0x00778204
+evidence = "Canonical EFZ.exe original E8 at 0x0040547D has REL32 operand at 0x0040547E targeting 0x00778204, which loads an x87 double with the 0x00779AC5 helper; reviewed core [0x00405470,0x0040548C)."
