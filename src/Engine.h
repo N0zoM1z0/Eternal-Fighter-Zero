@@ -738,7 +738,8 @@ class Scene9 : public Scene {
     IUnknown *resultSurface;
     IUnknown *resultOverlaySurface;
     IUnknown *resultBackdropSurface;
-    unsigned char unknown_0444[0x460 - 0x444];
+    unsigned char unknown_0444[0x45f - 0x444];
+    unsigned char resultTransitionState; // original byte +0x45f
 public:
     Scene9(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
     ~Scene9();

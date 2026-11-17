@@ -535,3 +535,4 @@ address,end,size,status,evidence
 0x00771170,0x00771229,185,reviewed,docs/evidence/scene8-palette-fades-exact.json
 0x00771230,0x007712E9,185,reviewed,docs/evidence/scene8-palette-fades-exact.json
 0x00771400,0x007714D8,216,reviewed,docs/evidence/scene9-destructor-exact.json
+0x007712F0,0x007713F3,259,reviewed,docs/evidence/scene9-constructor-exact.json

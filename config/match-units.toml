@@ -166111,3 +166111,82 @@ type = "DIR32"
 symbol = "??_7Scene9@@6B@"
 target = 0x00789874
 evidence = "original 0x0077140C vtable store; three virtual entry original PE targets 0x00772800 0x007714E0 0x00775750"
+[units.scene9-constructor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene9Constructor.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/Scene9ResourcePaths.cpp"]
+object = "build/match-units/scene9-constructor/Scene9Constructor.obj"
+symbol = "??0Scene9@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target_address = 0x007712f0
+size = 259
+
+[[units.scene9-constructor.relocations]]
+offset = 41
+type = "REL32"
+symbol = "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x00759c10
+evidence = "Original PE 0x00771319 Scene9 resource constructor operand"
+
+[[units.scene9-constructor.relocations]]
+offset = 50
+type = "DIR32"
+symbol = "??_7Scene9@@6B@"
+target = 0x00789874
+evidence = "Original PE 0x00771322 Scene9 resource constructor operand"
+
+[[units.scene9-constructor.relocations]]
+offset = 71
+type = "DIR32"
+symbol = "?resultsWinnerDat@@3QBDB"
+target = 0x007897e8
+evidence = "Original PE 0x00771337 Scene9 resource constructor operand"
+
+[[units.scene9-constructor.relocations]]
+offset = 91
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "Original PE 0x0077134B Scene9 resource constructor operand"
+
+[[units.scene9-constructor.relocations]]
+offset = 103
+type = "DIR32"
+symbol = "?resultsSummaryDat@@3QBDB"
+target = 0x007897fc
+evidence = "Original PE 0x00771357 Scene9 resource constructor operand"
+
+[[units.scene9-constructor.relocations]]
+offset = 124
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "Original PE 0x0077136C Scene9 resource constructor operand"
+
+[[units.scene9-constructor.relocations]]
+offset = 136
+type = "DIR32"
+symbol = "?resultsWinnerBmp@@3QBDB"
+target = 0x00789810
+evidence = "Original PE 0x00771378 Scene9 resource constructor operand"
+
+[[units.scene9-constructor.relocations]]
+offset = 161
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "Original PE 0x00771391 Scene9 resource constructor operand"
+
+[[units.scene9-constructor.relocations]]
+offset = 171
+type = "DIR32"
+symbol = "?resultsSummaryBmp@@3QBDB"
+target = 0x00789824
+evidence = "Original PE 0x0077139B Scene9 resource constructor operand"
+
+[[units.scene9-constructor.relocations]]
+offset = 196
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "Original PE 0x007713B4 Scene9 resource constructor operand"

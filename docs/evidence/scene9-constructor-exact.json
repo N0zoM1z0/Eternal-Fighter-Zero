@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "authority": "complete original native PE byte identity under pinned VC7.1 normal C++ and 10 original call/data/vtable bindings",
+  "method": "selected native PE 0x007712F0 259-byte extent vs compiled normal C++ Scene9 ctor, no full cold replay",
+  "source": "src/Scene9Constructor.cpp",
+  "resource_strings": "src/Scene9ResourcePaths.cpp",
+  "origin": "authored Scene9 results/winner scene constructor",
+  "native_extent": {
+    "address": "0x007712F0",
+    "exclusive_end": "0x007713F3",
+    "bytes": 259
+  },
+  "native_vtable": {
+    "address": "0x00789874",
+    "slots": [
+      "0x772800",
+      "0x7714e0",
+      "0x775750"
+    ]
+  },
+  "resource_names": [
+    {
+      "address": "0x007897E8",
+      "name": "system\\\\winner.dat"
+    },
+    {
+      "address": "0x007897FC",
+      "name": "system\\\\result.dat"
+    },
+    {
+      "address": "0x00789810",
+      "name": "system\\\\winner.bmp"
+    },
+    {
+      "address": "0x00789824",
+      "name": "system\\\\result.bmp"
+    }
+  ],
+  "behavior": "Call native Scene constructor, install Scene9 vtable, load packed result/winner resources and keep bitmap fallback, clear result overlay/backdrop and initialize phase/selection flags.",
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 259,
+      "matched_bytes": 259,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 41,
+          "target": 7707664,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+          "evidence": "Original PE 0x00771319 Scene9 resource constructor operand",
+          "addend": 0
+        },
+        {
+          "offset": 50,
+          "target": 7903348,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene9@@6B@",
+          "evidence": "Original PE 0x00771322 Scene9 resource constructor operand",
+          "addend": 0
+        },
+        {
+          "offset": 71,
+          "target": 7903208,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?resultsWinnerDat@@3QBDB",
+          "evidence": "Original PE 0x00771337 Scene9 resource constructor operand",
+          "addend": 0
+        },
+        {
+          "offset": 91,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "Original PE 0x0077134B Scene9 resource constructor operand",
+          "addend": 0
+        },
+        {
+          "offset": 103,
+          "target": 7903228,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?resultsSummaryDat@@3QBDB",
+          "evidence": "Original PE 0x00771357 Scene9 resource constructor operand",
+          "addend": 0
+        },
+        {
+          "offset": 124,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "Original PE 0x0077136C Scene9 resource constructor operand",
+          "addend": 0
+        },
+        {
+          "offset": 136,
+          "target": 7903248,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?resultsWinnerBmp@@3QBDB",
+          "evidence": "Original PE 0x00771378 Scene9 resource constructor operand",
+          "addend": 0
+        },
+        {
+          "offset": 161,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "Original PE 0x00771391 Scene9 resource constructor operand",
+          "addend": 0
+        },
+        {
+          "offset": 171,
+          "target": 7903268,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?resultsSummaryBmp@@3QBDB",
+          "evidence": "Original PE 0x0077139B Scene9 resource constructor operand",
+          "addend": 0
+        },
+        {
+          "offset": 196,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "Original PE 0x007713B4 Scene9 resource constructor operand",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "94e5e03510e979b52d4fbc51d0aa1bb5b5c4782c365b373ca198e439da41fe5f",
+      "target_extent_sha256": "94e5e03510e979b52d4fbc51d0aa1bb5b5c4782c365b373ca198e439da41fe5f",
+      "unit": "scene9-constructor",
+      "symbol": "??0Scene9@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+      "target_address": "0x007712F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "604ede18183fd1d16de2604aaf5b63e7dd053a94c87f3e0c34cb115024cf4c1a",
+      "object_sha256": "6525a4f9d50abb1bca638f877b2636682ee5e7b292b7a8281c5691338e075917",
+      "source_sha256": "7f13437088bc2c4a8eb85c3640f2ee86c594a6d80dc4634128f554059764d5f4",
+      "dependencies": {
+        "src/Engine.h": "b28c8ae35d5b029495033f1ef4eef9c1cca32d346da1d257b5a09b0aa6295505",
+        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c",
+        "src/Scene9ResourcePaths.cpp": "ed831f88a116ce16d7f27ed64212df14600f2b9c82149d3a41fd9491c93d02da"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "472b7bf3e756ac42fa0a869a445825787913eb2afb6ffdd84d1982952b7d7c14",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a762fe087943f8dc7bd79cf194ab5d4f169d72ef673c776c72895dfe4fc8ed7d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
