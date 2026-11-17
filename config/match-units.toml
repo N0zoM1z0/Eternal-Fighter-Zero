@@ -164700,3 +164700,27 @@ type = "REL32"
 symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
 target = 0x0040F170
 evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706A6F binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[units.character-21-slot02]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character21Commands.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-21-slot02/Character21Commands.obj"
+symbol = "?Slot02@Character21@@UAEXXZ"
+target_address = 0x005AD550
+size = 5314
+
+[[units.character-21-slot02.relocations]]
+offset = 1929
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Minagi vtable slot2 0x00788948 selects [0x005AD550,0x005AEA12); native operand 0x005ADCD9 binds 8-byte 0.0 double at 0x007872F8."
+
+[[units.character-21-slot02.relocations]]
+offset = 2070
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Minagi vtable slot2 0x00788948 selects [0x005AD550,0x005AEA12); native operand 0x005ADD66 binds 8-byte 0.0 double at 0x007872F8."

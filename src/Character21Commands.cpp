@@ -1,11 +1,10 @@
-// Minagi Character21::Slot02 circular input-history command recognizer.
-// Original 0x005AD550 (5314 bytes), provisional complete natural C++ candidate.
-#include "../../src/CharacterViews.h"
+// Minagi Character21::Slot02 native-priority 16-scan command recognizer.
+// Original native owner 0x005AD550, 5,314 bytes; natural VC7.1 C++.
+#include "CharacterViews.h"
 
 void Character21::Slot02()
 {
     unsigned char buttons;
-    bool heldRelease;
     unsigned char stage;
     int index;
 
@@ -14,7 +13,7 @@ void Character21::Slot02()
   for (index = inputHistoryWriteIndex + 0x5a; index < inputHistoryWriteIndex + 0xb4;
       index = index + 1) {
     buttons = history[index - (index >= 180) * 180];
-    if (((buttons & 0x80) > 0) && (stage == '\x06')) {
+    if (((buttons & 0x80) != 0) && (stage == '\x06')) {
       recognizedCommand = 0x5c;
       return;
     }
@@ -47,7 +46,7 @@ void Character21::Slot02()
            ((buttons & 0x80) > 0);
       return;
     }
-    if (((buttons & 0xf) == 2 - (facing != -1)) && (stage == '\x04')) {
+    if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\x04')) {
       if ((buttons & 0xf0) != 0) {
         recognizedCommand =
              ((buttons & 0xe0) > 0) + 0xa0 + ((buttons & 0xc0) > 0) +
@@ -56,7 +55,7 @@ void Character21::Slot02()
       }
       stage = '\x05';
     }
-    if (((buttons & 0xf) == 6 - (facing != -1)) && (stage == '\x03')) {
+    if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) && (stage == '\x03')) {
       stage = '\x04';
     }
     if (((buttons & 0xf) == 2 - (facing == -1)) && (stage == '\x02')) {
@@ -100,7 +99,7 @@ void Character21::Slot02()
     if (((buttons & 0xf) == 6 - (facing == -1)) && (stage == '\x01')) {
       stage = '\x02';
     }
-    if ((((buttons & 0xf) == 4) && (stage == '\0')) && (999 < meter)) {
+    if ((((buttons & 0xf) == 4) && (stage == '\0')) && (meter >= 1000)) {
       stage = '\x01';
     }
   }
@@ -114,7 +113,7 @@ void Character21::Slot02()
            ((buttons & 0x80) > 0);
       return;
     }
-    if (((buttons & 0xf) == 2 - (facing != -1)) && (stage == '\x05')) {
+    if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\x05')) {
       if ((buttons & 0xf0) != 0) {
         recognizedCommand =
              ((buttons & 0xe0) > 0) + 100 + ((buttons & 0xc0) > 0) +
@@ -123,19 +122,19 @@ void Character21::Slot02()
       }
       stage = '\x06';
     }
-    if (((buttons & 0xf) == 6 - (facing != -1)) && (stage == '\x04')) {
+    if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) && (stage == '\x04')) {
       stage = '\x05';
     }
     if (((buttons & 0xf) == 4) && (stage == '\x03')) {
       stage = '\x04';
     }
-    if (((buttons & 0xf) == 2 - (facing != -1)) && (stage == '\x02')) {
+    if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\x02')) {
       stage = '\x03';
     }
-    if (((buttons & 0xf) == 6 - (facing != -1)) && (stage == '\x01')) {
+    if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) && (stage == '\x01')) {
       stage = '\x02';
     }
-    if ((((buttons & 0xf) == 4) && (stage == '\0')) && (999 < meter)) {
+    if ((((buttons & 0xf) == 4) && (stage == '\0')) && (meter >= 1000)) {
       stage = '\x01';
     }
   }
@@ -147,14 +146,14 @@ void Character21::Slot02()
       recognizedCommand = ((buttons & 0xe0) > 0) + 0x50 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
       return;
     }
-    if (((buttons & 0xf) == 2 - (facing != -1)) && stage == 3) {
+    if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && stage == 3) {
       if (((buttons & 0xf0) != 0) && positionY == 0.0) {
         recognizedCommand = ((buttons & 0xe0) > 0) + 0x50 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
         return;
       }
       stage = 4;
     }
-    if (((buttons & 0xf) == 6 - (facing != -1)) && stage == 2) {
+    if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) && stage == 2) {
       stage = 3;
     }
     if (((buttons & 0xf) == 6 - (facing == -1)) && stage == 1) {
@@ -194,7 +193,7 @@ void Character21::Slot02()
       recognizedCommand = ((buttons & 0xe0) > 0) + 0x14 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
       return;
     }
-    if (((buttons & 0xf) == 6 - (facing != -1)) && stage == 2) {
+    if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) && stage == 2) {
       if (((buttons & 0xf0) != 0)) {
         recognizedCommand = ((buttons & 0xe0) > 0) + 0x14 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
         return;
@@ -204,7 +203,7 @@ void Character21::Slot02()
     if (((buttons & 0xf) == 4) && stage == 1) {
       stage = 2;
     }
-    if (((buttons & 0xf) == 2 - (facing != -1)) && stage == 0) {
+    if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && stage == 0) {
       stage = 1;
     }
   }
@@ -216,14 +215,14 @@ void Character21::Slot02()
       recognizedCommand = ((buttons & 0xe0) > 0) + 10 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
       return;
     }
-    if (((buttons & 0xf) == 2 - (facing != -1)) && stage == 2) {
+    if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && stage == 2) {
       if (((buttons & 0xf0) != 0)) {
         recognizedCommand = ((buttons & 0xe0) > 0) + 10 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
         return;
       }
       stage = 3;
     }
-    if (((buttons & 0xf) == 6 - (facing != -1)) && stage == 1) {
+    if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) && stage == 1) {
       stage = 2;
     }
     if (((buttons & 0xf) == 4) && stage == 0) {
@@ -253,20 +252,20 @@ void Character21::Slot02()
     }
   }
   // Distinguish D-button release from a continuously held D input.
-  heldRelease = false;
+  stage = 0;
   for (index = inputHistoryWriteIndex + 0xaf; index < inputHistoryWriteIndex + 0xb4; ++index) {
     buttons = history[index - (index >= 180) * 180];
-    if (((buttons & 8) != 0) && heldRelease) {
+    if (((buttons & 8) != 0) && stage == 1) {
       recognizedCommand = 6;
       return;
     }
-    if (((buttons & 8) == 0) && !heldRelease) heldRelease = true;
+    if (((buttons & 8) == 0) && stage == 0) stage = 1;
   }
   // Native-priority button 0x80 history recognition.
   stage = 0;
   for (index = inputHistoryWriteIndex + 0x5a; index < inputHistoryWriteIndex + 0xb4; ++index) {
     buttons = history[index - (index >= 180) * 180];
-    if (((buttons & 0x80) > 0) && stage == 4) {
+    if (((buttons & 0x80) != 0) && stage == 4) {
       recognizedCommand = 0x35;
       return;
     }

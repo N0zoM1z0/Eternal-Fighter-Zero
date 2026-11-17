@@ -353,7 +353,7 @@ address,origin,status,evidence
 0x005AD500,authored,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
 0x005AD510,authored,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
 0x005AD520,authored,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
-0x005AD550,unknown,unreviewed,
+0x005AD550,authored,reviewed,docs/evidence/character-21-slot02-exact.json
 0x005AEA20,unknown,unreviewed,
 0x005B2D10,unknown,unreviewed,
 0x005C8580,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner
