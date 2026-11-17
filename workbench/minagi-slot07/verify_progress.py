@@ -298,6 +298,17 @@ def main():
                                   predicate,expected,source.count(predicate)))
     if 'switch(effects[effectIndex].type)' not in source:
         raise AssertionError('wrong signed Minagi effect dispatch type')
+    # Native 0x1F0 first handles the ten-effect spawn path, then enters
+    # the ordinary tick/frame advancement path if the action is still active.
+    # These side-effect-free unsigned action/frame checks are equivalent under
+    # all possible 16-bit values, while <=1 restores native cmp/jg form.
+    case1f0=source.split('case 0x1f0:',1)[1].split('case 0x1f1:',1)[0]
+    if (case1f0.count('field000a <= 1')!=2
+            or case1f0.count('EmitLocalEffect(&spawn)')!=10
+            or not case1f0.lstrip().startswith('if (!')
+            or case1f0.index('EmitLocalEffect(&spawn)')>case1f0.index(
+                '++effects[effectIndex].tick')):
+        raise AssertionError('native 0x1f0 spawn-first effect dispatch regressed')
     # Native case 0x191 skips active transitions outside [8,17). All 25
     # successfully handled action states exit the effect switch directly;
     # only an unmatched state reaches the common frame-advance path.
@@ -417,7 +428,7 @@ def main():
     # with relocation binding could satisfy the separate strict Oracle.
     structural_audit=instruction_shape_alignment(native,candidate)
     if (structural_audit['matching_normalized_instructions_between_float_anchors']
-            < 14160):
+            < 14207):
         raise AssertionError(('Minagi instruction structure regressed',
                               structural_audit))
 
@@ -478,6 +489,7 @@ def main():
             'effect191_half_open_frame_range':[8,17],
             'effect191_direct_transition_exits':25,
             'instruction_shape_audit':structural_audit,
+            'native_effect_0x1f0_spawn_first_and_frame_bounds_restored':True,
             'restored_native_field_first_float_comparisons':restored_threshold_counts,
             'object':str(OBJECT.relative_to(ROOT)),
             # Whole-COFF object hashes can change with compiler-local symbols,

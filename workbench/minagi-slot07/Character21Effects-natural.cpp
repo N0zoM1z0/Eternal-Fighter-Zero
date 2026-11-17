@@ -4483,21 +4483,10 @@ effects[effectIndex].frame <= 7 &&
           }
           break;
         case 0x1f0:
-          if ((((((field0008 == 0x53) || (field0008 == 0x54)) ||
+          if (!((((((field0008 == 0x53) || (field0008 == 0x54)) ||
                 (field0008 == 0x55)) || (field0008 == 0x56)) &&
-              ((field0008 != 0x53 || (field000a < 2)))) &&
-             ((field0008 != 0x54 || (field000a < 2)))) {
-            ++effects[effectIndex].tick;
-            if (effects[effectIndex].tick >= frameDuration) {
-              effects[effectIndex].tick = 0;
-              ++effects[effectIndex].frame;
-              effects[effectIndex].field0080 = 0;
-              if (effects[effectIndex].frame >= frameCount) {
-                effects[effectIndex].frame = 0;
-              }
-            }
-          }
-          else {
+              ((field0008 != 0x53 || (field000a <= 1)))) &&
+             ((field0008 != 0x54 || (field000a <= 1))))) {
             spawn.type = 0x1f1;
             spawn.x = (double)((int)(positionX) + (char)facing * 0x17);
             spawn.y = (double)((int)(positionY) + -4);
@@ -4571,6 +4560,17 @@ effects[effectIndex].frame <= 7 &&
             pendingContextSoundSlot = 0x22;
             RemoveLocalEffect((short)effectIndex);
             field3144 = 0;
+          }
+          else {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
+              effects[effectIndex].tick = 0;
+              ++effects[effectIndex].frame;
+              effects[effectIndex].field0080 = 0;
+              if (effects[effectIndex].frame >= frameCount) {
+                effects[effectIndex].frame = 0;
+              }
+            }
           }
           break;
         case 0x1f1:

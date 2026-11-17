@@ -297,7 +297,7 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot07/Character21Effects-natural.cpp",
-    "source_sha256": "3252a600eb5871f1f5b2bdfe156f8a8c7bb01ed77ecfb20a3e5562d9646023e2",
+    "source_sha256": "6c7e2f9fcc8db6f0df3af975df4eceb0209c6c76ab4721b035a6e7e1317bc683",
     "unsigned_field0008_equality_and_inequality": true,
     "unsigned_effect_tick_zero_equality": true,
     "unsigned_effect_type_switch": true,
@@ -309,11 +309,12 @@
     "instruction_shape_audit": {
       "native_decoded_instructions": 18977,
       "candidate_decoded_instructions": 19184,
-      "matching_normalized_instructions_between_float_anchors": 14160,
+      "matching_normalized_instructions_between_float_anchors": 14207,
       "changed_regions": 359,
       "regions_compared": 790,
       "alignment_is_provisional_diagnostic_only": true
     },
+    "native_effect_0x1f0_spawn_first_and_frame_bounds_restored": true,
     "restored_native_field_first_float_comparisons": {
       "effects[effectIndex].x > 620.0": 43,
       "effects[effectIndex].vx > 0.8": 7,
@@ -323,7 +324,7 @@
       "effects[effectIndex].vy > 0.0": 2
     },
     "object": "build/minagi-slot07/Character21Effects-natural.obj",
-    "function_body_sha256": "5ec759113644e9c68b878a62e2b2270800c922503b9659959d37ff36d27bb655",
+    "function_body_sha256": "97e9f59b4fea336e6687353d91c4098eac50bf7e844e7bd8468523fea65e1153",
     "compiler_flags": [
       "/Od",
       "/G6",
@@ -332,8 +333,8 @@
       "/W3"
     ],
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-    "compiled_function_bytes": 88137,
-    "native_size_delta": 339,
+    "compiled_function_bytes": 88133,
+    "native_size_delta": 335,
     "dispatch_cases": 68,
     "dispatch_ids_match_original": true,
     "coff_relocations": 954,
