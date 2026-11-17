@@ -12,8 +12,8 @@ void Character21::Slot07()
     int effectIndex;
 
 
-  if ((*opponentSlot)->hitstunFrames < 1) {
-    effectIndex = (int)(short)effectRead;
+  if ((*opponentSlot)->hitstunFrames > 0) return;
+  effectIndex = (int)(short)effectRead;
     EffectSpawn spawn;
     while (effectIndex != effectWrite) {
       if (((effectActive[effectIndex] != 0) &&
@@ -23,17 +23,16 @@ void Character21::Slot07()
         frameDuration = patterns[effects[effectIndex].type].frames[effects[effectIndex].frame].duration;
         frameCount = patterns[effects[effectIndex].type].count;
         ResetLocalEffectSpawn(&spawn);
-        iVar7 = effectIndex;
+
         switch((short)effects[effectIndex].type) {
         case 400:
           field3154[effectIndex] = 0;
           effects[effectIndex].field0084 = 0;
-          if (effects[effectIndex].x <=
-              (*opponentSlot)->positionX) {
-            effects[effectIndex].flag0048 = 1;
+          if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+            effects[effectIndex].flag0048 = -1;
           }
           else {
-            effects[effectIndex].flag0048 = 0xff;
+            effects[effectIndex].flag0048 = 1;
           }
           effects[effectIndex].vx = 0.0;
           effects[effectIndex].vy = 0.0;
@@ -229,9 +228,8 @@ void Character21::Slot07()
               if (effects[effectIndex].x < positionX) {
                 effects[effectIndex].flag0048 = 1;
               }
-              if (positionX < effects[effectIndex].x !=
-                  (positionX == effects[effectIndex].x)) {
-                effects[effectIndex].flag0048 = 0xff;
+              if (positionX <= effects[effectIndex].x) {
+                effects[effectIndex].flag0048 = -1;
               }
             }
             effects[effectIndex].tick =
@@ -247,50 +245,25 @@ void Character21::Slot07()
             }
           }
           break;
-        case 0x191:
+        case 0x191: {
           field3154[effectIndex] = 0;
           effects[effectIndex].vy = 0.0;
           effects[effectIndex].vx = 0.0;
           effects[effectIndex].field0084 = 0;
-          if (effects[effectIndex].x <=
-              (*opponentSlot)->positionX) {
-            effects[effectIndex].flag0048 = 1;
+          if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+            effects[effectIndex].flag0048 = -1;
           }
           else {
-            effects[effectIndex].flag0048 = 0xff;
+            effects[effectIndex].flag0048 = 1;
           }
           effects[effectIndex].vx = 0.0;
           effects[effectIndex].vy = 0.0;
           field3148 = 1;
-          if ((effects[effectIndex].frame < 8) ||
-             (0x10 < effects[effectIndex].frame)) {
-LAB_005b4cd6:
-            if (((short)field0008 == 0xfb) || ((short)field0008 == 0xfc)) {
-              field3148 = 1;
-              effects[effectIndex].type = 0x192;
-              effects[effectIndex].frame = 0;
-              effects[effectIndex].tick = 0;
-            }
-            else {
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
-                effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
-                effects[effectIndex].field0080 = 0;
-                if (effects[effectIndex].frame == 0x11) {
-                  effects[effectIndex].frame = 8;
-                }
-                if (frameCount <= effects[effectIndex].frame) {
-                  effects[effectIndex].frame = 0;
-                  effects[effectIndex].type = 400;
-                  field3148 = 0;
-                }
-              }
-            }
-          }
-          else {
+          // The common idle-frame advancement is also entered when the
+          // active character state stops matching the temporary attack.
+          bool advanceIdleFrames = effects[effectIndex].frame < 8 ||
+                                   effects[effectIndex].frame > 16;
+          if (!advanceIdleFrames) {
             field3148 = 3;
             if (((short)field0008 == 0xfa) && (field000a == 0)) {
               effects[effectIndex].tick = 0;
@@ -453,8 +426,10 @@ LAB_005b4cd6:
               effects[effectIndex].frame = 0;
               effects[effectIndex].tick = 0;
             }
+            else if ((short)field0008 != 0x7b) {
+              advanceIdleFrames = true;
+            }
             else {
-              if ((short)field0008 != 0x7b) goto LAB_005b4cd6;
               field3148 = 4;
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -465,7 +440,34 @@ LAB_005b4cd6:
               effects[effectIndex].tick = 0;
             }
           }
+          if (advanceIdleFrames) {
+            if (((short)field0008 == 0xfb) || ((short)field0008 == 0xfc)) {
+              field3148 = 1;
+              effects[effectIndex].type = 0x192;
+              effects[effectIndex].frame = 0;
+              effects[effectIndex].tick = 0;
+            }
+            else {
+              effects[effectIndex].tick =
+                   (short)effects[effectIndex].tick + 1;
+              if (frameDuration <= effects[effectIndex].tick) {
+                effects[effectIndex].tick = 0;
+                effects[effectIndex].frame =
+                     effects[effectIndex].frame + 1;
+                effects[effectIndex].field0080 = 0;
+                if (effects[effectIndex].frame == 0x11) {
+                  effects[effectIndex].frame = 8;
+                }
+                if (frameCount <= effects[effectIndex].frame) {
+                  effects[effectIndex].frame = 0;
+                  effects[effectIndex].type = 400;
+                  field3148 = 0;
+                }
+              }
+            }
+          }
           break;
+        }
         case 0x192:
           field3148 = 2;
           effects[effectIndex].field0084 = 0;
@@ -492,12 +494,11 @@ LAB_005b4cd6:
           }
           if ((((short)field0008 == 0xfd) && (field000a == 2)) ||
              (((short)field0008 == 0x109 && (field000a == 3)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x194;
@@ -507,12 +508,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0xfe) && (field000a == 2)) ||
                   (((short)field0008 == 0x10a && (field000a == 3)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x195;
@@ -522,12 +522,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0xff) && (field000a == 2)) ||
                   (((short)field0008 == 0x10b && (field000a == 3)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x196;
@@ -537,12 +536,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x100) && (field000a == 2)) ||
                   (((short)field0008 == 0x10d && (field000a == 3)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x197;
@@ -552,12 +550,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x101) && (field000a == 2)) ||
                   (((short)field0008 == 0x10e && (field000a == 3)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x198;
@@ -567,12 +564,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x102) && (field000a == 2)) ||
                   (((short)field0008 == 0x10f && (field000a == 3)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x199;
@@ -582,12 +578,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x103) && (field000a == 2)) ||
                   (((short)field0008 == 0x110 && (field000a == 3)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x19a;
@@ -597,12 +592,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x104) && (field000a == 2)) ||
                   (((short)field0008 == 0x111 && (field000a == 3)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x19b;
@@ -612,12 +606,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x105) && (field000a == 2)) ||
                   (((short)field0008 == 0x112 && (field000a == 3)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x19c;
@@ -626,12 +619,11 @@ LAB_005b4cd6:
             field3154[effectIndex] = 0;
           }
           else if (((short)field0008 == 0x113) && (field000a == 2)) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1d2;
@@ -640,12 +632,11 @@ LAB_005b4cd6:
             field3154[effectIndex] = 0;
           }
           else if (((short)field0008 == 0x114) && (field000a == 2)) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1d3;
@@ -654,12 +645,11 @@ LAB_005b4cd6:
             field3154[effectIndex] = 0;
           }
           else if (((short)field0008 == 0x115) && (field000a == 2)) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1d4;
@@ -669,12 +659,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 300) && (field000a == 2)) ||
                   (((short)field0008 == 0x132 && (field000a == 1)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c6;
@@ -684,12 +673,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x12d) && (field000a == 2)) ||
                   (((short)field0008 == 0x133 && (field000a == 1)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c7;
@@ -699,12 +687,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x12e) && (field000a == 2)) ||
                   (((short)field0008 == 0x134 && (field000a == 1)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c8;
@@ -714,12 +701,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x12f) && (field000a == 2)) ||
                   (((short)field0008 == 0x135 && (field000a == 1)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1a0;
@@ -729,12 +715,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x130) && (field000a == 2)) ||
                   (((short)field0008 == 0x136 && (field000a == 1)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1a2;
@@ -744,12 +729,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x131) && (field000a == 2)) ||
                   (((short)field0008 == 0x137 && (field000a == 1)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1a4;
@@ -759,12 +743,11 @@ LAB_005b4cd6:
           }
           else if (((((short)field0008 == 0x138) || ((short)field0008 == 0x139)) ||
                    ((short)field0008 == 0x13a)) && (field000a == 2)) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1b5;
@@ -773,12 +756,11 @@ LAB_005b4cd6:
             field3154[effectIndex] = 0;
           }
           else if (((short)field0008 == 0x13b) && (field000a == 3)) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1be;
@@ -788,12 +770,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x13c) && (field000a == 2)) ||
                   (((short)field0008 == 0x13f && (field000a == 1)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c6;
@@ -803,12 +784,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x13d) && (field000a == 2)) ||
                   (((short)field0008 == 0x140 && (field000a == 1)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c7;
@@ -818,12 +798,11 @@ LAB_005b4cd6:
           }
           else if ((((short)field0008 == 0x13e) && (field000a == 2)) ||
                   (((short)field0008 == 0x141 && (field000a == 1)))) {
-            if (effects[effectIndex].x <=
-                (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = 1;
+            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = -1;
             }
             else {
-              effects[effectIndex].flag0048 = 0xff;
+              effects[effectIndex].flag0048 = 1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c8;
@@ -3679,12 +3658,12 @@ LAB_005b4cd6:
                    (effects[effectIndex].frame < 9)) {
                   spawn.type = 0x1cf;
                   uVar6 = RandomRange(0,0x1e);
-                  iVar8 = effectIndex;
+
                   spawn.x = (double)(int)((uVar6 & 0xffff) *
                                           (int)(char)effects[effectIndex].flag0048) +
-                             effects[iVar7].x;
+                             effects[effectIndex].x;
                   frameDuration = RandomRange(0,0x50);
-                  spawn.y = ((effects[iVar8].y - (double)frameDuration) +
+                  spawn.y = ((effects[effectIndex].y - (double)frameDuration) +
                              40.0) - 30.0;
                   spawn.flag0018 = (unsigned char)effects[effectIndex].flag0048;
                   spawn.layer = 1;
@@ -3767,15 +3746,15 @@ LAB_005b4cd6:
                 if ((3 < effects[effectIndex].frame) &&
                    (effects[effectIndex].frame < 9)) {
                   frameDuration = RandomRange(0,100);
-                  iVar7 = effectIndex;
+
                   spawn.type = (0x32 < frameDuration) + 0x1cf;
                   uVar6 = RandomRange(0,0x28);
-                  iVar8 = effectIndex;
+
                   spawn.x = (double)(int)((uVar6 & 0xffff) *
                                           (int)(char)effects[effectIndex].flag0048) +
-                             effects[iVar7].x;
+                             effects[effectIndex].x;
                   frameDuration = RandomRange(0,0x78);
-                  spawn.y = ((effects[iVar8].y - (double)frameDuration) +
+                  spawn.y = ((effects[effectIndex].y - (double)frameDuration) +
                              60.0) - 30.0;
                   spawn.flag0018 = (unsigned char)effects[effectIndex].flag0048;
                   spawn.layer = 1;
@@ -3859,15 +3838,15 @@ LAB_005b4cd6:
                    (effects[effectIndex].frame < 9)) {
                   frameDuration = RandomRange(0,100);
                   uVar5 = RandomRange(0,100);
-                  iVar7 = effectIndex;
+
                   spawn.type = (0x46 < frameDuration) + 0x1cf + (unsigned short)(0x1e < uVar5);
                   uVar6 = RandomRange(0,0x28);
-                  iVar8 = effectIndex;
+
                   spawn.x = (double)(int)((uVar6 & 0xffff) *
                                           (int)(char)effects[effectIndex].flag0048) +
-                             effects[iVar7].x;
+                             effects[effectIndex].x;
                   frameDuration = RandomRange(0,0x8c);
-                  spawn.y = ((effects[iVar8].y - (double)frameDuration) +
+                  spawn.y = ((effects[effectIndex].y - (double)frameDuration) +
                              70.0) - 30.0;
                   spawn.flag0018 = (unsigned char)effects[effectIndex].flag0048;
                   spawn.layer = 1;
@@ -4891,6 +4870,5 @@ LAB_005b4cd6:
         effectIndex = 0;
       }
     }
-  }
   return;
 }
