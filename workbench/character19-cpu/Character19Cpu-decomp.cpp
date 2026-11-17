@@ -727,7 +727,7 @@ kanna_state11_deeper:
                   }
                   if (((((*opponentSlot)->positionY < 0.0) &&
                        (field3110 < 300)) && (attackCollisionResult == 3)) &&
-                     ((*opponentSlot)->airActionLockFrames < 0x3d)) {
+                     ((*opponentSlot)->airActionLockFrames <= 0x3c)) {
                     field3114 = 0x1e;
                     return;
                   }
@@ -1004,7 +1004,7 @@ kanna_state11_deeper:
                   if (((*opponentSlot)->positionY == 0.0) &&
                      ((*opponentSlot)->field0008 != 99)) {
                     if (distance.forward < 80.0) {
-                      if ((field3110 < (((*opponentSlot)->field0008 >= 0x32 && (*opponentSlot)->field0008 <= 0x9b) ? 1 : 0) * 0xf + 0xf) &&
+                      if ((field3110 < (((0x31 < (*opponentSlot)->field0008) && ((*opponentSlot)->field0008 < 0x9c)) ? 1 : 0) * 0xf + 0xf) &&
                          (field314c == 0)) {
                         buttonPulse[0] = 1;
                         inputY = 1;
@@ -1012,7 +1012,7 @@ kanna_state11_deeper:
                       }
                     }
                     if (distance.forward < 75.0) {
-                      if ((field3110 < (((*opponentSlot)->field0008 >= 0x32 && (*opponentSlot)->field0008 <= 0x9b) ? 1 : 0) * 0xf + 0x14) &&
+                      if ((field3110 < (((0x31 < (*opponentSlot)->field0008) && ((*opponentSlot)->field0008 < 0x9c)) ? 1 : 0) * 0xf + 0x14) &&
                          (field314c == 0)) {
                         buttonPulse[0] = 1;
                         inputY = 0;
@@ -1020,7 +1020,7 @@ kanna_state11_deeper:
                       }
                     }
                     if ((distance.forward > 40.0) && (distance.forward < 140.0)) {
-                      if (((field3110 < (((*opponentSlot)->field0008 >= 0x32 && (*opponentSlot)->field0008 <= 0x9b) ? 1 : 0) * 0xf + 0x2d) &&
+                      if (((field3110 < (((0x31 < (*opponentSlot)->field0008) && ((*opponentSlot)->field0008 < 0x9c)) ? 1 : 0) * 0xf + 0x2d) &&
                           (0x1e < field3110)) && (field314c == 0))
                       {
                         buttonPulse[1] = 1;

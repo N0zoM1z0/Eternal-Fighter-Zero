@@ -13,7 +13,7 @@ gate is expressed as a natural early command return, with signed-byte tests,
 exact opponent-state boundaries, unsigned RNG promotions, and signed
 air-action lock tests normalized to `<= 0` to recover native `TEST/JG`, and
 velocity-sign tests use the operand order emitted by the native x87 compare. Targeted
-instruction alignment reports 4,115 of 4,440 candidate instructions aligned
+instruction alignment reports 4,123 of 4,440 candidate instructions aligned
 with native order/semantics. The native x87 unordered-compare paths are preserved with explicit negated
 relational tests where the native branches treat unordered values as true;
 `positionY == 0.0` remains a true equality test.
