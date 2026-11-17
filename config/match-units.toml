@@ -170129,3 +170129,755 @@ type = "DIR32"
 symbol = "$L61504"
 target = 0x0075abc4
 evidence = "Original EFZ PE operand 0x0075B094, independently reviewed $L61504 destination 0x0075ABC4"
+
+[units.scene6-render]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene6Render.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene6-render/Scene6Render.obj"
+symbol = "?Slot0@Scene6@@UAEXXZ"
+target_address = 0x0075b0a0
+size = 8640
+code_size = 8608
+
+[[units.scene6-render.local_data]]
+offset = 8608
+size = 32
+kind = "switch-address-table"
+evidence = "Original EFZ PE 0x0075D240..0x0075D25F is an eight-case DWORD switch address table; 0xCC alignment after 0x0075D260 belongs to next function, not owner"
+
+[[units.scene6-render.relocations]]
+offset = 55
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B0D7 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 128
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B120 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 268
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075B1AC operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 288
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B1C0 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 350
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B1FE operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 498
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075B292 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 524
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B2AC operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 602
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B2FA operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 762
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075B39A operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 807
+type = "DIR32"
+symbol = "$L61683"
+target = 0x0075d240
+evidence = "Original EFZ PE 0x0075B3C7 operand: compiler COFF symbol $L61683 resolves to 0x0075D240"
+
+[[units.scene6-render.relocations]]
+offset = 830
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B3DE operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 902
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B426 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 1062
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075B4C6 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 1090
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B4E2 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 1162
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B52A operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 1322
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075B5CA operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 1350
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B5E6 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 1425
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B631 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 1585
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075B6D1 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 1613
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B6ED operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 1688
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B738 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 1848
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075B7D8 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 1876
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B7F4 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 1951
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B83F operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 2111
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075B8DF operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 2142
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B8FE operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 2220
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075B94C operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 2380
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075B9EC operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 2411
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BA0B operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 2489
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BA59 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 2649
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075BAF9 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 2680
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BB18 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 2758
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BB66 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 2918
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075BC06 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 2963
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BC33 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 3035
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BC7B operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 3195
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075BD1B operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 3248
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BD50 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 3323
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BD9B operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 3483
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075BE3B operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 3531
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BE6B operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 3603
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BEB3 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 3763
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075BF53 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 3819
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BF8B operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 3894
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075BFD6 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 4054
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075C076 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 4110
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C0AE operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 4185
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C0F9 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 4345
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075C199 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 4392
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C1C8 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 4467
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C213 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 4627
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075C2B3 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 4683
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C2EB operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 4761
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C339 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 4921
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075C3D9 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 4972
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C40C operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 5050
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C45A operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 5210
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075C4FA operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 5266
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C532 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 5344
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C580 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 5504
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075C620 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 5560
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C658 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 5638
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C6A6 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 5798
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075C746 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 5854
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C77E operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 5932
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C7CC operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 6092
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075C86C operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 6143
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C89F operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 6221
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C8ED operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 6381
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075C98D operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 6437
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075C9C5 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 6515
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075CA13 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 6675
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075CAB3 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 6731
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075CAEB operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 6809
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075CB39 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 6969
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075CBD9 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 7022
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075CC0E operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 7122
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075CC72 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 7286
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075CD16 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 7309
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075CD2D operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 7383
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075CD77 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 7543
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075CE17 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 7569
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075CE31 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 7647
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075CE7F operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 7807
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075CF1F operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 7833
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075CF39 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 7922
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075CF92 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 8082
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075D032 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 8129
+type = "REL32"
+symbol = "?DrawConfigNumber@Scene6@@QAEXHHI@Z"
+target = 0x0075d260
+evidence = "Original EFZ PE 0x0075D061 operand: compiler COFF symbol ?DrawConfigNumber@Scene6@@QAEXHHI@Z resolves to 0x0075D260"
+
+[[units.scene6-render.relocations]]
+offset = 8177
+type = "REL32"
+symbol = "?DrawConfigNumber@Scene6@@QAEXHHI@Z"
+target = 0x0075d260
+evidence = "Original EFZ PE 0x0075D091 operand: compiler COFF symbol ?DrawConfigNumber@Scene6@@QAEXHHI@Z resolves to 0x0075D260"
+
+[[units.scene6-render.relocations]]
+offset = 8225
+type = "REL32"
+symbol = "?DrawConfigNumber@Scene6@@QAEXHHI@Z"
+target = 0x0075d260
+evidence = "Original EFZ PE 0x0075D0C1 operand: compiler COFF symbol ?DrawConfigNumber@Scene6@@QAEXHHI@Z resolves to 0x0075D260"
+
+[[units.scene6-render.relocations]]
+offset = 8272
+type = "REL32"
+symbol = "?DrawConfigNumber@Scene6@@QAEXHHI@Z"
+target = 0x0075d260
+evidence = "Original EFZ PE 0x0075D0F0 operand: compiler COFF symbol ?DrawConfigNumber@Scene6@@QAEXHHI@Z resolves to 0x0075D260"
+
+[[units.scene6-render.relocations]]
+offset = 8320
+type = "REL32"
+symbol = "?DrawConfigNumber@Scene6@@QAEXHHI@Z"
+target = 0x0075d260
+evidence = "Original EFZ PE 0x0075D120 operand: compiler COFF symbol ?DrawConfigNumber@Scene6@@QAEXHHI@Z resolves to 0x0075D260"
+
+[[units.scene6-render.relocations]]
+offset = 8373
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075D155 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 8437
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original EFZ PE 0x0075D195 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590"
+
+[[units.scene6-render.relocations]]
+offset = 8586
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original EFZ PE 0x0075D22A operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90"
+
+[[units.scene6-render.relocations]]
+offset = 8600
+type = "REL32"
+symbol = "?Present@Video@@QAEHXZ"
+target = 0x0040b5e0
+evidence = "Original EFZ PE 0x0075D238 operand: compiler COFF symbol ?Present@Video@@QAEHXZ resolves to 0x0040B5E0"
+
+[[units.scene6-render.relocations]]
+offset = 8608
+type = "DIR32"
+symbol = "$L61463"
+target = 0x0075b3cb
+evidence = "Original EFZ PE 0x0075D240 operand: compiler COFF symbol $L61463 resolves to 0x0075B3CB"
+
+[[units.scene6-render.relocations]]
+offset = 8612
+type = "DIR32"
+symbol = "$L61466"
+target = 0x0075b4cf
+evidence = "Original EFZ PE 0x0075D244 operand: compiler COFF symbol $L61466 resolves to 0x0075B4CF"
+
+[[units.scene6-render.relocations]]
+offset = 8616
+type = "DIR32"
+symbol = "$L61469"
+target = 0x0075b5d3
+evidence = "Original EFZ PE 0x0075D248 operand: compiler COFF symbol $L61469 resolves to 0x0075B5D3"
+
+[[units.scene6-render.relocations]]
+offset = 8620
+type = "DIR32"
+symbol = "$L61472"
+target = 0x0075b6da
+evidence = "Original EFZ PE 0x0075D24C operand: compiler COFF symbol $L61472 resolves to 0x0075B6DA"
+
+[[units.scene6-render.relocations]]
+offset = 8624
+type = "DIR32"
+symbol = "$L61475"
+target = 0x0075b7e1
+evidence = "Original EFZ PE 0x0075D250 operand: compiler COFF symbol $L61475 resolves to 0x0075B7E1"
+
+[[units.scene6-render.relocations]]
+offset = 8628
+type = "DIR32"
+symbol = "$L61478"
+target = 0x0075b8e8
+evidence = "Original EFZ PE 0x0075D254 operand: compiler COFF symbol $L61478 resolves to 0x0075B8E8"
+
+[[units.scene6-render.relocations]]
+offset = 8632
+type = "DIR32"
+symbol = "$L61481"
+target = 0x0075b9f5
+evidence = "Original EFZ PE 0x0075D258 operand: compiler COFF symbol $L61481 resolves to 0x0075B9F5"
+
+[[units.scene6-render.relocations]]
+offset = 8636
+type = "DIR32"
+symbol = "$L61484"
+target = 0x0075bb02
+evidence = "Original EFZ PE 0x0075D25C operand: compiler COFF symbol $L61484 resolves to 0x0075BB02"

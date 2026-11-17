@@ -5,6 +5,21 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
+## Scene6 options renderer boss accepted — 2026-11-17
+
+`Scene6::Slot0` at `0x0075B0A0` is now **strict Exact 8,640/8,640 bytes**
+(8,608 code bytes + the full original eight-entry 32-byte switch table).
+The natural C++ source `src/Scene6Render.cpp` generates **105 original-bound
+COFF relocations**, 60 meaningful MakeSurfaceRect calls, 30 DrawSurface calls,
+5 DrawConfigNumber calls, and a native `0x7A8` stack frame. The two first
+scene-page draws use a real shared `RenderWork {destination,source}`; remaining
+calls take direct return-by-value geometry, preserving exact VC7.1 source
+lifetime/register allocation. The original integer expression uses
+`0 - settingsSlideOffset`, not a unary minus. All byte differences are zero
+including local switch data and actual branch targets. Related exact
+Scene6::Step and Scene6::DrawConfigNumber were individually rebuilt unchanged.
+No assembly, padding, target-code patch, or all-unit cold replay.
+
 ## Scene6 option-state boss accepted — 2026-11-17
 
 `Scene6::Step` at `0x0075A4C0` is complete native-bound Exact:

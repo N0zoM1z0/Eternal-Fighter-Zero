@@ -532,3 +532,4 @@ address,name,source,symbol,status,evidence
 0x00775D50,Scene10::PollKeyboard,src/Scene10Keyboard.cpp,?PollKeyboard@Scene10@@UAEXXZ,complete,docs/evidence/scene10-keyboard-exact.json
 0x00759F30,Scene6::Scene6,src/Scene6Constructor.cpp,??0Scene6@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z,complete,docs/evidence/scene6-constructor-exact.json
 0x0075A4C0,Scene6::Step,src/Scene6Step.cpp,?Step@Scene6@@UAEEXZ,complete,docs/evidence/scene6-step-exact.json
+0x0075B0A0,Scene6::Slot0,src/Scene6Render.cpp,?Slot0@Scene6@@UAEXXZ,complete,docs/evidence/scene6-render-exact.json

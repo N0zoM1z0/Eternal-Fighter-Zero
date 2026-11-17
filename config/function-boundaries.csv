@@ -554,3 +554,4 @@ address,end,size,status,evidence
 0x00775D50,0x00775D5B,11,reviewed,docs/evidence/scene10-keyboard-exact.json
 0x00759F30,0x0075A3A2,1138,reviewed,docs/evidence/scene6-constructor-exact.json
 0x0075A4C0,0x0075B098,3032,reviewed,docs/evidence/scene6-step-exact.json
+0x0075B0A0,0x0075D260,8640,reviewed,docs/evidence/scene6-render-exact.json

@@ -554,7 +554,7 @@ address,origin,status,evidence
 0x00759F30,authored,reviewed,docs/evidence/scene6-constructor-exact.json
 0x0075A3B0,authored,reviewed,docs/evidence/scene6-destructor-exact.json
 0x0075A4C0,authored,reviewed,docs/evidence/scene6-step-exact.json
-0x0075B0A0,unknown,unreviewed,
+0x0075B0A0,authored,reviewed,docs/evidence/scene6-render-exact.json
 0x0075D260,authored,reviewed,docs/evidence/scene6-config-number-exact.json
 0x0075D350,authored,reviewed,docs/evidence/scene6-keyboard-exact.json
 0x0075D400,authored,reviewed,docs/evidence/scene6-preview-reload-exact.json

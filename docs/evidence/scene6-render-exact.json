@@ -1,0 +1,1024 @@
+{
+  "schema_version": 1,
+  "authority": "Full canonical EFZ PE exact original-bound codegen of 8,640-byte Scene6 options renderer in natural VC7.1 C++",
+  "owner": "Scene6::Slot0 settings-options/records renderer",
+  "native_extent": {
+    "address": "0x0075B0A0",
+    "exclusive_end": "0x0075D260",
+    "code_bytes": 8608,
+    "native_switch_data_bytes": 32,
+    "owner_bytes": 8640
+  },
+  "method": "Selected normal VC7.1 /Od /G6 /MT /Gy /W3 compile of natural C++; all 8,608 original code bytes and original eight-DWORD switch table compared after independently PE-binding every one of 105 actual COFF relocation operands. No normalized/masked/substituted code bytes, ASM, padding or full cold replay.",
+  "behavior": "Settings page/background and overlay, eight original option selection highlights, configuration-value indicator sprites, record/profile view, numeric render calls, palette-based score screen, three scenes/pages and display Present.",
+  "compiler_shape": {
+    "native_stack_frame_bytes": 1960,
+    "candidate_stack_frame_bytes": 1960,
+    "make_surface_rect_calls": 60,
+    "draw_surface_calls": 30,
+    "draw_config_number_calls": 5,
+    "video_present_calls": 1,
+    "original_switch_cases": 8
+  },
+  "source_findings": [
+    "Only the first of the options page and record page drawing pairs use original shared source/destination SurfaceRect variables; other 28 drawing pairs pass two MakeSurfaceRect returned values directly.",
+    "Native reusable Rect local source must be the second field after destination inside the normal C++ RenderWork object to preserve original VC7.1 stack offsets.",
+    "Writing 0 - settingsSlideOffset preserves the original xor/sub integer expression in place of the different instruction coding for unary minus.",
+    "The original compiler emits an eight-DWORD switch table at 0x0075D240 through 0x0075D25F, explicitly owned by this function."
+  ],
+  "natural_cpp_without_asm_padding_or_byte_patches": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 8640,
+      "matched_bytes": 8640,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 55,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B0D7 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 128,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B120 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 268,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075B1AC operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 288,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B1C0 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 350,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B1FE operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 498,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075B292 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 524,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B2AC operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 602,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B2FA operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 762,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075B39A operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 807,
+          "target": 7721536,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61683",
+          "evidence": "Original EFZ PE 0x0075B3C7 operand: compiler COFF symbol $L61683 resolves to 0x0075D240",
+          "local_target_offset": 8608,
+          "addend": 0
+        },
+        {
+          "offset": 830,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B3DE operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 902,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B426 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1062,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075B4C6 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 1090,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B4E2 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1162,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B52A operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1322,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075B5CA operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 1350,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B5E6 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1425,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B631 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1585,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075B6D1 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 1613,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B6ED operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1688,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B738 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1848,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075B7D8 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 1876,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B7F4 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1951,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B83F operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2111,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075B8DF operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 2142,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B8FE operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2220,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075B94C operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2380,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075B9EC operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 2411,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BA0B operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2489,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BA59 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2649,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075BAF9 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 2680,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BB18 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2758,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BB66 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 2918,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075BC06 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 2963,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BC33 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3035,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BC7B operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3195,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075BD1B operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 3248,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BD50 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3323,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BD9B operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3483,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075BE3B operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 3531,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BE6B operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3603,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BEB3 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3763,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075BF53 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 3819,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BF8B operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 3894,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075BFD6 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 4054,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075C076 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 4110,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C0AE operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 4185,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C0F9 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 4345,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075C199 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 4392,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C1C8 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 4467,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C213 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 4627,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075C2B3 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 4683,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C2EB operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 4761,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C339 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 4921,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075C3D9 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 4972,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C40C operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 5050,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C45A operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 5210,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075C4FA operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 5266,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C532 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 5344,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C580 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 5504,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075C620 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 5560,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C658 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 5638,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C6A6 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 5798,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075C746 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 5854,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C77E operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 5932,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C7CC operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 6092,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075C86C operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 6143,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C89F operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 6221,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C8ED operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 6381,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075C98D operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 6437,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075C9C5 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 6515,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075CA13 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 6675,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075CAB3 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 6731,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075CAEB operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 6809,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075CB39 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 6969,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075CBD9 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 7022,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075CC0E operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 7122,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075CC72 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 7286,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075CD16 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 7309,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075CD2D operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 7383,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075CD77 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 7543,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075CE17 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 7569,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075CE31 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 7647,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075CE7F operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 7807,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075CF1F operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 7833,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075CF39 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 7922,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075CF92 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 8082,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075D032 operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 8129,
+          "target": 7721568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawConfigNumber@Scene6@@QAEXHHI@Z",
+          "evidence": "Original EFZ PE 0x0075D061 operand: compiler COFF symbol ?DrawConfigNumber@Scene6@@QAEXHHI@Z resolves to 0x0075D260",
+          "addend": 0
+        },
+        {
+          "offset": 8177,
+          "target": 7721568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawConfigNumber@Scene6@@QAEXHHI@Z",
+          "evidence": "Original EFZ PE 0x0075D091 operand: compiler COFF symbol ?DrawConfigNumber@Scene6@@QAEXHHI@Z resolves to 0x0075D260",
+          "addend": 0
+        },
+        {
+          "offset": 8225,
+          "target": 7721568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawConfigNumber@Scene6@@QAEXHHI@Z",
+          "evidence": "Original EFZ PE 0x0075D0C1 operand: compiler COFF symbol ?DrawConfigNumber@Scene6@@QAEXHHI@Z resolves to 0x0075D260",
+          "addend": 0
+        },
+        {
+          "offset": 8272,
+          "target": 7721568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawConfigNumber@Scene6@@QAEXHHI@Z",
+          "evidence": "Original EFZ PE 0x0075D0F0 operand: compiler COFF symbol ?DrawConfigNumber@Scene6@@QAEXHHI@Z resolves to 0x0075D260",
+          "addend": 0
+        },
+        {
+          "offset": 8320,
+          "target": 7721568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawConfigNumber@Scene6@@QAEXHHI@Z",
+          "evidence": "Original EFZ PE 0x0075D120 operand: compiler COFF symbol ?DrawConfigNumber@Scene6@@QAEXHHI@Z resolves to 0x0075D260",
+          "addend": 0
+        },
+        {
+          "offset": 8373,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075D155 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 8437,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original EFZ PE 0x0075D195 operand: compiler COFF symbol ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z resolves to 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 8586,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original EFZ PE 0x0075D22A operand: compiler COFF symbol ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z resolves to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 8600,
+          "target": 4240864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Present@Video@@QAEHXZ",
+          "evidence": "Original EFZ PE 0x0075D238 operand: compiler COFF symbol ?Present@Video@@QAEHXZ resolves to 0x0040B5E0",
+          "addend": 0
+        },
+        {
+          "offset": 8608,
+          "target": 7713739,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61463",
+          "evidence": "Original EFZ PE 0x0075D240 operand: compiler COFF symbol $L61463 resolves to 0x0075B3CB",
+          "local_target_offset": 811,
+          "addend": 0
+        },
+        {
+          "offset": 8612,
+          "target": 7713999,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61466",
+          "evidence": "Original EFZ PE 0x0075D244 operand: compiler COFF symbol $L61466 resolves to 0x0075B4CF",
+          "local_target_offset": 1071,
+          "addend": 0
+        },
+        {
+          "offset": 8616,
+          "target": 7714259,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61469",
+          "evidence": "Original EFZ PE 0x0075D248 operand: compiler COFF symbol $L61469 resolves to 0x0075B5D3",
+          "local_target_offset": 1331,
+          "addend": 0
+        },
+        {
+          "offset": 8620,
+          "target": 7714522,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61472",
+          "evidence": "Original EFZ PE 0x0075D24C operand: compiler COFF symbol $L61472 resolves to 0x0075B6DA",
+          "local_target_offset": 1594,
+          "addend": 0
+        },
+        {
+          "offset": 8624,
+          "target": 7714785,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61475",
+          "evidence": "Original EFZ PE 0x0075D250 operand: compiler COFF symbol $L61475 resolves to 0x0075B7E1",
+          "local_target_offset": 1857,
+          "addend": 0
+        },
+        {
+          "offset": 8628,
+          "target": 7715048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61478",
+          "evidence": "Original EFZ PE 0x0075D254 operand: compiler COFF symbol $L61478 resolves to 0x0075B8E8",
+          "local_target_offset": 2120,
+          "addend": 0
+        },
+        {
+          "offset": 8632,
+          "target": 7715317,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61481",
+          "evidence": "Original EFZ PE 0x0075D258 operand: compiler COFF symbol $L61481 resolves to 0x0075B9F5",
+          "local_target_offset": 2389,
+          "addend": 0
+        },
+        {
+          "offset": 8636,
+          "target": 7715586,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61484",
+          "evidence": "Original EFZ PE 0x0075D25C operand: compiler COFF symbol $L61484 resolves to 0x0075BB02",
+          "local_target_offset": 2658,
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0acac9b1fb39d7c194188193e318c0c91b3f28fd93d79be07097a597dfc78eb0",
+      "target_extent_sha256": "0acac9b1fb39d7c194188193e318c0c91b3f28fd93d79be07097a597dfc78eb0",
+      "code_size": 8608,
+      "local_data_bytes": 32,
+      "local_data": [
+        {
+          "offset": 8608,
+          "size": 32,
+          "kind": "switch-address-table",
+          "evidence": "Original EFZ PE 0x0075D240..0x0075D25F is an eight-case DWORD switch address table; 0xCC alignment after 0x0075D260 belongs to next function, not owner"
+        }
+      ],
+      "unit": "scene6-render",
+      "symbol": "?Slot0@Scene6@@UAEXXZ",
+      "target_address": "0x0075B0A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "938ca51b421f00251d6d8e9cb55ded4d35cfed667763d0a78741303f90aca9f8",
+      "object_sha256": "f09a3f1826baed868ae75a8aaa3ed092c05700ec46dadcfeb3805bc2667f1bfd",
+      "source_sha256": "b6171a5bd844a150943583619eda8d0abaa3c09af1e48e599518dc72e80ff577",
+      "dependencies": {
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b39eeeab48b991cd24bda3cb3fcdeae60c0ed474a03f0abe865936b094e7cb05",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0b0ba818bf9f59ec5fc0b5d239138c253750d2a0154cab99036742954f77c216",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
