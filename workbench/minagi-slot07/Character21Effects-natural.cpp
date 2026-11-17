@@ -1,5 +1,7 @@
 // Minagi's native Character21 vtable Slot07 (0x005B2D10), typed
 // full-dispatch reconstruction candidate. Semantic/byte-exact proof pending.
+// The normal switch below generates an attached 69-entry jump table and
+// 100-byte compact index in VC7.1 COFF; no handwritten table/padding is used.
 // Landing predicates preserve the original inverted <= tests: unordered
 // floating comparisons must take the native landing path, not a direct > path.
 #include "../../src/CharacterViews.h"

@@ -235,6 +235,86 @@ def bound_compiler_switch_tables(candidate: bytes, relocations: list[dict]):
     }
 
 
+def verify_original_pe_switch_tables(image, native: bytes, candidate: bytes,
+                                     relocations: list[dict], audit: dict):
+    """Bind BOTH normal compiler tables to original PE data, not guessed bytes.
+
+    The native 87,798-byte executable function ends with RET. At its
+    immediately adjacent address follow 69 32-bit function-local switch
+    targets and a 100-byte type-ID map. They are original PE bytes, not
+    artificial code padding. The C++ compiler owns analogous data following
+    its COMDAT RET. Check data lengths and all target/function bounds.
+    """
+    pointer_count=69
+    index_count=100
+    size=pointer_count*4+index_count
+    pe_start=ORIGINAL_START+ORIGINAL_SIZE
+    source=target_bytes(image,pe_start,size)
+    native_targets=list(struct.unpack('<69I',source[:pointer_count*4]))
+    pe_index=source[pointer_count*4:]
+    if native[-1]!=0xc3 or len(source)!=size:
+        raise AssertionError('original Slot07 code/data boundary differs')
+    if any(not ORIGINAL_START<=target<pe_start for target in native_targets):
+        raise AssertionError('original switch case target points outside native executable')
+    # Verify actual original x86 dispatch operands, rather than inferring that
+    # the adjacent bytes are tables merely because they have the right length.
+    if (int.from_bytes(native[0x157:0x15b],'little')!=pe_start+pointer_count*4
+            or int.from_bytes(native[0x15e:0x162],'little')!=pe_start):
+        raise AssertionError('native executable does not address adjacent tables')
+    candidate_jump=audit['first_table_offset']
+    candidate_index=audit['second_table_offset']
+    if candidate_jump+pointer_count*4!=candidate_index:
+        raise AssertionError('compiled pointer/index boundaries differ')
+    coff_index=candidate[candidate_index:]
+    if coff_index!=pe_index or len(coff_index)!=index_count:
+        raise AssertionError(('compiler case-index bytes differ from original',
+                              coff_index,pe_index))
+    local_relocs=sorted(
+        (r for r in relocations if r.get('local_target_offset') is not None
+         and r['type']=='DIR32'),
+        key=lambda r:r['offset']
+    )
+    early=[r for r in local_relocs if r['offset']<0x1000]
+    if len(early)!=2 or [r['local_target_offset'] for r in early]!=[
+        candidate_index,candidate_jump
+    ]:
+        raise AssertionError(('compiled switch dispatcher does not point to both tables',
+                              early))
+    table=[r for r in local_relocs if candidate_jump<=r['offset']<candidate_index]
+    if len(table)!=pointer_count:
+        raise AssertionError(('unexpected branch pointer count',len(table)))
+    candidate_offsets=[r['local_target_offset'] for r in table]
+    native_offsets=[t-ORIGINAL_START for t in native_targets]
+    offsets_delta=[c-n for c,n in zip(candidate_offsets,native_offsets)]
+    for state in range(400,500):
+        slot=pe_index[state-400]
+        expected=(EXPECTED_TYPES.index(state) if state in EXPECTED_TYPES else 68)
+        if slot!=expected:
+            raise AssertionError(('original target table has unexpected effect dispatch',
+                                  state,slot,expected))
+    return {
+        'native_original_pe_data_address':hex(pe_start),
+        'native_executable_code_bytes':ORIGINAL_SIZE,
+        'native_jump_table_entries':pointer_count,
+        'native_jump_table_bytes':pointer_count*4,
+        'native_compact_index_entries':index_count,
+        'native_compact_index_bytes':index_count,
+        'native_local_table_bytes':size,
+        'native_pointer_table_sha256':hashlib.sha256(source[:pointer_count*4]).hexdigest(),
+        'original_and_compiler_index_bytes_exact':True,
+        'original_index_sha256':hashlib.sha256(pe_index).hexdigest(),
+        'candidate_index_sha256':hashlib.sha256(coff_index).hexdigest(),
+        'native_dispatch_operands_resolve_both_native_tables':True,
+        'all_69_native_and_candidate_pointer_targets_within_own_code':True,
+        'native_case_target_offsets_identical_count':sum(delta==0 for delta in offsets_delta),
+        'case_target_offset_delta_min':min(offsets_delta),
+        'case_target_offset_delta_max':max(offsets_delta),
+        'candidate_code_size_delta_from_original':
+            candidate_jump-ORIGINAL_SIZE,
+        'comparison_is_not_a_strict_whole_function_byte_identity_claim':True,
+    }
+
+
 def instruction_shape_alignment(native: bytes, candidate: bytes):
     """Value-preserving diagnostic, not byte identity or branch equivalence.
 
@@ -420,6 +500,8 @@ def main():
     candidate,relocations=object_function(OBJECT,SYMBOL)
     candidate_code,compiler_table_audit=bound_compiler_switch_tables(
         candidate,relocations)
+    original_pe_table_audit=verify_original_pe_switch_tables(
+        image,native,candidate,relocations,compiler_table_audit)
     actual_relocations=collections.Counter(r['symbol'] for r in relocations)
     for (symbol,target),count in EXPECTED_CALLS.items():
         if actual_relocations[symbol]!=count:
@@ -542,6 +624,7 @@ def main():
             'verified_native_executable_instructions':18977,
             'sha256':hashlib.sha256(native).hexdigest(),
             'native_dispatch_cases':len(EXPECTED_TYPES),
+            'native_local_switch_table_audit':original_pe_table_audit,
             'native_dispatch_type_ids':[hex(x) for x in EXPECTED_TYPES],
             'native_direct_call_targets':{
                 hex(addr):count for addr,count in sorted(calls.items())
@@ -567,6 +650,7 @@ def main():
             'effect191_direct_transition_exits':25,
             'instruction_shape_audit':structural_audit,
             'compiler_switch_table_audit':compiler_table_audit,
+            'original_pe_compact_case_index_bytes_exact':True,
             'executable_code_byte_delta_from_original':
                 len(candidate_code)-ORIGINAL_SIZE,
             'executable_code_instructions':structural_audit['candidate_decoded_instructions'],
@@ -620,7 +704,9 @@ def main():
             'function byte identity or full-game integration. The candidate '
             'COFF COMDAT includes 276 bytes of compiler-emitted switch-pointer '
             'data and 100 bytes of dense case-index data after the real RET; '
-            'these are decoded and validated separately, never counted as x86 '
+            'the compact 100-byte map is identical to the independent original '
+            'PE bytes, while the 69 branch offsets are only compared and not '
+            'assumed byte-identical. These are decoded separately, not counted as x86 '
             'instructions or as byte-padding. Do not register this prototype '
             'as complete or add it to accepted exact ledgers.'
         )
@@ -634,6 +720,7 @@ def main():
         'candidate_bytes':len(candidate),
         'candidate_executable_bytes':len(candidate_code),
         'local_switch_data_bytes':compiler_table_audit['trailing_compiler_switch_bytes'],
+        'native_PE_compact_dispatch_index_bytes_exact':100,
         'executable_code_byte_delta_from_original':len(candidate_code)-ORIGINAL_SIZE,
         'original_executable_instructions':structural_audit['native_decoded_instructions'],
         'candidate_executable_instructions':structural_audit['candidate_decoded_instructions'],
