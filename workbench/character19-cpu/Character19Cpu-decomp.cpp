@@ -796,10 +796,9 @@ kanna_state11_deeper:
                   if (((0x15e < field3110) && (field3110 < 600))
                      && (attackCollisionResult == 2)) {
                     recognizedCommand = 0x1f;
-                    if (120.0 <= distance.forward) {
-                      return;
+                    if (distance.forward < 120.0) {
+                      recognizedCommand = 0x1e;
                     }
-                    recognizedCommand = 0x1e;
                     return;
                   }
                   if (900 < field3110) {
