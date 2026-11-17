@@ -26,15 +26,15 @@
       "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
       "target_address": "0x00759C10",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "04085d7496d6137b700aa6ed177b81211d74ca43235e05a69d8142ffffa0b5a8",
-      "object_sha256": "55a96e26b2be55515d2ad7061c769eb3d97456eab8deb32abf5f36bbd82e8c97",
+      "boundary_ledger_sha256": "695aaed0921ca9597a0286a3105c43eef07ccb50761fe261405537dff91fd2b4",
+      "object_sha256": "b97e1a853ea60aab2eb1bdbc70d4f1c66fb1be895b64aac3e7e5a81981392714",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
-        "src/Engine.h": "30614316be9ec863320c0c7b988a7cfd5628f2e4e789765722a4a3c1b9559080",
+        "src/Engine.h": "7ec9357b57da761c34e0bdd506b410772e589cd3f444bf926eea8c93bc1fc329",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "225a02ce521ee1c069c85e21838214ffc7d240569c6e87115fc98d89a87914b3",
+      "units_manifest_sha256": "62aff7b5eaabf445119615943fbaac6eb05af4437f455147f2c5b9f00c54cedc",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "ce8ecd051054f8831a3dd13ee86f0e17c10b841e8015def3af7172223f50fce5",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -135,15 +135,15 @@
       "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
       "target_address": "0x00759C90",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "04085d7496d6137b700aa6ed177b81211d74ca43235e05a69d8142ffffa0b5a8",
-      "object_sha256": "8d5594c7c67793d3dd341daa968a1391c9622bd4677d76d512249c157747efda",
+      "boundary_ledger_sha256": "695aaed0921ca9597a0286a3105c43eef07ccb50761fe261405537dff91fd2b4",
+      "object_sha256": "5a363258ae08b58b96fa59799a5ee315bc87f333154b2cc5e9091c44b096a237",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
-        "src/Engine.h": "30614316be9ec863320c0c7b988a7cfd5628f2e4e789765722a4a3c1b9559080",
+        "src/Engine.h": "7ec9357b57da761c34e0bdd506b410772e589cd3f444bf926eea8c93bc1fc329",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "225a02ce521ee1c069c85e21838214ffc7d240569c6e87115fc98d89a87914b3",
+      "units_manifest_sha256": "62aff7b5eaabf445119615943fbaac6eb05af4437f455147f2c5b9f00c54cedc",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "4e725c0c654d1c91448a285742ea86f02db6011d5510575b7d8f276070c8e1d2",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -226,20 +226,20 @@
       "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
       "target_address": "0x00759E20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "04085d7496d6137b700aa6ed177b81211d74ca43235e05a69d8142ffffa0b5a8",
-      "object_sha256": "82ae6bbb10223a545c49a1dfb1febbecefe6fb037791c69bc82e10cc53fe12a9",
+      "boundary_ledger_sha256": "695aaed0921ca9597a0286a3105c43eef07ccb50761fe261405537dff91fd2b4",
+      "object_sha256": "007e8fc333f646cb4d87fa8f204372f55c59b7feb5deee5c47f7b6b6d0592504",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
-        "src/Engine.h": "30614316be9ec863320c0c7b988a7cfd5628f2e4e789765722a4a3c1b9559080",
+        "src/Engine.h": "7ec9357b57da761c34e0bdd506b410772e589cd3f444bf926eea8c93bc1fc329",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "225a02ce521ee1c069c85e21838214ffc7d240569c6e87115fc98d89a87914b3",
+      "units_manifest_sha256": "62aff7b5eaabf445119615943fbaac6eb05af4437f455147f2c5b9f00c54cedc",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "1123789c769b07bd0da83a79a62933750d088ce2a328a069169ee3a5ffe210fd",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "Selected current Engine.h Scene5 ABI change: Scene constructor and both timed palette transitions recompiled and fully Exact; no full cold replay"
+  "latest_selected_replay": "Targeted Scene6 corrected scene-header: Scene base constructor, FadeOut and FadeIn all exact without full cold replay."
 }
