@@ -1205,15 +1205,15 @@ kanna_state11_deeper:
                     ((unsigned short)(*opponentSlot)->field0008 >= 0x3b)))) ||
                   (((positionY != 0.0 ||
                     (
-                    (float)(unsigned short)RandomRange(0,5000) >=
-                    4.0f * field00a8 * field00a8 * field00a8)) ||
+                    !((float)(unsigned short)RandomRange(0,5000) <
+                      4.0f * field00a8 * field00a8 * field00a8))) ||
                    (field314c != 0)))))) {
                 if (((unsigned short)field0008 >= 0x32) ||
                     ((unsigned short)(*opponentSlot)->field0008 >= 0x32) ||
                     !(distance.forward > 80.0) ||
                     !(distance.forward < 120.0) ||
-                    ((float)(unsigned short)RandomRange(0,10000) >=
-                     field00a8 * field00a8 * field00a8) ||
+                    (!((float)(unsigned short)RandomRange(0,10000) <
+                       field00a8 * field00a8 * field00a8)) ||
                     !(positionX > 150.0) ||
                     !(positionX < 490.0)) {
                   if (((field0008 == 9) || (field0008 == 10)) ||
