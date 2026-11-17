@@ -35,7 +35,12 @@ void Character21::Slot05()
   buttonPulse[2] = 0;
   buttonPulse[3] = 0;
   guardInputFrames = 0;
-  int airborneForGuard = positionY < 0.0;
+  int airborneForGuard;
+  if (positionY < 0.0) {
+    airborneForGuard = 1;
+  } else {
+    airborneForGuard = 0;
+  }
 
   if ((float)(unsigned short)RandomRange(0,1000) <
       25.0f * field00a8 +
@@ -44,7 +49,11 @@ void Character21::Slot05()
       (float)((field0008 == 0xaa) * 300)) {
     guardInputFrames = 0x3c;
   }
-  guardRangeFactor = (field0008 > 0x95 && field0008 < 0x9d) ? 1 : 0;
+  if (field0008 > 0x95 && field0008 < 0x9d) {
+    guardRangeFactor = 1;
+  } else {
+    guardRangeFactor = 0;
+  }
 
   if ((double)(unsigned short)RandomRange(0,2000) <
       ((double)('\0' < throwInvulnerabilityFrames) * 4.0 + 1.0) *

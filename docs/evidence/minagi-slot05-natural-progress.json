@@ -41,9 +41,9 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot05/Character21Cpu-natural.cpp",
-    "source_sha256": "31f2b5c52b46b411bf3f5caaf2a09255a4ec950b32bb647f3016d8e6c3a3c7f4",
+    "source_sha256": "d57597359d3ca48fa79ac4f7cbe0c7b59d938a6377ca68cb333785848f88905e",
     "object": "build/minagi-slot05/Character21Cpu-natural.obj",
-    "function_body_sha256": "18b0028f529dd0207e64fc500af73ab8aa46e38f3b0741f22f28abe913d4456b",
+    "function_body_sha256": "da1eaffe5f31f2075480beb6654fb6d14182dd993be867eb057337ec676ae062",
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
     "compiler_flags": [
       "/Od",
@@ -52,8 +52,8 @@
       "/Gy",
       "/W3"
     ],
-    "bytes": 17277,
-    "native_size_delta": 150,
+    "bytes": 17248,
+    "native_size_delta": 121,
     "coff_relocations": 318,
     "direct_call_sites": 111,
     "direct_call_targets": {
