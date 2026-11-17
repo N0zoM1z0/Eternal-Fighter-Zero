@@ -47,9 +47,8 @@ void Character21::Slot05()
   guardRangeFactor = (field0008 > 0x95 && field0008 < 0x9d) ? 1 : 0;
 
   if ((double)(unsigned short)RandomRange(0,2000) <
-      (double)(guardRangeFactor * 2 + 1) *
-      ((double)('\0' < throwInvulnerabilityFrames) * 4.0 + 1.0) * 8.0
-      * (double)field00a8) {
+      ((double)('\0' < throwInvulnerabilityFrames) * 4.0 + 1.0) *
+      8.0 * (double)field00a8 * (double)(guardRangeFactor * 2 + 1)) {
     guardInputFrames = 0x3c;
   }
 
@@ -64,8 +63,8 @@ void Character21::Slot05()
     }
   }
   else if ((*opponentSlot)->field0008 != 0x60) {
-    forwardSeparation = (double)(int)facing *
-            ((*opponentSlot)->positionX - positionX);
+    forwardSeparation =
+            ((*opponentSlot)->positionX - positionX) * (double)(int)facing;
     verticalSeparation = fabs(positionY - (*opponentSlot)->positionY);
     if (field0008 >= 0x32 && field0008 <= 0x96 && field000c == 0) {
 
