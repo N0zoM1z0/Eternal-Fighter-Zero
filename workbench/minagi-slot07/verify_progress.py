@@ -280,6 +280,22 @@ def main():
                      '(short)effects[effectIndex].type'):
         if bad_cast in source:
             raise AssertionError(('unsigned source comparison cast reappeared',bad_cast))
+    # These ordered floating comparisons are source-level equivalent for
+    # finite inputs and NaNs, but change VC7.1 operand evaluation order.
+    # The targets below were selected by native PE instruction alignment;
+    # only stand-alone field comparisons, never x+vx expressions, are swapped.
+    restored_threshold_counts={
+        'effects[effectIndex].x > 620.0':43,
+        'effects[effectIndex].vx > 0.8':7,
+        'effects[effectIndex].vy > 0.3':4,
+        'effects[effectIndex].vy > 0.15':2,
+        'effects[effectIndex].vx > 0.0':2,
+        'effects[effectIndex].vy > 0.0':2
+    }
+    for predicate,expected in restored_threshold_counts.items():
+        if source.count(predicate)!=expected:
+            raise AssertionError(('native float field order regressed',
+                                  predicate,expected,source.count(predicate)))
     if 'switch(effects[effectIndex].type)' not in source:
         raise AssertionError('wrong signed Minagi effect dispatch type')
     # Native case 0x191 skips active transitions outside [8,17). All 25
@@ -401,7 +417,7 @@ def main():
     # with relocation binding could satisfy the separate strict Oracle.
     structural_audit=instruction_shape_alignment(native,candidate)
     if (structural_audit['matching_normalized_instructions_between_float_anchors']
-            < 14062):
+            < 14160):
         raise AssertionError(('Minagi instruction structure regressed',
                               structural_audit))
 
@@ -462,6 +478,7 @@ def main():
             'effect191_half_open_frame_range':[8,17],
             'effect191_direct_transition_exits':25,
             'instruction_shape_audit':structural_audit,
+            'restored_native_field_first_float_comparisons':restored_threshold_counts,
             'object':str(OBJECT.relative_to(ROOT)),
             # Whole-COFF object hashes can change with compiler-local symbols,
             # even when function code and relocations are unchanged. Verify

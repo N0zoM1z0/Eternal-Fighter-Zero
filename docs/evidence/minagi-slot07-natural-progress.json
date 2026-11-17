@@ -314,6 +314,14 @@
       "regions_compared": 790,
       "alignment_is_provisional_diagnostic_only": true
     },
+    "restored_native_field_first_float_comparisons": {
+      "effects[effectIndex].x > 620.0": 43,
+      "effects[effectIndex].vx > 0.8": 7,
+      "effects[effectIndex].vy > 0.3": 4,
+      "effects[effectIndex].vy > 0.15": 2,
+      "effects[effectIndex].vx > 0.0": 2,
+      "effects[effectIndex].vy > 0.0": 2
+    },
     "object": "build/minagi-slot07/Character21Effects-natural.obj",
     "function_body_sha256": "5ec759113644e9c68b878a62e2b2270800c922503b9659959d37ff36d27bb655",
     "compiler_flags": [
