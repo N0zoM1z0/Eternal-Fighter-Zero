@@ -54,9 +54,9 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot05/Character21Cpu-natural.cpp",
-    "source_sha256": "7ec78477d9b89504c610675a9b75baecb48fee804723a2390cf883739c1a22e7",
+    "source_sha256": "994063bd9b94c2bc03521e6a1f978690f2fc377e431cf894dfba64f84a2c6179",
     "object": "build/minagi-slot05/Character21Cpu-natural.obj",
-    "function_body_sha256": "02587abcb0ab5bc37e9d296269ebc1edcef77a00354b8bd8b30ca45129cbd3f8",
+    "function_body_sha256": "f321e00b284fc80d15e633a1615d37ff0652d97231d4f55af152ddf8887cabcc",
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
     "compiler_flags": [
       "/Od",
@@ -97,11 +97,27 @@
       "forwardSeparation > 80.0": 2,
       "forwardSeparation > 60.0": 2
     },
+    "remaining_native_scalar_float_comparisons": {
+      "forwardSeparation > 150.0": 1,
+      "forwardSeparation > 120.0": 2,
+      "forwardSeparation > 70.0": 1,
+      "forwardSeparation > 110.0": 1,
+      "forwardSeparation > 130.0": 1,
+      "forwardSeparation > 90.0": 2,
+      "verticalSeparation > 100.0": 1,
+      "verticalSeparation > 150.0": 1,
+      "verticalSeparation > 120.0": 1,
+      "forwardSeparation > 20.0": 1,
+      "forwardSeparation >= 120.0": 1,
+      "positionX >= 490.0": 1,
+      "forwardSeparation > 180.0": 1,
+      "forwardSeparation > 140.0": 1
+    },
     "instruction_shape_audit": {
       "native_decoded_instructions": 4399,
       "candidate_decoded_instructions": 4417,
-      "normalized_instructions_matching_between_207_float_anchors": 2838,
-      "changed_float_anchor_regions": 135,
+      "normalized_instructions_matching_between_207_float_anchors": 2867,
+      "changed_float_anchor_regions": 114,
       "float_anchor_regions_compared": 208,
       "provisional_structural_diagnostic_only": true
     },

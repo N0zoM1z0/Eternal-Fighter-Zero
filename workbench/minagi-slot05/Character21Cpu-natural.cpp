@@ -202,7 +202,7 @@ void Character21::Slot05()
               return;
             }
           }
-          if (150.0 < forwardSeparation) {
+          if (forwardSeparation > 150.0) {
 
             if (((float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f) &&
                (field0118 > 500.0)) {
@@ -1050,14 +1050,14 @@ void Character21::Slot05()
                         return;
                       }
                     }
-                    if ((((forwardSeparation < 150.0) && (120.0 < forwardSeparation)) &&
+                    if ((((forwardSeparation < 150.0) && (forwardSeparation > 120.0)) &&
                         (field3110 < 0x7e)) && (0x78 < field3110))
                     {
                       buttonPulse[2] = 1;
                       inputY = 1;
                       return;
                     }
-                    if (((forwardSeparation < 120.0) && (70.0 < forwardSeparation)) &&
+                    if (((forwardSeparation < 120.0) && (forwardSeparation > 70.0)) &&
                        ((field3110 < 0x91 && (0x82 < field3110))))
                     {
                       buttonPulse[2] = 1;
@@ -1106,7 +1106,7 @@ void Character21::Slot05()
                         return;
                       }
                     }
-                    if ((((110.0 < forwardSeparation) && (forwardSeparation < 160.0)) &&
+                    if ((((forwardSeparation > 110.0) && (forwardSeparation < 160.0)) &&
                         (field3110 < 0xcd)) && (200 < field3110))
                     {
                       field3114 = 10;
@@ -1139,19 +1139,19 @@ void Character21::Slot05()
                       recognizedCommand = 10;
                       return;
                     }
-                    if (((130.0 < forwardSeparation) && (forwardSeparation < 180.0)) &&
+                    if (((forwardSeparation > 130.0) && (forwardSeparation < 180.0)) &&
                        ((field3110 < 0x13b && (0x136 < field3110))
                        )) {
                       recognizedCommand = 0xb;
                       return;
                     }
-                    if (((90.0 < forwardSeparation) && (forwardSeparation < 140.0)) &&
+                    if (((forwardSeparation > 90.0) && (forwardSeparation < 140.0)) &&
                        ((field3110 < 0x14a && (0x140 < field3110))
                        )) {
                       recognizedCommand = 0x1e;
                       return;
                     }
-                    if ((((90.0 < forwardSeparation) && (forwardSeparation < 140.0)) &&
+                    if ((((forwardSeparation > 90.0) && (forwardSeparation < 140.0)) &&
                         (field3110 < 0x154)) &&
                        ((0x14a < field3110 &&
                         (field0118 > 500.0)))) {
@@ -1183,7 +1183,7 @@ void Character21::Slot05()
                         return;
                       }
                       if ((((forwardSeparation < 80.0) && (verticalSeparation < 140.0)) &&
-                          (100.0 < verticalSeparation)) &&
+                          (verticalSeparation > 100.0)) &&
                          ((field3110 < 0x2d && (10 < field3110))))
                       {
                         buttonPulse[1] = 1;
@@ -1191,16 +1191,16 @@ void Character21::Slot05()
                         return;
                       }
                       if (((forwardSeparation < 90.0) && (verticalSeparation < 170.0)) &&
-                         ((150.0 < verticalSeparation &&
+                         ((verticalSeparation > 150.0 &&
                           ((field3110 < 0x50 && (0x2d < field3110)
                            ))))) {
                         buttonPulse[2] = 1;
                         inputY = 0;
                         return;
                       }
-                      if ((((120.0 < forwardSeparation) && (forwardSeparation < 140.0)) &&
+                      if ((((forwardSeparation > 120.0) && (forwardSeparation < 140.0)) &&
                           (verticalSeparation < 150.0)) &&
-                         (((120.0 < verticalSeparation && (field3110 < 0x6e)) &&
+                         (((verticalSeparation > 120.0 && (field3110 < 0x6e)) &&
                           (0x50 < field3110)))) {
                         buttonPulse[1] = 1;
                         inputY = 0;
@@ -1258,7 +1258,7 @@ void Character21::Slot05()
                       buttonPulse[0] = 1;
                       return;
                     }
-                    if ((((20.0 < forwardSeparation) && (forwardSeparation < 90.0)) &&
+                    if ((((forwardSeparation > 20.0) && (forwardSeparation < 90.0)) &&
                         ((verticalSeparation > 90.0 &&
                          ((verticalSeparation < 120.0 &&
                           ((*opponentSlot)->positionY <
@@ -1290,11 +1290,11 @@ void Character21::Slot05()
                 if (((0x31 < field0008) ||
                     (0x31 < (*opponentSlot)->field0008)) ||
                    ((forwardSeparation <= 800.0 ||
-                    (((120.0 <= forwardSeparation ||
+                    (((forwardSeparation >= 120.0 ||
                       (
                       !((float)(unsigned short)RandomRange(0,100) < 2.0f * field00a8))) ||
                      ((positionX <= 150.0 ||
-                      (490.0 <= positionX)))))))) {
+                      (positionX >= 490.0)))))))) {
 
                   if ((unsigned short)RandomRange(0,1000) < 2) {
                     field3114 = 4;
@@ -1309,13 +1309,13 @@ void Character21::Slot05()
                       else {
                         field3114 = 3;
                       }
-                      if (((180.0 < forwardSeparation) && (positionY == 0.0)
+                      if (((forwardSeparation > 180.0) && (positionY == 0.0)
                           ) && ( (unsigned short)RandomRange(0,100) < 2)) {
                         inputX = 0;
                         inputY = 0xff;
                         return;
                       }
-                      if (((forwardSeparation < 170.0) && (140.0 < forwardSeparation)) &&
+                      if (((forwardSeparation < 170.0) && (forwardSeparation > 140.0)) &&
                          ((positionY == 0.0 &&
                           ((*opponentSlot)->field0008 < 0x32)))) {
                         inputX = facing;

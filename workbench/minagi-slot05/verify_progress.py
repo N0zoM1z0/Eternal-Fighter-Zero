@@ -237,6 +237,29 @@ def main():
         if text.count(expression)!=count:
             raise AssertionError(('native CPU comparison order regressed',
                                   expression,count,text.count(expression)))
+    # The remaining 16 ordinary scalar comparisons must use the same
+    # field-first x87 load/compare order seen in the native PE. Inverting the
+    # mathematical operand order preserves the C++ result, including NaNs.
+    restored_remaining_thresholds={
+        'forwardSeparation > 150.0':1,
+        'forwardSeparation > 120.0':2,
+        'forwardSeparation > 70.0':1,
+        'forwardSeparation > 110.0':1,
+        'forwardSeparation > 130.0':1,
+        'forwardSeparation > 90.0':2,
+        'verticalSeparation > 100.0':1,
+        'verticalSeparation > 150.0':1,
+        'verticalSeparation > 120.0':1,
+        'forwardSeparation > 20.0':1,
+        'forwardSeparation >= 120.0':1,
+        'positionX >= 490.0':1,
+        'forwardSeparation > 180.0':1,
+        'forwardSeparation > 140.0':1,
+    }
+    for expression,count in restored_remaining_thresholds.items():
+        if text.count(expression)!=count:
+            raise AssertionError(('native scalar float threshold regressed',
+                                  expression,count,text.count(expression)))
     for name in ['__asm','_emit','__emit','reinterpret_cast','PADDING',
                  'param_1','FUN_','_DAT_']:
         if name in text:
@@ -354,7 +377,7 @@ def main():
         raise AssertionError(('CPU original static float reference order differs',
                               literal_order_matches,len(native_literals)))
     structural_progress=normalized_instruction_progress(native,candidate)
-    if structural_progress['normalized_instructions_matching_between_207_float_anchors']<2838:
+    if structural_progress['normalized_instructions_matching_between_207_float_anchors']<2867:
         raise AssertionError(('Minagi CPU 500.0 x87 instruction order regression',
                               structural_progress))
     hist=[{'bits':f'{bits:0{2*width}x}','bytes':width,'count':count}
@@ -408,6 +431,7 @@ def main():
             'five_rng_first_scaled_float_comparisons_match_native':True,
             'fourteen_native_cpu_distance_threshold_comparisons_restored':True,
             'additional_native_distance_and_vertical_float_compare_counts':restored_ordered_thresholds,
+            'remaining_native_scalar_float_comparisons':restored_remaining_thresholds,
             'instruction_shape_audit':structural_progress,
             'cpu_guard_and_distance_x87_sequence_sha256':fp_operation_hash,
             'static_floating_literal_histogram_sha256':histogram_sha,
