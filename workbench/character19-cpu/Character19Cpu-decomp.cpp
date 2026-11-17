@@ -927,7 +927,7 @@ kanna_state11_deeper:
                   }
                   if (((((*opponentSlot)->positionY == 0.0) &&
                        (0x15e < field3110)) && (field3110 < 0x28a)
-                      ) && ((-40.0 < positionY &&
+                      ) && ((positionY > -40.0 &&
                             (attackCollisionResult == 3)))) {
                     field3114 = 0x22;
                     return;
@@ -959,7 +959,7 @@ kanna_state11_deeper:
                   if ((((*opponentSlot)->positionY == 0.0) &&
                       (0x96 < field3110)) &&
                      ((field3110 < 0x28a &&
-                      ((-70.0 < positionY &&
+                      ((positionY > -70.0 &&
                        (attackCollisionResult == 3)))))) {
                     field3114 = 0x22;
                     return;
@@ -1132,7 +1132,7 @@ kanna_state11_deeper:
                         return;
                       }
                     }
-                    if (0.0 < (*opponentSlot)->velocityY) {
+                    if ((*opponentSlot)->velocityY > 0.0) {
                       if (((distance.forward < 90.0) && (distance.vertical < 140.0)) &&
                          ((field3110 <
                            (int)((unsigned int)(199 < (*opponentSlot)->field0008) * 0x2d +
@@ -1143,7 +1143,7 @@ kanna_state11_deeper:
                         return;
                       }
                       if ((((distance.forward < 100.0) && (distance.vertical < 170.0)) &&
-                          (80.0 < distance.vertical)) &&
+                          (distance.vertical > 80.0)) &&
                          ((field3110 < 0x6e && (0x3c < field3110))
                          )) {
                         buttonPulse[1] = 1;
@@ -1151,7 +1151,7 @@ kanna_state11_deeper:
                         return;
                       }
                       if (((distance.forward < 60.0) && (distance.vertical < 210.0)) &&
-                         ((120.0 < distance.vertical &&
+                         ((distance.vertical > 120.0 &&
                           ((field3110 < 0xb4 && (100 < field3110))
                           )))) {
                         buttonPulse[2] = 1;
@@ -1193,10 +1193,9 @@ kanna_state11_deeper:
                       return;
                     }
                     if (((((distance.forward > 20.0) && (distance.forward < 140.0)) &&
-                         ((60.0 < distance.vertical &&
+                         ((distance.vertical > 60.0 &&
                           ((distance.vertical < 140.0 &&
-                           (positionY <
-                            (*opponentSlot)->positionY)))))) &&
+                           ((*opponentSlot)->positionY > positionY)))))) &&
                         (200 < field3110)) && (field3110 < 0xfa))
                     {
                       buttonPulse[1] = 1;
@@ -1231,7 +1230,7 @@ kanna_state11_deeper:
                         field3150 = 0xb4;
                       }
 
-                      if ((((unsigned short)RandomRange(0,100) < 2) && (-180.0 < positionY)) &&
+                      if ((((unsigned short)RandomRange(0,100) < 2) && (positionY > -180.0)) &&
                          (field3150 == 0)) {
                         inputY = 0xff;
                         inputX = (unsigned short)RandomRange(0,2) - 1;
