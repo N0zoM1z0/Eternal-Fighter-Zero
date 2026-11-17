@@ -459,6 +459,14 @@ def main():
             or case1f0.index('EmitLocalEffect(&spawn)')>case1f0.index(
                 '++effects[effectIndex].tick')):
         raise AssertionError('native 0x1f0 spawn-first effect dispatch regressed')
+    # Native fragments 454..456 select particles during [4,8). Case 455
+    # consumes a single RandomRange(0,100) directly in spawn-type selection:
+    # the old decompiler temporary was never observed after its next write.
+    fragment_454_456=source.split('case 0x1c6:',1)[1].split('case 0x1c9:',1)[0]
+    if (fragment_454_456.count('effects[effectIndex].frame > 3')!=3
+            or fragment_454_456.count('effects[effectIndex].frame < 8')!=3
+            or 'spawn.type = (0x32 < (unsigned short)RandomRange(0,100)) + 0x1cf;' not in fragment_454_456):
+        raise AssertionError('Minagi 454..456 interval / one-use RNG semantics regressed')
     # Native case 0x191 skips active transitions outside [8,17). All 25
     # successfully handled action states exit the effect switch directly;
     # only an unmatched state reaches the common frame-advance path.
@@ -581,9 +589,9 @@ def main():
     # inconsistent movsx where the PE uses movzx. Only full byte equality
     # with relocation binding could satisfy the separate strict Oracle.
     structural_audit=instruction_shape_alignment(native,candidate_code)
-    if (structural_audit['candidate_decoded_instructions']!=18981
+    if (structural_audit['candidate_decoded_instructions']>18981
             or structural_audit['native_decoded_instructions']!=18977):
-        raise AssertionError(('native vs candidate real x86 instruction count changed',
+        raise AssertionError(('native vs candidate real x86 instruction count regressed',
                               structural_audit))
     if (structural_audit['matching_normalized_instructions_between_float_anchors']
             < 14211):

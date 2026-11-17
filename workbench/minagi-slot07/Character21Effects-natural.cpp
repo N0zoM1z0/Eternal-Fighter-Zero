@@ -3538,8 +3538,8 @@ void Character21::Slot07()
               effects[effectIndex].field0088 = 0;
             }
             if (!(0.0 <= effects[effectIndex].y) &&
-                effects[effectIndex].frame >= 4 &&
-effects[effectIndex].frame <= 7 &&
+                effects[effectIndex].frame > 3 &&
+effects[effectIndex].frame < 8 &&
                 (effects[effectIndex].vy += 0.0035,
                  !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
@@ -3623,8 +3623,8 @@ effects[effectIndex].frame <= 7 &&
               effects[effectIndex].field0088 = 0;
             }
             if (!(0.0 <= effects[effectIndex].y) &&
-                effects[effectIndex].frame >= 4 &&
-effects[effectIndex].frame <= 7 &&
+                effects[effectIndex].frame > 3 &&
+effects[effectIndex].frame < 8 &&
                 (effects[effectIndex].vy += 0.0035,
                  !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
@@ -3649,9 +3649,7 @@ effects[effectIndex].frame <= 7 &&
                 ++effects[effectIndex].frame;
                 if ((3 < effects[effectIndex].frame) &&
                    (effects[effectIndex].frame < 9)) {
-                  frameDuration = RandomRange(0,100);
-
-                  spawn.type = (0x32 < frameDuration) + 0x1cf;
+                  spawn.type = (0x32 < (unsigned short)RandomRange(0,100)) + 0x1cf;
                   spawn.x = (double)(int)(((unsigned short)RandomRange(0,0x28) & 0xffff) *
                                           (int)(char)effects[effectIndex].flag0048) +
                              effects[effectIndex].x;
@@ -3708,8 +3706,8 @@ effects[effectIndex].frame <= 7 &&
               effects[effectIndex].field0088 = 0;
             }
             if (!(0.0 <= effects[effectIndex].y) &&
-                effects[effectIndex].frame >= 4 &&
-effects[effectIndex].frame <= 7 &&
+                effects[effectIndex].frame > 3 &&
+effects[effectIndex].frame < 8 &&
                 (effects[effectIndex].vy += 0.003,
                  !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;

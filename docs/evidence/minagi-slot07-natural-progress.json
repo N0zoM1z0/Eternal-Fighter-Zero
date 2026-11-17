@@ -26,7 +26,7 @@
       "native_case_target_offsets_identical_count": 1,
       "case_target_offset_delta_min": -72,
       "case_target_offset_delta_max": 2,
-      "candidate_code_size_delta_from_original": -41,
+      "candidate_code_size_delta_from_original": -46,
       "comparison_is_not_a_strict_whole_function_byte_identity_claim": true
     },
     "native_dispatch_type_ids": [
@@ -318,7 +318,7 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot07/Character21Effects-natural.cpp",
-    "source_sha256": "1eeae678ada448ff76c331a6020ec516b795bea19631f30f10aba34bd37f0ba2",
+    "source_sha256": "79c0cc6d115a6e8ce492332ae15dda9edcf428811159ac84b345fcee0f8fe2a4",
     "unsigned_field0008_equality_and_inequality": true,
     "unsigned_effect_tick_zero_equality": true,
     "unsigned_effect_type_switch": true,
@@ -329,15 +329,15 @@
     "effect191_direct_transition_exits": 25,
     "instruction_shape_audit": {
       "native_decoded_instructions": 18977,
-      "candidate_decoded_instructions": 18981,
-      "matching_normalized_instructions_between_float_anchors": 14211,
+      "candidate_decoded_instructions": 18980,
+      "matching_normalized_instructions_between_float_anchors": 14218,
       "changed_regions": 357,
       "regions_compared": 790,
       "alignment_is_provisional_diagnostic_only": true
     },
     "compiler_switch_table_audit": {
-      "full_coff_comdat_bytes": 88133,
-      "real_candidate_executable_bytes": 87757,
+      "full_coff_comdat_bytes": 88128,
+      "real_candidate_executable_bytes": 87752,
       "trailing_compiler_switch_bytes": 376,
       "native_case_pointer_entries": 69,
       "native_case_pointer_bytes": 276,
@@ -346,12 +346,12 @@
       "default_case_index": 68,
       "compiler_section_data_not_inline_asm_or_padding": true,
       "compiler_table_relocations_are_locally_bound": true,
-      "first_table_offset": 87757,
-      "second_table_offset": 88033
+      "first_table_offset": 87752,
+      "second_table_offset": 88028
     },
     "original_pe_compact_case_index_bytes_exact": true,
-    "executable_code_byte_delta_from_original": -41,
-    "executable_code_instructions": 18981,
+    "executable_code_byte_delta_from_original": -46,
+    "executable_code_instructions": 18980,
     "native_effect_0x1f0_spawn_first_and_frame_bounds_restored": true,
     "restored_native_field_first_float_comparisons": {
       "effects[effectIndex].x > 620.0": 43,
@@ -362,7 +362,7 @@
       "effects[effectIndex].vy > 0.0": 2
     },
     "object": "build/minagi-slot07/Character21Effects-natural.obj",
-    "function_body_sha256": "89f35159745074060055647256d6844c7110115e489b4faa225669eac9b13f43",
+    "function_body_sha256": "7790f6eaea1d9b2884874c0605dc615a8cfc241b84a24c766bb267fad017e11a",
     "compiler_flags": [
       "/Od",
       "/G6",
@@ -371,8 +371,8 @@
       "/W3"
     ],
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-    "compiled_function_bytes": 88133,
-    "native_size_delta": 335,
+    "compiled_function_bytes": 88128,
+    "native_size_delta": 330,
     "dispatch_cases": 68,
     "dispatch_ids_match_original": true,
     "coff_relocations": 954,
