@@ -165758,3 +165758,27 @@ type = "DIR32"
 symbol = "__imp__timeGetTime@0"
 target = 0x007871e0
 evidence = "original WINMM timeGetTime IAT call, original native PE 0x0075D632 in complete 219-byte function"
+
+[units.scene6-keyboard]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Scene6Keyboard.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene6-keyboard/Scene6Keyboard.obj"
+symbol = "?PollKeyboard@Scene6@@UAEXXZ"
+target_address = 0x0075d350
+size = 171
+
+[[units.scene6-keyboard.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "original native PE 0x0075D35A security cookie global, pinned VC7.1 /GS"
+
+[[units.scene6-keyboard.relocations]]
+offset = 163
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "original native PE 0x0075D3F3 GS security check call"

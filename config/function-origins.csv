@@ -556,7 +556,7 @@ address,origin,status,evidence
 0x0075A4C0,unknown,unreviewed,
 0x0075B0A0,unknown,unreviewed,
 0x0075D260,unknown,unreviewed,
-0x0075D350,unknown,unreviewed,
+0x0075D350,authored,reviewed,docs/evidence/scene6-keyboard-exact.json
 0x0075D400,unknown,unreviewed,
 0x0075D580,authored,reviewed,docs/evidence/scene6-settings-preview-exact.json
 0x0075D660,unknown,unreviewed,

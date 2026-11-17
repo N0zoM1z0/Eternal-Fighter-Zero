@@ -503,3 +503,4 @@ address,name,source,symbol,status,evidence
 0x0075D970,Scene6::FadeConfigPaletteIn,src/Scene6PaletteFade.cpp,?FadeConfigPaletteIn@Scene6@@QAEXE@Z,complete,docs/evidence/scene6-palette-fades-exact.json
 0x0075DA30,Scene6::AnimateSettingsSlide,src/Scene6SettingsAnimation.cpp,?AnimateSettingsSlide@Scene6@@QAEXE@Z,complete,docs/evidence/scene6-settings-slide-exact.json
 0x0075D580,Scene6::AnimateSettingsPreview,src/Scene6SettingsPreview.cpp,?AnimateSettingsPreview@Scene6@@QAEXXZ,complete,docs/evidence/scene6-settings-preview-exact.json
+0x0075D350,Scene6::PollKeyboard,src/Scene6Keyboard.cpp,?PollKeyboard@Scene6@@UAEXXZ,complete,docs/evidence/scene6-keyboard-exact.json
