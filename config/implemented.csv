@@ -519,3 +519,4 @@ address,name,source,symbol,status,evidence
 0x007758B0,Scene10::Scene10,src/Scene10Constructor.cpp,??0Scene10@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z,complete,docs/evidence/scene10-constructor-exact.json
 0x007759A0,Scene10::~Scene10,src/Scene10Destructor.cpp,??1Scene10@@QAE@XZ,complete,docs/evidence/scene10-destructor-exact.json
 0x007759F0,Scene10::Step,src/Scene10Step.cpp,?Step@Scene10@@UAEEXZ,complete,docs/evidence/scene10-step-exact.json
+0x00775B80,Scene10::Slot0,src/Scene10Render.cpp,?Slot0@Scene10@@UAEXXZ,complete,docs/evidence/scene10-render-exact.json

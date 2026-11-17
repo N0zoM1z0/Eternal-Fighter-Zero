@@ -166415,3 +166415,76 @@ type = "DIR32"
 symbol = "__real@3fd3333333333333"
 target = 0x007872f0
 evidence = "Original PE 0x00775B63 Scene10::Step __real@3fd3333333333333 operand"
+
+[units.scene10-render]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene10Render.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene10-render/Scene10Render.obj"
+symbol = "?Slot0@Scene10@@UAEXXZ"
+target_address = 0x00775b80
+size = 456
+
+[[units.scene10-render.relocations]]
+offset = 29
+type = "DIR32"
+symbol = "__real@40a1d00000000000"
+target = 0x007898d8
+evidence = "Original PE 0x00775B9D Scene10 staff-roll render operand __real@40a1d00000000000"
+
+[[units.scene10-render.relocations]]
+offset = 66
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original PE 0x00775BC2 Scene10 staff-roll render operand ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+
+[[units.scene10-render.relocations]]
+offset = 115
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original PE 0x00775BF3 Scene10 staff-roll render operand ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+
+[[units.scene10-render.relocations]]
+offset = 228
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original PE 0x00775C64 Scene10 staff-roll render operand ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+
+[[units.scene10-render.relocations]]
+offset = 260
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "Original PE 0x00775C84 Scene10 staff-roll render operand __ftol2"
+
+[[units.scene10-render.relocations]]
+offset = 272
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original PE 0x00775C90 Scene10 staff-roll render operand ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+
+[[units.scene10-render.relocations]]
+offset = 321
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "Original PE 0x00775CC1 Scene10 staff-roll render operand ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+
+[[units.scene10-render.relocations]]
+offset = 434
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "Original PE 0x00775D32 Scene10 staff-roll render operand ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+
+[[units.scene10-render.relocations]]
+offset = 448
+type = "REL32"
+symbol = "?Present@Video@@QAEHXZ"
+target = 0x0040b5e0
+evidence = "Original PE 0x00775D40 Scene10 staff-roll render operand ?Present@Video@@QAEHXZ"

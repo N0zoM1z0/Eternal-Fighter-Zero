@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "authority": "Full native Scene10::Slot0 456-byte codegen identity against original EFZ PE using natural C++",
+  "method": "One selected original-PE comparison of complete COFF function and nine independently bound native relocations; no whole-product replay",
+  "owner": "Scene10 staff-roll 456-byte scrolling surface renderer",
+  "original_extent": {
+    "address": "0x00775B80",
+    "exclusive_end": "0x00775D48",
+    "bytes": 456
+  },
+  "behavior": "Use double staff-roll time as integer vertical source position, clamp after y=2280, draw the 320x240 staff-roll surface and present the frame",
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 456,
+      "matched_bytes": 456,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 29,
+          "target": 7903448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a1d00000000000",
+          "evidence": "Original PE 0x00775B9D Scene10 staff-roll render operand __real@40a1d00000000000",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original PE 0x00775BC2 Scene10 staff-roll render operand ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 115,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original PE 0x00775BF3 Scene10 staff-roll render operand ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 228,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original PE 0x00775C64 Scene10 staff-roll render operand ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 260,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Original PE 0x00775C84 Scene10 staff-roll render operand __ftol2",
+          "addend": 0
+        },
+        {
+          "offset": 272,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original PE 0x00775C90 Scene10 staff-roll render operand ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 321,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Original PE 0x00775CC1 Scene10 staff-roll render operand ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 434,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Original PE 0x00775D32 Scene10 staff-roll render operand ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 448,
+          "target": 4240864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Present@Video@@QAEHXZ",
+          "evidence": "Original PE 0x00775D40 Scene10 staff-roll render operand ?Present@Video@@QAEHXZ",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "1b8251f7cbf2cbeb1132da2a09436202e307f1f89aa3c419264f65376039d239",
+      "target_extent_sha256": "1b8251f7cbf2cbeb1132da2a09436202e307f1f89aa3c419264f65376039d239",
+      "unit": "scene10-render",
+      "symbol": "?Slot0@Scene10@@UAEXXZ",
+      "target_address": "0x00775B80",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "cb5f0a715ab0f5d31407e629a8a75cb36c7989973d132ee7f2ff47e7d1e3a9dc",
+      "object_sha256": "944d6f2de8961e104a0cf1ad6f4f66f06089b2bc83bd7ad86e6aad13755d7319",
+      "source_sha256": "747e760061c1d7c606ef36a8ab222fe75784dcc3f96d2f765123b3f6c6fd1a93",
+      "dependencies": {
+        "src/Engine.h": "17c7b8ac42108bfebcbfdd34bebf296ea198a6a2fd8a72e3bba3d2b2ded7b8be",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "bd1b20b2c04b16c8452c9236077806bbaf2398411fe5c49e6866bdaa6eaf8cef",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a261179e051276cb073292583aa7af0d6a798305fa6ad588c19914ef5b7a5b93",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
