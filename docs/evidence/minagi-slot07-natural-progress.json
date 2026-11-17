@@ -318,7 +318,7 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot07/Character21Effects-natural.cpp",
-    "source_sha256": "c64b6f582d149808e3a93df73ceb9b00a284daaa0dc3cccd9f2dc8d17126937a",
+    "source_sha256": "30e32a1bd882bcb136e89a21d6666118a3a1a55ff0ca3a9a7d54cfa58014eb59",
     "unsigned_field0008_equality_and_inequality": true,
     "unsigned_effect_tick_zero_equality": true,
     "unsigned_effect_type_switch": true,
@@ -348,6 +348,23 @@
       "compiler_table_relocations_are_locally_bound": true,
       "first_table_offset": 87727,
       "second_table_offset": 88003
+    },
+    "effect_454_456_PE_bound_case_span_audit": {
+      "454": {
+        "native_case_bytes": 1580,
+        "candidate_case_bytes": 1586,
+        "candidate_minus_native": 6
+      },
+      "455": {
+        "native_case_bytes": 1606,
+        "candidate_case_bytes": 1612,
+        "candidate_minus_native": 6
+      },
+      "456": {
+        "native_case_bytes": 1635,
+        "candidate_case_bytes": 1654,
+        "candidate_minus_native": 19
+      }
     },
     "original_pe_compact_case_index_bytes_exact": true,
     "executable_code_byte_delta_from_original": -71,

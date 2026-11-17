@@ -3567,7 +3567,7 @@ effects[effectIndex].frame < 8 &&
                   spawn.type = 0x1cf;
                   spawn.x = effects[effectIndex].x +
                              (double)(int)((((unsigned int)RandomRange(0,0x1e)) & 0xffff) *
-                             (int)(char)effects[effectIndex].flag0048);
+                                          (int)(char)effects[effectIndex].flag0048);
                   spawn.y = ((effects[effectIndex].y - (double)(unsigned short)RandomRange(0,0x50)) +
                              40.0) - 30.0;
                   spawn.flag0018 = (unsigned char)effects[effectIndex].flag0048;
@@ -3649,7 +3649,7 @@ effects[effectIndex].frame < 8 &&
                   spawn.type = (0x32 < (unsigned short)RandomRange(0,100)) + 0x1cf;
                   spawn.x = effects[effectIndex].x +
                              (double)(int)((((unsigned short)RandomRange(0,0x28)) & 0xffff) *
-                             (int)(char)effects[effectIndex].flag0048);
+                                          (int)(char)effects[effectIndex].flag0048);
                   spawn.y = ((effects[effectIndex].y - (double)(unsigned short)RandomRange(0,0x78)) +
                              60.0) - 30.0;
                   spawn.flag0018 = (unsigned char)effects[effectIndex].flag0048;
@@ -3734,7 +3734,7 @@ effects[effectIndex].frame < 8 &&
                   spawn.type = (0x46 < frameDuration) + 0x1cf + (unsigned short)(0x1e < uVar5);
                   spawn.x = effects[effectIndex].x +
                              (double)(int)((((unsigned int)RandomRange(0,0x28)) & 0xffff) *
-                             (int)(char)effects[effectIndex].flag0048);
+                                          (int)(char)effects[effectIndex].flag0048);
                   spawn.y = ((effects[effectIndex].y - (double)(unsigned short)RandomRange(0,0x8c)) +
                              70.0) - 30.0;
                   spawn.flag0018 = (unsigned char)effects[effectIndex].flag0048;

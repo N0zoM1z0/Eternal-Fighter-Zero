@@ -478,6 +478,14 @@ def main():
             or 'RandomRange(0,0x78)' not in particle_cases
             or 'RandomRange(0,0x8c)' not in particle_cases):
         raise AssertionError('Minagi 454..456 native random coordinate expression regressed')
+    # This effect family evaluates fragment X and Y via one-shot RNG draws
+    # in the source expressions; no decompiler-only random temporaries.
+    fragments=source.split('case 0x1c6:',1)[1].split('case 0x1c9:',1)[0]
+    if (fragments.count('spawn.x = effects[effectIndex].x +')!=3
+            or fragments.count('spawn.y = ((effects[effectIndex].y - (double)(unsigned short)RandomRange(0,')!=3
+            or 'uVar6 = RandomRange(0,0x1e)' in fragments
+            or 'uVar6 = RandomRange(0,0x28)' in fragments):
+        raise AssertionError('native fragment position RNG expressions reverted')
     # Native case 0x191 skips active transitions outside [8,17). All 25
     # successfully handled action states exit the effect switch directly;
     # only an unmatched state reaches the common frame-advance path.
@@ -521,6 +529,30 @@ def main():
         candidate,relocations)
     original_pe_table_audit=verify_original_pe_switch_tables(
         image,native,candidate,relocations,compiler_table_audit)
+    native_case_data=target_bytes(image,ORIGINAL_START+ORIGINAL_SIZE,376)
+    pe_pointers=struct.unpack('<69I',native_case_data[:276])
+    pe_ids=native_case_data[276:]
+    local_case_relocs=sorted(
+        [r for r in relocations
+         if r.get('local_target_offset') is not None
+         and compiler_table_audit['first_table_offset']<=r['offset']<
+             compiler_table_audit['second_table_offset']],
+        key=lambda r:r['offset'])
+    effect_fragment_sizes={}
+    for kind,maximum_delta,original_size in (
+        (454,6,1580),(455,6,1606),(456,19,1635)
+    ):
+        slot=pe_ids[kind-400]
+        native_span=pe_pointers[slot+1]-pe_pointers[slot]
+        candidate_span=(local_case_relocs[slot+1]['local_target_offset']-
+                        local_case_relocs[slot]['local_target_offset'])
+        if native_span!=original_size or candidate_span-native_span>maximum_delta:
+            raise AssertionError(('Minagi fragment emitter case size regressed',
+                                  kind,native_span,candidate_span))
+        effect_fragment_sizes[str(kind)]={
+            'native_case_bytes':native_span,
+            'candidate_case_bytes':candidate_span,
+            'candidate_minus_native':candidate_span-native_span}
     actual_relocations=collections.Counter(r['symbol'] for r in relocations)
     for (symbol,target),count in EXPECTED_CALLS.items():
         if actual_relocations[symbol]!=count:
@@ -669,6 +701,7 @@ def main():
             'effect191_direct_transition_exits':25,
             'instruction_shape_audit':structural_audit,
             'compiler_switch_table_audit':compiler_table_audit,
+            'effect_454_456_PE_bound_case_span_audit':effect_fragment_sizes,
             'original_pe_compact_case_index_bytes_exact':True,
             'executable_code_byte_delta_from_original':
                 len(candidate_code)-ORIGINAL_SIZE,
@@ -739,6 +772,7 @@ def main():
         'original_bytes':ORIGINAL_SIZE,
         'candidate_bytes':len(candidate),
         'candidate_executable_bytes':len(candidate_code),
+        'effect_454_456_case_byte_deltas':{k:v['candidate_minus_native'] for k,v in effect_fragment_sizes.items()},
         'local_switch_data_bytes':compiler_table_audit['trailing_compiler_switch_bytes'],
         'native_PE_compact_dispatch_index_bytes_exact':100,
         'executable_code_byte_delta_from_original':len(candidate_code)-ORIGINAL_SIZE,
