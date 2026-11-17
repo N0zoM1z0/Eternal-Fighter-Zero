@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "status": "minagi-slot07-full-68-case-natural-cpp-prototype-not-exact",
+  "authority": "partial-semantic-and-compiler-evidence-only",
+  "original": {
+    "address": "0x5b2d10",
+    "vtable_slot_address": "0x78895c",
+    "function_bytes": 87798,
+    "sha256": "9ab2b3812ef915ae9fabce1330e83a1c60d0c64bdf8507c2da568024505711ca",
+    "native_dispatch_cases": 68,
+    "native_dispatch_type_ids": [
+      "0x190",
+      "0x191",
+      "0x192",
+      "0x193",
+      "0x194",
+      "0x195",
+      "0x196",
+      "0x197",
+      "0x198",
+      "0x199",
+      "0x19a",
+      "0x19b",
+      "0x19c",
+      "0x19d",
+      "0x19e",
+      "0x19f",
+      "0x1a0",
+      "0x1a1",
+      "0x1a2",
+      "0x1a3",
+      "0x1a4",
+      "0x1a5",
+      "0x1a6",
+      "0x1a7",
+      "0x1a8",
+      "0x1a9",
+      "0x1aa",
+      "0x1ab",
+      "0x1ac",
+      "0x1ad",
+      "0x1ae",
+      "0x1af",
+      "0x1b0",
+      "0x1b4",
+      "0x1b5",
+      "0x1b8",
+      "0x1b9",
+      "0x1ba",
+      "0x1bb",
+      "0x1be",
+      "0x1bf",
+      "0x1c0",
+      "0x1c1",
+      "0x1c2",
+      "0x1c3",
+      "0x1c4",
+      "0x1c5",
+      "0x1c6",
+      "0x1c7",
+      "0x1c8",
+      "0x1c9",
+      "0x1ca",
+      "0x1cb",
+      "0x1cc",
+      "0x1cd",
+      "0x1ce",
+      "0x1cf",
+      "0x1d0",
+      "0x1d1",
+      "0x1d2",
+      "0x1d3",
+      "0x1d4",
+      "0x1d5",
+      "0x1ef",
+      "0x1f0",
+      "0x1f1",
+      "0x1f2",
+      "0x1f3"
+    ],
+    "native_direct_call_targets": {
+      "0x405490": 1,
+      "0x407100": 7,
+      "0x4080c0": 4,
+      "0x4105a0": 1,
+      "0x4108a0": 18,
+      "0x410a10": 1,
+      "0x410a80": 8,
+      "0x413090": 1,
+      "0x777d61": 16,
+      "0x7783b8": 37
+    }
+  },
+  "candidate": {
+    "source": "workbench/minagi-slot07/Character21Effects-natural.cpp",
+    "source_sha256": "2c8a3a524a1afd54e9f92732a04178168d4b2b74858f84f1fc403d3e368c753c",
+    "object": "build/minagi-slot07/Character21Effects-natural.obj",
+    "object_sha256": "3b661557e3f4b6b15575cb0e2972e64b72ab1c010d93d7275c8d3dff083f3e1a",
+    "compiler_flags": [
+      "/Od",
+      "/G6",
+      "/MT",
+      "/Gy",
+      "/W3"
+    ],
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+    "compiled_function_bytes": 88179,
+    "native_size_delta": 381,
+    "dispatch_cases": 68,
+    "dispatch_ids_match_original": true,
+    "coff_relocations": 954,
+    "direct_helper_calls_match_original": true,
+    "direct_helper_calls": [
+      {
+        "symbol": "??0EffectSpawn@@QAE@XZ",
+        "native_target": "0x405490",
+        "count": 1
+      },
+      {
+        "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+        "native_target": "0x407100",
+        "count": 7
+      },
+      {
+        "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+        "native_target": "0x4080c0",
+        "count": 4
+      },
+      {
+        "symbol": "?ApplyDamage@Secondary@@QAEXHN@Z",
+        "native_target": "0x4105a0",
+        "count": 1
+      },
+      {
+        "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+        "native_target": "0x4108a0",
+        "count": 18
+      },
+      {
+        "symbol": "?SetVerticalShake@Secondary@@QAEXHH@Z",
+        "native_target": "0x410a10",
+        "count": 1
+      },
+      {
+        "symbol": "?SetHorizontalShake@Secondary@@QAEXHH@Z",
+        "native_target": "0x410a80",
+        "count": 8
+      },
+      {
+        "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+        "native_target": "0x413090",
+        "count": 1
+      },
+      {
+        "symbol": "_rand",
+        "native_target": "0x777d61",
+        "count": 16
+      },
+      {
+        "symbol": "__ftol2",
+        "native_target": "0x7783b8",
+        "count": 37
+      }
+    ]
+  },
+  "source_contains_inline_assembly_or_padding": false,
+  "strict_function_exact": false,
+  "strict_whole_owner_exact": false,
+  "qualification": "All 68 distinct native effect types are represented in a complete typed C++ Slot07 candidate, and pinned VC7.1 compilation reproduces all ten classes of direct helper call with identical counts. This does not certify branch-level equivalence, COFF relocation targets, function byte identity or full-game integration. Do not register this prototype as complete or add it to accepted exact ledgers."
+}
