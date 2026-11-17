@@ -54,9 +54,9 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot05/Character21Cpu-natural.cpp",
-    "source_sha256": "791d21d8d0885cb541d7c73dcf6042c8e9fcc9eaa8a528fbce1e83cb43511409",
+    "source_sha256": "7ec78477d9b89504c610675a9b75baecb48fee804723a2390cf883739c1a22e7",
     "object": "build/minagi-slot05/Character21Cpu-natural.obj",
-    "function_body_sha256": "9b811c07c1e1b504789858e5cddbe4c9b9625ac01e4a0d46a20b5521c1e299cd",
+    "function_body_sha256": "02587abcb0ab5bc37e9d296269ebc1edcef77a00354b8bd8b30ca45129cbd3f8",
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
     "compiler_flags": [
       "/Od",
@@ -87,11 +87,21 @@
     "cpu_guard_and_distance_x87_operation_order_matches_original": true,
     "five_rng_first_scaled_float_comparisons_match_native": true,
     "fourteen_native_cpu_distance_threshold_comparisons_restored": true,
+    "additional_native_distance_and_vertical_float_compare_counts": {
+      "field0118 > 350.0": 4,
+      "verticalSeparation > 0.0": 2,
+      "verticalSeparation > 80.0": 2,
+      "verticalSeparation > 90.0": 2,
+      "forwardSeparation > 100.0": 3,
+      "forwardSeparation >= 50.0": 8,
+      "forwardSeparation > 80.0": 2,
+      "forwardSeparation > 60.0": 2
+    },
     "instruction_shape_audit": {
       "native_decoded_instructions": 4399,
       "candidate_decoded_instructions": 4417,
-      "normalized_instructions_matching_between_207_float_anchors": 2807,
-      "changed_float_anchor_regions": 159,
+      "normalized_instructions_matching_between_207_float_anchors": 2838,
+      "changed_float_anchor_regions": 135,
       "float_anchor_regions_compared": 208,
       "provisional_structural_diagnostic_only": true
     },

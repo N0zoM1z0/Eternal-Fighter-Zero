@@ -131,7 +131,7 @@ void Character21::Slot05()
               ((((*opponentSlot)->field0008 < 0xfa &&
                 ((*opponentSlot)->positionY == 0.0)) &&
                (((*opponentSlot)->remainingHitCount == 0 &&
-                ((60.0 < forwardSeparation && (forwardSeparation < 80.0)))))))) &&
+                ((forwardSeparation > 60.0 && (forwardSeparation < 80.0)))))))) &&
              ( (float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f
              )) {
             buttonPulse[1] = 1;
@@ -174,7 +174,7 @@ void Character21::Slot05()
               return;
             }
           }
-          if ((forwardSeparation < 150.0) && (100.0 < forwardSeparation)) {
+          if ((forwardSeparation < 150.0) && (forwardSeparation > 100.0)) {
 
             if (((float)(unsigned short)RandomRange(0,100) < field00a8 * 3.0f) &&
                (field0118 > 500.0)) {
@@ -486,7 +486,7 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,3) == 0) {
                       field3114 = 0xe;
                     }
-                    if (50.0 <= forwardSeparation) {
+                    if (forwardSeparation >= 50.0) {
                       return;
                     }
                     if ((unsigned short)RandomRange(0,2) != 0) {
@@ -557,7 +557,7 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,3) == 0) {
                       field3114 = 0xe;
                     }
-                    if (50.0 <= forwardSeparation) {
+                    if (forwardSeparation >= 50.0) {
                       return;
                     }
                     if ((unsigned short)RandomRange(0,2) != 0) {
@@ -613,7 +613,7 @@ void Character21::Slot05()
                     return;
                   }
                   if (((0x15e < field3110) && (field3110 < 300))
-                     && (350.0 < field0118)) {
+                     && (field0118 > 350.0)) {
                     recognizedCommand = 0x34;
                     return;
                   }
@@ -677,7 +677,7 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,4) == 0) {
                       field3114 = 0xe;
                     }
-                    if (50.0 <= forwardSeparation) {
+                    if (forwardSeparation >= 50.0) {
                       return;
                     }
                     if ((unsigned short)RandomRange(0,2) != 0) {
@@ -742,7 +742,7 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,4) == 0) {
                       field3114 = 0xe;
                     }
-                    if (50.0 <= forwardSeparation) {
+                    if (forwardSeparation >= 50.0) {
                       return;
                     }
                     if ((unsigned short)RandomRange(0,2) != 0) {
@@ -758,7 +758,7 @@ void Character21::Slot05()
                     return;
                   }
                   if (((0x28a < field3110) && (field3110 < 600))
-                     && (350.0 < field0118)) {
+                     && (field0118 > 350.0)) {
                     recognizedCommand = 0x34;
                     return;
                   }
@@ -843,7 +843,7 @@ void Character21::Slot05()
                     return;
                   }
                   if (((0x1c2 < field3110) && (field3110 < 400))
-                     && (350.0 < field0118)) {
+                     && (field0118 > 350.0)) {
                     recognizedCommand = 0x34;
                     return;
                   }
@@ -870,7 +870,7 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,4) == 0) {
                       field3114 = 0xe;
                     }
-                    if (50.0 <= forwardSeparation) {
+                    if (forwardSeparation >= 50.0) {
                       return;
                     }
                     if ((unsigned short)RandomRange(0,2) != 0) {
@@ -883,7 +883,7 @@ void Character21::Slot05()
                 if (((field0008 == 0xfa) && (600 < field3110)) &&
                    (positionY == 0.0)) {
                   field3114 = 1;
-                  if (50.0 <= forwardSeparation) {
+                  if (forwardSeparation >= 50.0) {
                     return;
                   }
                   field3114 = 0x14;
@@ -891,7 +891,7 @@ void Character21::Slot05()
                 }
                 if ((field0008 == 0xe9) && (500 < field3110)) {
                   field3114 = 1;
-                  if (50.0 <= forwardSeparation) {
+                  if (forwardSeparation >= 50.0) {
                     return;
                   }
                   field3114 = 0x14;
@@ -908,7 +908,7 @@ void Character21::Slot05()
                     return;
                   }
                   if (((0x1c2 < field3110) && (field3110 < 400))
-                     && (350.0 < field0118)) {
+                     && (field0118 > 350.0)) {
                     recognizedCommand = 0x34;
                     return;
                   }
@@ -935,7 +935,7 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,4) == 0) {
                       field3114 = 0xe;
                     }
-                    if (50.0 <= forwardSeparation) {
+                    if (forwardSeparation >= 50.0) {
                       return;
                     }
                     if ((unsigned short)RandomRange(0,2) != 0) {
@@ -993,7 +993,7 @@ void Character21::Slot05()
                         return;
                       }
                     }
-                    if ((60.0 < forwardSeparation) && (forwardSeparation < 90.0)) {
+                    if ((forwardSeparation > 60.0) && (forwardSeparation < 90.0)) {
                       if (((*opponentSlot)->field0008 < 0x32) ||
                          (0x9b < (*opponentSlot)->field0008)) {
                         local_c4 = 0;
@@ -1133,7 +1133,7 @@ void Character21::Slot05()
                       recognizedCommand = 0x5c;
                       return;
                     }
-                    if ((((100.0 < forwardSeparation) && (forwardSeparation < 130.0)) &&
+                    if ((((forwardSeparation > 100.0) && (forwardSeparation < 130.0)) &&
                         (field3110 < 0x136)) && (300 < field3110))
                     {
                       recognizedCommand = 10;
@@ -1161,7 +1161,7 @@ void Character21::Slot05()
                     if (((field3110 < 0x2ee) && (700 < field3110))
                        && ((0x31 < (*opponentSlot)->field0008 &&
                            (((*opponentSlot)->field0008 < 0x9c &&
-                            (100.0 < forwardSeparation)))))) {
+                            (forwardSeparation > 100.0)))))) {
                       field3114 = 5;
                       return;
                     }
@@ -1176,7 +1176,7 @@ void Character21::Slot05()
                     }
                     if (0.0 < (*opponentSlot)->velocityY) {
                       if (((forwardSeparation < 90.0) && (verticalSeparation < 140.0)) &&
-                         (((80.0 < verticalSeparation && (field3110 < 6)) &&
+                         (((verticalSeparation > 80.0 && (field3110 < 6)) &&
                           ((field0118 > 500.0 ||
                            ('\0' < field0120)))))) {
                         recognizedCommand = 0x16;
@@ -1231,7 +1231,7 @@ void Character21::Slot05()
                       buttonPulse[0] = 1;
                       return;
                     }
-                    if ((((forwardSeparation < 80.0) && (90.0 < verticalSeparation)) &&
+                    if ((((forwardSeparation < 80.0) && (verticalSeparation > 90.0)) &&
                         ((verticalSeparation < 120.0 &&
                          (((*opponentSlot)->positionY <
                            positionY && (100 < field3110)))))) &&
@@ -1239,15 +1239,15 @@ void Character21::Slot05()
                       buttonPulse[1] = 1;
                       return;
                     }
-                    if (((((80.0 < forwardSeparation) && (forwardSeparation < 110.0)) &&
-                         (0.0 < verticalSeparation)) &&
+                    if (((((forwardSeparation > 80.0) && (forwardSeparation < 110.0)) &&
+                         (verticalSeparation > 0.0)) &&
                         ((verticalSeparation < 70.0 && (0xb4 < field3110)))) &&
                        (field3110 < 0xf0)) {
                       buttonPulse[2] = 1;
                       return;
                     }
                     if (((forwardSeparation < 80.0) && (0xf0 < field3110)) &&
-                       ((field3110 < 0xf2 && (80.0 < verticalSeparation)))) {
+                       ((field3110 < 0xf2 && (verticalSeparation > 80.0)))) {
                       recognizedCommand = (unsigned short)RandomRange(0,3) + 0x6e;
                       return;
                     }
@@ -1259,7 +1259,7 @@ void Character21::Slot05()
                       return;
                     }
                     if ((((20.0 < forwardSeparation) && (forwardSeparation < 90.0)) &&
-                        ((90.0 < verticalSeparation &&
+                        ((verticalSeparation > 90.0 &&
                          ((verticalSeparation < 120.0 &&
                           ((*opponentSlot)->positionY <
                            positionY)))))) &&
@@ -1268,8 +1268,8 @@ void Character21::Slot05()
                       buttonPulse[1] = 1;
                       return;
                     }
-                    if (((((80.0 < forwardSeparation) && (forwardSeparation < 110.0)) &&
-                         (0.0 < verticalSeparation)) &&
+                    if (((((forwardSeparation > 80.0) && (forwardSeparation < 110.0)) &&
+                         (verticalSeparation > 0.0)) &&
                         ((verticalSeparation < 50.0 && (0x28 < field3110)))) &&
                        (field3110 < 0x32)) {
                       buttonPulse[2] = 1;
