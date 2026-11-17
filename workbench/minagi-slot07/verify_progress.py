@@ -90,6 +90,49 @@ def ordered_call_sites(code: bytes, name: str, original_address: int = 0):
     return direct,virtual
 
 
+def original_float_literal_values(image, native: bytes):
+    """Read each original x87 f64 memory operand, in instruction order.
+
+    The PE data are inspected directly: a candidate relocation cannot invent
+    which value was stored at an original absolute-address operand. The source
+    function is self-contained except for the native section's static doubles.
+    """
+    binary=ROOT/'.analysis/probes/minagi-slot07/original-literals-verify.bin'
+    binary.parent.mkdir(parents=True,exist_ok=True)
+    binary.write_bytes(native)
+    result=subprocess.run([
+        'objdump','-w','-D','-b','binary','-m','i386','-Mintel',
+        f'--adjust-vma={ORIGINAL_START}',str(binary)
+    ],text=True,capture_output=True,check=True).stdout
+    values=[]
+    addresses=[]
+    for line in result.splitlines():
+        match=re.search(r'^\s*[0-9a-f]+:.*\bds:0x([0-9a-fA-F]+)',line)
+        if match:
+            address=int(match.group(1),16)
+            if 0x00787000<=address<0x00789000:
+                value=int.from_bytes(target_bytes(image,address,8),'little')
+                values.append(value)
+                addresses.append(address)
+    return values,addresses
+
+
+def candidate_float_literal_values(relocations: list[dict]):
+    """Inspect the actual COFF floating literal relocations, without masking."""
+    values=[]
+    for reloc in sorted(relocations,key=lambda r:r['offset']):
+        symbol=reloc['symbol']
+        if not symbol.startswith('__real@'):
+            continue
+        if reloc['type']!='DIR32':
+            raise AssertionError(('floating constant has non-DIR32 relocation',reloc))
+        bits=symbol.split('@',1)[1]
+        if not re.fullmatch(r'[0-9a-fA-F]{16}',bits):
+            raise AssertionError(('unexpected floating literal symbol encoding',reloc))
+        values.append(int(bits,16))
+    return values
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rebuild',action='store_true')
@@ -164,6 +207,29 @@ def main():
         raise AssertionError(('unbound candidate direct call sites',
                               candidate_direct,candidate_bound_calls))
 
+    # Every x87 double referenced by the 87,798-byte native boss must appear
+    # with the same value and multiplicity among the compiled C++ relocations.
+    # This is strictly weaker than ordered identity: the remaining out-of-order
+    # literal accesses identify unfinished branch/codegen reconstruction.
+    native_floats,native_literal_addresses=original_float_literal_values(image,native)
+    candidate_floats=candidate_float_literal_values(relocations)
+    if len(native_floats)!=789 or len(candidate_floats)!=789:
+        raise AssertionError(('unexpected native/candidate floating literal counts',
+                              len(native_floats),len(candidate_floats)))
+    original_histogram=collections.Counter(native_floats)
+    candidate_histogram=collections.Counter(candidate_floats)
+    if original_histogram!=candidate_histogram:
+        raise AssertionError(('native/candidate floating constants differ',
+                              original_histogram-candidate_histogram,
+                              candidate_histogram-original_histogram))
+    floats_in_native_order=sum(a==b for a,b in zip(native_floats,candidate_floats))
+    histogram_rows=[{'ieee754_bits':f'{bits:016x}','count':count}
+                    for bits,count in sorted(original_histogram.items())]
+    histogram_hash=hashlib.sha256(
+        json.dumps(histogram_rows,sort_keys=True,separators=(',',':')).encode()
+    ).hexdigest()
+    body_hash=hashlib.sha256(candidate).hexdigest()
+
     evidence={
         'schema_version':1,
         'status':'minagi-slot07-full-68-case-natural-cpp-prototype-not-exact',
@@ -178,6 +244,9 @@ def main():
             'native_direct_call_targets':{
                 hex(addr):count for addr,count in sorted(calls.items())
             },
+            'floating_literal_references':len(native_floats),
+            'distinct_floating_literal_values':len(original_histogram),
+            'floating_literal_histogram_sha256':histogram_hash,
             'ordered_direct_helper_targets':[hex(address)
                                              for _,address in original_direct],
             'ordered_virtual_slots':[hex(slot) for _,slot in original_virtual]
@@ -186,7 +255,10 @@ def main():
             'source':str(SOURCE.relative_to(ROOT)),
             'source_sha256':sha256(SOURCE),
             'object':str(OBJECT.relative_to(ROOT)),
-            'object_sha256':sha256(OBJECT),
+            # Whole-COFF object hashes can change with compiler-local symbols,
+            # even when function code and relocations are unchanged. Verify
+            # the receipt above but publish a deterministic function-code hash.
+            'function_body_sha256':body_hash,
             'compiler_flags':FLAGS,
             'toolchain_lock_sha256':receipt['toolchain_lock_sha256'],
             'compiled_function_bytes':len(candidate),
@@ -194,6 +266,12 @@ def main():
             'dispatch_cases':len(ids),
             'dispatch_ids_match_original':True,
             'coff_relocations':len(relocations),
+            'floating_literal_relocations':len(candidate_floats),
+            'floating_literal_value_multiset_matches_original':True,
+            'float_literal_values_matching_native_order':floats_in_native_order,
+            'float_literal_values_out_of_native_order':len(native_floats)-floats_in_native_order,
+            'distinct_floating_literal_values':len(candidate_histogram),
+            'floating_literal_histogram_sha256':histogram_hash,
             'direct_helper_calls_match_original':True,
             'all_94_direct_helper_calls_match_in_order':True,
             'all_42_virtual_emit_remove_calls_match_in_order':True,
@@ -211,8 +289,10 @@ def main():
             'All 68 distinct native effect types are represented in a complete '
             'typed C++ Slot07 candidate, and pinned VC7.1 compilation reproduces '
             'all ten classes of direct helper call in identical order, plus the '
-            '42 virtual emit/remove calls in identical order. This does not '
-            'certify branch-level equivalence, COFF relocation targets, '
+            '42 virtual emit/remove calls in identical order. All 789 original '
+            'floating literal references match the candidate values as a multiset, '
+            'but their access order still diverges at some positions. This does '
+            'not certify branch-level equivalence, COFF relocation targets, '
             'function byte identity or full-game integration. Do not register '
             'this prototype as complete or add it to accepted exact ledgers.'
         )
@@ -228,6 +308,8 @@ def main():
         'direct_call_sites':sum(expected_counts.values()),
         'ordered_virtual_calls':len(candidate_virtual),
         'relocations':len(relocations),
+        'float_literals_value_matched':len(native_floats),
+        'float_literals_in_native_order':floats_in_native_order,
         'strict_function_exact':False
     },indent=2))
 
