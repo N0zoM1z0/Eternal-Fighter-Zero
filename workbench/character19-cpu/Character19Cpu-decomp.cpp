@@ -482,7 +482,7 @@ void Character19::Slot05()
               field3114 = 0;
             }
 
-            if (((unsigned short)RandomRange(0,200) == 1) && (meter == 3000)) {
+            if (((unsigned short)(unsigned short)RandomRange(0,200) == 1) && (meter == 3000)) {
               recognizedCommand = 0x65;
             }
             else if (field0008 == 0xd1) {
@@ -499,29 +499,27 @@ void Character19::Slot05()
             }
             else if (((field0008 == 0xd0) && (attackCollisionResult == 3)) &&
                     (5 < field000a)) {
-              if (((distance.forward <= 80.0) || (velocityX >= 0.0)) ||
+              if (((!(distance.forward > 80.0)) || (!(velocityX < 0.0))) ||
                  ((*opponentSlot)->positionY - positionY <=
                   -40.0)) {
-                if (((0x2c < (*opponentSlot)->airActionLockFrames) ||
-                    (airActionCount == '\0')) ||
-                   ((40.0 <= distance.vertical ||
-                    (0.0 <=
-                     (*opponentSlot)->positionY - positionY)))
+                if ((((*opponentSlot)->airActionLockFrames >= 0x2d) ||
+                    (airActionCount <= 0)) ||
+                   ((!(distance.vertical < 40.0) ||
+                    (!((*opponentSlot)->positionY - positionY < 0.0))))
                    ) {
-                  if ((0x2c < (*opponentSlot)->airActionLockFrames) ||
+                  if (((*opponentSlot)->airActionLockFrames >= 0x2d) ||
                      (velocityX < 0.0)) {
-                    if ((((20.0 <= distance.vertical) ||
+                    if ((((!(distance.vertical < 20.0)) ||
                          ((*opponentSlot)->positionY <=
                           positionY)) &&
-                        (positionY <=
-                         (*opponentSlot)->positionY)) ||
-                       (((*opponentSlot)->airActionLockFrames < 0x55 ||
-                        (1 < airActionCount)))) {
-                      if ((90.0 < distance.vertical) &&
+                        ((*opponentSlot)->positionY >= positionY)) ||
+                       (((*opponentSlot)->airActionLockFrames <= 0x54 ||
+                        (airActionCount >= 2)))) {
+                      if ((distance.vertical > 90.0) &&
                          ((((*opponentSlot)->positionY <
                             positionY &&
-                           (0x2d < (*opponentSlot)->airActionLockFrames)) &&
-                          (airActionCount < 2)))) {
+                           ((*opponentSlot)->airActionLockFrames >= 0x2e)) &&
+                          (airActionCount <= 1)))) {
                         inputX = facing;
                         inputY = 0xff;
                       }
@@ -760,7 +758,7 @@ void Character19::Slot05()
                 if (field0008 == 0xca) {
                   if ((0 < field3110) && (field3110 < 10)) {
 
-                    recognizedCommand = RandomRange(1,3) + 0x46;
+                    recognizedCommand = (unsigned short)RandomRange(1,3) + 0x46;
                     return;
                   }
                   if (((((*opponentSlot)->positionY < 0.0) &&
@@ -781,12 +779,12 @@ void Character19::Slot05()
                   if ((((*opponentSlot)->positionY < 0.0) &&
                       (field3110 < 300)) && (attackCollisionResult == 3)) {
 
-                    recognizedCommand = RandomRange(0,3) + 10;
+                    recognizedCommand = (unsigned short)RandomRange(0,3) + 10;
                     return;
                   }
                   if ((300 < field3110) && (field3110 < 600)) {
 
-                    recognizedCommand = RandomRange(0,5) + 0x46;
+                    recognizedCommand = (unsigned short)RandomRange(0,5) + 0x46;
                     return;
                   }
                   if (((0x15e < field3110) && (field3110 < 600))
@@ -849,14 +847,14 @@ void Character19::Slot05()
                   if ((0x226 < field3110) && (field3110 < 0x276))
                   {
 
-                    recognizedCommand = RandomRange(0,5) + 0x46;
+                    recognizedCommand = (unsigned short)RandomRange(0,5) + 0x46;
                     return;
                   }
                 }
                 if (field0008 == 0xce) {
                   if ((0 < field3110) && (field3110 < 0x32)) {
 
-                    recognizedCommand = RandomRange(0,3) + 0x46;
+                    recognizedCommand = (unsigned short)RandomRange(0,3) + 0x46;
                     return;
                   }
                   if ((((300 < field3110) && (field3110 < 800)) &&
@@ -895,7 +893,7 @@ void Character19::Slot05()
                   if (699 < field3110) {
                     field3114 = 1;
 
-                    if (RandomRange(0,4) != 0) {
+                    if ((unsigned short)RandomRange(0,4) != 0) {
                       return;
                     }
                     field3114 = 3;

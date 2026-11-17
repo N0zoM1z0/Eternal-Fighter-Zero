@@ -13,12 +13,14 @@ gate is expressed as a natural early command return, with signed-byte tests,
 exact opponent-state boundaries, unsigned RNG promotions, and signed
 air-action lock tests normalized to `<= 0` to recover native `TEST/JG`, and
 velocity-sign tests use the operand order emitted by the native x87 compare. Targeted
-instruction alignment reports 3,723 of 4,450 candidate instructions aligned
+instruction alignment reports 3,943 of 4,446 candidate instructions aligned
 with native order/semantics. The native x87 unordered-compare paths are preserved with explicit negated
 relational tests where the native branches treat unordered values as true;
 `positionY == 0.0` remains a true equality test.
-Remaining differences span float comparison lowering, RNG temporaries, and
-later state branches.
+The state-0x11 aerial decision tree now uses native-order, unordered-aware
+relational expressions and exact signed/unsigned byte/word bounds. Remaining
+differences are concentrated in nested state branches, later RNG temporaries,
+and branch-return layout.
 Rebuild only this function with:
 
 ```sh
