@@ -494,3 +494,5 @@ address,name,source,symbol,status,evidence
 0x00706AD0,?Slot02@Character02@@UAEXXZ,src/Character02Commands.cpp,?Slot02@Character02@@UAEXXZ,complete,docs/evidence/character-02-slot02-exact.json
 0x005AD550,?Slot02@Character21@@UAEXXZ,src/Character21Commands.cpp,?Slot02@Character21@@UAEXXZ,complete,docs/evidence/character-21-slot02-exact.json
 0x005AA3F0,?Slot04@Character21@@UAEXXZ,src/Character21Action.cpp,?Slot04@Character21@@UAEXXZ,complete,docs/evidence/character-21-slot04-exact.json
+0x00405410,_FloatAbsolute,src/FloatMath.cpp,_FloatAbsolute,complete,docs/evidence/float-math-standard-library-codegen.json
+0x00405430,_FloatAbsoluteCore,src/FloatMath.cpp,_FloatAbsoluteCore,complete,docs/evidence/float-math-standard-library-codegen.json

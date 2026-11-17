@@ -165469,3 +165469,35 @@ type = "REL32"
 symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
 target = 0x0040F170
 evidence = "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD4E8 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive."
+
+[units.float-absolute-wrapper]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/FloatMath.cpp"
+object = "build/match-units/float-absolute-wrapper/FloatMath.obj"
+symbol = "_FloatAbsolute"
+target_address = 0x00405410
+size = 17
+
+[[units.float-absolute-wrapper.relocations]]
+offset = 8
+type = "REL32"
+symbol = "_FloatAbsoluteCore"
+target = 0x00405430
+evidence = "Canonical EFZ.exe original E8 at 0x00405417 has REL32 operand at 0x00405418 targeting native 0x00405430; complete reviewed wrapper [0x00405410,0x00405421)."
+
+[units.float-absolute-core]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/FloatMath.cpp"
+object = "build/match-units/float-absolute-core/FloatMath.obj"
+symbol = "_FloatAbsoluteCore"
+target_address = 0x00405430
+size = 28
+
+[[units.float-absolute-core.relocations]]
+offset = 14
+type = "REL32"
+symbol = "_fabs"
+target = 0x0077842D
+evidence = "Canonical EFZ.exe original E8 at 0x0040543D has REL32 operand at 0x0040543E targeting CRT fabs at 0x0077842D; complete reviewed float core [0x00405430,0x0040544C)."

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "authority": "pinned-VC7.1 complete-function-codegen (standard-library provenance)",
+  "original_origin": "standard-library",
+  "original_origin_ledger": "config/function-origins.csv",
+  "origin_reclassified_to_authored": false,
+  "in_authored_exact_matches_ledger": false,
+  "method": "The canonical EFZ PE contains four C float overload adapter entries at 0x00405410, 0x00405430, 0x00405450, 0x00405470. These two natural C++ fabs adapter functions reproduce the first two exact extents using pinned VC7.1 /Od /G6 /MT /Gy /W3 and the strict selected-unit oracle with two fully bound native REL32 targets. Keep the reviewed standard-library origin; do not count either function in game-authored Exact totals.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 17,
+      "matched_bytes": 17,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 8,
+          "target": 4215856,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_FloatAbsoluteCore",
+          "evidence": "Canonical EFZ.exe original E8 at 0x00405417 has REL32 operand at 0x00405418 targeting native 0x00405430; complete reviewed wrapper [0x00405410,0x00405421).",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e3e4fafc86254701a05f419c4913994a1d39e46cf769cc731c9703b95f331976",
+      "target_extent_sha256": "e3e4fafc86254701a05f419c4913994a1d39e46cf769cc731c9703b95f331976",
+      "unit": "float-absolute-wrapper",
+      "symbol": "_FloatAbsolute",
+      "target_address": "0x00405410",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "6b253a9931f5b6e78823aebd9775da5302a4d693929278e132b73764f96e974f",
+      "object_sha256": "16d7d460767cae69360df56508521acf23a90e6399455585db3ecd783bd3bbfc",
+      "source_sha256": "fbc8cdf3a760d79baa473df27eb355360951bfe381e11f25b01bdcd717eacbef",
+      "dependencies": {},
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "3d64172c7042d42a9b9ba0dac05abd279dbcd35f884de8602e4580eca38e3ae0",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "37487d23b8ee04cc69279769b25a91dcdaac0fc2486b1ae6f5b46f91c6b3be85",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 28,
+      "matched_bytes": 28,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 14,
+          "target": 7832621,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_fabs",
+          "evidence": "Canonical EFZ.exe original E8 at 0x0040543D has REL32 operand at 0x0040543E targeting CRT fabs at 0x0077842D; complete reviewed float core [0x00405430,0x0040544C).",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "caf4e1b8bafb9883467b614ed052f88e504eff4a33f208267c906ffded177e5f",
+      "target_extent_sha256": "caf4e1b8bafb9883467b614ed052f88e504eff4a33f208267c906ffded177e5f",
+      "unit": "float-absolute-core",
+      "symbol": "_FloatAbsoluteCore",
+      "target_address": "0x00405430",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "6b253a9931f5b6e78823aebd9775da5302a4d693929278e132b73764f96e974f",
+      "object_sha256": "4e5ca665ee63977598b82215fe254ed32cd34e8c903d84b8d928f01a08ebf941",
+      "source_sha256": "fbc8cdf3a760d79baa473df27eb355360951bfe381e11f25b01bdcd717eacbef",
+      "dependencies": {},
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "3d64172c7042d42a9b9ba0dac05abd279dbcd35f884de8602e4580eca38e3ae0",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "84f844fcaabeb8cc59b619e8ab5f9e911dcd509239a969fb064b28cb5cbc5a2e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
