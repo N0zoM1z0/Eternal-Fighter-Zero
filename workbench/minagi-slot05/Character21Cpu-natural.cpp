@@ -5,7 +5,6 @@
 
 void Character21::Slot05()
 {
-  int airborneForGuard;
   double forwardSeparation;
   char wallCollision;
   double verticalSeparation;
@@ -36,20 +35,20 @@ void Character21::Slot05()
   buttonPulse[2] = 0;
   buttonPulse[3] = 0;
   guardInputFrames = 0;
-  airborneForGuard = positionY < 0.0;
+  int airborneForGuard = positionY < 0.0;
 
   if ((float)(unsigned short)RandomRange(0,1000) <
-      (float)(airborneForGuard * 30) * field00a8 +
       25.0f * field00a8 +
+      (float)(airborneForGuard * 30) * field00a8 +
       (float)((field3114 == 3) * 400) +
       (float)((field0008 == 0xaa) * 300)) {
     guardInputFrames = 0x3c;
   }
-  if ((field0008 < 0x96) || (0x9c < field0008)) {
-    guardRangeFactor = 0;
+  if (field0008 > 0x95 && field0008 < 0x9d) {
+    guardRangeFactor = 1;
   }
   else {
-    guardRangeFactor = 1;
+    guardRangeFactor = 0;
   }
 
   if ((double)(unsigned short)RandomRange(0,2000) <
