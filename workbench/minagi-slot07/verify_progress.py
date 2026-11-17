@@ -169,6 +169,72 @@ def ordered_ftol_sources(code: bytes, name: str, ftol_calls: list[tuple[int,int]
     return results
 
 
+def bound_compiler_switch_tables(candidate: bytes, relocations: list[dict]):
+    """Separate real x86 function instructions from two compiler-emitted tables.
+
+    Native source has 68 action cases 400..499. The normal VC7.1 COFF COMDAT
+    function extent additionally owns 69 pointer entries (68 cases + default)
+    and one 100-byte dense case-to-index array. The original PE function
+    extents are entirely separate; never pass this compiler data to objdump
+    as if they were instructions, and never claim this makes it Exact.
+    """
+    local_refs=[
+        r for r in relocations
+        if r.get('local_target_offset') is not None
+        and r['type']=='DIR32'
+    ]
+    dispatch_refs=[r for r in local_refs if r['offset']<0x1000]
+    if len(dispatch_refs)!=2:
+        raise AssertionError(('expected native two-stage switch dispatch references',
+                              dispatch_refs))
+    owners=sorted(set(r['local_target_offset'] for r in dispatch_refs))
+    if len(owners)!=2:
+        raise AssertionError(('switch dispatch table pointer aliases',owners))
+    pointers_start,case_indices_start=owners
+    if (pointers_start<=0x14000 or case_indices_start-pointers_start!=69*4
+            or len(candidate)-case_indices_start!=100):
+        raise AssertionError(('native switch table extents changed',
+                              pointers_start,case_indices_start,len(candidate)))
+    # A VC7.1 function's last real C3 must be immediately before its first
+    # compiler-owned switch data byte. No manual code padding is permitted.
+    if candidate[pointers_start-1]!=0xc3:
+        raise AssertionError('no executable RET immediately before compiler switch table')
+    jump_relocs=sorted(
+        [r for r in local_refs if pointers_start<=r['offset']<case_indices_start],
+        key=lambda x:x['offset'])
+    if len(jump_relocs)!=69 or [
+        r['offset'] for r in jump_relocs
+    ]!=list(range(pointers_start,case_indices_start,4)):
+        raise AssertionError(('unaligned/incomplete native switch table relocations',
+                              len(jump_relocs),pointers_start,case_indices_start))
+    if any(not r['symbol'].startswith('$L')
+           or not 0<=r['local_target_offset']<pointers_start
+           for r in jump_relocs):
+        raise AssertionError('an original effect case does not resolve within x86 body')
+    if any(r['offset']>=case_indices_start for r in local_refs):
+        raise AssertionError('unexpected relocations in compact 100-byte action index')
+    index=list(candidate[case_indices_start:])
+    for number in range(400,500):
+        expected=(EXPECTED_TYPES.index(number) if number in EXPECTED_TYPES else 68)
+        if index[number-400]!=expected:
+            raise AssertionError(('compiler switch index map diverged',
+                                  number,index[number-400],expected))
+    return candidate[:pointers_start],{
+        'full_coff_comdat_bytes':len(candidate),
+        'real_candidate_executable_bytes':pointers_start,
+        'trailing_compiler_switch_bytes':len(candidate)-pointers_start,
+        'native_case_pointer_entries':len(jump_relocs),
+        'native_case_pointer_bytes':case_indices_start-pointers_start,
+        'native_case_index_entries':len(index),
+        'native_case_index_bytes':len(index),
+        'default_case_index':68,
+        'compiler_section_data_not_inline_asm_or_padding':True,
+        'compiler_table_relocations_are_locally_bound':True,
+        'first_table_offset':pointers_start,
+        'second_table_offset':case_indices_start,
+    }
+
+
 def instruction_shape_alignment(native: bytes, candidate: bytes):
     """Value-preserving diagnostic, not byte identity or branch equivalence.
 
@@ -298,6 +364,10 @@ def main():
                                   predicate,expected,source.count(predicate)))
     if 'switch(effects[effectIndex].type)' not in source:
         raise AssertionError('wrong signed Minagi effect dispatch type')
+    if (source.count('effects[effectIndex].y > 0.0')!=2
+            or source.count('effects[effectIndex].vy > 0.0')!=2
+            or 'if (effectIndex >= 64)' not in source):
+        raise AssertionError('native late particle landing/circular-slot bounds regressed')
     # Native 0x1F0 first handles the ten-effect spawn path, then enters
     # the ordinary tick/frame advancement path if the action is still active.
     # These side-effect-free unsigned action/frame checks are equivalent under
@@ -348,6 +418,8 @@ def main():
     if receipt['source_sha256']!=sha256(SOURCE) or receipt['object_sha256']!=sha256(OBJECT):
         raise AssertionError('stale candidate, rerun --rebuild')
     candidate,relocations=object_function(OBJECT,SYMBOL)
+    candidate_code,compiler_table_audit=bound_compiler_switch_tables(
+        candidate,relocations)
     actual_relocations=collections.Counter(r['symbol'] for r in relocations)
     for (symbol,target),count in EXPECTED_CALLS.items():
         if actual_relocations[symbol]!=count:
@@ -361,7 +433,7 @@ def main():
     original_direct,original_virtual=ordered_call_sites(
         native,'original',ORIGINAL_START)
     candidate_direct,candidate_virtual=ordered_call_sites(
-        candidate,'candidate')
+        candidate_code,'candidate')
     candidate_bound_calls=[]
     for relocation in sorted(relocations,key=lambda r:r['offset']):
         symbol=relocation['symbol']
@@ -426,9 +498,13 @@ def main():
     # The unsigned action/effect tick equality refactor eliminates native-
     # inconsistent movsx where the PE uses movzx. Only full byte equality
     # with relocation binding could satisfy the separate strict Oracle.
-    structural_audit=instruction_shape_alignment(native,candidate)
+    structural_audit=instruction_shape_alignment(native,candidate_code)
+    if (structural_audit['candidate_decoded_instructions']!=18981
+            or structural_audit['native_decoded_instructions']!=18977):
+        raise AssertionError(('native vs candidate real x86 instruction count changed',
+                              structural_audit))
     if (structural_audit['matching_normalized_instructions_between_float_anchors']
-            < 14207):
+            < 14211):
         raise AssertionError(('Minagi instruction structure regressed',
                               structural_audit))
 
@@ -463,6 +539,7 @@ def main():
             'address':hex(ORIGINAL_START),
             'vtable_slot_address':hex(ORIGINAL_VTABLE_SLOT),
             'function_bytes':ORIGINAL_SIZE,
+            'verified_native_executable_instructions':18977,
             'sha256':hashlib.sha256(native).hexdigest(),
             'native_dispatch_cases':len(EXPECTED_TYPES),
             'native_dispatch_type_ids':[hex(x) for x in EXPECTED_TYPES],
@@ -489,6 +566,10 @@ def main():
             'effect191_half_open_frame_range':[8,17],
             'effect191_direct_transition_exits':25,
             'instruction_shape_audit':structural_audit,
+            'compiler_switch_table_audit':compiler_table_audit,
+            'executable_code_byte_delta_from_original':
+                len(candidate_code)-ORIGINAL_SIZE,
+            'executable_code_instructions':structural_audit['candidate_decoded_instructions'],
             'native_effect_0x1f0_spawn_first_and_frame_bounds_restored':True,
             'restored_native_field_first_float_comparisons':restored_threshold_counts,
             'object':str(OBJECT.relative_to(ROOT)),
@@ -536,8 +617,12 @@ def main():
             'access order. All 37 x87 float-to-int calls load the corresponding '
             'character or local-effect position axis in original order. This '
             'does not certify branch-level equivalence, COFF relocation targets, '
-            'function byte identity or full-game integration. Do not register '
-            'this prototype as complete or add it to accepted exact ledgers.'
+            'function byte identity or full-game integration. The candidate '
+            'COFF COMDAT includes 276 bytes of compiler-emitted switch-pointer '
+            'data and 100 bytes of dense case-index data after the real RET; '
+            'these are decoded and validated separately, never counted as x86 '
+            'instructions or as byte-padding. Do not register this prototype '
+            'as complete or add it to accepted exact ledgers.'
         )
     }
     EVIDENCE.parent.mkdir(parents=True,exist_ok=True)
@@ -547,6 +632,11 @@ def main():
         'structural_instruction_alignment':structural_audit['matching_normalized_instructions_between_float_anchors'],
         'original_bytes':ORIGINAL_SIZE,
         'candidate_bytes':len(candidate),
+        'candidate_executable_bytes':len(candidate_code),
+        'local_switch_data_bytes':compiler_table_audit['trailing_compiler_switch_bytes'],
+        'executable_code_byte_delta_from_original':len(candidate_code)-ORIGINAL_SIZE,
+        'original_executable_instructions':structural_audit['native_decoded_instructions'],
+        'candidate_executable_instructions':structural_audit['candidate_decoded_instructions'],
         'size_delta':len(candidate)-ORIGINAL_SIZE,
         'cases':len(ids),
         'direct_call_sites':sum(expected_counts.values()),

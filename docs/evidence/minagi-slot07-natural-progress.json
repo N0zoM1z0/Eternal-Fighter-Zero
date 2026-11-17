@@ -6,6 +6,7 @@
     "address": "0x5b2d10",
     "vtable_slot_address": "0x78895c",
     "function_bytes": 87798,
+    "verified_native_executable_instructions": 18977,
     "sha256": "9ab2b3812ef915ae9fabce1330e83a1c60d0c64bdf8507c2da568024505711ca",
     "native_dispatch_cases": 68,
     "native_dispatch_type_ids": [
@@ -297,7 +298,7 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot07/Character21Effects-natural.cpp",
-    "source_sha256": "6c7e2f9fcc8db6f0df3af975df4eceb0209c6c76ab4721b035a6e7e1317bc683",
+    "source_sha256": "214669398f7f6f305d77c051fbe48e032a9c9c00eb3575e71406637bf0fc5512",
     "unsigned_field0008_equality_and_inequality": true,
     "unsigned_effect_tick_zero_equality": true,
     "unsigned_effect_type_switch": true,
@@ -308,12 +309,28 @@
     "effect191_direct_transition_exits": 25,
     "instruction_shape_audit": {
       "native_decoded_instructions": 18977,
-      "candidate_decoded_instructions": 19184,
-      "matching_normalized_instructions_between_float_anchors": 14207,
-      "changed_regions": 359,
+      "candidate_decoded_instructions": 18981,
+      "matching_normalized_instructions_between_float_anchors": 14211,
+      "changed_regions": 357,
       "regions_compared": 790,
       "alignment_is_provisional_diagnostic_only": true
     },
+    "compiler_switch_table_audit": {
+      "full_coff_comdat_bytes": 88133,
+      "real_candidate_executable_bytes": 87757,
+      "trailing_compiler_switch_bytes": 376,
+      "native_case_pointer_entries": 69,
+      "native_case_pointer_bytes": 276,
+      "native_case_index_entries": 100,
+      "native_case_index_bytes": 100,
+      "default_case_index": 68,
+      "compiler_section_data_not_inline_asm_or_padding": true,
+      "compiler_table_relocations_are_locally_bound": true,
+      "first_table_offset": 87757,
+      "second_table_offset": 88033
+    },
+    "executable_code_byte_delta_from_original": -41,
+    "executable_code_instructions": 18981,
     "native_effect_0x1f0_spawn_first_and_frame_bounds_restored": true,
     "restored_native_field_first_float_comparisons": {
       "effects[effectIndex].x > 620.0": 43,
@@ -324,7 +341,7 @@
       "effects[effectIndex].vy > 0.0": 2
     },
     "object": "build/minagi-slot07/Character21Effects-natural.obj",
-    "function_body_sha256": "97e9f59b4fea336e6687353d91c4098eac50bf7e844e7bd8468523fea65e1153",
+    "function_body_sha256": "89f35159745074060055647256d6844c7110115e489b4faa225669eac9b13f43",
     "compiler_flags": [
       "/Od",
       "/G6",
@@ -409,5 +426,5 @@
   "source_contains_inline_assembly_or_padding": false,
   "strict_function_exact": false,
   "strict_whole_owner_exact": false,
-  "qualification": "All 68 distinct native effect types are represented in a complete typed C++ Slot07 candidate, and pinned VC7.1 compilation reproduces all ten classes of direct helper call in identical order, plus the 42 virtual emit/remove calls in identical order. All 18 RandomRange immediate upper bounds also match in native order. All 789 original floating literal references match the candidate values and native access order. All 37 x87 float-to-int calls load the corresponding character or local-effect position axis in original order. This does not certify branch-level equivalence, COFF relocation targets, function byte identity or full-game integration. Do not register this prototype as complete or add it to accepted exact ledgers."
+  "qualification": "All 68 distinct native effect types are represented in a complete typed C++ Slot07 candidate, and pinned VC7.1 compilation reproduces all ten classes of direct helper call in identical order, plus the 42 virtual emit/remove calls in identical order. All 18 RandomRange immediate upper bounds also match in native order. All 789 original floating literal references match the candidate values and native access order. All 37 x87 float-to-int calls load the corresponding character or local-effect position axis in original order. This does not certify branch-level equivalence, COFF relocation targets, function byte identity or full-game integration. The candidate COFF COMDAT includes 276 bytes of compiler-emitted switch-pointer data and 100 bytes of dense case-index data after the real RET; these are decoded and validated separately, never counted as x86 instructions or as byte-padding. Do not register this prototype as complete or add it to accepted exact ledgers."
 }

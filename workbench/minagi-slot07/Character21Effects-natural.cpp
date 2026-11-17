@@ -4592,7 +4592,7 @@ effects[effectIndex].frame <= 7 &&
           }
           effects[effectIndex].vy =
                effects[effectIndex].vy + 0.05;
-          if ((0.0 < effects[effectIndex].y) &&
+          if ((effects[effectIndex].y > 0.0) &&
              (effects[effectIndex].vy > 0.0)) {
             effects[effectIndex].vy =
                  -effects[effectIndex].vy;
@@ -4637,7 +4637,7 @@ effects[effectIndex].frame <= 7 &&
           }
           effects[effectIndex].vy =
                effects[effectIndex].vy + 0.03;
-          if ((0.0 < effects[effectIndex].y) &&
+          if ((effects[effectIndex].y > 0.0) &&
              (effects[effectIndex].vy > 0.0)) {
             effects[effectIndex].vy =
                  -effects[effectIndex].vy;
@@ -4675,8 +4675,8 @@ effects[effectIndex].frame <= 7 &&
           }
         }
       }
-      effectIndex = effectIndex + 1;
-      if (0x3f < effectIndex) {
+      ++effectIndex;
+      if (effectIndex >= 64) {
         effectIndex = 0;
       }
     }
