@@ -1642,6 +1642,8 @@ comparisons. Early CPU-state gates also use the native unsigned `0x31`/`0x96`
 boundary comparisons. State-0x11 aerial gates now use nested positive
 short-circuit predicates that preserve native x87 branch polarity. The
 vertical-position tests retain the native operand order and unordered cases.
+The state-0x11 inverse vertical-decision predicate now preserves the `20`,
+`84`, and `90` thresholds and its native early-exit path.
 The state-0x11 grounded-input fallback now returns through the owner exit before
 the later state checks, as in the native control flow. The candidate remains **not Exact** and
 has not been promoted into `src/` or the match ledger. Rebuild only this owner
