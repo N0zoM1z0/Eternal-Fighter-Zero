@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "status": "natural-cpp-Akane-action-boss-progress-not-exact",
+  "original": {
+    "address": "0x703d40",
+    "owner_bytes": 11584,
+    "vtable_slot4": "0x788ec0",
+    "sha256": "4487a9f0e2ddb4b7977969c72c157052a237077d97ab62b2306af559cf0427b7",
+    "instructions": 2938,
+    "clear_calls": 43
+  },
+  "candidate": {
+    "source": "workbench/akane-action/Character02Action-natural.cpp",
+    "source_sha256": "1c7b341314a8d45002e7b6b73ba235bde0aca5e16f2bf72bae4be25c0b74f67f",
+    "object": "build/akane-action/Character02Action-natural.obj",
+    "object_sha256": "3ef2d4afef66da34dc3bc2936e9aee485d44f1dc4cab78a091e0fa6cdfd3eb3d",
+    "compiler_flags": [
+      "/Od",
+      "/G6",
+      "/MT",
+      "/Gy",
+      "/W3"
+    ],
+    "bytes": 11586,
+    "size_delta": 2,
+    "instructions": 2938,
+    "clear_calls": 43,
+    "coff_relocations": 94,
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287"
+  },
+  "all_43_original_clear_call_state_ids_match": true,
+  "all_43_transitions": [
+    {
+      "index": 1,
+      "original_va": "0x703e70",
+      "candidate_offset": "0x130",
+      "offset_delta": 0,
+      "original_state": "0xa7",
+      "candidate_state": "0xa7"
+    },
+    {
+      "index": 2,
+      "original_va": "0x703f74",
+      "candidate_offset": "0x234",
+      "offset_delta": 0,
+      "original_state": "0x135",
+      "candidate_state": "0x135"
+    },
+    {
+      "index": 3,
+      "original_va": "0x704073",
+      "candidate_offset": "0x332",
+      "offset_delta": -1,
+      "original_state": "0x134",
+      "candidate_state": "0x134"
+    },
+    {
+      "index": 4,
+      "original_va": "0x70417f",
+      "candidate_offset": "0x43e",
+      "offset_delta": -1,
+      "original_state": "0x133",
+      "candidate_state": "0x133"
+    },
+    {
+      "index": 5,
+      "original_va": "0x70429a",
+      "candidate_offset": "0x559",
+      "offset_delta": -1,
+      "original_state": "0x132",
+      "candidate_state": "0x132"
+    },
+    {
+      "index": 6,
+      "original_va": "0x704389",
+      "candidate_offset": "0x647",
+      "offset_delta": -2,
+      "original_state": "0x12e",
+      "candidate_state": "0x12e"
+    },
+    {
+      "index": 7,
+      "original_va": "0x704485",
+      "candidate_offset": "0x744",
+      "offset_delta": -1,
+      "original_state": "0x12d",
+      "candidate_state": "0x12d"
+    },
+    {
+      "index": 8,
+      "original_va": "0x704592",
+      "candidate_offset": "0x850",
+      "offset_delta": -2,
+      "original_state": "0x12c",
+      "candidate_state": "0x12c"
+    },
+    {
+      "index": 9,
+      "original_va": "0x704680",
+      "candidate_offset": "0x93e",
+      "offset_delta": -2,
+      "original_state": "0x12f",
+      "candidate_state": "0x12f"
+    },
+    {
+      "index": 10,
+      "original_va": "0x70476f",
+      "candidate_offset": "0xa2d",
+      "offset_delta": -2,
+      "original_state": "0x130",
+      "candidate_state": "0x130"
+    },
+    {
+      "index": 11,
+      "original_va": "0x70485d",
+      "candidate_offset": "0xb1b",
+      "offset_delta": -2,
+      "original_state": "0x131",
+      "candidate_state": "0x131"
+    },
+    {
+      "index": 12,
+      "original_va": "0x70495b",
+      "candidate_offset": "0xc19",
+      "offset_delta": -2,
+      "original_state": "0x111",
+      "candidate_state": "0x111"
+    },
+    {
+      "index": 13,
+      "original_va": "0x704a40",
+      "candidate_offset": "0xcfe",
+      "offset_delta": -2,
+      "original_state": "0x110",
+      "candidate_state": "0x110"
+    },
+    {
+      "index": 14,
+      "original_va": "0x704b16",
+      "candidate_offset": "0xdd4",
+      "offset_delta": -2,
+      "original_state": "0x10f",
+      "candidate_state": "0x10f"
+    },
+    {
+      "index": 15,
+      "original_va": "0x704c17",
+      "candidate_offset": "0xed5",
+      "offset_delta": -2,
+      "original_state": "0xff",
+      "candidate_state": "0xff"
+    },
+    {
+      "index": 16,
+      "original_va": "0x704cfe",
+      "candidate_offset": "0xfbc",
+      "offset_delta": -2,
+      "original_state": "0xfe",
+      "candidate_state": "0xfe"
+    },
+    {
+      "index": 17,
+      "original_va": "0x704dd6",
+      "candidate_offset": "0x1094",
+      "offset_delta": -2,
+      "original_state": "0xfd",
+      "candidate_state": "0xfd"
+    },
+    {
+      "index": 18,
+      "original_va": "0x704e95",
+      "candidate_offset": "0x1153",
+      "offset_delta": -2,
+      "original_state": "0x102",
+      "candidate_state": "0x102"
+    },
+    {
+      "index": 19,
+      "original_va": "0x704f55",
+      "candidate_offset": "0x1213",
+      "offset_delta": -2,
+      "original_state": "0x101",
+      "candidate_state": "0x101"
+    },
+    {
+      "index": 20,
+      "original_va": "0x705014",
+      "candidate_offset": "0x12d2",
+      "offset_delta": -2,
+      "original_state": "0x100",
+      "candidate_state": "0x100"
+    },
+    {
+      "index": 21,
+      "original_va": "0x7050d4",
+      "candidate_offset": "0x1392",
+      "offset_delta": -2,
+      "original_state": "0x105",
+      "candidate_state": "0x105"
+    },
+    {
+      "index": 22,
+      "original_va": "0x705193",
+      "candidate_offset": "0x1451",
+      "offset_delta": -2,
+      "original_state": "0x104",
+      "candidate_state": "0x104"
+    },
+    {
+      "index": 23,
+      "original_va": "0x705253",
+      "candidate_offset": "0x1511",
+      "offset_delta": -2,
+      "original_state": "0x103",
+      "candidate_state": "0x103"
+    },
+    {
+      "index": 24,
+      "original_va": "0x705363",
+      "candidate_offset": "0x1621",
+      "offset_delta": -2,
+      "original_state": "0xfc",
+      "candidate_state": "0xfc"
+    },
+    {
+      "index": 25,
+      "original_va": "0x70545b",
+      "candidate_offset": "0x1719",
+      "offset_delta": -2,
+      "original_state": "0xfb",
+      "candidate_state": "0xfb"
+    },
+    {
+      "index": 26,
+      "original_va": "0x705543",
+      "candidate_offset": "0x1801",
+      "offset_delta": -2,
+      "original_state": "0xfa",
+      "candidate_state": "0xfa"
+    },
+    {
+      "index": 27,
+      "original_va": "0x705c72",
+      "candidate_offset": "0x1f30",
+      "offset_delta": -2,
+      "original_state": "0xe",
+      "candidate_state": "0xe"
+    },
+    {
+      "index": 28,
+      "original_va": "0x705d3b",
+      "candidate_offset": "0x1ff9",
+      "offset_delta": -2,
+      "original_state": "0xe6",
+      "candidate_state": "0xe6"
+    },
+    {
+      "index": 29,
+      "original_va": "0x705e16",
+      "candidate_offset": "0x20d4",
+      "offset_delta": -2,
+      "original_state": "0xcf",
+      "candidate_state": "0xcf"
+    },
+    {
+      "index": 30,
+      "original_va": "0x705ef7",
+      "candidate_offset": "0x21b5",
+      "offset_delta": -2,
+      "original_state": "0xcc",
+      "candidate_state": "0xcc"
+    },
+    {
+      "index": 31,
+      "original_va": "0x705fd8",
+      "candidate_offset": "0x2296",
+      "offset_delta": -2,
+      "original_state": "0xc8",
+      "candidate_state": "0xc8"
+    },
+    {
+      "index": 32,
+      "original_va": "0x70604f",
+      "candidate_offset": "0x230d",
+      "offset_delta": -2,
+      "original_state": "0xe7",
+      "candidate_state": "0xe7"
+    },
+    {
+      "index": 33,
+      "original_va": "0x70612a",
+      "candidate_offset": "0x23e8",
+      "offset_delta": -2,
+      "original_state": "0xd0",
+      "candidate_state": "0xd0"
+    },
+    {
+      "index": 34,
+      "original_va": "0x70620c",
+      "candidate_offset": "0x24ca",
+      "offset_delta": -2,
+      "original_state": "0xcd",
+      "candidate_state": "0xcd"
+    },
+    {
+      "index": 35,
+      "original_va": "0x70632c",
+      "candidate_offset": "0x25ea",
+      "offset_delta": -2,
+      "original_state": "0xc9",
+      "candidate_state": "0xc9"
+    },
+    {
+      "index": 36,
+      "original_va": "0x7063dc",
+      "candidate_offset": "0x269a",
+      "offset_delta": -2,
+      "original_state": "0xca",
+      "candidate_state": "0xca"
+    },
+    {
+      "index": 37,
+      "original_va": "0x706453",
+      "candidate_offset": "0x2711",
+      "offset_delta": -2,
+      "original_state": "0xe8",
+      "candidate_state": "0xe8"
+    },
+    {
+      "index": 38,
+      "original_va": "0x7065e6",
+      "candidate_offset": "0x28a4",
+      "offset_delta": -2,
+      "original_state": "0xf0",
+      "candidate_state": "0xf0"
+    },
+    {
+      "index": 39,
+      "original_va": "0x7066ba",
+      "candidate_offset": "0x297c",
+      "offset_delta": 2,
+      "original_state": "0xd3",
+      "candidate_state": "0xd3"
+    },
+    {
+      "index": 40,
+      "original_va": "0x706762",
+      "candidate_offset": "0x2a24",
+      "offset_delta": 2,
+      "original_state": "0xd1",
+      "candidate_state": "0xd1"
+    },
+    {
+      "index": 41,
+      "original_va": "0x706844",
+      "candidate_offset": "0x2b06",
+      "offset_delta": 2,
+      "original_state": "0xce",
+      "candidate_state": "0xce"
+    },
+    {
+      "index": 42,
+      "original_va": "0x7069c1",
+      "candidate_offset": "0x2c83",
+      "offset_delta": 2,
+      "original_state": "0xdc",
+      "candidate_state": "0xdc"
+    },
+    {
+      "index": 43,
+      "original_va": "0x706a6e",
+      "candidate_offset": "0x2d30",
+      "offset_delta": 2,
+      "original_state": "0xcb",
+      "candidate_state": "0xcb"
+    }
+  ],
+  "source_contains_inline_asm_or_emitted_opcodes": false,
+  "strict_whole_owner_exact": false,
+  "qualification": "All 43 native ClearBufferedButtons call sites now lead to the same action-state IDs in the same order in natural C++. This is a control-flow milestone, not whole-owner Exact: candidate byte count, instruction layout, branch-level semantics, and COFF destinations still require closure. Keep this candidate outside all accepted ledgers."
+}

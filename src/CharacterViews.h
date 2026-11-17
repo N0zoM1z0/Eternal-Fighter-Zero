@@ -38,7 +38,9 @@ public:
     virtual void InitializeState();
 };
 class Character02 : public Secondary {
-    unsigned char unknown_body[0x3458 - sizeof(Secondary)];
+    int field3138, field313c, field3140, field3144, field3148;
+    int field314c[64], field324c[64], field334c[64];
+    unsigned char unknown_344c[12];
 public:
     Character02(Secondary **, Context *, Video *, Input *, Audio *, char);
     virtual void ResetPose();
@@ -54,6 +56,7 @@ public:
     virtual void RemoveLocalEffect(short);
     virtual void InitializeState();
 };
+typedef char Character02ExtentMustMatchNativeAllocation[(sizeof(Character02) == 0x3458) ? 1 : -1];
 class Character03 : public Secondary {
     int field3138;
     int field313c;
