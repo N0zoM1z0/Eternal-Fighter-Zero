@@ -90,6 +90,46 @@ def ordered_call_sites(code: bytes, name: str, original_address: int = 0):
     return direct,virtual
 
 
+def ordered_ftol_sources(code: bytes, name: str, ftol_calls: list[tuple[int,int]],
+                         original_address: int = 0) -> list[str]:
+    """Trace each x87 float-to-int's actual operand, not only its call site.
+
+    The native function uses either a typed local effect x/y position or the
+    owner position x/y. This checks the exact 37-source order via decoded
+    instructions so a accidentally swapped position can never pass call counts.
+    """
+    binary = ROOT/'.analysis/probes/minagi-slot07'/f'{name}-ftol-source.bin'
+    binary.parent.mkdir(parents=True,exist_ok=True)
+    binary.write_bytes(code)
+    asm=subprocess.run([
+        'objdump','-w','-z','-D','-b','binary','-m','i386','-Mintel',
+        f'--adjust-vma={original_address}',str(binary)
+    ],text=True,capture_output=True,check=True).stdout
+    rows=[]
+    for line in asm.splitlines():
+        m=re.match(r'^\s*([0-9a-f]+):\s+((?:[0-9a-f]{2}\s+)+)\s+(.+)',line)
+        if m:rows.append((int(m.group(1),16)-original_address,m.group(3).strip()))
+    indexed={offset:index for index,(offset,operation) in enumerate(rows)}
+    names={0x4e8:'local-effect-x',0x4f0:'local-effect-y',
+           0x20:'character-x',0x28:'character-y'}
+    results=[]
+    for offset,target in ftol_calls:
+        if target!=0x007783B8:raise AssertionError(('non-ftol2 call',offset,target))
+        if offset not in indexed:raise AssertionError(('undecoded ftol2 call',offset))
+        i=indexed[offset]
+        if not rows[i][1].startswith('call '):raise AssertionError(('invalid ftol2 instruction',rows[i]))
+        loads=[]
+        for position,operation in rows[max(0,i-24):i]:
+            match=re.search(r'\bfld\s+QWORD PTR \[[a-z]{3}(?:\+[a-z]{3}\*[1248])?\+0x([0-9a-fA-F]+)\]$',operation)
+            if match:
+                displacement=int(match.group(1),16)
+                if displacement in names:loads.append((position,names[displacement]))
+        if not loads:
+            raise AssertionError(('float-to-int has no grounded position load',name,offset))
+        results.append(loads[-1][1])
+    return results
+
+
 def original_float_literal_values(image, native: bytes):
     """Read each original x87 f64 memory operand, in instruction order.
 
@@ -207,6 +247,24 @@ def main():
         raise AssertionError(('unbound candidate direct call sites',
                               candidate_direct,candidate_bound_calls))
 
+    # Stronger semantic binding: all 37 __ftol2 conversions must read
+    # the same x/y source field in the same call order as the native PE.
+    native_ftol_calls=[item for item in original_direct if item[1]==0x007783B8]
+    candidate_ftol_calls=[item for item in candidate_bound_calls if item[1]==0x007783B8]
+    if len(native_ftol_calls)!=37 or len(candidate_ftol_calls)!=37:
+        raise AssertionError(('unexpected native/candidate ftol2 sites',
+                              len(native_ftol_calls),len(candidate_ftol_calls)))
+    native_ftol_fields=ordered_ftol_sources(
+        native,'original',native_ftol_calls,ORIGINAL_START)
+    candidate_ftol_fields=ordered_ftol_sources(
+        candidate,'candidate',candidate_ftol_calls)
+    if native_ftol_fields!=candidate_ftol_fields:
+        raise AssertionError(('wrong position feed into C++ float-to-int conversion',
+                              native_ftol_fields,candidate_ftol_fields))
+    ftol_fields_digest=hashlib.sha256(
+        json.dumps(native_ftol_fields,separators=(',',':')).encode()
+    ).hexdigest()
+
     # Every x87 double referenced by the 87,798-byte native boss must appear
     # with the same value and multiplicity among the compiled C++ relocations.
     # This is strictly weaker than ordered identity: the remaining out-of-order
@@ -245,6 +303,8 @@ def main():
                 hex(addr):count for addr,count in sorted(calls.items())
             },
             'floating_literal_references':len(native_floats),
+            'ordered_ftol2_position_sources':native_ftol_fields,
+            'ordered_ftol2_source_sha256':ftol_fields_digest,
             'distinct_floating_literal_values':len(original_histogram),
             'floating_literal_histogram_sha256':histogram_hash,
             'ordered_direct_helper_targets':[hex(address)
@@ -266,6 +326,8 @@ def main():
             'dispatch_cases':len(ids),
             'dispatch_ids_match_original':True,
             'coff_relocations':len(relocations),
+            'ftol2_position_sources_in_original_order':len(candidate_ftol_fields),
+            'ordered_ftol2_source_sha256':ftol_fields_digest,
             'floating_literal_relocations':len(candidate_floats),
             'floating_literal_value_multiset_matches_original':True,
             'float_literal_values_matching_native_order':floats_in_native_order,
@@ -290,9 +352,10 @@ def main():
             'typed C++ Slot07 candidate, and pinned VC7.1 compilation reproduces '
             'all ten classes of direct helper call in identical order, plus the '
             '42 virtual emit/remove calls in identical order. All 789 original '
-            'floating literal references match the candidate values as a multiset, '
-            'but their access order still diverges at some positions. This does '
-            'not certify branch-level equivalence, COFF relocation targets, '
+            'floating literal references match the candidate values and native '
+            'access order. All 37 x87 float-to-int calls load the corresponding '
+            'character or local-effect position axis in original order. This '
+            'does not certify branch-level equivalence, COFF relocation targets, '
             'function byte identity or full-game integration. Do not register '
             'this prototype as complete or add it to accepted exact ledgers.'
         )
@@ -307,6 +370,7 @@ def main():
         'cases':len(ids),
         'direct_call_sites':sum(expected_counts.values()),
         'ordered_virtual_calls':len(candidate_virtual),
+        'ftol2_position_sources_in_order':len(candidate_ftol_fields),
         'relocations':len(relocations),
         'float_literals_value_matched':len(native_floats),
         'float_literals_in_native_order':floats_in_native_order,
