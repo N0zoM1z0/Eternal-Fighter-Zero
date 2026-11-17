@@ -297,7 +297,7 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot07/Character21Effects-natural.cpp",
-    "source_sha256": "a1a2a6513fbaa5f89fb1b49a3ac139fb24761e5320d3a68ddeb418cb8363f257",
+    "source_sha256": "3252a600eb5871f1f5b2bdfe156f8a8c7bb01ed77ecfb20a3e5562d9646023e2",
     "unsigned_field0008_equality_and_inequality": true,
     "unsigned_effect_tick_zero_equality": true,
     "unsigned_effect_type_switch": true,
@@ -309,13 +309,13 @@
     "instruction_shape_audit": {
       "native_decoded_instructions": 18977,
       "candidate_decoded_instructions": 19184,
-      "matching_normalized_instructions_between_float_anchors": 14062,
-      "changed_regions": 425,
+      "matching_normalized_instructions_between_float_anchors": 14160,
+      "changed_regions": 359,
       "regions_compared": 790,
       "alignment_is_provisional_diagnostic_only": true
     },
     "object": "build/minagi-slot07/Character21Effects-natural.obj",
-    "function_body_sha256": "8df8568a2fdd2b57b922626e8bada6d625465d75fdddcdf6fa1f7196537c19ae",
+    "function_body_sha256": "5ec759113644e9c68b878a62e2b2270800c922503b9659959d37ff36d27bb655",
     "compiler_flags": [
       "/Od",
       "/G6",
