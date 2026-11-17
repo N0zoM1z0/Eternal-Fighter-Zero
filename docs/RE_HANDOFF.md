@@ -1621,5 +1621,13 @@ The native CPU/AI virtual `Character19::Slot05` at `0x00678C30` reads and
 updates two adjacent signed 32-bit cooldowns at object offsets `+0x314C` and
 `+0x3150`. `Character19` now names those fields `field314c` and `field3150`
 instead of an opaque eight-byte region; the class layout and offsets are
-unchanged. The complete 17,176-byte CPU function remains under reconstruction
-and is **not** marked exact yet.
+unchanged. The complete 17,176-byte CPU function now has a natural C++ workbench
+reconstruction at `workbench/character19-cpu/Character19Cpu-decomp.cpp`.
+The selected VC7.1 `/Od` candidate is 17,180 bytes (4 bytes over native),
+with the original `0xCC` stack frame and matching entry prologue. The large
+AI/state branches and neutral-input fallback are present; remaining
+instruction differences are being narrowed through C++ expression order,
+float comparison lowering, and signed/unsigned local lifetimes. It remains
+**not Exact** and has not been promoted into `src/` or the match ledger.
+Rebuild only this owner with `scripts/repo-python
+workbench/character19-cpu/check-decomp.py`; no full cold replay is needed.
