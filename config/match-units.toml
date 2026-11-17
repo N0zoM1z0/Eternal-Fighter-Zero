@@ -171139,3 +171139,13 @@ type = "REL32"
 symbol = "?FaceOpponent@Secondary@@QAEHXZ"
 target = 0x0040e630
 evidence = "Canonical original EFZ PE 0x006763B0 independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630"
+
+[units.character-19-slot02]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character19Commands.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-19-slot02/Character19Commands.obj"
+symbol = "?Slot02@Character19@@UAEXXZ"
+target_address = 0x00677e60
+size = 3528

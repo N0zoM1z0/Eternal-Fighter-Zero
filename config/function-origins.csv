@@ -431,7 +431,7 @@ address,origin,status,evidence
 0x00677E10,authored,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact
 0x00677E20,authored,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact
 0x00677E30,authored,reviewed,docs/KNOWLEDGE_BASE.md#kanna-character19-lifecycle-exact
-0x00677E60,unknown,unreviewed,
+0x00677E60,authored,reviewed,docs/evidence/character-19-slot02-exact.json
 0x00678C30,unknown,unreviewed,
 0x0067CF50,unknown,unreviewed,
 0x00683550,unknown,unreviewed,

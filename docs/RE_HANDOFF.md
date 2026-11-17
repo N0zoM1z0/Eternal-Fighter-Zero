@@ -5,6 +5,17 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
+## Kanna (Character19) command recognizer accepted — 2026-11-17
+
+`Character19::Slot02` at `0x00677E60` is strict Exact: **3,528/3,528
+bytes, zero relocations, zero differences**. Natural C++ source is
+`src/Character19Commands.cpp`. It preserves the 12 original-priority scans
+through the 180-frame circular input history, including the long meter-gated
+super command, four facing-sensitive special-move scans, the release-edge
+recognizer and four individual attack-button scans. The mutually exclusive
+one-byte stage and release state use a real local C++ union to recover the
+native stack slot; no ASM, padding, byte edits or full cold replay.
+
 ## Kanna (Character19) specialized locomotion accepted — 2026-11-17
 
 `Character19::UpdateLocomotionState` at `0x00675FD0` is strict Exact for

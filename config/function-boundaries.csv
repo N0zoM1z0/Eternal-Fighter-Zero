@@ -557,3 +557,4 @@ address,end,size,status,evidence
 0x0075B0A0,0x0075D260,8640,reviewed,docs/evidence/scene6-render-exact.json
 0x0075D660,0x0075D8C7,615,reviewed,docs/evidence/scene6-number-backdrop-exact.json
 0x00675FD0,0x006763B8,1000,reviewed,docs/evidence/character-19-locomotion-exact.json
+0x00677E60,0x00678C28,3528,reviewed,docs/evidence/character-19-slot02-exact.json
