@@ -13,7 +13,7 @@ gate is expressed as a natural early command return, with signed-byte tests,
 exact opponent-state boundaries, unsigned RNG promotions, and signed
 air-action lock tests normalized to `<= 0` to recover native `TEST/JG`, and
 velocity-sign tests use the operand order emitted by the native x87 compare. Targeted
-instruction alignment reports 4,048 of 4,452 candidate instructions aligned
+instruction alignment reports 4,056 of 4,452 candidate instructions aligned
 with native order/semantics. The native x87 unordered-compare paths are preserved with explicit negated
 relational tests where the native branches treat unordered values as true;
 `positionY == 0.0` remains a true equality test.
@@ -23,7 +23,8 @@ exact signed/unsigned byte/word bounds. Remaining
 differences are concentrated in nested state branches, later RNG temporaries,
 and branch-return layout. The large AI gate now preserves native unsigned
 state-code bounds and unordered-aware floating-point range predicates, including the two AI
-probability-gate comparisons against RNG values.
+probability-gate comparisons against RNG values. The early CPU-state gates
+now use the native `0x31`/`0x96` comparison boundaries directly.
 Rebuild only this function with:
 
 ```sh

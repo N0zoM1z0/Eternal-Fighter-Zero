@@ -30,7 +30,7 @@ void Character19::Slot05()
   if (field314c < 0) {
     field314c = 0;
   }
-  if (((unsigned short)field0008 >= 0x32) && (field0008 < 0xa1)) {
+  if ((0x31 < field0008) && (field0008 < 0xa1)) {
     field314c = 0xb4;
   }
   if (field3150 < 0) {
@@ -313,8 +313,8 @@ void Character19::Slot05()
       }
 
         if ((((positionY == 0.0) && (field0008 < 4)) &&
-            ((unsigned short)(*opponentSlot)->field0008 >= 0x32)) &&
-           (((unsigned short)(*opponentSlot)->field0008 <= 0x95 && (field3114 == 0)
+            (0x31 < (*opponentSlot)->field0008)) &&
+           (((*opponentSlot)->field0008 < 0x96 && (field3114 == 0)
             ))) {
           if ((((*opponentSlot)->positionY < 0.0) &&
               ((distance.vertical < 100.0 && (distance.forward < 130.0)))) &&
@@ -346,7 +346,7 @@ void Character19::Slot05()
             }
           }
         }
-        if (((0 < field3114) && ((unsigned short)field0008 >= 0x32)) &&
+        if (((0 < field3114) && (0x31 < field0008)) &&
            (field0008 < 0x9e)) {
           field3114 = 0;
         }

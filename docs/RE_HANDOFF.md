@@ -1630,7 +1630,7 @@ state-range gate is reconstructed as the native-order early command return,
 with exact signed-byte and opponent-state boundaries. Native x87 unordered-compare paths are preserved with explicit negated
 relational tests where the original branches treat unordered values as true;
 `positionY == 0.0` remains a true equality test.
-Targeted instruction alignment reports 4,048 of 4,452 candidate instructions
+Targeted instruction alignment reports 4,056 of 4,452 candidate instructions
 aligned with native order/semantics. The source also restores native unsigned
 RNG zero-extension, signed air-action-lock `<= 0` tests, and an explicit short-circuit/early-exit reconstruction of the state-0x11
 aerial decision tree with unordered-aware x87 relational forms. The final
@@ -1638,7 +1638,8 @@ grounded-movement cooldown owner now follows native right/left active-frame
 priority, collision clamping, and randomized cooldown assignment order. The
 large AI gate also restores native unsigned state-code boundaries and
 unordered-aware floating-point range predicates, including RNG probability
-comparisons. The candidate remains **not Exact** and
+comparisons. Early CPU-state gates also use the native unsigned `0x31`/`0x96`
+boundary comparisons. The candidate remains **not Exact** and
 has not been promoted into `src/` or the match ledger. Rebuild only this owner
 with `scripts/repo-python workbench/character19-cpu/check-decomp.py`; no full
 cold replay is needed.
