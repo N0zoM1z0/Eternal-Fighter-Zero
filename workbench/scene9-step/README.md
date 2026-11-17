@@ -22,12 +22,17 @@ It compiles only this translation unit with the pinned `/Od /G6 /MT /Gy /GS /W3`
 profile and compares against canonical `EFZ.exe`. Current measurements:
 
 - **Native owner:** 4,896 bytes, initial `0x98` stack frame.
-- **Candidate:** 4,260 bytes, same `0x98` frame, 39 COFF relocations.
-- **First 122 position-aligned bytes:** agree when their *three actual COFF
-  operands* are independently ignored for this diagnostic, not acceptance.
-- **Unresolved deficit:** 636 bytes. The first differing position
-  `0x0077155A` is an internal jump displacement to a later branch that has
-  not yet achieved identical native layout.
+- **First committed candidate (`0300bec`):** 4,260 bytes, the original
+  `0x98` frame and 39 COFF relocations. Its first 122 position-aligned bytes
+  matched after excluding the *three real COFF relocation operands*, not as
+  an acceptance claim.
+- **Subsequent source experiments:** reordered the zero-mode winner path and
+  tested direct `delete` lifetimes and signed player-index semantics. These can
+  change the compiled size and stack frame; consult the live script output for
+  the current measurements rather than treating the original 636-byte deficit
+  as permanently fixed.
+- The old first difference `0x0077155A` was an internal long-jump displacement
+  to a later branch whose absolute location remains under reconstruction.
 
 This is meaningful source coverage but **not codegen Exact**, does not add to
 `config/matches.csv`, and carries no factory acceptance credit. Continue by

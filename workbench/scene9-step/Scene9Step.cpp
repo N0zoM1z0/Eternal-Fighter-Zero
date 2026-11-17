@@ -28,54 +28,54 @@ unsigned char Scene9::Step()
         if (contextOwner->flag14283 > 0)
             contextOwner->replayFile.Close();
         if (contextOwner->mode1364 == 0) {
-            if (contextOwner->winner134c != contextOwner->selectedPlayer) {
-                if (contextOwner->playerFlag1378[0]) {
+            if (contextOwner->winner134c == contextOwner->selectedPlayer) {
+                if (contextOwner->flag1358 == 8) {
+                    delete *secondarySlotA;
+                    delete *secondarySlotB;
+                    *secondarySlotA = 0;
+                    *secondarySlotB = 0;
                     flag002d = 0;
                     phase = 1;
-                    return 2;
+                    return 7;
                 }
-                if (*secondarySlotA) delete *secondarySlotA;
-                if (*secondarySlotB) delete *secondarySlotB;
-                *secondarySlotA = 0;
-                *secondarySlotB = 0;
+                if (contextOwner->selectedPlayer == 1) {
+                    contextOwner->field135c |= 1 << (*secondarySlotA)->characterId;
+                    delete *secondarySlotA;
+                    *secondarySlotA = 0;
+                } else {
+                    contextOwner->field135c |= 1 << (*secondarySlotB)->characterId;
+                    delete *secondarySlotB;
+                    *secondarySlotB = 0;
+                }
+                ++contextOwner->flag1358;
+                contextOwner->playerFlag1378[0] = 0;
                 flag002d = 0;
                 phase = 1;
-                return 1;
+                return 2;
             }
-            if (contextOwner->flag1358 == 8) {
-                if (*secondarySlotA) delete *secondarySlotA;
-                if (*secondarySlotB) delete *secondarySlotB;
-                *secondarySlotA = 0;
-                *secondarySlotB = 0;
+            if (contextOwner->playerFlag1378[0]) {
                 flag002d = 0;
                 phase = 1;
-                return 7;
+                return 2;
             }
-            if (contextOwner->selectedPlayer == 1) {
-                contextOwner->field135c |= 1 << (*secondarySlotA)->characterId;
-                if (*secondarySlotA) delete *secondarySlotA;
-                *secondarySlotA = 0;
-            } else {
-                contextOwner->field135c |= 1 << (*secondarySlotB)->characterId;
-                if (*secondarySlotB) delete *secondarySlotB;
-                *secondarySlotB = 0;
-            }
-            ++contextOwner->flag1358;
-            contextOwner->playerFlag1378[0] = 0;
+            delete *secondarySlotA;
+            delete *secondarySlotB;
+            *secondarySlotA = 0;
+            *secondarySlotB = 0;
             flag002d = 0;
             phase = 1;
-            return 2;
+            return 1;
         }
         if (contextOwner->mode1364 == 2 &&
-            contextOwner->winner134c == contextOwner->selectedPlayer &&
+            contextOwner->winner134c == (char)contextOwner->selectedPlayer &&
             contextOwner->flag1358 < 8) {
-            if (contextOwner->selectedPlayer == 1) {
+            if ((char)contextOwner->selectedPlayer == 1) {
                 contextOwner->field135c |= 1 << (*secondarySlotA)->characterId;
-                if (*secondarySlotA) delete *secondarySlotA;
+                delete *secondarySlotA;
                 *secondarySlotA = 0;
             } else {
                 contextOwner->field135c |= 1 << (*secondarySlotB)->characterId;
-                if (*secondarySlotB) delete *secondarySlotB;
+                delete *secondarySlotB;
                 *secondarySlotB = 0;
             }
             ++contextOwner->flag1358;
@@ -84,16 +84,16 @@ unsigned char Scene9::Step()
             return 2;
         }
         if (contextOwner->mode1364 == 6) {
-            if (*secondarySlotA) delete *secondarySlotA;
-            if (*secondarySlotB) delete *secondarySlotB;
+            delete *secondarySlotA;
+            delete *secondarySlotB;
             *secondarySlotA = 0;
             *secondarySlotB = 0;
             flag002d = 0;
             phase = 1;
             return 0;
         }
-        if (*secondarySlotA) delete *secondarySlotA;
-        if (*secondarySlotB) delete *secondarySlotB;
+        delete *secondarySlotA;
+        delete *secondarySlotB;
         *secondarySlotA = 0;
         *secondarySlotB = 0;
         flag002d = 0;
@@ -181,7 +181,7 @@ unsigned char Scene9::Step()
                contextOwner->buttonC[0] || contextOwner->buttonC[1] ||
                contextOwner->buttonD[0] || contextOwner->buttonD[1]) {
         if (contextOwner->mode1364 == 0 &&
-            contextOwner->winner134c != contextOwner->selectedPlayer &&
+            contextOwner->winner134c != (char)contextOwner->selectedPlayer &&
             resultPhase < 2) {
             if (resultPhase == 0) {
                                 if (secondary[(char)contextOwner->winner134c]->characterId == 19 || secondary[(char)contextOwner->winner134c]->characterId == 20 ||
