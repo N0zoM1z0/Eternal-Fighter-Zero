@@ -532,14 +532,14 @@ kanna_state11_second:
               goto kanna_state11_deeper;
 kanna_state11_deeper:
               if ((((!(distance.vertical < 20.0)) ||
-                   ((*opponentSlot)->positionY <= positionY)) &&
-                  ((*opponentSlot)->positionY >= positionY)) ||
+                   (!((*opponentSlot)->positionY > positionY))) &&
+                  (!((*opponentSlot)->positionY < positionY))) ||
                  (((*opponentSlot)->airActionLockFrames <= 0x54 ||
                   (airActionCount >= 2)))) {
                 if ((distance.vertical > 90.0) &&
                    ((((*opponentSlot)->positionY < positionY &&
-                     ((*opponentSlot)->airActionLockFrames >= 0x2e)) &&
-                    (airActionCount <= 1)))) {
+                     (0x2d < (*opponentSlot)->airActionLockFrames)) &&
+                    (airActionCount < 2)))) {
                   inputX = facing;
                   inputY = 0xff;
                 }
