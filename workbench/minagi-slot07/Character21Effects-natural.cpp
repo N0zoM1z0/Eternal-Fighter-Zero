@@ -951,13 +951,17 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 1;
             }
-            if (((0.0 <= effects[effectIndex].y) ||
-                (0xb < effects[effectIndex].frame)) ||
-               (effects[effectIndex].vy =
-                     effects[effectIndex].vy +
-                     effects[effectIndex].ay,
-               effects[effectIndex].y +
-               effects[effectIndex].vy <= 0.0)) {
+            if (effects[effectIndex].y < 0.0 &&
+                effects[effectIndex].frame < 12 &&
+                (effects[effectIndex].vy += effects[effectIndex].ay,
+                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+              effects[effectIndex].y = 0.0;
+              effects[effectIndex].vy = 0.0;
+              effects[effectIndex].vx = 0.0;
+              effects[effectIndex].tick = 0;
+              effects[effectIndex].frame = 0xc;
+            }
+            else {
               if (effects[effectIndex].field0080 < 1) {
                 if (620.0 < effects[effectIndex].x) {
                   effects[effectIndex].vx = 0.0;
@@ -990,13 +994,6 @@ void Character21::Slot07()
                 effects[effectIndex].tick = 0;
                 effects[effectIndex].type = 0x1a9;
               }
-            }
-            else {
-              effects[effectIndex].y = 0.0;
-              effects[effectIndex].vy = 0.0;
-              effects[effectIndex].vx = 0.0;
-              effects[effectIndex].tick = 0;
-              effects[effectIndex].frame = 0xc;
             }
           }
           break;
@@ -1020,13 +1017,17 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 1;
             }
-            if (((0.0 <= effects[effectIndex].y) ||
-                (0xb < effects[effectIndex].frame)) ||
-               (effects[effectIndex].vy =
-                     effects[effectIndex].vy +
-                     effects[effectIndex].ay,
-               effects[effectIndex].y +
-               effects[effectIndex].vy <= 0.0)) {
+            if (effects[effectIndex].y < 0.0 &&
+                effects[effectIndex].frame < 12 &&
+                (effects[effectIndex].vy += effects[effectIndex].ay,
+                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+              effects[effectIndex].y = 0.0;
+              effects[effectIndex].vy = 0.0;
+              effects[effectIndex].vx = 0.0;
+              effects[effectIndex].tick = 0;
+              effects[effectIndex].frame = 0xc;
+            }
+            else {
               if (effects[effectIndex].field0080 < 1) {
                 if (620.0 < effects[effectIndex].x) {
                   effects[effectIndex].vx = 0.0;
@@ -1059,13 +1060,6 @@ void Character21::Slot07()
                 effects[effectIndex].tick = 0;
                 effects[effectIndex].type = 0x1a9;
               }
-            }
-            else {
-              effects[effectIndex].y = 0.0;
-              effects[effectIndex].vy = 0.0;
-              effects[effectIndex].vx = 0.0;
-              effects[effectIndex].tick = 0;
-              effects[effectIndex].frame = 0xc;
             }
           }
           break;
@@ -1089,13 +1083,17 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 5;
             }
-            if (((0.0 <= effects[effectIndex].y) ||
-                (0xb < effects[effectIndex].frame)) ||
-               (effects[effectIndex].vy =
-                     effects[effectIndex].vy +
-                     effects[effectIndex].ay,
-               effects[effectIndex].y +
-               effects[effectIndex].vy <= 0.0)) {
+            if (effects[effectIndex].y < 0.0 &&
+                effects[effectIndex].frame < 12 &&
+                (effects[effectIndex].vy += effects[effectIndex].ay,
+                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+              effects[effectIndex].y = 0.0;
+              effects[effectIndex].vy = 0.0;
+              effects[effectIndex].vx = 0.0;
+              effects[effectIndex].tick = 0;
+              effects[effectIndex].frame = 0xc;
+            }
+            else {
               if (effects[effectIndex].field0080 < 1) {
                 if (620.0 < effects[effectIndex].x) {
                   effects[effectIndex].vx = 0.0;
@@ -1128,13 +1126,6 @@ void Character21::Slot07()
                 effects[effectIndex].tick = 0;
                 effects[effectIndex].type = 0x1a9;
               }
-            }
-            else {
-              effects[effectIndex].y = 0.0;
-              effects[effectIndex].vy = 0.0;
-              effects[effectIndex].vx = 0.0;
-              effects[effectIndex].tick = 0;
-              effects[effectIndex].frame = 0xc;
             }
           }
           break;
@@ -2369,13 +2360,17 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 1;
             }
-            if (((0.0 <= effects[effectIndex].y) ||
-                (0xb < effects[effectIndex].frame)) ||
-               (effects[effectIndex].vy =
-                     effects[effectIndex].vy +
-                     effects[effectIndex].ay,
-               effects[effectIndex].y +
-               effects[effectIndex].vy <= 0.0)) {
+            if (effects[effectIndex].y < 0.0 &&
+                effects[effectIndex].frame < 12 &&
+                (effects[effectIndex].vy += effects[effectIndex].ay,
+                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+              effects[effectIndex].y = 0.0;
+              effects[effectIndex].vy = 0.0;
+              effects[effectIndex].vx = 0.0;
+              effects[effectIndex].tick = 0;
+              effects[effectIndex].frame = 0xc;
+            }
+            else {
               if (620.0 < effects[effectIndex].x) {
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 620.0;
@@ -2401,13 +2396,6 @@ void Character21::Slot07()
                   field3148 = 0;
                 }
               }
-            }
-            else {
-              effects[effectIndex].y = 0.0;
-              effects[effectIndex].vy = 0.0;
-              effects[effectIndex].vx = 0.0;
-              effects[effectIndex].tick = 0;
-              effects[effectIndex].frame = 0xc;
             }
           }
           break;
@@ -2431,13 +2419,17 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 1;
             }
-            if (((0.0 <= effects[effectIndex].y) ||
-                (0xb < effects[effectIndex].frame)) ||
-               (effects[effectIndex].vy =
-                     effects[effectIndex].vy +
-                     effects[effectIndex].ay,
-               effects[effectIndex].y +
-               effects[effectIndex].vy <= 0.0)) {
+            if (effects[effectIndex].y < 0.0 &&
+                effects[effectIndex].frame < 12 &&
+                (effects[effectIndex].vy += effects[effectIndex].ay,
+                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+              effects[effectIndex].y = 0.0;
+              effects[effectIndex].vy = 0.0;
+              effects[effectIndex].vx = 0.0;
+              effects[effectIndex].tick = 0;
+              effects[effectIndex].frame = 0xc;
+            }
+            else {
               if (620.0 < effects[effectIndex].x) {
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 620.0;
@@ -2463,13 +2455,6 @@ void Character21::Slot07()
                   field3148 = 0;
                 }
               }
-            }
-            else {
-              effects[effectIndex].y = 0.0;
-              effects[effectIndex].vy = 0.0;
-              effects[effectIndex].vx = 0.0;
-              effects[effectIndex].tick = 0;
-              effects[effectIndex].frame = 0xc;
             }
           }
           break;
@@ -2493,13 +2478,17 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 5;
             }
-            if (((0.0 <= effects[effectIndex].y) ||
-                (0xb < effects[effectIndex].frame)) ||
-               (effects[effectIndex].vy =
-                     effects[effectIndex].vy +
-                     effects[effectIndex].ay,
-               effects[effectIndex].y +
-               effects[effectIndex].vy <= 0.0)) {
+            if (effects[effectIndex].y < 0.0 &&
+                effects[effectIndex].frame < 12 &&
+                (effects[effectIndex].vy += effects[effectIndex].ay,
+                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+              effects[effectIndex].y = 0.0;
+              effects[effectIndex].vy = 0.0;
+              effects[effectIndex].vx = 0.0;
+              effects[effectIndex].tick = 0;
+              effects[effectIndex].frame = 0xc;
+            }
+            else {
               if (620.0 < effects[effectIndex].x) {
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 620.0;
@@ -2525,13 +2514,6 @@ void Character21::Slot07()
                   field3148 = 0;
                 }
               }
-            }
-            else {
-              effects[effectIndex].y = 0.0;
-              effects[effectIndex].vy = 0.0;
-              effects[effectIndex].vx = 0.0;
-              effects[effectIndex].tick = 0;
-              effects[effectIndex].frame = 0xc;
             }
           }
           break;
