@@ -14,24 +14,20 @@
   },
   "candidate": {
     "source": "workbench/video-frame-rectangle/VideoFrameRectangle-natural.cpp",
-    "source_sha256": "d4546df1233e4ff001cd02bdf5d08c122eee456d4341d51176c02f2a55422c3e",
+    "source_sha256": "e5b29c79df4dd85550027fe5ab56c0d8e2959718f0705152cda029cba829f815",
     "function_bytes": 485,
     "native_size_delta": 0,
-    "sha256": "167533bf7f15aae3dc979ca0dac7c13b99233f8e6b5885eb615caacdf1d5feca",
+    "sha256": "580d98f6dc0b4eabd93868747c4b747fa8955989be5b45b0d2bc27f468743884",
     "instructions": 125,
     "stack_frame_bytes": 136,
-    "different_instruction_bytes": 11,
+    "different_instruction_bytes": 7,
     "first_different_offsets": [
       "0xad",
-      "0xb6",
       "0x110",
       "0x134",
       "0x139",
-      "0x147",
       "0x157",
-      "0x183",
       "0x192",
-      "0x1a8",
       "0x1ae"
     ],
     "normalized_instruction_matches": 124,
@@ -44,5 +40,5 @@
   },
   "source_contains_inline_assembly_or_padding": false,
   "strict_function_exact": false,
-  "qualification": "Native source-level clipping and pitch-aware 8-bit border writes are reconstructed as ordinary C++. All 125 instructions are decoded and 124 match structurally after hiding stack slots, literal widths and branches; the remaining source-level expression and stack layout are not yet proven identical. Remaining 11 byte differences are ten local slot assignments and one addressing register encoding. No authored Exact ledger claim."
+  "qualification": "Native source-level clipping and pitch-aware 8-bit border writes are reconstructed as ordinary C++. All 125 instructions are decoded and 124 match structurally after hiding stack slots, literal widths and branches; the remaining source-level expression and stack layout are not yet proven identical. Remaining seven byte differences are six remaining local slot assignments and one addressing register encoding. No authored Exact ledger claim."
 }

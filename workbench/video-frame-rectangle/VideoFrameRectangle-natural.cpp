@@ -2,14 +2,14 @@
 // buffer, with the native independent endpoint clipping (0..320, 0..240).
 // Original engine owner: 0x0040B110, complete 485-byte function.
 // Typed natural C++ candidate only. Byte identity remains unproven:
-// VC7.1 /Od still assigns local stack slots differently from the original.
+// VC7.1 /Od still differs in six local-slot bytes and one address register.
 #include "../../src/Engine.h"
 
 int Video::FrameRectangle(SurfaceRect rectangle, unsigned char color)
 {
     HRESULT result;
-    int width;
     int height;
+    int width;
     unsigned char *pixels;
     DDSURFACEDESC description;
 

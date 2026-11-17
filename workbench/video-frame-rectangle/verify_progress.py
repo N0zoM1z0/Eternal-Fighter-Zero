@@ -77,7 +77,7 @@ def main():
         raise AssertionError(('frame-rectangle codegen structure unexpectedly diverged',equal))
     # This source-level successful-lock scope restored the native 136-byte
     # stack frame, full 485-byte function extent and all 125 instruction
-    # boundaries. Eleven remaining instruction-byte differences are local
+    # boundaries. Seven remaining instruction-byte differences are local
     # slot assignments and one addressing-register selection.
     native_frame=int.from_bytes(native[5:9],'little')
     candidate_frame=int.from_bytes(candidate[5:9],'little')
@@ -85,7 +85,7 @@ def main():
     if native_frame!=0x88 or candidate_frame!=native_frame or len(candidate)!=SIZE:
         raise AssertionError(('full frame and function extent regression',
                               native_frame,candidate_frame,len(candidate)))
-    if len(differing_offsets)!=11 or len(candidate)!=len(native):
+    if len(differing_offsets)!=7 or len(candidate)!=len(native):
         raise AssertionError(('unexpected frame rectangle machine-code differences',
                               len(differing_offsets),differing_offsets))
     if native==candidate:
@@ -120,8 +120,8 @@ def main():
         'reconstructed as ordinary C++. All 125 instructions are decoded and '
         '124 match structurally after hiding stack slots, literal widths and '
         'branches; the remaining source-level expression and stack layout '
-        'are not yet proven identical. Remaining 11 byte differences are '
-        'ten local slot assignments and one addressing register encoding. '
+        'are not yet proven identical. Remaining seven byte differences are '
+        'six remaining local slot assignments and one addressing register encoding. '
         'No authored Exact ledger claim.'
       )
     }
