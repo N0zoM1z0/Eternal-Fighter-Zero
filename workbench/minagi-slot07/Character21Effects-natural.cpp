@@ -1,5 +1,7 @@
 // Minagi's native Character21 vtable Slot07 (0x005B2D10), typed
 // full-dispatch reconstruction candidate. Semantic/byte-exact proof pending.
+// Landing predicates preserve the original inverted <= tests: unordered
+// floating comparisons must take the native landing path, not a direct > path.
 #include "../../src/CharacterViews.h"
 #include <cstdlib>
 
@@ -943,10 +945,10 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 1;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame < 12 &&
                 (effects[effectIndex].vy += effects[effectIndex].ay,
-                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+                 !(effects[effectIndex].y + effects[effectIndex].vy <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -1007,10 +1009,10 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 1;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame < 12 &&
                 (effects[effectIndex].vy += effects[effectIndex].ay,
-                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+                 !(effects[effectIndex].y + effects[effectIndex].vy <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -1071,10 +1073,10 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 5;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame < 12 &&
                 (effects[effectIndex].vy += effects[effectIndex].ay,
-                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+                 !(effects[effectIndex].y + effects[effectIndex].vy <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -1648,10 +1650,10 @@ void Character21::Slot07()
             if (((short)field0008 != 300) && ((short)field0008 != 0x132)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 17 &&
                 (effects[effectIndex].vy += 0.035,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -1730,10 +1732,10 @@ void Character21::Slot07()
             if (((short)field0008 != 0x12d) && ((short)field0008 != 0x133)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 17 &&
                 (effects[effectIndex].vy += 0.035,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -1813,10 +1815,10 @@ void Character21::Slot07()
             if (((short)field0008 != 0x12e) && ((short)field0008 != 0x134)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 17 &&
                 (effects[effectIndex].vy += 0.035,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -2310,10 +2312,10 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 1;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame < 12 &&
                 (effects[effectIndex].vy += effects[effectIndex].ay,
-                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+                 !(effects[effectIndex].y + effects[effectIndex].vy <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -2367,10 +2369,10 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 1;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame < 12 &&
                 (effects[effectIndex].vy += effects[effectIndex].ay,
-                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+                 !(effects[effectIndex].y + effects[effectIndex].vy <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -2424,10 +2426,10 @@ void Character21::Slot07()
               effects[effectIndex].ay = 0.025;
               effects[effectIndex].field0084 = 5;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame < 12 &&
                 (effects[effectIndex].vy += effects[effectIndex].ay,
-                 effects[effectIndex].y + effects[effectIndex].vy > 0.0)) {
+                 !(effects[effectIndex].y + effects[effectIndex].vy <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -3526,11 +3528,11 @@ void Character21::Slot07()
             if (((short)field0008 != 300) && ((short)field0008 != 0x132)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 4 &&
 effects[effectIndex].frame <= 7 &&
                 (effects[effectIndex].vy += 0.0035,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -3611,11 +3613,11 @@ effects[effectIndex].frame <= 7 &&
             if (((short)field0008 != 0x12d) && ((short)field0008 != 0x133)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 4 &&
 effects[effectIndex].frame <= 7 &&
                 (effects[effectIndex].vy += 0.0035,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -3698,11 +3700,11 @@ effects[effectIndex].frame <= 7 &&
             if (((short)field0008 != 0x12e) && ((short)field0008 != 0x134)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 4 &&
 effects[effectIndex].frame <= 7 &&
                 (effects[effectIndex].vy += 0.003,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -3786,11 +3788,11 @@ effects[effectIndex].frame <= 7 &&
             if (((short)field0008 != 0x13c) && ((short)field0008 != 0x13f)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 4 &&
 effects[effectIndex].frame <= 7 &&
                 (effects[effectIndex].vy += 0.025,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -3853,11 +3855,11 @@ effects[effectIndex].frame <= 7 &&
             if (((short)field0008 != 0x13d) && ((short)field0008 != 0x140)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 4 &&
 effects[effectIndex].frame <= 7 &&
                 (effects[effectIndex].vy += 0.025,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -3921,11 +3923,11 @@ effects[effectIndex].frame <= 7 &&
             if (((short)field0008 != 0x13e) && ((short)field0008 != 0x141)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 4 &&
 effects[effectIndex].frame <= 7 &&
                 (effects[effectIndex].vy += 0.025,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -3991,10 +3993,10 @@ effects[effectIndex].frame <= 7 &&
             if (((short)field0008 != 300) && ((short)field0008 != 0x132)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 17 &&
                 (effects[effectIndex].vy += 0.035,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -4073,10 +4075,10 @@ effects[effectIndex].frame <= 7 &&
             if (((short)field0008 != 0x12d) && ((short)field0008 != 0x133)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 17 &&
                 (effects[effectIndex].vy += 0.035,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -4156,10 +4158,10 @@ effects[effectIndex].frame <= 7 &&
             if (((short)field0008 != 0x12e) && ((short)field0008 != 0x134)) {
               effects[effectIndex].field0088 = 0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 17 &&
                 (effects[effectIndex].vy += 0.035,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0)) {
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0))) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
               effects[effectIndex].vx = 0.0;
@@ -4267,10 +4269,10 @@ effects[effectIndex].frame <= 7 &&
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].vy = 0.0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 12 &&
                 (effects[effectIndex].vy += 0.035,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0) &&
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0)) &&
                 effects[effectIndex].frame <= 0xf) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
@@ -4323,10 +4325,10 @@ effects[effectIndex].frame <= 7 &&
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].vy = 0.0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 12 &&
                 (effects[effectIndex].vy += 0.035,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0) &&
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0)) &&
                 effects[effectIndex].frame <= 0xf) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
@@ -4379,10 +4381,10 @@ effects[effectIndex].frame <= 7 &&
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].vy = 0.0;
             }
-            if (effects[effectIndex].y < 0.0 &&
+            if (!(0.0 <= effects[effectIndex].y) &&
                 effects[effectIndex].frame >= 12 &&
                 (effects[effectIndex].vy += 0.025,
-                 effects[effectIndex].vy + effects[effectIndex].y > 0.0) &&
+                 !(effects[effectIndex].vy + effects[effectIndex].y <= 0.0)) &&
                 effects[effectIndex].frame <= 0x15) {
               effects[effectIndex].y = 0.0;
               effects[effectIndex].vy = 0.0;
