@@ -47,6 +47,7 @@ public:
     int Present();
     void SaveScreenshot(int, const unsigned char *);
     int FillRectangle(SurfaceRect, unsigned char);
+    int FrameRectangle(SurfaceRect, unsigned char);
     int ConvertBackBuffer();
     int DrawSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int);
     int DrawShadowSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int, unsigned char);

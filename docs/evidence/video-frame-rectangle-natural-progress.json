@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "video-frame-rectangle-natural-cpp-prototype-not-exact",
+  "original": {
+    "address": "0x40b110",
+    "function_bytes": 485,
+    "sha256": "281bab4624b98bd4b78637c635e9fe40b33b76a892a2c98eec4d8ecddae524ae",
+    "instructions": 125,
+    "ordered_directdraw_vtable_calls": [
+      "Lock +0x64",
+      "Unlock +0x80"
+    ]
+  },
+  "candidate": {
+    "source": "workbench/video-frame-rectangle/VideoFrameRectangle-natural.cpp",
+    "source_sha256": "b94541b0cb9928e71e7a8d0519760f41a91a818b7b7cd7c6cae24acb86c8be71",
+    "function_bytes": 476,
+    "native_size_delta": -9,
+    "sha256": "e45a638c531e3ef1dd997e5fb873573c886d38eb75c68124c5809af7a45c0bf1",
+    "instructions": 125,
+    "normalized_instruction_matches": 124,
+    "coff_relocations": 0,
+    "ordered_directdraw_vtable_calls": [
+      "Lock +0x64",
+      "Unlock +0x80"
+    ],
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287"
+  },
+  "source_contains_inline_assembly_or_padding": false,
+  "strict_function_exact": false,
+  "qualification": "Native source-level clipping and pitch-aware 8-bit border writes are reconstructed as ordinary C++. All 125 instructions are decoded and 124 match structurally after hiding stack slots, literal widths and branches; the remaining source-level expression and stack layout are not yet proven identical. No authored Exact ledger claim."
+}
