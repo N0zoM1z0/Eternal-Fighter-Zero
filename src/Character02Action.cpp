@@ -1,6 +1,6 @@
-// Akane original-priority action-selection workbench (not whole-owner Exact).
-// Native Character02::Slot04 0x00703D40 contains 11,584 instruction bytes.
-#include "../../src/CharacterViews.h"
+// Akane Character02::Slot04 action dispatch, reconstructed in natural C++.
+// Native body 0x00703D40: 11,584 bytes; exact code body is relocation-audited.
+#include "CharacterViews.h"
 
 void Character02::Slot04()
 {
@@ -28,45 +28,71 @@ void Character02::Slot04()
     if (field015c < 2) {
         if ((health < 0xd05) && (recognizedCommand == 0x5a) &&
             (meter >= 3000) && (positionY == 0.0) &&
-            (attackCollisionResult != 6) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (attackCollisionResult != 6) &&
             (sequences[field0008].field0002 <= sequences[309].field0000)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x135;
             return;
         }
-        if ((recognizedCommand == 0x7a) && (meter >= 3000) && (positionY == 0.0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[308].field0000) && (field3144 == 0)) {
+        if ((recognizedCommand == 0x7a) && (meter >= 3000) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (positionY == 0.0) && (field3144 == 0) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) &&
+            (sequences[field0008].field0002 <= sequences[308].field0000)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x134;
             return;
         }
-        if (((recognizedCommand == 0x79 || recognizedCommand == 0x7a)) && (meter >= 2000) && (positionY == 0.0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[307].field0000) && (field3144 == 0)) {
+        if ((recognizedCommand == 0x79 || recognizedCommand == 0x7a) &&
+            (meter >= 2000) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (positionY == 0.0) && (field3144 == 0) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) &&
+            (sequences[field0008].field0002 <= sequences[307].field0000)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x133;
             return;
         }
-        if (((recognizedCommand == 0x78 || recognizedCommand == 0x79 || recognizedCommand == 0x7a)) && (meter >= 1000) && (positionY == 0.0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[306].field0000) && (field3144 == 0)) {
+        if ((recognizedCommand == 0x78 || recognizedCommand == 0x79 || recognizedCommand == 0x7a) &&
+            (meter >= 1000) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (positionY == 0.0) && (field3144 == 0) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) &&
+            (sequences[field0008].field0002 <= sequences[306].field0000)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x132;
             return;
         }
-        if ((recognizedCommand == 0x66) && meter >= 3000 && (sequences[field0008].data[field000a].frameFlags & 8) > 0 && (((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) && (sequences[field0008].field0002 <= sequences[302].field0000) && (positionY == 0.0)) {
+        if ((recognizedCommand == 0x66) && meter >= 3000 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            (positionY == 0.0) &&
+            (sequences[field0008].field0002 <= sequences[302].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x12e;
             return;
         }
-        if (((recognizedCommand == 0x65) || (recognizedCommand == 0x66)) && meter >= 2000 && (sequences[field0008].data[field000a].frameFlags & 8) > 0 && (((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) && (sequences[field0008].field0002 <= sequences[301].field0000) && (positionY == 0.0)) {
+        if ((recognizedCommand == 0x65 || recognizedCommand == 0x66) && meter >= 2000 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            (positionY == 0.0) &&
+            (sequences[field0008].field0002 <= sequences[301].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x12d;
             return;
         }
-        if (((recognizedCommand == 100) || (recognizedCommand == 0x65) || (recognizedCommand == 0x66)) && meter >= 1000 && (sequences[field0008].data[field000a].frameFlags & 8) > 0 && (((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) && (sequences[field0008].field0002 <= sequences[300].field0000) && (positionY == 0.0)) {
+        if ((recognizedCommand == 100 || recognizedCommand == 0x65 || recognizedCommand == 0x66) && meter >= 1000 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            (positionY == 0.0) &&
+            (sequences[field0008].field0002 <= sequences[300].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 300;
@@ -90,91 +116,134 @@ void Character02::Slot04()
             field0008 = 0x131;
             return;
         }
-        if ((recognizedCommand == 0xc) && (field0118 >= 500.0 || (char)field0120 > 0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY < 0.0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[273].field0000)) {
+        if ((recognizedCommand == 0xc) && (field0118 >= 500.0 || (char)field0120 > 0) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY < 0.0) &&
+            (sequences[field0008].field0002 <= sequences[273].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x111;
             return;
         }
-        if ((recognizedCommand == 0xb || recognizedCommand == 0xc) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY < 0.0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[272].field0000)) {
+        if ((recognizedCommand == 0xb || recognizedCommand == 0xc) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY < 0.0) &&
+            (sequences[field0008].field0002 <= sequences[272].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x110;
             return;
         }
-        if ((recognizedCommand == 10) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY < 0.0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[271].field0000)) {
+        if ((recognizedCommand == 10) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (positionY < 0.0) && (sequences[field0008].field0002 <= sequences[271].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x10f;
             return;
         }
-        if ((recognizedCommand == 0x16) && (field0118 >= 500.0 || (char)field0120 > 0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY == 0.0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[255].field0000)) {
+        if ((recognizedCommand == 0x16) && (field0118 >= 500.0 || (char)field0120 > 0) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY == 0.0) &&
+            (sequences[field0008].field0002 <= sequences[255].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xff;
             return;
         }
-        if ((recognizedCommand == 0x15 || recognizedCommand == 0x16) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY == 0.0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[254].field0000)) {
+        if ((recognizedCommand == 0x15 || recognizedCommand == 0x16) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY == 0.0) &&
+            (sequences[field0008].field0002 <= sequences[254].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xfe;
             return;
         }
-        if ((recognizedCommand == 0x14) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY == 0.0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[253].field0000)) {
+        if ((recognizedCommand == 0x14) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (positionY == 0.0) && (sequences[field0008].field0002 <= sequences[253].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xfd;
             return;
         }
-        if ((recognizedCommand == 0x20) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[258].field0000)) {
+        if ((recognizedCommand == 0x20) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (sequences[field0008].field0002 <= sequences[258].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x102;
             return;
         }
-        if ((recognizedCommand == 0x1f) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[257].field0000)) {
+        if ((recognizedCommand == 0x1f) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (sequences[field0008].field0002 <= sequences[257].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x101;
             return;
         }
-        if ((recognizedCommand == 0x1e) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[256].field0000)) {
+        if ((recognizedCommand == 0x1e) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (sequences[field0008].field0002 <= sequences[256].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x100;
             return;
         }
-        if ((recognizedCommand == 0x2a) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[261].field0000)) {
+        if ((recognizedCommand == 0x2a) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (sequences[field0008].field0002 <= sequences[261].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x105;
             return;
         }
-        if ((recognizedCommand == 0x29) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[260].field0000)) {
+        if ((recognizedCommand == 0x29) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (sequences[field0008].field0002 <= sequences[260].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x104;
             return;
         }
-        if ((recognizedCommand == 0x28) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[259].field0000)) {
+        if ((recognizedCommand == 0x28) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (sequences[field0008].field0002 <= sequences[259].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x103;
             return;
         }
-        if ((recognizedCommand == 0xc) && (field0118 >= 500.0 || (char)field0120 > 0) && (field3144 == 0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY == 0.0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[252].field0000)) {
+        if ((recognizedCommand == 0xc) && (field0118 >= 500.0 || (char)field0120 > 0) &&
+            (field3144 == 0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (positionY == 0.0) && (sequences[field0008].field0002 <= sequences[252].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xfc;
             return;
         }
-        if ((recognizedCommand == 0xb || recognizedCommand == 0xc) && (field3144 == 0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY == 0.0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[251].field0000)) {
+        if ((recognizedCommand == 0xb || recognizedCommand == 0xc) &&
+            ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY == 0.0) &&
+            (field3144 == 0) && (sequences[field0008].field0002 <= sequences[251].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xfb;
             return;
         }
-        if ((recognizedCommand == 10) && (field3144 == 0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) && (positionY == 0.0) && ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200) && (sequences[field0008].field0002 <= sequences[250].field0000)) {
+        if ((recognizedCommand == 10) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0) &&
+            (positionY == 0.0) && (field3144 == 0) &&
+            (sequences[field0008].field0002 <= sequences[250].field0000) &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xfa;
@@ -183,7 +252,7 @@ void Character02::Slot04()
     }
     if ((field015c < 1) && ((recognizedCommand == 0 || (recognizedCommand == 1)))) {
         if ((positionY < 0.0) && (airDashCount < 1)) {
-            if (((((((*opponentSlot)->positionX - positionX) * (1 - recognizedCommand * 2) < 0.0 ) || ((0.0 == (*opponentSlot)->positionX - positionX && ((int)(char)facing == ((1 - recognizedCommand * 2) * -1))))) && (sequences[field0008].field0002 <= sequences[165].field0000)) && (((field0008 != 0xaa && (positionY < -40.0)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) || (field0008 < 200)))) {
+            if (((((((*opponentSlot)->positionX - positionX) * (1 - recognizedCommand * 2) < 0.0 ) || ((0.0 == (*opponentSlot)->positionX - positionX && ((int)(char)facing == ((1 - recognizedCommand * 2) * -1))))) && (sequences[field0008].field0002 <= sequences[165].field0000)) && (((field0008 != 0xaa && (positionY < -30.0)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) || (field0008 < 200)))) {
                 if (field0008 != 0xa5) {
                     ResetPose();
                 }
@@ -341,9 +410,9 @@ void Character02::Slot04()
                 field0008 = 0xf0;
                 return;
             }
-            if (inputX == facing && inputY != 1 &&
-                sequences[field0008].field0002 <= sequences[211].field0000 &&
+            if (sequences[field0008].field0002 <= sequences[211].field0000 &&
                 (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                inputX == facing && inputY != 1 &&
                 ((field0008 >= 200 && attackCollisionResult >= 2 && attackCollisionResult != 6) || field0008 < 200)) {
                 ResetPose();
                 ClearBufferedButtons();
@@ -368,9 +437,10 @@ void Character02::Slot04()
             return;
         }
         if (inputY == 0 || (actionBufferedInput & 4) == 0 || (stateGroupCBufferedInput & 4) == 0) {
-            if (inputX != 0 && (*opponentSlot)->positionY == 0.0 &&
+            if (inputX != 0 &&
                 positionX - (*opponentSlot)->positionX > -30.0 &&
                 positionX - (*opponentSlot)->positionX < 30.0 &&
+                (*opponentSlot)->positionY == 0.0 &&
                 sequences[field0008].field0002 <= sequences[220].field0000 &&
                 ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 156) &&
                 (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&

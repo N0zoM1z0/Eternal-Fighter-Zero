@@ -164032,3 +164032,671 @@ type = "DIR32"
 symbol = "__real@0000000000000000"
 target = 0x007872F8
 evidence = "Original Akane Character02 vtable slot2 0x00788EB8 selects full native command owner [0x00706AD0,0x00707E45), original DIR32 operand 0x007073DD binds the 8-byte 0.0 literal at 0x007872F8, original complete RET 0x00707E44."
+
+[units.character-02-slot04]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character02Action.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-02-slot04/Character02Action.obj"
+symbol = "?Slot04@Character02@@UAEXXZ"
+target_address = 0x00703D40
+size = 11584
+
+[[units.character-02-slot04.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703DC7 binds __real@407f400000000000 to 0x00787C30."
+
+[[units.character-02-slot04.relocations]]
+offset = 305
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703E71 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 326
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703E86 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 432
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703EF0 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 565
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703F75 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 679
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703FE7 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 820
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704074 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 948
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007040F4 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 1088
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704180 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 1231
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070420F binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 1371
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070429B binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 1485
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070430D binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 1610
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070438A binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 1738
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070440A binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 1862
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704486 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 2006
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704516 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 2131
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704593 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 2195
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007045D3 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 2369
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704681 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 2433
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007046C1 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 2608
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704770 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 2672
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007047B0 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 2846
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070485E binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 2894
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070488E binds __real@407f400000000000 to 0x00787C30."
+
+[[units.character-02-slot04.relocations]]
+offset = 2981
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007048E5 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 3100
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070495C binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 3210
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007049CA binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 3329
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704A41 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 3424
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704AA0 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 3543
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704B17 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 3591
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704B47 binds __real@407f400000000000 to 0x00787C30."
+
+[[units.character-02-slot04.relocations]]
+offset = 3675
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704B9B binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 3800
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704C18 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 3907
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704C83 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 4031
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704CFF binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 4123
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704D5B binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 4247
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704DD7 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 4438
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704E96 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 4630
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704F56 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 4821
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705015 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 5013
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007050D5 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 5204
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705194 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 5396
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705254 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 5444
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705284 binds __real@407f400000000000 to 0x00787C30."
+
+[[units.character-02-slot04.relocations]]
+offset = 5544
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007052E8 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 5668
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705364 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 5775
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007053CF binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 5916
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070545C binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 6008
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007054B8 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 6148
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705544 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 6223
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070558F binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 6303
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007055DF binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 6333
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007055FD binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 6458
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787E30
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070567A binds __real@c03e000000000000 to 0x00787E30."
+
+[[units.character-02-slot04.relocations]]
+offset = 6614
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705716 binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630."
+
+[[units.character-02-slot04.relocations]]
+offset = 6721
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705781 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 6751
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070579F binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 7006
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070589E binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630."
+
+[[units.character-02-slot04.relocations]]
+offset = 7072
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007058E0 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 7188
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705954 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 7218
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705972 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 7408
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705A30 binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630."
+
+[[units.character-02-slot04.relocations]]
+offset = 7494
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705A86 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 7524
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705AA4 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 7711
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705B5F binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630."
+
+[[units.character-02-slot04.relocations]]
+offset = 7844
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705BE4 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 7987
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705C73 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 8188
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705D3C binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 8238
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705D6E binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 8407
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705E17 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 8632
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705EF8 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 8857
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705FD9 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 8976
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706050 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 9026
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706082 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 9195
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070612B binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 9421
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070620D binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 9601
+type = "DIR32"
+symbol = "__real@c051800000000000"
+target = 0x00787E40
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007062C1 binds __real@c051800000000000 to 0x00787E40."
+
+[[units.character-02-slot04.relocations]]
+offset = 9631
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007062DF binds __real@4051800000000000 to 0x00787E38."
+
+[[units.character-02-slot04.relocations]]
+offset = 9709
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070632D binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 9885
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007063DD binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 10004
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706454 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 10054
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706486 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 10131
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875C8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007064D3 binds __real@c059000000000000 to 0x007875C8."
+
+[[units.character-02-slot04.relocations]]
+offset = 10165
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007064F5 binds __real@4059000000000000 to 0x007875D0."
+
+[[units.character-02-slot04.relocations]]
+offset = 10193
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706511 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 10407
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007065E7 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 10619
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007066BB binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 10787
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706763 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 11013
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706845 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 11116
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787E30
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007068AC binds __real@c03e000000000000 to 0x00787E30."
+
+[[units.character-02-slot04.relocations]]
+offset = 11150
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787D88
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007068CE binds __real@403e000000000000 to 0x00787D88."
+
+[[units.character-02-slot04.relocations]]
+offset = 11175
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007068E7 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-02-slot04.relocations]]
+offset = 11394
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007069C2 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."
+
+[[units.character-02-slot04.relocations]]
+offset = 11567
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706A6F binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170."

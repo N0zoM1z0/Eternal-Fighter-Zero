@@ -486,7 +486,7 @@ address,size,span_end,body_size,current_name,is_thunk,body_ranges,boundary_statu
 0x00703C90,58,0x00703CC9,58,Character02::ResetPose,false,0x00703C90:0x00703CC9,reviewed
 0x00703CD0,80,0x00703D1F,80,Character02::RemoveLocalEffect,false,0x00703CD0:0x00703D1F,reviewed
 0x00703D20,19,0x00703D32,19,Character02::Slot03,false,0x00703D20:0x00703D32,reviewed
-0x00703D40,11584,0x00706A7F,11584,FUN_00703d40,false,0x00703D40:0x00706A7F,unreviewed
+0x00703D40,11584,0x00706A7F,11584,Character02::Slot04,false,0x00703D40:0x00706A7F,reviewed
 0x00706A80,11,0x00706A8A,11,Character02::Slot01,false,0x00706A80:0x00706A8A,reviewed
 0x00706A90,11,0x00706A9A,11,Character02::Slot08,false,0x00706A90:0x00706A9A,reviewed
 0x00706AA0,47,0x00706ACE,47,Character02::EmitLocalEffect,false,0x00706AA0:0x00706ACE,reviewed

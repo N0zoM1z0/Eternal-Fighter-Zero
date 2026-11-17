@@ -486,7 +486,7 @@ address,origin,status,evidence
 0x00703C90,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle
 0x00703CD0,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle
 0x00703D20,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle
-0x00703D40,unknown,unreviewed,
+0x00703D40,authored,reviewed,docs/evidence/character-02-slot04-exact.json
 0x00706A80,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle
 0x00706A90,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle
 0x00706AA0,authored,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle

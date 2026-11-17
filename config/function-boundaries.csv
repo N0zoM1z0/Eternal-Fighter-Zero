@@ -517,3 +517,4 @@ address,end,size,status,evidence
 0x00706A90,0x00706A9B,11,reviewed,docs/KNOWLEDGE_BASE.md#akane-lifecycle; full original Akane vtable slot8 native RET boundary excludes following CC alignment
 0x00703B70,0x00703C8B,283,reviewed,docs/KNOWLEDGE_BASE.md#akane-initialize; original Akane vtable slot12 owner with native RET 0x00703C8A; CC excluded
 0x00706AD0,0x00707E45,4981,reviewed,docs/KNOWLEDGE_BASE.md#akane-command-recognition; complete 4981-byte owner native RET at 0x00707E44 and eleven following CC alignment bytes excluded
+0x00703D40,0x00706A80,11584,reviewed,docs/evidence/character-02-slot04-exact.json; original Character02 vtable slot 4 at 0x00788EC0 selects the complete native owner and RET 0x00706A7F
