@@ -1627,10 +1627,10 @@ The selected VC7.1 `/Od` candidate is 17,133 bytes (43 bytes shorter than
 native), with the original `0xCC` stack frame and matching entry prologue.
 The large AI/state branches and neutral-input fallback are present. The final
 state-range gate is reconstructed as the native-order early command return,
-with exact signed-byte and opponent-state boundaries. Native `FUCOMPP`
-sequences confirm the `positionY == 0.0` predicates are equality tests,
-including unordered handling; those predicates remain equality in source.
-Targeted instruction alignment reports 3,900 of 4,446 candidate instructions
+with exact signed-byte and opponent-state boundaries. Native x87 unordered-compare paths are preserved with explicit negated
+relational tests where the original branches treat unordered values as true;
+`positionY == 0.0` remains a true equality test.
+Targeted instruction alignment reports 3,906 of 4,447 candidate instructions
 aligned with native order/semantics. The source also restores native unsigned
 RNG zero-extension and signed air-action-lock `<= 0` tests. The candidate remains **not Exact** and
 has not been promoted into `src/` or the match ledger. Rebuild only this owner

@@ -447,10 +447,12 @@ void Character19::Slot05()
             if ((*opponentSlot)->airActionLockFrames <= 0) {
               field3114 = 0;
             }
-            if (((80.0 <= distance.vertical) ||
-                (positionY <= (*opponentSlot)->positionY)) ||
+            if (((!(distance.vertical < 80.0)) ||
+                (!((*opponentSlot)->positionY < positionY))) ||
                (buttonPulse[0] = 1, field0008 != 0xcf)) {
-              if (distance.vertical < 100.0) {
+              if (!(distance.vertical < 100.0)) {
+              }
+              else {
                 buttonPulse[1] = 1;
                 if ((*opponentSlot)->airActionLockFrames < 0x18) {
                   buttonPulse[0] = 1;
