@@ -680,7 +680,9 @@ class Scene3;
 DECLARE_SCENE(Scene5, 0x474)
 class Scene6 : public Scene {
     // Original settings UI easing value at native object offset 0x754.
-    unsigned char unknown_0430[0x43c - sizeof(Scene)];
+    unsigned char unknown_0430[0x434 - sizeof(Scene)];
+    IUnknown *menuBackgroundSurface; // native offset 0x434, first released
+    IUnknown *menuOverlaySurface;    // native offset 0x438, second released
     IUnknown *previewSurface; // native offset 0x43C
     IUnknown *numberSurface;  // native offset 0x440
     IUnknown *numberBackdrop; // native offset 0x444
@@ -700,6 +702,7 @@ class Scene6 : public Scene {
     unsigned char unknown_075c[0x760 - 0x75c];
 public:
     Scene6(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
+    ~Scene6();
     virtual void Slot0();
     virtual unsigned char Step();
     virtual void PollKeyboard();

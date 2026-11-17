@@ -165944,3 +165944,20 @@ type = "REL32"
 symbol = "@__security_check_cookie@4"
 target = 0x007781dc
 evidence = "independently decoded original native PE operand at 0x0075D56F; CRT/string/data or existing authored callee verified"
+
+[units.scene6-destructor]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Scene6Destructor.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene6-destructor/Scene6Destructor.obj"
+symbol = "??1Scene6@@QAE@XZ"
+target_address = 0x0075a3b0
+size = 265
+
+[[units.scene6-destructor.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "??_7Scene6@@6B@"
+target = 0x007895a8
+evidence = "original PE 0x0075A3BC Scene6 native destructor vtable store, full five-resource path"

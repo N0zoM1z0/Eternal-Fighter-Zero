@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "authority": "complete original PE native function byte identity and bound vtable relocation",
+  "method": "selected VC7.1 /Od /G6 /MT /Gy /W3 /GS normal Scene6 destructor C++ and original 265-byte PE comparison; no full cold replay",
+  "source": "src/Scene6Destructor.cpp",
+  "native_owner": "Scene6::~Scene6; normal derived scene object destructor",
+  "original_extent": {
+    "address": "0x0075A3B0",
+    "exclusive_end": "0x0075A4B9",
+    "size": 265
+  },
+  "source_contains_inline_asm_or_padding": false,
+  "behavior": "Reset native Scene6 vtable, release and null surfaces in original sequence: +0x434 menuBackground, +0x438 menuOverlay, +0x440 numberSurface, +0x43C previewSurface, +0x444 numberBackdrop",
+  "original_context": ".analysis/factory-native-ghidra/call-q95aotow/result.txt",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 265,
+      "matched_bytes": 265,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7902632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene6@@6B@",
+          "evidence": "original PE 0x0075A3BC Scene6 native destructor vtable store, full five-resource path",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "01ee3419e337be7794a93c16e03bdef062795b04d18c97514e12aa8f859fcc08",
+      "target_extent_sha256": "01ee3419e337be7794a93c16e03bdef062795b04d18c97514e12aa8f859fcc08",
+      "unit": "scene6-destructor",
+      "symbol": "??1Scene6@@QAE@XZ",
+      "target_address": "0x0075A3B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b895cd79155d41d104e9d1570761ec8646697de9facd03e8b44e2968d219cbca",
+      "object_sha256": "a7c6cc7e895ea4c32d60876e9e792b962ef8523c482b9a645c377c86f4dcd164",
+      "source_sha256": "7d127425dcab1035c9b6fb03bede34fb2916c6f277b0a4fc1d5755b0715bf391",
+      "dependencies": {
+        "src/Engine.h": "75b74e2ea841083740b85d3840cc717bc8201e6dcb7430ada8b4b554d53ebb93",
+        "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "df85c05544f262c6565bdef8c537bb79d36b16f9b602b70859227815b251474a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a91b78f7ffb5445b9b801d58ef23a39aefebf84dce1f45b385e5bd761de26d68",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
