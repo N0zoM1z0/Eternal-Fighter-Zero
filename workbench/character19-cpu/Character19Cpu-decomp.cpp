@@ -463,7 +463,9 @@ void Character19::Slot05()
               if ((field0008 == 0xd0) || (field0008 == 0xcf)) {
                 field3114 = 0x10;
               }
+              return;
             }
+            return;
           }
           else if (field3114 == 0x10) {
             if ((*opponentSlot)->airActionLockFrames <= 0) {
@@ -471,10 +473,13 @@ void Character19::Slot05()
             }
             if ((field0008 == 0xcf) && (attackCollisionResult == 3)) {
               buttonPulse[1] = 1;
+              return;
             }
-            else if (field0008 == 0xd0) {
+            if (field0008 == 0xd0) {
               field3114 = 0x11;
+              return;
             }
+            return;
           }
           else if (field3114 == 0x11) {
             if (((*opponentSlot)->airActionLockFrames <= 0) ||
@@ -542,10 +547,11 @@ kanna_state11_deeper:
               }
               if ((distance.vertical > 90.0) &&
                   ((*opponentSlot)->positionY < positionY) &&
-                  (0x2d < (*opponentSlot)->airActionLockFrames) &&
+                  ((*opponentSlot)->airActionLockFrames > 0x2d) &&
                   (airActionCount < 2)) {
                 inputX = facing;
                 inputY = 0xff;
+                return;
               }
             }
           }
@@ -556,10 +562,13 @@ kanna_state11_deeper:
             }
             if (field0008 == 0xd0) {
               field3114 = 0x11;
+              return;
             }
-            else if (distance.forward < 130.0) {
+            if (distance.forward < 130.0) {
               buttonPulse[1] = 1;
+              return;
             }
+            return;
           }
           else if (field3114 == 0x15) {
             if (((*opponentSlot)->airActionLockFrames <= 0) ||
@@ -568,10 +577,13 @@ kanna_state11_deeper:
             }
             if (field0008 == 0xd0) {
               field3114 = 0x16;
+              return;
             }
-            else if (distance.forward < 130.0) {
+            if (distance.forward < 130.0) {
               buttonPulse[1] = 1;
+              return;
             }
+            return;
           }
           else if (field3114 == 0x16) {
             if (((*opponentSlot)->airActionLockFrames <= 0) ||
@@ -580,10 +592,13 @@ kanna_state11_deeper:
             }
             if (field0008 == 0xd1) {
               field3114 = 0;
+              return;
             }
-            else if (distance.forward < 130.0) {
+            if (distance.forward < 130.0) {
               buttonPulse[2] = 1;
+              return;
             }
+            return;
           }
           else if (field3114 == 0x1e) {
             if (((*opponentSlot)->airActionLockFrames <= 0) ||
@@ -592,10 +607,13 @@ kanna_state11_deeper:
             }
             if (field0008 == 200) {
               field3114 = 0x1f;
+              return;
             }
-            else if (distance.forward < 130.0) {
+            if (distance.forward < 130.0) {
               buttonPulse[0] = 1;
+              return;
             }
+            return;
           }
           else if (field3114 == 0x1f) {
             if (((*opponentSlot)->airActionLockFrames <= 0) ||
