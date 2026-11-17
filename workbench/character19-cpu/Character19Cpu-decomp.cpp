@@ -1303,43 +1303,37 @@ kanna_state11_deeper:
                     }
                   }
                   if (positionY == 0.0) {
-                    if (cpuMoveRightFrames < 1) {
-                      if (cpuMoveLeftFrames < 1) {
-
-                        if ((unsigned short)RandomRange(0,1000) < 2) {
-                          if (facing == '\x01') {
-
-                            cpuMoveLeftFrames = ((unsigned short)RandomRange(0,200) & 0xffff) + 0x3c;
-                          }
-                          else {
-
-                            cpuMoveRightFrames = ((unsigned short)RandomRange(0,200) & 0xffff) + 0x3c;
-                          }
-                        }
-
-                        if ((unsigned short)RandomRange(0,100) < 2) {
-                          if (facing == '\x01') {
-
-                            cpuMoveRightFrames = ((unsigned short)RandomRange(0,400) & 0xffff) + 0x3c;
-                          }
-                          else {
-
-                            cpuMoveLeftFrames = ((unsigned short)RandomRange(0,400) & 0xffff) + 0x3c;
-                          }
-                        }
-                      }
-                      else {
-                        if ((CollisionSide() != '\0') && (0xf < cpuMoveLeftFrames)) {
-                          cpuMoveLeftFrames = 0xf;
-                        }
-                        inputX = 0xff;
-                      }
-                    }
-                    else {
-                      if ((CollisionSide() != '\0') && (0xf < cpuMoveRightFrames)) {
+                    if (cpuMoveRightFrames > 0) {
+                      if ((CollisionSide() != '\0') && (cpuMoveRightFrames > 0xf)) {
                         cpuMoveRightFrames = 0xf;
                       }
                       inputX = 1;
+                      return;
+                    }
+                    if (cpuMoveLeftFrames > 0) {
+                      if ((CollisionSide() != '\0') && (cpuMoveLeftFrames > 0xf)) {
+                        cpuMoveLeftFrames = 0xf;
+                      }
+                      inputX = 0xff;
+                      return;
+                    }
+
+                    if ((unsigned short)RandomRange(0,1000) < 2) {
+                      if (facing == '\x01') {
+                        cpuMoveLeftFrames = (unsigned short)RandomRange(0,200) + 0x3c;
+                      }
+                      else {
+                        cpuMoveRightFrames = (unsigned short)RandomRange(0,200) + 0x3c;
+                      }
+                    }
+
+                    if ((unsigned short)RandomRange(0,100) < 2) {
+                      if (facing == '\x01') {
+                        cpuMoveRightFrames = (unsigned short)RandomRange(0,400) + 0x3c;
+                      }
+                      else {
+                        cpuMoveLeftFrames = (unsigned short)RandomRange(0,400) + 0x3c;
+                      }
                     }
                   }
                 }
