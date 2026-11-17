@@ -12,10 +12,22 @@ and failed hypotheses. Inspect current Git changes before starting.
 relocations**, source `src/Scene8PrepareReplayList.cpp`. It initializes the
 9x9 replay filename/availability grid, reads two stored character IDs per
 existing file, resets menu state, and preserves the original packed/bitmap
-palette paths. Four existing Scene8 exact owners were selectively rebuilt
-and retain zero differences with the newly typed native fields. The larger
-`Scene8::Step` at `0x0076F060` (1,800 bytes) and Scene8 construction/render
-owners remain open. No all-unit cold replay was run.
+palette paths.
+
+The replay-browser state boss `Scene8::Step` at `0x0076F060` is also **strict
+Exact for 1,820/1,820 bytes** (1,800 native code plus 20 original five-entry
+switch-table bytes), with **30 original-bound COFF relocations including six
+compiler-local labels**. Its natural source lives at `src/Scene8Step.cpp`.
+The menu-selection/record-overwrite branch ordering, signed submenu threshold,
+compound byte arithmetic and original held-input Boolean lifetime yield the
+native 490-instruction body and 0x18 stack frame without ASM or padding.
+
+Five other Scene8 exact owners were selectively rebuilt after typing the
+native signed/unsigned replay menu fields and still have zero differences.
+Their real codegen reports, source dependency hashes, and proof rows were
+refreshed; no all-unit cold replay was run. The next substantive Scene8 owners
+are its constructor at `0x0076E480` (2,905 native bytes) and `Slot0` renderer
+at `0x0076F780` (5,619 bytes), both still open.
 
 ## Scene9 results bosses accepted — 2026-11-17
 

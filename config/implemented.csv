@@ -526,3 +526,4 @@ address,name,source,symbol,status,evidence
 0x007768D0,Scene0::FadeTitlePaletteIn,src/Scene0PaletteFade.cpp,?FadeTitlePaletteIn@Scene0@@QAEXXZ,complete,docs/evidence/scene0-title-fade-in-exact.json
 0x00772800,Scene9::Slot0,src/Scene9Render.cpp,?Slot0@Scene9@@UAEXXZ,complete,docs/evidence/scene9-render-exact.json
 0x00770E30,Scene8::PrepareReplayList,src/Scene8PrepareReplayList.cpp,?PrepareReplayList@Scene8@@QAEXXZ,complete,docs/evidence/scene8-prepare-replay-list-exact.json
+0x0076F060,Scene8::Step,src/Scene8Step.cpp,?Step@Scene8@@UAEEXZ,complete,docs/evidence/scene8-step-exact.json

@@ -724,14 +724,14 @@ class Scene8 : public Scene {
     IUnknown *replayOverlaySurface; // native object offset 0x438
     unsigned char unknown_043c[0x446 - 0x43c];
     short scrollTop, scrollBottom, scrollLeft, scrollRight;
-    char heldDirection[2];
+    unsigned char heldDirection[2];
     unsigned char unknown_0450[0x469-0x450];
     char replayMenuPhase; // 0x469
     char replayColumn; // 0x46a
     char replayMenuSubchoice; // 0x46b
     char replayOverwriteChoice; // 0x46c
     char replayRow; // 0x46d
-    unsigned char replayAvailable[9][9]; // 0x46e
+    char replayAvailable[9][9]; // 0x46e
     unsigned char replayCharacters[9][9][2]; // 0x4bf
     unsigned char unknown_0561[0x748-0x561];
     double replayScrollX, replayScrollY; // 0x748 and 0x750

@@ -287,20 +287,21 @@
       "symbol": "?PrepareReplayList@Scene8@@QAEXXZ",
       "target_address": "0x00770E30",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "b6d7d3b9ad75d6c65e981d1b2e6c599665a0a796fed98d63b47f905469ef4e2b",
-      "object_sha256": "c8fe849054c24593517bc55ec00d718bb37b9859955fc0a6e9c3fcc0a275741f",
+      "boundary_ledger_sha256": "6a73e279fe5e87fd3575f1356ba87ac7fe85b3d6405635c6ac09dbc6fb66ddb3",
+      "object_sha256": "b13383e6982d6dcaeb9b21708314d52d44a0191e772b005cc0cc8de6d5b6765e",
       "source_sha256": "17439b95d0b1c9370eed14dee9dd2092ec7a8c1f80cbc9023f8dcd3bbabe9394",
       "dependencies": {
-        "src/Engine.h": "a94931a498b49caaa5720475caf2f27e3d3df8415ea0637e41f258eef5f6778e",
+        "src/Engine.h": "8cd3206d19b2974d984fb08396c2d12ff8186992976d78391f76367f6bf1a403",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
         "src/Scene8ReplayPaths.cpp": "5d1d65675ea4c662d5c57410bd2d24e2b76b82c28385e565e9a2c2615ae53d0d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "531d2aea6194ea17914aa9b9fc27273b244ef7bf6fc47b1f6347b9e50c801d63",
+      "units_manifest_sha256": "417cd1203f66497102631c5a0434dda34dbeb2ad5c08b1f7a511876074dc6611",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "f742b87ae7793bfb4ff3182d99d00205999d84585128f18063a6c731f30ae632",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     }
-  ]
+  ],
+  "selected_replay_after_scene8_step_2026_11_17": "All affected owner functions rebuilt and original-bound byte-compared after Scene8 signedness recovery in shared header. Fresh full reports replace older source/dependency receipts."
 }

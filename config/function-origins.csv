@@ -602,7 +602,7 @@ address,origin,status,evidence
 0x0076DA20,authored,reviewed,docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation
 0x0076E480,unknown,unreviewed,
 0x0076EFE0,authored,reviewed,docs/evidence/scene8-destructor-exact.json
-0x0076F060,unknown,unreviewed,
+0x0076F060,authored,reviewed,docs/evidence/scene8-step-exact.json
 0x0076F780,unknown,unreviewed,
 0x00770D80,authored,reviewed,docs/evidence/scene8-keyboard-exact.json
 0x00770E30,authored,reviewed,docs/evidence/scene8-prepare-replay-list-exact.json

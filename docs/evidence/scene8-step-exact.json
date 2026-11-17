@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "authority": "Complete original-PE strict byte identity of 1,800 native code bytes plus 20 original switch-data bytes, with reviewed original-target relocations",
+  "owner": "Scene8::Step replay selection and recording state machine",
+  "native_extent": {
+    "address": "0x0076F060",
+    "exclusive_end": "0x0076F77C",
+    "size": 1820,
+    "code_size": 1800,
+    "local_switch_data_size": 20
+  },
+  "method": "Selected one-function natural C++ VC7.1 /Od /G6 /MT /Gy /W3 native compile and all-byte original-PE comparison; all 30 actual COFF relocations bound, six switch-related locals checked against compiled target offsets; no masked or size-only acceptance, ASM, padding or full cold replay",
+  "behavior": "Two-player replay input, 9-by-9 file slot selection, phase-based menu zoom and scroll, original back/cancel and replay playback or recording transitions, slot override confirmation and native five-way switch dispatch",
+  "reconstruction_notes": [
+    "A real boolean held-direction expression gives the original 0x18 stack frame and VC7.1 lifetime rather than an extra local at EBP-0xC.",
+    "Compound byte assignments preserve original register order for four directional menu changes.",
+    "Replay submenu index uses >=3 signed boundary while overwriting a nonempty replay slot takes the original true branch first.",
+    "Compiler-generated 20-byte switch-address table has five independent original in-function destinations."
+  ],
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1820,
+      "matched_bytes": 1820,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 29,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Canonical EFZ PE 0x0076F07D REL32 operand original target 0x004068B0; independently checked COFF symbol ?LoadMusic@Context@@QAEXG@Z",
+          "addend": 0
+        },
+        {
+          "offset": 37,
+          "target": 7802416,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PrepareReplayList@Scene8@@QAEXXZ",
+          "evidence": "Canonical EFZ PE 0x0076F085 REL32 operand original target 0x00770E30; independently checked COFF symbol ?PrepareReplayList@Scene8@@QAEXXZ",
+          "addend": 0
+        },
+        {
+          "offset": 69,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "Canonical EFZ PE 0x0076F0A5 REL32 operand original target 0x00759C90; independently checked COFF symbol ?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 119,
+          "target": 4221456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseMusic@Context@@QAEXXZ",
+          "evidence": "Canonical EFZ PE 0x0076F0D7 REL32 operand original target 0x00406A10; independently checked COFF symbol ?ReleaseMusic@Context@@QAEXXZ",
+          "addend": 0
+        },
+        {
+          "offset": 164,
+          "target": 4221456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseMusic@Context@@QAEXXZ",
+          "evidence": "Canonical EFZ PE 0x0076F104 REL32 operand original target 0x00406A10; independently checked COFF symbol ?ReleaseMusic@Context@@QAEXXZ",
+          "addend": 0
+        },
+        {
+          "offset": 193,
+          "target": 4220304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PollInput@Context@@QAEXXZ",
+          "evidence": "Canonical EFZ PE 0x0076F121 REL32 operand original target 0x00406590; independently checked COFF symbol ?PollInput@Context@@QAEXXZ",
+          "addend": 0
+        },
+        {
+          "offset": 254,
+          "target": 7796584,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61509",
+          "evidence": "Canonical EFZ PE 0x0076F15E DIR32 operand original target 0x0076F768; independently checked COFF symbol $L61509",
+          "local_target_offset": 1800,
+          "addend": 0
+        },
+        {
+          "offset": 302,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Canonical EFZ PE 0x0076F18E REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z",
+          "addend": 0
+        },
+        {
+          "offset": 436,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Canonical EFZ PE 0x0076F214 REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z",
+          "addend": 0
+        },
+        {
+          "offset": 577,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Canonical EFZ PE 0x0076F2A1 REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z",
+          "addend": 0
+        },
+        {
+          "offset": 656,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4000000000000000",
+          "evidence": "Canonical EFZ PE 0x0076F2F0 DIR32 operand original target 0x00787328; independently checked COFF symbol __real@4000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 687,
+          "target": 7900808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4030000000000000",
+          "evidence": "Canonical EFZ PE 0x0076F30F DIR32 operand original target 0x00788E88; independently checked COFF symbol __real@4030000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 693,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "Canonical EFZ PE 0x0076F315 DIR32 operand original target 0x00787EA0; independently checked COFF symbol __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 726,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "Canonical EFZ PE 0x0076F336 DIR32 operand original target 0x00787340; independently checked COFF symbol __real@4066800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 742,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "Canonical EFZ PE 0x0076F346 DIR32 operand original target 0x00787340; independently checked COFF symbol __real@4066800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 811,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Canonical EFZ PE 0x0076F38B REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z",
+          "addend": 0
+        },
+        {
+          "offset": 932,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Canonical EFZ PE 0x0076F404 REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1063,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "Canonical EFZ PE 0x0076F487 REL32 operand original target 0x00759C90; independently checked COFF symbol ?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1297,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4000000000000000",
+          "evidence": "Canonical EFZ PE 0x0076F571 DIR32 operand original target 0x00787328; independently checked COFF symbol __real@4000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1328,
+          "target": 7900808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4030000000000000",
+          "evidence": "Canonical EFZ PE 0x0076F590 DIR32 operand original target 0x00788E88; independently checked COFF symbol __real@4030000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1334,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "Canonical EFZ PE 0x0076F596 DIR32 operand original target 0x00787EA0; independently checked COFF symbol __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1367,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ PE 0x0076F5B7 DIR32 operand original target 0x007872F8; independently checked COFF symbol __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1383,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ PE 0x0076F5C7 DIR32 operand original target 0x007872F8; independently checked COFF symbol __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1452,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Canonical EFZ PE 0x0076F60C REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1569,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Canonical EFZ PE 0x0076F681 REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1800,
+          "target": 7795042,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61440",
+          "evidence": "Canonical EFZ PE 0x0076F768 DIR32 operand original target 0x0076F162; independently checked COFF symbol $L61440",
+          "local_target_offset": 258,
+          "addend": 0
+        },
+        {
+          "offset": 1804,
+          "target": 7795429,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61454",
+          "evidence": "Canonical EFZ PE 0x0076F76C DIR32 operand original target 0x0076F2E5; independently checked COFF symbol $L61454",
+          "local_target_offset": 645,
+          "addend": 0
+        },
+        {
+          "offset": 1808,
+          "target": 7795551,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61458",
+          "evidence": "Canonical EFZ PE 0x0076F770 DIR32 operand original target 0x0076F35F; independently checked COFF symbol $L61458",
+          "local_target_offset": 767,
+          "addend": 0
+        },
+        {
+          "offset": 1812,
+          "target": 7796070,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61474",
+          "evidence": "Canonical EFZ PE 0x0076F774 DIR32 operand original target 0x0076F566; independently checked COFF symbol $L61474",
+          "local_target_offset": 1286,
+          "addend": 0
+        },
+        {
+          "offset": 1816,
+          "target": 7796192,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61478",
+          "evidence": "Canonical EFZ PE 0x0076F778 DIR32 operand original target 0x0076F5E0; independently checked COFF symbol $L61478",
+          "local_target_offset": 1408,
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "5248bcd915db033c20ffe298641791f4e324435b5d527b365763e0e5ed8aba0b",
+      "target_extent_sha256": "5248bcd915db033c20ffe298641791f4e324435b5d527b365763e0e5ed8aba0b",
+      "code_size": 1800,
+      "local_data_bytes": 20,
+      "local_data": [
+        {
+          "offset": 1800,
+          "size": 20,
+          "kind": "switch-address-table",
+          "evidence": "Native 0x0076F768..0x0076F77B includes five unique DWORD targets 0x76F162/0x76F2E5/0x76F35F/0x76F566/0x76F5E0; no CC alignment"
+        }
+      ],
+      "unit": "scene8-step",
+      "symbol": "?Step@Scene8@@UAEEXZ",
+      "target_address": "0x0076F060",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "6a73e279fe5e87fd3575f1356ba87ac7fe85b3d6405635c6ac09dbc6fb66ddb3",
+      "object_sha256": "49efa12cb01b53d3b523b113760763b924a90453ac77fe2d109b7ad6a10c45c2",
+      "source_sha256": "5fa955a160486b466f65b085e1159ebb30b8db3cf84633403ec315c71ffe775b",
+      "dependencies": {
+        "src/Engine.h": "8cd3206d19b2974d984fb08396c2d12ff8186992976d78391f76367f6bf1a403",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "417cd1203f66497102631c5a0434dda34dbeb2ad5c08b1f7a511876074dc6611",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "40140119138748ce3df048726152ac3a3c95187d5ac76e9d5d0b325158152813",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

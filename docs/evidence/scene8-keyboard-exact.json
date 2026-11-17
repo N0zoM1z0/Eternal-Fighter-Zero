@@ -48,20 +48,21 @@
       "symbol": "?PollKeyboard@Scene8@@UAEXXZ",
       "target_address": "0x00770D80",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "b6d7d3b9ad75d6c65e981d1b2e6c599665a0a796fed98d63b47f905469ef4e2b",
-      "object_sha256": "038e0c72a3daafc8ec519cda6aca6529d6e51c4848caf5d7ad58381ed20ee4e6",
+      "boundary_ledger_sha256": "6a73e279fe5e87fd3575f1356ba87ac7fe85b3d6405635c6ac09dbc6fb66ddb3",
+      "object_sha256": "a1275a43fe39dec07e771689f9230ebf3d1875e79f7f4e82e27eea68e41b2081",
       "source_sha256": "c7fea6b74031975d326769960a65749411acb3ffc6dc9f5d5a4dfecd03fbfaba",
       "dependencies": {
-        "src/Engine.h": "a94931a498b49caaa5720475caf2f27e3d3df8415ea0637e41f258eef5f6778e",
+        "src/Engine.h": "8cd3206d19b2974d984fb08396c2d12ff8186992976d78391f76367f6bf1a403",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "531d2aea6194ea17914aa9b9fc27273b244ef7bf6fc47b1f6347b9e50c801d63",
+      "units_manifest_sha256": "417cd1203f66497102631c5a0434dda34dbeb2ad5c08b1f7a511876074dc6611",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "97c3cc59070b7697b32a3df898300dee30ce5be3ce44e467491dd9672025537f",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "selected_scene8_layout_replay_2026_11_17": "After completing Scene8::PrepareReplayList, all affected Scene8 owners were rebuilt and strictly compared to their complete native PE extents. Refreshed actual relocation-bound reports and source dependency hashes, not edited old hashes in isolation."
+  "selected_scene8_layout_replay_2026_11_17": "After completing Scene8::PrepareReplayList, all affected Scene8 owners were rebuilt and strictly compared to their complete native PE extents. Refreshed actual relocation-bound reports and source dependency hashes, not edited old hashes in isolation.",
+  "selected_replay_after_scene8_step_2026_11_17": "All affected owner functions rebuilt and original-bound byte-compared after Scene8 signedness recovery in shared header. Fresh full reports replace older source/dependency receipts."
 }

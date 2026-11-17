@@ -168179,3 +168179,230 @@ type = "REL32"
 symbol = "@__security_check_cookie@4"
 target = 0x007781dc
 evidence = "EFZ original PE operand at 0x0077115C targeting @__security_check_cookie@4 at 0x007781DC"
+
+[units.scene8-step]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene8Step.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene8-step/Scene8Step.obj"
+symbol = "?Step@Scene8@@UAEEXZ"
+target_address = 0x0076f060
+size = 1820
+code_size = 1800
+
+[[units.scene8-step.local_data]]
+offset = 1800
+size = 20
+kind = "switch-address-table"
+evidence = "Native 0x0076F768..0x0076F77B includes five unique DWORD targets 0x76F162/0x76F2E5/0x76F35F/0x76F566/0x76F5E0; no CC alignment"
+
+[[units.scene8-step.relocations]]
+offset = 29
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Canonical EFZ PE 0x0076F07D REL32 operand original target 0x004068B0; independently checked COFF symbol ?LoadMusic@Context@@QAEXG@Z"
+
+[[units.scene8-step.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?PrepareReplayList@Scene8@@QAEXXZ"
+target = 0x00770e30
+evidence = "Canonical EFZ PE 0x0076F085 REL32 operand original target 0x00770E30; independently checked COFF symbol ?PrepareReplayList@Scene8@@QAEXXZ"
+
+[[units.scene8-step.relocations]]
+offset = 69
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "Canonical EFZ PE 0x0076F0A5 REL32 operand original target 0x00759C90; independently checked COFF symbol ?FadeOut@Scene@@QAEXPAEEHH@Z"
+
+[[units.scene8-step.relocations]]
+offset = 119
+type = "REL32"
+symbol = "?ReleaseMusic@Context@@QAEXXZ"
+target = 0x00406a10
+evidence = "Canonical EFZ PE 0x0076F0D7 REL32 operand original target 0x00406A10; independently checked COFF symbol ?ReleaseMusic@Context@@QAEXXZ"
+
+[[units.scene8-step.relocations]]
+offset = 164
+type = "REL32"
+symbol = "?ReleaseMusic@Context@@QAEXXZ"
+target = 0x00406a10
+evidence = "Canonical EFZ PE 0x0076F104 REL32 operand original target 0x00406A10; independently checked COFF symbol ?ReleaseMusic@Context@@QAEXXZ"
+
+[[units.scene8-step.relocations]]
+offset = 193
+type = "REL32"
+symbol = "?PollInput@Context@@QAEXXZ"
+target = 0x00406590
+evidence = "Canonical EFZ PE 0x0076F121 REL32 operand original target 0x00406590; independently checked COFF symbol ?PollInput@Context@@QAEXXZ"
+
+[[units.scene8-step.relocations]]
+offset = 254
+type = "DIR32"
+symbol = "$L61509"
+target = 0x0076f768
+evidence = "Canonical EFZ PE 0x0076F15E DIR32 operand original target 0x0076F768; independently checked COFF symbol $L61509"
+
+[[units.scene8-step.relocations]]
+offset = 302
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Canonical EFZ PE 0x0076F18E REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z"
+
+[[units.scene8-step.relocations]]
+offset = 436
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Canonical EFZ PE 0x0076F214 REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z"
+
+[[units.scene8-step.relocations]]
+offset = 577
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Canonical EFZ PE 0x0076F2A1 REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z"
+
+[[units.scene8-step.relocations]]
+offset = 656
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "Canonical EFZ PE 0x0076F2F0 DIR32 operand original target 0x00787328; independently checked COFF symbol __real@4000000000000000"
+
+[[units.scene8-step.relocations]]
+offset = 687
+type = "DIR32"
+symbol = "__real@4030000000000000"
+target = 0x00788e88
+evidence = "Canonical EFZ PE 0x0076F30F DIR32 operand original target 0x00788E88; independently checked COFF symbol __real@4030000000000000"
+
+[[units.scene8-step.relocations]]
+offset = 693
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "Canonical EFZ PE 0x0076F315 DIR32 operand original target 0x00787EA0; independently checked COFF symbol __real@4056800000000000"
+
+[[units.scene8-step.relocations]]
+offset = 726
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "Canonical EFZ PE 0x0076F336 DIR32 operand original target 0x00787340; independently checked COFF symbol __real@4066800000000000"
+
+[[units.scene8-step.relocations]]
+offset = 742
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "Canonical EFZ PE 0x0076F346 DIR32 operand original target 0x00787340; independently checked COFF symbol __real@4066800000000000"
+
+[[units.scene8-step.relocations]]
+offset = 811
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Canonical EFZ PE 0x0076F38B REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z"
+
+[[units.scene8-step.relocations]]
+offset = 932
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Canonical EFZ PE 0x0076F404 REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z"
+
+[[units.scene8-step.relocations]]
+offset = 1063
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "Canonical EFZ PE 0x0076F487 REL32 operand original target 0x00759C90; independently checked COFF symbol ?FadeOut@Scene@@QAEXPAEEHH@Z"
+
+[[units.scene8-step.relocations]]
+offset = 1297
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "Canonical EFZ PE 0x0076F571 DIR32 operand original target 0x00787328; independently checked COFF symbol __real@4000000000000000"
+
+[[units.scene8-step.relocations]]
+offset = 1328
+type = "DIR32"
+symbol = "__real@4030000000000000"
+target = 0x00788e88
+evidence = "Canonical EFZ PE 0x0076F590 DIR32 operand original target 0x00788E88; independently checked COFF symbol __real@4030000000000000"
+
+[[units.scene8-step.relocations]]
+offset = 1334
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "Canonical EFZ PE 0x0076F596 DIR32 operand original target 0x00787EA0; independently checked COFF symbol __real@4056800000000000"
+
+[[units.scene8-step.relocations]]
+offset = 1367
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ PE 0x0076F5B7 DIR32 operand original target 0x007872F8; independently checked COFF symbol __real@0000000000000000"
+
+[[units.scene8-step.relocations]]
+offset = 1383
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ PE 0x0076F5C7 DIR32 operand original target 0x007872F8; independently checked COFF symbol __real@0000000000000000"
+
+[[units.scene8-step.relocations]]
+offset = 1452
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Canonical EFZ PE 0x0076F60C REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z"
+
+[[units.scene8-step.relocations]]
+offset = 1569
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Canonical EFZ PE 0x0076F681 REL32 operand original target 0x00406860; independently checked COFF symbol ?PlayEffectSound@Context@@QAEXG@Z"
+
+[[units.scene8-step.relocations]]
+offset = 1800
+type = "DIR32"
+symbol = "$L61440"
+target = 0x0076f162
+evidence = "Canonical EFZ PE 0x0076F768 DIR32 operand original target 0x0076F162; independently checked COFF symbol $L61440"
+
+[[units.scene8-step.relocations]]
+offset = 1804
+type = "DIR32"
+symbol = "$L61454"
+target = 0x0076f2e5
+evidence = "Canonical EFZ PE 0x0076F76C DIR32 operand original target 0x0076F2E5; independently checked COFF symbol $L61454"
+
+[[units.scene8-step.relocations]]
+offset = 1808
+type = "DIR32"
+symbol = "$L61458"
+target = 0x0076f35f
+evidence = "Canonical EFZ PE 0x0076F770 DIR32 operand original target 0x0076F35F; independently checked COFF symbol $L61458"
+
+[[units.scene8-step.relocations]]
+offset = 1812
+type = "DIR32"
+symbol = "$L61474"
+target = 0x0076f566
+evidence = "Canonical EFZ PE 0x0076F774 DIR32 operand original target 0x0076F566; independently checked COFF symbol $L61474"
+
+[[units.scene8-step.relocations]]
+offset = 1816
+type = "DIR32"
+symbol = "$L61478"
+target = 0x0076f5e0
+evidence = "Canonical EFZ PE 0x0076F778 DIR32 operand original target 0x0076F5E0; independently checked COFF symbol $L61478"
