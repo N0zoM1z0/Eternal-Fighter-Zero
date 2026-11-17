@@ -628,6 +628,8 @@ public:
     virtual void Slot0();
     virtual unsigned char Step();
     virtual void PollKeyboard();
+    void FadeTitlePaletteOut();
+    void FadeTitlePaletteIn();
 };
 #define DECLARE_SCENE(Name, Size) \
 class Name : public Scene { \

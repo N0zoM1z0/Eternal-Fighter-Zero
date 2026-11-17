@@ -1197,6 +1197,17 @@ the current music slot's volume to volume - (20-index)*step/2. Both alternate
 16/15 millisecond timeGetTime busy waits, with the original byte conversion,
 without adding Sleep, message pumping or new error handling.
 
+The two additional title-scene palette transitions at `0x776820` and
+`0x7768D0` are now exact authored `Scene0::FadeTitlePaletteOut/In`
+(**173/173 bytes each**, four independent PE relocations per function).
+Both keep field448 as the live fade flag and redraw all 21 frames while applying
+`frame * 3 + 40` to palette entries 1..0xC1. The busy wait alternates 16/15 ms.
+The affected title `Step` unit has eight compiler-local COFF label renames
+from the new member declarations; every renamed label's compiled local target
+offset was individually checked against the original PE and the entire
+1,267-byte function remained strict Exact. The five existing title owners
+were selectively rebuilt, without a whole-project replay.
+
 The title constructor retains both original DAT and BMP resource paths under
 the original constant condition. Eight distinct string addresses at 0x7898E0,
 0x7898F4, 0x789908, 0x78991C, 0x789930, 0x789944, 0x789958 and 0x78996C bind the

@@ -8880,7 +8880,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 565
 type = "DIR32"
-symbol = "$L61460"
+symbol = "$L61510"
 target = 0x00776487
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -8978,49 +8978,49 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 1239
 type = "DIR32"
-symbol = "$L61411"
+symbol = "$L61461"
 target = 0x007761e9
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1243
 type = "DIR32"
-symbol = "$L61412"
+symbol = "$L61462"
 target = 0x00776268
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1247
 type = "DIR32"
-symbol = "$L61413"
+symbol = "$L61463"
 target = 0x007762e3
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1251
 type = "DIR32"
-symbol = "$L61414"
+symbol = "$L61464"
 target = 0x00776352
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1255
 type = "DIR32"
-symbol = "$L61415"
+symbol = "$L61465"
 target = 0x007763d1
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1259
 type = "DIR32"
-symbol = "$L61416"
+symbol = "$L61466"
 target = 0x00776432
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1263
 type = "DIR32"
-symbol = "$L61417"
+symbol = "$L61467"
 target = 0x0077645f
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -167180,3 +167180,79 @@ type = "REL32"
 symbol = "?LoadMusic@Context@@QAEXG@Z"
 target = 0x004068b0
 evidence = "Native EFZ PE 0x00772576 direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)"
+
+[units.scene0-title-fade-out]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene0PaletteFade.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene0-title-fade-out/Scene0PaletteFade.obj"
+symbol = "?FadeTitlePaletteOut@Scene0@@QAEXXZ"
+target_address = 0x00776820
+size = 173
+
+[[units.scene0-title-fade-out.relocations]]
+offset = 11
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "Canonical EFZ PE at 0x0077682B, title fade FadeTitlePaletteOut operand bound to __imp__timeGetTime@0 at 0x007871E0"
+
+[[units.scene0-title-fade-out.relocations]]
+offset = 103
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "Canonical EFZ PE at 0x00776887, title fade FadeTitlePaletteOut operand bound to ?DarkenPalette@Video@@QAEXPBEEEE@Z at 0x0040BE20"
+
+[[units.scene0-title-fade-out.relocations]]
+offset = 109
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "Canonical EFZ PE at 0x0077688D, title fade FadeTitlePaletteOut operand bound to __imp__timeGetTime@0 at 0x007871E0"
+
+[[units.scene0-title-fade-out.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "Canonical EFZ PE at 0x007768A7, title fade FadeTitlePaletteOut operand bound to __imp__timeGetTime@0 at 0x007871E0"
+
+[units.scene0-title-fade-in]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene0PaletteFade.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene0-title-fade-in/Scene0PaletteFade.obj"
+symbol = "?FadeTitlePaletteIn@Scene0@@QAEXXZ"
+target_address = 0x007768d0
+size = 173
+
+[[units.scene0-title-fade-in.relocations]]
+offset = 11
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "Canonical EFZ PE at 0x007768DB, title fade FadeTitlePaletteIn operand bound to __imp__timeGetTime@0 at 0x007871E0"
+
+[[units.scene0-title-fade-in.relocations]]
+offset = 103
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "Canonical EFZ PE at 0x00776937, title fade FadeTitlePaletteIn operand bound to ?DarkenPalette@Video@@QAEXPBEEEE@Z at 0x0040BE20"
+
+[[units.scene0-title-fade-in.relocations]]
+offset = 109
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "Canonical EFZ PE at 0x0077693D, title fade FadeTitlePaletteIn operand bound to __imp__timeGetTime@0 at 0x007871E0"
+
+[[units.scene0-title-fade-in.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "Canonical EFZ PE at 0x00776957, title fade FadeTitlePaletteIn operand bound to __imp__timeGetTime@0 at 0x007871E0"

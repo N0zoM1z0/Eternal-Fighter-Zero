@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "authority": "Selected, complete natural C++ VC7.1 reconstruction of the original title scene fade owner",
+  "owner": "Scene0::FadeTitlePaletteIn",
+  "method": "One focused /Od /G6 /MT /Gy /W3 compilation; all 173 function bytes compared against original EFZ PE with four independently verified WinMM/Video COFF relocation bindings; zero differences",
+  "native_extent": {
+    "address": "0x007768D0",
+    "exclusive_end": "0x0077697D",
+    "bytes": 173
+  },
+  "behavior": "Set the native title palette transition flag, render 21 consecutive frames while darkening palette entries 1..193 by frame*3+40, wait with alternating 16/15 ms timeGetTime polls, clear transition flag.",
+  "direction": "frame 0 up to 20",
+  "natural_cpp_without_asm_or_code_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 173,
+      "matched_bytes": 173,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "Canonical EFZ PE at 0x007768DB, title fade FadeTitlePaletteIn operand bound to __imp__timeGetTime@0 at 0x007871E0",
+          "addend": 0
+        },
+        {
+          "offset": 103,
+          "target": 4242976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "Canonical EFZ PE at 0x00776937, title fade FadeTitlePaletteIn operand bound to ?DarkenPalette@Video@@QAEXPBEEEE@Z at 0x0040BE20",
+          "addend": 0
+        },
+        {
+          "offset": 109,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "Canonical EFZ PE at 0x0077693D, title fade FadeTitlePaletteIn operand bound to __imp__timeGetTime@0 at 0x007871E0",
+          "addend": 0
+        },
+        {
+          "offset": 135,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "Canonical EFZ PE at 0x00776957, title fade FadeTitlePaletteIn operand bound to __imp__timeGetTime@0 at 0x007871E0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "7ca54bf6e6deca03980b82d488a143bc37986f8e1d4319a9e16be717a4931d73",
+      "target_extent_sha256": "7ca54bf6e6deca03980b82d488a143bc37986f8e1d4319a9e16be717a4931d73",
+      "unit": "scene0-title-fade-in",
+      "symbol": "?FadeTitlePaletteIn@Scene0@@QAEXXZ",
+      "target_address": "0x007768D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "059599fb3e5bc4eb16e6f6f647a5a8a6fa282c33a3b01bde76d7a8042e277ed4",
+      "object_sha256": "bc446922044fa03063823fd363aa52735af08fb91bd9f0f0c91142c919e180dc",
+      "source_sha256": "2aa661d608f97204f94c5ac67407cbdb2bff8f1be67fefa7b99b84415e745332",
+      "dependencies": {
+        "src/Engine.h": "16a74400234d7b541eaca126b160532e3e2162b9dafc13736aafcadedeee20da",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "8684a358a3aa3f772201c373ba6e89632134092d32ea1e3fff0569d513f7b37d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b373c4fd3fec78694dd00ef7500aae6d99b68b0a442c8c3eed49a7f01795dc57",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -188,15 +188,15 @@
       "symbol": "??0Scene0@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
       "target_address": "0x00775D60",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "51a32e353c99b39bc93e1912e3c216cfc04a2334dd650b5c96cf2cbbff27af1a",
-      "object_sha256": "8a305ca19fec93991e0209444bde4f7d9c63e6bbadf74b7ccb873265c6dfb906",
+      "boundary_ledger_sha256": "059599fb3e5bc4eb16e6f6f647a5a8a6fa282c33a3b01bde76d7a8042e277ed4",
+      "object_sha256": "414415dda948cc147c0cfe0dc462068388469b5332dd821fcbfd6b821e8231c4",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "d95e3268f4466e1719ee247c5c9818488fe2f5e2085ed713e032f16c8c62cf2f",
-        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+        "src/Engine.h": "16a74400234d7b541eaca126b160532e3e2162b9dafc13736aafcadedeee20da",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "bc6cc458a8553b7823dd0e24652600a45ca70842abc7554d595ece1a56ca2af3",
+      "units_manifest_sha256": "8684a358a3aa3f772201c373ba6e89632134092d32ea1e3fff0569d513f7b37d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "8fac009d2bcf6b3f1e71668eb9ebc339784fe58b9a9acac81ab370f698670d11",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -225,15 +225,15 @@
       "symbol": "??1Scene0@@QAE@XZ",
       "target_address": "0x00775F30",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "51a32e353c99b39bc93e1912e3c216cfc04a2334dd650b5c96cf2cbbff27af1a",
-      "object_sha256": "2ca9b1a1eb739d6a4f2c1154590aec94e8a23efcdb356ae49d088980e706a76d",
+      "boundary_ledger_sha256": "059599fb3e5bc4eb16e6f6f647a5a8a6fa282c33a3b01bde76d7a8042e277ed4",
+      "object_sha256": "1e787aaf49f72c4c6905cdf87bf0cb4f3756521dcad5fa2170bd0d94b9a7bf4c",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "d95e3268f4466e1719ee247c5c9818488fe2f5e2085ed713e032f16c8c62cf2f",
-        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+        "src/Engine.h": "16a74400234d7b541eaca126b160532e3e2162b9dafc13736aafcadedeee20da",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "bc6cc458a8553b7823dd0e24652600a45ca70842abc7554d595ece1a56ca2af3",
+      "units_manifest_sha256": "8684a358a3aa3f772201c373ba6e89632134092d32ea1e3fff0569d513f7b37d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "93e8d7812f60fa570ae04da14ec500269c74d342007b09ed3c6a6ce37dd2683b",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -314,7 +314,7 @@
           "target": 7824519,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61460",
+          "symbol": "$L61510",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1239,
           "addend": 0
@@ -441,7 +441,7 @@
           "target": 7823849,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61411",
+          "symbol": "$L61461",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 569,
           "addend": 0
@@ -451,7 +451,7 @@
           "target": 7823976,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61412",
+          "symbol": "$L61462",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 696,
           "addend": 0
@@ -461,7 +461,7 @@
           "target": 7824099,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61413",
+          "symbol": "$L61463",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 819,
           "addend": 0
@@ -471,7 +471,7 @@
           "target": 7824210,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61414",
+          "symbol": "$L61464",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 930,
           "addend": 0
@@ -481,7 +481,7 @@
           "target": 7824337,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61415",
+          "symbol": "$L61465",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1057,
           "addend": 0
@@ -491,7 +491,7 @@
           "target": 7824434,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61416",
+          "symbol": "$L61466",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1154,
           "addend": 0
@@ -501,7 +501,7 @@
           "target": 7824479,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61417",
+          "symbol": "$L61467",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1199,
           "addend": 0
@@ -523,17 +523,17 @@
       "symbol": "?Step@Scene0@@UAEEXZ",
       "target_address": "0x00775FB0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "51a32e353c99b39bc93e1912e3c216cfc04a2334dd650b5c96cf2cbbff27af1a",
-      "object_sha256": "2b47590251f5d997647fd9ae5206695dcdfd6431180bf33e5f0bacb5b2bc6367",
+      "boundary_ledger_sha256": "059599fb3e5bc4eb16e6f6f647a5a8a6fa282c33a3b01bde76d7a8042e277ed4",
+      "object_sha256": "69a44461548d5dd8a48f9b84f93f34a9b40c1c2f5f960c80b3f6d3945edef0c7",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "d95e3268f4466e1719ee247c5c9818488fe2f5e2085ed713e032f16c8c62cf2f",
-        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+        "src/Engine.h": "16a74400234d7b541eaca126b160532e3e2162b9dafc13736aafcadedeee20da",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "bc6cc458a8553b7823dd0e24652600a45ca70842abc7554d595ece1a56ca2af3",
+      "units_manifest_sha256": "8684a358a3aa3f772201c373ba6e89632134092d32ea1e3fff0569d513f7b37d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "94bf0651e81560340d534f3a84ce6615d9ddc01d97ebf5b48678c5990a58413a",
+      "unit_sha256": "8858ecbcf879a362d9b0830c47400f4d211cd735948df7218980bc3bd439981a",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -641,15 +641,15 @@
       "symbol": "?Slot0@Scene0@@UAEXXZ",
       "target_address": "0x007764B0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "51a32e353c99b39bc93e1912e3c216cfc04a2334dd650b5c96cf2cbbff27af1a",
-      "object_sha256": "d3a023ced026ec211c3261b25fd50cd9aa73dd5991ff0151771ff9c32afe577d",
+      "boundary_ledger_sha256": "059599fb3e5bc4eb16e6f6f647a5a8a6fa282c33a3b01bde76d7a8042e277ed4",
+      "object_sha256": "5f790d6ee4cdb7de497e7ff39bad4fb880a9cd9c4c6aa113a764ee2d6d3bda27",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "d95e3268f4466e1719ee247c5c9818488fe2f5e2085ed713e032f16c8c62cf2f",
-        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+        "src/Engine.h": "16a74400234d7b541eaca126b160532e3e2162b9dafc13736aafcadedeee20da",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "bc6cc458a8553b7823dd0e24652600a45ca70842abc7554d595ece1a56ca2af3",
+      "units_manifest_sha256": "8684a358a3aa3f772201c373ba6e89632134092d32ea1e3fff0569d513f7b37d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "69555dc91e462ff4efe134dfccec1546e5dcbd255726a2304357db5c2aeb3b97",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -696,20 +696,20 @@
       "symbol": "?PollKeyboard@Scene0@@UAEXXZ",
       "target_address": "0x00776760",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "51a32e353c99b39bc93e1912e3c216cfc04a2334dd650b5c96cf2cbbff27af1a",
-      "object_sha256": "780275a00dfb7da6a0f0481acfb46330406e8ea267b5128534fb0505f9a00cd4",
+      "boundary_ledger_sha256": "059599fb3e5bc4eb16e6f6f647a5a8a6fa282c33a3b01bde76d7a8042e277ed4",
+      "object_sha256": "73d628f34502e9a50c412175ab1c1b1b89995017e1d1dc5900d6c0012142f284",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "d95e3268f4466e1719ee247c5c9818488fe2f5e2085ed713e032f16c8c62cf2f",
-        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+        "src/Engine.h": "16a74400234d7b541eaca126b160532e3e2162b9dafc13736aafcadedeee20da",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "bc6cc458a8553b7823dd0e24652600a45ca70842abc7554d595ece1a56ca2af3",
+      "units_manifest_sha256": "8684a358a3aa3f772201c373ba6e89632134092d32ea1e3fff0569d513f7b37d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "f6a3cdc6844ff76853a53b24546733a826f1772931fed8e86f14299886b37c13",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "Selected 37 normal pinned VC7.1 native COFF units after typed Scene8 fade and Scene9 constructor/destructor/numeric renderer recovery, including the full Minagi 12,553-byte action boss. 14 autogenerated Scene0/Scene1 local switch labels rebound only after independent PE target-offset and full function code/table byte proof; full cold replay not executed."
+  "latest_selected_replay": "Selected complete title-scene reconstruction replays on 2026-11-17 after adding two palette members; all five owners exact. Eight compiler-local switch symbols in Step remapped by verified identical native-relative target offsets, never masked."
 }

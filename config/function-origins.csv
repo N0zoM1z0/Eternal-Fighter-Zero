@@ -627,8 +627,8 @@ address,origin,status,evidence
 0x00775FB0,authored,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
 0x007764B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
 0x00776760,authored,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
-0x00776820,unknown,unreviewed,
-0x007768D0,unknown,unreviewed,
+0x00776820,authored,reviewed,docs/evidence/scene0-title-fade-out-exact.json
+0x007768D0,authored,reviewed,docs/evidence/scene0-title-fade-in-exact.json
 0x00776A62,unknown,unreviewed,
 0x00777A70,unknown,unreviewed,
 0x00777D40,unknown,unreviewed,
