@@ -1155,15 +1155,15 @@
       "symbol": "?UpdatePaletteFade@Context@@QAEXXZ",
       "target_address": "0x00407D10",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "bad15aaa64f1b9c49c44074ba4b417806aa53670d391292b3c4229f916c0552b",
-      "object_sha256": "ff44c684c0e0069d1f40a092a5a9141ae1a666acc03ce27ac6f85988bf26bbd6",
+      "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
+      "object_sha256": "41774802ac3432844d2ce8abda9333264ccbc158a205d55e6cb293441405772a",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
-        "src/Engine.h": "c7eb19d4115e7558aff543a161a0c702429fb1b63dfab62ea0f3664dbbdd5b4b",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+        "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
+        "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "e248a768098e4dee2e33082d8704bce930a091403bb808dc97e2ac5b2e989759",
+      "units_manifest_sha256": "2da08955cbede4537dcedfc26d59ea207ae7e69480c11622bb2dfb15b9775a2a",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "1c2c0e74e1174e276910ae3b4f4d5bc2c1e5b2fd3eea345399f25601352b89c0",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1182,15 +1182,15 @@
       "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
       "target_address": "0x0040BE20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "bad15aaa64f1b9c49c44074ba4b417806aa53670d391292b3c4229f916c0552b",
-      "object_sha256": "efe316f934036da7f2cf6f2397720ca4ef2bdca683d9c4dd8f92b499739d3e60",
+      "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
+      "object_sha256": "5f666f529cdbd09be45033f9531d804f24479be7aa1d571d34a8c0cb5448e8a5",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
-        "src/Engine.h": "c7eb19d4115e7558aff543a161a0c702429fb1b63dfab62ea0f3664dbbdd5b4b",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+        "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
+        "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "e248a768098e4dee2e33082d8704bce930a091403bb808dc97e2ac5b2e989759",
+      "units_manifest_sha256": "2da08955cbede4537dcedfc26d59ea207ae7e69480c11622bb2dfb15b9775a2a",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "b96a927e30ff0ce829463f49a413e1047f08b389eb24452df346663943ae6c56",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1209,15 +1209,15 @@
       "symbol": "?LightenPalette@Video@@QAEXPBEEEE@Z",
       "target_address": "0x0040BF20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "bad15aaa64f1b9c49c44074ba4b417806aa53670d391292b3c4229f916c0552b",
-      "object_sha256": "9acd5730efefdf32cde29d2518625c06ed45702327acda663e706c766941d577",
+      "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
+      "object_sha256": "77ddc54207b7d2bde78cdd4205a6dc3396675d681421adc145a4a682e286970d",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
-        "src/Engine.h": "c7eb19d4115e7558aff543a161a0c702429fb1b63dfab62ea0f3664dbbdd5b4b",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+        "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
+        "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "e248a768098e4dee2e33082d8704bce930a091403bb808dc97e2ac5b2e989759",
+      "units_manifest_sha256": "2da08955cbede4537dcedfc26d59ea207ae7e69480c11622bb2dfb15b9775a2a",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "83c83974a7232b982f38d7bd626ceea3965ba67e5c739ab73bba53d13053e157",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1251,5 +1251,5 @@
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "Selected palette/UI and Minagi native functions recompiled after Scene6 typed UI animation fields, no full replay."
+  "latest_selected_replay": "Selected current UI and palette Engine.h/Input.h-dependency consumers, 27 complete normal COFF native comparisons; no cold replay."
 }
