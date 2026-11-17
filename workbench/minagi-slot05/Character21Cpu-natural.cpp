@@ -77,7 +77,7 @@ void Character21::Slot05()
     verticalSeparation = fabs(positionY - (*opponentSlot)->positionY);
     if (field0008 >= 0x32 && field0008 <= 0x96 && field000c == 0) {
 
-      if (8.0f * field00a8 <= (float)(unsigned short)RandomRange(0,100)) {
+      if (!((float)(unsigned short)RandomRange(0,100) < 8.0f * field00a8)) {
         field3114 = 0;
       }
       else {
@@ -313,7 +313,7 @@ void Character21::Slot05()
         if ((((field0118 <= 500.0) &&
              (field0120 < '\x01')) ||
             ((
-             8.0f * field00a8 <= (float)(unsigned short)RandomRange(0,100) ||
+             !((float)(unsigned short)RandomRange(0,100) < 8.0f * field00a8) ||
              (((*opponentSlot)->field0008 < 0x96 ||
               (0x9c < (*opponentSlot)->field0008)))))) ||
            (((field0008 != 0xfb &&
@@ -1285,14 +1285,14 @@ void Character21::Slot05()
                     (0x3a < (*opponentSlot)->field0008)))))) ||
                  (((positionY != 0.0 ||
                    (
-                   4.0f * field00a8 <= (float)(unsigned short)RandomRange(0,100))) ||
+                   !((float)(unsigned short)RandomRange(0,100) < 4.0f * field00a8))) ||
                   (forwardSeparation <= 120.0)))) {
                 if (((0x31 < field0008) ||
                     (0x31 < (*opponentSlot)->field0008)) ||
                    ((forwardSeparation <= 800.0 ||
                     (((120.0 <= forwardSeparation ||
                       (
-                      2.0f * field00a8 <= (float)(unsigned short)RandomRange(0,100))) ||
+                      !((float)(unsigned short)RandomRange(0,100) < 2.0f * field00a8))) ||
                      ((positionX <= 150.0 ||
                       (490.0 <= positionX)))))))) {
 
@@ -1303,7 +1303,7 @@ void Character21::Slot05()
 
                     if ((unsigned short)RandomRange(0,100) < 2) {
 
-                      if (8.0f * field00a8 <= (float)(unsigned short)RandomRange(0,100)) {
+                      if (!((float)(unsigned short)RandomRange(0,100) < 8.0f * field00a8)) {
                         field3114 = 0;
                       }
                       else {

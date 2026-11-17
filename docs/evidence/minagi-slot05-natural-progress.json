@@ -26,6 +26,19 @@
       "fmulp",
       "fcompp"
     ],
+    "rng_first_scaled_float_call_indices": [
+      4,
+      36,
+      95,
+      96,
+      99
+    ],
+    "rng_first_scaled_float_x87_operations": [
+      "fild",
+      "fld",
+      "fmul:cpu-scale",
+      "fcompp"
+    ],
     "cpu_forward_and_vertical_x87_operations": [
       "fld:x",
       "fsub:x",
@@ -41,9 +54,9 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot05/Character21Cpu-natural.cpp",
-    "source_sha256": "d57597359d3ca48fa79ac4f7cbe0c7b59d938a6377ca68cb333785848f88905e",
+    "source_sha256": "dd08986eaa81f5237d59d8c904550bb6c850004ae86ea042bf1d2c924c9dbb76",
     "object": "build/minagi-slot05/Character21Cpu-natural.obj",
-    "function_body_sha256": "da1eaffe5f31f2075480beb6654fb6d14182dd993be867eb057337ec676ae062",
+    "function_body_sha256": "3107b6d1186797ed488d57ca99b7e837e05b9cfa9277b99f9449c60c893fa446",
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
     "compiler_flags": [
       "/Od",
@@ -52,8 +65,8 @@
       "/Gy",
       "/W3"
     ],
-    "bytes": 17248,
-    "native_size_delta": 121,
+    "bytes": 17194,
+    "native_size_delta": 67,
     "coff_relocations": 318,
     "direct_call_sites": 111,
     "direct_call_targets": {
@@ -72,6 +85,7 @@
     "static_floating_literals_in_original_order": 207,
     "static_floating_literals_out_of_original_order": 0,
     "cpu_guard_and_distance_x87_operation_order_matches_original": true,
+    "five_rng_first_scaled_float_comparisons_match_native": true,
     "cpu_guard_and_distance_x87_sequence_sha256": "0bf86fc6020fa9e1eb2bb795f7f049a8b588b94b36f08e0770826049c76f333b",
     "static_floating_literal_histogram_sha256": "45c84dea93b4edb1238ad2a6919964bcb56942df746a74c37cd64a1abd886cc6"
   },

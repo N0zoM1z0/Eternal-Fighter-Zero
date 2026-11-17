@@ -235,6 +235,25 @@ def main():
     if native_guard_fp!=candidate_guard_fp:
         raise AssertionError(('guard probability x87 arithmetic order diverged',
                               native_guard_fp,candidate_guard_fp))
+    # Five distinct native guard/defense RNG decisions consume the random
+    # draw *before* x87 computes its CPU difficulty-scaled threshold.
+    # Inverted comparisons in source intentionally preserve unordered (NaN)
+    # behavior as compiled by original VC7.1 test ah,0x41 branches.
+    rng_first_sites=[4,36,95,96,99]
+    rng_first_x87=['fild','fld','fmul:cpu-scale','fcompp']
+    for order in rng_first_sites:
+        native_rng_at,native_target=native_calls[order]
+        candidate_rng_at,candidate_target,_=called[order]
+        if native_target!=0x004108A0 or candidate_target!=native_target:
+            raise AssertionError(('RNG-first site is not the bound RNG',
+                                  order,native_target,candidate_target))
+        orig_fp=native_fp_operation_window(
+            native,f'rng-first-original-{order}.bin',native_rng_at,after_call=True)
+        cand_fp=native_fp_operation_window(
+            candidate,f'rng-first-candidate-{order}.bin',candidate_rng_at,after_call=True)
+        if orig_fp!=rng_first_x87 or cand_fp!=rng_first_x87:
+            raise AssertionError(('RNG-first x87 order differs',
+                                  order,rng_first_x87,orig_fp,cand_fp))
     native_fabs_site=[off for off,target in native_calls if target==0x0077842D][0]
     candidate_fabs_site=[off for off,target,_ in called if target==0x0077842D][0]
     native_distance_fp=native_fp_operation_window(
@@ -285,6 +304,8 @@ def main():
             'direct_call_with_rng_bound_order_sha256':call_signature_sha,
             'static_floating_literal_refs':len(native_literals),
             'cpu_guard_x87_operations':native_guard_fp,
+            'rng_first_scaled_float_call_indices':rng_first_sites,
+            'rng_first_scaled_float_x87_operations':rng_first_x87,
             'cpu_forward_and_vertical_x87_operations':native_distance_fp,
             'cpu_guard_and_distance_x87_sequence_sha256':fp_operation_hash,
             'static_floating_literal_histogram_sha256':histogram_sha,
@@ -312,6 +333,7 @@ def main():
             'static_floating_literals_in_original_order':literal_order_matches,
             'static_floating_literals_out_of_original_order':len(native_literals)-literal_order_matches,
             'cpu_guard_and_distance_x87_operation_order_matches_original':True,
+            'five_rng_first_scaled_float_comparisons_match_native':True,
             'cpu_guard_and_distance_x87_sequence_sha256':fp_operation_hash,
             'static_floating_literal_histogram_sha256':histogram_sha,
         },
@@ -343,6 +365,7 @@ def main():
         'static_literal_values_matched':len(candidate_literals),
         'static_literals_in_native_order':literal_order_matches,
         'cpu_guard_and_distance_x87_order_matches_original':True,
+        'rng_first_scaled_float_sites_verified':len(rng_first_sites),
         'exact':False
     },indent=2))
 
