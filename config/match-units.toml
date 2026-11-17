@@ -165961,3 +165961,20 @@ type = "DIR32"
 symbol = "??_7Scene6@@6B@"
 target = 0x007895a8
 evidence = "original PE 0x0075A3BC Scene6 native destructor vtable store, full five-resource path"
+
+[units.scene8-destructor]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Scene8Destructor.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene8-destructor/Scene8Destructor.obj"
+symbol = "??1Scene8@@QAE@XZ"
+target_address = 0x0076efe0
+size = 118
+
+[[units.scene8-destructor.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "??_7Scene8@@6B@"
+target = 0x007897dc
+evidence = "Native PE 0x0076EFEC vtable store; vtable slots 0x0076F780/0x0076F060/0x00770D80 checked independently"

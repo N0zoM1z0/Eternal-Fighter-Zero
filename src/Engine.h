@@ -716,7 +716,18 @@ public:
     void TransitionNumberBackdrop();
 };
 DECLARE_SCENE(Scene7, 0x448)
-DECLARE_SCENE(Scene8, 0x758)
+class Scene8 : public Scene {
+    unsigned char unknown_0430[0x434 - sizeof(Scene)];
+    IUnknown *replayBackgroundSurface; // native object offset 0x434
+    IUnknown *replayOverlaySurface; // native object offset 0x438
+    unsigned char unknown_043c[0x758 - 0x43c];
+public:
+    Scene8(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
+    ~Scene8();
+    virtual void Slot0();
+    virtual unsigned char Step();
+    virtual void PollKeyboard();
+};
 #undef DECLARE_SCENE
 
 #endif
