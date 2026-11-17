@@ -532,3 +532,5 @@ address,end,size,status,evidence
 0x0075A3B0,0x0075A4B9,265,reviewed,docs/evidence/scene6-destructor-exact.json
 0x0076EFE0,0x0076F056,118,reviewed,docs/evidence/scene8-destructor-exact.json
 0x00770D80,0x00770E2B,171,reviewed,docs/evidence/scene8-keyboard-exact.json
+0x00771170,0x00771229,185,reviewed,docs/evidence/scene8-palette-fades-exact.json
+0x00771230,0x007712E9,185,reviewed,docs/evidence/scene8-palette-fades-exact.json

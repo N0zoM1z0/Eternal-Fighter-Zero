@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "authority": "Two full native PE extents and ten independently bound WinMM / Video references",
+  "method": "Two selected VC7.1 /Od /G6 /MT /Gy /W3 Scene8 source functions, compare native PE full 185-byte body each including relocation targets; no full cold replay",
+  "source": "src/Scene8PaletteFade.cpp",
+  "native_owner": "Scene8 replay/options UI, shared Scene palette and videoOwner",
+  "scene_vtable": {
+    "address": "0x007897DC",
+    "slots": [
+      "0x76f780",
+      "0x76f060",
+      "0x770d80"
+    ]
+  },
+  "original_extents": [
+    {
+      "address": "0x00771170",
+      "exclusive_end": "0x00771229",
+      "bytes": 185,
+      "behavior": "21 frames fading out, 1..0xC1 at 2x and 0xC2..255 at 5x intensity, alternates 16/15 ms frame clock"
+    },
+    {
+      "address": "0x00771230",
+      "exclusive_end": "0x007712E9",
+      "bytes": 185,
+      "behavior": "21 frames fading in, 1..0xC1 at 2x and 0xC2..255 at 5x intensity, alternates 16/15 ms frame clock"
+    }
+  ],
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 185,
+      "matched_bytes": 185,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "original Scene8 185-byte PE operand at 0x0077117B; WinMM or Video dual-band native target",
+          "addend": 0
+        },
+        {
+          "offset": 90,
+          "target": 4242976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "original Scene8 185-byte PE operand at 0x007711CA; WinMM or Video dual-band native target",
+          "addend": 0
+        },
+        {
+          "offset": 125,
+          "target": 4242976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "original Scene8 185-byte PE operand at 0x007711ED; WinMM or Video dual-band native target",
+          "addend": 0
+        },
+        {
+          "offset": 131,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "original Scene8 185-byte PE operand at 0x007711F3; WinMM or Video dual-band native target",
+          "addend": 0
+        },
+        {
+          "offset": 157,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "original Scene8 185-byte PE operand at 0x0077120D; WinMM or Video dual-band native target",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "f15c9c20143507936a20eb0b4f05d535f1258fbb1a4b9625f071db925dbd3459",
+      "target_extent_sha256": "f15c9c20143507936a20eb0b4f05d535f1258fbb1a4b9625f071db925dbd3459",
+      "unit": "scene8-fade-replay-out",
+      "symbol": "?FadeReplayPaletteOut@Scene8@@QAEXXZ",
+      "target_address": "0x00771170",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f7a1af83ae1ba216f67bf36902394bcd393b6639c66f63327d3a837ae223b003",
+      "object_sha256": "536295a7b357d6c04c2a1befa39997aad70e50b1894de40cc4701b78d6f98621",
+      "source_sha256": "d7a3f7dc722700257d9f49ccdb970bd501568cab024b1606270864234e27ab6f",
+      "dependencies": {
+        "src/Engine.h": "fab55d6b7b5e3442771dc0eadd27dd1990166ec348ee4067ee7de1e6429c9e23",
+        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ce510315b299b6140278d8ef9351bfa07c0b0cf24d333dc42c48aa31ad4eef72",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "fa627906062ab848bc5d27aa6bdf05b1cf8446720a5b0feb3721aaa27f5791d8",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 185,
+      "matched_bytes": 185,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "original Scene8 185-byte PE operand at 0x0077123B; WinMM or Video dual-band native target",
+          "addend": 0
+        },
+        {
+          "offset": 90,
+          "target": 4242976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "original Scene8 185-byte PE operand at 0x0077128A; WinMM or Video dual-band native target",
+          "addend": 0
+        },
+        {
+          "offset": 125,
+          "target": 4242976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "original Scene8 185-byte PE operand at 0x007712AD; WinMM or Video dual-band native target",
+          "addend": 0
+        },
+        {
+          "offset": 131,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "original Scene8 185-byte PE operand at 0x007712B3; WinMM or Video dual-band native target",
+          "addend": 0
+        },
+        {
+          "offset": 157,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "original Scene8 185-byte PE operand at 0x007712CD; WinMM or Video dual-band native target",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "1c1afc0b306d4fb5487213767915a896eed498124b26d9978ea663e2c69d32dc",
+      "target_extent_sha256": "1c1afc0b306d4fb5487213767915a896eed498124b26d9978ea663e2c69d32dc",
+      "unit": "scene8-fade-replay-in",
+      "symbol": "?FadeReplayPaletteIn@Scene8@@QAEXXZ",
+      "target_address": "0x00771230",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "f7a1af83ae1ba216f67bf36902394bcd393b6639c66f63327d3a837ae223b003",
+      "object_sha256": "6c3ce2b43ec4083e454c5c6b46de83ab6f585b4b9007199b273fb4bee1740406",
+      "source_sha256": "d7a3f7dc722700257d9f49ccdb970bd501568cab024b1606270864234e27ab6f",
+      "dependencies": {
+        "src/Engine.h": "fab55d6b7b5e3442771dc0eadd27dd1990166ec348ee4067ee7de1e6429c9e23",
+        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ce510315b299b6140278d8ef9351bfa07c0b0cf24d333dc42c48aa31ad4eef72",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "3a281767805f7b34d7997edc370c0d198b3ba520ae4cf9e030f153b84a02c08c",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

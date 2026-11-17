@@ -166002,3 +166002,95 @@ type = "REL32"
 symbol = "@__security_check_cookie@4"
 target = 0x007781dc
 evidence = "original PE 0x00770E23 guard cookie validator from 171-byte native body"
+
+
+[units.scene8-fade-replay-out]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene8PaletteFade.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene8-fade-replay-out/Scene8PaletteFade.obj"
+symbol = "?FadeReplayPaletteOut@Scene8@@QAEXXZ"
+target_address = 0x00771170
+size = 185
+
+[[units.scene8-fade-replay-out.relocations]]
+offset = 11
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original Scene8 185-byte PE operand at 0x0077117B; WinMM or Video dual-band native target"
+
+[[units.scene8-fade-replay-out.relocations]]
+offset = 90
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "original Scene8 185-byte PE operand at 0x007711CA; WinMM or Video dual-band native target"
+
+[[units.scene8-fade-replay-out.relocations]]
+offset = 125
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "original Scene8 185-byte PE operand at 0x007711ED; WinMM or Video dual-band native target"
+
+[[units.scene8-fade-replay-out.relocations]]
+offset = 131
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original Scene8 185-byte PE operand at 0x007711F3; WinMM or Video dual-band native target"
+
+[[units.scene8-fade-replay-out.relocations]]
+offset = 157
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original Scene8 185-byte PE operand at 0x0077120D; WinMM or Video dual-band native target"
+
+
+[units.scene8-fade-replay-in]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene8PaletteFade.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene8-fade-replay-in/Scene8PaletteFade.obj"
+symbol = "?FadeReplayPaletteIn@Scene8@@QAEXXZ"
+target_address = 0x00771230
+size = 185
+
+[[units.scene8-fade-replay-in.relocations]]
+offset = 11
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original Scene8 185-byte PE operand at 0x0077123B; WinMM or Video dual-band native target"
+
+[[units.scene8-fade-replay-in.relocations]]
+offset = 90
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "original Scene8 185-byte PE operand at 0x0077128A; WinMM or Video dual-band native target"
+
+[[units.scene8-fade-replay-in.relocations]]
+offset = 125
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "original Scene8 185-byte PE operand at 0x007712AD; WinMM or Video dual-band native target"
+
+[[units.scene8-fade-replay-in.relocations]]
+offset = 131
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original Scene8 185-byte PE operand at 0x007712B3; WinMM or Video dual-band native target"
+
+[[units.scene8-fade-replay-in.relocations]]
+offset = 157
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original Scene8 185-byte PE operand at 0x007712CD; WinMM or Video dual-band native target"

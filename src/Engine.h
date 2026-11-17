@@ -724,6 +724,8 @@ class Scene8 : public Scene {
 public:
     Scene8(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
     ~Scene8();
+    void FadeReplayPaletteOut();
+    void FadeReplayPaletteIn();
     virtual void Slot0();
     virtual unsigned char Step();
     virtual void PollKeyboard();
