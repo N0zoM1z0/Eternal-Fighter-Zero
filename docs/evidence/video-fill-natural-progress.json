@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "video-fill-clipped-directdraw-rect-natural-cpp-prototype-not-exact",
+  "original": {
+    "address": "0x40b300",
+    "size": 308,
+    "sha256": "f530606762a97ad90fbe43f993ffa98eb2d522209ed54af418372c14447bd687",
+    "instruction_count": 93,
+    "ordered_com_vtable_offsets": [
+      "0x64",
+      "0x80"
+    ]
+  },
+  "candidate": {
+    "source": "workbench/video-fill/VideoFill-natural.cpp",
+    "source_sha256": "d64308c0b6c54d0b82c99987317bdd5ce17b2e1593027dbe0a37c34408146cd8",
+    "code_sha256": "a243fe04e8d1f39b54022f916b263c15d452b4ce949cfd20de783d185ca2040e",
+    "size": 338,
+    "native_size_delta": 30,
+    "instruction_count": 93,
+    "relocation_count": 0,
+    "ordered_com_vtable_offsets": [
+      "0x64",
+      "0x80"
+    ],
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287"
+  },
+  "source_contains_inline_assembly_or_padding": false,
+  "strict_function_exact": false,
+  "strict_whole_owner_exact": false,
+  "qualification": "Complete ordinary C++ rectangle clipping, DirectDraw Lock/Unlock, and 8-bit pitch-sensitive row-fill candidate for 308-byte Video owner. All virtual COM call offsets and full candidate compilation are verified; original loop uses EDI register codegen that has not yet been recovered. Machine bytes and equivalence remain unproven. Keep outside the implemented/Exact ledger until strict oracle proof."
+}
