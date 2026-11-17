@@ -545,20 +545,21 @@
       "symbol": "?PrepareResults@Scene9@@QAEXXZ",
       "target_address": "0x00774B00",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "018f2ac37abcfd49b4d22b9b738bf65f694de0529cf30c9531abc0bd84683d18",
-      "object_sha256": "c9410d7d696868f2dbda1152fe6f456a8a99486a64fb13f5d34cf2685b7b546d",
-      "source_sha256": "bd6a1637b19ca67d2c408ce11674b39274d55c768d581d7467f395c639d12822",
+      "boundary_ledger_sha256": "18e3c4fe0715bfc1e27eaa360be061a61802da7b663feb4b44e41b92b7140312",
+      "object_sha256": "5a9b9375dbdd09f3d1bc40400c7fdd715f4a81e2abe7909ab3e99cac422992ed",
+      "source_sha256": "68cfd2575d3a8b553a2333775baab203d3c35387b62aecda9e5208fbf6df6733",
       "dependencies": {
-        "src/Engine.h": "2a6904f39fcbeddb98c048ac0b31c8060733ec5865a0b30fe64fdc31e22278c8",
+        "src/Engine.h": "e542c7bcb52735d0bde1268d596459a1b0166ed8e6770ac2dd0989e7f076b490",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
         "src/Scene9PreparePaths.cpp": "3651b27b3a3f8c5d0f32fd3a61dd7ebdc1207cec988d5379d5b6d4eb0bb662cb"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "798c0a51915e35c26bd2beb5d57569a0a4478836cfc16e09b5f70cf3db7673d9",
+      "units_manifest_sha256": "9602393b1205588a8a4810be01a6ab7d62a12b9d17e74fac4f4df4d8557dc812",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "5543a3239fb40f3d69f56694b8a2c58e46742a2e6f5aa3bafd818dfb25012c1a",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     }
-  ]
+  ],
+  "source_refreshed_after_native_field_naming": "Selected complete 3,151-byte owner rebuilt and rebound after Scene9 field names were recovered from the exact Step; no old proof hashes carried forward."
 }

@@ -5,6 +5,19 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
+## Scene9 results bosses accepted — 2026-11-17
+
+Two complete, natural VC7.1 C++ owners now have selected strict Exact receipts:
+`Scene9::Step` at `0x007714E0` (**4,896/4,896 native bytes, 39 actual
+original-bound COFF relocations**) and `Scene9::PrepareResults` at
+`0x00774B00` (**3,151/3,151 bytes, 57 relocations**). Their source is now
+`src/Scene9Step.cpp` and `src/Scene9PrepareResults.cpp`; the shared Scene9
+fields through `0x470` have native names and offsets. Four dependent Scene9
+constructor/destructor/number/keyboard owners were rebuilt individually and
+remain Exact. No full cold replay or whole-program acceptance was attempted.
+The older 2026-11-16 handoff below still describes the open
+`Scene2::PrepareBattle` boss; it is not Exact.
+
 ## Current handoff — 2026-11-16
 
 **Immediate continuation target: Scene2::PrepareBattle at 0x0076CA50.**

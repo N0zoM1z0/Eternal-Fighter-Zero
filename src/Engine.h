@@ -738,12 +738,23 @@ class Scene9 : public Scene {
     IUnknown *resultSurface;
     IUnknown *resultOverlaySurface;
     IUnknown *resultBackdropSurface;
-    short field0444, field0446, field0448, field044a;
-    short field044c, field044e, field0450, field0452;
-    short field0454, field0456, field0458, field045a, field045c;
-    char resultPhase;                 // native byte 0x45e
-    unsigned char resultTransitionState; // native byte 0x45f
-    unsigned char unknown_0460[4];
+    short resultPanelY;             // +0x444
+    short resultPanelSpeed;         // +0x446
+    short resultScrollA;            // +0x448
+    short resultScrollB;            // +0x44a
+    short resultScrollC;            // +0x44c
+    short resultScrollD;            // +0x44e
+    short resultPanelAcceleration;  // +0x450
+    short resultPanelXDeceleration; // +0x452
+    short resultPanelX;             // +0x454
+    short resultPanelYDeceleration; // +0x456
+    short resultPanelYStart;        // +0x458
+    short resultPanelYOffset;       // +0x45a
+    short resultIntroTimer;         // +0x45c
+    char resultPhase;               // +0x45e
+    char resultTransitionState;     // +0x45f (signed native comparisons)
+    char confirmHeld;               // +0x460
+    unsigned char unknown_0461[3];
     unsigned int healthBonus, comboBonus, damageBonus, winBonus;
 public:
     Scene9(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);

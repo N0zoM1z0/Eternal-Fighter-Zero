@@ -166897,3 +166897,286 @@ type = "REL32"
 symbol = "@__security_check_cookie@4"
 target = 0x007781dc
 evidence = "Canonical PE 0x00775747 operand targeting @__security_check_cookie@4 at 0x007781DC"
+
+[units.scene9-step]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Scene9Step.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene9-step/Scene9Step.obj"
+symbol = "?Step@Scene9@@UAEEXZ"
+target_address = 0x007714e0
+size = 4896
+
+[[units.scene9-step.relocations]]
+offset = 76
+type = "REL32"
+symbol = "?PrepareResults@Scene9@@QAEXXZ"
+target = 0x00774b00
+evidence = "Native EFZ PE 0x0077152C direct call relocation to ?PrepareResults@Scene9@@QAEXXZ (0x00774B00)"
+
+[[units.scene9-step.relocations]]
+offset = 87
+type = "REL32"
+symbol = "?ReleaseMusic@Context@@QAEXXZ"
+target = 0x00406a10
+evidence = "Native EFZ PE 0x00771537 direct call relocation to ?ReleaseMusic@Context@@QAEXXZ (0x00406A10)"
+
+[[units.scene9-step.relocations]]
+offset = 110
+type = "REL32"
+symbol = "?FadeIn@Scene@@QAEXPAEE@Z"
+target = 0x00759e20
+evidence = "Native EFZ PE 0x0077154E direct call relocation to ?FadeIn@Scene@@QAEXPAEE@Z (0x00759E20)"
+
+[[units.scene9-step.relocations]]
+offset = 182
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "Native EFZ PE 0x00771596 direct call relocation to ?FadeOut@Scene@@QAEXPAEEHH@Z (0x00759C90)"
+
+[[units.scene9-step.relocations]]
+offset = 265
+type = "REL32"
+symbol = "_free"
+target = 0x00777e20
+evidence = "Native EFZ PE 0x007715E9 direct call relocation to _free (0x00777E20)"
+
+[[units.scene9-step.relocations]]
+offset = 318
+type = "REL32"
+symbol = "?Close@WordFile@@QAEXXZ"
+target = 0x00405f50
+evidence = "Native EFZ PE 0x0077161E direct call relocation to ?Close@WordFile@@QAEXXZ (0x00405F50)"
+
+[[units.scene9-step.relocations]]
+offset = 428
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x0077168C direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 473
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x007716B9 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 627
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x00771753 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 732
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x007717BC direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 888
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x00771858 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 933
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x00771885 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 1165
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x0077196D direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 1276
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x007719DC direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 1409
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x00771A61 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 1460
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x00771A94 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 1556
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x00771AF4 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 1607
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "Native EFZ PE 0x00771B27 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)"
+
+[[units.scene9-step.relocations]]
+offset = 1774
+type = "REL32"
+symbol = "?UpdateMovement@Secondary@@QAEXXZ"
+target = 0x0040f580
+evidence = "Native EFZ PE 0x00771BCE direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)"
+
+[[units.scene9-step.relocations]]
+offset = 1802
+type = "REL32"
+symbol = "?UpdateMovement@Secondary@@QAEXXZ"
+target = 0x0040f580
+evidence = "Native EFZ PE 0x00771BEA direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)"
+
+[[units.scene9-step.relocations]]
+offset = 1830
+type = "REL32"
+symbol = "?UpdateMovement@Secondary@@QAEXXZ"
+target = 0x0040f580
+evidence = "Native EFZ PE 0x00771C06 direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)"
+
+[[units.scene9-step.relocations]]
+offset = 1906
+type = "REL32"
+symbol = "?StartSound@Audio@@QAEXGH@Z"
+target = 0x0040de80
+evidence = "Native EFZ PE 0x00771C52 direct call relocation to ?StartSound@Audio@@QAEXGH@Z (0x0040DE80)"
+
+[[units.scene9-step.relocations]]
+offset = 1952
+type = "REL32"
+symbol = "?UpdateMovement@Secondary@@QAEXXZ"
+target = 0x0040f580
+evidence = "Native EFZ PE 0x00771C80 direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)"
+
+[[units.scene9-step.relocations]]
+offset = 1980
+type = "REL32"
+symbol = "?UpdateMovement@Secondary@@QAEXXZ"
+target = 0x0040f580
+evidence = "Native EFZ PE 0x00771C9C direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)"
+
+[[units.scene9-step.relocations]]
+offset = 2008
+type = "REL32"
+symbol = "?UpdateMovement@Secondary@@QAEXXZ"
+target = 0x0040f580
+evidence = "Native EFZ PE 0x00771CB8 direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)"
+
+[[units.scene9-step.relocations]]
+offset = 2084
+type = "REL32"
+symbol = "?StartSound@Audio@@QAEXGH@Z"
+target = 0x0040de80
+evidence = "Native EFZ PE 0x00771D04 direct call relocation to ?StartSound@Audio@@QAEXGH@Z (0x0040DE80)"
+
+[[units.scene9-step.relocations]]
+offset = 2257
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Native EFZ PE 0x00771DB1 direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)"
+
+[[units.scene9-step.relocations]]
+offset = 2307
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Native EFZ PE 0x00771DE3 direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)"
+
+[[units.scene9-step.relocations]]
+offset = 2669
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Native EFZ PE 0x00771F4D direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)"
+
+[[units.scene9-step.relocations]]
+offset = 2684
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Native EFZ PE 0x00771F5C direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)"
+
+[[units.scene9-step.relocations]]
+offset = 2829
+type = "REL32"
+symbol = "?PollInput@Context@@QAEXXZ"
+target = 0x00406590
+evidence = "Native EFZ PE 0x00771FED direct call relocation to ?PollInput@Context@@QAEXXZ (0x00406590)"
+
+[[units.scene9-step.relocations]]
+offset = 2924
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Native EFZ PE 0x0077204C direct call relocation to ?PlayEffectSound@Context@@QAEXG@Z (0x00406860)"
+
+[[units.scene9-step.relocations]]
+offset = 3038
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Native EFZ PE 0x007720BE direct call relocation to ?PlayEffectSound@Context@@QAEXG@Z (0x00406860)"
+
+[[units.scene9-step.relocations]]
+offset = 3505
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Native EFZ PE 0x00772291 direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)"
+
+[[units.scene9-step.relocations]]
+offset = 3723
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Native EFZ PE 0x0077236B direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)"
+
+[[units.scene9-step.relocations]]
+offset = 3738
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Native EFZ PE 0x0077237A direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)"
+
+[[units.scene9-step.relocations]]
+offset = 4013
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Native EFZ PE 0x0077248D direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)"
+
+[[units.scene9-step.relocations]]
+offset = 4231
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Native EFZ PE 0x00772567 direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)"
+
+[[units.scene9-step.relocations]]
+offset = 4246
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Native EFZ PE 0x00772576 direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)"

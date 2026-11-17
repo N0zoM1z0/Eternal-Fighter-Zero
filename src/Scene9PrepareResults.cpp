@@ -128,19 +128,19 @@ void Scene9::PrepareResults()
             secondary[1]->statistics.Write(secondary[1]->resourceName);
         }
     }
-    field0444 = 240;
-    field0446 = 18;
-    field0448 = 0;
-    field044a = 0;
-    field044c = 0;
-    field044e = 0;
-    field0450 = -2;
-    field0454 = 320;
-    field0458 = -240;
-    field0452 = 9;
-    field0456 = 15;
-    field045a = 15;
-    field045c = 0;
+    resultPanelY = 240;
+    resultPanelSpeed = 18;
+    resultScrollA = 0;
+    resultScrollB = 0;
+    resultScrollC = 0;
+    resultScrollD = 0;
+    resultPanelAcceleration = -2;
+    resultPanelX = 320;
+    resultPanelYStart = -240;
+    resultPanelXDeceleration = 9;
+    resultPanelYDeceleration = 15;
+    resultPanelYOffset = 15;
+    resultIntroTimer = 0;
     if (contextOwner->winner134c == 1) {
         secondary[0]->positionX = 480.0;
         secondary[0]->positionY = -240.0;

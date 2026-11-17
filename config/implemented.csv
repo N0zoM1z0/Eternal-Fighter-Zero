@@ -521,3 +521,4 @@ address,name,source,symbol,status,evidence
 0x007759F0,Scene10::Step,src/Scene10Step.cpp,?Step@Scene10@@UAEEXZ,complete,docs/evidence/scene10-step-exact.json
 0x00775B80,Scene10::Slot0,src/Scene10Render.cpp,?Slot0@Scene10@@UAEXXZ,complete,docs/evidence/scene10-render-exact.json
 0x00774B00,Scene9::PrepareResults,src/Scene9PrepareResults.cpp,?PrepareResults@Scene9@@QAEXXZ,complete,docs/evidence/scene9-prepare-results-exact.json
+0x007714E0,Scene9::Step,src/Scene9Step.cpp,?Step@Scene9@@UAEEXZ,complete,docs/evidence/scene9-step-exact.json

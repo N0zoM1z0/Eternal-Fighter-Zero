@@ -1,0 +1,398 @@
+{
+  "schema_version": 1,
+  "authority": "Original EFZ PE full-function binary codegen identity from authored VC7.1 natural C++",
+  "method": "One selected unit /Od /G6 /MT /Gy /GS /W3 compiler build; all 4896 bytes checked including return; 39 PE-bound original call targets independently decoded at exact COFF offsets; no byte masking or padding",
+  "owner": "Scene9::Step result, round and score transition state machine",
+  "original_extent": {
+    "address": "0x007714E0",
+    "exclusive_end": "0x00772800",
+    "bytes": 4896
+  },
+  "behavior": "PrepareResults transition and music, original character deletion paths, replay/background cleanup, win-dependent scene returns, three repeated frame updates, character sound dispatch, result menu input and UI scroll/easing.",
+  "native_stack_frame": 152,
+  "symbol_destinations": 12,
+  "relocations_bound_to_original_PE": 39,
+  "original_code_bytes_compared": 4896,
+  "natural_cpp_without_asm_padding_or_target_patches": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 4896,
+      "matched_bytes": 4896,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 76,
+          "target": 7817984,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PrepareResults@Scene9@@QAEXXZ",
+          "evidence": "Native EFZ PE 0x0077152C direct call relocation to ?PrepareResults@Scene9@@QAEXXZ (0x00774B00)",
+          "addend": 0
+        },
+        {
+          "offset": 87,
+          "target": 4221456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseMusic@Context@@QAEXXZ",
+          "evidence": "Native EFZ PE 0x00771537 direct call relocation to ?ReleaseMusic@Context@@QAEXXZ (0x00406A10)",
+          "addend": 0
+        },
+        {
+          "offset": 110,
+          "target": 7708192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+          "evidence": "Native EFZ PE 0x0077154E direct call relocation to ?FadeIn@Scene@@QAEXPAEE@Z (0x00759E20)",
+          "addend": 0
+        },
+        {
+          "offset": 182,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "Native EFZ PE 0x00771596 direct call relocation to ?FadeOut@Scene@@QAEXPAEEHH@Z (0x00759C90)",
+          "addend": 0
+        },
+        {
+          "offset": 265,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_free",
+          "evidence": "Native EFZ PE 0x007715E9 direct call relocation to _free (0x00777E20)",
+          "addend": 0
+        },
+        {
+          "offset": 318,
+          "target": 4218704,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Close@WordFile@@QAEXXZ",
+          "evidence": "Native EFZ PE 0x0077161E direct call relocation to ?Close@WordFile@@QAEXXZ (0x00405F50)",
+          "addend": 0
+        },
+        {
+          "offset": 428,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x0077168C direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 473,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x007716B9 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 627,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x00771753 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 732,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x007717BC direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 888,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x00771858 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 933,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x00771885 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 1165,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x0077196D direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 1276,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x007719DC direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 1409,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x00771A61 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 1460,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x00771A94 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 1556,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x00771AF4 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 1607,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "Native EFZ PE 0x00771B27 direct call relocation to ??_GSecondary@@QAEPAXI@Z (0x00401920)",
+          "addend": 0
+        },
+        {
+          "offset": 1774,
+          "target": 4257152,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateMovement@Secondary@@QAEXXZ",
+          "evidence": "Native EFZ PE 0x00771BCE direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)",
+          "addend": 0
+        },
+        {
+          "offset": 1802,
+          "target": 4257152,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateMovement@Secondary@@QAEXXZ",
+          "evidence": "Native EFZ PE 0x00771BEA direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)",
+          "addend": 0
+        },
+        {
+          "offset": 1830,
+          "target": 4257152,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateMovement@Secondary@@QAEXXZ",
+          "evidence": "Native EFZ PE 0x00771C06 direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)",
+          "addend": 0
+        },
+        {
+          "offset": 1906,
+          "target": 4251264,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?StartSound@Audio@@QAEXGH@Z",
+          "evidence": "Native EFZ PE 0x00771C52 direct call relocation to ?StartSound@Audio@@QAEXGH@Z (0x0040DE80)",
+          "addend": 0
+        },
+        {
+          "offset": 1952,
+          "target": 4257152,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateMovement@Secondary@@QAEXXZ",
+          "evidence": "Native EFZ PE 0x00771C80 direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)",
+          "addend": 0
+        },
+        {
+          "offset": 1980,
+          "target": 4257152,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateMovement@Secondary@@QAEXXZ",
+          "evidence": "Native EFZ PE 0x00771C9C direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)",
+          "addend": 0
+        },
+        {
+          "offset": 2008,
+          "target": 4257152,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateMovement@Secondary@@QAEXXZ",
+          "evidence": "Native EFZ PE 0x00771CB8 direct call relocation to ?UpdateMovement@Secondary@@QAEXXZ (0x0040F580)",
+          "addend": 0
+        },
+        {
+          "offset": 2084,
+          "target": 4251264,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?StartSound@Audio@@QAEXGH@Z",
+          "evidence": "Native EFZ PE 0x00771D04 direct call relocation to ?StartSound@Audio@@QAEXGH@Z (0x0040DE80)",
+          "addend": 0
+        },
+        {
+          "offset": 2257,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x00771DB1 direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)",
+          "addend": 0
+        },
+        {
+          "offset": 2307,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x00771DE3 direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)",
+          "addend": 0
+        },
+        {
+          "offset": 2669,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x00771F4D direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)",
+          "addend": 0
+        },
+        {
+          "offset": 2684,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x00771F5C direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)",
+          "addend": 0
+        },
+        {
+          "offset": 2829,
+          "target": 4220304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PollInput@Context@@QAEXXZ",
+          "evidence": "Native EFZ PE 0x00771FED direct call relocation to ?PollInput@Context@@QAEXXZ (0x00406590)",
+          "addend": 0
+        },
+        {
+          "offset": 2924,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x0077204C direct call relocation to ?PlayEffectSound@Context@@QAEXG@Z (0x00406860)",
+          "addend": 0
+        },
+        {
+          "offset": 3038,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x007720BE direct call relocation to ?PlayEffectSound@Context@@QAEXG@Z (0x00406860)",
+          "addend": 0
+        },
+        {
+          "offset": 3505,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x00772291 direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)",
+          "addend": 0
+        },
+        {
+          "offset": 3723,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x0077236B direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)",
+          "addend": 0
+        },
+        {
+          "offset": 3738,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x0077237A direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)",
+          "addend": 0
+        },
+        {
+          "offset": 4013,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x0077248D direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)",
+          "addend": 0
+        },
+        {
+          "offset": 4231,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x00772567 direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)",
+          "addend": 0
+        },
+        {
+          "offset": 4246,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Native EFZ PE 0x00772576 direct call relocation to ?LoadMusic@Context@@QAEXG@Z (0x004068B0)",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "f9a113c2ebe34b2e7eea49e5d6cb4aeabef8a285870a76fba66ed375d2756363",
+      "target_extent_sha256": "f9a113c2ebe34b2e7eea49e5d6cb4aeabef8a285870a76fba66ed375d2756363",
+      "unit": "scene9-step",
+      "symbol": "?Step@Scene9@@UAEEXZ",
+      "target_address": "0x007714E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "18e3c4fe0715bfc1e27eaa360be061a61802da7b663feb4b44e41b92b7140312",
+      "object_sha256": "48919fa5c67164d0b89bf3d67f027d7cfd124e87ae01cba37afffdefc9f638e3",
+      "source_sha256": "683aef10f308c3d49e7fc28272613a46d2c1c22bcbeb31fdbc0022a73fef021e",
+      "dependencies": {
+        "src/Engine.h": "e542c7bcb52735d0bde1268d596459a1b0166ed8e6770ac2dd0989e7f076b490",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9602393b1205588a8a4810be01a6ab7d62a12b9d17e74fac4f4df4d8557dc812",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "3e1490aaacc43b45a1a64dd117fa53528abb6ab2874609bb4578a6b8f69cca82",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
