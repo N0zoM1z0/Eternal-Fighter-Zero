@@ -680,7 +680,11 @@ class Scene3;
 DECLARE_SCENE(Scene5, 0x474)
 class Scene6 : public Scene {
     // Original settings UI easing value at native object offset 0x754.
-    unsigned char unknown_0430[0x750 - sizeof(Scene)];
+    unsigned char unknown_0430[0x440 - sizeof(Scene)];
+    IUnknown *numberSurface;
+    unsigned char unknown_0444[0x741 - 0x444];
+    unsigned char numberColorKey;
+    unsigned char unknown_0742[0x750 - 0x742];
     int settingsPulseOffset;
     int settingsSlideOffset;
     unsigned char unknown_0758[0x760 - 0x758];
@@ -695,6 +699,7 @@ public:
     void AnimateSettingsSlide(unsigned char reverse);
     void AnimateSettingsPreview();
     void ReloadSelectedPreview();
+    void DrawConfigNumber(int x, int y, unsigned int value);
 };
 DECLARE_SCENE(Scene7, 0x448)
 DECLARE_SCENE(Scene8, 0x758)

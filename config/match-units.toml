@@ -165782,3 +165782,20 @@ type = "REL32"
 symbol = "@__security_check_cookie@4"
 target = 0x007781dc
 evidence = "original native PE 0x0075D3F3 GS security check call"
+
+[units.scene6-config-number]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene6Number.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene6-config-number/Scene6Number.obj"
+symbol = "?DrawConfigNumber@Scene6@@QAEXHHI@Z"
+target_address = 0x0075d260
+size = 236
+
+[[units.scene6-config-number.relocations]]
+offset = 192
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "original native PE 0x0075D31F direct Video::DrawSurface call from complete 236-byte owner"
