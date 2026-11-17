@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "authority": "Full 2,905-byte canonical EFZ PE owner identity from natural VC7.1 C++ with 40 independently original-bound COFF operands",
+  "method": "Selected full 2905-byte /Od /G6 /MT /Gy /W3 reconstruction, including all original relocations, no all-unit cold replay, ASM, code padding or code patches",
+  "owner": "Scene8::Scene8 replay-browser resource constructor",
+  "native_extent": {
+    "address": "0x0076E480",
+    "exclusive_end": "0x0076EFD9",
+    "bytes": 2905
+  },
+  "behavior": "Original packed and bitmap resource fallback; two resource surfaces and palette bands; replay menu state initialization and exact 19 SourceRect sprite-sheet tiles (14 selection, 4 confirm, 1 final)",
+  "source_characteristics": "Natural C++ member assignments and MakeSurfaceRect calls; native 0x284 frame and 19 explicit generated calls; eight distinct original .rdata path bindings",
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 2905,
+      "matched_bytes": 2905,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 7707664,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E4B2; independently original-linked target 0x00759C10 for ??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+          "addend": 0
+        },
+        {
+          "offset": 62,
+          "target": 7903196,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene8@@6B@",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E4BE; independently original-linked target 0x007897DC for ??_7Scene8@@6B@",
+          "addend": 0
+        },
+        {
+          "offset": 84,
+          "target": 7902916,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayCtorBackgroundDat@@3QBDB",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E4D4; independently original-linked target 0x007896C4 for ?replayCtorBackgroundDat@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 110,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E4EE; independently original-linked target 0x00406DB0 for ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "addend": 0
+        },
+        {
+          "offset": 122,
+          "target": 7902940,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayCtorOverlayDat@@3QBDB",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E4FA; independently original-linked target 0x007896DC for ?replayCtorOverlayDat@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 149,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E515; independently original-linked target 0x00406DB0 for ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "addend": 0
+        },
+        {
+          "offset": 163,
+          "target": 7902960,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayCtorBackgroundPaletteDat@@3QBDB",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E523; independently original-linked target 0x007896F0 for ?replayCtorBackgroundPaletteDat@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 187,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E53B; independently original-linked target 0x0040B760 for ?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 201,
+          "target": 7902984,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayCtorOverlayPaletteDat@@3QBDB",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E549; independently original-linked target 0x00789708 for ?replayCtorOverlayPaletteDat@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 225,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E561; independently original-linked target 0x0040B760 for ?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 237,
+          "target": 7903004,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayCtorBackgroundBmp@@3QBDB",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E56D; independently original-linked target 0x0078971C for ?replayCtorBackgroundBmp@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 268,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E58C; independently original-linked target 0x00408D00 for ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "addend": 0
+        },
+        {
+          "offset": 278,
+          "target": 7903028,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayCtorOverlayBmp@@3QBDB",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E596; independently original-linked target 0x00789734 for ?replayCtorOverlayBmp@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 309,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E5B5; independently original-linked target 0x00408D00 for ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "addend": 0
+        },
+        {
+          "offset": 323,
+          "target": 7903048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayCtorBackgroundPaletteBmp@@3QBDB",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E5C3; independently original-linked target 0x00789748 for ?replayCtorBackgroundPaletteBmp@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 347,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E5DB; independently original-linked target 0x0040B640 for ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 361,
+          "target": 7903072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayCtorOverlayPaletteBmp@@3QBDB",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E5E9; independently original-linked target 0x00789760 for ?replayCtorOverlayPaletteBmp@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 385,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E601; independently original-linked target 0x0040B640 for ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 412,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E61C; independently original-linked target 0x0040BCC0 for ?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "addend": 0
+        },
+        {
+          "offset": 639,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E6FF; independently original-linked target 0x007872F8 for __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 657,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E711; independently original-linked target 0x007872F8 for __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 966,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E846; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1043,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E893; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1120,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E8E0; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1200,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E930; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1307,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076E99B; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1414,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EA06; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1521,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EA71; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1628,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EADC; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1735,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EB47; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1842,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EBB2; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 1949,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EC1D; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 2056,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EC88; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 2163,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076ECF3; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 2270,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076ED5E; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 2377,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EDC9; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 2484,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EE34; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 2591,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EE9F; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 2698,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EF0A; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 2805,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ canonical PE owner operand at 0x0076EF75; independently original-linked target 0x0040C590 for ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0eaf791ba5d5878b8a59921d941e86b09c22248f05ec8b13fe1a15782739bfd0",
+      "target_extent_sha256": "0eaf791ba5d5878b8a59921d941e86b09c22248f05ec8b13fe1a15782739bfd0",
+      "unit": "scene8-constructor",
+      "symbol": "??0Scene8@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+      "target_address": "0x0076E480",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "e2c0d096d85753336516b4f9d5942f6d879b682bf034075476d74434a27e2d30",
+      "object_sha256": "a031add8d20ab945c0c9254fc46cd293ded794111f12cdda07a28b1f159c239b",
+      "source_sha256": "6b629046fecd6fd6a9d6f92ea325d3433c07bfbb59199ed3a1ffa5add25c2275",
+      "dependencies": {
+        "src/Engine.h": "90e408ec1a008f967dbb1dfb9a5dff49ce10f4b8cb99b45408454431f6fc9875",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/Scene8ConstructorPaths.cpp": "aa68392b367947499183a207695027193b58508dc262f290d15c25a0e24391bb"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "fd9dfac41949a0d71fc0e01302f065feaf143e89b78de1a65b9004ed94a31a13",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "937c114f83ca2c48ee316e6b2c303a36080e7aee3ddcec10b05917b047d26490",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "fresh_selected_constructor_2026_11_17": "The accepted natural constructor source was selected rebuilt and strict compared again after final source comments; all native bytes, original-bound relocations and dependent header receipt remain verified."
+}

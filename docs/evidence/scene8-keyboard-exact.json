@@ -48,15 +48,15 @@
       "symbol": "?PollKeyboard@Scene8@@UAEXXZ",
       "target_address": "0x00770D80",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "6a73e279fe5e87fd3575f1356ba87ac7fe85b3d6405635c6ac09dbc6fb66ddb3",
-      "object_sha256": "a1275a43fe39dec07e771689f9230ebf3d1875e79f7f4e82e27eea68e41b2081",
+      "boundary_ledger_sha256": "e2c0d096d85753336516b4f9d5942f6d879b682bf034075476d74434a27e2d30",
+      "object_sha256": "87cbe5e197d696975a75fae91468fb7b36d791b7cd575e87b5247545e237a5b1",
       "source_sha256": "c7fea6b74031975d326769960a65749411acb3ffc6dc9f5d5a4dfecd03fbfaba",
       "dependencies": {
-        "src/Engine.h": "8cd3206d19b2974d984fb08396c2d12ff8186992976d78391f76367f6bf1a403",
+        "src/Engine.h": "90e408ec1a008f967dbb1dfb9a5dff49ce10f4b8cb99b45408454431f6fc9875",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "417cd1203f66497102631c5a0434dda34dbeb2ad5c08b1f7a511876074dc6611",
+      "units_manifest_sha256": "fd9dfac41949a0d71fc0e01302f065feaf143e89b78de1a65b9004ed94a31a13",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "97c3cc59070b7697b32a3df898300dee30ce5be3ce44e467491dd9672025537f",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -64,5 +64,7 @@
     }
   ],
   "selected_scene8_layout_replay_2026_11_17": "After completing Scene8::PrepareReplayList, all affected Scene8 owners were rebuilt and strictly compared to their complete native PE extents. Refreshed actual relocation-bound reports and source dependency hashes, not edited old hashes in isolation.",
-  "selected_replay_after_scene8_step_2026_11_17": "All affected owner functions rebuilt and original-bound byte-compared after Scene8 signedness recovery in shared header. Fresh full reports replace older source/dependency receipts."
+  "selected_replay_after_scene8_step_2026_11_17": "All affected owner functions rebuilt and original-bound byte-compared after Scene8 signedness recovery in shared header. Fresh full reports replace older source/dependency receipts.",
+  "selected_replay_after_scene8_constructor_2026_11_17": "Five affected receipts refreshed from actual complete selected VC7.1 builds after native Scene8 constructor rectangle layouts. Scene8::Step six local-label names changed while all original addresses and all function bytes remained exact.",
+  "replay_after_scene8_ctor_layout_refinement": "Focused complete original-bound replay of affected Scene8 owner after recovering typed native replay rectangle members, with zero bytes different; fresh source/dependency COFF receipts."
 }

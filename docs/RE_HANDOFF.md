@@ -26,8 +26,13 @@ Five other Scene8 exact owners were selectively rebuilt after typing the
 native signed/unsigned replay menu fields and still have zero differences.
 Their real codegen reports, source dependency hashes, and proof rows were
 refreshed; no all-unit cold replay was run. The next substantive Scene8 owners
-are its constructor at `0x0076E480` (2,905 native bytes) and `Slot0` renderer
-at `0x0076F780` (5,619 bytes), both still open.
+are its `Slot0` renderer at `0x0076F780` (5,619 bytes), still open.
+`Scene8::Scene8` at `0x0076E480` is now strict Exact for **2,905/2,905**
+native bytes and **40/40 original-bound relocations**, including 19 normal
+`MakeSurfaceRect` calls, eight distinct resource strings, and original DAT/BMP
+alternatives. Its accepted source is `src/Scene8Constructor.cpp`; the typed
+replay sprite rectangle fields preserve the native object layout. Six affected
+Scene8 owners were selectively recompiled and remain strict Exact.
 
 ## Scene9 results bosses accepted — 2026-11-17
 

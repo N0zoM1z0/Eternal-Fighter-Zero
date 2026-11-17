@@ -600,7 +600,7 @@ address,origin,status,evidence
 0x0076CA50,authored,reviewed,docs/KNOWLEDGE_BASE.md#scene2-preparebattle-owner-boundary
 0x0076DA10,authored,reviewed,docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation
 0x0076DA20,authored,reviewed,docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation
-0x0076E480,unknown,unreviewed,
+0x0076E480,authored,reviewed,docs/evidence/scene8-constructor-exact.json
 0x0076EFE0,authored,reviewed,docs/evidence/scene8-destructor-exact.json
 0x0076F060,authored,reviewed,docs/evidence/scene8-step-exact.json
 0x0076F780,unknown,unreviewed,

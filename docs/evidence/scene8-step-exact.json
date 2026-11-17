@@ -85,7 +85,7 @@
           "target": 7796584,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61509",
+          "symbol": "$L61517",
           "evidence": "Canonical EFZ PE 0x0076F15E DIR32 operand original target 0x0076F768; independently checked COFF symbol $L61509",
           "local_target_offset": 1800,
           "addend": 0
@@ -257,7 +257,7 @@
           "target": 7795042,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61440",
+          "symbol": "$L61448",
           "evidence": "Canonical EFZ PE 0x0076F768 DIR32 operand original target 0x0076F162; independently checked COFF symbol $L61440",
           "local_target_offset": 258,
           "addend": 0
@@ -267,7 +267,7 @@
           "target": 7795429,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61454",
+          "symbol": "$L61462",
           "evidence": "Canonical EFZ PE 0x0076F76C DIR32 operand original target 0x0076F2E5; independently checked COFF symbol $L61454",
           "local_target_offset": 645,
           "addend": 0
@@ -277,7 +277,7 @@
           "target": 7795551,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61458",
+          "symbol": "$L61466",
           "evidence": "Canonical EFZ PE 0x0076F770 DIR32 operand original target 0x0076F35F; independently checked COFF symbol $L61458",
           "local_target_offset": 767,
           "addend": 0
@@ -287,7 +287,7 @@
           "target": 7796070,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61474",
+          "symbol": "$L61482",
           "evidence": "Canonical EFZ PE 0x0076F774 DIR32 operand original target 0x0076F566; independently checked COFF symbol $L61474",
           "local_target_offset": 1286,
           "addend": 0
@@ -297,7 +297,7 @@
           "target": 7796192,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61478",
+          "symbol": "$L61486",
           "evidence": "Canonical EFZ PE 0x0076F778 DIR32 operand original target 0x0076F5E0; independently checked COFF symbol $L61478",
           "local_target_offset": 1408,
           "addend": 0
@@ -319,19 +319,21 @@
       "symbol": "?Step@Scene8@@UAEEXZ",
       "target_address": "0x0076F060",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "6a73e279fe5e87fd3575f1356ba87ac7fe85b3d6405635c6ac09dbc6fb66ddb3",
-      "object_sha256": "49efa12cb01b53d3b523b113760763b924a90453ac77fe2d109b7ad6a10c45c2",
+      "boundary_ledger_sha256": "e2c0d096d85753336516b4f9d5942f6d879b682bf034075476d74434a27e2d30",
+      "object_sha256": "837ef8764fbcc5e416428a062cc9c92b9adb751daf38709571feefc87b490f18",
       "source_sha256": "5fa955a160486b466f65b085e1159ebb30b8db3cf84633403ec315c71ffe775b",
       "dependencies": {
-        "src/Engine.h": "8cd3206d19b2974d984fb08396c2d12ff8186992976d78391f76367f6bf1a403",
+        "src/Engine.h": "90e408ec1a008f967dbb1dfb9a5dff49ce10f4b8cb99b45408454431f6fc9875",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "417cd1203f66497102631c5a0434dda34dbeb2ad5c08b1f7a511876074dc6611",
+      "units_manifest_sha256": "fd9dfac41949a0d71fc0e01302f065feaf143e89b78de1a65b9004ed94a31a13",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "40140119138748ce3df048726152ac3a3c95187d5ac76e9d5d0b325158152813",
+      "unit_sha256": "937dd43dbb974f36bc66077d707ef2345ef8b7b6b9ec5bc0b46defaeba8ba466",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }
-  ]
+  ],
+  "selected_replay_after_scene8_constructor_2026_11_17": "Five affected receipts refreshed from actual complete selected VC7.1 builds after native Scene8 constructor rectangle layouts. Scene8::Step six local-label names changed while all original addresses and all function bytes remained exact.",
+  "replay_after_scene8_ctor_layout_refinement": "Focused complete original-bound replay of affected Scene8 owner after recovering typed native replay rectangle members, with zero bytes different; fresh source/dependency COFF receipts."
 }

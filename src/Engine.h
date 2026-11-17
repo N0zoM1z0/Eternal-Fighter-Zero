@@ -722,10 +722,12 @@ class Scene8 : public Scene {
     unsigned char unknown_0430[0x434 - sizeof(Scene)];
     IUnknown *replayBackgroundSurface; // native object offset 0x434
     IUnknown *replayOverlaySurface; // native object offset 0x438
-    unsigned char unknown_043c[0x446 - 0x43c];
+    unsigned int replayUnusedPointerA; // original object offset +0x43c
+    unsigned int replayUnusedPointerB; // +0x440
+    unsigned char unknown_0444[2];
     short scrollTop, scrollBottom, scrollLeft, scrollRight;
     unsigned char heldDirection[2];
-    unsigned char unknown_0450[0x469-0x450];
+    unsigned char replayNavigationSprite[0x469-0x450];
     char replayMenuPhase; // 0x469
     char replayColumn; // 0x46a
     char replayMenuSubchoice; // 0x46b
@@ -733,7 +735,13 @@ class Scene8 : public Scene {
     char replayRow; // 0x46d
     char replayAvailable[9][9]; // 0x46e
     unsigned char replayCharacters[9][9][2]; // 0x4bf
-    unsigned char unknown_0561[0x748-0x561];
+    unsigned char unknown_0561[3];
+    SurfaceRect replayChoiceRects[14];   // +0x564 through +0x643
+    unsigned char unknown_0644[0x684-0x644];
+    SurfaceRect replayConfirmRects[4];  // +0x684 through +0x6c3
+    unsigned char unknown_06c4[0x6d4-0x6c4];
+    SurfaceRect replayLastRect;        // +0x6d4
+    unsigned char unknown_06e4[0x748-0x6e4];
     double replayScrollX, replayScrollY; // 0x748 and 0x750
 public:
     Scene8(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
