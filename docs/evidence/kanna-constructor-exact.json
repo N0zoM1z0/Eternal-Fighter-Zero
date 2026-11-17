@@ -32,7 +32,7 @@
           "target": 7900376,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$SG62220",
+          "symbol": "$SG62520",
           "evidence": "resources/EFZ.exe @ 0x00675CB2: original kanna NUL resource literal, verified exact bytes at 0x788CD8",
           "addend": 0
         },
@@ -52,21 +52,22 @@
       "symbol": "??0Character19@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
       "target_address": "0x00675C80",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2dbf480dc9dcced28f8bd63241c1142cad82dbd0d27ba77de5a5643e5194f06b",
-      "object_sha256": "85750d3d43769cba9f56b708c6334b7f3d15830571e249c8ae55eea3fcdafa30",
+      "boundary_ledger_sha256": "0f0ae9797b9c23a1c5bf2736bfe8fab67f1501d434ad63ebb59bfd829e307227",
+      "object_sha256": "e0e619d72ce1d9ca439feb8bd2f7e2e464e9fdee52ef0f0f6d9754be679b8128",
       "source_sha256": "e424951b9948b15a816546827123d3207e05e65e43e2051de54dd664cc790add",
       "dependencies": {
-        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "8563bdabaa5cc3f5174b98e73c07a5ba2039a62a58ce420027805492c3460a1c"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/CharacterViews.h": "5fe81ee5edccba2cf9d2f138848cc710ff4b89073991f84f6103c6df4929e470"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "37b53471a32bd5b22982c7f50c45de359dd9515468b478b278ec13ecc4c0aa07",
+      "units_manifest_sha256": "721019f6538023ff18e04218a198f18e8e284676c64aa0bc43f57e1919f7a8a0",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "c9a29bfd4acc9a738ff3adf3379d812313454bdb86e15f1e26c4b0468fe49066",
+      "unit_sha256": "f473b9671325473e65d5f35305ab4cd89c8b1cf37da38202933dd381a6204489",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "method": "Fresh canonical EFZ.exe verification, independent 403-byte constructor and four original call/vptr/string relocation bindings, VC7.1 /Od /G6 /MT /Gy /W3. No full cold replay."
+  "method": "Fresh canonical EFZ.exe verification, independent 403-byte constructor and four original call/vptr/string relocation bindings, VC7.1 /Od /G6 /MT /Gy /W3. No full cold replay.",
+  "selected_kanna_class_header_replay": "All seven accepted Kanna owners were recompiled and originally bound after declaring the Kanna-specific nonvirtual locomotion method. The Character19 constructor COFF label changed from $SG62220 to $SG62520; both are independently proven to point to native PE kanna string at 0x00788CD8, and full original constructor code is unchanged."
 }

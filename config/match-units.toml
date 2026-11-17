@@ -118915,7 +118915,7 @@ evidence = "resources/EFZ.exe @ 0x00675CAC: Kanna-specific child vptr, 13 consec
 [[units.character-19-constructor.relocations]]
 offset = 51
 type = "DIR32"
-symbol = "$SG62220"
+symbol = "$SG62520"
 target = 0x00788CD8
 evidence = "resources/EFZ.exe @ 0x00675CB2: original kanna NUL resource literal, verified exact bytes at 0x788CD8"
 
@@ -171066,3 +171066,76 @@ type = "REL32"
 symbol = "@__security_check_cookie@4"
 target = 0x007781dc
 evidence = "Original EFZ PE 0x0075D8BF independently reviewed @__security_check_cookie@4 operand target 0x007781DC"
+
+[units.character-19-locomotion]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character19Locomotion.cpp"
+dependencies = ["src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-19-locomotion/Character19Locomotion.obj"
+symbol = "?UpdateLocomotionState@Character19@@QAEXXZ"
+target_address = 0x00675fd0
+size = 1000
+
+[[units.character-19-locomotion.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE 0x00675FDC independently reviewed __real@0000000000000000 target 0x007872F8"
+
+[[units.character-19-locomotion.relocations]]
+offset = 56
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE 0x00676008 independently reviewed __real@0000000000000000 target 0x007872F8"
+
+[[units.character-19-locomotion.relocations]]
+offset = 206
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "Canonical original EFZ PE 0x0067609E independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630"
+
+[[units.character-19-locomotion.relocations]]
+offset = 634
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "Canonical original EFZ PE 0x0067624A independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630"
+
+[[units.character-19-locomotion.relocations]]
+offset = 668
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "Canonical original EFZ PE 0x0067626C independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630"
+
+[[units.character-19-locomotion.relocations]]
+offset = 704
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "Canonical original EFZ PE 0x00676290 independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630"
+
+[[units.character-19-locomotion.relocations]]
+offset = 884
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "Canonical original EFZ PE 0x00676344 independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630"
+
+[[units.character-19-locomotion.relocations]]
+offset = 928
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "Canonical original EFZ PE 0x00676370 independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630"
+
+[[units.character-19-locomotion.relocations]]
+offset = 992
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "Canonical original EFZ PE 0x006763B0 independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630"

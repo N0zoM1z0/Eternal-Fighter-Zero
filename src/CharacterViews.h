@@ -408,6 +408,7 @@ public:
     virtual void EmitLocalEffect(SecondaryEffectSpawn *);
     virtual void RemoveLocalEffect(short);
     virtual void InitializeState();
+    void UpdateLocomotionState();
 };
 class Character20 : public Secondary {
     int field3138, field313c, field3140, field3144, field3148;

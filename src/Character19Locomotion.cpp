@@ -1,0 +1,83 @@
+// Kanna-specific grounded locomotion and attack stance, original 0x00675FD0.
+#include "CharacterViews.h"
+
+void Character19::UpdateLocomotionState()
+{
+    if (positionY == 0.0) {
+        airDashCount = 0;
+        airActionCount = 0;
+    }
+    if (positionY >= 0.0 && field0008 != 4 && field0008 != 5 && field0008 != 6
+    && field0008 != 10 && field0008 != 11 && field0008 != 12) {
+        if (field015c < 3 && inputY == -1) {
+            FaceOpponent();
+            if (recognizedCommand >= 3 && recognizedCommand <= 5) {
+                if (recognizedCommand == 3) {
+                    if (field0008 != 10) ResetPose();
+                    field0008 = 10;
+                    return;
+                }
+                if (recognizedCommand == 4) {
+                    if (field0008 != 11) ResetPose();
+                    field0008 = 11;
+                    return;
+                }
+                if (recognizedCommand == 5) {
+                    if (field0008 != 12) ResetPose();
+                    field0008 = 12;
+                    return;
+                }
+            } else {
+                if (inputX == 0) {
+                    if (field0008 != 4) ResetPose();
+                    field0008 = 4;
+                    return;
+                }
+                if (inputX == facing) {
+                    if (field0008 != 5) ResetPose();
+                    field0008 = 5;
+                    return;
+                }
+                if (inputX == -facing) {
+                    if (field0008 != 6) ResetPose();
+                    field0008 = 6;
+                    return;
+                }
+            }
+        }
+        if (inputY == 1) {
+            if (field0008 != 8 && field0008 != 3) {
+                field0008 = 8;
+                ResetPose();
+                FaceOpponent();
+                return;
+            } else if (field0008 != 8) {
+                field0008 = 3;
+                FaceOpponent();
+                return;
+            }
+            return;
+        } else if (inputX != 0) {
+            FaceOpponent();
+            if (inputX == facing) {
+                if (field0008 != 0 && field0008 != 1 && field0008 != 2) ResetPose();
+                field0008 = 1;
+                return;
+            } else {
+                if (field0008 != 0 && field0008 != 1 && field0008 != 2) ResetPose();
+                field0008 = 2;
+                return;
+            }
+        } else if (field0008 == 3 || field0008 == 8) {
+            field0008 = 7;
+            FaceOpponent();
+            ResetPose();
+        } else if (field0008 == 7 || field0008 == 13) {
+            FaceOpponent();
+        } else {
+            if (field0008 != 0 && field0008 != 1 && field0008 != 2) ResetPose();
+            field0008 = 0;
+            FaceOpponent();
+        }
+    }
+}

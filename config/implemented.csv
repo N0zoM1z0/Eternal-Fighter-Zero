@@ -534,3 +534,4 @@ address,name,source,symbol,status,evidence
 0x0075A4C0,Scene6::Step,src/Scene6Step.cpp,?Step@Scene6@@UAEEXZ,complete,docs/evidence/scene6-step-exact.json
 0x0075B0A0,Scene6::Slot0,src/Scene6Render.cpp,?Slot0@Scene6@@UAEXXZ,complete,docs/evidence/scene6-render-exact.json
 0x0075D660,Scene6::TransitionNumberBackdrop,src/Scene6NumberBackdrop.cpp,?TransitionNumberBackdrop@Scene6@@QAEXXZ,complete,docs/evidence/scene6-number-backdrop-exact.json
+0x00675FD0,Character19::UpdateLocomotionState,src/Character19Locomotion.cpp,?UpdateLocomotionState@Character19@@QAEXXZ,complete,docs/evidence/character-19-locomotion-exact.json

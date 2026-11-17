@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "authority": "Complete native EFZ 1,000-byte Kanna-specific ground locomotion method identical to normal VC7.1 authored C++ with all original COFF operands bound",
+  "owner": "Character19::UpdateLocomotionState (Kanna)",
+  "native_extent": {
+    "address": "0x00675FD0",
+    "exclusive_end": "0x006763B8",
+    "bytes": 1000
+  },
+  "method": "Selected native VC7.1 /Od /G6 /MT /Gy /W3 build and strict complete original-PE byte comparison; 9 actual COFF relocations independently verified (two real-constant loads and seven calls to Secondary::FaceOpponent); no ASM, padding, byte patches, or all-unit cold replay",
+  "behavior": "Grounded Kanna movement: air-action resets on landing, facing the opponent, crouch and jump states, stance selection from recognized command input, and standing/forward/backward locomotion state transitions",
+  "source_findings": "Character19 specializes the shared Secondary grounded state machine by conditionally preserving existing 0/1/2 locomotion states before virtual ResetPose in both movement and idle branches. Restoring the three-way tests produces the complete original code shape.",
+  "natural_cpp_without_asm_padding_or_byte_patches": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1000,
+      "matched_bytes": 1000,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical original EFZ PE 0x00675FDC independently reviewed __real@0000000000000000 target 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 56,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical original EFZ PE 0x00676008 independently reviewed __real@0000000000000000 target 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 206,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Canonical original EFZ PE 0x0067609E independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 634,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Canonical original EFZ PE 0x0067624A independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 668,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Canonical original EFZ PE 0x0067626C independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 704,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Canonical original EFZ PE 0x00676290 independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 884,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Canonical original EFZ PE 0x00676344 independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 928,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Canonical original EFZ PE 0x00676370 independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 992,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Canonical original EFZ PE 0x006763B0 independently reviewed ?FaceOpponent@Secondary@@QAEHXZ target 0x0040E630",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "314e8d2515bc7cfaa5ff777ed55c2257f0f1ed11ff1012d51a8c2677d106cac8",
+      "target_extent_sha256": "314e8d2515bc7cfaa5ff777ed55c2257f0f1ed11ff1012d51a8c2677d106cac8",
+      "unit": "character-19-locomotion",
+      "symbol": "?UpdateLocomotionState@Character19@@QAEXXZ",
+      "target_address": "0x00675FD0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0f0ae9797b9c23a1c5bf2736bfe8fab67f1501d434ad63ebb59bfd829e307227",
+      "object_sha256": "32c1d304735fc735eb4bfd09187e3141eb57cbdbdb2267c98bd058a5ae0e0acc",
+      "source_sha256": "71e8729a7ec308a6b67eda320e9e925d1d901ad48733702801c55b66e19db0c6",
+      "dependencies": {
+        "src/CharacterViews.h": "5fe81ee5edccba2cf9d2f138848cc710ff4b89073991f84f6103c6df4929e470",
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7294a847a567ab0db896f360b27cd4dd1c309eb4156f7d2a9d9b03f931389508",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "6bb07247e51192f5d98e439d2c053d9db3ba1010b54d50963a24e3b9ec9f7b05",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

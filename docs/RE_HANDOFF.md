@@ -5,6 +5,19 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
+## Kanna (Character19) specialized locomotion accepted — 2026-11-17
+
+`Character19::UpdateLocomotionState` at `0x00675FD0` is strict Exact for
+**1,000/1,000 bytes and nine independently original-bound COFF relocations**.
+Natural C++ source: `src/Character19Locomotion.cpp`. The method specializes
+the accepted Secondary locomotion state machine by preserving stance states
+0/1/2 before ResetPose during movement and idle transitions. All seven
+already-accepted Character19 owners were recompiled and remain Exact.
+The constructor's compiler-generated Kanna string symbol changed from
+`$SG62220` to `$SG62520`; both were independently verified to bind the
+same canonical PE `kanna` string at `0x00788CD8`. Only the involved owners
+were rebuilt, not a full cold replay or whole-product check.
+
 ## Scene6 number-backdrop transition accepted — 2026-11-17
 
 `Scene6::TransitionNumberBackdrop` at `0x0075D660` is strict Exact for
@@ -14,18 +27,6 @@ buffer restores the original stack slot allocation and all original bytes.
 Normal source: `src/Scene6NumberBackdrop.cpp`. Original resource loading,
 string formatting and 11-frame paired palette transitions are preserved.
 The function was verified in isolation; no all-unit cold replay was run.
-
-## Scene6 number-backdrop transition accepted — 2026-11-17
-
-`Scene6::TransitionNumberBackdrop` at `0x0075D660` is strict Exact
-**615/615 bytes**, **25 original-bound COFF relocations**, with a real GS
-cookie. The original natural C++ source already covered both 11-frame
-WinMM-timed fade phases and replayable DAT/BMP asset replacement; the byte
-difference was entirely due to the original separate local lifetimes.
-The accepted source `src/Scene6NumberBackdrop.cpp` nests five genuine scopes
-for the filename, alternating delay, frame, decimal buffer and lastTick.
-No dummy locals, ASM, padding, or code patches were introduced; eight other
-scope orders did not match. Related Scene6::Step and Slot0 are selected Exact.
 
 ## Scene6 options renderer boss accepted — 2026-11-17
 

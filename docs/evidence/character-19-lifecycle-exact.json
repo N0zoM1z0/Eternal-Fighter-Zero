@@ -26,16 +26,16 @@
       "symbol": "?InitializeState@Character19@@UAEXXZ",
       "target_address": "0x00675E20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
-      "object_sha256": "f51826ef2b05d84e36a87036fe9947dbdb1582c248198217357c0c3488ab0d5a",
+      "boundary_ledger_sha256": "0f0ae9797b9c23a1c5bf2736bfe8fab67f1501d434ad63ebb59bfd829e307227",
+      "object_sha256": "04839905ea527be6c1e1a40e2a2347c8d41af775a32612326a5e8e5e77379f65",
       "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
       "dependencies": {
-        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/CharacterViews.h": "5fe81ee5edccba2cf9d2f138848cc710ff4b89073991f84f6103c6df4929e470"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "units_manifest_sha256": "721019f6538023ff18e04218a198f18e8e284676c64aa0bc43f57e1919f7a8a0",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "9e4145f19f1e95ac216abb1f554d64a034c56997d3cdbf2cca8687a18dac54b1",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -64,16 +64,16 @@
       "symbol": "?ResetPose@Character19@@UAEXXZ",
       "target_address": "0x00675F40",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
-      "object_sha256": "49d96162a75d90b3a6b2cc8598d7c7306dfad00a6d773a4d75868c9b81311d9e",
+      "boundary_ledger_sha256": "0f0ae9797b9c23a1c5bf2736bfe8fab67f1501d434ad63ebb59bfd829e307227",
+      "object_sha256": "d58b6af438a6fd277a66cae6487665dba17676b97eec009abfc7c99a574813cf",
       "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
       "dependencies": {
-        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/CharacterViews.h": "5fe81ee5edccba2cf9d2f138848cc710ff4b89073991f84f6103c6df4929e470"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "units_manifest_sha256": "721019f6538023ff18e04218a198f18e8e284676c64aa0bc43f57e1919f7a8a0",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "668f4c8143b9c79aad251f99cd751695585b86080b6ae27793f19c51d99dfb01",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -102,16 +102,16 @@
       "symbol": "?RemoveLocalEffect@Character19@@UAEXF@Z",
       "target_address": "0x00675F80",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
-      "object_sha256": "72a3d15f1f13124ac29152b2e28a8aed27a92201a01e096bf6398fc01f6fac31",
+      "boundary_ledger_sha256": "0f0ae9797b9c23a1c5bf2736bfe8fab67f1501d434ad63ebb59bfd829e307227",
+      "object_sha256": "5a6a618145f1d4edf4126a1564e1c1c3dc05e787b645a9e6eb6ae38da406d025",
       "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
       "dependencies": {
-        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/CharacterViews.h": "5fe81ee5edccba2cf9d2f138848cc710ff4b89073991f84f6103c6df4929e470"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "units_manifest_sha256": "721019f6538023ff18e04218a198f18e8e284676c64aa0bc43f57e1919f7a8a0",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "1ec081f07e45d3ef0470ec7dd4a6dd53294df23218761a7a77fccd08cada50bb",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -130,16 +130,16 @@
       "symbol": "?Slot01@Character19@@UAEXXZ",
       "target_address": "0x00677E10",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
-      "object_sha256": "0d2b4f199da7710c1807cece39350dc5628295470af57d9cf02dde232b23ffb6",
+      "boundary_ledger_sha256": "0f0ae9797b9c23a1c5bf2736bfe8fab67f1501d434ad63ebb59bfd829e307227",
+      "object_sha256": "fcbae3e0dc4fa23103e12b2cab43b0b266f495a96ec17209fe8ae6ccca02de73",
       "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
       "dependencies": {
-        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/CharacterViews.h": "5fe81ee5edccba2cf9d2f138848cc710ff4b89073991f84f6103c6df4929e470"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "units_manifest_sha256": "721019f6538023ff18e04218a198f18e8e284676c64aa0bc43f57e1919f7a8a0",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "ff638c30beb3a7149e2113257b7921314a84fdc735ebc54197488200b2df6494",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -158,16 +158,16 @@
       "symbol": "?Slot08@Character19@@UAEXXZ",
       "target_address": "0x00677E20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
-      "object_sha256": "81815211773f2d2ae3793444f80ad0f8389408b6a643d00899478bfb500300fc",
+      "boundary_ledger_sha256": "0f0ae9797b9c23a1c5bf2736bfe8fab67f1501d434ad63ebb59bfd829e307227",
+      "object_sha256": "6032d4860a1ceb0796017899e201ea35f918ee0dac4aca8bf8a99409184eebca",
       "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
       "dependencies": {
-        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/CharacterViews.h": "5fe81ee5edccba2cf9d2f138848cc710ff4b89073991f84f6103c6df4929e470"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "units_manifest_sha256": "721019f6538023ff18e04218a198f18e8e284676c64aa0bc43f57e1919f7a8a0",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "4d92d5775bd757cde491dc9a41d2290e31dd578eea1c770de854b756b88efd30",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -196,20 +196,21 @@
       "symbol": "?EmitLocalEffect@Character19@@UAEXPAUSecondaryEffectSpawn@@@Z",
       "target_address": "0x00677E30",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2f4c72ac5119e19f603f97369fcbecc7478d09bcaacc32bb565131da79f168d2",
-      "object_sha256": "81c8e6dd99d6f54c5ad2643c9d3f7b1570577593f312dc41763c29c1b55000a2",
+      "boundary_ledger_sha256": "0f0ae9797b9c23a1c5bf2736bfe8fab67f1501d434ad63ebb59bfd829e307227",
+      "object_sha256": "7f1eae38ab10da1bf6c9fcfa8d1961d2124fcb3fa4e6c6473f0f9e1bb09709e5",
       "source_sha256": "7b4c9c7a6e80d6ef99f65f9ee57cee454a321cb642a896cdaa05eea7bcafd763",
       "dependencies": {
-        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/CharacterViews.h": "5fe81ee5edccba2cf9d2f138848cc710ff4b89073991f84f6103c6df4929e470"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "ee78a597673fbb543744212aa9e29ee9477fb5c6980e032bbbe43d4bc453ec36",
+      "units_manifest_sha256": "721019f6538023ff18e04218a198f18e8e284676c64aa0bc43f57e1919f7a8a0",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "a6bf46fe88e94b7945348902a083af2eaf31f4d96f79581342115084910bddf7",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }
-  ]
+  ],
+  "selected_kanna_class_header_replay": "All seven accepted Kanna owners were recompiled and originally bound after declaring the Kanna-specific nonvirtual locomotion method. The Character19 constructor COFF label changed from $SG62220 to $SG62520; both are independently proven to point to native PE kanna string at 0x00788CD8, and full original constructor code is unchanged."
 }
