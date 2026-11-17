@@ -44,12 +44,7 @@ void Character21::Slot05()
       (float)((field0008 == 0xaa) * 300)) {
     guardInputFrames = 0x3c;
   }
-  if (field0008 > 0x95 && field0008 < 0x9d) {
-    guardRangeFactor = 1;
-  }
-  else {
-    guardRangeFactor = 0;
-  }
+  guardRangeFactor = (field0008 > 0x95 && field0008 < 0x9d) ? 1 : 0;
 
   if ((double)(unsigned short)RandomRange(0,2000) <
       (double)(guardRangeFactor * 2 + 1) *
