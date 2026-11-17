@@ -6,12 +6,17 @@ reconstruction of the full decision owner, including the large state/command
 branches and the neutral-input fallback. It contains no inline assembly,
 synthetic padding, or placeholder function bodies.
 
-The current VC7.1 `/Od /G6 /MT /Gy` candidate is 17,180 bytes (4 bytes over
-native) with the original `0xCC` stack frame, matching `this` spill and
-prologue. It is a strong work-in-progress, **not Exact**. The remaining
-instruction differences are concentrated in floating comparison operand
-order, a few signed/unsigned promotions, and the final state-range branch.
-
+The current VC7.1 `/Od /G6 /MT /Gy` candidate is 17,166 bytes (10 bytes
+shorter than native) with the original `0xCC` stack frame and matching entry
+prologue. It is a strong work-in-progress, **not Exact**. The large guard/AI
+gate is expressed as a natural early command return, with signed-byte tests,
+exact opponent-state boundaries, and unsigned RNG promotions. Targeted
+instruction alignment reports 3,723 of 4,450 candidate instructions aligned
+with native order/semantics. The native `FUCOMPP` sequences confirm that the
+observed `positionY == 0.0` branches are true equality tests (including their
+unordered handling), so those source predicates remain equality checks.
+Remaining differences span float comparison lowering, RNG temporaries, and
+later state branches.
 Rebuild only this function with:
 
 ```sh
