@@ -391,7 +391,7 @@ public:
 };
 class Character19 : public Secondary {
     int field3138, field313c, field3140, field3144, field3148;
-    unsigned char unknown_314c[8];
+    int field314c, field3150;
     int field3154[64], field3254[64], field3354[64];
     unsigned char unknown_3454[4];
 public:

@@ -1614,3 +1614,12 @@ outputs have been removed. Recreate needed analysis from the canonical target
 and selected recipes. No cleanup archive, deletion manifest or receipt refresh
 is required for later housekeeping. Commit coherent increments as `gpt-web: `;
 never push unless explicitly instructed.
+
+## Kanna (Character19) CPU cooldown layout identified — 2026-11-17
+
+The native CPU/AI virtual `Character19::Slot05` at `0x00678C30` reads and
+updates two adjacent signed 32-bit cooldowns at object offsets `+0x314C` and
+`+0x3150`. `Character19` now names those fields `field314c` and `field3150`
+instead of an opaque eight-byte region; the class layout and offsets are
+unchanged. The complete 17,176-byte CPU function remains under reconstruction
+and is **not** marked exact yet.
