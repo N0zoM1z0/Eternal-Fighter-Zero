@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "authority": "Strict complete-function comparison of original EFZ PE bytes to natural VC7.1 C++",
+  "method": "Selected local COFF VC7.1 /Od /G6 /MT /Gy /W3 replay, all original code bytes and each independently PE-bound relocation",
+  "owner": "Scene10::~Scene10",
+  "original_extent": {
+    "address": "0x007759A0",
+    "exclusive_end": "0x007759E5",
+    "bytes": 69
+  },
+  "original_vtable": "0x007898C0",
+  "behavior": "Staff-roll scene destructor releases its DirectDraw surface and clears the owning pointer",
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 69,
+      "matched_bytes": 69,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7903424,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene10@@6B@",
+          "evidence": "Original PE 0x007759AC scene10-destructor operand: ??_7Scene10@@6B@",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "83faaf5d7852b6edd2ffa24860615c5be1ceba630cb84e408ead6bbd6a3fb76f",
+      "target_extent_sha256": "83faaf5d7852b6edd2ffa24860615c5be1ceba630cb84e408ead6bbd6a3fb76f",
+      "unit": "scene10-destructor",
+      "symbol": "??1Scene10@@QAE@XZ",
+      "target_address": "0x007759A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b88255b29a74fedf100fdd204ddc46c299fe94e3537f5629fe6d6a7396be2c74",
+      "object_sha256": "ac0253f62cf994d2434c33409aeffc6cf0fa7112a9cb9ef1a167f5a73c4ae9fa",
+      "source_sha256": "f6beea6241b21a0f89dc82dd13652e1b3e21a913af15817379a280dce89b659c",
+      "dependencies": {
+        "src/Engine.h": "17c7b8ac42108bfebcbfdd34bebf296ea198a6a2fd8a72e3bba3d2b2ded7b8be",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6f0a4fd7ff4e80514588cec15e456a16bc6b77509319107a83aacabd3a74bbac",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0dbce4e2b11dba29a5dbb7f349aa68c76bfc73d46f3a238cf14015f3a2f11220",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

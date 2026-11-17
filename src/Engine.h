@@ -748,6 +748,19 @@ public:
     virtual unsigned char Step();
     virtual void PollKeyboard();
 };
+// Staff-roll scene after the results scene; original vtable at 0x007898C0.
+class Scene10 : public Scene {
+    unsigned char unknown_0430[0x434 - sizeof(Scene)];
+    IUnknown *staffSurface;     // +0x434
+    double staffTime;           // +0x438
+    int exitRequested;          // +0x440
+public:
+    Scene10(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
+    ~Scene10();
+    virtual void Slot0();
+    virtual unsigned char Step();
+    virtual void PollKeyboard();
+};
 #undef DECLARE_SCENE
 
 #endif

@@ -538,3 +538,5 @@ address,end,size,status,evidence
 0x007712F0,0x007713F3,259,reviewed,docs/evidence/scene9-constructor-exact.json
 0x00774A10,0x00774AF9,233,reviewed,docs/evidence/scene9-result-number-exact.json
 0x00775750,0x0077580B,187,reviewed,docs/evidence/scene9-keyboard-exact.json
+0x007758B0,0x00775993,227,reviewed,docs/evidence/scene10-constructor-exact.json
+0x007759A0,0x007759E5,69,reviewed,docs/evidence/scene10-destructor-exact.json

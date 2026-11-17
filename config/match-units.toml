@@ -166231,3 +166231,107 @@ type = "REL32"
 symbol = "@__security_check_cookie@4"
 target = 0x007781dc
 evidence = "Original PE 0x00775803 Scene9 guard cookie validator call, 187-byte function"
+
+[units.scene10-constructor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene10Constructor.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/Scene10ResourcePaths.cpp"]
+object = "build/match-units/scene10-constructor/Scene10Constructor.obj"
+symbol = "??0Scene10@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target_address = 0x007758b0
+size = 227
+
+[[units.scene10-constructor.relocations]]
+offset = 41
+type = "REL32"
+symbol = "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x00759c10
+evidence = "Original PE 0x007758D9 scene10-constructor operand: ??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+
+[[units.scene10-constructor.relocations]]
+offset = 50
+type = "DIR32"
+symbol = "??_7Scene10@@6B@"
+target = 0x007898c0
+evidence = "Original PE 0x007758E2 scene10-constructor operand: ??_7Scene10@@6B@"
+
+[[units.scene10-constructor.relocations]]
+offset = 68
+type = "DIR32"
+symbol = "?staffDatSurface@@3QBDB"
+target = 0x00789880
+evidence = "Original PE 0x007758F4 scene10-constructor operand: ?staffDatSurface@@3QBDB"
+
+[[units.scene10-constructor.relocations]]
+offset = 88
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "Original PE 0x00775908 scene10-constructor operand: ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+
+[[units.scene10-constructor.relocations]]
+offset = 102
+type = "DIR32"
+symbol = "?staffDatPalette@@3QBDB"
+target = 0x00789890
+evidence = "Original PE 0x00775916 scene10-constructor operand: ?staffDatPalette@@3QBDB"
+
+[[units.scene10-constructor.relocations]]
+offset = 120
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "Original PE 0x00775928 scene10-constructor operand: ?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+
+[[units.scene10-constructor.relocations]]
+offset = 129
+type = "DIR32"
+symbol = "?staffBmpSurface@@3QBDB"
+target = 0x007898a0
+evidence = "Original PE 0x00775931 scene10-constructor operand: ?staffBmpSurface@@3QBDB"
+
+[[units.scene10-constructor.relocations]]
+offset = 154
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "Original PE 0x0077594A scene10-constructor operand: ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+
+[[units.scene10-constructor.relocations]]
+offset = 168
+type = "DIR32"
+symbol = "?staffBmpPalette@@3QBDB"
+target = 0x007898b0
+evidence = "Original PE 0x00775958 scene10-constructor operand: ?staffBmpPalette@@3QBDB"
+
+[[units.scene10-constructor.relocations]]
+offset = 186
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "Original PE 0x0077596A scene10-constructor operand: ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+
+[[units.scene10-constructor.relocations]]
+offset = 195
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Original PE 0x00775973 scene10-constructor operand: __real@0000000000000000"
+
+[units.scene10-destructor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene10Destructor.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene10-destructor/Scene10Destructor.obj"
+symbol = "??1Scene10@@QAE@XZ"
+target_address = 0x007759a0
+size = 69
+
+[[units.scene10-destructor.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "??_7Scene10@@6B@"
+target = 0x007898c0
+evidence = "Original PE 0x007759AC scene10-destructor operand: ??_7Scene10@@6B@"

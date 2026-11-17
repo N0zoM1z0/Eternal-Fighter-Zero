@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "authority": "Strict complete-function comparison of original EFZ PE bytes to natural VC7.1 C++",
+  "method": "Selected local COFF VC7.1 /Od /G6 /MT /Gy /W3 replay, all original code bytes and each independently PE-bound relocation",
+  "owner": "Scene10::Scene10",
+  "original_extent": {
+    "address": "0x007758B0",
+    "exclusive_end": "0x00775993",
+    "bytes": 227
+  },
+  "original_vtable": "0x007898C0",
+  "behavior": "Staff-roll scene base construction, packed and bitmap fallbacks, palette setup and zeroed time/exit state",
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 227,
+      "matched_bytes": 227,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 41,
+          "target": 7707664,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+          "evidence": "Original PE 0x007758D9 scene10-constructor operand: ??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+          "addend": 0
+        },
+        {
+          "offset": 50,
+          "target": 7903424,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene10@@6B@",
+          "evidence": "Original PE 0x007758E2 scene10-constructor operand: ??_7Scene10@@6B@",
+          "addend": 0
+        },
+        {
+          "offset": 68,
+          "target": 7903360,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?staffDatSurface@@3QBDB",
+          "evidence": "Original PE 0x007758F4 scene10-constructor operand: ?staffDatSurface@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 88,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "Original PE 0x00775908 scene10-constructor operand: ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "addend": 0
+        },
+        {
+          "offset": 102,
+          "target": 7903376,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?staffDatPalette@@3QBDB",
+          "evidence": "Original PE 0x00775916 scene10-constructor operand: ?staffDatPalette@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 120,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original PE 0x00775928 scene10-constructor operand: ?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 129,
+          "target": 7903392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?staffBmpSurface@@3QBDB",
+          "evidence": "Original PE 0x00775931 scene10-constructor operand: ?staffBmpSurface@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 154,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "Original PE 0x0077594A scene10-constructor operand: ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "addend": 0
+        },
+        {
+          "offset": 168,
+          "target": 7903408,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?staffBmpPalette@@3QBDB",
+          "evidence": "Original PE 0x00775958 scene10-constructor operand: ?staffBmpPalette@@3QBDB",
+          "addend": 0
+        },
+        {
+          "offset": 186,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original PE 0x0077596A scene10-constructor operand: ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "addend": 0
+        },
+        {
+          "offset": 195,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original PE 0x00775973 scene10-constructor operand: __real@0000000000000000",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9cabf91772b178bb1943e0eb91cff404e1319b34f30c5e31700739210096f156",
+      "target_extent_sha256": "9cabf91772b178bb1943e0eb91cff404e1319b34f30c5e31700739210096f156",
+      "unit": "scene10-constructor",
+      "symbol": "??0Scene10@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+      "target_address": "0x007758B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b88255b29a74fedf100fdd204ddc46c299fe94e3537f5629fe6d6a7396be2c74",
+      "object_sha256": "9599a99c4a29a95426fc01a1b1910c47c51191c5eac0b6f627cf4c81349fd663",
+      "source_sha256": "6a8539a552dd1808fc7423da16bb0d56558a28df5b05a455e3c5e00b4c4a7aa7",
+      "dependencies": {
+        "src/Engine.h": "17c7b8ac42108bfebcbfdd34bebf296ea198a6a2fd8a72e3bba3d2b2ded7b8be",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/Scene10ResourcePaths.cpp": "f9bd171a55f3986da1650012ef6b961d872780c8eff56347709c90216984f042"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6f0a4fd7ff4e80514588cec15e456a16bc6b77509319107a83aacabd3a74bbac",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "13bddb97da946ea4a8dd9124ce7b00bbf1c8453bb1bb67b87d36bc29ac8931c8",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -617,8 +617,8 @@ address,origin,status,evidence
 0x00775750,authored,reviewed,docs/evidence/scene9-keyboard-exact.json
 0x00775810,unknown,unreviewed,
 0x00775830,unknown,unreviewed,
-0x007758B0,unknown,unreviewed,
-0x007759A0,unknown,unreviewed,
+0x007758B0,authored,reviewed,docs/evidence/scene10-constructor-exact.json
+0x007759A0,authored,reviewed,docs/evidence/scene10-destructor-exact.json
 0x007759F0,unknown,unreviewed,
 0x00775B80,unknown,unreviewed,
 0x00775D50,unknown,unreviewed,
