@@ -161866,7 +161866,7 @@ evidence = "resources/EFZ.exe @ 0x007039FE: original Character02 child vptr stor
 [[units.character-02-constructor.relocations]]
 offset = 51
 type = "DIR32"
-symbol = "$SG62363"
+symbol = "$SG62355"
 target = 0x00788EA8
 evidence = "resources/EFZ.exe @ 0x00703A04: original resource-name argument; exact akane NUL bytes verified at 0x788EA8"
 
