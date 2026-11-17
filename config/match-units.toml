@@ -165978,3 +165978,27 @@ type = "DIR32"
 symbol = "??_7Scene8@@6B@"
 target = 0x007897dc
 evidence = "Native PE 0x0076EFEC vtable store; vtable slots 0x0076F780/0x0076F060/0x00770D80 checked independently"
+
+[units.scene8-keyboard]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Scene8Keyboard.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene8-keyboard/Scene8Keyboard.obj"
+symbol = "?PollKeyboard@Scene8@@UAEXXZ"
+target_address = 0x00770d80
+size = 171
+
+[[units.scene8-keyboard.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "original PE 0x00770D8A global stack cookie access, native Scene8 keyboard"
+
+[[units.scene8-keyboard.relocations]]
+offset = 163
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "original PE 0x00770E23 guard cookie validator from 171-byte native body"

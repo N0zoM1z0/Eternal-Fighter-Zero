@@ -531,3 +531,4 @@ address,end,size,status,evidence
 0x0075D400,0x0075D577,375,reviewed,docs/evidence/scene6-preview-reload-exact.json
 0x0075A3B0,0x0075A4B9,265,reviewed,docs/evidence/scene6-destructor-exact.json
 0x0076EFE0,0x0076F056,118,reviewed,docs/evidence/scene8-destructor-exact.json
+0x00770D80,0x00770E2B,171,reviewed,docs/evidence/scene8-keyboard-exact.json

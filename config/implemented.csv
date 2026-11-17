@@ -509,3 +509,4 @@ address,name,source,symbol,status,evidence
 0x0075D400,Scene6::ReloadSelectedPreview,src/Scene6PreviewReload.cpp,?ReloadSelectedPreview@Scene6@@QAEXXZ,complete,docs/evidence/scene6-preview-reload-exact.json
 0x0075A3B0,Scene6::~Scene6,src/Scene6Destructor.cpp,??1Scene6@@QAE@XZ,complete,docs/evidence/scene6-destructor-exact.json
 0x0076EFE0,Scene8::~Scene8,src/Scene8Destructor.cpp,??1Scene8@@QAE@XZ,complete,docs/evidence/scene8-destructor-exact.json
+0x00770D80,Scene8::PollKeyboard,src/Scene8Keyboard.cpp,?PollKeyboard@Scene8@@UAEXXZ,complete,docs/evidence/scene8-keyboard-exact.json

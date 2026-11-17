@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "authority": "complete original PE byte identity with the native two GS relocations",
+  "method": "selected 171-byte VC7.1 /Od /G6 /MT /Gy /W3 /GS function only; original native PE 0x00770D80",
+  "owner": "Scene8 replay/menu DirectInput keyboard handler",
+  "source": "src/Scene8Keyboard.cpp",
+  "native_extent": {
+    "address": "0x00770D80",
+    "exclusive_end": "0x00770E2B",
+    "bytes": 171
+  },
+  "original_class_vtable": {
+    "address": "0x007897DC",
+    "keyboard_slot": "0x00770D80"
+  },
+  "behavior": "Read 256 bytes of DirectInput keyboard state, reacquire on DIERR_INPUTLOST, set scene exit flag when key[1] has high bit set",
+  "source_contains_inline_asm_or_padding": false,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 171,
+      "matched_bytes": 171,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "original PE 0x00770D8A global stack cookie access, native Scene8 keyboard",
+          "addend": 0
+        },
+        {
+          "offset": 163,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "original PE 0x00770E23 guard cookie validator from 171-byte native body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2844cbad2b9b9b909c691eb18ffb36354e43cf1dceb7cd15b1ffaf742f6f84f8",
+      "target_extent_sha256": "2844cbad2b9b9b909c691eb18ffb36354e43cf1dceb7cd15b1ffaf742f6f84f8",
+      "unit": "scene8-keyboard",
+      "symbol": "?PollKeyboard@Scene8@@UAEXXZ",
+      "target_address": "0x00770D80",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d5472666790ef9c813b3d4e2f52b38128544e574e1596b567633636ad789dd91",
+      "object_sha256": "92a0f243dbc29b5634be6f121aa1d0a0f70db7b92844680e1970669d743ce6bf",
+      "source_sha256": "c7fea6b74031975d326769960a65749411acb3ffc6dc9f5d5a4dfecd03fbfaba",
+      "dependencies": {
+        "src/Engine.h": "0b02ad31ee9575cfdebef59d5cba9aeae6f43ec0da52ad31f274d4c92f83abf2",
+        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "8a91486bd1fd27f3622e2363b12d2e96297e4b5eb97abc24487edc53997943ef",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "97c3cc59070b7697b32a3df898300dee30ce5be3ce44e467491dd9672025537f",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
