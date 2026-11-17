@@ -1033,7 +1033,7 @@ kanna_state11_deeper:
                        ) {
                       buttonPulse[1] = 1;
 
-                      inputY = (unsigned short)RandomRange(0,10) < 5;
+                      inputY = ((unsigned short)RandomRange(0,10) < 5) ? 1 : 0;
                       return;
                     }
                     if ((((distance.forward < 70.0) && (field3110 < 0x87)) &&
