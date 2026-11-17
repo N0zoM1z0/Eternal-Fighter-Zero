@@ -166190,3 +166190,20 @@ type = "REL32"
 symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
 target = 0x00408d00
 evidence = "Original PE 0x007713B4 Scene9 resource constructor operand"
+
+[units.scene9-result-number]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene9Number.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene9-result-number/Scene9Number.obj"
+symbol = "?DrawResultNumber@Scene9@@QAEXHHI@Z"
+target_address = 0x00774a10
+size = 233
+
+[[units.scene9-result-number.relocations]]
+offset = 189
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "original PE 0x00774ACD Video::DrawSurface native 233-byte results number glyph owner"

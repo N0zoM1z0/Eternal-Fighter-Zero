@@ -743,6 +743,7 @@ class Scene9 : public Scene {
 public:
     Scene9(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
     ~Scene9();
+    void DrawResultNumber(int x, int y, unsigned int value);
     virtual void Slot0();
     virtual unsigned char Step();
     virtual void PollKeyboard();

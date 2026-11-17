@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "authority": "complete normal C++ compiler byte identity against original PE and native Video::DrawSurface target",
+  "method": "one selected 233-byte owner native VC7.1 /Od /G6 /MT /Gy /W3 build; no cold replay",
+  "source": "src/Scene9Number.cpp",
+  "owner": "Scene9 winner/results decimal numeric glyph renderer",
+  "original_extent": {
+    "address": "0x00774A10",
+    "exclusive_end": "0x00774AF9",
+    "bytes": 233
+  },
+  "native_member_accesses": {
+    "sprite_surface": "Scene9::resultSurface@0x438",
+    "palette_color_key": "Context::colorKey@0xf34"
+  },
+  "behavior": "Right-to-left decimal digits from 16x19 font atlas row 455..474; advance x by -14 and unsigned divide-by-10 until remaining value is zero.",
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 233,
+      "matched_bytes": 233,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 189,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "original PE 0x00774ACD Video::DrawSurface native 233-byte results number glyph owner",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "09b5d1868497f36c86d63f8de6ba1f8a830dae8acb9028bb1559ef9d041f0811",
+      "target_extent_sha256": "09b5d1868497f36c86d63f8de6ba1f8a830dae8acb9028bb1559ef9d041f0811",
+      "unit": "scene9-result-number",
+      "symbol": "?DrawResultNumber@Scene9@@QAEXHHI@Z",
+      "target_address": "0x00774A10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "51a32e353c99b39bc93e1912e3c216cfc04a2334dd650b5c96cf2cbbff27af1a",
+      "object_sha256": "94e437c6c623989d97b341e4bcb0fb980db54c74dc1756c059684b7c08309445",
+      "source_sha256": "dc783e887123778c736b78eaf96e4b0b03fbcf4e8deee9e42a3daf78a375a2de",
+      "dependencies": {
+        "src/Engine.h": "d95e3268f4466e1719ee247c5c9818488fe2f5e2085ed713e032f16c8c62cf2f",
+        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "bc856b06d9eb31c4068d843911603b206871d33cf5ab828c467c876c1cbf5e5b",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "4ec0265de24d88988d246379938253ff4ffbcaf1317221003b67e2104f5f86d7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
