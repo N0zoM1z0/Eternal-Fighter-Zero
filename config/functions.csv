@@ -605,7 +605,7 @@ address,size,span_end,body_size,current_name,is_thunk,body_ranges,boundary_statu
 0x0076F060,1800,0x0076F767,1800,FUN_0076f060,false,0x0076F060:0x0076F767,unreviewed
 0x0076F780,5619,0x00770D72,5619,FUN_0076f780,false,0x0076F780:0x00770D72,unreviewed
 0x00770D80,171,0x00770E2A,171,Scene8::PollKeyboard,false,0x00770D80:0x00770E2A,reviewed
-0x00770E30,820,0x00771163,820,FUN_00770e30,false,0x00770E30:0x00771163,unreviewed
+0x00770E30,820,0x00771163,820,Scene8::PrepareReplayList,false,0x00770E30:0x00771163,reviewed
 0x00771170,185,0x00771228,185,Scene8::FadeReplayPaletteOut,false,0x00771170:0x00771228,reviewed
 0x00771230,185,0x007712E8,185,Scene8::FadeReplayPaletteIn,false,0x00771230:0x007712E8,reviewed
 0x007712F0,259,0x007713F2,259,Scene9::Scene9,false,0x007712F0:0x007713F2,reviewed

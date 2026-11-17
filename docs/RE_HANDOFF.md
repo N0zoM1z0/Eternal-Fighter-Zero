@@ -5,6 +5,18 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
+## Scene8 replay browser initialization accepted — 2026-11-17
+
+`Scene8::PrepareReplayList` at `0x00770E30` is strict Exact for the complete
+**820-byte** native function with **29 individually original-bound COFF
+relocations**, source `src/Scene8PrepareReplayList.cpp`. It initializes the
+9x9 replay filename/availability grid, reads two stored character IDs per
+existing file, resets menu state, and preserves the original packed/bitmap
+palette paths. Four existing Scene8 exact owners were selectively rebuilt
+and retain zero differences with the newly typed native fields. The larger
+`Scene8::Step` at `0x0076F060` (1,800 bytes) and Scene8 construction/render
+owners remain open. No all-unit cold replay was run.
+
 ## Scene9 results bosses accepted — 2026-11-17
 
 Three complete natural VC7.1 C++ Scene9 owners now have strict Exact receipts:

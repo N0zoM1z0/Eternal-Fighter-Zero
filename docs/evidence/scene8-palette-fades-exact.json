@@ -87,15 +87,15 @@
       "symbol": "?FadeReplayPaletteOut@Scene8@@QAEXXZ",
       "target_address": "0x00771170",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "51a32e353c99b39bc93e1912e3c216cfc04a2334dd650b5c96cf2cbbff27af1a",
-      "object_sha256": "06f502a65906a608536dbeaa0696dc493e1472efb352282a27306b64e58cbbb1",
+      "boundary_ledger_sha256": "b6d7d3b9ad75d6c65e981d1b2e6c599665a0a796fed98d63b47f905469ef4e2b",
+      "object_sha256": "f88f7c76bf982c556bf39c6f96db59298234197117108070bc174d35ebb1e37e",
       "source_sha256": "d7a3f7dc722700257d9f49ccdb970bd501568cab024b1606270864234e27ab6f",
       "dependencies": {
-        "src/Engine.h": "d95e3268f4466e1719ee247c5c9818488fe2f5e2085ed713e032f16c8c62cf2f",
-        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+        "src/Engine.h": "a94931a498b49caaa5720475caf2f27e3d3df8415ea0637e41f258eef5f6778e",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "bc6cc458a8553b7823dd0e24652600a45ca70842abc7554d595ece1a56ca2af3",
+      "units_manifest_sha256": "531d2aea6194ea17914aa9b9fc27273b244ef7bf6fc47b1f6347b9e50c801d63",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "fa627906062ab848bc5d27aa6bdf05b1cf8446720a5b0feb3721aaa27f5791d8",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -160,19 +160,20 @@
       "symbol": "?FadeReplayPaletteIn@Scene8@@QAEXXZ",
       "target_address": "0x00771230",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "51a32e353c99b39bc93e1912e3c216cfc04a2334dd650b5c96cf2cbbff27af1a",
-      "object_sha256": "c6be0e8904d32ece8ee3cbbdfce1a827db4e84043a873dbe7fb2e18d7ee4ff69",
+      "boundary_ledger_sha256": "b6d7d3b9ad75d6c65e981d1b2e6c599665a0a796fed98d63b47f905469ef4e2b",
+      "object_sha256": "f3154591d6df283372d29fb0aeb76595bfcb93e03b3cd5905c2aa6eea451e19e",
       "source_sha256": "d7a3f7dc722700257d9f49ccdb970bd501568cab024b1606270864234e27ab6f",
       "dependencies": {
-        "src/Engine.h": "d95e3268f4466e1719ee247c5c9818488fe2f5e2085ed713e032f16c8c62cf2f",
-        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+        "src/Engine.h": "a94931a498b49caaa5720475caf2f27e3d3df8415ea0637e41f258eef5f6778e",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "bc6cc458a8553b7823dd0e24652600a45ca70842abc7554d595ece1a56ca2af3",
+      "units_manifest_sha256": "531d2aea6194ea17914aa9b9fc27273b244ef7bf6fc47b1f6347b9e50c801d63",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "3a281767805f7b34d7997edc370c0d198b3ba520ae4cf9e030f153b84a02c08c",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }
-  ]
+  ],
+  "selected_scene8_layout_replay_2026_11_17": "After completing Scene8::PrepareReplayList, all affected Scene8 owners were rebuilt and strictly compared to their complete native PE extents. Refreshed actual relocation-bound reports and source dependency hashes, not edited old hashes in isolation."
 }

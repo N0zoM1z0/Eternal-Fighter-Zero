@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "authority": "Complete original-PE native VC7.1 natural C++ identity for Scene8 replay browser initialization",
+  "owner": "Scene8::PrepareReplayList",
+  "original_extent": {
+    "address": "0x00770E30",
+    "exclusive_end": "0x00771164",
+    "bytes": 820
+  },
+  "method": "Selected /Od /G6 /MT /Gy /GS /W3 normal COFF build, all 820 code bytes compared with 29 independently original-bound relocations; no full cold replay, ASM or padding",
+  "behavior": "Reset replay-browser state, capture two characters for each existing file in a 9x9 filename grid, clear unavailable entries, initialize replay controls and choose original replay DAT/BMP fallback palette fade-in",
+  "source_semantics": "Nested natural local lifetimes recover exact 0x3C stack frame, distinct original immutable path symbols, typed 9x9 availability and two-character grids, two double scroll values, and original replay-file WordFile method dispatch",
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 820,
+      "matched_bytes": 820,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "EFZ original PE operand at 0x00770E37 targeting ___security_cookie at 0x0078F050",
+          "addend": 0
+        },
+        {
+          "offset": 120,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ original PE operand at 0x00770EA8 targeting __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 135,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ original PE operand at 0x00770EB7 targeting __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 235,
+          "target": 7903092,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayInitialPaletteDat@@3QBDB",
+          "evidence": "EFZ original PE operand at 0x00770F1B targeting ?replayInitialPaletteDat@@3QBDB at 0x00789774",
+          "addend": 0
+        },
+        {
+          "offset": 253,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "EFZ original PE operand at 0x00770F2D targeting ?LoadPalette@Video@@QAEHPAEPBDHHH@Z at 0x0040B760",
+          "addend": 0
+        },
+        {
+          "offset": 269,
+          "target": 7903112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayInitialPaletteBmp@@3QBDB",
+          "evidence": "EFZ original PE operand at 0x00770F3D targeting ?replayInitialPaletteBmp@@3QBDB at 0x00789788",
+          "addend": 0
+        },
+        {
+          "offset": 287,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "EFZ original PE operand at 0x00770F4F targeting ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z at 0x0040B640",
+          "addend": 0
+        },
+        {
+          "offset": 348,
+          "target": 7903132,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayFilePrefix@@3QBDB",
+          "evidence": "EFZ original PE operand at 0x00770F8C targeting ?replayFilePrefix@@3QBDB at 0x0078979C",
+          "addend": 0
+        },
+        {
+          "offset": 357,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "EFZ original PE operand at 0x00770F95 targeting _strcpy at 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 378,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "EFZ original PE operand at 0x00770FAA targeting __itoa at 0x00777F55",
+          "addend": 0
+        },
+        {
+          "offset": 394,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "EFZ original PE operand at 0x00770FBA targeting _strcat at 0x00778090",
+          "addend": 0
+        },
+        {
+          "offset": 402,
+          "target": 7903144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayFileSeparator@@3QBDB",
+          "evidence": "EFZ original PE operand at 0x00770FC2 targeting ?replayFileSeparator@@3QBDB at 0x007897A8",
+          "addend": 0
+        },
+        {
+          "offset": 411,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "EFZ original PE operand at 0x00770FCB targeting _strcat at 0x00778090",
+          "addend": 0
+        },
+        {
+          "offset": 432,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "EFZ original PE operand at 0x00770FE0 targeting __itoa at 0x00777F55",
+          "addend": 0
+        },
+        {
+          "offset": 448,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "EFZ original PE operand at 0x00770FF0 targeting _strcat at 0x00778090",
+          "addend": 0
+        },
+        {
+          "offset": 456,
+          "target": 7903148,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayFileExtension@@3QBDB",
+          "evidence": "EFZ original PE operand at 0x00770FF8 targeting ?replayFileExtension@@3QBDB at 0x007897AC",
+          "addend": 0
+        },
+        {
+          "offset": 465,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "EFZ original PE operand at 0x00771001 targeting _strcat at 0x00778090",
+          "addend": 0
+        },
+        {
+          "offset": 489,
+          "target": 4218512,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?OpenRead@WordFile@@QAEIPBD@Z",
+          "evidence": "EFZ original PE operand at 0x00771019 targeting ?OpenRead@WordFile@@QAEIPBD@Z at 0x00405E90",
+          "addend": 0
+        },
+        {
+          "offset": 537,
+          "target": 4218800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadWord@WordFile@@QAEGXZ",
+          "evidence": "EFZ original PE operand at 0x00771049 targeting ?ReadWord@WordFile@@QAEGXZ at 0x00405FB0",
+          "addend": 0
+        },
+        {
+          "offset": 576,
+          "target": 4218800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadWord@WordFile@@QAEGXZ",
+          "evidence": "EFZ original PE operand at 0x00771070 targeting ?ReadWord@WordFile@@QAEGXZ at 0x00405FB0",
+          "addend": 0
+        },
+        {
+          "offset": 636,
+          "target": 4218704,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Close@WordFile@@QAEXXZ",
+          "evidence": "EFZ original PE operand at 0x007710AC targeting ?Close@WordFile@@QAEXXZ at 0x00405F50",
+          "addend": 0
+        },
+        {
+          "offset": 685,
+          "target": 7708192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+          "evidence": "EFZ original PE operand at 0x007710DD targeting ?FadeIn@Scene@@QAEXPAEE@Z at 0x00759E20",
+          "addend": 0
+        },
+        {
+          "offset": 710,
+          "target": 7903156,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayRestoredPaletteDat@@3QBDB",
+          "evidence": "EFZ original PE operand at 0x007710F6 targeting ?replayRestoredPaletteDat@@3QBDB at 0x007897B4",
+          "addend": 0
+        },
+        {
+          "offset": 728,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "EFZ original PE operand at 0x00771108 targeting ?LoadPalette@Video@@QAEHPAEPBDHHH@Z at 0x0040B760",
+          "addend": 0
+        },
+        {
+          "offset": 744,
+          "target": 7903176,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?replayRestoredPaletteBmp@@3QBDB",
+          "evidence": "EFZ original PE operand at 0x00771118 targeting ?replayRestoredPaletteBmp@@3QBDB at 0x007897C8",
+          "addend": 0
+        },
+        {
+          "offset": 762,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "EFZ original PE operand at 0x0077112A targeting ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z at 0x0040B640",
+          "addend": 0
+        },
+        {
+          "offset": 780,
+          "target": 4242736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ApplyPalette@Video@@QAEHPAE@Z",
+          "evidence": "EFZ original PE operand at 0x0077113C targeting ?ApplyPalette@Video@@QAEHPAE@Z at 0x0040BD30",
+          "addend": 0
+        },
+        {
+          "offset": 797,
+          "target": 7708192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+          "evidence": "EFZ original PE operand at 0x0077114D targeting ?FadeIn@Scene@@QAEXPAEE@Z at 0x00759E20",
+          "addend": 0
+        },
+        {
+          "offset": 812,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "EFZ original PE operand at 0x0077115C targeting @__security_check_cookie@4 at 0x007781DC",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "fe7591e699ecaff526af1e8aa4dbb7b3aad2d13fae6e9e407f302ced35ec2ad7",
+      "target_extent_sha256": "fe7591e699ecaff526af1e8aa4dbb7b3aad2d13fae6e9e407f302ced35ec2ad7",
+      "unit": "scene8-prepare-replay-list",
+      "symbol": "?PrepareReplayList@Scene8@@QAEXXZ",
+      "target_address": "0x00770E30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b6d7d3b9ad75d6c65e981d1b2e6c599665a0a796fed98d63b47f905469ef4e2b",
+      "object_sha256": "c8fe849054c24593517bc55ec00d718bb37b9859955fc0a6e9c3fcc0a275741f",
+      "source_sha256": "17439b95d0b1c9370eed14dee9dd2092ec7a8c1f80cbc9023f8dcd3bbabe9394",
+      "dependencies": {
+        "src/Engine.h": "a94931a498b49caaa5720475caf2f27e3d3df8415ea0637e41f258eef5f6778e",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/Scene8ReplayPaths.cpp": "5d1d65675ea4c662d5c57410bd2d24e2b76b82c28385e565e9a2c2615ae53d0d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "531d2aea6194ea17914aa9b9fc27273b244ef7bf6fc47b1f6347b9e50c801d63",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "f742b87ae7793bfb4ff3182d99d00205999d84585128f18063a6c731f30ae632",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

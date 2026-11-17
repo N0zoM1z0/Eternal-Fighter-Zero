@@ -167966,3 +167966,216 @@ type = "REL32"
 symbol = "?Present@Video@@QAEHXZ"
 target = 0x0040b5e0
 evidence = "Canonical EFZ PE 0x00774A00 original operand: ?Present@Video@@QAEHXZ, target 0x0040B5E0"
+
+[units.scene8-prepare-replay-list]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Scene8PrepareReplayList.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/Scene8ReplayPaths.cpp"]
+object = "build/match-units/scene8-prepare-replay-list/Scene8PrepareReplayList.obj"
+symbol = "?PrepareReplayList@Scene8@@QAEXXZ"
+target_address = 0x00770e30
+size = 820
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "EFZ original PE operand at 0x00770E37 targeting ___security_cookie at 0x0078F050"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 120
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "EFZ original PE operand at 0x00770EA8 targeting __real@0000000000000000 at 0x007872F8"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "EFZ original PE operand at 0x00770EB7 targeting __real@0000000000000000 at 0x007872F8"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 235
+type = "DIR32"
+symbol = "?replayInitialPaletteDat@@3QBDB"
+target = 0x00789774
+evidence = "EFZ original PE operand at 0x00770F1B targeting ?replayInitialPaletteDat@@3QBDB at 0x00789774"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 253
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "EFZ original PE operand at 0x00770F2D targeting ?LoadPalette@Video@@QAEHPAEPBDHHH@Z at 0x0040B760"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 269
+type = "DIR32"
+symbol = "?replayInitialPaletteBmp@@3QBDB"
+target = 0x00789788
+evidence = "EFZ original PE operand at 0x00770F3D targeting ?replayInitialPaletteBmp@@3QBDB at 0x00789788"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 287
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "EFZ original PE operand at 0x00770F4F targeting ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z at 0x0040B640"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 348
+type = "DIR32"
+symbol = "?replayFilePrefix@@3QBDB"
+target = 0x0078979c
+evidence = "EFZ original PE operand at 0x00770F8C targeting ?replayFilePrefix@@3QBDB at 0x0078979C"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 357
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "EFZ original PE operand at 0x00770F95 targeting _strcpy at 0x00778080"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 378
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "EFZ original PE operand at 0x00770FAA targeting __itoa at 0x00777F55"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 394
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "EFZ original PE operand at 0x00770FBA targeting _strcat at 0x00778090"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 402
+type = "DIR32"
+symbol = "?replayFileSeparator@@3QBDB"
+target = 0x007897a8
+evidence = "EFZ original PE operand at 0x00770FC2 targeting ?replayFileSeparator@@3QBDB at 0x007897A8"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 411
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "EFZ original PE operand at 0x00770FCB targeting _strcat at 0x00778090"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 432
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "EFZ original PE operand at 0x00770FE0 targeting __itoa at 0x00777F55"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 448
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "EFZ original PE operand at 0x00770FF0 targeting _strcat at 0x00778090"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 456
+type = "DIR32"
+symbol = "?replayFileExtension@@3QBDB"
+target = 0x007897ac
+evidence = "EFZ original PE operand at 0x00770FF8 targeting ?replayFileExtension@@3QBDB at 0x007897AC"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 465
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "EFZ original PE operand at 0x00771001 targeting _strcat at 0x00778090"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 489
+type = "REL32"
+symbol = "?OpenRead@WordFile@@QAEIPBD@Z"
+target = 0x00405e90
+evidence = "EFZ original PE operand at 0x00771019 targeting ?OpenRead@WordFile@@QAEIPBD@Z at 0x00405E90"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 537
+type = "REL32"
+symbol = "?ReadWord@WordFile@@QAEGXZ"
+target = 0x00405fb0
+evidence = "EFZ original PE operand at 0x00771049 targeting ?ReadWord@WordFile@@QAEGXZ at 0x00405FB0"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 576
+type = "REL32"
+symbol = "?ReadWord@WordFile@@QAEGXZ"
+target = 0x00405fb0
+evidence = "EFZ original PE operand at 0x00771070 targeting ?ReadWord@WordFile@@QAEGXZ at 0x00405FB0"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 636
+type = "REL32"
+symbol = "?Close@WordFile@@QAEXXZ"
+target = 0x00405f50
+evidence = "EFZ original PE operand at 0x007710AC targeting ?Close@WordFile@@QAEXXZ at 0x00405F50"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 685
+type = "REL32"
+symbol = "?FadeIn@Scene@@QAEXPAEE@Z"
+target = 0x00759e20
+evidence = "EFZ original PE operand at 0x007710DD targeting ?FadeIn@Scene@@QAEXPAEE@Z at 0x00759E20"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 710
+type = "DIR32"
+symbol = "?replayRestoredPaletteDat@@3QBDB"
+target = 0x007897b4
+evidence = "EFZ original PE operand at 0x007710F6 targeting ?replayRestoredPaletteDat@@3QBDB at 0x007897B4"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 728
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "EFZ original PE operand at 0x00771108 targeting ?LoadPalette@Video@@QAEHPAEPBDHHH@Z at 0x0040B760"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 744
+type = "DIR32"
+symbol = "?replayRestoredPaletteBmp@@3QBDB"
+target = 0x007897c8
+evidence = "EFZ original PE operand at 0x00771118 targeting ?replayRestoredPaletteBmp@@3QBDB at 0x007897C8"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 762
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "EFZ original PE operand at 0x0077112A targeting ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z at 0x0040B640"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 780
+type = "REL32"
+symbol = "?ApplyPalette@Video@@QAEHPAE@Z"
+target = 0x0040bd30
+evidence = "EFZ original PE operand at 0x0077113C targeting ?ApplyPalette@Video@@QAEHPAE@Z at 0x0040BD30"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 797
+type = "REL32"
+symbol = "?FadeIn@Scene@@QAEXPAEE@Z"
+target = 0x00759e20
+evidence = "EFZ original PE operand at 0x0077114D targeting ?FadeIn@Scene@@QAEXPAEE@Z at 0x00759E20"
+
+[[units.scene8-prepare-replay-list.relocations]]
+offset = 812
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "EFZ original PE operand at 0x0077115C targeting @__security_check_cookie@4 at 0x007781DC"
