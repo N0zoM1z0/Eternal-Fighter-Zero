@@ -5,6 +5,19 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
+## Scene6 options constructor accepted — 2026-11-17
+
+`Scene6::Scene6` at `0x00759F30` is now strict Exact for **1,138 bytes,
+71 original-bound COFF relocations**. `src/Scene6Constructor.cpp` restores
+real DAT/BMP resource alternatives, independent color keys, the native
+settings-state initialization and all **23 original character names** in
+30-byte-stride records. `src/Scene6ConstructorPaths.cpp` retains the distinct
+original string operands. The animation-time `double` at `+0x748` is now typed
+in `src/Engine.h`. Eight existing Scene6 exact owners were individually
+rebuilt and compared to the canonical PE, all Exact. Open related bosses:
+`Scene6::Step` (`0x0075A4C0`, 3,000 bytes) and `Scene6::Slot0` renderer
+(`0x0075B0A0`, 8,608 bytes). No all-unit cold replay.
+
 ## Staff-roll virtual keyboard slot accepted — 2026-11-17
 
 `Scene10::PollKeyboard` at `0x00775D50` is Exact for all **11/11 bytes**

@@ -551,7 +551,7 @@ address,origin,status,evidence
 0x00759C10,authored,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
 0x00759C90,authored,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
 0x00759E20,authored,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
-0x00759F30,unknown,unreviewed,
+0x00759F30,authored,reviewed,docs/evidence/scene6-constructor-exact.json
 0x0075A3B0,authored,reviewed,docs/evidence/scene6-destructor-exact.json
 0x0075A4C0,unknown,unreviewed,
 0x0075B0A0,unknown,unreviewed,

@@ -1,0 +1,684 @@
+{
+  "schema_version": 1,
+  "authority": "Complete 1,138-byte canonical EFZ PE native identity from natural authored C++ with 71 independent original COFF relocation bindings",
+  "owner": "Scene6::Scene6 options menu resource and name-table constructor",
+  "native_extent": {
+    "address": "0x00759F30",
+    "exclusive_end": "0x0075A3A2",
+    "bytes": 1138
+  },
+  "method": "Selected native /Od /G6 /MT /Gy /W3 compile and all-byte original PE comparison, 71 original-bound relocations reviewed individually, no ASM, padding, masked bytes, or cold replay",
+  "behavior": "Load five DAT/palette resources with three BMP and two palette fallback paths, initialize five DirectDraw owners and setting state, copy 23 original distinct character names into the native 30-byte-stride settings table.",
+  "real_source_findings": "Original VC7.1 retains if(true) DAT and bitmap fallback branches, two independent SurfaceProperty color-key samples, double settingsAnimationTime at offset 0x748, and all 23 source strings as distinct original PE operands.",
+  "natural_cpp_without_asm_padding_or_byte_patches": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1138,
+      "matched_bytes": 1138,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 41,
+          "target": 7707664,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+          "evidence": "Original EFZ PE 0x00759F59, independently checked ??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z points to 0x00759C10",
+          "addend": 0
+        },
+        {
+          "offset": 50,
+          "target": 7902632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene6@@6B@",
+          "evidence": "Original EFZ PE 0x00759F62, independently checked ??_7Scene6@@6B@ points to 0x007895A8",
+          "addend": 0
+        },
+        {
+          "offset": 98,
+          "target": 7901920,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorconfigBackgroundDat@@3QBDB",
+          "evidence": "Original EFZ PE 0x00759F92, independently checked ?scene6CtorconfigBackgroundDat@@3QBDB points to 0x007892E0",
+          "addend": 0
+        },
+        {
+          "offset": 119,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "Original EFZ PE 0x00759FA7, independently checked ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z points to 0x00406DB0",
+          "addend": 0
+        },
+        {
+          "offset": 131,
+          "target": 7901944,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorconfigOverlayDat@@3QBDB",
+          "evidence": "Original EFZ PE 0x00759FB3, independently checked ?scene6CtorconfigOverlayDat@@3QBDB points to 0x007892F8",
+          "addend": 0
+        },
+        {
+          "offset": 152,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "Original EFZ PE 0x00759FC8, independently checked ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z points to 0x00406DB0",
+          "addend": 0
+        },
+        {
+          "offset": 164,
+          "target": 7901968,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorconfigScoreDat@@3QBDB",
+          "evidence": "Original EFZ PE 0x00759FD4, independently checked ?scene6CtorconfigScoreDat@@3QBDB points to 0x00789310",
+          "addend": 0
+        },
+        {
+          "offset": 184,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "Original EFZ PE 0x00759FE8, independently checked ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z points to 0x00406DB0",
+          "addend": 0
+        },
+        {
+          "offset": 198,
+          "target": 7901988,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorconfigBackgroundPaletteDat@@3QBDB",
+          "evidence": "Original EFZ PE 0x00759FF6, independently checked ?scene6CtorconfigBackgroundPaletteDat@@3QBDB points to 0x00789324",
+          "addend": 0
+        },
+        {
+          "offset": 216,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE 0x0075A008, independently checked ?LoadPalette@Video@@QAEHPAEPBDHHH@Z points to 0x0040B760",
+          "addend": 0
+        },
+        {
+          "offset": 230,
+          "target": 7902012,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorconfigOverlayPaletteDat@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A016, independently checked ?scene6CtorconfigOverlayPaletteDat@@3QBDB points to 0x0078933C",
+          "addend": 0
+        },
+        {
+          "offset": 248,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE 0x0075A028, independently checked ?LoadPalette@Video@@QAEHPAEPBDHHH@Z points to 0x0040B760",
+          "addend": 0
+        },
+        {
+          "offset": 260,
+          "target": 7902036,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorconfigBackgroundBmp@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A034, independently checked ?scene6CtorconfigBackgroundBmp@@3QBDB points to 0x00789354",
+          "addend": 0
+        },
+        {
+          "offset": 284,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "Original EFZ PE 0x0075A04C, independently checked ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z points to 0x00408D00",
+          "addend": 0
+        },
+        {
+          "offset": 294,
+          "target": 7902060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorconfigOverlayBmp@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A056, independently checked ?scene6CtorconfigOverlayBmp@@3QBDB points to 0x0078936C",
+          "addend": 0
+        },
+        {
+          "offset": 318,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "Original EFZ PE 0x0075A06E, independently checked ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z points to 0x00408D00",
+          "addend": 0
+        },
+        {
+          "offset": 328,
+          "target": 7902084,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorconfigScoreBmp@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A078, independently checked ?scene6CtorconfigScoreBmp@@3QBDB points to 0x00789384",
+          "addend": 0
+        },
+        {
+          "offset": 352,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "Original EFZ PE 0x0075A090, independently checked ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z points to 0x00408D00",
+          "addend": 0
+        },
+        {
+          "offset": 366,
+          "target": 7902104,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorconfigBackgroundPaletteBmp@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A09E, independently checked ?scene6CtorconfigBackgroundPaletteBmp@@3QBDB points to 0x00789398",
+          "addend": 0
+        },
+        {
+          "offset": 384,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE 0x0075A0B0, independently checked ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z points to 0x0040B640",
+          "addend": 0
+        },
+        {
+          "offset": 398,
+          "target": 7902128,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorconfigOverlayPaletteBmp@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A0BE, independently checked ?scene6CtorconfigOverlayPaletteBmp@@3QBDB points to 0x007893B0",
+          "addend": 0
+        },
+        {
+          "offset": 416,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE 0x0075A0D0, independently checked ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z points to 0x0040B640",
+          "addend": 0
+        },
+        {
+          "offset": 437,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "Original EFZ PE 0x0075A0E5, independently checked ?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z points to 0x0040BCC0",
+          "addend": 0
+        },
+        {
+          "offset": 467,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "Original EFZ PE 0x0075A103, independently checked ?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z points to 0x0040BCC0",
+          "addend": 0
+        },
+        {
+          "offset": 559,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ PE 0x0075A15F, independently checked __real@0000000000000000 points to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 609,
+          "target": 7902152,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName00@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A191, independently checked ?scene6CtorName00@@3QBDB points to 0x007893C8",
+          "addend": 0
+        },
+        {
+          "offset": 623,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A19F, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 631,
+          "target": 7902160,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName01@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A1A7, independently checked ?scene6CtorName01@@3QBDB points to 0x007893D0",
+          "addend": 0
+        },
+        {
+          "offset": 646,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A1B6, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 654,
+          "target": 7902164,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName02@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A1BE, independently checked ?scene6CtorName02@@3QBDB points to 0x007893D4",
+          "addend": 0
+        },
+        {
+          "offset": 669,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A1CD, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 677,
+          "target": 7902168,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName03@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A1D5, independently checked ?scene6CtorName03@@3QBDB points to 0x007893D8",
+          "addend": 0
+        },
+        {
+          "offset": 691,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A1E3, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 699,
+          "target": 7902176,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName04@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A1EB, independently checked ?scene6CtorName04@@3QBDB points to 0x007893E0",
+          "addend": 0
+        },
+        {
+          "offset": 714,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A1FA, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 722,
+          "target": 7902184,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName05@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A202, independently checked ?scene6CtorName05@@3QBDB points to 0x007893E8",
+          "addend": 0
+        },
+        {
+          "offset": 737,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A211, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 745,
+          "target": 7902192,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName06@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A219, independently checked ?scene6CtorName06@@3QBDB points to 0x007893F0",
+          "addend": 0
+        },
+        {
+          "offset": 759,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A227, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 767,
+          "target": 7902204,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName07@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A22F, independently checked ?scene6CtorName07@@3QBDB points to 0x007893FC",
+          "addend": 0
+        },
+        {
+          "offset": 782,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A23E, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 790,
+          "target": 7902212,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName08@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A246, independently checked ?scene6CtorName08@@3QBDB points to 0x00789404",
+          "addend": 0
+        },
+        {
+          "offset": 805,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A255, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 813,
+          "target": 7902220,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName09@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A25D, independently checked ?scene6CtorName09@@3QBDB points to 0x0078940C",
+          "addend": 0
+        },
+        {
+          "offset": 827,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A26B, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 835,
+          "target": 7902228,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName10@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A273, independently checked ?scene6CtorName10@@3QBDB points to 0x00789414",
+          "addend": 0
+        },
+        {
+          "offset": 850,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A282, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 858,
+          "target": 7902236,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName11@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A28A, independently checked ?scene6CtorName11@@3QBDB points to 0x0078941C",
+          "addend": 0
+        },
+        {
+          "offset": 873,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A299, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 881,
+          "target": 7902240,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName12@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A2A1, independently checked ?scene6CtorName12@@3QBDB points to 0x00789420",
+          "addend": 0
+        },
+        {
+          "offset": 895,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A2AF, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 903,
+          "target": 7902248,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName13@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A2B7, independently checked ?scene6CtorName13@@3QBDB points to 0x00789428",
+          "addend": 0
+        },
+        {
+          "offset": 918,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A2C6, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 926,
+          "target": 7902256,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName14@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A2CE, independently checked ?scene6CtorName14@@3QBDB points to 0x00789430",
+          "addend": 0
+        },
+        {
+          "offset": 941,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A2DD, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 949,
+          "target": 7902264,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName15@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A2E5, independently checked ?scene6CtorName15@@3QBDB points to 0x00789438",
+          "addend": 0
+        },
+        {
+          "offset": 963,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A2F3, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 971,
+          "target": 7902272,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName16@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A2FB, independently checked ?scene6CtorName16@@3QBDB points to 0x00789440",
+          "addend": 0
+        },
+        {
+          "offset": 986,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A30A, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 994,
+          "target": 7902284,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName17@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A312, independently checked ?scene6CtorName17@@3QBDB points to 0x0078944C",
+          "addend": 0
+        },
+        {
+          "offset": 1009,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A321, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 1017,
+          "target": 7902292,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName18@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A329, independently checked ?scene6CtorName18@@3QBDB points to 0x00789454",
+          "addend": 0
+        },
+        {
+          "offset": 1031,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A337, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 1039,
+          "target": 7902300,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName19@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A33F, independently checked ?scene6CtorName19@@3QBDB points to 0x0078945C",
+          "addend": 0
+        },
+        {
+          "offset": 1054,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A34E, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 1062,
+          "target": 7902308,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName20@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A356, independently checked ?scene6CtorName20@@3QBDB points to 0x00789464",
+          "addend": 0
+        },
+        {
+          "offset": 1077,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A365, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 1085,
+          "target": 7902316,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName21@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A36D, independently checked ?scene6CtorName21@@3QBDB points to 0x0078946C",
+          "addend": 0
+        },
+        {
+          "offset": 1099,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A37B, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 1107,
+          "target": 7902324,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6CtorName22@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075A383, independently checked ?scene6CtorName22@@3QBDB points to 0x00789474",
+          "addend": 0
+        },
+        {
+          "offset": 1122,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075A392, independently checked _strcpy points to 0x00778080",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "af26aa0c384927908a8bbb5fa3c439d2e977b64859526af7baca063102f3f6c1",
+      "target_extent_sha256": "af26aa0c384927908a8bbb5fa3c439d2e977b64859526af7baca063102f3f6c1",
+      "unit": "scene6-constructor",
+      "symbol": "??0Scene6@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+      "target_address": "0x00759F30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "6e379109bc7fb0987eb081b4f24ce71f2d14a154068f59308893d6800c28c258",
+      "object_sha256": "10f4b6affc17512d649e975f112fcf39af65632edf8fbf2c4d00260dca6e6961",
+      "source_sha256": "da44709349b7339616dac9e791e68137eb70f6d3593cbc34646962b70ffc3ff8",
+      "dependencies": {
+        "src/Engine.h": "9ec71f95c824aa0cb215b05a804a67d51479867a00459f33ccaab1fbfe1cc092",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/Scene6ConstructorPaths.cpp": "6e4d19d0765f55ed4197182ea7db58968fd9d4b9e8520c1e230f1c9a0530e0cf"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "a6ebefd3060717404194f405e3b7b644fc014ed070172ed883aea8359fe8b1e9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8beb280cbe71ba56e5ff5b6216ac7782ba53572634ab97c479c0e772b8a6182a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

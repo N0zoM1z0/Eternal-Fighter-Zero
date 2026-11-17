@@ -169143,3 +169143,510 @@ object = "build/match-units/scene10-keyboard/Scene10Keyboard.obj"
 symbol = "?PollKeyboard@Scene10@@UAEXXZ"
 target_address = 0x00775d50
 size = 11
+
+[units.scene6-constructor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene6Constructor.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/Scene6ConstructorPaths.cpp"]
+object = "build/match-units/scene6-constructor/Scene6Constructor.obj"
+symbol = "??0Scene6@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target_address = 0x00759f30
+size = 1138
+
+[[units.scene6-constructor.relocations]]
+offset = 41
+type = "REL32"
+symbol = "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x00759c10
+evidence = "Original EFZ PE 0x00759F59, independently checked ??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z points to 0x00759C10"
+
+[[units.scene6-constructor.relocations]]
+offset = 50
+type = "DIR32"
+symbol = "??_7Scene6@@6B@"
+target = 0x007895a8
+evidence = "Original EFZ PE 0x00759F62, independently checked ??_7Scene6@@6B@ points to 0x007895A8"
+
+[[units.scene6-constructor.relocations]]
+offset = 98
+type = "DIR32"
+symbol = "?scene6CtorconfigBackgroundDat@@3QBDB"
+target = 0x007892e0
+evidence = "Original EFZ PE 0x00759F92, independently checked ?scene6CtorconfigBackgroundDat@@3QBDB points to 0x007892E0"
+
+[[units.scene6-constructor.relocations]]
+offset = 119
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "Original EFZ PE 0x00759FA7, independently checked ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z points to 0x00406DB0"
+
+[[units.scene6-constructor.relocations]]
+offset = 131
+type = "DIR32"
+symbol = "?scene6CtorconfigOverlayDat@@3QBDB"
+target = 0x007892f8
+evidence = "Original EFZ PE 0x00759FB3, independently checked ?scene6CtorconfigOverlayDat@@3QBDB points to 0x007892F8"
+
+[[units.scene6-constructor.relocations]]
+offset = 152
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "Original EFZ PE 0x00759FC8, independently checked ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z points to 0x00406DB0"
+
+[[units.scene6-constructor.relocations]]
+offset = 164
+type = "DIR32"
+symbol = "?scene6CtorconfigScoreDat@@3QBDB"
+target = 0x00789310
+evidence = "Original EFZ PE 0x00759FD4, independently checked ?scene6CtorconfigScoreDat@@3QBDB points to 0x00789310"
+
+[[units.scene6-constructor.relocations]]
+offset = 184
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "Original EFZ PE 0x00759FE8, independently checked ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z points to 0x00406DB0"
+
+[[units.scene6-constructor.relocations]]
+offset = 198
+type = "DIR32"
+symbol = "?scene6CtorconfigBackgroundPaletteDat@@3QBDB"
+target = 0x00789324
+evidence = "Original EFZ PE 0x00759FF6, independently checked ?scene6CtorconfigBackgroundPaletteDat@@3QBDB points to 0x00789324"
+
+[[units.scene6-constructor.relocations]]
+offset = 216
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "Original EFZ PE 0x0075A008, independently checked ?LoadPalette@Video@@QAEHPAEPBDHHH@Z points to 0x0040B760"
+
+[[units.scene6-constructor.relocations]]
+offset = 230
+type = "DIR32"
+symbol = "?scene6CtorconfigOverlayPaletteDat@@3QBDB"
+target = 0x0078933c
+evidence = "Original EFZ PE 0x0075A016, independently checked ?scene6CtorconfigOverlayPaletteDat@@3QBDB points to 0x0078933C"
+
+[[units.scene6-constructor.relocations]]
+offset = 248
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "Original EFZ PE 0x0075A028, independently checked ?LoadPalette@Video@@QAEHPAEPBDHHH@Z points to 0x0040B760"
+
+[[units.scene6-constructor.relocations]]
+offset = 260
+type = "DIR32"
+symbol = "?scene6CtorconfigBackgroundBmp@@3QBDB"
+target = 0x00789354
+evidence = "Original EFZ PE 0x0075A034, independently checked ?scene6CtorconfigBackgroundBmp@@3QBDB points to 0x00789354"
+
+[[units.scene6-constructor.relocations]]
+offset = 284
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "Original EFZ PE 0x0075A04C, independently checked ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z points to 0x00408D00"
+
+[[units.scene6-constructor.relocations]]
+offset = 294
+type = "DIR32"
+symbol = "?scene6CtorconfigOverlayBmp@@3QBDB"
+target = 0x0078936c
+evidence = "Original EFZ PE 0x0075A056, independently checked ?scene6CtorconfigOverlayBmp@@3QBDB points to 0x0078936C"
+
+[[units.scene6-constructor.relocations]]
+offset = 318
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "Original EFZ PE 0x0075A06E, independently checked ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z points to 0x00408D00"
+
+[[units.scene6-constructor.relocations]]
+offset = 328
+type = "DIR32"
+symbol = "?scene6CtorconfigScoreBmp@@3QBDB"
+target = 0x00789384
+evidence = "Original EFZ PE 0x0075A078, independently checked ?scene6CtorconfigScoreBmp@@3QBDB points to 0x00789384"
+
+[[units.scene6-constructor.relocations]]
+offset = 352
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "Original EFZ PE 0x0075A090, independently checked ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z points to 0x00408D00"
+
+[[units.scene6-constructor.relocations]]
+offset = 366
+type = "DIR32"
+symbol = "?scene6CtorconfigBackgroundPaletteBmp@@3QBDB"
+target = 0x00789398
+evidence = "Original EFZ PE 0x0075A09E, independently checked ?scene6CtorconfigBackgroundPaletteBmp@@3QBDB points to 0x00789398"
+
+[[units.scene6-constructor.relocations]]
+offset = 384
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "Original EFZ PE 0x0075A0B0, independently checked ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z points to 0x0040B640"
+
+[[units.scene6-constructor.relocations]]
+offset = 398
+type = "DIR32"
+symbol = "?scene6CtorconfigOverlayPaletteBmp@@3QBDB"
+target = 0x007893b0
+evidence = "Original EFZ PE 0x0075A0BE, independently checked ?scene6CtorconfigOverlayPaletteBmp@@3QBDB points to 0x007893B0"
+
+[[units.scene6-constructor.relocations]]
+offset = 416
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "Original EFZ PE 0x0075A0D0, independently checked ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z points to 0x0040B640"
+
+[[units.scene6-constructor.relocations]]
+offset = 437
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040bcc0
+evidence = "Original EFZ PE 0x0075A0E5, independently checked ?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z points to 0x0040BCC0"
+
+[[units.scene6-constructor.relocations]]
+offset = 467
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040bcc0
+evidence = "Original EFZ PE 0x0075A103, independently checked ?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z points to 0x0040BCC0"
+
+[[units.scene6-constructor.relocations]]
+offset = 559
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Original EFZ PE 0x0075A15F, independently checked __real@0000000000000000 points to 0x007872F8"
+
+[[units.scene6-constructor.relocations]]
+offset = 609
+type = "DIR32"
+symbol = "?scene6CtorName00@@3QBDB"
+target = 0x007893c8
+evidence = "Original EFZ PE 0x0075A191, independently checked ?scene6CtorName00@@3QBDB points to 0x007893C8"
+
+[[units.scene6-constructor.relocations]]
+offset = 623
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A19F, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 631
+type = "DIR32"
+symbol = "?scene6CtorName01@@3QBDB"
+target = 0x007893d0
+evidence = "Original EFZ PE 0x0075A1A7, independently checked ?scene6CtorName01@@3QBDB points to 0x007893D0"
+
+[[units.scene6-constructor.relocations]]
+offset = 646
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A1B6, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 654
+type = "DIR32"
+symbol = "?scene6CtorName02@@3QBDB"
+target = 0x007893d4
+evidence = "Original EFZ PE 0x0075A1BE, independently checked ?scene6CtorName02@@3QBDB points to 0x007893D4"
+
+[[units.scene6-constructor.relocations]]
+offset = 669
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A1CD, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 677
+type = "DIR32"
+symbol = "?scene6CtorName03@@3QBDB"
+target = 0x007893d8
+evidence = "Original EFZ PE 0x0075A1D5, independently checked ?scene6CtorName03@@3QBDB points to 0x007893D8"
+
+[[units.scene6-constructor.relocations]]
+offset = 691
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A1E3, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 699
+type = "DIR32"
+symbol = "?scene6CtorName04@@3QBDB"
+target = 0x007893e0
+evidence = "Original EFZ PE 0x0075A1EB, independently checked ?scene6CtorName04@@3QBDB points to 0x007893E0"
+
+[[units.scene6-constructor.relocations]]
+offset = 714
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A1FA, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 722
+type = "DIR32"
+symbol = "?scene6CtorName05@@3QBDB"
+target = 0x007893e8
+evidence = "Original EFZ PE 0x0075A202, independently checked ?scene6CtorName05@@3QBDB points to 0x007893E8"
+
+[[units.scene6-constructor.relocations]]
+offset = 737
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A211, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 745
+type = "DIR32"
+symbol = "?scene6CtorName06@@3QBDB"
+target = 0x007893f0
+evidence = "Original EFZ PE 0x0075A219, independently checked ?scene6CtorName06@@3QBDB points to 0x007893F0"
+
+[[units.scene6-constructor.relocations]]
+offset = 759
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A227, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 767
+type = "DIR32"
+symbol = "?scene6CtorName07@@3QBDB"
+target = 0x007893fc
+evidence = "Original EFZ PE 0x0075A22F, independently checked ?scene6CtorName07@@3QBDB points to 0x007893FC"
+
+[[units.scene6-constructor.relocations]]
+offset = 782
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A23E, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 790
+type = "DIR32"
+symbol = "?scene6CtorName08@@3QBDB"
+target = 0x00789404
+evidence = "Original EFZ PE 0x0075A246, independently checked ?scene6CtorName08@@3QBDB points to 0x00789404"
+
+[[units.scene6-constructor.relocations]]
+offset = 805
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A255, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 813
+type = "DIR32"
+symbol = "?scene6CtorName09@@3QBDB"
+target = 0x0078940c
+evidence = "Original EFZ PE 0x0075A25D, independently checked ?scene6CtorName09@@3QBDB points to 0x0078940C"
+
+[[units.scene6-constructor.relocations]]
+offset = 827
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A26B, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 835
+type = "DIR32"
+symbol = "?scene6CtorName10@@3QBDB"
+target = 0x00789414
+evidence = "Original EFZ PE 0x0075A273, independently checked ?scene6CtorName10@@3QBDB points to 0x00789414"
+
+[[units.scene6-constructor.relocations]]
+offset = 850
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A282, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 858
+type = "DIR32"
+symbol = "?scene6CtorName11@@3QBDB"
+target = 0x0078941c
+evidence = "Original EFZ PE 0x0075A28A, independently checked ?scene6CtorName11@@3QBDB points to 0x0078941C"
+
+[[units.scene6-constructor.relocations]]
+offset = 873
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A299, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 881
+type = "DIR32"
+symbol = "?scene6CtorName12@@3QBDB"
+target = 0x00789420
+evidence = "Original EFZ PE 0x0075A2A1, independently checked ?scene6CtorName12@@3QBDB points to 0x00789420"
+
+[[units.scene6-constructor.relocations]]
+offset = 895
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A2AF, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 903
+type = "DIR32"
+symbol = "?scene6CtorName13@@3QBDB"
+target = 0x00789428
+evidence = "Original EFZ PE 0x0075A2B7, independently checked ?scene6CtorName13@@3QBDB points to 0x00789428"
+
+[[units.scene6-constructor.relocations]]
+offset = 918
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A2C6, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 926
+type = "DIR32"
+symbol = "?scene6CtorName14@@3QBDB"
+target = 0x00789430
+evidence = "Original EFZ PE 0x0075A2CE, independently checked ?scene6CtorName14@@3QBDB points to 0x00789430"
+
+[[units.scene6-constructor.relocations]]
+offset = 941
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A2DD, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 949
+type = "DIR32"
+symbol = "?scene6CtorName15@@3QBDB"
+target = 0x00789438
+evidence = "Original EFZ PE 0x0075A2E5, independently checked ?scene6CtorName15@@3QBDB points to 0x00789438"
+
+[[units.scene6-constructor.relocations]]
+offset = 963
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A2F3, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 971
+type = "DIR32"
+symbol = "?scene6CtorName16@@3QBDB"
+target = 0x00789440
+evidence = "Original EFZ PE 0x0075A2FB, independently checked ?scene6CtorName16@@3QBDB points to 0x00789440"
+
+[[units.scene6-constructor.relocations]]
+offset = 986
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A30A, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 994
+type = "DIR32"
+symbol = "?scene6CtorName17@@3QBDB"
+target = 0x0078944c
+evidence = "Original EFZ PE 0x0075A312, independently checked ?scene6CtorName17@@3QBDB points to 0x0078944C"
+
+[[units.scene6-constructor.relocations]]
+offset = 1009
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A321, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 1017
+type = "DIR32"
+symbol = "?scene6CtorName18@@3QBDB"
+target = 0x00789454
+evidence = "Original EFZ PE 0x0075A329, independently checked ?scene6CtorName18@@3QBDB points to 0x00789454"
+
+[[units.scene6-constructor.relocations]]
+offset = 1031
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A337, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 1039
+type = "DIR32"
+symbol = "?scene6CtorName19@@3QBDB"
+target = 0x0078945c
+evidence = "Original EFZ PE 0x0075A33F, independently checked ?scene6CtorName19@@3QBDB points to 0x0078945C"
+
+[[units.scene6-constructor.relocations]]
+offset = 1054
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A34E, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 1062
+type = "DIR32"
+symbol = "?scene6CtorName20@@3QBDB"
+target = 0x00789464
+evidence = "Original EFZ PE 0x0075A356, independently checked ?scene6CtorName20@@3QBDB points to 0x00789464"
+
+[[units.scene6-constructor.relocations]]
+offset = 1077
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A365, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 1085
+type = "DIR32"
+symbol = "?scene6CtorName21@@3QBDB"
+target = 0x0078946c
+evidence = "Original EFZ PE 0x0075A36D, independently checked ?scene6CtorName21@@3QBDB points to 0x0078946C"
+
+[[units.scene6-constructor.relocations]]
+offset = 1099
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A37B, independently checked _strcpy points to 0x00778080"
+
+[[units.scene6-constructor.relocations]]
+offset = 1107
+type = "DIR32"
+symbol = "?scene6CtorName22@@3QBDB"
+target = 0x00789474
+evidence = "Original EFZ PE 0x0075A383, independently checked ?scene6CtorName22@@3QBDB points to 0x00789474"
+
+[[units.scene6-constructor.relocations]]
+offset = 1122
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075A392, independently checked _strcpy points to 0x00778080"

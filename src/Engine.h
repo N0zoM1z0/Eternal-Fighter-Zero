@@ -697,7 +697,8 @@ class Scene6 : public Scene {
     char previewNames[24][30]; // native offset 0x470, 30-byte name stride
     unsigned char previewColorKey; // 0x740
     unsigned char numberColorKey;  // 0x741
-    unsigned char unknown_0742[0x750 - 0x742];
+    unsigned char unknown_0742[6];
+    double settingsAnimationTime; // original +0x748
     int settingsPulseOffset;
     int settingsSlideOffset;
     int numberBackdropIndex; // native offset 0x758
