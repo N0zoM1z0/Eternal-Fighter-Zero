@@ -14,6 +14,7 @@ import struct
 import subprocess
 import sys
 from pathlib import Path
+from difflib import SequenceMatcher
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT/'scripts'))
@@ -168,6 +169,63 @@ def ordered_ftol_sources(code: bytes, name: str, ftol_calls: list[tuple[int,int]
     return results
 
 
+def instruction_shape_alignment(native: bytes, candidate: bytes):
+    """Value-preserving diagnostic, not byte identity or branch equivalence.
+
+    Match instruction sequences separately between the 789 native PE x87
+    constant loads and corresponding compiled COFF references. Ignore only
+    relocatable constants and compiler-private stack slots in the normalized
+    shape. Preserve mnemonic, operand widths, registers and member addressing.
+    """
+    def decode(data: bytes, label: str):
+        path=ROOT/'.analysis/probes/minagi-slot07'/f'{label}-structural-audit.bin'
+        path.parent.mkdir(parents=True,exist_ok=True)
+        path.write_bytes(data)
+        dis=subprocess.run([
+            'objdump','-w','-z','-D','-b','binary','-m','i386','-Mintel',str(path)
+        ],check=True,text=True,capture_output=True).stdout
+        rows=[]
+        anchors=[]
+        for line in dis.splitlines():
+            m=re.match(r'^\s*[0-9a-f]+:\s+((?:[0-9a-f]{2}\s+)+)\s+(.+)',line)
+            if not m:continue
+            if 'ds:0x' in m[2]:anchors.append(len(rows))
+            parts=m[2].lower().split(None,1)
+            op=parts[0]
+            arg=parts[1] if len(parts)>1 else ''
+            if op in {
+                'call','jmp','je','jne','jz','jnz','jg','jge','jl','jle',
+                'ja','jae','jb','jbe','jo','jno','js','jns','jp','jnp','jecxz'
+            }:arg='<rel>'
+            arg=re.sub(r'0x[0-9a-f]+','<hex>',arg)
+            arg=re.sub(r'\[ebp(?:-|\+)0x[0-9a-f]+\]','[ebp+LOCAL]',arg)
+            rows.append(op+' '+arg)
+        if len(anchors)!=789:
+            raise AssertionError(('unexpected native x87 constant anchors',label,len(anchors)))
+        return rows,anchors
+    n,na=decode(native,'original')
+    c,ca=decode(candidate,'candidate')
+    N=[-1]+na+[len(n)]
+    C=[-1]+ca+[len(c)]
+    aligned=0;changed=0
+    for i in range(790):
+        ns=n[N[i]+1:N[i+1]]
+        cs=c[C[i]+1:C[i+1]]
+        equal=sum(i2-i1 for tag,i1,i2,j1,j2 in
+                  SequenceMatcher(None,ns,cs,autojunk=False).get_opcodes()
+                  if tag=='equal')
+        aligned+=equal
+        if equal!=len(ns) or equal!=len(cs):changed+=1
+    return {
+        'native_decoded_instructions':len(n),
+        'candidate_decoded_instructions':len(c),
+        'matching_normalized_instructions_between_float_anchors':aligned,
+        'changed_regions':changed,
+        'regions_compared':790,
+        'alignment_is_provisional_diagnostic_only':True
+    }
+
+
 def original_float_literal_values(image, native: bytes):
     """Read each original x87 f64 memory operand, in instruction order.
 
@@ -218,6 +276,12 @@ def main():
     source=SOURCE.read_text()
     if 'void Character21::Slot07()' not in source:
         raise AssertionError('missing full Minagi vtable owner')
+    for bad_cast in ('(short)field0008','(short)effects[effectIndex].tick',
+                     '(short)effects[effectIndex].type'):
+        if bad_cast in source:
+            raise AssertionError(('unsigned source comparison cast reappeared',bad_cast))
+    if 'switch(effects[effectIndex].type)' not in source:
+        raise AssertionError('wrong signed Minagi effect dispatch type')
     forbidden=('__asm', '_emit', '__emit', 'reinterpret_cast',
                'param_1', 'FUN_', '_DAT_', 'PADDING', 'goto ', 'LAB_')
     for token in forbidden:
@@ -322,6 +386,16 @@ def main():
         json.dumps(native_ftol_fields,separators=(',',':')).encode()
     ).hexdigest()
 
+    # Measure instruction/codegen progress without accepting a false Exact.
+    # The unsigned action/effect tick equality refactor eliminates native-
+    # inconsistent movsx where the PE uses movzx. Only full byte equality
+    # with relocation binding could satisfy the separate strict Oracle.
+    structural_audit=instruction_shape_alignment(native,candidate)
+    if (structural_audit['matching_normalized_instructions_between_float_anchors']
+            < 13676):
+        raise AssertionError(('Minagi instruction structure regressed',
+                              structural_audit))
+
     # Every x87 double referenced by the 87,798-byte native boss must appear
     # with the same value and multiplicity among the compiled C++ relocations.
     # This is strictly weaker than ordered identity: the remaining out-of-order
@@ -373,6 +447,10 @@ def main():
         'candidate':{
             'source':str(SOURCE.relative_to(ROOT)),
             'source_sha256':sha256(SOURCE),
+            'unsigned_field0008_equality_and_inequality':True,
+            'unsigned_effect_tick_zero_equality':True,
+            'unsigned_effect_type_switch':True,
+            'instruction_shape_audit':structural_audit,
             'object':str(OBJECT.relative_to(ROOT)),
             # Whole-COFF object hashes can change with compiler-local symbols,
             # even when function code and relocations are unchanged. Verify
@@ -426,6 +504,7 @@ def main():
     EVIDENCE.write_text(json.dumps(evidence,indent=2)+'\n')
     print(json.dumps({
         'status':evidence['status'],
+        'structural_instruction_alignment':structural_audit['matching_normalized_instructions_between_float_anchors'],
         'original_bytes':ORIGINAL_SIZE,
         'candidate_bytes':len(candidate),
         'size_delta':len(candidate)-ORIGINAL_SIZE,
