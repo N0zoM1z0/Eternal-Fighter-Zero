@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "authority": "complete original PE byte identity, independently reviewed derived class vtable",
+  "method": "selected original 216-byte native PE and VC7.1 normal Scene9 C++ destructor, no full cold replay",
+  "owner": "Scene9 results/winner screen resource owner",
+  "source": "src/Scene9Destructor.cpp",
+  "original_extent": {
+    "address": "0x00771400",
+    "exclusive_end": "0x007714D8",
+    "bytes": 216
+  },
+  "vtable": {
+    "address": "0x00789874",
+    "virtual_functions": [
+      "0x772800",
+      "0x7714e0",
+      "0x775750"
+    ]
+  },
+  "native_fields": {
+    "winner_surface": "0x434",
+    "result_surface": "0x438",
+    "result_overlay_surface": "0x43c",
+    "result_backdrop_surface": "0x440"
+  },
+  "behavior": "Release and null all four owned DirectDraw surfaces in native order",
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 216,
+      "matched_bytes": 216,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7903348,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene9@@6B@",
+          "evidence": "original 0x0077140C vtable store; three virtual entry original PE targets 0x00772800 0x007714E0 0x00775750",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "223c8febf01b13e06f0abdc334f813638649b076d60183e11338fd2f2a835001",
+      "target_extent_sha256": "223c8febf01b13e06f0abdc334f813638649b076d60183e11338fd2f2a835001",
+      "unit": "scene9-destructor",
+      "symbol": "??1Scene9@@QAE@XZ",
+      "target_address": "0x00771400",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "e5489b3a12ac9f69637037f009633417fcb57403ef4e33ebb4ebcfdd2f5aef46",
+      "object_sha256": "ff03187b1e65f7fc9b45d86e2cdd3d6d7f9e6e84da68bac1490d98579da41475",
+      "source_sha256": "63718c859eec5527c3593bbc45450783041f8e2339ee6c2edd67a9e77ecb44d3",
+      "dependencies": {
+        "src/Engine.h": "11351bec631d7c095d6ba101298b22a9be8bf6573669f5d6bb1020f5b675ae36",
+        "src/Input.h": "4b400709f6b28dee2d84f41f8bb173d84251d7b3949cc31f80afd8e6b3183a3c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "caf4e002f35103dc79ca415ad4c9b895e09f755cc9c723303f4a3eb112708e02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "5cc4cb8ff60b3dadaf5510bb4bed14bd8a4024ded15c56a5f1ca82398eba1087",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

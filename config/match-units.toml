@@ -166094,3 +166094,20 @@ type = "DIR32"
 symbol = "__imp__timeGetTime@0"
 target = 0x007871e0
 evidence = "original Scene8 185-byte PE operand at 0x007712CD; WinMM or Video dual-band native target"
+
+[units.scene9-destructor]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Scene9Destructor.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene9-destructor/Scene9Destructor.obj"
+symbol = "??1Scene9@@QAE@XZ"
+target_address = 0x00771400
+size = 216
+
+[[units.scene9-destructor.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "??_7Scene9@@6B@"
+target = 0x00789874
+evidence = "original 0x0077140C vtable store; three virtual entry original PE targets 0x00772800 0x007714E0 0x00775750"

@@ -512,3 +512,4 @@ address,name,source,symbol,status,evidence
 0x00770D80,Scene8::PollKeyboard,src/Scene8Keyboard.cpp,?PollKeyboard@Scene8@@UAEXXZ,complete,docs/evidence/scene8-keyboard-exact.json
 0x00771170,Scene8::FadeReplayPaletteOut,src/Scene8PaletteFade.cpp,?FadeReplayPaletteOut@Scene8@@QAEXXZ,complete,docs/evidence/scene8-palette-fades-exact.json
 0x00771230,Scene8::FadeReplayPaletteIn,src/Scene8PaletteFade.cpp,?FadeReplayPaletteIn@Scene8@@QAEXXZ,complete,docs/evidence/scene8-palette-fades-exact.json
+0x00771400,Scene9::~Scene9,src/Scene9Destructor.cpp,??1Scene9@@QAE@XZ,complete,docs/evidence/scene9-destructor-exact.json

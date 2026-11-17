@@ -609,7 +609,7 @@ address,origin,status,evidence
 0x00771170,authored,reviewed,docs/evidence/scene8-palette-fades-exact.json
 0x00771230,authored,reviewed,docs/evidence/scene8-palette-fades-exact.json
 0x007712F0,unknown,unreviewed,
-0x00771400,unknown,unreviewed,
+0x00771400,authored,reviewed,docs/evidence/scene9-destructor-exact.json
 0x007714E0,unknown,unreviewed,
 0x00772800,unknown,unreviewed,
 0x00774A10,unknown,unreviewed,

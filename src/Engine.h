@@ -730,6 +730,22 @@ public:
     virtual unsigned char Step();
     virtual void PollKeyboard();
 };
+// Results/winner scene following Scene8: Ghidra-native vtable 0x00789874.
+// Four owned DirectDraw surfaces live at object offsets 0x434..0x440.
+class Scene9 : public Scene {
+    unsigned char unknown_0430[0x434 - sizeof(Scene)];
+    IUnknown *winnerSurface;
+    IUnknown *resultSurface;
+    IUnknown *resultOverlaySurface;
+    IUnknown *resultBackdropSurface;
+    unsigned char unknown_0444[0x460 - 0x444];
+public:
+    Scene9(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
+    ~Scene9();
+    virtual void Slot0();
+    virtual unsigned char Step();
+    virtual void PollKeyboard();
+};
 #undef DECLARE_SCENE
 
 #endif
