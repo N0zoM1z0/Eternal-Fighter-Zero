@@ -133,6 +133,27 @@
     "ordered_ftol2_source_sha256": "32f7a8b5861763b3ddf223e4425a04f71d5a561be53d02352a353598b9f1ef79",
     "distinct_floating_literal_values": 66,
     "floating_literal_histogram_sha256": "e1965bf4e160665ed0bbcf5b18cda71714d3987334797e2536d812a7e56bf71d",
+    "ordered_random_range_upper_bounds": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      480,
+      30,
+      80,
+      100,
+      40,
+      120,
+      100,
+      100,
+      40,
+      140
+    ],
+    "ordered_random_range_upper_bounds_sha256": "dc1f8d92c7813ecf6cddab259197e20440b1347705a3acb58773cf938aa7be46",
     "ordered_direct_helper_targets": [
       "0x405490",
       "0x413090",
@@ -276,9 +297,9 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot07/Character21Effects-natural.cpp",
-    "source_sha256": "aedd4dca60b78e62e61dc1cd331fa5ece0360a58f05764250f7b5f96ce71116a",
+    "source_sha256": "8cf84b80c94a077179139f6ac9e90a14cebd6577ca6740f904664b1715733832",
     "object": "build/minagi-slot07/Character21Effects-natural.obj",
-    "function_body_sha256": "3c45d7c15c598e274d8b55c11e1c490bf88f3dc1da67304bcac04f4952f254fe",
+    "function_body_sha256": "f186eae04ebf576e44e1ea09ecd3294c62bbfe04def924e06d9b992220ca8662",
     "compiler_flags": [
       "/Od",
       "/G6",
@@ -287,8 +308,8 @@
       "/W3"
     ],
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-    "compiled_function_bytes": 88281,
-    "native_size_delta": 483,
+    "compiled_function_bytes": 88231,
+    "native_size_delta": 433,
     "dispatch_cases": 68,
     "dispatch_ids_match_original": true,
     "coff_relocations": 954,
@@ -302,6 +323,8 @@
     "floating_literal_histogram_sha256": "e1965bf4e160665ed0bbcf5b18cda71714d3987334797e2536d812a7e56bf71d",
     "direct_helper_calls_match_original": true,
     "all_94_direct_helper_calls_match_in_order": true,
+    "all_18_random_range_upper_bounds_in_native_order": true,
+    "ordered_random_range_upper_bounds_sha256": "dc1f8d92c7813ecf6cddab259197e20440b1347705a3acb58773cf938aa7be46",
     "all_42_virtual_emit_remove_calls_match_in_order": true,
     "virtual_effect_emits": 16,
     "virtual_effect_removals": 26,
@@ -361,5 +384,5 @@
   "source_contains_inline_assembly_or_padding": false,
   "strict_function_exact": false,
   "strict_whole_owner_exact": false,
-  "qualification": "All 68 distinct native effect types are represented in a complete typed C++ Slot07 candidate, and pinned VC7.1 compilation reproduces all ten classes of direct helper call in identical order, plus the 42 virtual emit/remove calls in identical order. All 789 original floating literal references match the candidate values and native access order. All 37 x87 float-to-int calls load the corresponding character or local-effect position axis in original order. This does not certify branch-level equivalence, COFF relocation targets, function byte identity or full-game integration. Do not register this prototype as complete or add it to accepted exact ledgers."
+  "qualification": "All 68 distinct native effect types are represented in a complete typed C++ Slot07 candidate, and pinned VC7.1 compilation reproduces all ten classes of direct helper call in identical order, plus the 42 virtual emit/remove calls in identical order. All 18 RandomRange immediate upper bounds also match in native order. All 789 original floating literal references match the candidate values and native access order. All 37 x87 float-to-int calls load the corresponding character or local-effect position axis in original order. This does not certify branch-level equivalence, COFF relocation targets, function byte identity or full-game integration. Do not register this prototype as complete or add it to accepted exact ledgers."
 }

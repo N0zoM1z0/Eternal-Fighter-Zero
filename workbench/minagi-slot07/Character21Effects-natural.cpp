@@ -4576,20 +4576,14 @@ effects[effectIndex].frame <= 7 &&
             field3254[effectIndex] =
                  (unsigned int)(16000 < iVar7) * 0x28 + 0x50 + (unsigned int)(16000 < iVar8) * 0x14;
             field3154[effectIndex] = field3154[effectIndex] + 1;
-            iVar7 = std::rand();
-            dVar1 = (double)(16000 < iVar7) * 1.2;
-            iVar7 = std::rand();
-            dVar2 = (double)(16000 < iVar7) * 0.7;
-            iVar7 = std::rand();
+            dVar1 = (double)(16000 < std::rand()) * 1.2;
+            dVar2 = (double)(16000 < std::rand()) * 0.7;
             effects[effectIndex].vx =
-                 (double)(16000 < iVar7) * 1.7 + dVar2 + dVar1 + -1.8;
-            iVar7 = std::rand();
-            dVar1 = (double)(16000 < iVar7) * 0.6;
-            iVar7 = std::rand();
-            dVar2 = (double)(16000 < iVar7) * 0.9;
-            iVar7 = std::rand();
+                 (double)(16000 < std::rand()) * 1.7 + dVar2 + dVar1 + -1.8;
+            dVar1 = (double)(16000 < std::rand()) * 0.6;
+            dVar2 = (double)(16000 < std::rand()) * 0.9;
             effects[effectIndex].vy =
-                 -1.2 - ((double)(16000 < iVar7) * 1.4 + dVar2 + dVar1);
+                 -1.2 - ((double)(16000 < std::rand()) * 1.4 + dVar2 + dVar1);
           }
           effects[effectIndex].vy =
                effects[effectIndex].vy + 0.05;
@@ -4628,17 +4622,13 @@ effects[effectIndex].frame <= 7 &&
             iVar7 = std::rand();
             iVar8 = std::rand();
             dVar1 = (double)(16000 < iVar8) * 0.5;
-            iVar8 = std::rand();
             effects[effectIndex].vx =
-                 (double)(16000 < iVar8) * 1.5 + dVar1 + (double)(16000 < iVar7) +
+                 (double)(16000 < std::rand()) * 1.5 + dVar1 + (double)(16000 < iVar7) +
                  -1.5;
-            iVar7 = std::rand();
-            dVar1 = (double)(16000 < iVar7) * 0.5;
-            iVar7 = std::rand();
-            dVar2 = (double)(16000 < iVar7) * 0.8;
-            iVar7 = std::rand();
+            dVar1 = (double)(16000 < std::rand()) * 0.5;
+            dVar2 = (double)(16000 < std::rand()) * 0.8;
             effects[effectIndex].vy =
-                 -1.0 - ((double)(16000 < iVar7) * 1.2 + dVar2 + dVar1);
+                 -1.0 - ((double)(16000 < std::rand()) * 1.2 + dVar2 + dVar1);
           }
           effects[effectIndex].vy =
                effects[effectIndex].vy + 0.03;

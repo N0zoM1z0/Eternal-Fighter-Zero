@@ -90,6 +90,44 @@ def ordered_call_sites(code: bytes, name: str, original_address: int = 0):
     return direct,virtual
 
 
+def ordered_random_bounds(code: bytes, name: str,
+                          rng_calls: list[tuple[int,int]],
+                          original_address: int = 0) -> list[int]:
+    """Confirm native RandomRange upper bounds in direct-call order.
+
+    Each of the original and candidate 18 call sites pushes an immediate
+    upper bound, then lower bound zero, before an ECX=this and E8 call.
+    Resolve bounds from instruction boundaries, not arbitrary byte patterns.
+    """
+    binary=ROOT/'.analysis/probes/minagi-slot07'/f'{name}-rng-bounds.bin'
+    binary.parent.mkdir(parents=True,exist_ok=True)
+    binary.write_bytes(code)
+    asm=subprocess.run([
+        'objdump','-w','-z','-D','-b','binary','-m','i386','-Mintel',
+        f'--adjust-vma={original_address}',str(binary)
+    ],text=True,capture_output=True,check=True).stdout
+    rows=[]
+    for line in asm.splitlines():
+        m=re.match(r'^\s*([0-9a-f]+):\s+((?:[0-9a-f]{2}\s+)+)\s+(.+)',line)
+        if m:rows.append((int(m.group(1),16)-original_address,m.group(3).strip()))
+    row_indices={offset:i for i,(offset,_asm) in enumerate(rows)}
+    limits=[]
+    for offset,target in rng_calls:
+        if target!=0x004108A0 or offset not in row_indices:
+            raise AssertionError(('unknown native RNG call',name,offset,target))
+        i=row_indices[offset]
+        if not rows[i][1].startswith('call '):
+            raise AssertionError(('random site is not a real E8',name,offset))
+        pushes=[]
+        for _at,operation in rows[max(0,i-12):i]:
+            match=re.fullmatch(r'push\s+(0x[0-9a-f]+|[0-9]+)',operation)
+            if match: pushes.append(int(match.group(1),0))
+        if len(pushes)<2 or pushes[-1]!=0:
+            raise AssertionError(('unable to bind native RNG arguments',name,offset,pushes))
+        limits.append(pushes[-2])
+    return limits
+
+
 def ordered_ftol_sources(code: bytes, name: str, ftol_calls: list[tuple[int,int]],
                          original_address: int = 0) -> list[str]:
     """Trace each x87 float-to-int's actual operand, not only its call site.
@@ -247,6 +285,25 @@ def main():
         raise AssertionError(('unbound candidate direct call sites',
                               candidate_direct,candidate_bound_calls))
 
+    # The 18 native RandomRange calls must use the same immediate bounds
+    # in exactly the same source/codegen order, not merely call the same
+    # function 18 times. This detects silent changes to gameplay RNG draws.
+    native_rng_calls=[row for row in original_direct if row[1]==0x004108A0]
+    candidate_rng_calls=[row for row in candidate_bound_calls if row[1]==0x004108A0]
+    if len(native_rng_calls)!=18 or len(candidate_rng_calls)!=18:
+        raise AssertionError(('Minagi RNG direct calls missing',
+                              len(native_rng_calls),len(candidate_rng_calls)))
+    native_rng_limits=ordered_random_bounds(
+        native,'original',native_rng_calls,ORIGINAL_START)
+    candidate_rng_limits=ordered_random_bounds(
+        candidate,'candidate',candidate_rng_calls)
+    if native_rng_limits!=candidate_rng_limits:
+        raise AssertionError(('Minagi RandomRange argument order changed',
+                              native_rng_limits,candidate_rng_limits))
+    native_rng_limit_hash=hashlib.sha256(
+        json.dumps(native_rng_limits,separators=(',',':')).encode()
+    ).hexdigest()
+
     # Stronger semantic binding: all 37 __ftol2 conversions must read
     # the same x/y source field in the same call order as the native PE.
     native_ftol_calls=[item for item in original_direct if item[1]==0x007783B8]
@@ -307,6 +364,8 @@ def main():
             'ordered_ftol2_source_sha256':ftol_fields_digest,
             'distinct_floating_literal_values':len(original_histogram),
             'floating_literal_histogram_sha256':histogram_hash,
+            'ordered_random_range_upper_bounds':native_rng_limits,
+            'ordered_random_range_upper_bounds_sha256':native_rng_limit_hash,
             'ordered_direct_helper_targets':[hex(address)
                                              for _,address in original_direct],
             'ordered_virtual_slots':[hex(slot) for _,slot in original_virtual]
@@ -336,6 +395,8 @@ def main():
             'floating_literal_histogram_sha256':histogram_hash,
             'direct_helper_calls_match_original':True,
             'all_94_direct_helper_calls_match_in_order':True,
+            'all_18_random_range_upper_bounds_in_native_order':True,
+            'ordered_random_range_upper_bounds_sha256':native_rng_limit_hash,
             'all_42_virtual_emit_remove_calls_match_in_order':True,
             'virtual_effect_emits':sum(slot==0x24 for _,slot in candidate_virtual),
             'virtual_effect_removals':sum(slot==0x28 for _,slot in candidate_virtual),
@@ -351,7 +412,8 @@ def main():
             'All 68 distinct native effect types are represented in a complete '
             'typed C++ Slot07 candidate, and pinned VC7.1 compilation reproduces '
             'all ten classes of direct helper call in identical order, plus the '
-            '42 virtual emit/remove calls in identical order. All 789 original '
+            '42 virtual emit/remove calls in identical order. All 18 RandomRange '
+            'immediate upper bounds also match in native order. All 789 original '
             'floating literal references match the candidate values and native '
             'access order. All 37 x87 float-to-int calls load the corresponding '
             'character or local-effect position axis in original order. This '
@@ -369,6 +431,7 @@ def main():
         'size_delta':len(candidate)-ORIGINAL_SIZE,
         'cases':len(ids),
         'direct_call_sites':sum(expected_counts.values()),
+        'random_range_bounds_in_native_order':len(candidate_rng_limits),
         'ordered_virtual_calls':len(candidate_virtual),
         'ftol2_position_sources_in_order':len(candidate_ftol_fields),
         'relocations':len(relocations),
