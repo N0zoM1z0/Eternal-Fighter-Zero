@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "authority": "Full original EFZ Scene10::Step 400-byte natural-C++ VC7.1 exact result",
+  "method": "One selected original-PE COFF comparison including 10 explicit independently reviewed original target relocations; no full replay",
+  "owner": "Scene10 staff-roll timing, music, player input and transition state",
+  "original_extent": {
+    "address": "0x007759F0",
+    "exclusive_end": "0x00775B80",
+    "bytes": 400
+  },
+  "behavior": "First-frame music and fade-in, 0.5 initial time step; button-A/B/C/D from either player requests early end; 0.3 frame time steps, expiration at 2800, fade-out and music release, exit to scene 0.",
+  "source_contains_inline_asm_or_padding": false,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 400,
+      "matched_bytes": 400,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original PE 0x007759FC Scene10::Step __real@0000000000000000 operand",
+          "addend": 0
+        },
+        {
+          "offset": 40,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Original PE 0x00775A18 Scene10::Step ?LoadMusic@Context@@QAEXG@Z operand",
+          "addend": 0
+        },
+        {
+          "offset": 67,
+          "target": 7708192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+          "evidence": "Original PE 0x00775A33 Scene10::Step ?FadeIn@Scene@@QAEXPAEE@Z operand",
+          "addend": 0
+        },
+        {
+          "offset": 82,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "Original PE 0x00775A42 Scene10::Step __real@3fe0000000000000 operand",
+          "addend": 0
+        },
+        {
+          "offset": 113,
+          "target": 7903440,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a5e00000000000",
+          "evidence": "Original PE 0x00775A61 Scene10::Step __real@40a5e00000000000 operand",
+          "addend": 0
+        },
+        {
+          "offset": 159,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "Original PE 0x00775A8F Scene10::Step ?FadeOut@Scene@@QAEXPAEEHH@Z operand",
+          "addend": 0
+        },
+        {
+          "offset": 170,
+          "target": 4221456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseMusic@Context@@QAEXXZ",
+          "evidence": "Original PE 0x00775A9A Scene10::Step ?ReleaseMusic@Context@@QAEXXZ operand",
+          "addend": 0
+        },
+        {
+          "offset": 179,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original PE 0x00775AA3 Scene10::Step __real@0000000000000000 operand",
+          "addend": 0
+        },
+        {
+          "offset": 216,
+          "target": 4220304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PollInput@Context@@QAEXXZ",
+          "evidence": "Original PE 0x00775AC8 Scene10::Step ?PollInput@Context@@QAEXXZ operand",
+          "addend": 0
+        },
+        {
+          "offset": 371,
+          "target": 7893744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fd3333333333333",
+          "evidence": "Original PE 0x00775B63 Scene10::Step __real@3fd3333333333333 operand",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d30ba831e8c01162475f692f2b0173ce1d38df9b9084cab97f43857f0c66a6e3",
+      "target_extent_sha256": "d30ba831e8c01162475f692f2b0173ce1d38df9b9084cab97f43857f0c66a6e3",
+      "unit": "scene10-step",
+      "symbol": "?Step@Scene10@@UAEEXZ",
+      "target_address": "0x007759F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "5c59b084f529d354938e59ddd3ea1b7b7e21ba9dbff356530e157c0a04d36d4c",
+      "object_sha256": "08bee948819f310b4b6e98e2e1500b0ff2683f0ef905fd76390bdcaf047692a4",
+      "source_sha256": "874eb922271a21a2edc3d23c9bfcc2b1eafe3824825cb5bb077d83a2d37fa34f",
+      "dependencies": {
+        "src/Engine.h": "17c7b8ac42108bfebcbfdd34bebf296ea198a6a2fd8a72e3bba3d2b2ded7b8be",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "de0f885d7cbea933646af3c90629e23994b97af8ed7a11ad295fe2a1d397ea8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "27d111d4172e30bcdf688844ab26f7e1377d1da866102f557db3ed7ded3b2292",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

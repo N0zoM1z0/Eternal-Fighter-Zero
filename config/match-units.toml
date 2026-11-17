@@ -166335,3 +166335,83 @@ type = "DIR32"
 symbol = "??_7Scene10@@6B@"
 target = 0x007898c0
 evidence = "Original PE 0x007759AC scene10-destructor operand: ??_7Scene10@@6B@"
+
+[units.scene10-step]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene10Step.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene10-step/Scene10Step.obj"
+symbol = "?Step@Scene10@@UAEEXZ"
+target_address = 0x007759f0
+size = 400
+
+[[units.scene10-step.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Original PE 0x007759FC Scene10::Step __real@0000000000000000 operand"
+
+[[units.scene10-step.relocations]]
+offset = 40
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Original PE 0x00775A18 Scene10::Step ?LoadMusic@Context@@QAEXG@Z operand"
+
+[[units.scene10-step.relocations]]
+offset = 67
+type = "REL32"
+symbol = "?FadeIn@Scene@@QAEXPAEE@Z"
+target = 0x00759e20
+evidence = "Original PE 0x00775A33 Scene10::Step ?FadeIn@Scene@@QAEXPAEE@Z operand"
+
+[[units.scene10-step.relocations]]
+offset = 82
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "Original PE 0x00775A42 Scene10::Step __real@3fe0000000000000 operand"
+
+[[units.scene10-step.relocations]]
+offset = 113
+type = "DIR32"
+symbol = "__real@40a5e00000000000"
+target = 0x007898d0
+evidence = "Original PE 0x00775A61 Scene10::Step __real@40a5e00000000000 operand"
+
+[[units.scene10-step.relocations]]
+offset = 159
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "Original PE 0x00775A8F Scene10::Step ?FadeOut@Scene@@QAEXPAEEHH@Z operand"
+
+[[units.scene10-step.relocations]]
+offset = 170
+type = "REL32"
+symbol = "?ReleaseMusic@Context@@QAEXXZ"
+target = 0x00406a10
+evidence = "Original PE 0x00775A9A Scene10::Step ?ReleaseMusic@Context@@QAEXXZ operand"
+
+[[units.scene10-step.relocations]]
+offset = 179
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Original PE 0x00775AA3 Scene10::Step __real@0000000000000000 operand"
+
+[[units.scene10-step.relocations]]
+offset = 216
+type = "REL32"
+symbol = "?PollInput@Context@@QAEXXZ"
+target = 0x00406590
+evidence = "Original PE 0x00775AC8 Scene10::Step ?PollInput@Context@@QAEXXZ operand"
+
+[[units.scene10-step.relocations]]
+offset = 371
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872f0
+evidence = "Original PE 0x00775B63 Scene10::Step __real@3fd3333333333333 operand"
