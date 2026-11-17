@@ -1156,14 +1156,14 @@
       "target_address": "0x00407D10",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "9684496eea28ef6da16ca76e0976c478b440ddc318b39432c3be7f7b6588ceb0",
-      "object_sha256": "7eb763a89a9c2a6ef55ac34006503c391f7d5edb098df2a55cb82a0b96ec9c7b",
+      "object_sha256": "e6839a48cfebde550a26beebd2260e03b36ef82769fcc2560a316c9507313e93",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
         "src/Engine.h": "dd776e47b9051f76a63b644fe340c97c5905708a7972eb56db45015f03c5a4ab",
         "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "e107e4c70ed86048a0c7871b45a3976201965702dc4d2a9252c890d743eef0a6",
+      "units_manifest_sha256": "d939db221e598073844fa9fe6af0ba0c4373d4fe7ccfee17524bacea81647b75",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "1c2c0e74e1174e276910ae3b4f4d5bc2c1e5b2fd3eea345399f25601352b89c0",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1183,14 +1183,14 @@
       "target_address": "0x0040BE20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "9684496eea28ef6da16ca76e0976c478b440ddc318b39432c3be7f7b6588ceb0",
-      "object_sha256": "acac716381af01515d900499d8decf425c4ea8a033195f226c30066e025c50b7",
+      "object_sha256": "7f2d576059d70f9d2fa0b635334d6746d2f2d77666cde599d64069975cc979ac",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
         "src/Engine.h": "dd776e47b9051f76a63b644fe340c97c5905708a7972eb56db45015f03c5a4ab",
         "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "e107e4c70ed86048a0c7871b45a3976201965702dc4d2a9252c890d743eef0a6",
+      "units_manifest_sha256": "d939db221e598073844fa9fe6af0ba0c4373d4fe7ccfee17524bacea81647b75",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "b96a927e30ff0ce829463f49a413e1047f08b389eb24452df346663943ae6c56",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1210,14 +1210,14 @@
       "target_address": "0x0040BF20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "9684496eea28ef6da16ca76e0976c478b440ddc318b39432c3be7f7b6588ceb0",
-      "object_sha256": "c2aa647c1f3b699c77673f08cbdbc23a9d4642ed5d3dfb1cce76b1e09d63c2cd",
+      "object_sha256": "ae5c2a74c1e3fafcc5455f36803cf8cfd5ab30d98ca171d24726461f4adaa9f3",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
         "src/Engine.h": "dd776e47b9051f76a63b644fe340c97c5905708a7972eb56db45015f03c5a4ab",
         "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "e107e4c70ed86048a0c7871b45a3976201965702dc4d2a9252c890d743eef0a6",
+      "units_manifest_sha256": "d939db221e598073844fa9fe6af0ba0c4373d4fe7ccfee17524bacea81647b75",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "83c83974a7232b982f38d7bd626ceea3965ba67e5c739ab73bba53d13053e157",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1251,5 +1251,5 @@
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "Selected 28 native PE comparisons; current Scene6 and Input headers. All selected complete functions strict Exact; no full cold replay"
+  "latest_selected_replay": "29 selected exact Video, Scene and Minagi owners after Scene6 preview resource layout, not full cold replay."
 }
