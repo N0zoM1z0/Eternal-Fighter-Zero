@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status": "minagi-slot05-typed-natural-cpp-cpu-boss-prototype-not-exact",
+  "authority": "provisional-native-vtable-and-pinned-compiler-local-evidence",
+  "original": {
+    "address": "0x5aea20",
+    "vtable_entry": "0x788954",
+    "bytes": 17127,
+    "sha256": "ea4e3fa39130f20466df13242af07f438881ed71726a7190492671150cad2699",
+    "direct_call_sites": 111,
+    "direct_call_targets": {
+      "0x40ff70": 2,
+      "0x4108a0": 108,
+      "0x77842d": 1
+    },
+    "static_floating_literal_refs": 207,
+    "static_floating_literal_histogram_sha256": "45c84dea93b4edb1238ad2a6919964bcb56942df746a74c37cd64a1abd886cc6"
+  },
+  "candidate": {
+    "source": "workbench/minagi-slot05/Character21Cpu-natural.cpp",
+    "source_sha256": "3da90ae143191b7ab45a163464c32e498e1e7b57f5a673201957fbcd7edc4f1c",
+    "object": "build/minagi-slot05/Character21Cpu-natural.obj",
+    "function_body_sha256": "47ff8d4076a1cd4d2aa31619ed06fc870bed37f7d7113426ba9e49199052d07b",
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+    "compiler_flags": [
+      "/Od",
+      "/G6",
+      "/MT",
+      "/Gy",
+      "/W3"
+    ],
+    "bytes": 17875,
+    "native_size_delta": 748,
+    "coff_relocations": 318,
+    "direct_call_sites": 111,
+    "direct_call_targets": {
+      "0x40ff70": 2,
+      "0x4108a0": 108,
+      "0x77842d": 1
+    },
+    "direct_calls_in_original_order": 107,
+    "direct_calls_out_of_original_order": 4,
+    "static_floating_literal_refs": 207,
+    "static_floating_literals_values_match_native": true,
+    "static_floating_literals_in_original_order": 27,
+    "static_floating_literals_out_of_original_order": 180,
+    "static_floating_literal_histogram_sha256": "45c84dea93b4edb1238ad2a6919964bcb56942df746a74c37cd64a1abd886cc6"
+  },
+  "source_contains_inline_asm_or_padding": false,
+  "strict_function_exact": false,
+  "strict_whole_owner_exact": false,
+  "qualification": "This is a full natural-C++ CPU decision candidate, with 111 native external helper calls matched by target multiplicity and 207 x87 static floating references matched by IEEE-754 value and count. Some native/candidate call and literal reference order differs; code size, instruction identity, side-effect order, and full branch equivalence remain unproven. This source stays outside accepted Exact and implemented-function ledgers."
+}
