@@ -1356,53 +1356,51 @@ void Character21::Slot05()
                         return;
                       }
                     }
-                    if (cpuMoveRightFrames < 1) {
-                      if (cpuMoveLeftFrames < 1) {
-                        randomRoll = RandomRange(0,100);
-                        if ((randomRoll < 0x32) && (forwardSeparation < 120.0)) {
-                          if (facing == '\x01') {
-                            randomValue = RandomRange(0,200);
-                            cpuMoveLeftFrames = (randomValue & 0xffff) + 0x3c;
-                          }
-                          else {
-                            randomValue = RandomRange(0,200);
-                            cpuMoveRightFrames = (randomValue & 0xffff) + 0x3c;
-                          }
-                        }
-                        randomRoll = RandomRange(0,100);
-                        if (randomRoll < 0x32) {
-                          if (facing == '\x01') {
-                            randomValue = RandomRange(0,200);
-                            cpuMoveRightFrames = (randomValue & 0xffff) + 0x3c;
-                          }
-                          else {
-                            randomValue = RandomRange(0,200);
-                            cpuMoveLeftFrames = (randomValue & 0xffff) + 0x3c;
-                          }
-                        }
-                        else if (facing == -1) {
-                          randomValue = RandomRange(0,200);
-                          cpuMoveRightFrames = (randomValue & 0xffff) + 0x3c;
-                        }
-                        else {
-                          randomValue = RandomRange(0,200);
-                          cpuMoveLeftFrames = (randomValue & 0xffff) + 0x3c;
-                        }
-                      }
-                      else {
-                        wallCollision = CollisionSide();
-                        if ((wallCollision != '\0') && (0xf < cpuMoveLeftFrames)) {
-                          cpuMoveLeftFrames = 0xf;
-                        }
-                        inputX = 0xff;
-                      }
-                    }
-                    else {
+                    if (cpuMoveRightFrames > 0) {
                       wallCollision = CollisionSide();
                       if ((wallCollision != '\0') && (0xf < cpuMoveRightFrames)) {
                         cpuMoveRightFrames = 0xf;
                       }
                       inputX = 1;
+                      return;
+                    }
+                    if (cpuMoveLeftFrames > 0) {
+                      wallCollision = CollisionSide();
+                      if ((wallCollision != '\0') && (0xf < cpuMoveLeftFrames)) {
+                        cpuMoveLeftFrames = 0xf;
+                      }
+                      inputX = 0xff;
+                      return;
+                    }
+                    randomRoll = RandomRange(0,100);
+                    if ((randomRoll < 0x32) && (forwardSeparation < 120.0)) {
+                      if (facing == '\x01') {
+                        randomValue = RandomRange(0,200);
+                        cpuMoveLeftFrames = (randomValue & 0xffff) + 0x3c;
+                      }
+                      else {
+                        randomValue = RandomRange(0,200);
+                        cpuMoveRightFrames = (randomValue & 0xffff) + 0x3c;
+                      }
+                    }
+                    randomRoll = RandomRange(0,100);
+                    if (randomRoll < 0x32) {
+                      if (facing == '\x01') {
+                        randomValue = RandomRange(0,200);
+                        cpuMoveRightFrames = (randomValue & 0xffff) + 0x3c;
+                      }
+                      else {
+                        randomValue = RandomRange(0,200);
+                        cpuMoveLeftFrames = (randomValue & 0xffff) + 0x3c;
+                      }
+                    }
+                    else if (facing == -1) {
+                      randomValue = RandomRange(0,200);
+                      cpuMoveRightFrames = (randomValue & 0xffff) + 0x3c;
+                    }
+                    else {
+                      randomValue = RandomRange(0,200);
+                      cpuMoveLeftFrames = (randomValue & 0xffff) + 0x3c;
                     }
                   }
                 }
