@@ -30,7 +30,7 @@ void Character19::Slot05()
   if (field314c < 0) {
     field314c = 0;
   }
-  if ((0x31 < field0008) && (field0008 < 0xa1)) {
+  if (((unsigned short)field0008 >= 0x32) && (field0008 < 0xa1)) {
     field314c = 0xb4;
   }
   if (field3150 < 0) {
@@ -313,8 +313,8 @@ void Character19::Slot05()
       }
 
         if ((((positionY == 0.0) && (field0008 < 4)) &&
-            (0x31 < (*opponentSlot)->field0008)) &&
-           (((*opponentSlot)->field0008 < 0x96 && (field3114 == 0)
+            ((unsigned short)(*opponentSlot)->field0008 >= 0x32)) &&
+           (((unsigned short)(*opponentSlot)->field0008 <= 0x95 && (field3114 == 0)
             ))) {
           if ((((*opponentSlot)->positionY < 0.0) &&
               ((distance.vertical < 100.0 && (distance.forward < 130.0)))) &&
@@ -346,7 +346,7 @@ void Character19::Slot05()
             }
           }
         }
-        if (((0 < field3114) && (0x31 < field0008)) &&
+        if (((0 < field3114) && ((unsigned short)field0008 >= 0x32)) &&
            (field0008 < 0x9e)) {
           field3114 = 0;
         }
@@ -1198,25 +1198,24 @@ kanna_state11_deeper:
                   }
                 }
               }
-              if ((0x31 < field0008) ||
-                 (((((*opponentSlot)->field0008 < 0x96 ||
-                    (0x9b < (*opponentSlot)->field0008)) &&
-                   (((*opponentSlot)->field0008 < 0x32 ||
-                    (0x3a < (*opponentSlot)->field0008)))) ||
+              if (((unsigned short)field0008 >= 0x32) ||
+                 (((((unsigned short)(*opponentSlot)->field0008 <= 0x95 ||
+                    ((unsigned short)(*opponentSlot)->field0008 >= 0x9c)) &&
+                   (((unsigned short)(*opponentSlot)->field0008 <= 0x31 ||
+                    ((unsigned short)(*opponentSlot)->field0008 >= 0x3b)))) ||
                   (((positionY != 0.0 ||
                     (
                     (float)(unsigned short)RandomRange(0,5000) >=
                     4.0f * field00a8 * field00a8 * field00a8)) ||
                    (field314c != 0)))))) {
-                if ((((0x31 < field0008) ||
-                     (0x31 < (*opponentSlot)->field0008)) ||
-                    (distance.forward <= 80.0)) ||
-                   (((120.0 <= distance.forward ||
-                     (
-                     (float)(unsigned short)RandomRange(0,10000) >=
-                     field00a8 * field00a8 * field00a8)) ||
-                    ((positionX <= 150.0 ||
-                     (490.0 <= positionX)))))) {
+                if (((unsigned short)field0008 >= 0x32) ||
+                    ((unsigned short)(*opponentSlot)->field0008 >= 0x32) ||
+                    !(distance.forward > 80.0) ||
+                    !(distance.forward < 120.0) ||
+                    ((float)(unsigned short)RandomRange(0,10000) >=
+                     field00a8 * field00a8 * field00a8) ||
+                    !(positionX > 150.0) ||
+                    !(positionX < 490.0)) {
                   if (((field0008 == 9) || (field0008 == 10)) ||
                      ((0xd < field0008 && (field0008 < 0x15)))) {
                     if (distance.forward > 100.0) {
