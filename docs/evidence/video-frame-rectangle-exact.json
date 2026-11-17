@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "authority": "complete original PE 485-byte function identity under typed native VC7.1 C++ codegen",
+  "method": "selected normal COFF compiler unit and whole native 0x0040B110 extent comparison, no full cold replay",
+  "owner": "Video::FrameRectangle",
+  "source": "src/VideoFrameRectangle.cpp",
+  "original_boundary": {
+    "address": "0x0040B110",
+    "exclusive_end": "0x0040B2F5",
+    "size": 485,
+    "native_instructions": 125,
+    "stack_frame_bytes": 136,
+    "complete_original_virtual_dispatched_calls": [
+      "IDirectDrawSurface::Lock +0x64",
+      "IDirectDrawSurface::Unlock +0x80"
+    ]
+  },
+  "behavior": "Clamp both rectangle endpoints to the native 320x240 surface, reject reversed rectangles, lock 8-bit back buffer, render horizontal and vertical one-pixel borders by pitch, unlock and report DirectDraw surface-lost result",
+  "key_source_recovery": "Grouped width,height,pixels into semantically real PixelSpan local structure and recovered native last-column address expression",
+  "source_contains_inline_assembly_or_padding": false,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 485,
+      "matched_bytes": 485,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "281bab4624b98bd4b78637c635e9fe40b33b76a892a2c98eec4d8ecddae524ae",
+      "target_extent_sha256": "281bab4624b98bd4b78637c635e9fe40b33b76a892a2c98eec4d8ecddae524ae",
+      "unit": "video-frame-rectangle",
+      "symbol": "?FrameRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+      "target_address": "0x0040B110",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
+      "object_sha256": "16cf60486dce05e513b0a825658ef5861bf1c11de1d4f9000e6f7890354af94b",
+      "source_sha256": "42cfdb73bda1d85fefc7941c3844f0d4c3ca2fbede1c353f7919dfdc3b0a45e7",
+      "dependencies": {
+        "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
+        "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c9e03410ab3db4737b40db4c70f36d03a6b3dd6c0c6744845e1f36f7c3e8f540",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9f3ef37c8555c7b50682870b150c8df6e03b6fbaf04eb646e007b691e75453ff",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

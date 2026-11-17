@@ -527,3 +527,4 @@ address,end,size,status,evidence
 0x0075D580,0x0075D65B,219,reviewed,docs/evidence/scene6-settings-preview-exact.json
 0x0075D350,0x0075D3FB,171,reviewed,docs/evidence/scene6-keyboard-exact.json
 0x0075D260,0x0075D34C,236,reviewed,docs/evidence/scene6-config-number-exact.json
+0x0040B110,0x0040B2F5,485,reviewed,docs/evidence/video-frame-rectangle-exact.json

@@ -165799,3 +165799,12 @@ type = "REL32"
 symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
 target = 0x00409a90
 evidence = "original native PE 0x0075D31F direct Video::DrawSurface call from complete 236-byte owner"
+[units.video-frame-rectangle]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/VideoFrameRectangle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/video-frame-rectangle/VideoFrameRectangle.obj"
+symbol = "?FrameRectangle@Video@@QAEHUSurfaceRect@@E@Z"
+target_address = 0x0040b110
+size = 485

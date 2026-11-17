@@ -96,7 +96,7 @@ address,origin,status,evidence
 0x0040A7B0,unknown,unreviewed,
 0x0040AAE0,unknown,unreviewed,
 0x0040AE10,unknown,unreviewed,
-0x0040B110,unknown,unreviewed,
+0x0040B110,authored,reviewed,docs/evidence/video-frame-rectangle-exact.json
 0x0040B300,unknown,unreviewed,
 0x0040B440,unknown,unreviewed,
 0x0040B5E0,authored,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
