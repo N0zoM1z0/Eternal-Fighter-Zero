@@ -560,8 +560,8 @@ address,origin,status,evidence
 0x0075D400,unknown,unreviewed,
 0x0075D580,unknown,unreviewed,
 0x0075D660,unknown,unreviewed,
-0x0075D8D0,unknown,unreviewed,
-0x0075D970,unknown,unreviewed,
+0x0075D8D0,authored,reviewed,docs/evidence/scene5-palette-fades-exact.json
+0x0075D970,authored,reviewed,docs/evidence/scene5-palette-fades-exact.json
 0x0075DA30,unknown,unreviewed,
 0x0075DB70,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
 0x0075DD50,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control

@@ -165480,3 +165480,86 @@ type = "REL32"
 symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
 target = 0x0040F170
 evidence = "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD4E8 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive."
+
+[units.scene5-fade-config-palette]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene5PaletteFade.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene5-fade-config-palette/Scene5PaletteFade.obj"
+symbol = "?FadeConfigPalette@Scene5@@QAEXE@Z"
+target_address = 0x0075d8d0
+size = 146
+
+[[units.scene5-fade-config-palette.relocations]]
+offset = 11
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original PE 0075D8D9 indirect WINMM timeGetTime import, verified native instruction"
+
+[[units.scene5-fade-config-palette.relocations]]
+offset = 87
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "original PE 0075D926 direct call to reviewed Video::DarkenPalette"
+
+[[units.scene5-fade-config-palette.relocations]]
+offset = 93
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original PE 0075D92B indirect WINMM timeGetTime import, verified native instruction"
+
+[[units.scene5-fade-config-palette.relocations]]
+offset = 119
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original PE 0075D945 indirect WINMM timeGetTime import, verified native instruction"
+
+[units.scene5-fade-config-palette-in]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene5PaletteFade.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene5-fade-config-palette-in/Scene5PaletteFade.obj"
+symbol = "?FadeConfigPaletteIn@Scene5@@QAEXE@Z"
+target_address = 0x0075d970
+size = 181
+
+[[units.scene5-fade-config-palette-in.relocations]]
+offset = 11
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "native PE 0075D979 WINMM import call; complete decoded function"
+
+[[units.scene5-fade-config-palette-in.relocations]]
+offset = 85
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "native PE 0075D9C5 first Video::DarkenPalette call"
+
+[[units.scene5-fade-config-palette-in.relocations]]
+offset = 119
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "native PE 0075D9E7 second Video::DarkenPalette call"
+
+[[units.scene5-fade-config-palette-in.relocations]]
+offset = 125
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "native PE 0075D9ED WINMM import call; loop timing"
+
+[[units.scene5-fade-config-palette-in.relocations]]
+offset = 151
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "native PE 0075DA07 WINMM import call; frame clock reset"

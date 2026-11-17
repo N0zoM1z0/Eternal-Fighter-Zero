@@ -521,3 +521,5 @@ address,end,size,status,evidence
 0x00703D40,0x00706A80,11584,reviewed,docs/evidence/character-02-slot04-exact.json; original Character02 vtable slot 4 at 0x00788EC0 selects the complete native owner and RET 0x00706A7F
 0x005AD550,0x005AEA12,5314,reviewed,docs/evidence/character-21-slot02-exact.json; original Minagi Character21 vtable slot 2 at 0x00788948 binds complete native owner [0x005AD550,0x005AEA12) and RET 0x005AEA11; following alignment excluded
 0x005AA3F0,0x005AD4F9,12553,reviewed,docs/evidence/character-21-slot04-exact.json; original Minagi vtable slot4 0x00788950 selects full native C++ action owner [0x005AA3F0,0x005AD4F9) ending RET 0x005AD4F8; seven subsequent CC alignment bytes excluded
+0x0075D8D0,0x0075D962,146,reviewed,docs/evidence/scene5-palette-fades-exact.json
+0x0075D970,0x0075DA25,181,reviewed,docs/evidence/scene5-palette-fades-exact.json
