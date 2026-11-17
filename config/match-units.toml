@@ -171149,3 +171149,398 @@ object = "build/match-units/character-19-slot02/Character19Commands.obj"
 symbol = "?Slot02@Character19@@UAEXXZ"
 target_address = 0x00677e60
 size = 3528
+
+[units.character-19-slot04]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character19Action.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-19-slot04/Character19Action.obj"
+symbol = "?Slot04@Character19@@UAEXXZ"
+target_address = 0x006763c0
+size = 6725
+
+[[units.character-19-slot04.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical original EFZ PE operand at 0x00676447, independently reviewed target 0x00787C30"
+
+[[units.character-19-slot04.relocations]]
+offset = 297
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x006764E9, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 318
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x006764FE, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 474
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x0067659A, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 599
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00676617, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 666
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x0067665A, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 835
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00676703, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 1048
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x006767D8, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 1112
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00676818, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 1287
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x006768C7, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 1335
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical original EFZ PE operand at 0x006768F7, independently reviewed target 0x00787C30"
+
+[[units.character-19-slot04.relocations]]
+offset = 1419
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x0067694B, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 1544
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x006769C8, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 1651
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00676A33, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 1775
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00676AAF, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 1867
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00676B0B, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 1991
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00676B87, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 2039
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical original EFZ PE operand at 0x00676BB7, independently reviewed target 0x00787C30"
+
+[[units.character-19-slot04.relocations]]
+offset = 2123
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00676C0B, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 2248
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00676C88, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 2370
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00676D02, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 2494
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00676D7E, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 2536
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00676DA8, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 2711
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00676E57, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 2753
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00676E81, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 2928
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00676F30, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 2970
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00676F5A, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 3145
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00677009, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 3193
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical original EFZ PE operand at 0x00677039, independently reviewed target 0x00787C30"
+
+[[units.character-19-slot04.relocations]]
+offset = 3277
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x0067708D, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 3402
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x0067710A, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 3628
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x006771EC, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 3649
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00677201, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 3728
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00677250, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 3844
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x006772C4, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 3874
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x006772E2, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 4064
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "Canonical original EFZ PE operand at 0x006773A0, independently reviewed target 0x0040E630"
+
+[[units.character-19-slot04.relocations]]
+offset = 4150
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x006773F6, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 4180
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00677414, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 4367
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "Canonical original EFZ PE operand at 0x006774CF, independently reviewed target 0x0040E630"
+
+[[units.character-19-slot04.relocations]]
+offset = 4464
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00677530, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 4633
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x006775D9, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 4858
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x006776BA, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 5083
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x0067779B, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 5158
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x006777E6, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 5327
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x0067788F, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 5553
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00677971, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 5733
+type = "DIR32"
+symbol = "__real@c05b800000000000"
+target = 0x00788c30
+evidence = "Canonical original EFZ PE operand at 0x00677A25, independently reviewed target 0x00788C30"
+
+[[units.character-19-slot04.relocations]]
+offset = 5763
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "Canonical original EFZ PE operand at 0x00677A43, independently reviewed target 0x00787E98"
+
+[[units.character-19-slot04.relocations]]
+offset = 5841
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00677A91, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 6017
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00677B41, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 6092
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical original EFZ PE operand at 0x00677B8C, independently reviewed target 0x007872F8"
+
+[[units.character-19-slot04.relocations]]
+offset = 6261
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00677C35, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 6487
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00677D17, independently reviewed target 0x0040F170"
+
+[[units.character-19-slot04.relocations]]
+offset = 6708
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "Canonical original EFZ PE operand at 0x00677DF4, independently reviewed target 0x0040F170"

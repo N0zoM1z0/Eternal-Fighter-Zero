@@ -5,6 +5,17 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
+## Kanna (Character19) action-dispatch boss accepted — 2026-11-17
+
+`Character19::Slot04` at `0x006763C0` is now strict Exact: **6,725/6,725
+bytes, 55 independently original-bound COFF relocations, zero differences**.
+Natural source: `src/Character19Action.cpp`. This 6.7 KB owner handles Kanna's
+command-to-state dispatch, meter/health-gated supers, directional close-range
+states and three buffered-action groups. Recovered the signed-byte timer,
+3000-meter and >=200/ >=2 state gates, x87 negative-position branch form, and
+facing-relative direction product. All 55 operands resolve to six reviewed
+native PE targets. No ASM, padding, code patch or all-unit cold replay.
+
 ## Kanna (Character19) command recognizer accepted — 2026-11-17
 
 `Character19::Slot02` at `0x00677E60` is strict Exact: **3,528/3,528
