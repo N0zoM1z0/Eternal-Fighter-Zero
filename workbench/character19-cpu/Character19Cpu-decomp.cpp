@@ -898,10 +898,9 @@ kanna_state11_deeper:
                   if (699 < field3110) {
                     field3114 = 1;
 
-                    if ((unsigned short)RandomRange(0,4) != 0) {
-                      return;
+                    if ((unsigned short)RandomRange(0,4) == 0) {
+                      field3114 = 3;
                     }
-                    field3114 = 3;
                     return;
                   }
                 }

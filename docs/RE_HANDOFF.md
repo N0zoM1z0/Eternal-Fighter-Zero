@@ -1623,14 +1623,14 @@ updates two adjacent signed 32-bit cooldowns at object offsets `+0x314C` and
 instead of an opaque eight-byte region; the class layout and offsets are
 unchanged. The complete 17,176-byte CPU function now has a natural C++ workbench
 reconstruction at `workbench/character19-cpu/Character19Cpu-decomp.cpp`.
-The selected VC7.1 `/Od` candidate is 17,100 bytes (76 bytes shorter than
+The selected VC7.1 `/Od` candidate is 17,095 bytes (81 bytes shorter than
 native), with the original `0xCC` stack frame and matching entry prologue.
 The large AI/state branches and neutral-input fallback are present. The final
 state-range gate is reconstructed as the native-order early command return,
 with exact signed-byte and opponent-state boundaries. Native x87 unordered-compare paths are preserved with explicit negated
 relational tests where the original branches treat unordered values as true;
 `positionY == 0.0` remains a true equality test.
-Targeted instruction alignment reports 4,123 of 4,440 candidate instructions
+Targeted instruction alignment reports 4,124 of 4,439 candidate instructions
 aligned with native order/semantics. The source also restores native unsigned
 RNG zero-extension, signed air-action-lock `<= 0` tests, and an explicit short-circuit/early-exit reconstruction of the state-0x11
 aerial decision tree with unordered-aware x87 relational forms. The final
@@ -1647,7 +1647,8 @@ The state-0x11 inverse vertical-decision predicate now preserves the `20`,
 positive `RandomRange(0, 100) < 0x32` guard before selecting state 6. The 0xcb follow-up now uses the positive
 `distance.forward < 120` branch so unordered x87 values keep native command 0x1f. The grounded movement branch
 now compares opponent and player Y in the native operand order. Repeated opponent-state tiers now use the native
-`0x31 < state < 0x9c` bounds, and the state-0x21 lock threshold is `<= 0x3c`.
+`0x31 < state < 0x9c` bounds, and the state-0x21 lock threshold is `<= 0x3c`. The state-0xcf random follow-up now uses the native positive
+`RandomRange(0, 4) == 0` branch and shared exit.
 The state-0x11 grounded-input fallback now returns through the owner exit before
 the later state checks, as in the native control flow. The candidate remains **not Exact** and
 has not been promoted into `src/` or the match ledger. Rebuild only this owner
