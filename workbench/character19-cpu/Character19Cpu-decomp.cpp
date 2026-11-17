@@ -749,10 +749,9 @@ kanna_state11_deeper:
                     inputX = facing;
                     inputY = 0xff;
 
-                    if (0x31 < (unsigned short)RandomRange(0,100)) {
-                      return;
+                    if ((unsigned short)RandomRange(0,100) < 0x32) {
+                      field3114 = 6;
                     }
-                    field3114 = 6;
                     return;
                   }
                   if ((((*opponentSlot)->positionY < 0.0) &&

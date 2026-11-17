@@ -1623,14 +1623,14 @@ updates two adjacent signed 32-bit cooldowns at object offsets `+0x314C` and
 instead of an opaque eight-byte region; the class layout and offsets are
 unchanged. The complete 17,176-byte CPU function now has a natural C++ workbench
 reconstruction at `workbench/character19-cpu/Character19Cpu-decomp.cpp`.
-The selected VC7.1 `/Od` candidate is 17,110 bytes (66 bytes shorter than
+The selected VC7.1 `/Od` candidate is 17,105 bytes (71 bytes shorter than
 native), with the original `0xCC` stack frame and matching entry prologue.
 The large AI/state branches and neutral-input fallback are present. The final
 state-range gate is reconstructed as the native-order early command return,
 with exact signed-byte and opponent-state boundaries. Native x87 unordered-compare paths are preserved with explicit negated
 relational tests where the original branches treat unordered values as true;
 `positionY == 0.0` remains a true equality test.
-Targeted instruction alignment reports 4,079 of 4,442 candidate instructions
+Targeted instruction alignment reports 4,080 of 4,441 candidate instructions
 aligned with native order/semantics. The source also restores native unsigned
 RNG zero-extension, signed air-action-lock `<= 0` tests, and an explicit short-circuit/early-exit reconstruction of the state-0x11
 aerial decision tree with unordered-aware x87 relational forms. The final
@@ -1643,7 +1643,8 @@ boundary comparisons. State-0x11 aerial gates now use nested positive
 short-circuit predicates that preserve native x87 branch polarity. The
 vertical-position tests retain the native operand order and unordered cases.
 The state-0x11 inverse vertical-decision predicate now preserves the `20`,
-`84`, and `90` thresholds and its native early-exit path.
+`84`, and `90` thresholds and its native early-exit path. The state-0x21 cancel-roll branch now uses the native
+positive `RandomRange(0, 100) < 0x32` guard before selecting state 6.
 The state-0x11 grounded-input fallback now returns through the owner exit before
 the later state checks, as in the native control flow. The candidate remains **not Exact** and
 has not been promoted into `src/` or the match ledger. Rebuild only this owner
