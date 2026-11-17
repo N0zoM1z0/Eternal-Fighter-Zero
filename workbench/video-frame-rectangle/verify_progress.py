@@ -75,6 +75,19 @@ def main():
               if kind=='equal')
     if equal<124:
         raise AssertionError(('frame-rectangle codegen structure unexpectedly diverged',equal))
+    # This source-level successful-lock scope restored the native 136-byte
+    # stack frame, full 485-byte function extent and all 125 instruction
+    # boundaries. Eleven remaining instruction-byte differences are local
+    # slot assignments and one addressing-register selection.
+    native_frame=int.from_bytes(native[5:9],'little')
+    candidate_frame=int.from_bytes(candidate[5:9],'little')
+    differing_offsets=[i for i,(x,y) in enumerate(zip(native,candidate)) if x!=y]
+    if native_frame!=0x88 or candidate_frame!=native_frame or len(candidate)!=SIZE:
+        raise AssertionError(('full frame and function extent regression',
+                              native_frame,candidate_frame,len(candidate)))
+    if len(differing_offsets)!=11 or len(candidate)!=len(native):
+        raise AssertionError(('unexpected frame rectangle machine-code differences',
+                              len(differing_offsets),differing_offsets))
     if native==candidate:
         raise AssertionError('Unexpected Exact: promote through authored formal oracle first')
     receipt=json.loads(OBJECT.with_suffix('.build.json').read_text())
@@ -86,12 +99,16 @@ def main():
       'original':{'address':hex(ADDRESS),'function_bytes':SIZE,
                   'sha256':hashlib.sha256(native).hexdigest(),
                   'instructions':len(nr),
+                  'stack_frame_bytes':native_frame,
                   'ordered_directdraw_vtable_calls':['Lock +0x64','Unlock +0x80']},
       'candidate':{'source':str(SOURCE.relative_to(ROOT)),'source_sha256':sha256(SOURCE),
                    'function_bytes':len(candidate),
                    'native_size_delta':len(candidate)-SIZE,
                    'sha256':hashlib.sha256(candidate).hexdigest(),
                    'instructions':len(cr),
+                   'stack_frame_bytes':candidate_frame,
+                   'different_instruction_bytes':len(differing_offsets),
+                   'first_different_offsets':[hex(i) for i in differing_offsets],
                    'normalized_instruction_matches':equal,
                    'coff_relocations':len(relocs),
                    'ordered_directdraw_vtable_calls':['Lock +0x64','Unlock +0x80'],
@@ -103,7 +120,9 @@ def main():
         'reconstructed as ordinary C++. All 125 instructions are decoded and '
         '124 match structurally after hiding stack slots, literal widths and '
         'branches; the remaining source-level expression and stack layout '
-        'are not yet proven identical. No authored Exact ledger claim.'
+        'are not yet proven identical. Remaining 11 byte differences are '
+        'ten local slot assignments and one addressing register encoding. '
+        'No authored Exact ledger claim.'
       )
     }
     EVIDENCE.parent.mkdir(parents=True,exist_ok=True)
@@ -111,6 +130,8 @@ def main():
     print(json.dumps({'original_bytes':SIZE,'candidate_bytes':len(candidate),
           'size_delta':len(candidate)-SIZE,'native_instructions':len(nr),
           'candidate_instructions':len(cr),'normalized_matches':equal,
+          'stack_frame_bytes':candidate_frame,
+          'different_bytes':len(differing_offsets),
           'exact':False},indent=2))
 
 if __name__=='__main__':main()

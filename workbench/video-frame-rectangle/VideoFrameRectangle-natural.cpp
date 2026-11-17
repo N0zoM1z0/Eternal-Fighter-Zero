@@ -7,7 +7,6 @@
 
 int Video::FrameRectangle(SurfaceRect rectangle, unsigned char color)
 {
-    int i;
     HRESULT result;
     int width;
     int height;
@@ -37,15 +36,18 @@ int Video::FrameRectangle(SurfaceRect rectangle, unsigned char color)
         return 1;
     }
 
-    pixels = static_cast<unsigned char *>(description.lpSurface);
-    for (i = 0; i < width; ++i) {
-        pixels[i] = color;
-        pixels[(height - 1) * description.lPitch + i] = color;
+    {
+        int rowOrColumn;
+        pixels = static_cast<unsigned char *>(description.lpSurface);
+        for (rowOrColumn = 0; rowOrColumn < width; ++rowOrColumn) {
+            pixels[rowOrColumn] = color;
+            pixels[(height - 1) * description.lPitch + rowOrColumn] = color;
+        }
+        for (rowOrColumn = 0; rowOrColumn < height; ++rowOrColumn) {
+            pixels[rowOrColumn * description.lPitch] = color;
+            pixels[(width - 1) + rowOrColumn * description.lPitch] = color;
+        }
+        result = backSurface->Unlock(description.lpSurface);
     }
-    for (i = 0; i < height; ++i) {
-        pixels[i * description.lPitch] = color;
-        pixels[(width - 1) + i * description.lPitch] = color;
-    }
-    result = backSurface->Unlock(description.lpSurface);
     return 1;
 }

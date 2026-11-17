@@ -6,6 +6,7 @@
     "function_bytes": 485,
     "sha256": "281bab4624b98bd4b78637c635e9fe40b33b76a892a2c98eec4d8ecddae524ae",
     "instructions": 125,
+    "stack_frame_bytes": 136,
     "ordered_directdraw_vtable_calls": [
       "Lock +0x64",
       "Unlock +0x80"
@@ -13,11 +14,26 @@
   },
   "candidate": {
     "source": "workbench/video-frame-rectangle/VideoFrameRectangle-natural.cpp",
-    "source_sha256": "b94541b0cb9928e71e7a8d0519760f41a91a818b7b7cd7c6cae24acb86c8be71",
-    "function_bytes": 476,
-    "native_size_delta": -9,
-    "sha256": "e45a638c531e3ef1dd997e5fb873573c886d38eb75c68124c5809af7a45c0bf1",
+    "source_sha256": "d4546df1233e4ff001cd02bdf5d08c122eee456d4341d51176c02f2a55422c3e",
+    "function_bytes": 485,
+    "native_size_delta": 0,
+    "sha256": "167533bf7f15aae3dc979ca0dac7c13b99233f8e6b5885eb615caacdf1d5feca",
     "instructions": 125,
+    "stack_frame_bytes": 136,
+    "different_instruction_bytes": 11,
+    "first_different_offsets": [
+      "0xad",
+      "0xb6",
+      "0x110",
+      "0x134",
+      "0x139",
+      "0x147",
+      "0x157",
+      "0x183",
+      "0x192",
+      "0x1a8",
+      "0x1ae"
+    ],
     "normalized_instruction_matches": 124,
     "coff_relocations": 0,
     "ordered_directdraw_vtable_calls": [
@@ -28,5 +44,5 @@
   },
   "source_contains_inline_assembly_or_padding": false,
   "strict_function_exact": false,
-  "qualification": "Native source-level clipping and pitch-aware 8-bit border writes are reconstructed as ordinary C++. All 125 instructions are decoded and 124 match structurally after hiding stack slots, literal widths and branches; the remaining source-level expression and stack layout are not yet proven identical. No authored Exact ledger claim."
+  "qualification": "Native source-level clipping and pitch-aware 8-bit border writes are reconstructed as ordinary C++. All 125 instructions are decoded and 124 match structurally after hiding stack slots, literal widths and branches; the remaining source-level expression and stack layout are not yet proven identical. Remaining 11 byte differences are ten local slot assignments and one addressing register encoding. No authored Exact ledger claim."
 }
