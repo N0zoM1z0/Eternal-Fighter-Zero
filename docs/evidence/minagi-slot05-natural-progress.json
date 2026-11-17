@@ -19,9 +19,9 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot05/Character21Cpu-natural.cpp",
-    "source_sha256": "31e07f80aa020a635a11c07d023a18547608155d3eaa529f027ab9cec6522215",
+    "source_sha256": "5f0c9a641e76434c866a7f95ff2bea22c7ea3178361541200aa2e577236abc0a",
     "object": "build/minagi-slot05/Character21Cpu-natural.obj",
-    "function_body_sha256": "06dd313bdcff0661c1bac976a0d10a07e06503e7262f044ffca15f76ecffa007",
+    "function_body_sha256": "c27d307f1988b7c7f9dbf6fab5f34acc6f9cc4de34bbd0a940c036374161dcd6",
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
     "compiler_flags": [
       "/Od",
@@ -30,8 +30,8 @@
       "/Gy",
       "/W3"
     ],
-    "bytes": 17890,
-    "native_size_delta": 763,
+    "bytes": 17573,
+    "native_size_delta": 446,
     "coff_relocations": 318,
     "direct_call_sites": 111,
     "direct_call_targets": {
@@ -42,6 +42,8 @@
     "direct_calls_in_original_order": 111,
     "direct_calls_out_of_original_order": 0,
     "direct_calls_with_rng_bounds_in_original_order": 111,
+    "direct_calls_with_rng_bounds_out_of_original_order": 0,
+    "direct_calls_and_rng_bounds_multiset_match_original": true,
     "direct_call_with_rng_bound_order_sha256": "94044a2bffc2500de24449393fa722b7f6e77ed8cf461e41b8fd045f80350a17",
     "static_floating_literal_refs": 207,
     "static_floating_literals_values_match_native": true,
@@ -52,5 +54,5 @@
   "source_contains_inline_asm_or_padding": false,
   "strict_function_exact": false,
   "strict_whole_owner_exact": false,
-  "qualification": "This is a full natural-C++ CPU decision candidate, with 111 native external helper calls matched by target multiplicity and 207 x87 static floating references matched by IEEE-754 value and count. All 111 helper targets, including all 108 RandomRange immediate bounds, are matched in original call order, as are all 207 floating literal values, widths, and reference order. Code size, instruction identity, side-effect order, and full branch equivalence remain unproven. This source stays outside accepted Exact and implemented-function ledgers."
+  "qualification": "This is a full natural-C++ CPU decision candidate, with 111 native external helper calls matched by target multiplicity and 207 x87 static floating references matched by IEEE-754 value and count. All 111 helper targets and all 108 RandomRange immediate bounds match the original in instruction order. All 207 original static floating references match value, width and order. The full code size, instruction identity, branch-specific side-effect ordering and branch equivalence remain unproven. This source stays outside accepted Exact and implemented-function ledgers."
 }
