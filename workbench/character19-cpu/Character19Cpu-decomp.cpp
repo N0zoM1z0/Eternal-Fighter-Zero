@@ -1203,7 +1203,7 @@ kanna_state11_deeper:
                   }
                 }
               }
-              if (((unsigned short)field0008 >= 0x32) ||
+              if (!(((unsigned short)field0008 >= 0x32) ||
                  (((((unsigned short)(*opponentSlot)->field0008 <= 0x95 ||
                     ((unsigned short)(*opponentSlot)->field0008 >= 0x9c)) &&
                    (((unsigned short)(*opponentSlot)->field0008 <= 0x31 ||
@@ -1212,15 +1212,22 @@ kanna_state11_deeper:
                     (
                     !((float)(unsigned short)RandomRange(0,5000) <
                       4.0f * field00a8 * field00a8 * field00a8))) ||
-                   (field314c != 0)))))) {
-                if (((unsigned short)field0008 >= 0x32) ||
+                   (field314c != 0))))))) {
+                recognizedCommand = (unsigned short)(facing == '\x01');
+                return;
+              }
+              if (!(((unsigned short)field0008 >= 0x32) ||
                     ((unsigned short)(*opponentSlot)->field0008 >= 0x32) ||
                     !(distance.forward > 80.0) ||
                     !(distance.forward < 120.0) ||
                     (!((float)(unsigned short)RandomRange(0,10000) <
                        field00a8 * field00a8 * field00a8)) ||
                     !(positionX > 150.0) ||
-                    !(positionX < 490.0)) {
+                    !(positionX < 490.0))) {
+                recognizedCommand = (unsigned short)(facing != '\x01');
+                return;
+              }
+
                   if (((field0008 == 9) || (field0008 == 10)) ||
                      ((0xd < field0008 && (field0008 < 0x15)))) {
                     if (distance.forward > 100.0) {
@@ -1340,14 +1347,7 @@ kanna_state11_deeper:
                       }
                     }
                   }
-                }
-                else {
-                  recognizedCommand = (unsigned short)(facing != '\x01');
-                }
-              }
-              else {
-                recognizedCommand = (unsigned short)(facing == '\x01');
-              }
+
             }
           }
         }
