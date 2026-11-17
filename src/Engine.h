@@ -683,9 +683,12 @@ class Scene6 : public Scene {
     unsigned char unknown_0430[0x43c - sizeof(Scene)];
     IUnknown *previewSurface; // native offset 0x43C
     IUnknown *numberSurface;  // native offset 0x440
-    unsigned char unknown_0444[0x449 - 0x444];
+    IUnknown *numberBackdrop; // native offset 0x444
+    unsigned char unknown_0448;
     char previewSelection;    // native offset 0x449
-    unsigned char unknown_044a[0x450 - 0x44a];
+    unsigned char unknown_044a[0x44d - 0x44a];
+    char numberBackdropPhase; // native offset 0x44D
+    unsigned char unknown_044e[0x450 - 0x44e];
     CharacterStatistics previewStatistics; // native offset 0x450
     char previewNames[24][30]; // native offset 0x470, 30-byte name stride
     unsigned char previewColorKey; // 0x740
@@ -693,7 +696,8 @@ class Scene6 : public Scene {
     unsigned char unknown_0742[0x750 - 0x742];
     int settingsPulseOffset;
     int settingsSlideOffset;
-    unsigned char unknown_0758[0x760 - 0x758];
+    int numberBackdropIndex; // native offset 0x758
+    unsigned char unknown_075c[0x760 - 0x75c];
 public:
     Scene6(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
     virtual void Slot0();
@@ -706,6 +710,7 @@ public:
     void AnimateSettingsPreview();
     void ReloadSelectedPreview();
     void DrawConfigNumber(int x, int y, unsigned int value);
+    void TransitionNumberBackdrop();
 };
 DECLARE_SCENE(Scene7, 0x448)
 DECLARE_SCENE(Scene8, 0x758)

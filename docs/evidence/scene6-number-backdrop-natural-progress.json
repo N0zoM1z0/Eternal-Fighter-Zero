@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "status": "scene6-timed-background-preview-natural-cpp-prototype-not-exact",
+  "original": {
+    "address": "0x75d660",
+    "extent_bytes": 615,
+    "sha256": "a9d018e5f82d18ba287d637e9ce562db4b38f4f8433e529ea52069a780107ef4",
+    "resource_string_addresses": [
+      "0x789580",
+      "0x789590",
+      "0x789594",
+      "0x789598",
+      "0x7895a0"
+    ],
+    "named_relocations": [
+      {
+        "symbol": "___security_cookie",
+        "native_pe_target": "0x78f050"
+      },
+      {
+        "symbol": "__imp__timeGetTime@0",
+        "native_pe_target": "0x7871e0"
+      },
+      {
+        "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
+        "native_pe_target": "0x40be20"
+      },
+      {
+        "symbol": "__imp__timeGetTime@0",
+        "native_pe_target": "0x7871e0"
+      },
+      {
+        "symbol": "__imp__timeGetTime@0",
+        "native_pe_target": "0x7871e0"
+      },
+      {
+        "symbol": "?scene6BackdropNumberPrefix@@3QBDB",
+        "native_pe_target": "0x789580"
+      },
+      {
+        "symbol": "_strcpy",
+        "native_pe_target": "0x778080"
+      },
+      {
+        "symbol": "?scene6BackdropHundredsZero@@3QBDB",
+        "native_pe_target": "0x789590"
+      },
+      {
+        "symbol": "_strcat",
+        "native_pe_target": "0x778090"
+      },
+      {
+        "symbol": "?scene6BackdropTensZero@@3QBDB",
+        "native_pe_target": "0x789594"
+      },
+      {
+        "symbol": "_strcat",
+        "native_pe_target": "0x778090"
+      },
+      {
+        "symbol": "__itoa",
+        "native_pe_target": "0x777f55"
+      },
+      {
+        "symbol": "_strcat",
+        "native_pe_target": "0x778090"
+      },
+      {
+        "symbol": "?scene6BackdropPackedExtension@@3QBDB",
+        "native_pe_target": "0x789598"
+      },
+      {
+        "symbol": "_strcat",
+        "native_pe_target": "0x778090"
+      },
+      {
+        "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+        "native_pe_target": "0x406db0"
+      },
+      {
+        "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+        "native_pe_target": "0x40b760"
+      },
+      {
+        "symbol": "?scene6BackdropBitmapExtension@@3QBDB",
+        "native_pe_target": "0x7895a0"
+      },
+      {
+        "symbol": "_strcat",
+        "native_pe_target": "0x778090"
+      },
+      {
+        "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+        "native_pe_target": "0x408d00"
+      },
+      {
+        "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+        "native_pe_target": "0x40b640"
+      },
+      {
+        "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
+        "native_pe_target": "0x40be20"
+      },
+      {
+        "symbol": "__imp__timeGetTime@0",
+        "native_pe_target": "0x7871e0"
+      },
+      {
+        "symbol": "__imp__timeGetTime@0",
+        "native_pe_target": "0x7871e0"
+      },
+      {
+        "symbol": "@__security_check_cookie@4",
+        "native_pe_target": "0x7781dc"
+      }
+    ]
+  },
+  "candidate": {
+    "source": "src/Scene6NumberBackdrop.cpp",
+    "resource_data": "src/Scene6BackdropPaths.cpp",
+    "source_sha256": "7e437164c1e7e23b2a4cf467ab1ca4c1e181cb8d1b1ddb65775a4f09ca09bd3f",
+    "source_resource_sha256": "b8a5f2b8aba1e424bce45259a8b9a00b331e55021b9462ca933234f22c742bc6",
+    "function_bytes": 615,
+    "native_size_delta": 0,
+    "native_bytes_matching_after_binding": 579,
+    "native_machine_differing_bytes": 36,
+    "reconstructed_local_scene_fields": [
+      "numberBackdrop@0x444",
+      "numberBackdropPhase@0x44d",
+      "numberBackdropIndex@0x758"
+    ],
+    "compiler_profile": "vc71-od-static-gs",
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+    "native_relocation_count": 25
+  },
+  "strict_function_exact": false,
+  "source_contains_inline_asm_or_padding": false,
+  "qualification": "Ordinary C++ recovers both 11-frame WINMM timed palette fades, three-digit filename from original PE strings, live IUnknown release, packed .dat and alternate .bmp asset loads and native 0x44D flag. The original 615-byte owner and all 25 relocation targets are bound; 36 byte-level differences remain in compiler-local stack positions and frame-lifetime codegen. Not promoted to authored Exact."
+}
