@@ -499,27 +499,37 @@ void Character19::Slot05()
             }
             else if (((field0008 == 0xd0) && (attackCollisionResult == 3)) &&
                     (5 < field000a)) {
-              if (!(distance.forward > 80.0)) goto kanna_state11_outer;
-              if (!(velocityX < 0.0)) goto kanna_state11_outer;
-              if (!((*opponentSlot)->positionY - positionY > -40.0)) goto kanna_state11_outer;
-              recognizedCommand = 10;
-              return;
+              if (distance.forward > 80.0) {
+                if (velocityX < 0.0) {
+                  if ((*opponentSlot)->positionY - positionY > -40.0) {
+                    recognizedCommand = 10;
+                    return;
+                  }
+                }
+              }
+              goto kanna_state11_outer;
 
 kanna_state11_outer:
-              if ((*opponentSlot)->airActionLockFrames >= 0x2d) goto kanna_state11_second;
-              if (airActionCount <= 0) goto kanna_state11_second;
-              if (!(distance.vertical < 40.0)) goto kanna_state11_second;
-              if (!((*opponentSlot)->positionY - positionY < 0.0)) goto kanna_state11_second;
-              recognizedCommand = 10;
-              return;
+              if ((*opponentSlot)->airActionLockFrames < 0x2d) {
+                if (airActionCount > 0) {
+                  if (distance.vertical < 40.0) {
+                    if ((*opponentSlot)->positionY - positionY < 0.0) {
+                      recognizedCommand = 10;
+                      return;
+                    }
+                  }
+                }
+              }
+              goto kanna_state11_second;
 
 kanna_state11_second:
-              if ((*opponentSlot)->airActionLockFrames >= 0x2d) goto kanna_state11_deeper;
-              if (velocityX >= 0.0) goto kanna_state11_pulse;
+              if ((*opponentSlot)->airActionLockFrames < 0x2d) {
+                if (velocityX >= 0.0) {
+                  buttonPulse[2] = 1;
+                  return;
+                }
+              }
               goto kanna_state11_deeper;
-kanna_state11_pulse:
-              buttonPulse[2] = 1;
-              return;
 kanna_state11_deeper:
               if ((((!(distance.vertical < 20.0)) ||
                    ((*opponentSlot)->positionY <= positionY)) &&
