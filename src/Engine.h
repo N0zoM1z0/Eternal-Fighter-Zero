@@ -677,18 +677,18 @@ public:
     void LoadCharacter(Secondary **, Secondary **, char, char);
 };
 class Scene3;
-class Scene5 : public Scene {
-    unsigned char unknown_0430[0x474 - sizeof(Scene)];
+DECLARE_SCENE(Scene5, 0x474)
+class Scene6 : public Scene {
+    unsigned char unknown_0430[0x760 - sizeof(Scene)];
 public:
-    Scene5(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
+    Scene6(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
     virtual void Slot0();
     virtual unsigned char Step();
     virtual void PollKeyboard();
-    // Original settings-scene palette fade (0x0075D8D0).
+    // Original settings-scene palette transitions (0x0075D8D0, 0x0075D970).
     void FadeConfigPalette(unsigned char);
     void FadeConfigPaletteIn(unsigned char);
 };
-DECLARE_SCENE(Scene6, 0x760)
 DECLARE_SCENE(Scene7, 0x448)
 DECLARE_SCENE(Scene8, 0x758)
 #undef DECLARE_SCENE
