@@ -2580,13 +2580,13 @@ void Character21::Slot07()
               field3254[effectIndex] = 0;
             }
             if (effects[effectIndex].y < 0.0) {
-              if (positionX <= effects[effectIndex].x) {
+              if (positionX > effects[effectIndex].x) {
                 effects[effectIndex].vx =
-                     (double)(int)(char)effects[effectIndex].flag0048 * -0.5;
+                     (double)(int)(char)effects[effectIndex].flag0048 * 0.5;
               }
               else {
                 effects[effectIndex].vx =
-                     (double)(int)(char)effects[effectIndex].flag0048 * 0.5;
+                     (double)(int)(char)effects[effectIndex].flag0048 * -0.5;
               }
             }
             if (((effects[effectIndex].frame == 0xb) &&
@@ -2662,13 +2662,13 @@ void Character21::Slot07()
               field3254[effectIndex] = 0;
             }
             if (effects[effectIndex].y < 0.0) {
-              if (positionX <= effects[effectIndex].x) {
+              if (positionX > effects[effectIndex].x) {
                 effects[effectIndex].vx =
-                     (double)(int)(char)effects[effectIndex].flag0048 * -0.5;
+                     (double)(int)(char)effects[effectIndex].flag0048 * 0.5;
               }
               else {
                 effects[effectIndex].vx =
-                     (double)(int)(char)effects[effectIndex].flag0048 * 0.5;
+                     (double)(int)(char)effects[effectIndex].flag0048 * -0.5;
               }
             }
             if (((effects[effectIndex].frame == 0xb) &&
@@ -2744,13 +2744,13 @@ void Character21::Slot07()
               field3254[effectIndex] = 0;
             }
             if (effects[effectIndex].y < 0.0) {
-              if (positionX <= effects[effectIndex].x) {
+              if (positionX > effects[effectIndex].x) {
                 effects[effectIndex].vx =
-                     (double)(int)(char)effects[effectIndex].flag0048 * -0.5;
+                     (double)(int)(char)effects[effectIndex].flag0048 * 0.5;
               }
               else {
                 effects[effectIndex].vx =
-                     (double)(int)(char)effects[effectIndex].flag0048 * 0.5;
+                     (double)(int)(char)effects[effectIndex].flag0048 * -0.5;
               }
             }
             if (((effects[effectIndex].frame == 0xb) &&
