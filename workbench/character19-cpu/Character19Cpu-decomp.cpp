@@ -482,7 +482,7 @@ void Character19::Slot05()
               field3114 = 0;
             }
 
-            if (((unsigned short)(unsigned short)RandomRange(0,200) == 1) && (meter == 3000)) {
+            if (((unsigned short)RandomRange(0,200) == 1) && (meter == 3000)) {
               recognizedCommand = 0x65;
             }
             else if (field0008 == 0xd1) {
