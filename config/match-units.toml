@@ -6306,6 +6306,17 @@ symbol = "?LightenPalette@Video@@QAEXPBEEEE@Z"
 target_address = 0x0040bf20
 size = 336
 
+
+[units.video-invert-palette]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/PaletteInvert.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/video-invert-palette/PaletteInvert.obj"
+symbol = "?InvertPalette@Video@@QAEXPBEEEE@Z"
+target_address = 0x0040c070
+size = 321
+
 [units.audio-set-volume]
 artifact_kind = "coff"
 profile = "vc71-od-static"

@@ -40,6 +40,7 @@ public:
     void BuildBlendTables(unsigned char *);
     void DarkenPalette(const unsigned char *, unsigned char, unsigned char, unsigned char);
     void LightenPalette(const unsigned char *, unsigned char, unsigned char, unsigned char);
+    void InvertPalette(const unsigned char *, unsigned char, unsigned char, unsigned char);
     int ApplyPalette(unsigned char *);
     int ApplyPaletteRange(unsigned char *, unsigned char, unsigned char);
     int ClearPaletteRGB(unsigned char *);

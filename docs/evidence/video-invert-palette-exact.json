@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "authority": "complete native function byte identity under reviewed original extent",
+  "method": "selected single Video::InvertPalette normal C++ VC7.1 /Od /G6 /MT /Gy /W3 build; compare entire 321-byte original PE target with linked COFF function and zero relocations; no full cold replay",
+  "boundary_review": {
+    "address": "0x0040C070",
+    "last_byte_inclusive": "0x0040C1B0",
+    "exclusive_end": "0x0040C1B1",
+    "size": 321,
+    "virtual_calls_in_order": [
+      "IDirectDrawPalette::GetEntries vtable +0x10",
+      "IDirectDrawPalette::SetEntries vtable +0x18"
+    ],
+    "semantic_owner": "Video::InvertPalette",
+    "origin": "authored gameplay/engine palette method",
+    "source_implementation": "src/PaletteInvert.cpp",
+    "reviewed_decompile_evidence": ".analysis/factory-native-ghidra/call-35yutqac/result.txt",
+    "source_behavior": "blend each R/G/B byte toward 255-value by amount/100; preserve alpha/reserved byte, 255-entry palette COM GetEntries/SetEntries"
+  },
+  "source_contains_inline_assembly_or_padding": false,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 321,
+      "matched_bytes": 321,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "21b06f0213e58283842154c6d1c105688de9bbc8c64aea2ceefe9b538229eb5d",
+      "target_extent_sha256": "21b06f0213e58283842154c6d1c105688de9bbc8c64aea2ceefe9b538229eb5d",
+      "unit": "video-invert-palette",
+      "symbol": "?InvertPalette@Video@@QAEXPBEEEE@Z",
+      "target_address": "0x0040C070",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "77fae8ea4f5306839ab105525a9ddbc3e4793a15e75206b379ea3f97f55441d3",
+      "object_sha256": "21b5dbede54394ce9f22f98590dcdbd384259b9b8fb8d448c33fbc54ed161342",
+      "source_sha256": "201cd69ac2ff34b78a492057b1fba69aa0708d4ea7270f9a8b2b0b48923d6b4a",
+      "dependencies": {
+        "src/Engine.h": "5e15d5673d409e85025beb21e438f0c80c1c625c44f9d0f3c4aa480f287382b7",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "05c0e1a47e03c10a402d2c4ab9d93c769204960d98729f82522e517d5d3bcb7a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c5b4b5ca69df79a32c38c93bcc94cf77c158668180cac3758dbd6d5d671b957d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
