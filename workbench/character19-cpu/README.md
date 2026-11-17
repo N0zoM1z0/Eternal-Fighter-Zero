@@ -6,18 +6,18 @@ reconstruction of the full decision owner, including the large state/command
 branches and the neutral-input fallback. It contains no inline assembly,
 synthetic padding, or placeholder function bodies.
 
-The current VC7.1 `/Od /G6 /MT /Gy` candidate is 17,152 bytes (24 bytes
+The current VC7.1 `/Od /G6 /MT /Gy` candidate is 17,138 bytes (38 bytes
 shorter than native) with the original `0xCC` stack frame and matching entry
 prologue. It is a strong work-in-progress, **not Exact**. The large guard/AI
 gate is expressed as a natural early command return, with signed-byte tests,
 exact opponent-state boundaries, unsigned RNG promotions, and signed
 air-action lock tests normalized to `<= 0` to recover native `TEST/JG`, and
 velocity-sign tests use the operand order emitted by the native x87 compare. Targeted
-instruction alignment reports 3,976 of 4,456 candidate instructions aligned
+instruction alignment reports 3,978 of 4,449 candidate instructions aligned
 with native order/semantics. The native x87 unordered-compare paths are preserved with explicit negated
 relational tests where the native branches treat unordered values as true;
 `positionY == 0.0` remains a true equality test.
-The state-0x11 aerial decision tree now has explicit native-order short-circuit
+The state-0x11 aerial decision tree now has explicit native-order nested short-circuit
 branches and early exits, with unordered-aware x87 relational expressions and
 exact signed/unsigned byte/word bounds. Remaining
 differences are concentrated in nested state branches, later RNG temporaries,
