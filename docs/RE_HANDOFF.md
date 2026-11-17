@@ -5,6 +5,14 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
+## Staff-roll virtual keyboard slot accepted — 2026-11-17
+
+`Scene10::PollKeyboard` at `0x00775D50` is Exact for all **11/11 bytes**
+using a natural C++ empty handler (`src/Scene10Keyboard.cpp`, zero COFF
+relocations). The original Scene10 vtable at `0x007898C0` has this function
+in its keyboard slot. The other four staff-roll functions were already Exact.
+No ASM, padding, or all-unit cold replay was used.
+
 ## Scene8 replay browser native owners accepted — 2026-11-17
 
 All eight reviewed Scene8 owners now have selected strict Exact receipts,
@@ -46,6 +54,15 @@ constructor/destructor/number/keyboard owners were rebuilt individually and
 remain Exact. No full cold replay or whole-program acceptance was attempted.
 The older 2026-11-16 handoff below still describes the open
 `Scene2::PrepareBattle` boss; it is not Exact.
+
+## PrepareBattle scale lowering experiments — 2026-11-17
+
+Nine additional equivalent natural C++ scale branches (reversed/plain
+if/else, ternaries, switch, two independent ifs and local doubles) were
+compiled in the isolated workbench. All kept 115 COFF relocations; compiled
+extents ranged from 4,031 to 4,090 bytes, not the canonical 4,029. The
+existing complete 4,029-byte candidate is unchanged at 87 differing code
+bytes / 37 runs and remains **not Exact**. See workbench/prepare-battle/README.md.
 
 ## Current handoff — 2026-11-16
 

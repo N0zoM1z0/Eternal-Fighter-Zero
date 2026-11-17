@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "authority": "Complete 11-byte EFZ PE identity from natural VC7.1 C++ (zero COFF relocation operands)",
+  "owner": "Scene10::PollKeyboard staff-roll empty virtual input slot",
+  "native_extent": {
+    "address": "0x00775D50",
+    "exclusive_end": "0x00775D5B",
+    "bytes": 11
+  },
+  "original_vtable": {
+    "base_address": "0x007898C0",
+    "slot0_target": "0x00775B80",
+    "step_target": "0x007759F0",
+    "keyboard_target": "0x00775D50"
+  },
+  "method": "Selected native /Od /G6 /MT /Gy /W3 compile and strict all-11-byte original PE comparison; original three-entry vtable checked separately; no ASM, padding or whole-repo cold replay",
+  "behavior": "Native Scene10 intentionally does not poll keyboard at this virtual entry; the normal C++ empty body retains the standard VC7.1 thiscall prologue and epilogue",
+  "natural_cpp_without_asm_or_code_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "scene10-keyboard",
+      "symbol": "?PollKeyboard@Scene10@@UAEXXZ",
+      "target_address": "0x00775D50",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "651fcaa927ee093754f7d40707fd987d3d9ff5a37caa4bbbeac3c61d18789ae6",
+      "object_sha256": "20f36eb8fa658d524ea8f3b57a7cbf83483e714d3bf8516be863bb0aef6de28c",
+      "source_sha256": "2c53aae09b21d57d35daeb4627ae01aa2b3638fc4df5b0fe13a09015aaa34152",
+      "dependencies": {
+        "src/Engine.h": "a508397d82be7c3411b924582bf4fb57715e51836603f4f233611c296582bc7b",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "8efa972a463ec9468474a42faab7b3cb58d74673fb7d805bf08ef85b4077cd4d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "622dd80a37275332f0b679403b37017eb839cad801fe6bec76f73c82f98ce641",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

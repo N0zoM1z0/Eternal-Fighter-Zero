@@ -169133,3 +169133,13 @@ type = "REL32"
 symbol = "?Present@Video@@QAEHXZ"
 target = 0x0040b5e0
 evidence = "Original EFZ PE 0x00770D6A operand: ?Present@Video@@QAEHXZ bound to 0x0040B5E0"
+
+[units.scene10-keyboard]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene10Keyboard.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene10-keyboard/Scene10Keyboard.obj"
+symbol = "?PollKeyboard@Scene10@@UAEXXZ"
+target_address = 0x00775d50
+size = 11

@@ -621,7 +621,7 @@ address,origin,status,evidence
 0x007759A0,authored,reviewed,docs/evidence/scene10-destructor-exact.json
 0x007759F0,authored,reviewed,docs/evidence/scene10-step-exact.json
 0x00775B80,authored,reviewed,docs/evidence/scene10-render-exact.json
-0x00775D50,unknown,unreviewed,
+0x00775D50,authored,reviewed,docs/evidence/scene10-keyboard-exact.json
 0x00775D60,authored,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
 0x00775F30,authored,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
 0x00775FB0,authored,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base

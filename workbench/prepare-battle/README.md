@@ -108,3 +108,15 @@ expression without a cast; (2) spelling the first virtual call as
 Both retained the 4,029-byte owner, all 115 relocations and the same 87-byte /
 37-run code mismatch. The original opaque `unsigned char *` field and call
 syntax are restored. Do not repeat these no-effect forms.
+
+## Focused source-level scale lowering sweep, 2026-11-17
+
+Nine additional source-level formulations of the stage-16 scale selection were
+compiled with pinned VC7.1, always as a *complete* `Scene2::PrepareBattle`
+owner with 115 COFF relocations. Plain/reversed `if/else` and explicit braces
+all yielded 4,031 bytes; `?:` versions yielded 4,036; a `switch` yielded
+4,042; a two-independent-if form yielded 4,047; a pair of local doubles
+yielded 4,090. None met the complete 4,029-byte original owner boundary.
+The current 4,029-byte default-first candidate is unchanged and still differs
+in 87 code bytes / 37 runs; do not grant Exact credit for these variants.
+Experiment receipt: ignored `.analysis/prepare-scale-hypotheses.json`.
