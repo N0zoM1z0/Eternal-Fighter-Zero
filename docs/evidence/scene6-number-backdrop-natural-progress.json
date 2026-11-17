@@ -118,12 +118,12 @@
   "candidate": {
     "source": "src/Scene6NumberBackdrop.cpp",
     "resource_data": "src/Scene6BackdropPaths.cpp",
-    "source_sha256": "7e437164c1e7e23b2a4cf467ab1ca4c1e181cb8d1b1ddb65775a4f09ca09bd3f",
+    "source_sha256": "d73089fbf35160b117fa9513bf0e13ac0b2a6a6488e48e17974aba5530e5a2bd",
     "source_resource_sha256": "b8a5f2b8aba1e424bce45259a8b9a00b331e55021b9462ca933234f22c742bc6",
     "function_bytes": 615,
     "native_size_delta": 0,
-    "native_bytes_matching_after_binding": 579,
-    "native_machine_differing_bytes": 36,
+    "native_bytes_matching_after_binding": 586,
+    "native_machine_differing_bytes": 29,
     "reconstructed_local_scene_fields": [
       "numberBackdrop@0x444",
       "numberBackdropPhase@0x44d",

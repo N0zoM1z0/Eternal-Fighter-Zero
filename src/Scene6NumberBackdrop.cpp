@@ -15,51 +15,53 @@ typedef char Scene6NumberBackdropLayoutCheck[(sizeof(Scene6) == 0x760) ? 1 : -1]
 
 void Scene6::TransitionNumberBackdrop()
 {
-    char filename[52];
     char decimalNumber[20];
-    struct AnimationClock {
-        DWORD lastTick;
+    DWORD lastTick;
+    // Frame phase, alternating wait, and selected resource path are updated
+    // within one logical transition operation.
+    struct TransitionFrame {
+        int frame;
         unsigned int alternateDelay;
-    } clock;
-    clock.lastTick = timeGetTime();
-    clock.alternateDelay = 0;
-    int frame;
-    for (frame = 10; frame >= 0; --frame) {
+        char filename[52];
+    } transition;
+    lastTick = timeGetTime();
+    transition.alternateDelay = 0;
+    for (transition.frame = 10; transition.frame >= 0; --transition.frame) {
         Slot0();
-        videoOwner->DarkenPalette(palette, 0, 255, frame * 10);
-        while (timeGetTime() - clock.lastTick <
-               static_cast<unsigned char>(16 - clock.alternateDelay)) {
+        videoOwner->DarkenPalette(palette, 0, 255, transition.frame * 10);
+        while (timeGetTime() - lastTick <
+               static_cast<unsigned char>(16 - transition.alternateDelay)) {
         }
-        clock.lastTick = timeGetTime();
-        clock.alternateDelay = (clock.alternateDelay == 0);
+        lastTick = timeGetTime();
+        transition.alternateDelay = (transition.alternateDelay == 0);
     }
 
-    std::strcpy(filename, scene6BackdropNumberPrefix);
-    if (numberBackdropIndex < 100) std::strcat(filename, scene6BackdropHundredsZero);
-    if (numberBackdropIndex < 10) std::strcat(filename, scene6BackdropTensZero);
+    std::strcpy(transition.filename, scene6BackdropNumberPrefix);
+    if (numberBackdropIndex < 100) std::strcat(transition.filename, scene6BackdropHundredsZero);
+    if (numberBackdropIndex < 10) std::strcat(transition.filename, scene6BackdropTensZero);
     _itoa(numberBackdropIndex, decimalNumber, 10);
-    std::strcat(filename, decimalNumber);
+    std::strcat(transition.filename, decimalNumber);
     if (numberBackdrop != 0) {
         numberBackdrop->Release();
         numberBackdrop = 0;
     }
     if (1) {
-        std::strcat(filename, scene6BackdropPackedExtension);
-        contextOwner->LoadObjectFile(&numberBackdrop, filename, 0, 1);
-        videoOwner->LoadPalette(palette, filename, 0, 1, 254);
+        std::strcat(transition.filename, scene6BackdropPackedExtension);
+        contextOwner->LoadObjectFile(&numberBackdrop, transition.filename, 0, 1);
+        videoOwner->LoadPalette(palette, transition.filename, 0, 1, 254);
     } else {
-        std::strcat(filename, scene6BackdropBitmapExtension);
-        videoOwner->LoadSurface(&numberBackdrop, filename, 1);
-        videoOwner->LoadBitmapPalette(palette, filename, 0, 1, 254);
+        std::strcat(transition.filename, scene6BackdropBitmapExtension);
+        videoOwner->LoadSurface(&numberBackdrop, transition.filename, 1);
+        videoOwner->LoadBitmapPalette(palette, transition.filename, 0, 1, 254);
     }
     numberBackdropPhase = 2;
-    for (frame = 0; frame <= 10; ++frame) {
+    for (transition.frame = 0; transition.frame <= 10; ++transition.frame) {
         Slot0();
-        videoOwner->DarkenPalette(palette, 0, 255, frame * 10);
-        while (timeGetTime() - clock.lastTick <
-               static_cast<unsigned char>(16 - clock.alternateDelay)) {
+        videoOwner->DarkenPalette(palette, 0, 255, transition.frame * 10);
+        while (timeGetTime() - lastTick <
+               static_cast<unsigned char>(16 - transition.alternateDelay)) {
         }
-        clock.lastTick = timeGetTime();
-        clock.alternateDelay = (clock.alternateDelay == 0);
+        lastTick = timeGetTime();
+        transition.alternateDelay = (transition.alternateDelay == 0);
     }
 }

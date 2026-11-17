@@ -53,10 +53,10 @@ def main():
             raise AssertionError(('non-natural C++ token',forbidden))
     for needed in (
         'void Scene6::TransitionNumberBackdrop()',
-        'frame = 10', 'frame >= 0','frame = 0','frame <= 10',
-        'clock.lastTick = timeGetTime()', 'clock.alternateDelay',
-        'std::strcat(filename, scene6BackdropPackedExtension)',
-        'std::strcat(filename, scene6BackdropBitmapExtension)',
+        'transition.frame = 10', 'transition.frame >= 0','transition.frame = 0','transition.frame <= 10',
+        'lastTick = timeGetTime()', 'transition.alternateDelay',
+        'std::strcat(transition.filename, scene6BackdropPackedExtension)',
+        'std::strcat(transition.filename, scene6BackdropBitmapExtension)',
         'numberBackdrop->Release()', 'videoOwner->DarkenPalette(',
         'contextOwner->LoadObjectFile(&numberBackdrop',
         'videoOwner->LoadBitmapPalette(', 'numberBackdropPhase = 2'):
@@ -76,7 +76,7 @@ def main():
         for r in rs
     ]
     report=complete_compare(c,native,rs,expected,NATIVE_VA)
-    if len(c)!=NATIVE_SIZE or report['difference_count']>36 or report['result']=='exact':
+    if len(c)!=NATIVE_SIZE or report['difference_count']>29 or report['result']=='exact':
         raise AssertionError(('unexpected native branch/body status',
                               len(c),report['difference_count'],report['result']))
     receipt=json.loads(OBJ.with_suffix('.build.json').read_text())
