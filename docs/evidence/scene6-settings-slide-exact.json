@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "authority": "complete original PE codegen identity, pinned VC7.1 COFF, explicit native relocations",
+  "method": "selected native 318-byte Scene6 menu slide unit only, no broad cold replay",
+  "source": "src/Scene6SettingsAnimation.cpp",
+  "owner": "Scene6 settings/options UI; real 0x760-byte scene with int screen slide offset at +0x754",
+  "source_contains_inline_assembly_or_padding": false,
+  "boundary_review": {
+    "address": "0x0075DA30",
+    "exclusive_end": "0x0075DB6E",
+    "size": 318,
+    "native_original_decompilation": "original Ghidra function context for 0x0075DA30",
+    "relative_data": {
+      "0x754": "Scene6::settingsSlideOffset"
+    },
+    "behavior": "Forward or backward frames 0..90 in steps of 5; cos(angle/57.29579143313326), signed short screen offset, WinMM alternating 16/15 ms frame delays",
+    "owner_size_asserted": 1888
+  },
+  "reports": [
+    {
+      "result": "exact",
+      "size": 318,
+      "matched_bytes": 318,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "native PE WINMM IAT call at 0x0075DA3B; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 76,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "native PE immutable double constant literal at 0x0075DA7C; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 87,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "native PE cos or x87 float-to-int call at 0x0075DA87; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 96,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "native PE immutable double constant literal at 0x0075DA90; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 102,
+          "target": 7898184,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4074000000000000",
+          "evidence": "native PE immutable double constant literal at 0x0075DA96; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 107,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "native PE cos or x87 float-to-int call at 0x0075DA9B; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 125,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "native PE WINMM IAT call at 0x0075DAAD; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 151,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "native PE WINMM IAT call at 0x0075DAC7; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 216,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "native PE immutable double constant literal at 0x0075DB08; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 227,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "native PE cos or x87 float-to-int call at 0x0075DB13; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 236,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "native PE immutable double constant literal at 0x0075DB1C; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 242,
+          "target": 7898184,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4074000000000000",
+          "evidence": "native PE immutable double constant literal at 0x0075DB22; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 247,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "native PE cos or x87 float-to-int call at 0x0075DB27; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 265,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "native PE WINMM IAT call at 0x0075DB39; original complete 0x0075DA30 extent",
+          "addend": 0
+        },
+        {
+          "offset": 291,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "native PE WINMM IAT call at 0x0075DB53; original complete 0x0075DA30 extent",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c58f435b507110ee21841290286b25b210fb8067885cc4114909322ab04aba69",
+      "target_extent_sha256": "c58f435b507110ee21841290286b25b210fb8067885cc4114909322ab04aba69",
+      "unit": "scene6-settings-slide",
+      "symbol": "?AnimateSettingsSlide@Scene6@@QAEXE@Z",
+      "target_address": "0x0075DA30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b10706e007a27b5a864841681e0f364d07493309b48479bc98a1296bd794c510",
+      "object_sha256": "ba1073b2d079ccf115878ad304cde2b9d893d992e5c5ab681ae5fa17481cee6c",
+      "source_sha256": "ef48ee70a718a8196cbf0d4e8f0a0d9f99566a3c8db55e110bfa110c2881bff9",
+      "dependencies": {
+        "src/Engine.h": "00cc6a6a1cb29f8f7d3306e30772b6fd7572c0659160b84220a2107b750402c7",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "150accf27a9ed347e2613bf3fe1b7acad1e3685c8f9c9d6dca17584c8ced1847",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ee2ba9817af3bca002be16c5ae80b2814f4ffd9c75191633affd85cde065c300",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

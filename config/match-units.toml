@@ -165563,3 +165563,118 @@ type = "DIR32"
 symbol = "__imp__timeGetTime@0"
 target = 0x007871e0
 evidence = "native PE 0075DA07 WINMM import call; frame clock reset"
+
+[units.scene6-settings-slide]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene6SettingsAnimation.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene6-settings-slide/Scene6SettingsAnimation.obj"
+symbol = "?AnimateSettingsSlide@Scene6@@QAEXE@Z"
+target_address = 0x0075da30
+size = 318
+
+[[units.scene6-settings-slide.relocations]]
+offset = 11
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "native PE WINMM IAT call at 0x0075DA3B; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 76
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "native PE immutable double constant literal at 0x0075DA7C; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 87
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "native PE cos or x87 float-to-int call at 0x0075DA87; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 96
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "native PE immutable double constant literal at 0x0075DA90; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 102
+type = "DIR32"
+symbol = "__real@4074000000000000"
+target = 0x00788448
+evidence = "native PE immutable double constant literal at 0x0075DA96; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 107
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "native PE cos or x87 float-to-int call at 0x0075DA9B; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 125
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "native PE WINMM IAT call at 0x0075DAAD; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 151
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "native PE WINMM IAT call at 0x0075DAC7; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 216
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "native PE immutable double constant literal at 0x0075DB08; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 227
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "native PE cos or x87 float-to-int call at 0x0075DB13; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 236
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "native PE immutable double constant literal at 0x0075DB1C; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 242
+type = "DIR32"
+symbol = "__real@4074000000000000"
+target = 0x00788448
+evidence = "native PE immutable double constant literal at 0x0075DB22; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 247
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "native PE cos or x87 float-to-int call at 0x0075DB27; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 265
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "native PE WINMM IAT call at 0x0075DB39; original complete 0x0075DA30 extent"
+
+[[units.scene6-settings-slide.relocations]]
+offset = 291
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "native PE WINMM IAT call at 0x0075DB53; original complete 0x0075DA30 extent"
