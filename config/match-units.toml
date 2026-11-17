@@ -8880,7 +8880,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 565
 type = "DIR32"
-symbol = "$L61510"
+symbol = "$L61536"
 target = 0x00776487
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -8978,49 +8978,49 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 1239
 type = "DIR32"
-symbol = "$L61461"
+symbol = "$L61487"
 target = 0x007761e9
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1243
 type = "DIR32"
-symbol = "$L61462"
+symbol = "$L61488"
 target = 0x00776268
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1247
 type = "DIR32"
-symbol = "$L61463"
+symbol = "$L61489"
 target = 0x007762e3
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1251
 type = "DIR32"
-symbol = "$L61464"
+symbol = "$L61490"
 target = 0x00776352
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1255
 type = "DIR32"
-symbol = "$L61465"
+symbol = "$L61491"
 target = 0x007763d1
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1259
 type = "DIR32"
-symbol = "$L61466"
+symbol = "$L61492"
 target = 0x00776432
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1263
 type = "DIR32"
-symbol = "$L61467"
+symbol = "$L61493"
 target = 0x0077645f
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -169650,3 +169650,482 @@ type = "REL32"
 symbol = "_strcpy"
 target = 0x00778080
 evidence = "Original EFZ PE 0x0075A392, independently checked _strcpy points to 0x00778080"
+
+[units.scene6-step]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene6Step.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/Scene6StepPaths.cpp"]
+object = "build/match-units/scene6-step/Scene6Step.obj"
+symbol = "?Step@Scene6@@UAEEXZ"
+target_address = 0x0075a4c0
+size = 3032
+code_size = 3000
+
+[[units.scene6-step.local_data]]
+offset = 3000
+size = 32
+kind = "switch-address-table"
+evidence = "Original EFZ .text 0x0075B078..0x0075B097 contains exactly eight DWORD native switch case targets, followed by eight CC aligners not included in owner"
+
+[[units.scene6-step.relocations]]
+offset = 102
+type = "DIR32"
+symbol = "?scene6StepMenuDat@@3QBDB"
+target = 0x0078947c
+evidence = "Original EFZ PE operand 0x0075A526, independently reviewed ?scene6StepMenuDat@@3QBDB destination 0x0078947C"
+
+[[units.scene6-step.relocations]]
+offset = 120
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "Original EFZ PE operand 0x0075A538, independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B760"
+
+[[units.scene6-step.relocations]]
+offset = 136
+type = "DIR32"
+symbol = "?scene6StepMenuBmp@@3QBDB"
+target = 0x00789494
+evidence = "Original EFZ PE operand 0x0075A548, independently reviewed ?scene6StepMenuBmp@@3QBDB destination 0x00789494"
+
+[[units.scene6-step.relocations]]
+offset = 154
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "Original EFZ PE operand 0x0075A55A, independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B640"
+
+[[units.scene6-step.relocations]]
+offset = 184
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Original EFZ PE operand 0x0075A578, independently reviewed ?LoadMusic@Context@@QAEXG@Z destination 0x004068B0"
+
+[[units.scene6-step.relocations]]
+offset = 199
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "Original EFZ PE operand 0x0075A587, independently reviewed ?LoadMusic@Context@@QAEXG@Z destination 0x004068B0"
+
+[[units.scene6-step.relocations]]
+offset = 216
+type = "REL32"
+symbol = "?FadeIn@Scene@@QAEXPAEE@Z"
+target = 0x00759e20
+evidence = "Original EFZ PE operand 0x0075A598, independently reviewed ?FadeIn@Scene@@QAEXPAEE@Z destination 0x00759E20"
+
+[[units.scene6-step.relocations]]
+offset = 249
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "Original EFZ PE operand 0x0075A5B9, independently reviewed ?FadeOut@Scene@@QAEXPAEEHH@Z destination 0x00759C90"
+
+[[units.scene6-step.relocations]]
+offset = 260
+type = "REL32"
+symbol = "?ReleaseMusic@Context@@QAEXXZ"
+target = 0x00406a10
+evidence = "Original EFZ PE operand 0x0075A5C4, independently reviewed ?ReleaseMusic@Context@@QAEXXZ destination 0x00406A10"
+
+[[units.scene6-step.relocations]]
+offset = 320
+type = "REL32"
+symbol = "?PollInput@Context@@QAEXXZ"
+target = 0x00406590
+evidence = "Original EFZ PE operand 0x0075A600, independently reviewed ?PollInput@Context@@QAEXXZ destination 0x00406590"
+
+[[units.scene6-step.relocations]]
+offset = 480
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075A6A0, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 575
+type = "DIR32"
+symbol = "$L61557"
+target = 0x0075b078
+evidence = "Original EFZ PE operand 0x0075A6FF, independently reviewed $L61557 destination 0x0075B078"
+
+[[units.scene6-step.relocations]]
+offset = 741
+type = "REL32"
+symbol = "?WriteSettingsIniByte@@YAEEE@Z"
+target = 0x00405ae0
+evidence = "Original EFZ PE operand 0x0075A7A5, independently reviewed ?WriteSettingsIniByte@@YAEEE@Z destination 0x00405AE0"
+
+[[units.scene6-step.relocations]]
+offset = 757
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075A7B5, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 941
+type = "REL32"
+symbol = "?WriteSettingsIniByte@@YAEEE@Z"
+target = 0x00405ae0
+evidence = "Original EFZ PE operand 0x0075A86D, independently reviewed ?WriteSettingsIniByte@@YAEEE@Z destination 0x00405AE0"
+
+[[units.scene6-step.relocations]]
+offset = 957
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075A87D, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 1144
+type = "REL32"
+symbol = "?WriteSettingsIniByte@@YAEEE@Z"
+target = 0x00405ae0
+evidence = "Original EFZ PE operand 0x0075A938, independently reviewed ?WriteSettingsIniByte@@YAEEE@Z destination 0x00405AE0"
+
+[[units.scene6-step.relocations]]
+offset = 1160
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075A948, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 1344
+type = "REL32"
+symbol = "?WriteSettingsIniByte@@YAEEE@Z"
+target = 0x00405ae0
+evidence = "Original EFZ PE operand 0x0075AA00, independently reviewed ?WriteSettingsIniByte@@YAEEE@Z destination 0x00405AE0"
+
+[[units.scene6-step.relocations]]
+offset = 1360
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075AA10, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 1544
+type = "REL32"
+symbol = "?WriteSettingsIniByte@@YAEEE@Z"
+target = 0x00405ae0
+evidence = "Original EFZ PE operand 0x0075AAC8, independently reviewed ?WriteSettingsIniByte@@YAEEE@Z destination 0x00405AE0"
+
+[[units.scene6-step.relocations]]
+offset = 1560
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075AAD8, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 1610
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075AB0A, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 1618
+type = "REL32"
+symbol = "?TransitionNumberBackdrop@Scene6@@QAEXXZ"
+target = 0x0075d660
+evidence = "Original EFZ PE operand 0x0075AB12, independently reviewed ?TransitionNumberBackdrop@Scene6@@QAEXXZ destination 0x0075D660"
+
+[[units.scene6-step.relocations]]
+offset = 1659
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075AB3B, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 1669
+type = "REL32"
+symbol = "?AnimateSettingsSlide@Scene6@@QAEXE@Z"
+target = 0x0075da30
+evidence = "Original EFZ PE operand 0x0075AB45, independently reviewed ?AnimateSettingsSlide@Scene6@@QAEXE@Z destination 0x0075DA30"
+
+[[units.scene6-step.relocations]]
+offset = 1692
+type = "DIR32"
+symbol = "?scene6StepScoreDat@@3QBDB"
+target = 0x007894ac
+evidence = "Original EFZ PE operand 0x0075AB5C, independently reviewed ?scene6StepScoreDat@@3QBDB destination 0x007894AC"
+
+[[units.scene6-step.relocations]]
+offset = 1710
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "Original EFZ PE operand 0x0075AB6E, independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B760"
+
+[[units.scene6-step.relocations]]
+offset = 1726
+type = "DIR32"
+symbol = "?scene6StepScoreBmp@@3QBDB"
+target = 0x007894c0
+evidence = "Original EFZ PE operand 0x0075AB7E, independently reviewed ?scene6StepScoreBmp@@3QBDB destination 0x007894C0"
+
+[[units.scene6-step.relocations]]
+offset = 1744
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "Original EFZ PE operand 0x0075AB90, independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B640"
+
+[[units.scene6-step.relocations]]
+offset = 1762
+type = "REL32"
+symbol = "?ReloadSelectedPreview@Scene6@@QAEXXZ"
+target = 0x0075d400
+evidence = "Original EFZ PE operand 0x0075ABA2, independently reviewed ?ReloadSelectedPreview@Scene6@@QAEXXZ destination 0x0075D400"
+
+[[units.scene6-step.relocations]]
+offset = 1780
+type = "REL32"
+symbol = "?ApplyPalette@Video@@QAEHPAE@Z"
+target = 0x0040bd30
+evidence = "Original EFZ PE operand 0x0075ABB4, independently reviewed ?ApplyPalette@Video@@QAEHPAE@Z destination 0x0040BD30"
+
+[[units.scene6-step.relocations]]
+offset = 1790
+type = "REL32"
+symbol = "?AnimateSettingsSlide@Scene6@@QAEXE@Z"
+target = 0x0075da30
+evidence = "Original EFZ PE operand 0x0075ABBE, independently reviewed ?AnimateSettingsSlide@Scene6@@QAEXE@Z destination 0x0075DA30"
+
+[[units.scene6-step.relocations]]
+offset = 1884
+type = "REL32"
+symbol = "?PollInput@Context@@QAEXXZ"
+target = 0x00406590
+evidence = "Original EFZ PE operand 0x0075AC1C, independently reviewed ?PollInput@Context@@QAEXXZ destination 0x00406590"
+
+[[units.scene6-step.relocations]]
+offset = 1968
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075AC70, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 2250
+type = "REL32"
+symbol = "?AnimateSettingsPreview@Scene6@@QAEXXZ"
+target = 0x0075d580
+evidence = "Original EFZ PE operand 0x0075AD8A, independently reviewed ?AnimateSettingsPreview@Scene6@@QAEXXZ destination 0x0075D580"
+
+[[units.scene6-step.relocations]]
+offset = 2383
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075AE0F, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 2393
+type = "REL32"
+symbol = "?AnimateSettingsSlide@Scene6@@QAEXE@Z"
+target = 0x0075da30
+evidence = "Original EFZ PE operand 0x0075AE19, independently reviewed ?AnimateSettingsSlide@Scene6@@QAEXE@Z destination 0x0075DA30"
+
+[[units.scene6-step.relocations]]
+offset = 2416
+type = "DIR32"
+symbol = "?scene6StepMenuRestoreDat@@3QBDB"
+target = 0x007894d4
+evidence = "Original EFZ PE operand 0x0075AE30, independently reviewed ?scene6StepMenuRestoreDat@@3QBDB destination 0x007894D4"
+
+[[units.scene6-step.relocations]]
+offset = 2434
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "Original EFZ PE operand 0x0075AE42, independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B760"
+
+[[units.scene6-step.relocations]]
+offset = 2450
+type = "DIR32"
+symbol = "?scene6StepMenuRestoreBmp@@3QBDB"
+target = 0x007894ec
+evidence = "Original EFZ PE operand 0x0075AE52, independently reviewed ?scene6StepMenuRestoreBmp@@3QBDB destination 0x007894EC"
+
+[[units.scene6-step.relocations]]
+offset = 2468
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "Original EFZ PE operand 0x0075AE64, independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B640"
+
+[[units.scene6-step.relocations]]
+offset = 2486
+type = "REL32"
+symbol = "?ApplyPalette@Video@@QAEHPAE@Z"
+target = 0x0040bd30
+evidence = "Original EFZ PE operand 0x0075AE76, independently reviewed ?ApplyPalette@Video@@QAEHPAE@Z destination 0x0040BD30"
+
+[[units.scene6-step.relocations]]
+offset = 2506
+type = "REL32"
+symbol = "?AnimateSettingsSlide@Scene6@@QAEXE@Z"
+target = 0x0075da30
+evidence = "Original EFZ PE operand 0x0075AE8A, independently reviewed ?AnimateSettingsSlide@Scene6@@QAEXE@Z destination 0x0075DA30"
+
+[[units.scene6-step.relocations]]
+offset = 2546
+type = "REL32"
+symbol = "?PollInput@Context@@QAEXXZ"
+target = 0x00406590
+evidence = "Original EFZ PE operand 0x0075AEB2, independently reviewed ?PollInput@Context@@QAEXXZ destination 0x00406590"
+
+[[units.scene6-step.relocations]]
+offset = 2623
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075AEFF, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 2735
+type = "REL32"
+symbol = "?TransitionNumberBackdrop@Scene6@@QAEXXZ"
+target = 0x0075d660
+evidence = "Original EFZ PE operand 0x0075AF6F, independently reviewed ?TransitionNumberBackdrop@Scene6@@QAEXXZ destination 0x0075D660"
+
+[[units.scene6-step.relocations]]
+offset = 2806
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "Original EFZ PE operand 0x0075AFB6, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860"
+
+[[units.scene6-step.relocations]]
+offset = 2816
+type = "REL32"
+symbol = "?FadeConfigPalette@Scene6@@QAEXE@Z"
+target = 0x0075d8d0
+evidence = "Original EFZ PE operand 0x0075AFC0, independently reviewed ?FadeConfigPalette@Scene6@@QAEXE@Z destination 0x0075D8D0"
+
+[[units.scene6-step.relocations]]
+offset = 2839
+type = "DIR32"
+symbol = "?scene6StepBackgroundRestoreDat@@3QBDB"
+target = 0x00789504
+evidence = "Original EFZ PE operand 0x0075AFD7, independently reviewed ?scene6StepBackgroundRestoreDat@@3QBDB destination 0x00789504"
+
+[[units.scene6-step.relocations]]
+offset = 2857
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "Original EFZ PE operand 0x0075AFE9, independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B760"
+
+[[units.scene6-step.relocations]]
+offset = 2871
+type = "DIR32"
+symbol = "?scene6StepOverlayRestoreDat@@3QBDB"
+target = 0x0078951c
+evidence = "Original EFZ PE operand 0x0075AFF7, independently reviewed ?scene6StepOverlayRestoreDat@@3QBDB destination 0x0078951C"
+
+[[units.scene6-step.relocations]]
+offset = 2889
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "Original EFZ PE operand 0x0075B009, independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B760"
+
+[[units.scene6-step.relocations]]
+offset = 2905
+type = "DIR32"
+symbol = "?scene6StepBackgroundRestoreBmp@@3QBDB"
+target = 0x00789534
+evidence = "Original EFZ PE operand 0x0075B019, independently reviewed ?scene6StepBackgroundRestoreBmp@@3QBDB destination 0x00789534"
+
+[[units.scene6-step.relocations]]
+offset = 2923
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "Original EFZ PE operand 0x0075B02B, independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B640"
+
+[[units.scene6-step.relocations]]
+offset = 2937
+type = "DIR32"
+symbol = "?scene6StepOverlayRestoreBmp@@3QBDB"
+target = 0x0078954c
+evidence = "Original EFZ PE operand 0x0075B039, independently reviewed ?scene6StepOverlayRestoreBmp@@3QBDB destination 0x0078954C"
+
+[[units.scene6-step.relocations]]
+offset = 2955
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "Original EFZ PE operand 0x0075B04B, independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B640"
+
+[[units.scene6-step.relocations]]
+offset = 2975
+type = "REL32"
+symbol = "?FadeConfigPaletteIn@Scene6@@QAEXE@Z"
+target = 0x0075d970
+evidence = "Original EFZ PE operand 0x0075B05F, independently reviewed ?FadeConfigPaletteIn@Scene6@@QAEXE@Z destination 0x0075D970"
+
+[[units.scene6-step.relocations]]
+offset = 3000
+type = "DIR32"
+symbol = "$L61472"
+target = 0x0075a703
+evidence = "Original EFZ PE operand 0x0075B078, independently reviewed $L61472 destination 0x0075A703"
+
+[[units.scene6-step.relocations]]
+offset = 3004
+type = "DIR32"
+symbol = "$L61476"
+target = 0x0075a7cb
+evidence = "Original EFZ PE operand 0x0075B07C, independently reviewed $L61476 destination 0x0075A7CB"
+
+[[units.scene6-step.relocations]]
+offset = 3008
+type = "DIR32"
+symbol = "$L61482"
+target = 0x0075a893
+evidence = "Original EFZ PE operand 0x0075B080, independently reviewed $L61482 destination 0x0075A893"
+
+[[units.scene6-step.relocations]]
+offset = 3012
+type = "DIR32"
+symbol = "$L61486"
+target = 0x0075a95e
+evidence = "Original EFZ PE operand 0x0075B084, independently reviewed $L61486 destination 0x0075A95E"
+
+[[units.scene6-step.relocations]]
+offset = 3016
+type = "DIR32"
+symbol = "$L61492"
+target = 0x0075aa26
+evidence = "Original EFZ PE operand 0x0075B088, independently reviewed $L61492 destination 0x0075AA26"
+
+[[units.scene6-step.relocations]]
+offset = 3020
+type = "DIR32"
+symbol = "$L61498"
+target = 0x0075aaee
+evidence = "Original EFZ PE operand 0x0075B08C, independently reviewed $L61498 destination 0x0075AAEE"
+
+[[units.scene6-step.relocations]]
+offset = 3024
+type = "DIR32"
+symbol = "$L61500"
+target = 0x0075ab1b
+evidence = "Original EFZ PE operand 0x0075B090, independently reviewed $L61500 destination 0x0075AB1B"
+
+[[units.scene6-step.relocations]]
+offset = 3028
+type = "DIR32"
+symbol = "$L61504"
+target = 0x0075abc4
+evidence = "Original EFZ PE operand 0x0075B094, independently reviewed $L61504 destination 0x0075ABC4"

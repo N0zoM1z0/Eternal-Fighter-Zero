@@ -1,0 +1,666 @@
+{
+  "schema_version": 1,
+  "authority": "Complete 3,032-byte original EFZ Scene6 options-state owner identity from natural VC7.1 C++, 66 original-bound COFF relocations and all local switch targets",
+  "owner": "Scene6::Step settings/options and player selection scene state machine",
+  "native_extent": {
+    "address": "0x0075A4C0",
+    "exclusive_end": "0x0075B098",
+    "code_size": 3000,
+    "local_switch_table_size": 32,
+    "owner_size": 3032,
+    "alignment_bytes_excluded": 8
+  },
+  "method": "Selected /Od /G6 /MT /Gy /W3 normal C++ compilation; all 3,000 native code bytes and eight original four-byte switch entries compared after materializing 66 original PE-bound COFF relocation targets; no prefix/size-only/operand-masked acceptance, ASM, code padding, or all-unit cold replay",
+  "behavior": "Eight-option settings UI with two-player button edge handling, options key.ini write calls, submenu selection, preview record, stage/music switches, score number selection, palette crossfades, and direct scene returns",
+  "compiler_findings": [
+    "The original UI cursor and three Context settings bytes are signed char, not unsigned char, in compound increments.",
+    "Original conditional on character row rollover uses >0 rather than >=1: both semantically equivalent, but different VC7.1 instruction encoding.",
+    "Eight compiler-emitted local 32-bit switch case destinations live immediately after the 3,000-byte function and before eight bytes of 0xCC alignment."
+  ],
+  "native_struct_stack_frame": 20,
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 3032,
+      "matched_bytes": 3032,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 102,
+          "target": 7902332,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6StepMenuDat@@3QBDB",
+          "evidence": "Original EFZ PE operand 0x0075A526, independently reviewed ?scene6StepMenuDat@@3QBDB destination 0x0078947C",
+          "addend": 0
+        },
+        {
+          "offset": 120,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE operand 0x0075A538, independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B760",
+          "addend": 0
+        },
+        {
+          "offset": 136,
+          "target": 7902356,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6StepMenuBmp@@3QBDB",
+          "evidence": "Original EFZ PE operand 0x0075A548, independently reviewed ?scene6StepMenuBmp@@3QBDB destination 0x00789494",
+          "addend": 0
+        },
+        {
+          "offset": 154,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE operand 0x0075A55A, independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B640",
+          "addend": 0
+        },
+        {
+          "offset": 184,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075A578, independently reviewed ?LoadMusic@Context@@QAEXG@Z destination 0x004068B0",
+          "addend": 0
+        },
+        {
+          "offset": 199,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075A587, independently reviewed ?LoadMusic@Context@@QAEXG@Z destination 0x004068B0",
+          "addend": 0
+        },
+        {
+          "offset": 216,
+          "target": 7708192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+          "evidence": "Original EFZ PE operand 0x0075A598, independently reviewed ?FadeIn@Scene@@QAEXPAEE@Z destination 0x00759E20",
+          "addend": 0
+        },
+        {
+          "offset": 249,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "Original EFZ PE operand 0x0075A5B9, independently reviewed ?FadeOut@Scene@@QAEXPAEEHH@Z destination 0x00759C90",
+          "addend": 0
+        },
+        {
+          "offset": 260,
+          "target": 4221456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseMusic@Context@@QAEXXZ",
+          "evidence": "Original EFZ PE operand 0x0075A5C4, independently reviewed ?ReleaseMusic@Context@@QAEXXZ destination 0x00406A10",
+          "addend": 0
+        },
+        {
+          "offset": 320,
+          "target": 4220304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PollInput@Context@@QAEXXZ",
+          "evidence": "Original EFZ PE operand 0x0075A600, independently reviewed ?PollInput@Context@@QAEXXZ destination 0x00406590",
+          "addend": 0
+        },
+        {
+          "offset": 480,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075A6A0, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 575,
+          "target": 7712888,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61557",
+          "evidence": "Original EFZ PE operand 0x0075A6FF, independently reviewed $L61557 destination 0x0075B078",
+          "local_target_offset": 3000,
+          "addend": 0
+        },
+        {
+          "offset": 741,
+          "target": 4217568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteSettingsIniByte@@YAEEE@Z",
+          "evidence": "Original EFZ PE operand 0x0075A7A5, independently reviewed ?WriteSettingsIniByte@@YAEEE@Z destination 0x00405AE0",
+          "addend": 0
+        },
+        {
+          "offset": 757,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075A7B5, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 941,
+          "target": 4217568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteSettingsIniByte@@YAEEE@Z",
+          "evidence": "Original EFZ PE operand 0x0075A86D, independently reviewed ?WriteSettingsIniByte@@YAEEE@Z destination 0x00405AE0",
+          "addend": 0
+        },
+        {
+          "offset": 957,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075A87D, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 1144,
+          "target": 4217568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteSettingsIniByte@@YAEEE@Z",
+          "evidence": "Original EFZ PE operand 0x0075A938, independently reviewed ?WriteSettingsIniByte@@YAEEE@Z destination 0x00405AE0",
+          "addend": 0
+        },
+        {
+          "offset": 1160,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075A948, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 1344,
+          "target": 4217568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteSettingsIniByte@@YAEEE@Z",
+          "evidence": "Original EFZ PE operand 0x0075AA00, independently reviewed ?WriteSettingsIniByte@@YAEEE@Z destination 0x00405AE0",
+          "addend": 0
+        },
+        {
+          "offset": 1360,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075AA10, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 1544,
+          "target": 4217568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteSettingsIniByte@@YAEEE@Z",
+          "evidence": "Original EFZ PE operand 0x0075AAC8, independently reviewed ?WriteSettingsIniByte@@YAEEE@Z destination 0x00405AE0",
+          "addend": 0
+        },
+        {
+          "offset": 1560,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075AAD8, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 1610,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075AB0A, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 1618,
+          "target": 7722592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransitionNumberBackdrop@Scene6@@QAEXXZ",
+          "evidence": "Original EFZ PE operand 0x0075AB12, independently reviewed ?TransitionNumberBackdrop@Scene6@@QAEXXZ destination 0x0075D660",
+          "addend": 0
+        },
+        {
+          "offset": 1659,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075AB3B, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 1669,
+          "target": 7723568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AnimateSettingsSlide@Scene6@@QAEXE@Z",
+          "evidence": "Original EFZ PE operand 0x0075AB45, independently reviewed ?AnimateSettingsSlide@Scene6@@QAEXE@Z destination 0x0075DA30",
+          "addend": 0
+        },
+        {
+          "offset": 1692,
+          "target": 7902380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6StepScoreDat@@3QBDB",
+          "evidence": "Original EFZ PE operand 0x0075AB5C, independently reviewed ?scene6StepScoreDat@@3QBDB destination 0x007894AC",
+          "addend": 0
+        },
+        {
+          "offset": 1710,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE operand 0x0075AB6E, independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B760",
+          "addend": 0
+        },
+        {
+          "offset": 1726,
+          "target": 7902400,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6StepScoreBmp@@3QBDB",
+          "evidence": "Original EFZ PE operand 0x0075AB7E, independently reviewed ?scene6StepScoreBmp@@3QBDB destination 0x007894C0",
+          "addend": 0
+        },
+        {
+          "offset": 1744,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE operand 0x0075AB90, independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B640",
+          "addend": 0
+        },
+        {
+          "offset": 1762,
+          "target": 7721984,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReloadSelectedPreview@Scene6@@QAEXXZ",
+          "evidence": "Original EFZ PE operand 0x0075ABA2, independently reviewed ?ReloadSelectedPreview@Scene6@@QAEXXZ destination 0x0075D400",
+          "addend": 0
+        },
+        {
+          "offset": 1780,
+          "target": 4242736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ApplyPalette@Video@@QAEHPAE@Z",
+          "evidence": "Original EFZ PE operand 0x0075ABB4, independently reviewed ?ApplyPalette@Video@@QAEHPAE@Z destination 0x0040BD30",
+          "addend": 0
+        },
+        {
+          "offset": 1790,
+          "target": 7723568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AnimateSettingsSlide@Scene6@@QAEXE@Z",
+          "evidence": "Original EFZ PE operand 0x0075ABBE, independently reviewed ?AnimateSettingsSlide@Scene6@@QAEXE@Z destination 0x0075DA30",
+          "addend": 0
+        },
+        {
+          "offset": 1884,
+          "target": 4220304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PollInput@Context@@QAEXXZ",
+          "evidence": "Original EFZ PE operand 0x0075AC1C, independently reviewed ?PollInput@Context@@QAEXXZ destination 0x00406590",
+          "addend": 0
+        },
+        {
+          "offset": 1968,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075AC70, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 2250,
+          "target": 7722368,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AnimateSettingsPreview@Scene6@@QAEXXZ",
+          "evidence": "Original EFZ PE operand 0x0075AD8A, independently reviewed ?AnimateSettingsPreview@Scene6@@QAEXXZ destination 0x0075D580",
+          "addend": 0
+        },
+        {
+          "offset": 2383,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075AE0F, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 2393,
+          "target": 7723568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AnimateSettingsSlide@Scene6@@QAEXE@Z",
+          "evidence": "Original EFZ PE operand 0x0075AE19, independently reviewed ?AnimateSettingsSlide@Scene6@@QAEXE@Z destination 0x0075DA30",
+          "addend": 0
+        },
+        {
+          "offset": 2416,
+          "target": 7902420,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6StepMenuRestoreDat@@3QBDB",
+          "evidence": "Original EFZ PE operand 0x0075AE30, independently reviewed ?scene6StepMenuRestoreDat@@3QBDB destination 0x007894D4",
+          "addend": 0
+        },
+        {
+          "offset": 2434,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE operand 0x0075AE42, independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B760",
+          "addend": 0
+        },
+        {
+          "offset": 2450,
+          "target": 7902444,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6StepMenuRestoreBmp@@3QBDB",
+          "evidence": "Original EFZ PE operand 0x0075AE52, independently reviewed ?scene6StepMenuRestoreBmp@@3QBDB destination 0x007894EC",
+          "addend": 0
+        },
+        {
+          "offset": 2468,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE operand 0x0075AE64, independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B640",
+          "addend": 0
+        },
+        {
+          "offset": 2486,
+          "target": 4242736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ApplyPalette@Video@@QAEHPAE@Z",
+          "evidence": "Original EFZ PE operand 0x0075AE76, independently reviewed ?ApplyPalette@Video@@QAEHPAE@Z destination 0x0040BD30",
+          "addend": 0
+        },
+        {
+          "offset": 2506,
+          "target": 7723568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AnimateSettingsSlide@Scene6@@QAEXE@Z",
+          "evidence": "Original EFZ PE operand 0x0075AE8A, independently reviewed ?AnimateSettingsSlide@Scene6@@QAEXE@Z destination 0x0075DA30",
+          "addend": 0
+        },
+        {
+          "offset": 2546,
+          "target": 4220304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PollInput@Context@@QAEXXZ",
+          "evidence": "Original EFZ PE operand 0x0075AEB2, independently reviewed ?PollInput@Context@@QAEXXZ destination 0x00406590",
+          "addend": 0
+        },
+        {
+          "offset": 2623,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075AEFF, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 2735,
+          "target": 7722592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransitionNumberBackdrop@Scene6@@QAEXXZ",
+          "evidence": "Original EFZ PE operand 0x0075AF6F, independently reviewed ?TransitionNumberBackdrop@Scene6@@QAEXXZ destination 0x0075D660",
+          "addend": 0
+        },
+        {
+          "offset": 2806,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "Original EFZ PE operand 0x0075AFB6, independently reviewed ?PlayEffectSound@Context@@QAEXG@Z destination 0x00406860",
+          "addend": 0
+        },
+        {
+          "offset": 2816,
+          "target": 7723216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeConfigPalette@Scene6@@QAEXE@Z",
+          "evidence": "Original EFZ PE operand 0x0075AFC0, independently reviewed ?FadeConfigPalette@Scene6@@QAEXE@Z destination 0x0075D8D0",
+          "addend": 0
+        },
+        {
+          "offset": 2839,
+          "target": 7902468,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6StepBackgroundRestoreDat@@3QBDB",
+          "evidence": "Original EFZ PE operand 0x0075AFD7, independently reviewed ?scene6StepBackgroundRestoreDat@@3QBDB destination 0x00789504",
+          "addend": 0
+        },
+        {
+          "offset": 2857,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE operand 0x0075AFE9, independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B760",
+          "addend": 0
+        },
+        {
+          "offset": 2871,
+          "target": 7902492,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6StepOverlayRestoreDat@@3QBDB",
+          "evidence": "Original EFZ PE operand 0x0075AFF7, independently reviewed ?scene6StepOverlayRestoreDat@@3QBDB destination 0x0078951C",
+          "addend": 0
+        },
+        {
+          "offset": 2889,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE operand 0x0075B009, independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B760",
+          "addend": 0
+        },
+        {
+          "offset": 2905,
+          "target": 7902516,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6StepBackgroundRestoreBmp@@3QBDB",
+          "evidence": "Original EFZ PE operand 0x0075B019, independently reviewed ?scene6StepBackgroundRestoreBmp@@3QBDB destination 0x00789534",
+          "addend": 0
+        },
+        {
+          "offset": 2923,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE operand 0x0075B02B, independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B640",
+          "addend": 0
+        },
+        {
+          "offset": 2937,
+          "target": 7902540,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6StepOverlayRestoreBmp@@3QBDB",
+          "evidence": "Original EFZ PE operand 0x0075B039, independently reviewed ?scene6StepOverlayRestoreBmp@@3QBDB destination 0x0078954C",
+          "addend": 0
+        },
+        {
+          "offset": 2955,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE operand 0x0075B04B, independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z destination 0x0040B640",
+          "addend": 0
+        },
+        {
+          "offset": 2975,
+          "target": 7723376,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeConfigPaletteIn@Scene6@@QAEXE@Z",
+          "evidence": "Original EFZ PE operand 0x0075B05F, independently reviewed ?FadeConfigPaletteIn@Scene6@@QAEXE@Z destination 0x0075D970",
+          "addend": 0
+        },
+        {
+          "offset": 3000,
+          "target": 7710467,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61472",
+          "evidence": "Original EFZ PE operand 0x0075B078, independently reviewed $L61472 destination 0x0075A703",
+          "local_target_offset": 579,
+          "addend": 0
+        },
+        {
+          "offset": 3004,
+          "target": 7710667,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61476",
+          "evidence": "Original EFZ PE operand 0x0075B07C, independently reviewed $L61476 destination 0x0075A7CB",
+          "local_target_offset": 779,
+          "addend": 0
+        },
+        {
+          "offset": 3008,
+          "target": 7710867,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61482",
+          "evidence": "Original EFZ PE operand 0x0075B080, independently reviewed $L61482 destination 0x0075A893",
+          "local_target_offset": 979,
+          "addend": 0
+        },
+        {
+          "offset": 3012,
+          "target": 7711070,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61486",
+          "evidence": "Original EFZ PE operand 0x0075B084, independently reviewed $L61486 destination 0x0075A95E",
+          "local_target_offset": 1182,
+          "addend": 0
+        },
+        {
+          "offset": 3016,
+          "target": 7711270,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61492",
+          "evidence": "Original EFZ PE operand 0x0075B088, independently reviewed $L61492 destination 0x0075AA26",
+          "local_target_offset": 1382,
+          "addend": 0
+        },
+        {
+          "offset": 3020,
+          "target": 7711470,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61498",
+          "evidence": "Original EFZ PE operand 0x0075B08C, independently reviewed $L61498 destination 0x0075AAEE",
+          "local_target_offset": 1582,
+          "addend": 0
+        },
+        {
+          "offset": 3024,
+          "target": 7711515,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61500",
+          "evidence": "Original EFZ PE operand 0x0075B090, independently reviewed $L61500 destination 0x0075AB1B",
+          "local_target_offset": 1627,
+          "addend": 0
+        },
+        {
+          "offset": 3028,
+          "target": 7711684,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61504",
+          "evidence": "Original EFZ PE operand 0x0075B094, independently reviewed $L61504 destination 0x0075ABC4",
+          "local_target_offset": 1796,
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9bd57ec1c8fb072cd5938b7adc1e3fb6128d94664c01b406b070e14b24a879f2",
+      "target_extent_sha256": "9bd57ec1c8fb072cd5938b7adc1e3fb6128d94664c01b406b070e14b24a879f2",
+      "code_size": 3000,
+      "local_data_bytes": 32,
+      "local_data": [
+        {
+          "offset": 3000,
+          "size": 32,
+          "kind": "switch-address-table",
+          "evidence": "Original EFZ .text 0x0075B078..0x0075B097 contains exactly eight DWORD native switch case targets, followed by eight CC aligners not included in owner"
+        }
+      ],
+      "unit": "scene6-step",
+      "symbol": "?Step@Scene6@@UAEEXZ",
+      "target_address": "0x0075A4C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "e46cccced8e10a758d731d76eaedd038ef548e02a0175a29ca946fb8589a0f99",
+      "object_sha256": "891afa5fb70550447cb04b3706ddf12f44ed5b7ccd005ee7bfd879baa2d4bca2",
+      "source_sha256": "94a2054314979cc1b1a79e453616daf1c7d89c1931e07a58a306f30a1d8413d9",
+      "dependencies": {
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/Scene6StepPaths.cpp": "1087776449b4f47a0464335e8bdf2aeec7f15e85baf933fb45a324b9a31d1638"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "a8d996d7b26e375727a4d1ee65ce961d5226a99cb501020f552e4054a297f204",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e6b7d9e1e18ff56c8eaa070c7dfa732e8aca591329582762aea145b84c05a2b4",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

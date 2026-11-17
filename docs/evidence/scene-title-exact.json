@@ -188,15 +188,15 @@
       "symbol": "??0Scene0@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
       "target_address": "0x00775D60",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "059599fb3e5bc4eb16e6f6f647a5a8a6fa282c33a3b01bde76d7a8042e277ed4",
-      "object_sha256": "414415dda948cc147c0cfe0dc462068388469b5332dd821fcbfd6b821e8231c4",
+      "boundary_ledger_sha256": "e46cccced8e10a758d731d76eaedd038ef548e02a0175a29ca946fb8589a0f99",
+      "object_sha256": "708eb774be5483c1c0aa634448090ece4d553f30891928372a04863aa007516a",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "16a74400234d7b541eaca126b160532e3e2162b9dafc13736aafcadedeee20da",
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "8684a358a3aa3f772201c373ba6e89632134092d32ea1e3fff0569d513f7b37d",
+      "units_manifest_sha256": "ba3f9739ea0d5878ebbe704f9b0de0e4f38989e3e2f9a7278f038e63d2d47639",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "8fac009d2bcf6b3f1e71668eb9ebc339784fe58b9a9acac81ab370f698670d11",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -225,15 +225,15 @@
       "symbol": "??1Scene0@@QAE@XZ",
       "target_address": "0x00775F30",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "059599fb3e5bc4eb16e6f6f647a5a8a6fa282c33a3b01bde76d7a8042e277ed4",
-      "object_sha256": "1e787aaf49f72c4c6905cdf87bf0cb4f3756521dcad5fa2170bd0d94b9a7bf4c",
+      "boundary_ledger_sha256": "e46cccced8e10a758d731d76eaedd038ef548e02a0175a29ca946fb8589a0f99",
+      "object_sha256": "69fba535d54bf658bfd26b4d1434c62806019872d0f50b192d52434cb29c874f",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "16a74400234d7b541eaca126b160532e3e2162b9dafc13736aafcadedeee20da",
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "8684a358a3aa3f772201c373ba6e89632134092d32ea1e3fff0569d513f7b37d",
+      "units_manifest_sha256": "ba3f9739ea0d5878ebbe704f9b0de0e4f38989e3e2f9a7278f038e63d2d47639",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "93e8d7812f60fa570ae04da14ec500269c74d342007b09ed3c6a6ce37dd2683b",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -314,7 +314,7 @@
           "target": 7824519,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61510",
+          "symbol": "$L61536",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1239,
           "addend": 0
@@ -441,7 +441,7 @@
           "target": 7823849,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61461",
+          "symbol": "$L61487",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 569,
           "addend": 0
@@ -451,7 +451,7 @@
           "target": 7823976,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61462",
+          "symbol": "$L61488",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 696,
           "addend": 0
@@ -461,7 +461,7 @@
           "target": 7824099,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61463",
+          "symbol": "$L61489",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 819,
           "addend": 0
@@ -471,7 +471,7 @@
           "target": 7824210,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61464",
+          "symbol": "$L61490",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 930,
           "addend": 0
@@ -481,7 +481,7 @@
           "target": 7824337,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61465",
+          "symbol": "$L61491",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1057,
           "addend": 0
@@ -491,7 +491,7 @@
           "target": 7824434,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61466",
+          "symbol": "$L61492",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1154,
           "addend": 0
@@ -501,7 +501,7 @@
           "target": 7824479,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61467",
+          "symbol": "$L61493",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1199,
           "addend": 0
@@ -523,17 +523,17 @@
       "symbol": "?Step@Scene0@@UAEEXZ",
       "target_address": "0x00775FB0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "059599fb3e5bc4eb16e6f6f647a5a8a6fa282c33a3b01bde76d7a8042e277ed4",
-      "object_sha256": "69a44461548d5dd8a48f9b84f93f34a9b40c1c2f5f960c80b3f6d3945edef0c7",
+      "boundary_ledger_sha256": "e46cccced8e10a758d731d76eaedd038ef548e02a0175a29ca946fb8589a0f99",
+      "object_sha256": "2da7b0c4b4858b3d8dcb543f12beaf0a863fdefc71252c1ed5311f9995e23650",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "16a74400234d7b541eaca126b160532e3e2162b9dafc13736aafcadedeee20da",
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "8684a358a3aa3f772201c373ba6e89632134092d32ea1e3fff0569d513f7b37d",
+      "units_manifest_sha256": "ba3f9739ea0d5878ebbe704f9b0de0e4f38989e3e2f9a7278f038e63d2d47639",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "8858ecbcf879a362d9b0830c47400f4d211cd735948df7218980bc3bd439981a",
+      "unit_sha256": "2d1097d9e75ef5dcca41feb058bb41fdb01c3e3267a690fd9da71f6c7cb91d92",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -641,15 +641,15 @@
       "symbol": "?Slot0@Scene0@@UAEXXZ",
       "target_address": "0x007764B0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "059599fb3e5bc4eb16e6f6f647a5a8a6fa282c33a3b01bde76d7a8042e277ed4",
-      "object_sha256": "5f790d6ee4cdb7de497e7ff39bad4fb880a9cd9c4c6aa113a764ee2d6d3bda27",
+      "boundary_ledger_sha256": "e46cccced8e10a758d731d76eaedd038ef548e02a0175a29ca946fb8589a0f99",
+      "object_sha256": "b6a847b9746b78480aa4a6be8653cbe2b79526c185bb624607fcbc9f614459f6",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "16a74400234d7b541eaca126b160532e3e2162b9dafc13736aafcadedeee20da",
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "8684a358a3aa3f772201c373ba6e89632134092d32ea1e3fff0569d513f7b37d",
+      "units_manifest_sha256": "ba3f9739ea0d5878ebbe704f9b0de0e4f38989e3e2f9a7278f038e63d2d47639",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "69555dc91e462ff4efe134dfccec1546e5dcbd255726a2304357db5c2aeb3b97",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -696,20 +696,21 @@
       "symbol": "?PollKeyboard@Scene0@@UAEXXZ",
       "target_address": "0x00776760",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "059599fb3e5bc4eb16e6f6f647a5a8a6fa282c33a3b01bde76d7a8042e277ed4",
-      "object_sha256": "73d628f34502e9a50c412175ab1c1b1b89995017e1d1dc5900d6c0012142f284",
+      "boundary_ledger_sha256": "e46cccced8e10a758d731d76eaedd038ef548e02a0175a29ca946fb8589a0f99",
+      "object_sha256": "ab8cbdf148286a98cff74ed90c64d4d962047911f0afd4a04c5cc72f90865264",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "16a74400234d7b541eaca126b160532e3e2162b9dafc13736aafcadedeee20da",
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "8684a358a3aa3f772201c373ba6e89632134092d32ea1e3fff0569d513f7b37d",
+      "units_manifest_sha256": "ba3f9739ea0d5878ebbe704f9b0de0e4f38989e3e2f9a7278f038e63d2d47639",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "f6a3cdc6844ff76853a53b24546733a826f1772931fed8e86f14299886b37c13",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "Selected complete title-scene reconstruction replays on 2026-11-17 after adding two palette members; all five owners exact. Eight compiler-local switch symbols in Step remapped by verified identical native-relative target offsets, never masked."
+  "latest_selected_replay": "Selected complete title-scene reconstruction replays on 2026-11-17 after adding two palette members; all five owners exact. Eight compiler-local switch symbols in Step remapped by verified identical native-relative target offsets, never masked.",
+  "selected_native_header_signedness_replay": "Every function in affected source groups was recompiled with recovered signed Scene6/Context setting bytes and compared against the complete original owner with exact relocations; eight Scene0 switch label renames were individually checked against native local target offsets."
 }

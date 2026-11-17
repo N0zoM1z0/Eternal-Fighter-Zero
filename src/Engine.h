@@ -477,7 +477,7 @@ public:
 public:
     unsigned char selection134e;
 public:
-    unsigned char setting134f;
+    char setting134f;
     char effectFlag1350;
 private:
     unsigned char unknown_1351;
@@ -494,14 +494,14 @@ public:
 public:
     char mode1364;
 public:
-    unsigned char setting1365;
+    char setting1365;
     char setting1366;
 private:
     unsigned char unknown_1367;
 public:
     int framePhase;
     int setting136c;
-    unsigned char setting1370;
+    char setting1370;
 private:
     unsigned char unknown_1371[3];
 public:
@@ -688,7 +688,7 @@ class Scene6 : public Scene {
     IUnknown *previewSurface; // native offset 0x43C
     IUnknown *numberSurface;  // native offset 0x440
     IUnknown *numberBackdrop; // native offset 0x444
-    unsigned char unknown_0448;
+    char unknown_0448;
     char previewSelection;    // native offset 0x449
     unsigned char unknown_044a[0x44d - 0x44a];
     char numberBackdropPhase; // native offset 0x44D

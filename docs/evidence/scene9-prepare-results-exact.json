@@ -545,21 +545,22 @@
       "symbol": "?PrepareResults@Scene9@@QAEXXZ",
       "target_address": "0x00774B00",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "18e3c4fe0715bfc1e27eaa360be061a61802da7b663feb4b44e41b92b7140312",
-      "object_sha256": "5a9b9375dbdd09f3d1bc40400c7fdd715f4a81e2abe7909ab3e99cac422992ed",
+      "boundary_ledger_sha256": "e46cccced8e10a758d731d76eaedd038ef548e02a0175a29ca946fb8589a0f99",
+      "object_sha256": "5fae2971a334d3c0b4aeeac17a04193badb1f3b86f2f04917421d383f2742e46",
       "source_sha256": "68cfd2575d3a8b553a2333775baab203d3c35387b62aecda9e5208fbf6df6733",
       "dependencies": {
-        "src/Engine.h": "e542c7bcb52735d0bde1268d596459a1b0166ed8e6770ac2dd0989e7f076b490",
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
         "src/Scene9PreparePaths.cpp": "3651b27b3a3f8c5d0f32fd3a61dd7ebdc1207cec988d5379d5b6d4eb0bb662cb"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "9602393b1205588a8a4810be01a6ab7d62a12b9d17e74fac4f4df4d8557dc812",
+      "units_manifest_sha256": "ba3f9739ea0d5878ebbe704f9b0de0e4f38989e3e2f9a7278f038e63d2d47639",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "5543a3239fb40f3d69f56694b8a2c58e46742a2e6f5aa3bafd818dfb25012c1a",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "source_refreshed_after_native_field_naming": "Selected complete 3,151-byte owner rebuilt and rebound after Scene9 field names were recovered from the exact Step; no old proof hashes carried forward."
+  "source_refreshed_after_native_field_naming": "Selected complete 3,151-byte owner rebuilt and rebound after Scene9 field names were recovered from the exact Step; no old proof hashes carried forward.",
+  "selected_native_header_signedness_replay": "Every function in affected source groups was recompiled with recovered signed Scene6/Context setting bytes and compared against the complete original owner with exact relocations; eight Scene0 switch label renames were individually checked against native local target offsets."
 }

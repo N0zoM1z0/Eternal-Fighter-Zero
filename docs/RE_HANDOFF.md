@@ -5,6 +5,23 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
+## Scene6 option-state boss accepted — 2026-11-17
+
+`Scene6::Step` at `0x0075A4C0` is complete native-bound Exact:
+**3,032 / 3,032 bytes** (3,000 code plus an original eight-entry, 32-byte
+switch table), **66 relocations**, zero differences. The natural authored
+source is `src/Scene6Step.cpp` with original key.ini setting writes,
+player-input controls, palette fade and statistics/score submenu transitions.
+Signed menu cursor at `Scene6 +0x448` and three signed Context setting bytes
+are recovered in `src/Engine.h`; a source-level `>0` branch preserves the
+VC7.1 register/branch shape without patches. Every switch target was verified
+at its original native relative offset and the eight following `0xCC`
+alignment bytes are excluded from the owned extent. Eight Scene6 owners,
+nine Context/Pattern owners, five title and eleven SecondaryCombat owners,
+and Scene9::PrepareResults were all selectively rebuilt Exact. The Scene0
+Step labels were updated only after eight original PE jump destinations were
+verified individually. No all-unit cold replay.
+
 ## Scene6 options constructor accepted — 2026-11-17
 
 `Scene6::Scene6` at `0x00759F30` is now strict Exact for **1,138 bytes,

@@ -665,20 +665,21 @@
       "symbol": "??0Scene6@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
       "target_address": "0x00759F30",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "6e379109bc7fb0987eb081b4f24ce71f2d14a154068f59308893d6800c28c258",
-      "object_sha256": "10f4b6affc17512d649e975f112fcf39af65632edf8fbf2c4d00260dca6e6961",
+      "boundary_ledger_sha256": "e46cccced8e10a758d731d76eaedd038ef548e02a0175a29ca946fb8589a0f99",
+      "object_sha256": "fb2d6adf62b432935898c9e00d0a16181e161a672c570f4ef57ec279940a0acc",
       "source_sha256": "da44709349b7339616dac9e791e68137eb70f6d3593cbc34646962b70ffc3ff8",
       "dependencies": {
-        "src/Engine.h": "9ec71f95c824aa0cb215b05a804a67d51479867a00459f33ccaab1fbfe1cc092",
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
         "src/Scene6ConstructorPaths.cpp": "6e4d19d0765f55ed4197182ea7db58968fd9d4b9e8520c1e230f1c9a0530e0cf"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "a6ebefd3060717404194f405e3b7b644fc014ed070172ed883aea8359fe8b1e9",
+      "units_manifest_sha256": "ba3f9739ea0d5878ebbe704f9b0de0e4f38989e3e2f9a7278f038e63d2d47639",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "8beb280cbe71ba56e5ff5b6216ac7782ba53572634ab97c479c0e772b8a6182a",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }
-  ]
+  ],
+  "selected_native_header_signedness_replay": "Every function in affected source groups was recompiled with recovered signed Scene6/Context setting bytes and compared against the complete original owner with exact relocations; eight Scene0 switch label renames were individually checked against native local target offsets."
 }
