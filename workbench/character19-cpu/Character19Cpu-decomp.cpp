@@ -482,7 +482,7 @@ void Character19::Slot05()
               field3114 = 0;
             }
 
-            if ((RandomRange(0,200) == 1) && (meter == 3000)) {
+            if (((unsigned short)RandomRange(0,200) == 1) && (meter == 3000)) {
               recognizedCommand = 0x65;
             }
             else if (field0008 == 0xd1) {
@@ -499,7 +499,7 @@ void Character19::Slot05()
             }
             else if (((field0008 == 0xd0) && (attackCollisionResult == 3)) &&
                     (5 < field000a)) {
-              if (((distance.forward <= 80.0) || (0.0 <= velocityX)) ||
+              if (((distance.forward <= 80.0) || (velocityX >= 0.0)) ||
                  ((*opponentSlot)->positionY - positionY <=
                   -40.0)) {
                 if (((0x2c < (*opponentSlot)->airActionLockFrames) ||
