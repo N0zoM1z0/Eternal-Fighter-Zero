@@ -8,7 +8,6 @@ void Character21::Slot05()
   bool airborneForGuard;
   double forwardSeparation;
   char wallCollision;
-  unsigned short randomRoll;
   short randomChoice;
   unsigned int randomValue;
   double verticalSeparation;
@@ -40,8 +39,8 @@ void Character21::Slot05()
   buttonPulse[3] = 0;
   guardInputFrames = 0;
   airborneForGuard = positionY < 0.0;
-  randomRoll = RandomRange(0,1000);
-  if ((float)randomRoll <
+
+  if ((float)(unsigned short)RandomRange(0,1000) <
       (float)(unsigned char)(airborneForGuard * '\x1e') * field00a8 +
       25.0f * field00a8 +
       (float)((unsigned int)(field3114 == 3) * 400) +
@@ -54,15 +53,15 @@ void Character21::Slot05()
   else {
     guardRangeFactor = 1;
   }
-  randomRoll = RandomRange(0,2000);
-  if ((double)randomRoll <
+
+  if ((double)(unsigned short)RandomRange(0,2000) <
       (double)(guardRangeFactor * 2 + 1) *
       ((double)('\0' < throwInvulnerabilityFrames) * 4.0 + 1.0) * 8.0
       * (double)field00a8) {
     guardInputFrames = 0x3c;
   }
-  randomRoll = RandomRange(0,1000);
-  if (((float)randomRoll < 40.0f * field00a8) &&
+
+  if (((float)(unsigned short)RandomRange(0,1000) < 40.0f * field00a8) &&
      (199 < field0008)) {
     guardInputFrames = 0x3c;
   }
@@ -77,19 +76,19 @@ void Character21::Slot05()
             ((*opponentSlot)->positionX - positionX);
     verticalSeparation = fabs(positionY - (*opponentSlot)->positionY);
     if (field0008 >= 0x32 && field0008 <= 0x96 && field000c == 0) {
-      randomRoll = RandomRange(0,100);
-      if (8.0f * field00a8 <= (float)randomRoll) {
+
+      if (8.0f * field00a8 <= (float)(unsigned short)RandomRange(0,100)) {
         field3114 = 0;
       }
       else {
         field3114 = 3;
       }
-      randomRoll = RandomRange(0,100);
-      inputX = (randomRoll < 0x32) * -2 + '\x01';
-      randomRoll = RandomRange(0,0xf0);
-      buttonPulse[3] = (double)randomRoll < verticalSeparation;
-      randomRoll = RandomRange(0,0x140);
-      buttonPulse[3] = (double)randomRoll < forwardSeparation;
+
+      inputX = ((unsigned short)RandomRange(0,100) < 0x32) * -2 + '\x01';
+
+      buttonPulse[3] = (double)(unsigned short)RandomRange(0,0xf0) < verticalSeparation;
+
+      buttonPulse[3] = (double)(unsigned short)RandomRange(0,0x140) < forwardSeparation;
       if ((((199 < (*opponentSlot)->field0008) &&
            ((*opponentSlot)->field0008 < 0xfa)) &&
           ((*opponentSlot)->field000a < 3)) &&
@@ -112,15 +111,15 @@ void Character21::Slot05()
                ((*opponentSlot)->positionY == 0.0)) &&
               ((*opponentSlot)->remainingHitCount == 0)))) {
             if ((forwardSeparation < 45.0) &&
-               (randomRoll = RandomRange(0,100),
-               (float)randomRoll < field00a8 + field00a8)) {
+               (
+               (float)(unsigned short)RandomRange(0,100) < field00a8 + field00a8)) {
               buttonPulse[0] = 1;
               inputY = 1;
               return;
             }
             if ((forwardSeparation < 60.0) &&
-               (randomRoll = RandomRange(0,100),
-               (float)randomRoll < field00a8 * 1.0f)) {
+               (
+               (float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f)) {
               buttonPulse[0] = 1;
               inputY = 0;
               return;
@@ -133,7 +132,7 @@ void Character21::Slot05()
                 ((*opponentSlot)->positionY == 0.0)) &&
                (((*opponentSlot)->remainingHitCount == 0 &&
                 ((60.0 < forwardSeparation && (forwardSeparation < 80.0)))))))) &&
-             (randomRoll = RandomRange(0,100), (float)randomRoll < field00a8 * 1.0f
+             ( (float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f
              )) {
             buttonPulse[1] = 1;
             inputY = 1;
@@ -143,60 +142,60 @@ void Character21::Slot05()
         }
         if ((field0008 == 0xa8) || (field0008 == 0xa9)) {
           if (forwardSeparation < 100.0) {
-            randomRoll = RandomRange(0,100);
-            if (((float)randomRoll < field00a8 * 4.0f) &&
+
+            if (((float)(unsigned short)RandomRange(0,100) < field00a8 * 4.0f) &&
                (500.0 < field0118)) {
               recognizedCommand = 0x20;
               return;
             }
-            randomRoll = RandomRange(0,100);
-            if (((float)randomRoll < field00a8 + field00a8) &&
+
+            if (((float)(unsigned short)RandomRange(0,100) < field00a8 + field00a8) &&
                (500.0 < field0118)) {
               recognizedCommand = 0xc;
               return;
             }
             if ((forwardSeparation < 60.0) &&
-               (randomRoll = RandomRange(0,100),
-               (float)randomRoll < field00a8 * 1.0f)) {
+               (
+               (float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f)) {
               buttonPulse[0] = 1;
               inputY = 0;
               return;
             }
-            randomRoll = RandomRange(0,100);
-            if (((float)randomRoll < field00a8 * 1.0f) &&
+
+            if (((float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f) &&
                (meter == 3000)) {
               recognizedCommand = 0x5c;
               return;
             }
-            randomRoll = RandomRange(0,100);
-            if ((((float)randomRoll < field00a8 * 3.0f) &&
+
+            if ((((float)(unsigned short)RandomRange(0,100) < field00a8 * 3.0f) &&
                 (forwardSeparation < 80.0)) && (1999 < meter)) {
               recognizedCommand = (unsigned short)RandomRange(0,2) + 0x65;
               return;
             }
           }
           if ((forwardSeparation < 150.0) && (100.0 < forwardSeparation)) {
-            randomRoll = RandomRange(0,100);
-            if (((float)randomRoll < field00a8 * 3.0f) &&
+
+            if (((float)(unsigned short)RandomRange(0,100) < field00a8 * 3.0f) &&
                (500.0 < field0118)) {
               recognizedCommand = 0xc;
               return;
             }
             if ((forwardSeparation < 120.0) &&
-               (randomRoll = RandomRange(0,100),
-               (float)randomRoll < field00a8 * 1.0f)) {
+               (
+               (float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f)) {
               buttonPulse[0] = 2;
               inputY = 0;
               return;
             }
-            randomRoll = RandomRange(0,100);
-            if ((float)randomRoll < field00a8 * 1.0f) {
+
+            if ((float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f) {
               buttonPulse[2] = 1;
               inputY = 1;
               return;
             }
-            randomRoll = RandomRange(0,100);
-            if ((((float)randomRoll < field00a8 * 1.0f) &&
+
+            if ((((float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f) &&
                 (meter == 3000)) &&
                ((*opponentSlot)->field0008 < 0xdc)) {
               recognizedCommand = 0x5c;
@@ -204,14 +203,14 @@ void Character21::Slot05()
             }
           }
           if (150.0 < forwardSeparation) {
-            randomRoll = RandomRange(0,100);
-            if (((float)randomRoll < field00a8 * 1.0f) &&
+
+            if (((float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f) &&
                (500.0 < field0118)) {
               recognizedCommand = (unsigned short)RandomRange(0,2) + 0x1e;
               return;
             }
-            randomRoll = RandomRange(0,100);
-            if ((float)randomRoll < field00a8 * 1.0f) {
+
+            if ((float)(unsigned short)RandomRange(0,100) < field00a8 * 1.0f) {
               recognizedCommand = (unsigned short)RandomRange(0,2) + 0xb;
               return;
             }
@@ -219,8 +218,8 @@ void Character21::Slot05()
         }
         if (((field0008 == 0xaa) && (field000a == 1)) &&
            (field000c == 0)) {
-          randomRoll = RandomRange(0,100);
-          if ((float)randomRoll < field00a8 * 5.0f) {
+
+          if ((float)(unsigned short)RandomRange(0,100) < field00a8 * 5.0f) {
             field3114 = 3;
             return;
           }
@@ -229,7 +228,7 @@ void Character21::Slot05()
                (-40.0 <
                 positionY - (*opponentSlot)->positionY)) &&
               (forwardSeparation < 80.0)) &&
-             (randomRoll = RandomRange(0,100), (float)randomRoll < field00a8 * 5.0f
+             ( (float)(unsigned short)RandomRange(0,100) < field00a8 * 5.0f
              )) {
             buttonPulse[0] = 1;
             return;
@@ -239,8 +238,8 @@ void Character21::Slot05()
               (positionY - (*opponentSlot)->positionY <
                -50.0)) &&
              ((forwardSeparation < 80.0 &&
-              (randomRoll = RandomRange(0,100),
-              (float)randomRoll < field00a8 * 5.0f)))) {
+              (
+              (float)(unsigned short)RandomRange(0,100) < field00a8 * 5.0f)))) {
             buttonPulse[1] = 1;
             return;
           }
@@ -249,15 +248,15 @@ void Character21::Slot05()
               (positionY - (*opponentSlot)->positionY <
                -50.0)) &&
              ((forwardSeparation < 120.0 &&
-              (randomRoll = RandomRange(0,100),
-              (float)randomRoll < field00a8 * 5.0f)))) {
+              (
+              (float)(unsigned short)RandomRange(0,100) < field00a8 * 5.0f)))) {
             buttonPulse[2] = 1;
             inputY = 0;
             return;
           }
           if (((verticalSeparation < 50.0) && (forwardSeparation < 100.0)) &&
-             (randomRoll = RandomRange(0,100),
-             (float)randomRoll < field00a8 + field00a8)) {
+             (
+             (float)(unsigned short)RandomRange(0,100) < field00a8 + field00a8)) {
             recognizedCommand = (unsigned short)RandomRange(0,2) + 0x1f;
             return;
           }
@@ -266,7 +265,7 @@ void Character21::Slot05()
              ((*opponentSlot)->field0008 == 0xa9)) ||
             ((*opponentSlot)->field0008 == 0xaa)) &&
            (((positionY == 0.0 &&
-             (randomRoll = RandomRange(0,100), (float)randomRoll < 15.0f * field00a8
+             ( (float)(unsigned short)RandomRange(0,100) < 15.0f * field00a8
              )) && ((field3114 != 2 &&
                     ((*opponentSlot)->hitstunFrames == 0)))))) {
           randomValue = RandomRange(0,100);
@@ -298,8 +297,8 @@ void Character21::Slot05()
              ((*opponentSlot)->field0008 == 0xa9)) ||
             ((*opponentSlot)->field0008 == 0xaa)) &&
            ((((positionY < 0.0 &&
-              (randomRoll = RandomRange(0,100),
-              (float)randomRoll < 15.0f * field00a8)) &&
+              (
+              (float)(unsigned short)RandomRange(0,100) < 15.0f * field00a8)) &&
              (field3114 != 2)) &&
             ((*opponentSlot)->hitstunFrames == 0)))) {
           randomValue = RandomRange(0,100);
@@ -315,13 +314,13 @@ void Character21::Slot05()
         }
         if ((((field0118 <= 500.0) &&
              (field0120 < '\x01')) ||
-            ((randomRoll = RandomRange(0,100),
-             8.0f * field00a8 <= (float)randomRoll ||
+            ((
+             8.0f * field00a8 <= (float)(unsigned short)RandomRange(0,100) ||
              (((*opponentSlot)->field0008 < 0x96 ||
               (0x9c < (*opponentSlot)->field0008)))))) ||
            (((field0008 != 0xfb &&
              ((field0008 != 0xe8 || (randomChoice = RandomRange(0,10), randomChoice != 0)))) &&
-            (((field0008 != 0xfa || (randomRoll = RandomRange(0,100), 1 < randomRoll)) &&
+            (((field0008 != 0xfa || ( 1 < (unsigned short)RandomRange(0,100))) &&
              ((field0008 != 0xeb || (randomChoice = RandomRange(0,7), randomChoice != 0)))))))) {
           if ((0 < field3114) &&
              ((0x31 < field0008 && (field0008 < 0x9e)))) {
@@ -439,8 +438,8 @@ void Character21::Slot05()
             }
             else {
               if ((((1 < attackCollisionResult) && (hitstopFrames == 0)) &&
-                  (randomRoll = RandomRange(0,100),
-                  (float)randomRoll < field00a8 * 25.0f)) &&
+                  (
+                  (float)(unsigned short)RandomRange(0,100) < field00a8 * 25.0f)) &&
                  ((field3114 != 1 && (field3114 != 2)))) {
                 randomValue = RandomRange(0,1000);
                 field3110 = randomValue & 0xffff;
@@ -955,8 +954,8 @@ void Character21::Slot05()
                   return;
                 }
               }
-              randomRoll = RandomRange(0,100);
-              if ((float)randomRoll < 25.0f * field00a8) {
+
+              if ((float)(unsigned short)RandomRange(0,100) < 25.0f * field00a8) {
                 randomValue = RandomRange(0,1000);
                 field3110 = randomValue & 0xffff;
                 if (positionY == 0.0) {
@@ -1289,33 +1288,33 @@ void Character21::Slot05()
                    (((*opponentSlot)->field0008 < 0x32 ||
                     (0x3a < (*opponentSlot)->field0008)))))) ||
                  (((positionY != 0.0 ||
-                   (randomRoll = RandomRange(0,100),
-                   4.0f * field00a8 <= (float)randomRoll)) ||
+                   (
+                   4.0f * field00a8 <= (float)(unsigned short)RandomRange(0,100))) ||
                   (forwardSeparation <= 120.0)))) {
                 if (((0x31 < field0008) ||
                     (0x31 < (*opponentSlot)->field0008)) ||
                    ((forwardSeparation <= 800.0 ||
                     (((120.0 <= forwardSeparation ||
-                      (randomRoll = RandomRange(0,100),
-                      2.0f * field00a8 <= (float)randomRoll)) ||
+                      (
+                      2.0f * field00a8 <= (float)(unsigned short)RandomRange(0,100))) ||
                      ((positionX <= 150.0 ||
                       (490.0 <= positionX)))))))) {
-                  randomRoll = RandomRange(0,1000);
-                  if (randomRoll < 2) {
+
+                  if ((unsigned short)RandomRange(0,1000) < 2) {
                     field3114 = 4;
                   }
                   else {
-                    randomRoll = RandomRange(0,100);
-                    if (randomRoll < 2) {
-                      randomRoll = RandomRange(0,100);
-                      if (8.0f * field00a8 <= (float)randomRoll) {
+
+                    if ((unsigned short)RandomRange(0,100) < 2) {
+
+                      if (8.0f * field00a8 <= (float)(unsigned short)RandomRange(0,100)) {
                         field3114 = 0;
                       }
                       else {
                         field3114 = 3;
                       }
                       if (((180.0 < forwardSeparation) && (positionY == 0.0)
-                          ) && (randomRoll = RandomRange(0,100), randomRoll < 2)) {
+                          ) && ( (unsigned short)RandomRange(0,100) < 2)) {
                         inputX = 0;
                         inputY = 0xff;
                         return;
@@ -1344,8 +1343,8 @@ void Character21::Slot05()
                       inputX = 0xff;
                       return;
                     }
-                    randomRoll = RandomRange(0,100);
-                    if ((randomRoll < 0x32) && (forwardSeparation < 120.0)) {
+
+                    if (((unsigned short)RandomRange(0,100) < 0x32) && (forwardSeparation < 120.0)) {
                       if (facing == '\x01') {
                         cpuMoveLeftFrames = (unsigned short)RandomRange(0,200) + 0x3c;
                       }
@@ -1353,8 +1352,8 @@ void Character21::Slot05()
                         cpuMoveRightFrames = (unsigned short)RandomRange(0,200) + 0x3c;
                       }
                     }
-                    randomRoll = RandomRange(0,100);
-                    if (randomRoll < 0x32) {
+
+                    if ((unsigned short)RandomRange(0,100) < 0x32) {
                       if (facing == '\x01') {
                         cpuMoveRightFrames = (unsigned short)RandomRange(0,200) + 0x3c;
                       }
