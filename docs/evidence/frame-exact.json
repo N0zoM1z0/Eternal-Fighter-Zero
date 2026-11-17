@@ -1156,7 +1156,7 @@
       "target_address": "0x00407D10",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "41774802ac3432844d2ce8abda9333264ccbc158a205d55e6cb293441405772a",
+      "object_sha256": "d952fbe265f07ef1050a3f247c2848f5261383502845b34cbb06fb0d36e4d40b",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -1183,7 +1183,7 @@
       "target_address": "0x0040BE20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "5f666f529cdbd09be45033f9531d804f24479be7aa1d571d34a8c0cb5448e8a5",
+      "object_sha256": "b26b3eb7982a9442aa314ab72fcf40655ad51bf4a97d836fc2f456c57baf45d8",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -1210,7 +1210,7 @@
       "target_address": "0x0040BF20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "77ddc54207b7d2bde78cdd4205a6dc3396675d681421adc145a4a682e286970d",
+      "object_sha256": "4a39db17d6651c0eef1ed5ee2dfaa87c175ecdd1dc8ff3fa1f50e8d3a07be4e7",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -1251,5 +1251,5 @@
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "Selected current UI and palette Engine.h/Input.h-dependency consumers, 27 complete normal COFF native comparisons; no cold replay."
+  "latest_selected_replay": "Selected 28 native PE comparisons; current Scene6 and Input headers. All selected complete functions strict Exact; no full cold replay"
 }

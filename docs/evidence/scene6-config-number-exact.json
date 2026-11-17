@@ -37,7 +37,7 @@
       "target_address": "0x0075D260",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "752914d06831172f1c54f44a89abe213e71f0bd12ebd4c53db9ce88f819e4a8c",
+      "object_sha256": "5c3bfd2d3874da6bd8f0abf207eb666cb32ceb4be7a842cc4e757c014a01a672",
       "source_sha256": "32ea4f9068afbeb57fb6ebd784676204a23c4f4b07ee770d7c9f4c3bd1dd9fd7",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",

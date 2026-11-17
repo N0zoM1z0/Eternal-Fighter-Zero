@@ -243,7 +243,7 @@
       "target_address": "0x00753260",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "625529e8f3574306996986c22f478e3ef8ef9997febbb6ce1b0f52996a38c55f",
+      "object_sha256": "a11100745a63bd4ebe45dfc8c2697b256cf7401825222eb26eab6dbee5289526",
       "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -280,7 +280,7 @@
       "target_address": "0x007538B0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "fe3f5fa5ffb50a1d681821f6ac233512a8a377c9249acd25177edfa064bbf5ca",
+      "object_sha256": "abf735e0a0c4b87b1741c018580dfce0b48b2dbcb14eac0cc4e4a32ca3a45643",
       "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -1332,7 +1332,7 @@
       "target_address": "0x007539F0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "6427d85097477f299c622791a600b7c7b5335b0312f38a636c3c10e2c1eaca52",
+      "object_sha256": "7801309ad7ad37293e932a4345cbe86c7ba98017cba4528f1a5c82f282cf0f79",
       "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -1522,7 +1522,7 @@
       "target_address": "0x00759460",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "7d69b0add16967c20343e97e4e1c588bd172a9c10f80f8083b2ad14adb2dc235",
+      "object_sha256": "9533ac1f4e6525b3e995301a1483bae0e747679fe4ac28f046a55a0a3e699689",
       "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -1739,7 +1739,7 @@
       "target_address": "0x007595D0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "36f288a9e9f925eeb01cfcad422ca0e76778747d65b1e18efd8b20ad71bdf08e",
+      "object_sha256": "3d12a6ffe72ac8cb6c20c96f68dd59b1d31e4f0f69c36ee925d1cd31af5df89e",
       "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -1848,7 +1848,7 @@
       "target_address": "0x00759770",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "575041c405b905e9d871c5e709dc12eef59bb471f09ac6a1d1ed329fa46cf01d",
+      "object_sha256": "a4c33a69074c071999b46720e8d5556faaf7049a6eb8824d2909bb85249bd7b4",
       "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -1993,7 +1993,7 @@
       "target_address": "0x007598D0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "770406145787a0a50643ce0f9f8ac62b3faeb3e4bfa7ef1f3342027befdca3de",
+      "object_sha256": "0ea607fc3fb2a3048166f32929535a9e89c5b8393795957fa23779564f2ff487",
       "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -2007,5 +2007,5 @@
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "Selected 27 native VC7.1 normal COFF complete-function comparisons after Scene6 keyboard/number and Video border declarations; original Scene1 switch table six compiler-local symbol labels rebound only after 6 native jump destination offset proofs and entire 6,928-byte function verification. No broad cold replay."
+  "latest_selected_replay": "Selected 28 current Scene0/Scene1/Scene6/Minagi/Video exact units; the VC7.1 compiler changed internal switch-table $L symbol identities but all relocation target offsets and complete native PE bytes including local jump tables were independently validated exact; no full cold replay."
 }

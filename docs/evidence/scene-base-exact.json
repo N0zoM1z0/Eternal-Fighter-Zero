@@ -27,7 +27,7 @@
       "target_address": "0x00759C10",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "a409919753d208636ef288185ea03863c3595e822697f2fb1f0ddb9ef1d3323f",
+      "object_sha256": "b5ea366806bdb0a124725860ce6943c895a97e6cd4824f2d4823258c8c0713c9",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -136,7 +136,7 @@
       "target_address": "0x00759C90",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "37426ecdad1398567e760b09e9b25866ad565152bca257fb6d347dd82900d1df",
+      "object_sha256": "139d22ccffb7bffe7ab45b9353cca27097312b12e57e688103f53c4ea04122d4",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -227,7 +227,7 @@
       "target_address": "0x00759E20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "697f324267270d2d1c858cb5437653fd1bf09af013dc11044ef6d74789e132f9",
-      "object_sha256": "97075e7cebb70933f1403c6cd0df924148e9eb687e3b0636a5ffc57696517871",
+      "object_sha256": "577f887c51f1c4a88dace8e003da74926d6aa31f239952f11e5d5bf568f155f6",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
         "src/Engine.h": "fe851c38e1b069a1e435925e352dbd24b567655a3233a7d4900a04679f5571a0",
@@ -241,5 +241,5 @@
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "Selected current native Scene6/SceneBase/Scene1/Minagi source and header consumers compared against PE functions; 27 selected, no full replay."
+  "latest_selected_replay": "Selected 28 strict original function comparisons after typed Scene6 number and Input::keyboard friendship; no cold replay"
 }
