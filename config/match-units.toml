@@ -166207,3 +166207,27 @@ type = "REL32"
 symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
 target = 0x00409a90
 evidence = "original PE 0x00774ACD Video::DrawSurface native 233-byte results number glyph owner"
+
+[units.scene9-keyboard]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Scene9Keyboard.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene9-keyboard/Scene9Keyboard.obj"
+symbol = "?PollKeyboard@Scene9@@UAEXXZ"
+target_address = 0x00775750
+size = 187
+
+[[units.scene9-keyboard.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "Original PE Scene9::PollKeyboard 0x0077575A load of pinned VC7.1 GS cookie"
+
+[[units.scene9-keyboard.relocations]]
+offset = 179
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "Original PE 0x00775803 Scene9 guard cookie validator call, 187-byte function"

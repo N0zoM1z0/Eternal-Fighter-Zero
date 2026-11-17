@@ -19,6 +19,7 @@ class Input {
     friend class Scene3;
     friend class Scene6;
     friend class Scene8;
+    friend class Scene9;
     friend BOOL CALLBACK EnumerateInputDevice(const DIDEVICEINSTANCEA *, void *);
 public:
     Input();

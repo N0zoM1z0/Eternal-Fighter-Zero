@@ -515,3 +515,4 @@ address,name,source,symbol,status,evidence
 0x00771400,Scene9::~Scene9,src/Scene9Destructor.cpp,??1Scene9@@QAE@XZ,complete,docs/evidence/scene9-destructor-exact.json
 0x007712F0,Scene9::Scene9,src/Scene9Constructor.cpp,??0Scene9@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z,complete,docs/evidence/scene9-constructor-exact.json
 0x00774A10,Scene9::DrawResultNumber,src/Scene9Number.cpp,?DrawResultNumber@Scene9@@QAEXHHI@Z,complete,docs/evidence/scene9-result-number-exact.json
+0x00775750,Scene9::PollKeyboard,src/Scene9Keyboard.cpp,?PollKeyboard@Scene9@@UAEXXZ,complete,docs/evidence/scene9-keyboard-exact.json

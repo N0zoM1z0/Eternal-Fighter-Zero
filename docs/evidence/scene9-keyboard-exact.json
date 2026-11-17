@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "authority": "Full 187-byte original-PE versus natural C++ VC7.1 exact codegen comparison",
+  "method": "Focused /Od /G6 /MT /Gy /GS /W3 compilation, strict comparison of all native bytes with two independently target-bound security relocations; no all-unit cold replay",
+  "owner": "Scene9::PollKeyboard winner/results scene input exit",
+  "native_extent": {
+    "address": "0x00775750",
+    "exclusive_end": "0x0077580B",
+    "bytes": 187
+  },
+  "original_vtable": {
+    "address": "0x00789874",
+    "keyboard_slot": "0x00775750"
+  },
+  "behavior": "Poll 256 DirectInput bytes, reacquire on DIERR_INPUTLOST, mark scene exit on ESC and clear Context playerFlag1378[0].",
+  "source_contains_asm_or_padding": false,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 187,
+      "matched_bytes": 187,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "Original PE Scene9::PollKeyboard 0x0077575A load of pinned VC7.1 GS cookie",
+          "addend": 0
+        },
+        {
+          "offset": 179,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "Original PE 0x00775803 Scene9 guard cookie validator call, 187-byte function",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "7f374392d153af55a1723df25e9e73875b227ee2ac87b845ebada98cc340ac96",
+      "target_extent_sha256": "7f374392d153af55a1723df25e9e73875b227ee2ac87b845ebada98cc340ac96",
+      "unit": "scene9-keyboard",
+      "symbol": "?PollKeyboard@Scene9@@UAEXXZ",
+      "target_address": "0x00775750",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a399ddc65fe6494e3c02500ae16084082f2d1037e934845e61ed401961d53f66",
+      "object_sha256": "e8b4f399ae804da43caddb19c6122fc29d2abe8b9ab41763d4b84beb075fb489",
+      "source_sha256": "7bf6766cf51f56c51c8d36167a057f77d37bac1e7e930d526acab3206dbc2389",
+      "dependencies": {
+        "src/Engine.h": "d95e3268f4466e1719ee247c5c9818488fe2f5e2085ed713e032f16c8c62cf2f",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "5ebac023bad110f762a16634884897cc50f9291c5a55bd203a02ef60bf635054",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b4a4f95a272355a5ba627e8efc55ec6ffe993b2eaaff7bfdbf842e84ccf98eb3",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
