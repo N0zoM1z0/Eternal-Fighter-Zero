@@ -1642,7 +1642,8 @@ comparisons. Early CPU-state gates also use the native unsigned `0x31`/`0x96`
 boundary comparisons. State-0x11 aerial gates now use nested positive
 short-circuit predicates that preserve native x87 branch polarity. The
 vertical-position tests retain the native operand order and unordered cases.
-The state-0x11 inverse vertical-decision predicate now preserves the `20`,
+The state-0xc9 lock fallback now uses `!(lockFrames > 0x3c)` to retain the
+native `cmp 0x3c` / `jg` branch. The state-0x11 inverse vertical-decision predicate now preserves the `20`,
 `84`, and `90` thresholds and its native early-exit path. The state-0x21 cancel-roll branch now uses the native
 positive `RandomRange(0, 100) < 0x32` guard before selecting state 6. The 0xcb follow-up now uses the positive
 `distance.forward < 120` branch so unordered x87 values keep native command 0x1f. The grounded movement branch

@@ -727,7 +727,7 @@ kanna_state11_deeper:
                   }
                   if (((((*opponentSlot)->positionY < 0.0) &&
                        (field3110 < 300)) && (attackCollisionResult == 3)) &&
-                     ((*opponentSlot)->airActionLockFrames <= 0x3c)) {
+                     (!((*opponentSlot)->airActionLockFrames > 0x3c))) {
                     field3114 = 0x1e;
                     return;
                   }

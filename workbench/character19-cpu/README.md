@@ -11,12 +11,13 @@ shorter than native) with the original `0xCC` stack frame and matching entry
 prologue. It is a strong work-in-progress, **not Exact**. The large guard/AI
 gate is expressed as a natural early command return, with signed-byte tests,
 exact opponent-state boundaries, unsigned RNG promotions, and signed
-air-action lock tests normalized to `<= 0` to recover native `TEST/JG`, and
+air-action lock tests normalized to native `TEST/JG` boundaries, and
 velocity-sign tests use the operand order emitted by the native x87 compare. Targeted
 instruction alignment reports 4,124 of 4,439 candidate instructions aligned
 with native order/semantics. The native x87 unordered-compare paths are preserved with explicit negated
 relational tests where the native branches treat unordered values as true;
-`positionY == 0.0` remains a true equality test.
+`positionY == 0.0` remains a true equality test. The state-0xc9 lock fallback
+uses `!(lockFrames > 0x3c)` to retain the native `cmp 0x3c` / `jg` branch.
 The state-0x11 aerial decision tree now has explicit native-order short-circuit
 branches and early exits, with unordered-aware x87 relational expressions and
 exact signed/unsigned byte/word bounds. Remaining
