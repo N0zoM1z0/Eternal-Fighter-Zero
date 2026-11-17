@@ -1,875 +1,882 @@
 {
-  "result": "exact",
-  "size": 11584,
-  "matched_bytes": 11584,
-  "difference_count": 0,
-  "first_differences": [],
-  "relocations": [
-    {
-      "offset": 135,
-      "target": 7896112,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@407f400000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703DC7 binds __real@407f400000000000 to 0x00787C30.",
-      "addend": 0
-    },
-    {
-      "offset": 305,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703E71 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 326,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703E86 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 432,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703EF0 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 565,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703F75 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 679,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703FE7 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 820,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704074 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 948,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007040F4 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 1088,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704180 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 1231,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070420F binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 1371,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070429B binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 1485,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070430D binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 1610,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070438A binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 1738,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070440A binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 1862,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704486 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 2006,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704516 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 2131,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704593 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 2195,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007045D3 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 2369,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704681 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 2433,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007046C1 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 2608,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704770 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 2672,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007047B0 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 2846,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070485E binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 2894,
-      "target": 7896112,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@407f400000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070488E binds __real@407f400000000000 to 0x00787C30.",
-      "addend": 0
-    },
-    {
-      "offset": 2981,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007048E5 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 3100,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070495C binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 3210,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007049CA binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 3329,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704A41 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 3424,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704AA0 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 3543,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704B17 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 3591,
-      "target": 7896112,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@407f400000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704B47 binds __real@407f400000000000 to 0x00787C30.",
-      "addend": 0
-    },
-    {
-      "offset": 3675,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704B9B binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 3800,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704C18 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 3907,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704C83 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 4031,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704CFF binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 4123,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704D5B binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 4247,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704DD7 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 4438,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704E96 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 4630,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704F56 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 4821,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705015 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 5013,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007050D5 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 5204,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705194 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 5396,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705254 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 5444,
-      "target": 7896112,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@407f400000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705284 binds __real@407f400000000000 to 0x00787C30.",
-      "addend": 0
-    },
-    {
-      "offset": 5544,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007052E8 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 5668,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705364 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 5775,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007053CF binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 5916,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070545C binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 6008,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007054B8 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 6148,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705544 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 6223,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070558F binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 6303,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007055DF binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 6333,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007055FD binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 6458,
-      "target": 7896624,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@c03e000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070567A binds __real@c03e000000000000 to 0x00787E30.",
-      "addend": 0
-    },
-    {
-      "offset": 6614,
-      "target": 4253232,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705716 binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630.",
-      "addend": 0
-    },
-    {
-      "offset": 6721,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705781 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 6751,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070579F binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 7006,
-      "target": 4253232,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070589E binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630.",
-      "addend": 0
-    },
-    {
-      "offset": 7072,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007058E0 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 7188,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705954 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 7218,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705972 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 7408,
-      "target": 4253232,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705A30 binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630.",
-      "addend": 0
-    },
-    {
-      "offset": 7494,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705A86 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 7524,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705AA4 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 7711,
-      "target": 4253232,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705B5F binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630.",
-      "addend": 0
-    },
-    {
-      "offset": 7844,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705BE4 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 7987,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705C73 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 8188,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705D3C binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 8238,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705D6E binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 8407,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705E17 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 8632,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705EF8 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 8857,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705FD9 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 8976,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706050 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 9026,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706082 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 9195,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070612B binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 9421,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070620D binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 9601,
-      "target": 7896640,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@c051800000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007062C1 binds __real@c051800000000000 to 0x00787E40.",
-      "addend": 0
-    },
-    {
-      "offset": 9631,
-      "target": 7896632,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@4051800000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007062DF binds __real@4051800000000000 to 0x00787E38.",
-      "addend": 0
-    },
-    {
-      "offset": 9709,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070632D binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 9885,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007063DD binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 10004,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706454 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 10054,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706486 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 10131,
-      "target": 7894472,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@c059000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007064D3 binds __real@c059000000000000 to 0x007875C8.",
-      "addend": 0
-    },
-    {
-      "offset": 10165,
-      "target": 7894480,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@4059000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007064F5 binds __real@4059000000000000 to 0x007875D0.",
-      "addend": 0
-    },
-    {
-      "offset": 10193,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706511 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 10407,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007065E7 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 10619,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007066BB binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 10787,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706763 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 11013,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706845 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 11116,
-      "target": 7896624,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@c03e000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007068AC binds __real@c03e000000000000 to 0x00787E30.",
-      "addend": 0
-    },
-    {
-      "offset": 11150,
-      "target": 7896456,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@403e000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007068CE binds __real@403e000000000000 to 0x00787D88.",
-      "addend": 0
-    },
-    {
-      "offset": 11175,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007068E7 binds __real@0000000000000000 to 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 11394,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007069C2 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
-    },
-    {
-      "offset": 11567,
-      "target": 4256112,
-      "type": "REL32",
-      "type_id": 20,
-      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
-      "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706A6F binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
-      "addend": 0
+  "schema_version": 1,
+  "authority": "Complete original native EFZ.exe function codegen verified with pinned VC7.1 normal COFF and independently bound relocations",
+  "method": "Fresh, selected-unit-only /Od /G6 /MT /Gy /W3 compile and strict original PE byte comparison; no whole-game build or cold replay. A codegen Exact claim does not assert whole product or runtime closure.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 11584,
+      "matched_bytes": 11584,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 135,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703DC7 binds __real@407f400000000000 to 0x00787C30.",
+          "addend": 0
+        },
+        {
+          "offset": 305,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703E71 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 326,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703E86 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 432,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703EF0 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 565,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703F75 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 679,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00703FE7 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 820,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704074 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 948,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007040F4 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 1088,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704180 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 1231,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070420F binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 1371,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070429B binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 1485,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070430D binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 1610,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070438A binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 1738,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070440A binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 1862,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704486 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 2006,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704516 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 2131,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704593 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 2195,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007045D3 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 2369,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704681 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 2433,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007046C1 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 2608,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704770 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 2672,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007047B0 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 2846,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070485E binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 2894,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070488E binds __real@407f400000000000 to 0x00787C30.",
+          "addend": 0
+        },
+        {
+          "offset": 2981,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007048E5 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 3100,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070495C binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 3210,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007049CA binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 3329,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704A41 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 3424,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704AA0 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 3543,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704B17 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 3591,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704B47 binds __real@407f400000000000 to 0x00787C30.",
+          "addend": 0
+        },
+        {
+          "offset": 3675,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704B9B binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 3800,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704C18 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 3907,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704C83 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 4031,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704CFF binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 4123,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704D5B binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 4247,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704DD7 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 4438,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704E96 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 4630,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00704F56 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 4821,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705015 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 5013,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007050D5 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 5204,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705194 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 5396,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705254 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 5444,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705284 binds __real@407f400000000000 to 0x00787C30.",
+          "addend": 0
+        },
+        {
+          "offset": 5544,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007052E8 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 5668,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705364 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 5775,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007053CF binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 5916,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070545C binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 6008,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007054B8 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 6148,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705544 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 6223,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070558F binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 6303,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007055DF binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 6333,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007055FD binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 6458,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070567A binds __real@c03e000000000000 to 0x00787E30.",
+          "addend": 0
+        },
+        {
+          "offset": 6614,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705716 binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630.",
+          "addend": 0
+        },
+        {
+          "offset": 6721,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705781 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 6751,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070579F binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 7006,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070589E binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630.",
+          "addend": 0
+        },
+        {
+          "offset": 7072,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007058E0 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 7188,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705954 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 7218,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705972 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 7408,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705A30 binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630.",
+          "addend": 0
+        },
+        {
+          "offset": 7494,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705A86 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 7524,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705AA4 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 7711,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705B5F binds ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630.",
+          "addend": 0
+        },
+        {
+          "offset": 7844,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705BE4 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 7987,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705C73 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 8188,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705D3C binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 8238,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705D6E binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 8407,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705E17 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 8632,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705EF8 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 8857,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00705FD9 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 8976,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706050 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 9026,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706082 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 9195,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070612B binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 9421,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070620D binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 9601,
+          "target": 7896640,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c051800000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007062C1 binds __real@c051800000000000 to 0x00787E40.",
+          "addend": 0
+        },
+        {
+          "offset": 9631,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007062DF binds __real@4051800000000000 to 0x00787E38.",
+          "addend": 0
+        },
+        {
+          "offset": 9709,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x0070632D binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 9885,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007063DD binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 10004,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706454 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 10054,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706486 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 10131,
+          "target": 7894472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c059000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007064D3 binds __real@c059000000000000 to 0x007875C8.",
+          "addend": 0
+        },
+        {
+          "offset": 10165,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007064F5 binds __real@4059000000000000 to 0x007875D0.",
+          "addend": 0
+        },
+        {
+          "offset": 10193,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706511 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 10407,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007065E7 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 10619,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007066BB binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 10787,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706763 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 11013,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706845 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 11116,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007068AC binds __real@c03e000000000000 to 0x00787E30.",
+          "addend": 0
+        },
+        {
+          "offset": 11150,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007068CE binds __real@403e000000000000 to 0x00787D88.",
+          "addend": 0
+        },
+        {
+          "offset": 11175,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007068E7 binds __real@0000000000000000 to 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 11394,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x007069C2 binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        },
+        {
+          "offset": 11567,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original Akane Character02 vtable slot 4 at 0x00788EC0 selects [0x00703D40,0x00706A80); native operand at 0x00706A6F binds ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170.",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "4487a9f0e2ddb4b7977969c72c157052a237077d97ab62b2306af559cf0427b7",
+      "target_extent_sha256": "4487a9f0e2ddb4b7977969c72c157052a237077d97ab62b2306af559cf0427b7",
+      "unit": "character-02-slot04",
+      "symbol": "?Slot04@Character02@@UAEXXZ",
+      "target_address": "0x00703D40",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "fafa95e517a3ce97e0d328883b6f5aba28d14ab1ce6e9d5d73eab59d8abcc218",
+      "object_sha256": "a2b3572858ddf0a449dad9a3e50f83685d831ba2c8ad4195b5a417bf2f879512",
+      "source_sha256": "a93cbe74db42f3e8652331d9a6f6b968c4044a38969810e222dc3e0620da3423",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "32850848399757ae28d612efdb4deef153f07a8d4bbe4ff2a29ab97c449f144e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "bf0bd47d796f3d6e2fcd779b9d1d366f54e6f62fc7d1a6a2550894e1b2233dfa",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c4d287c7716ac7d8c331f9b5d60a50632e16da479d50a865baeaf5a4fe0a6383",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
     }
-  ],
-  "relocated_sha256": "4487a9f0e2ddb4b7977969c72c157052a237077d97ab62b2306af559cf0427b7",
-  "target_extent_sha256": "4487a9f0e2ddb4b7977969c72c157052a237077d97ab62b2306af559cf0427b7",
-  "unit": "character-02-slot04",
-  "symbol": "?Slot04@Character02@@UAEXXZ",
-  "target_address": "0x00703D40",
-  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-  "boundary_ledger_sha256": "0c41d688cd4dcc15481c0a8a6b7ae3f3f6ae377395a3d28ccf79e371349f2f1b",
-  "object_sha256": "f551aeb626ab88454d171746afc1044fb4be58655050302e1b250eeb76982ea1",
-  "source_sha256": "a93cbe74db42f3e8652331d9a6f6b968c4044a38969810e222dc3e0620da3423",
-  "dependencies": {
-    "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
-    "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-    "src/CharacterViews.h": "32850848399757ae28d612efdb4deef153f07a8d4bbe4ff2a29ab97c449f144e"
-  },
-  "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-  "units_manifest_sha256": "955a7253ce2ff89975fc67539b49e94316959207da05eab27dd23e572557f66d",
-  "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-  "unit_sha256": "c4d287c7716ac7d8c331f9b5d60a50632e16da479d50a865baeaf5a4fe0a6383",
-  "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
-  "acceptance_authority": "complete-function-codegen"
+  ]
 }

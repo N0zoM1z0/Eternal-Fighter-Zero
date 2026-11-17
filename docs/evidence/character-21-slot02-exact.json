@@ -1,47 +1,54 @@
 {
-  "result": "exact",
-  "size": 5314,
-  "matched_bytes": 5314,
-  "difference_count": 0,
-  "first_differences": [],
-  "relocations": [
+  "schema_version": 1,
+  "authority": "Complete original native EFZ.exe function codegen verified with pinned VC7.1 normal COFF and independently bound relocations",
+  "method": "Fresh, selected-unit-only /Od /G6 /MT /Gy /W3 compile and strict original PE byte comparison; no whole-game build or cold replay. A codegen Exact claim does not assert whole product or runtime closure.",
+  "reports": [
     {
-      "offset": 1929,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Minagi vtable slot2 0x00788948 selects [0x005AD550,0x005AEA12); native operand 0x005ADCD9 binds 8-byte 0.0 double at 0x007872F8.",
-      "addend": 0
-    },
-    {
-      "offset": 2070,
-      "target": 7893752,
-      "type": "DIR32",
-      "type_id": 6,
-      "symbol": "__real@0000000000000000",
-      "evidence": "Original Minagi vtable slot2 0x00788948 selects [0x005AD550,0x005AEA12); native operand 0x005ADD66 binds 8-byte 0.0 double at 0x007872F8.",
-      "addend": 0
+      "result": "exact",
+      "size": 5314,
+      "matched_bytes": 5314,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 1929,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Minagi vtable slot2 0x00788948 selects [0x005AD550,0x005AEA12); native operand 0x005ADCD9 binds 8-byte 0.0 double at 0x007872F8.",
+          "addend": 0
+        },
+        {
+          "offset": 2070,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original Minagi vtable slot2 0x00788948 selects [0x005AD550,0x005AEA12); native operand 0x005ADD66 binds 8-byte 0.0 double at 0x007872F8.",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "746d603a6a2b80286c4e87251c231d225cd0aaa76411d40f0b60e074d4ba6d30",
+      "target_extent_sha256": "746d603a6a2b80286c4e87251c231d225cd0aaa76411d40f0b60e074d4ba6d30",
+      "unit": "character-21-slot02",
+      "symbol": "?Slot02@Character21@@UAEXXZ",
+      "target_address": "0x005AD550",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "fafa95e517a3ce97e0d328883b6f5aba28d14ab1ce6e9d5d73eab59d8abcc218",
+      "object_sha256": "033ddfe154df506ba0a339fb69a7096f3530ce43877f431bffb551c1e69322bc",
+      "source_sha256": "8ab5b1f6aefc994f1d47fce254e72d39603291ce84fd5b616271629ec4c76383",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "32850848399757ae28d612efdb4deef153f07a8d4bbe4ff2a29ab97c449f144e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "bf0bd47d796f3d6e2fcd779b9d1d366f54e6f62fc7d1a6a2550894e1b2233dfa",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "d33888985ccb06c23fa7a1ebbead31199f08c37106006d9c6dcc292e62969096",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
     }
-  ],
-  "relocated_sha256": "746d603a6a2b80286c4e87251c231d225cd0aaa76411d40f0b60e074d4ba6d30",
-  "target_extent_sha256": "746d603a6a2b80286c4e87251c231d225cd0aaa76411d40f0b60e074d4ba6d30",
-  "unit": "character-21-slot02",
-  "symbol": "?Slot02@Character21@@UAEXXZ",
-  "target_address": "0x005AD550",
-  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-  "boundary_ledger_sha256": "fafa95e517a3ce97e0d328883b6f5aba28d14ab1ce6e9d5d73eab59d8abcc218",
-  "object_sha256": "1862660826ad057c56f7a898cf450c8062e8dd395fdaf9e2b411cd47dc918bba",
-  "source_sha256": "8ab5b1f6aefc994f1d47fce254e72d39603291ce84fd5b616271629ec4c76383",
-  "dependencies": {
-    "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
-    "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-    "src/CharacterViews.h": "32850848399757ae28d612efdb4deef153f07a8d4bbe4ff2a29ab97c449f144e"
-  },
-  "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-  "units_manifest_sha256": "1922a8da3631df3ba61880b7665692cad41673c4400283016be45445f921351a",
-  "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-  "unit_sha256": "d33888985ccb06c23fa7a1ebbead31199f08c37106006d9c6dcc292e62969096",
-  "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
-  "acceptance_authority": "complete-function-codegen"
+  ]
 }
