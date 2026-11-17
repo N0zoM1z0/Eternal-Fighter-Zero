@@ -189,14 +189,14 @@
       "target_address": "0x00775D60",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "9684496eea28ef6da16ca76e0976c478b440ddc318b39432c3be7f7b6588ceb0",
-      "object_sha256": "22985178e2e6434da9cdff3f52b40dba7cbb462496f20c281966703458912fb0",
+      "object_sha256": "0429b7cab47e51282da6a1fc7fe2843c71fc89a9ba5967af0952095248f91f21",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "dd776e47b9051f76a63b644fe340c97c5905708a7972eb56db45015f03c5a4ab",
+        "src/Engine.h": "a94126d42edf736dc35fbe373f1cb336c097a535718c4a840e1f8e749f30ddcd",
         "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "d939db221e598073844fa9fe6af0ba0c4373d4fe7ccfee17524bacea81647b75",
+      "units_manifest_sha256": "fe4ea6e07d013db93d1f909b4d6b4d99a805859e20b5f290d4edd712ef4bedd2",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "8fac009d2bcf6b3f1e71668eb9ebc339784fe58b9a9acac81ab370f698670d11",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -226,14 +226,14 @@
       "target_address": "0x00775F30",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "9684496eea28ef6da16ca76e0976c478b440ddc318b39432c3be7f7b6588ceb0",
-      "object_sha256": "4bd5ffabfe3bd1f1bde01fc42184d1c95a2f41a8df6a927e6a0a49dba0705528",
+      "object_sha256": "0702e6ec20fd603a18f09ea2c5c4b039ef7076aee6ae72fbc50bc833af1acbfb",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "dd776e47b9051f76a63b644fe340c97c5905708a7972eb56db45015f03c5a4ab",
+        "src/Engine.h": "a94126d42edf736dc35fbe373f1cb336c097a535718c4a840e1f8e749f30ddcd",
         "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "d939db221e598073844fa9fe6af0ba0c4373d4fe7ccfee17524bacea81647b75",
+      "units_manifest_sha256": "fe4ea6e07d013db93d1f909b4d6b4d99a805859e20b5f290d4edd712ef4bedd2",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "93e8d7812f60fa570ae04da14ec500269c74d342007b09ed3c6a6ce37dd2683b",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -314,7 +314,7 @@
           "target": 7824519,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61405",
+          "symbol": "$L61410",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1239,
           "addend": 0
@@ -441,7 +441,7 @@
           "target": 7823849,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61356",
+          "symbol": "$L61361",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 569,
           "addend": 0
@@ -451,7 +451,7 @@
           "target": 7823976,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61357",
+          "symbol": "$L61362",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 696,
           "addend": 0
@@ -461,7 +461,7 @@
           "target": 7824099,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61358",
+          "symbol": "$L61363",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 819,
           "addend": 0
@@ -471,7 +471,7 @@
           "target": 7824210,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61359",
+          "symbol": "$L61364",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 930,
           "addend": 0
@@ -481,7 +481,7 @@
           "target": 7824337,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61360",
+          "symbol": "$L61365",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1057,
           "addend": 0
@@ -491,7 +491,7 @@
           "target": 7824434,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61361",
+          "symbol": "$L61366",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1154,
           "addend": 0
@@ -501,7 +501,7 @@
           "target": 7824479,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61362",
+          "symbol": "$L61367",
           "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1199,
           "addend": 0
@@ -524,16 +524,16 @@
       "target_address": "0x00775FB0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "9684496eea28ef6da16ca76e0976c478b440ddc318b39432c3be7f7b6588ceb0",
-      "object_sha256": "1cd7c301a428de0f3128bdf8926326041f6d4863616d1ec1f3f1833b32bc4d49",
+      "object_sha256": "07b936b941b91404621c0f91d2b6d0409dce5b79e914cfb715f924864709e094",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "dd776e47b9051f76a63b644fe340c97c5905708a7972eb56db45015f03c5a4ab",
+        "src/Engine.h": "a94126d42edf736dc35fbe373f1cb336c097a535718c4a840e1f8e749f30ddcd",
         "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "d939db221e598073844fa9fe6af0ba0c4373d4fe7ccfee17524bacea81647b75",
+      "units_manifest_sha256": "fe4ea6e07d013db93d1f909b4d6b4d99a805859e20b5f290d4edd712ef4bedd2",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "f48e4e3ecc8aa61c010fbec1669c95846127e62fcc1dfc002b9e2ee67d4f6950",
+      "unit_sha256": "931b6f5b337407ef67898d946000d3f7ac4842a9838b4af1010664df773b551e",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -642,14 +642,14 @@
       "target_address": "0x007764B0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "9684496eea28ef6da16ca76e0976c478b440ddc318b39432c3be7f7b6588ceb0",
-      "object_sha256": "e672daf80338ff8392744ea1fd657a73974df8817a7e0717191c04ee093943dd",
+      "object_sha256": "3d9e7a02b5d7c2f719cc90eebbf838d4f3ea16cc9dea99e14579cfa87d055b5c",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "dd776e47b9051f76a63b644fe340c97c5905708a7972eb56db45015f03c5a4ab",
+        "src/Engine.h": "a94126d42edf736dc35fbe373f1cb336c097a535718c4a840e1f8e749f30ddcd",
         "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "d939db221e598073844fa9fe6af0ba0c4373d4fe7ccfee17524bacea81647b75",
+      "units_manifest_sha256": "fe4ea6e07d013db93d1f909b4d6b4d99a805859e20b5f290d4edd712ef4bedd2",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "69555dc91e462ff4efe134dfccec1546e5dcbd255726a2304357db5c2aeb3b97",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -697,19 +697,19 @@
       "target_address": "0x00776760",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
       "boundary_ledger_sha256": "9684496eea28ef6da16ca76e0976c478b440ddc318b39432c3be7f7b6588ceb0",
-      "object_sha256": "784b679b3d2a9b380568e58e18ec5e5d4796ecd9cfcbbf65d1b374abca245752",
+      "object_sha256": "6296ac9dbfbfd6fdff9f095258af8a4ac28c21ad4937246686654420d2de2e6c",
       "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
       "dependencies": {
-        "src/Engine.h": "dd776e47b9051f76a63b644fe340c97c5905708a7972eb56db45015f03c5a4ab",
+        "src/Engine.h": "a94126d42edf736dc35fbe373f1cb336c097a535718c4a840e1f8e749f30ddcd",
         "src/Input.h": "2658f9b7c667fcdd0b45838f25dc4c2842a017fe79a07a13813bf4507263e448"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "d939db221e598073844fa9fe6af0ba0c4373d4fe7ccfee17524bacea81647b75",
+      "units_manifest_sha256": "fe4ea6e07d013db93d1f909b4d6b4d99a805859e20b5f290d4edd712ef4bedd2",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "f6a3cdc6844ff76853a53b24546733a826f1772931fed8e86f14299886b37c13",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "Selected native PE proof after typed Scene6 preview assets: 29 directly relevant normal COFF functions recompiled (no full cold replay). Scene0 and Scene1 switch label changes accepted only after individual compiler-local target offsets and 1267/6928 complete code+table bytes were proven identical."
+  "latest_selected_replay": "29 selected normal VC7.1 function builds verified against complete original PE extents after typed Scene6 backdrop fields at +0x444/+0x44d/+0x758. 14 autogenerated local-table $L symbols rebound only after exact native target offset comparison. Full cold replay not executed."
 }
