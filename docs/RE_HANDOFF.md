@@ -5,41 +5,31 @@ come from [PROGRESS.md](PROGRESS.md) and the canonical ledgers. Search the
 relevant sections of [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md) for target facts
 and failed hypotheses. Inspect current Git changes before starting.
 
-## Scene8 replay browser initialization accepted — 2026-11-17
+## Scene8 replay browser native owners accepted — 2026-11-17
 
-`Scene8::PrepareReplayList` at `0x00770E30` is strict Exact for the complete
-**820-byte** native function with **29 individually original-bound COFF
-relocations**, source `src/Scene8PrepareReplayList.cpp`. It initializes the
-9x9 replay filename/availability grid, reads two stored character IDs per
-existing file, resets menu state, and preserves the original packed/bitmap
-palette paths.
+All eight reviewed Scene8 owners now have selected strict Exact receipts,
+**11,823/11,823 bytes total** (11,803 code + the 20-byte native Step switch
+table), and **173 independently original-bound COFF relocations**:
 
-The replay-browser state boss `Scene8::Step` at `0x0076F060` is also **strict
-Exact for 1,820/1,820 bytes** (1,800 native code plus 20 original five-entry
-switch-table bytes), with **30 original-bound COFF relocations including six
-compiler-local labels**. Its natural source lives at `src/Scene8Step.cpp`.
-The menu-selection/record-overwrite branch ordering, signed submenu threshold,
-compound byte arithmetic and original held-input Boolean lifetime yield the
-native 490-instruction body and 0x18 stack frame without ASM or padding.
+- `Scene8::Scene8` constructor at `0x0076E480`: 2,905 bytes, 40 relocations;
+  original DAT/BMP alternatives, menus and 19 meaningful sprite rectangles
+- `Scene8::Slot0` renderer at `0x0076F780`: 5,619 bytes, 61 relocations;
+  33 real `MakeSurfaceRect` calls, 14 draws, two cosine easing branches,
+  character thumbnails, overwrite panel and nine-row replay grid
+- `Scene8::Step` at `0x0076F060`: 1,820 bytes, 30 relocations; complete
+  five-way selection/record state machine with original 20-byte switch data
+- `Scene8::PrepareReplayList` at `0x00770E30`: 820 bytes, 29 relocations;
+  scans 9x9 replay filenames and reads recorded character pairs
+- Original destructor (118 bytes), keyboard owner (171 bytes) and two
+  185-byte palette fade owners remain exact, including their 13 relocations
 
-`Scene8::Scene8` at `0x0076E480` is strict Exact for **2,905/2,905**
-native bytes with **40 original-bound relocations**, including 19 normal
-`MakeSurfaceRect` calls, eight distinct resource strings, and original DAT/BMP
-alternatives. Accepted source: `src/Scene8Constructor.cpp`.
-
-The other substantial Scene8 boss, `Scene8::Slot0` renderer at `0x0076F780`,
-is also strict Exact: **5,619/5,619 bytes**, **61 independently bound COFF
-relocations**, with 33 native rectangle constructors, 14 DrawSurface calls,
-actual cos/ftol2 math, and a 0x454-byte stack frame. The source is
-`src/Scene8Render.cpp`. Its real local `RenderWork` structure recovers the
-original shared source/destination rectangle allocation, not ASM or padding.
-The original UI shows background, menu choices, replay-slot thumbnails and
-cosine-eased scrolling. The two stored character IDs are signed `char` in the
-shared native `Scene8` layout. After that signedness correction, all seven
-other accepted Scene8 functions were individually rebuilt and remained Exact.
-Together the eight accepted Scene8 owners contribute **11,823 exact bytes**
-and **173 independently original-bound relocations**. No all-unit cold replay
-was run; this does not imply whole-product closure.
+The main accepted sources are `src/Scene8Constructor.cpp`, `src/Scene8Render.cpp`,
+`src/Scene8Step.cpp` and `src/Scene8PrepareReplayList.cpp`; canonical receipts
+are under `docs/evidence/scene8-*-exact.json`. Typed member offsets, including
+signed replay-character digits, are in `src/Engine.h`. Real source/header
+changes were followed by selected native recompilation and strict comparison
+of all seven other affected owners, with updated authentic proof receipts.
+No ASM, padding, stale hash manipulation or all-unit cold replay was used.
 
 ## Scene9 results bosses accepted — 2026-11-17
 
