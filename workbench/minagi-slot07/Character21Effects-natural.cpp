@@ -232,14 +232,12 @@ void Character21::Slot07()
                 effects[effectIndex].flag0048 = -1;
               }
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].frame = 0;
               }
             }
@@ -448,17 +446,15 @@ void Character21::Slot07()
               effects[effectIndex].tick = 0;
             }
             else {
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 0x11) {
                   effects[effectIndex].frame = 8;
                 }
-                if (frameCount <= effects[effectIndex].frame) {
+                if (effects[effectIndex].frame >= frameCount) {
                   effects[effectIndex].frame = 0;
                   effects[effectIndex].type = 400;
                   field3148 = 0;
@@ -836,19 +832,17 @@ void Character21::Slot07()
             effects[effectIndex].tick = 0;
           }
           else {
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if ((effects[effectIndex].frame == 0xb) &&
                  (field3154[effectIndex] < 0)) {
                 effects[effectIndex].frame = 0;
                 field3154[effectIndex] = field3154[effectIndex] + 1;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].frame = 0;
                 effects[effectIndex].tick = 0;
                 effects[effectIndex].type = 400;
@@ -912,18 +906,16 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if (effects[effectIndex].frame == 7) {
                 effects[effectIndex].frame =
                      effects[effectIndex].frame + -2;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -971,18 +963,16 @@ void Character21::Slot07()
                   effects[effectIndex].vx = 0.0;
                   effects[effectIndex].x = 20.0;
                 }
-                effects[effectIndex].tick =
-                     (short)effects[effectIndex].tick + 1;
-                if (frameDuration <= effects[effectIndex].tick) {
+                ++effects[effectIndex].tick;
+                if (effects[effectIndex].tick >= frameDuration) {
                   effects[effectIndex].tick = 0;
-                  effects[effectIndex].frame =
-                       effects[effectIndex].frame + 1;
+                  ++effects[effectIndex].frame;
                   effects[effectIndex].field0080 = 0;
                   if (effects[effectIndex].frame == 0xc) {
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -2;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -1037,18 +1027,16 @@ void Character21::Slot07()
                   effects[effectIndex].vx = 0.0;
                   effects[effectIndex].x = 20.0;
                 }
-                effects[effectIndex].tick =
-                     (short)effects[effectIndex].tick + 1;
-                if (frameDuration <= effects[effectIndex].tick) {
+                ++effects[effectIndex].tick;
+                if (effects[effectIndex].tick >= frameDuration) {
                   effects[effectIndex].tick = 0;
-                  effects[effectIndex].frame =
-                       effects[effectIndex].frame + 1;
+                  ++effects[effectIndex].frame;
                   effects[effectIndex].field0080 = 0;
                   if (effects[effectIndex].frame == 0xc) {
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -2;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -1103,18 +1091,16 @@ void Character21::Slot07()
                   effects[effectIndex].vx = 0.0;
                   effects[effectIndex].x = 20.0;
                 }
-                effects[effectIndex].tick =
-                     (short)effects[effectIndex].tick + 1;
-                if (frameDuration <= effects[effectIndex].tick) {
+                ++effects[effectIndex].tick;
+                if (effects[effectIndex].tick >= frameDuration) {
                   effects[effectIndex].tick = 0;
-                  effects[effectIndex].frame =
-                       effects[effectIndex].frame + 1;
+                  ++effects[effectIndex].frame;
                   effects[effectIndex].field0080 = 0;
                   if (effects[effectIndex].frame == 0xc) {
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -2;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -1205,12 +1191,10 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if (effects[effectIndex].frame == 0xf) {
                 effects[effectIndex].frame =
@@ -1220,7 +1204,7 @@ void Character21::Slot07()
                 effects[effectIndex].frame =
                      effects[effectIndex].frame + -1;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -1304,12 +1288,10 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if (effects[effectIndex].frame == 0xf) {
                 effects[effectIndex].frame =
@@ -1319,7 +1301,7 @@ void Character21::Slot07()
                 effects[effectIndex].frame =
                      effects[effectIndex].frame + -1;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -1418,12 +1400,10 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if (effects[effectIndex].frame == 0xf) {
                 effects[effectIndex].frame =
@@ -1433,7 +1413,7 @@ void Character21::Slot07()
                 effects[effectIndex].frame =
                      effects[effectIndex].frame + -1;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -1493,18 +1473,16 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if (effects[effectIndex].frame == 0xf) {
                 effects[effectIndex].frame =
                      effects[effectIndex].frame + -4;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -1564,18 +1542,16 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if (effects[effectIndex].frame == 0xf) {
                 effects[effectIndex].frame =
                      effects[effectIndex].frame + -4;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -1635,18 +1611,16 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if (effects[effectIndex].frame == 0xf) {
                 effects[effectIndex].frame =
                      effects[effectIndex].frame + -4;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -1693,12 +1667,10 @@ void Character21::Slot07()
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 10) {
                   effects[effectIndex].field0084 = 99;
@@ -1728,7 +1700,7 @@ void Character21::Slot07()
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -2;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -1777,12 +1749,10 @@ void Character21::Slot07()
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 10) {
                   effects[effectIndex].field0084 = 99;
@@ -1812,7 +1782,7 @@ void Character21::Slot07()
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -2;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -1862,12 +1832,10 @@ void Character21::Slot07()
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 10) {
                   effects[effectIndex].field0084 = 99;
@@ -1897,7 +1865,7 @@ void Character21::Slot07()
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -2;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -1948,14 +1916,12 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -2024,12 +1990,10 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if ((effects[effectIndex].frame == 6) &&
                  (field3254[effectIndex] < 2)) {
@@ -2037,7 +2001,7 @@ void Character21::Slot07()
                      effects[effectIndex].frame + -4;
                 field3254[effectIndex] = field3254[effectIndex] + 1;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -2091,14 +2055,12 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -2167,12 +2129,10 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if ((effects[effectIndex].frame == 6) &&
                  (field3254[effectIndex] < 4)) {
@@ -2180,7 +2140,7 @@ void Character21::Slot07()
                      effects[effectIndex].frame + -4;
                 field3254[effectIndex] = field3254[effectIndex] + 1;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -2235,14 +2195,12 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -2311,12 +2269,10 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if ((effects[effectIndex].frame == 6) &&
                  (field3254[effectIndex] < 6)) {
@@ -2324,7 +2280,7 @@ void Character21::Slot07()
                      effects[effectIndex].frame + -4;
                 field3254[effectIndex] = field3254[effectIndex] + 1;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -2373,18 +2329,16 @@ void Character21::Slot07()
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 0xc) {
                   effects[effectIndex].frame =
                        effects[effectIndex].frame + -2;
                 }
-                if (frameCount <= effects[effectIndex].frame) {
+                if (effects[effectIndex].frame >= frameCount) {
                   effects[effectIndex].type = 400;
                   effects[effectIndex].frame = 0;
                   field3148 = 0;
@@ -2432,18 +2386,16 @@ void Character21::Slot07()
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 0xc) {
                   effects[effectIndex].frame =
                        effects[effectIndex].frame + -2;
                 }
-                if (frameCount <= effects[effectIndex].frame) {
+                if (effects[effectIndex].frame >= frameCount) {
                   effects[effectIndex].type = 400;
                   effects[effectIndex].frame = 0;
                   field3148 = 0;
@@ -2491,18 +2443,16 @@ void Character21::Slot07()
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 0xc) {
                   effects[effectIndex].frame =
                        effects[effectIndex].frame + -2;
                 }
-                if (frameCount <= effects[effectIndex].frame) {
+                if (effects[effectIndex].frame >= frameCount) {
                   effects[effectIndex].type = 400;
                   effects[effectIndex].frame = 0;
                   field3148 = 0;
@@ -2543,17 +2493,16 @@ void Character21::Slot07()
             effects[effectIndex].vx = 0.0;
             effects[effectIndex].x = 20.0;
           }
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
             if (effects[effectIndex].frame == 8) {
               effects[effectIndex].frame =
                    effects[effectIndex].frame + -2;
             }
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               effects[effectIndex].type = 400;
               effects[effectIndex].frame = 0;
               field3148 = 0;
@@ -2624,18 +2573,16 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if (effects[effectIndex].frame == 0xf) {
                 effects[effectIndex].frame =
                      effects[effectIndex].frame + -4;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -2706,18 +2653,16 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if (effects[effectIndex].frame == 0xf) {
                 effects[effectIndex].frame =
                      effects[effectIndex].frame + -4;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -2788,18 +2733,16 @@ void Character21::Slot07()
               effects[effectIndex].vx = 0.0;
               effects[effectIndex].x = 20.0;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if (effects[effectIndex].frame == 0xf) {
                 effects[effectIndex].frame =
                      effects[effectIndex].frame + -4;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 field3148 = 0;
@@ -2832,14 +2775,12 @@ void Character21::Slot07()
             field314c = 0;
           }
           else {
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].frame = 0;
                 if (field3354[effectIndex] < 1) {
                   field3354[effectIndex] = field3354[effectIndex] + 1;
@@ -2877,14 +2818,12 @@ void Character21::Slot07()
             field314c = 0;
           }
           else {
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].frame = 0;
                 if (field3354[effectIndex] < 2) {
                   field3354[effectIndex] = field3354[effectIndex] + 1;
@@ -2925,17 +2864,15 @@ void Character21::Slot07()
             field314c = 0;
           }
           else {
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               if ((effects[effectIndex].frame == 6) ||
                  (effects[effectIndex].frame == 0xc)) {
                 effects[effectIndex].field0080 = 0;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].frame = 0;
                 if (field3354[effectIndex] < 3) {
                   field3354[effectIndex] = field3354[effectIndex] + 1;
@@ -2956,17 +2893,15 @@ void Character21::Slot07()
             effects[effectIndex].tick = 0;
           }
           else {
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if (effects[effectIndex].frame == 0x18) {
                 effects[effectIndex].frame = 0;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 RemoveLocalEffect((short)effectIndex);
               }
             }
@@ -3153,12 +3088,10 @@ void Character21::Slot07()
             effects[effectIndex].tick = 0;
           }
           else {
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if ((effects[effectIndex].frame == 10) &&
                  (((effects[effectIndex].x < positionX &&
@@ -3169,7 +3102,7 @@ void Character21::Slot07()
                     effects[effectIndex].x - positionX)))))) {
                 effects[effectIndex].frame = 0;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].frame = 0;
                 effects[effectIndex].tick = 0;
                 effects[effectIndex].type = 400;
@@ -3219,12 +3152,10 @@ void Character21::Slot07()
               EmitLocalEffect(&spawn);
               field3354[effectIndex] = 0x15;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if ((effects[effectIndex].frame == 8) &&
                  (field3254[effectIndex] <
@@ -3234,7 +3165,7 @@ void Character21::Slot07()
                      effects[effectIndex].frame + -4;
                 field3254[effectIndex] = field3254[effectIndex] + 1;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 effects[effectIndex].tick = 0;
@@ -3270,13 +3201,12 @@ void Character21::Slot07()
             effects[effectIndex].tick = 0;
             effects[effectIndex].frame = 0x18;
           }
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
@@ -3306,13 +3236,12 @@ void Character21::Slot07()
             effects[effectIndex].tick = 0;
             effects[effectIndex].frame = 0x18;
           }
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
@@ -3342,13 +3271,12 @@ void Character21::Slot07()
             effects[effectIndex].tick = 0;
             effects[effectIndex].frame = 0x18;
           }
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
@@ -3378,13 +3306,12 @@ void Character21::Slot07()
             effects[effectIndex].tick = 0;
             effects[effectIndex].frame = 0x18;
           }
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
@@ -3432,12 +3359,10 @@ void Character21::Slot07()
               EmitLocalEffect(&spawn);
               field3354[effectIndex] = 0x12;
             }
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
               if ((effects[effectIndex].frame == 0x16) &&
                  (field3254[effectIndex] < 0x11)) {
@@ -3445,7 +3370,7 @@ void Character21::Slot07()
                      effects[effectIndex].frame + -6;
                 field3254[effectIndex] = field3254[effectIndex] + 1;
               }
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].type = 400;
                 effects[effectIndex].frame = 0;
                 effects[effectIndex].tick = 0;
@@ -3480,14 +3405,12 @@ void Character21::Slot07()
             }
           }
           if (effects[effectIndex].y <= 200.0) {
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].frame = 0;
               }
             }
@@ -3497,61 +3420,56 @@ void Character21::Slot07()
           }
           break;
         case 0x1c0:
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
           break;
         case 0x1c1:
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
           break;
         case 0x1c2:
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
           break;
         case 0x1c3:
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
           break;
         case 0x1c4:
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
@@ -3578,16 +3496,15 @@ void Character21::Slot07()
             ApplyDamage(1200,500.0);
             effects[effectIndex].vy = 0.0;
           }
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             if (effects[effectIndex].frame == 3) {
               effects[effectIndex].group = 1;
             }
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
@@ -3630,12 +3547,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 if ((3 < effects[effectIndex].frame) &&
                    (effects[effectIndex].frame < 9)) {
                   spawn.type = 0x1cf;
@@ -3668,7 +3583,7 @@ effects[effectIndex].frame <= 7 &&
                          effects[effectIndex].frame + -4;
                     field3154[effectIndex] = field3154[effectIndex] + 1;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -3717,12 +3632,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 if ((3 < effects[effectIndex].frame) &&
                    (effects[effectIndex].frame < 9)) {
                   frameDuration = RandomRange(0,100);
@@ -3757,7 +3670,7 @@ effects[effectIndex].frame <= 7 &&
                          effects[effectIndex].frame + -4;
                     field3154[effectIndex] = field3154[effectIndex] + 1;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -3806,12 +3719,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 if ((3 < effects[effectIndex].frame) &&
                    (effects[effectIndex].frame < 9)) {
                   frameDuration = RandomRange(0,100);
@@ -3847,7 +3758,7 @@ effects[effectIndex].frame <= 7 &&
                          effects[effectIndex].frame + -4;
                     field3154[effectIndex] = field3154[effectIndex] + 1;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -3896,12 +3807,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 if (((effects[effectIndex].frame == 1) ||
                     (effects[effectIndex].frame == 5)) ||
                    (effects[effectIndex].frame == 7)) {
@@ -3917,7 +3826,7 @@ effects[effectIndex].frame <= 7 &&
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -4;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -3965,12 +3874,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 if (((effects[effectIndex].frame == 1) ||
                     (effects[effectIndex].frame == 5)) ||
                    (effects[effectIndex].frame == 7)) {
@@ -3986,7 +3893,7 @@ effects[effectIndex].frame <= 7 &&
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -4;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -4035,12 +3942,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 if (((effects[effectIndex].frame == 1) ||
                     (effects[effectIndex].frame == 5)) ||
                    (effects[effectIndex].frame == 7)) {
@@ -4056,7 +3961,7 @@ effects[effectIndex].frame <= 7 &&
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -4;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -4105,12 +4010,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 10) {
                   effects[effectIndex].field0084 = 99;
@@ -4140,7 +4043,7 @@ effects[effectIndex].frame <= 7 &&
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -2;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -4189,12 +4092,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 10) {
                   effects[effectIndex].field0084 = 99;
@@ -4224,7 +4125,7 @@ effects[effectIndex].frame <= 7 &&
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -2;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -4274,12 +4175,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 10) {
                   effects[effectIndex].field0084 = 99;
@@ -4309,7 +4208,7 @@ effects[effectIndex].frame <= 7 &&
                     effects[effectIndex].frame =
                          effects[effectIndex].frame + -2;
                   }
-                  if (frameCount <= effects[effectIndex].frame) {
+                  if (effects[effectIndex].frame >= frameCount) {
                     effects[effectIndex].type = 400;
                     effects[effectIndex].frame = 0;
                     field3148 = 0;
@@ -4321,39 +4220,36 @@ effects[effectIndex].frame <= 7 &&
           break;
         case 0x1cf:
           effects[effectIndex].vx = 2.0;
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
           break;
         case 0x1d0:
           effects[effectIndex].vx = 2.5;
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
           break;
         case 0x1d1:
           effects[effectIndex].vx = 3.0;
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
@@ -4391,12 +4287,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 0xb) {
                   effects[effectIndex].field0084 = 99;
@@ -4407,7 +4301,7 @@ effects[effectIndex].frame <= 7 &&
                   effects[effectIndex].frame =
                        effects[effectIndex].frame + -2;
                 }
-                if (frameCount <= effects[effectIndex].frame) {
+                if (effects[effectIndex].frame >= frameCount) {
                   effects[effectIndex].type = 400;
                   effects[effectIndex].frame = 0;
                   field3148 = 0;
@@ -4449,12 +4343,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 0xb) {
                   effects[effectIndex].field0084 = 99;
@@ -4465,7 +4357,7 @@ effects[effectIndex].frame <= 7 &&
                   effects[effectIndex].frame =
                        effects[effectIndex].frame + -2;
                 }
-                if (frameCount <= effects[effectIndex].frame) {
+                if (effects[effectIndex].frame >= frameCount) {
                   effects[effectIndex].type = 400;
                   effects[effectIndex].frame = 0;
                   field3148 = 0;
@@ -4507,12 +4399,10 @@ effects[effectIndex].frame <= 7 &&
                 effects[effectIndex].vx = 0.0;
                 effects[effectIndex].x = 20.0;
               }
-              effects[effectIndex].tick =
-                   (short)effects[effectIndex].tick + 1;
-              if (frameDuration <= effects[effectIndex].tick) {
+              ++effects[effectIndex].tick;
+              if (effects[effectIndex].tick >= frameDuration) {
                 effects[effectIndex].tick = 0;
-                effects[effectIndex].frame =
-                     effects[effectIndex].frame + 1;
+                ++effects[effectIndex].frame;
                 effects[effectIndex].field0080 = 0;
                 if (effects[effectIndex].frame == 0xb) {
                   effects[effectIndex].field0084 = 99;
@@ -4529,7 +4419,7 @@ effects[effectIndex].frame <= 7 &&
                   effects[effectIndex].frame =
                        effects[effectIndex].frame + -2;
                 }
-                if (frameCount <= effects[effectIndex].frame) {
+                if (effects[effectIndex].frame >= frameCount) {
                   effects[effectIndex].type = 400;
                   effects[effectIndex].frame = 0;
                   field3148 = 0;
@@ -4557,13 +4447,12 @@ effects[effectIndex].frame <= 7 &&
             effects[effectIndex].vx = 0.0;
             effects[effectIndex].x = 20.0;
           }
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               effects[effectIndex].type = 400;
               effects[effectIndex].frame = 0;
               field3148 = 0;
@@ -4573,16 +4462,15 @@ effects[effectIndex].frame <= 7 &&
         case 0x1ef:
           effects[effectIndex].vx = -0.02;
           effects[effectIndex].field008c = 30000;
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
+          ++effects[effectIndex].tick;
           if ((short)field0008 != 0x57) {
             RemoveLocalEffect((short)effectIndex);
           }
-          if (frameDuration <= effects[effectIndex].tick) {
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               effects[effectIndex].frame = 0;
             }
           }
@@ -4592,14 +4480,12 @@ effects[effectIndex].frame <= 7 &&
                 ((short)field0008 == 0x55)) || ((short)field0008 == 0x56)) &&
               (((short)field0008 != 0x53 || (field000a < 2)))) &&
              (((short)field0008 != 0x54 || (field000a < 2)))) {
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            ++effects[effectIndex].tick;
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].frame = 0;
               }
             }
@@ -4737,15 +4623,13 @@ effects[effectIndex].frame <= 7 &&
             RemoveLocalEffect((short)effectIndex);
           }
           else {
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
+            ++effects[effectIndex].tick;
             field3254[effectIndex] = field3254[effectIndex] + -1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].frame = 0;
               }
             }
@@ -4788,15 +4672,13 @@ effects[effectIndex].frame <= 7 &&
             RemoveLocalEffect((short)effectIndex);
           }
           else {
-            effects[effectIndex].tick =
-                 (short)effects[effectIndex].tick + 1;
+            ++effects[effectIndex].tick;
             field3254[effectIndex] = field3254[effectIndex] + -1;
-            if (frameDuration <= effects[effectIndex].tick) {
+            if (effects[effectIndex].tick >= frameDuration) {
               effects[effectIndex].tick = 0;
-              effects[effectIndex].frame =
-                   effects[effectIndex].frame + 1;
+              ++effects[effectIndex].frame;
               effects[effectIndex].field0080 = 0;
-              if (frameCount <= effects[effectIndex].frame) {
+              if (effects[effectIndex].frame >= frameCount) {
                 effects[effectIndex].frame = 0;
               }
             }
@@ -4805,13 +4687,12 @@ effects[effectIndex].frame <= 7 &&
         case 499:
           effects[effectIndex].x = positionX;
           effects[effectIndex].y = positionY;
-          effects[effectIndex].tick = (short)effects[effectIndex].tick + 1;
-          if (frameDuration <= effects[effectIndex].tick) {
+          ++effects[effectIndex].tick;
+          if (effects[effectIndex].tick >= frameDuration) {
             effects[effectIndex].tick = 0;
-            effects[effectIndex].frame =
-                 effects[effectIndex].frame + 1;
+            ++effects[effectIndex].frame;
             effects[effectIndex].field0080 = 0;
-            if (frameCount <= effects[effectIndex].frame) {
+            if (effects[effectIndex].frame >= frameCount) {
               RemoveLocalEffect((short)effectIndex);
             }
           }
