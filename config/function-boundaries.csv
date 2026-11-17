@@ -524,3 +524,4 @@ address,end,size,status,evidence
 0x0075D8D0,0x0075D962,146,reviewed,docs/evidence/scene6-palette-fades-exact.json
 0x0075D970,0x0075DA25,181,reviewed,docs/evidence/scene6-palette-fades-exact.json
 0x0075DA30,0x0075DB6E,318,reviewed,docs/evidence/scene6-settings-slide-exact.json
+0x0075D580,0x0075D65B,219,reviewed,docs/evidence/scene6-settings-preview-exact.json

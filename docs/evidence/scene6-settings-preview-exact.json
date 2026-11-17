@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "authority": "complete native PE body strict byte identity after original relocation binding",
+  "method": "selected native function 0x0075D580, full 219-byte VC7.1 /Od /G6 /MT /Gy /W3 single unit; no broad cold replay",
+  "owner": "Scene6 settings/options transition; this object 0x760 bytes",
+  "source": "src/Scene6SettingsPreview.cpp",
+  "source_contains_inline_assembly_or_padding": false,
+  "original_extent": {
+    "address": "0x0075D580",
+    "exclusive_end": "0x0075D65B",
+    "bytes": 219
+  },
+  "behavior": "cosine easing of menu art pulse offset at +0x750; redraw each 10 degree phase, reload selected preview at phase 180, submit palette and clock 16/15 ms frames",
+  "original_operand_provenance": ".analysis/probes/scene6-219-native.bin; .analysis/factory-native-ghidra/call-7uqqnx7y/result.txt; original caller 0x0075A4C0",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 219,
+      "matched_bytes": 219,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "original WINMM timeGetTime IAT call, original native PE 0x0075D58B in complete 219-byte function",
+          "addend": 0
+        },
+        {
+          "offset": 71,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "original PE immutable double constant, original native PE 0x0075D5C7 in complete 219-byte function",
+          "addend": 0
+        },
+        {
+          "offset": 82,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "original PE mathematical cosine or x87 float-to-int, original native PE 0x0075D5D2 in complete 219-byte function",
+          "addend": 0
+        },
+        {
+          "offset": 91,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "original PE immutable double constant, original native PE 0x0075D5DB in complete 219-byte function",
+          "addend": 0
+        },
+        {
+          "offset": 97,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "original PE immutable double constant, original native PE 0x0075D5E1 in complete 219-byte function",
+          "addend": 0
+        },
+        {
+          "offset": 102,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "original PE mathematical cosine or x87 float-to-int, original native PE 0x0075D5E6 in complete 219-byte function",
+          "addend": 0
+        },
+        {
+          "offset": 128,
+          "target": 7721984,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReloadSelectedPreview@Scene6@@QAEXXZ",
+          "evidence": "original Scene6 texture reload call, original native PE 0x0075D600 in complete 219-byte function",
+          "addend": 0
+        },
+        {
+          "offset": 146,
+          "target": 4242736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ApplyPalette@Video@@QAEHPAE@Z",
+          "evidence": "original Video::ApplyPalette call, original native PE 0x0075D612 in complete 219-byte function",
+          "addend": 0
+        },
+        {
+          "offset": 152,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "original WINMM timeGetTime IAT call, original native PE 0x0075D618 in complete 219-byte function",
+          "addend": 0
+        },
+        {
+          "offset": 178,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "original WINMM timeGetTime IAT call, original native PE 0x0075D632 in complete 219-byte function",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "12950fcef63a8a2597d87d97d312cc2fd843cb76801af5cba68961c334028e2b",
+      "target_extent_sha256": "12950fcef63a8a2597d87d97d312cc2fd843cb76801af5cba68961c334028e2b",
+      "unit": "scene6-settings-preview",
+      "symbol": "?AnimateSettingsPreview@Scene6@@QAEXXZ",
+      "target_address": "0x0075D580",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "bad15aaa64f1b9c49c44074ba4b417806aa53670d391292b3c4229f916c0552b",
+      "object_sha256": "92afeddddce0a54101c73b8611ad7a9359df7413d34472a003dd0e6e057bfc5f",
+      "source_sha256": "3893644632940186addb4af148a8e19d3550e9248a7e8c2c305a391d34688d59",
+      "dependencies": {
+        "src/Engine.h": "c7eb19d4115e7558aff543a161a0c702429fb1b63dfab62ea0f3664dbbdd5b4b",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c7ff6374a021b9d581b601afdd5dd45a9f979b2fcfa985717952b5f923159e56",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "2dff84157f363160fff7af0880ffb7f8015e95c05e972a88021e213ca9ab289e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

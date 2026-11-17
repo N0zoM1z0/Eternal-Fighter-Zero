@@ -558,7 +558,7 @@ address,origin,status,evidence
 0x0075D260,unknown,unreviewed,
 0x0075D350,unknown,unreviewed,
 0x0075D400,unknown,unreviewed,
-0x0075D580,unknown,unreviewed,
+0x0075D580,authored,reviewed,docs/evidence/scene6-settings-preview-exact.json
 0x0075D660,unknown,unreviewed,
 0x0075D8D0,authored,reviewed,docs/evidence/scene6-palette-fades-exact.json
 0x0075D970,authored,reviewed,docs/evidence/scene6-palette-fades-exact.json

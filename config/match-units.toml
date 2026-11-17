@@ -165678,3 +165678,83 @@ type = "DIR32"
 symbol = "__imp__timeGetTime@0"
 target = 0x007871e0
 evidence = "native PE WINMM IAT call at 0x0075DB53; original complete 0x0075DA30 extent"
+
+[units.scene6-settings-preview]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Scene6SettingsPreview.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene6-settings-preview/Scene6SettingsPreview.obj"
+symbol = "?AnimateSettingsPreview@Scene6@@QAEXXZ"
+target_address = 0x0075d580
+size = 219
+
+[[units.scene6-settings-preview.relocations]]
+offset = 11
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original WINMM timeGetTime IAT call, original native PE 0x0075D58B in complete 219-byte function"
+
+[[units.scene6-settings-preview.relocations]]
+offset = 71
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "original PE immutable double constant, original native PE 0x0075D5C7 in complete 219-byte function"
+
+[[units.scene6-settings-preview.relocations]]
+offset = 82
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "original PE mathematical cosine or x87 float-to-int, original native PE 0x0075D5D2 in complete 219-byte function"
+
+[[units.scene6-settings-preview.relocations]]
+offset = 91
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "original PE immutable double constant, original native PE 0x0075D5DB in complete 219-byte function"
+
+[[units.scene6-settings-preview.relocations]]
+offset = 97
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "original PE immutable double constant, original native PE 0x0075D5E1 in complete 219-byte function"
+
+[[units.scene6-settings-preview.relocations]]
+offset = 102
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "original PE mathematical cosine or x87 float-to-int, original native PE 0x0075D5E6 in complete 219-byte function"
+
+[[units.scene6-settings-preview.relocations]]
+offset = 128
+type = "REL32"
+symbol = "?ReloadSelectedPreview@Scene6@@QAEXXZ"
+target = 0x0075d400
+evidence = "original Scene6 texture reload call, original native PE 0x0075D600 in complete 219-byte function"
+
+[[units.scene6-settings-preview.relocations]]
+offset = 146
+type = "REL32"
+symbol = "?ApplyPalette@Video@@QAEHPAE@Z"
+target = 0x0040bd30
+evidence = "original Video::ApplyPalette call, original native PE 0x0075D612 in complete 219-byte function"
+
+[[units.scene6-settings-preview.relocations]]
+offset = 152
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original WINMM timeGetTime IAT call, original native PE 0x0075D618 in complete 219-byte function"
+
+[[units.scene6-settings-preview.relocations]]
+offset = 178
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "original WINMM timeGetTime IAT call, original native PE 0x0075D632 in complete 219-byte function"
