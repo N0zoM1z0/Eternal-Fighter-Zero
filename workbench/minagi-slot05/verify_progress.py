@@ -229,7 +229,7 @@ def main():
         'verticalSeparation > 80.0':2,
         'verticalSeparation > 90.0':2,
         'forwardSeparation > 100.0':3,
-        'forwardSeparation >= 50.0':8,
+        'if (forwardSeparation < 50.0) {':9,
         'forwardSeparation > 80.0':2,
         'forwardSeparation > 60.0':2,
     }
@@ -237,6 +237,22 @@ def main():
         if text.count(expression)!=count:
             raise AssertionError(('native CPU comparison order regressed',
                                   expression,count,text.count(expression)))
+    # Six original CPU guard decisions use strict <50.0 AND a 2-range
+    # random draw; two additional paths use the same strict threshold
+    # without RNG. Restoring the positive guarded blocks preserves the
+    # original unordered/NaN fall-through and avoids extra jumps.
+    paired=re.findall(
+        r'if \(forwardSeparation < 50\.0\) \{\s*'
+        r'if \(\(unsigned short\)RandomRange\(0,2\) == 0\) \{\s*'
+        r'field3114 = 0x14;\s*\}\s*\}\s*return;',
+        text)
+    direct=re.findall(
+        r'if \(forwardSeparation < 50\.0\) \{\s*'
+        r'field3114 = 0x14;\s*\}\s*return;',
+        text)
+    if len(paired)!=6 or len(direct)!=2 or 'forwardSeparation >= 50.0' in text:
+        raise AssertionError(('eight native strictly-less-than 50 distance branches regressed',
+                              len(paired),len(direct)))
     # The remaining 16 ordinary scalar comparisons must use the same
     # field-first x87 load/compare order seen in the native PE. Inverting the
     # mathematical operand order preserves the C++ result, including NaNs.
@@ -376,8 +392,34 @@ def main():
     if literal_order_matches!=len(native_literals):
         raise AssertionError(('CPU original static float reference order differs',
                               literal_order_matches,len(native_literals)))
+    # In the original PE, all eleven x87 comparisons against 50.0 use
+    # FCOMP followed by FNSTSW, the 0x05 status-mask, and JP. This rejects
+    # NaNs rather than accidentally consuming a RandomRange draw. Verify
+    # identical instruction shapes at the corresponding 11 compiled COFF
+    # relocation sites, independently of the source text assertion above.
+    native_50_pattern=(
+        b'\xdc\x1d'+struct.pack('<I',0x00787EB8)+
+        b'\xdf\xe0\xf6\xc4\x05\x7a'
+    )
+    native_50_sites=[
+        i for i in range(len(native)-len(native_50_pattern)+1)
+        if native.startswith(native_50_pattern,i)
+    ]
+    candidate_50_relocs=[
+        r for r in relocs
+        if r['symbol']=='__real@4049000000000000'
+    ]
+    if len(native_50_sites)!=11 or len(candidate_50_relocs)!=11:
+        raise AssertionError(('eleven PE/COFF float-50 status tests missing',
+                              len(native_50_sites),len(candidate_50_relocs)))
+    for r in candidate_50_relocs:
+        o=r['offset']
+        if (r['type']!='DIR32' or candidate[o-2:o]!=b'\xdc\x1d'
+                or candidate[o+4:o+10]!=b'\xdf\xe0\xf6\xc4\x05\x7a'):
+            raise AssertionError(('VC7.1 native NaN/status-branch parity changed',
+                                  o,candidate[o-2:o+10].hex()))
     structural_progress=normalized_instruction_progress(native,candidate)
-    if structural_progress['normalized_instructions_matching_between_207_float_anchors']<2867:
+    if structural_progress['normalized_instructions_matching_between_207_float_anchors']<2875:
         raise AssertionError(('Minagi CPU 500.0 x87 instruction order regression',
                               structural_progress))
     hist=[{'bits':f'{bits:0{2*width}x}','bytes':width,'count':count}
@@ -429,6 +471,10 @@ def main():
             'static_floating_literals_out_of_original_order':len(native_literals)-literal_order_matches,
             'cpu_guard_and_distance_x87_operation_order_matches_original':True,
             'five_rng_first_scaled_float_comparisons_match_native':True,
+            'eight_strict_distance_nan_safe_paths':{'six_rng_conditional_paths':len(paired),
+                    'two_direct_paths':len(direct)},
+            'eleven_original_50_x87_status_branch_sites_in_native_order':len(native_50_sites),
+            'eleven_candidate_50_x87_status_branch_sites_verified':len(candidate_50_relocs),
             'fourteen_native_cpu_distance_threshold_comparisons_restored':True,
             'additional_native_distance_and_vertical_float_compare_counts':restored_ordered_thresholds,
             'remaining_native_scalar_float_comparisons':restored_remaining_thresholds,
@@ -465,6 +511,8 @@ def main():
         'static_literals_in_native_order':literal_order_matches,
         'cpu_guard_and_distance_x87_order_matches_original':True,
         'rng_first_scaled_float_sites_verified':len(rng_first_sites),
+        'native_50_float_nan_guard_sites_verified':len(candidate_50_relocs),
+        'eight_native_distance_guard_branches':len(paired)+len(direct),
         'native_order_cpu_distance_threshold_compares':14,
         'structural_instruction_alignment':structural_progress['normalized_instructions_matching_between_207_float_anchors'],
         'exact':False

@@ -486,13 +486,11 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,3) == 0) {
                       field3114 = 0xe;
                     }
-                    if (forwardSeparation >= 50.0) {
-                      return;
+                    if (forwardSeparation < 50.0) {
+                      if ((unsigned short)RandomRange(0,2) == 0) {
+                        field3114 = 0x14;
+                      }
                     }
-                    if ((unsigned short)RandomRange(0,2) != 0) {
-                      return;
-                    }
-                    field3114 = 0x14;
                     return;
                   }
                 }
@@ -557,13 +555,11 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,3) == 0) {
                       field3114 = 0xe;
                     }
-                    if (forwardSeparation >= 50.0) {
-                      return;
+                    if (forwardSeparation < 50.0) {
+                      if ((unsigned short)RandomRange(0,2) == 0) {
+                        field3114 = 0x14;
+                      }
                     }
-                    if ((unsigned short)RandomRange(0,2) != 0) {
-                      return;
-                    }
-                    field3114 = 0x14;
                     return;
                   }
                 }
@@ -677,13 +673,11 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,4) == 0) {
                       field3114 = 0xe;
                     }
-                    if (forwardSeparation >= 50.0) {
-                      return;
+                    if (forwardSeparation < 50.0) {
+                      if ((unsigned short)RandomRange(0,2) == 0) {
+                        field3114 = 0x14;
+                      }
                     }
-                    if ((unsigned short)RandomRange(0,2) != 0) {
-                      return;
-                    }
-                    field3114 = 0x14;
                     return;
                   }
                 }
@@ -742,13 +736,11 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,4) == 0) {
                       field3114 = 0xe;
                     }
-                    if (forwardSeparation >= 50.0) {
-                      return;
+                    if (forwardSeparation < 50.0) {
+                      if ((unsigned short)RandomRange(0,2) == 0) {
+                        field3114 = 0x14;
+                      }
                     }
-                    if ((unsigned short)RandomRange(0,2) != 0) {
-                      return;
-                    }
-                    field3114 = 0x14;
                     return;
                   }
                 }
@@ -870,31 +862,27 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,4) == 0) {
                       field3114 = 0xe;
                     }
-                    if (forwardSeparation >= 50.0) {
-                      return;
+                    if (forwardSeparation < 50.0) {
+                      if ((unsigned short)RandomRange(0,2) == 0) {
+                        field3114 = 0x14;
+                      }
                     }
-                    if ((unsigned short)RandomRange(0,2) != 0) {
-                      return;
-                    }
-                    field3114 = 0x14;
                     return;
                   }
                 }
                 if (((field0008 == 0xfa) && (600 < field3110)) &&
                    (positionY == 0.0)) {
                   field3114 = 1;
-                  if (forwardSeparation >= 50.0) {
-                    return;
+                  if (forwardSeparation < 50.0) {
+                    field3114 = 0x14;
                   }
-                  field3114 = 0x14;
                   return;
                 }
                 if ((field0008 == 0xe9) && (500 < field3110)) {
                   field3114 = 1;
-                  if (forwardSeparation >= 50.0) {
-                    return;
+                  if (forwardSeparation < 50.0) {
+                    field3114 = 0x14;
                   }
-                  field3114 = 0x14;
                   return;
                 }
                 if (field0008 == 0xea) {
@@ -935,13 +923,11 @@ void Character21::Slot05()
                     if ((unsigned short)RandomRange(0,4) == 0) {
                       field3114 = 0xe;
                     }
-                    if (forwardSeparation >= 50.0) {
-                      return;
+                    if (forwardSeparation < 50.0) {
+                      if ((unsigned short)RandomRange(0,2) == 0) {
+                        field3114 = 0x14;
+                      }
                     }
-                    if ((unsigned short)RandomRange(0,2) != 0) {
-                      return;
-                    }
-                    field3114 = 0x14;
                     return;
                   }
                 }
