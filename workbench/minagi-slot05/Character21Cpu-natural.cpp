@@ -5,7 +5,7 @@
 
 void Character21::Slot05()
 {
-  bool airborneForGuard;
+  int airborneForGuard;
   double forwardSeparation;
   char wallCollision;
   double verticalSeparation;
@@ -41,8 +41,8 @@ void Character21::Slot05()
   if ((float)(unsigned short)RandomRange(0,1000) <
       (float)(airborneForGuard * 30) * field00a8 +
       25.0f * field00a8 +
-      (float)((unsigned int)(field3114 == 3) * 400) +
-      (float)((unsigned int)(field0008 == 0xaa) * 300)) {
+      (float)((field3114 == 3) * 400) +
+      (float)((field0008 == 0xaa) * 300)) {
     guardInputFrames = 0x3c;
   }
   if ((field0008 < 0x96) || (0x9c < field0008)) {
