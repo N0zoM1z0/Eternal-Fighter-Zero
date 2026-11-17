@@ -541,6 +541,57 @@ def main():
          and compiler_table_audit['first_table_offset']<=r['offset']<
              compiler_table_audit['second_table_offset']],
         key=lambda r:r['offset'])
+    # These six repeated landing branches originally check y<0 and then
+    # y+vy>0. Both are strict and *reject* NaN. The old !(0<=y) expression
+    # accepted NaN and the old !(y+vy<=0) did likewise. Check original PE and
+    # candidate x87 status flags and branches at the actual case targets.
+    landing_case_ids=(413,414,415,460,461,462)
+    def landing_x87_guards(binary:bytes,start:int,end:int,tag:str):
+        path=ROOT/'.analysis/probes/minagi-slot07'/f'{tag}-landing-native.bin'
+        path.parent.mkdir(parents=True,exist_ok=True)
+        path.write_bytes(binary[start:end])
+        asm=subprocess.run([
+            'objdump','-w','-z','-D','-b','binary','-m','i386','-Mintel',str(path)
+        ],capture_output=True,text=True,check=True).stdout
+        operations=[]
+        for line in asm.splitlines():
+            m=re.match(r'^\s*[0-9a-f]+:\s+(?:[0-9a-f]{2}\s+)+\s+(.+)',line)
+            if m:operations.append(m[1].strip())
+        pairs=[]
+        for i,x in enumerate(operations):
+            if (x.startswith('fcomp  QWORD PTR ds:') and i+3<len(operations)
+                    and operations[i+1]=='fnstsw ax'):
+                v=re.fullmatch(r'test\s+ah,(0x[0-9a-f]+)',operations[i+2])
+                if v:
+                    pairs.append((v[1],operations[i+3].split()[0]))
+        return pairs
+    landing_checks={}
+    for case in landing_case_ids:
+        marker='case 0x'+format(case,'x')+':'
+        next_id='case 0x'+format(case+1,'x')+':'
+        source_case=source.split(marker,1)[1].split(next_id,1)[0]
+        if (source_case.count('effects[effectIndex].y < 0.0')!=1
+                or source_case.count('(effects[effectIndex].vy + effects[effectIndex].y) > 0.0')!=1
+                or '!(0.0 <= effects[effectIndex].y)' in source_case
+                or '!(effects[effectIndex].vy + effects[effectIndex].y <= 0.0)' in source_case):
+            raise AssertionError(('strict x87 landing source semantics regressed',case))
+        slot=pe_ids[case-400]
+        nstart=pe_pointers[slot]-ORIGINAL_START
+        nend=pe_pointers[slot+1]-ORIGINAL_START
+        cstart=local_case_relocs[slot]['local_target_offset']
+        cend=local_case_relocs[slot+1]['local_target_offset']
+        ng=landing_x87_guards(native,nstart,nend,f'pe-{case}')
+        cg=landing_x87_guards(candidate,cstart,cend,f'coff-{case}')
+        required=[('0x5','jp'),('0x41','jne')]
+        if ng[:2]!=required or cg[:2]!=required:
+            raise AssertionError(('native/candidate NaN branch differs',case,ng,cg))
+        if cend-cstart != nend-nstart-6:
+            raise AssertionError(('native effect case extent unexpectedly changed',case,
+                                  nend-nstart,cend-cstart))
+        landing_checks[str(case)]={'original_and_candidate_x87_guards':required,
+                                   'native_case_bytes':nend-nstart,
+                                   'compiled_case_bytes':cend-cstart,
+                                   'strict_nan_rejection_proved':True}
     effect_fragment_sizes={}
     for kind,maximum_delta,original_size in (
         (454,6,1580),(455,6,1606),(456,15,1635)
@@ -673,7 +724,7 @@ def main():
         raise AssertionError(('native vs candidate real x86 instruction count regressed',
                               structural_audit))
     if (structural_audit['matching_normalized_instructions_between_float_anchors']
-            < 14261):
+            < 14275):
         raise AssertionError(('Minagi instruction structure regressed',
                               structural_audit))
 
@@ -738,6 +789,7 @@ def main():
             'instruction_shape_audit':structural_audit,
             'compiler_switch_table_audit':compiler_table_audit,
             'effect_454_456_PE_bound_case_span_audit':effect_fragment_sizes,
+            'six_native_landing_nan_branch_audits':landing_checks,
             'effect_456_native_first_decision_before_second_rng':candidate_rng_order,
             'original_pe_compact_case_index_bytes_exact':True,
             'executable_code_byte_delta_from_original':
@@ -810,6 +862,7 @@ def main():
         'candidate_bytes':len(candidate),
         'candidate_executable_bytes':len(candidate_code),
         'effect_454_456_case_byte_deltas':{k:v['candidate_minus_native'] for k,v in effect_fragment_sizes.items()},
+        'six_native_landing_x87_nan_checks':len(landing_checks),
         'local_switch_data_bytes':compiler_table_audit['trailing_compiler_switch_bytes'],
         'native_PE_compact_dispatch_index_bytes_exact':100,
         'executable_code_byte_delta_from_original':len(candidate_code)-ORIGINAL_SIZE,

@@ -318,7 +318,7 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot07/Character21Effects-natural.cpp",
-    "source_sha256": "80cf7a1ec259fce039ebb655b946d74d96419a7945e80391e70cdf282e3cb987",
+    "source_sha256": "4a493e042b60c642d7b11b661f04a8054fc367bf7c20e4ac6bb16d14e23e6c58",
     "unsigned_field0008_equality_and_inequality": true,
     "unsigned_effect_tick_zero_equality": true,
     "unsigned_effect_type_switch": true,
@@ -330,8 +330,8 @@
     "instruction_shape_audit": {
       "native_decoded_instructions": 18977,
       "candidate_decoded_instructions": 18973,
-      "matching_normalized_instructions_between_float_anchors": 14261,
-      "changed_regions": 356,
+      "matching_normalized_instructions_between_float_anchors": 14275,
+      "changed_regions": 352,
       "regions_compared": 790,
       "alignment_is_provisional_diagnostic_only": true
     },
@@ -366,6 +366,98 @@
         "candidate_minus_native": 15
       }
     },
+    "six_native_landing_nan_branch_audits": {
+      "413": {
+        "original_and_candidate_x87_guards": [
+          [
+            "0x5",
+            "jp"
+          ],
+          [
+            "0x41",
+            "jne"
+          ]
+        ],
+        "native_case_bytes": 1545,
+        "compiled_case_bytes": 1539,
+        "strict_nan_rejection_proved": true
+      },
+      "414": {
+        "original_and_candidate_x87_guards": [
+          [
+            "0x5",
+            "jp"
+          ],
+          [
+            "0x41",
+            "jne"
+          ]
+        ],
+        "native_case_bytes": 1545,
+        "compiled_case_bytes": 1539,
+        "strict_nan_rejection_proved": true
+      },
+      "415": {
+        "original_and_candidate_x87_guards": [
+          [
+            "0x5",
+            "jp"
+          ],
+          [
+            "0x41",
+            "jne"
+          ]
+        ],
+        "native_case_bytes": 1558,
+        "compiled_case_bytes": 1552,
+        "strict_nan_rejection_proved": true
+      },
+      "460": {
+        "original_and_candidate_x87_guards": [
+          [
+            "0x5",
+            "jp"
+          ],
+          [
+            "0x41",
+            "jne"
+          ]
+        ],
+        "native_case_bytes": 1545,
+        "compiled_case_bytes": 1539,
+        "strict_nan_rejection_proved": true
+      },
+      "461": {
+        "original_and_candidate_x87_guards": [
+          [
+            "0x5",
+            "jp"
+          ],
+          [
+            "0x41",
+            "jne"
+          ]
+        ],
+        "native_case_bytes": 1545,
+        "compiled_case_bytes": 1539,
+        "strict_nan_rejection_proved": true
+      },
+      "462": {
+        "original_and_candidate_x87_guards": [
+          [
+            "0x5",
+            "jp"
+          ],
+          [
+            "0x41",
+            "jne"
+          ]
+        ],
+        "native_case_bytes": 1558,
+        "compiled_case_bytes": 1552,
+        "strict_nan_rejection_proved": true
+      }
+    },
     "effect_456_native_first_decision_before_second_rng": {
       "call_sites": 5,
       "70_compare_between_first_two_calls": true,
@@ -391,7 +483,7 @@
       "effects[effectIndex].vy > 0.0": 2
     },
     "object": "build/minagi-slot07/Character21Effects-natural.obj",
-    "function_body_sha256": "2d06119067e38f9a511ac4310308dc10ac28640989ff3b1887486a92fa4abd45",
+    "function_body_sha256": "d58574d4cb77f65a04ea59e177c3165e90a82b26a11d536ef48d4c6145fcb613",
     "compiler_flags": [
       "/Od",
       "/G6",
