@@ -349,7 +349,7 @@ address,origin,status,evidence
 0x005AA340,authored,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
 0x005AA380,authored,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
 0x005AA3D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
-0x005AA3F0,unknown,unreviewed,
+0x005AA3F0,authored,reviewed,docs/evidence/character-21-slot04-exact.json
 0x005AD500,authored,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
 0x005AD510,authored,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact
 0x005AD520,authored,reviewed,docs/KNOWLEDGE_BASE.md#minagi-character21-lifecycle-exact

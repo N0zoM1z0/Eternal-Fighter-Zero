@@ -1,0 +1,981 @@
+{
+  "schema_version": 1,
+  "authority": "complete-function-codegen",
+  "method": "Original Minagi Character21 vtable Slot04 selects [0x005AA3F0,0x005AD4F9); pinned VC7.1 /Od /G6 /MT /Gy /W3 compiled ordinary natural C++ src/Character21Action.cpp. Strict complete-code function oracle resolves all 105 native COFF operand targets, retains instruction bytes, and compares all 12,553 bytes. No assembly, padding, or cold replay. Other owners and whole-product runtime closure remain open.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 12553,
+      "matched_bytes": 12553,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 135,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AA477 binds original 0x00787C30, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 297,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AA519 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 318,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AA52E binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 489,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AA5D9 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 613,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AA655 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 658,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AA682 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 854,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AA746 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 877,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AA75D binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 1112,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AA848 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 1135,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AA85F binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 1388,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AA95C binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 1621,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAA45 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 1642,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAA5A binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 1897,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAB59 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 1918,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAB6E binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 2188,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAC7C binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 2209,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAC91 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 2449,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAD81 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 2470,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAD96 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 2725,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAE95 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 2746,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAEAA binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 3016,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAFB8 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 3037,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AAFCD binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 3092,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB004 binds original 0x00787C30, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 3176,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB058 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 3317,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB0E5 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 3424,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB150 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 3564,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB1DC binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 3656,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB238 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 3797,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB2C5 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 3861,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB305 binds original 0x00787C30, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 4049,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB3C1 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 4070,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB3D6 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 4303,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB4BF binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 4324,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB4D4 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 4542,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB5AE binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 4563,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB5C3 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 4609,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB5F1 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 4659,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB623 binds original 0x00787C30, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 4842,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB6DA binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 4881,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB701 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 5090,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB7D2 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 5129,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB7F9 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 5322,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB8BA binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 5386,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB8FA binds original 0x00787C30, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 5574,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB9B6 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 5595,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AB9CB binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 5828,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABAB4 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 5849,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABAC9 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 6067,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABBA3 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 6088,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABBB8 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 6159,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABBFF binds original 0x00787C30, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 6347,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABCBB binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 6368,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABCD0 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 6601,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABDB9 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 6622,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABDCE binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 6840,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABEA8 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 6861,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABEBD binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 6943,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABF0F binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 7023,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABF5F binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 7053,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABF7D binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 7178,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ABFFA binds original 0x00787E30, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 7349,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC0A5 binds original 0x0040E630, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 7454,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC10E binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 7484,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC12C binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 7740,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC22C binds original 0x0040E630, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 7804,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC26C binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 7920,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC2E0 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 7950,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC2FE binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 8139,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC3BB binds original 0x0040E630, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 8225,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC411 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 8255,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC42F binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 8442,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC4EA binds original 0x0040E630, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 8575,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC56F binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 8718,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC5FE binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 8919,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC6C7 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 8969,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC6F9 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 9138,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC7A2 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 9363,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC883 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 9588,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC964 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 9707,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AC9DB binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 9757,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACA0D binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 9926,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACAB6 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 10152,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACB98 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 10332,
+          "target": 7896768,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c049000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACC4C binds original 0x00787EC0, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 10362,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACC6A binds original 0x00787EB8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 10440,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACCB8 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 10616,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACD68 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 10735,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACDDF binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 10785,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACE11 binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 10862,
+          "target": 7894472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c059000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACE5E binds original 0x007875C8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 10896,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACE80 binds original 0x007875D0, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 10924,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACE9C binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 11138,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005ACF72 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 11310,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD01E binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 11536,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD100 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 11612,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD14C binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 11669,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD185 binds original 0x00787E30, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 11703,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD1A7 binds original 0x00787D88, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 11917,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD27D binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 12094,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD32E binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 12283,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD3EB binds original 0x007872F8, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 12424,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD478 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 12480,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD4B0 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        },
+        {
+          "offset": 12536,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Canonical Minagi vtable Slot04 0x00788950 => 0x005AA3F0; native operand at 0x005AD4E8 binds original 0x0040F170, whole owner 0x005AA3F0-0x005AD4F8 inclusive.",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c4f9968ced6196bf3e0452e60a714aecc1cc0f8ee6e51be00d8f1c5aaf44a602",
+      "target_extent_sha256": "c4f9968ced6196bf3e0452e60a714aecc1cc0f8ee6e51be00d8f1c5aaf44a602",
+      "unit": "character-21-slot04",
+      "symbol": "?Slot04@Character21@@UAEXXZ",
+      "target_address": "0x005AA3F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "6b253a9931f5b6e78823aebd9775da5302a4d693929278e132b73764f96e974f",
+      "object_sha256": "47cc0a72805ee74de5c2a9b038521a7a07ac55ce49a291ad21557aea85d886fd",
+      "source_sha256": "469f9ffa98d502cb4f42cb94e95e587fe392eed97c96ceb5774f608ad2b5cd57",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "32850848399757ae28d612efdb4deef153f07a8d4bbe4ff2a29ab97c449f144e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "d56a2c0edaa065187a2a3dc26d4c5681c11313175b85004bb5585270bf8151d9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "390d1f12b94bfa6d332f02fb051af332a06fae1fccdc6866465fa1b16be62793",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
