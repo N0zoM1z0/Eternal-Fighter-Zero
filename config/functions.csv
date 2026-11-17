@@ -611,7 +611,7 @@ address,size,span_end,body_size,current_name,is_thunk,body_ranges,boundary_statu
 0x007712F0,259,0x007713F2,259,Scene9::Scene9,false,0x007712F0:0x007713F2,reviewed
 0x00771400,216,0x007714D7,216,Scene9::~Scene9,false,0x00771400:0x007714D7,reviewed
 0x007714E0,4896,0x007727FF,4896,Scene9::Step,false,0x007714E0:0x007727FF,reviewed
-0x00772800,8712,0x00774A07,8712,FUN_00772800,false,0x00772800:0x00774A07,unreviewed
+0x00772800,8712,0x00774A07,8712,Scene9::Slot0,false,0x00772800:0x00774A07,reviewed
 0x00774A10,233,0x00774AF8,233,Scene9::DrawResultNumber,false,0x00774A10:0x00774AF8,reviewed
 0x00774B00,3151,0x0077574E,3151,Scene9::PrepareResults,false,0x00774B00:0x0077574E,reviewed
 0x00775750,187,0x0077580A,187,Scene9::PollKeyboard,false,0x00775750:0x0077580A,reviewed

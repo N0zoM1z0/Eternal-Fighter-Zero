@@ -546,3 +546,4 @@ address,end,size,status,evidence
 0x007714E0,0x00772800,4896,reviewed,docs/evidence/scene9-step-exact.json
 0x00776820,0x007768CD,173,reviewed,docs/evidence/scene0-title-fade-out-exact.json
 0x007768D0,0x0077697D,173,reviewed,docs/evidence/scene0-title-fade-in-exact.json
+0x00772800,0x00774A08,8712,reviewed,docs/evidence/scene9-render-exact.json
