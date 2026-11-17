@@ -123,6 +123,45 @@ def calls_with_random_bounds(data:bytes, name:str,
     return result
 
 
+
+def native_fp_operation_window(code: bytes, name: str, offset: int,
+                               *, after_call: bool) -> list[str]:
+    """Disassemble original/candidate x87 operation signatures around a
+    known, real helper call site. Ignore register allocation and local offsets.
+    """
+    rows=[]
+    for line in disasm(code,name):
+        m=re.match(r'^\s*([0-9a-f]+):\s+((?:[0-9a-f]{2}\s+)+)\s+(.+)',line)
+        if m:rows.append((int(m.group(1),16),m.group(3).strip()))
+    lookup={at:i for i,(at,_) in enumerate(rows)}
+    if offset not in lookup:
+        raise AssertionError(('missing native/candidate x87 anchor',name,offset))
+    idx=lookup[offset]
+    if not rows[idx][1].startswith('call '):
+        raise AssertionError(('x87 anchor not at call instruction',name,offset))
+    if after_call:
+        selected=rows[idx+1:idx+38]
+    else:
+        selected=rows[max(0,idx-35):idx]
+    floating=[]
+    for at,op in selected:
+        mnemonic=op.split()[0]
+        if mnemonic not in {'fld','fsub','fild','fmul','fadd','fmulp',
+                            'fstp','fcompp','fiadd'}:continue
+        if 'QWORD PTR' in op and '+0x20]' in op:
+            floating.append(mnemonic+':x')
+        elif 'QWORD PTR' in op and '+0x28]' in op:
+            floating.append(mnemonic+':y')
+        elif 'DWORD PTR' in op and '+0xa8]' in op:
+            floating.append(mnemonic+':cpu-scale')
+        else:
+            floating.append(mnemonic)
+        if after_call and floating[-1]=='fcompp':
+            break
+    if after_call and (not floating or floating[-1]!='fcompp'):
+        raise AssertionError(('second native CPU guard comparison not found',name,offset,floating))
+    return floating
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rebuild',action='store_true')
@@ -182,6 +221,33 @@ def main():
     if call_bounds_in_order!=len(native_calls):
         raise AssertionError(('CPU helper target / RandomRange argument order differs',
                               call_bounds_in_order,len(native_calls)))
+    # The original 2000-range guard builds the airborne factor *first*,
+    # scales it by 8 and CPU difficulty, and multiplies the state factor last.
+    # The original distance path subtracts opponent/owner X, converts facing
+    # using FILD and FMULP, then subtracts the two Y values before CRT fabs.
+    # Check x87 operations, not arbitrary compiler register/local choices.
+    native_guard_site=[off for off,target in native_calls if target==0x004108A0][1]
+    candidate_guard_site=[off for off,target,_ in called if target==0x004108A0][1]
+    native_guard_fp=native_fp_operation_window(
+        native,'guard-original-x87.bin',native_guard_site,after_call=True)
+    candidate_guard_fp=native_fp_operation_window(
+        candidate,'guard-candidate-x87.bin',candidate_guard_site,after_call=True)
+    if native_guard_fp!=candidate_guard_fp:
+        raise AssertionError(('guard probability x87 arithmetic order diverged',
+                              native_guard_fp,candidate_guard_fp))
+    native_fabs_site=[off for off,target in native_calls if target==0x0077842D][0]
+    candidate_fabs_site=[off for off,target,_ in called if target==0x0077842D][0]
+    native_distance_fp=native_fp_operation_window(
+        native,'distance-original-x87.bin',native_fabs_site,after_call=False)[-8:]
+    candidate_distance_fp=native_fp_operation_window(
+        candidate,'distance-candidate-x87.bin',candidate_fabs_site,after_call=False)[-8:]
+    expected_distance=['fld:x','fsub:x','fild','fmulp','fstp','fld:y','fsub:y','fstp']
+    if native_distance_fp!=expected_distance or candidate_distance_fp!=native_distance_fp:
+        raise AssertionError(('opponent distance x87 arithmetic shape diverged',
+                              expected_distance,native_distance_fp,candidate_distance_fp))
+    fp_operation_hash=hashlib.sha256(json.dumps(
+        [native_guard_fp,native_distance_fp],separators=(',',':')
+    ).encode()).hexdigest()
     call_signature_sha=hashlib.sha256(json.dumps(
         native_signatures,separators=(',',':')).encode()).hexdigest()
     candidate_call_signature_sha=hashlib.sha256(json.dumps(
@@ -218,6 +284,9 @@ def main():
             'direct_call_targets':{hex(a):n for a,n in sorted(original_counts.items())},
             'direct_call_with_rng_bound_order_sha256':call_signature_sha,
             'static_floating_literal_refs':len(native_literals),
+            'cpu_guard_x87_operations':native_guard_fp,
+            'cpu_forward_and_vertical_x87_operations':native_distance_fp,
+            'cpu_guard_and_distance_x87_sequence_sha256':fp_operation_hash,
             'static_floating_literal_histogram_sha256':histogram_sha,
         },
         'candidate':{
@@ -242,6 +311,8 @@ def main():
             'static_floating_literals_values_match_native':True,
             'static_floating_literals_in_original_order':literal_order_matches,
             'static_floating_literals_out_of_original_order':len(native_literals)-literal_order_matches,
+            'cpu_guard_and_distance_x87_operation_order_matches_original':True,
+            'cpu_guard_and_distance_x87_sequence_sha256':fp_operation_hash,
             'static_floating_literal_histogram_sha256':histogram_sha,
         },
         'source_contains_inline_asm_or_padding':False,
@@ -271,6 +342,7 @@ def main():
         'direct_calls_with_rng_bounds_in_native_order':call_bounds_in_order,
         'static_literal_values_matched':len(candidate_literals),
         'static_literals_in_native_order':literal_order_matches,
+        'cpu_guard_and_distance_x87_order_matches_original':True,
         'exact':False
     },indent=2))
 

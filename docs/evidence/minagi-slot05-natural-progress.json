@@ -15,6 +15,28 @@
     },
     "direct_call_with_rng_bound_order_sha256": "94044a2bffc2500de24449393fa722b7f6e77ed8cf461e41b8fd045f80350a17",
     "static_floating_literal_refs": 207,
+    "cpu_guard_x87_operations": [
+      "fild",
+      "fild",
+      "fmul",
+      "fadd",
+      "fmul",
+      "fmul:cpu-scale",
+      "fild",
+      "fmulp",
+      "fcompp"
+    ],
+    "cpu_forward_and_vertical_x87_operations": [
+      "fld:x",
+      "fsub:x",
+      "fild",
+      "fmulp",
+      "fstp",
+      "fld:y",
+      "fsub:y",
+      "fstp"
+    ],
+    "cpu_guard_and_distance_x87_sequence_sha256": "0bf86fc6020fa9e1eb2bb795f7f049a8b588b94b36f08e0770826049c76f333b",
     "static_floating_literal_histogram_sha256": "45c84dea93b4edb1238ad2a6919964bcb56942df746a74c37cd64a1abd886cc6"
   },
   "candidate": {
@@ -49,6 +71,8 @@
     "static_floating_literals_values_match_native": true,
     "static_floating_literals_in_original_order": 207,
     "static_floating_literals_out_of_original_order": 0,
+    "cpu_guard_and_distance_x87_operation_order_matches_original": true,
+    "cpu_guard_and_distance_x87_sequence_sha256": "0bf86fc6020fa9e1eb2bb795f7f049a8b588b94b36f08e0770826049c76f333b",
     "static_floating_literal_histogram_sha256": "45c84dea93b4edb1238ad2a6919964bcb56942df746a74c37cd64a1abd886cc6"
   },
   "source_contains_inline_asm_or_padding": false,
