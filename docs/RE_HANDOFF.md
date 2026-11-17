@@ -1623,15 +1623,16 @@ updates two adjacent signed 32-bit cooldowns at object offsets `+0x314C` and
 instead of an opaque eight-byte region; the class layout and offsets are
 unchanged. The complete 17,176-byte CPU function now has a natural C++ workbench
 reconstruction at `workbench/character19-cpu/Character19Cpu-decomp.cpp`.
-The selected VC7.1 `/Od` candidate is 17,166 bytes (10 bytes shorter than
+The selected VC7.1 `/Od` candidate is 17,133 bytes (43 bytes shorter than
 native), with the original `0xCC` stack frame and matching entry prologue.
 The large AI/state branches and neutral-input fallback are present. The final
 state-range gate is reconstructed as the native-order early command return,
 with exact signed-byte and opponent-state boundaries. Native `FUCOMPP`
 sequences confirm the `positionY == 0.0` predicates are equality tests,
 including unordered handling; those predicates remain equality in source.
-Targeted instruction alignment reports 3,723 of 4,450 candidate instructions
-aligned with native order/semantics. The candidate remains **not Exact** and
+Targeted instruction alignment reports 3,900 of 4,446 candidate instructions
+aligned with native order/semantics. The source also restores native unsigned
+RNG zero-extension and signed air-action-lock `<= 0` tests. The candidate remains **not Exact** and
 has not been promoted into `src/` or the match ledger. Rebuild only this owner
 with `scripts/repo-python workbench/character19-cpu/check-decomp.py`; no full
 cold replay is needed.
