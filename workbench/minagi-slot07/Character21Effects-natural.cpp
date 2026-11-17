@@ -3565,13 +3565,10 @@ effects[effectIndex].frame < 8 &&
                 if ((3 < effects[effectIndex].frame) &&
                    (effects[effectIndex].frame < 9)) {
                   spawn.type = 0x1cf;
-                  uVar6 = RandomRange(0,0x1e);
-
-                  spawn.x = (double)(int)((uVar6 & 0xffff) *
-                                          (int)(char)effects[effectIndex].flag0048) +
-                             effects[effectIndex].x;
-                  frameDuration = RandomRange(0,0x50);
-                  spawn.y = ((effects[effectIndex].y - (double)frameDuration) +
+                  spawn.x = effects[effectIndex].x +
+                             (double)(int)((((unsigned int)RandomRange(0,0x1e)) & 0xffff) *
+                             (int)(char)effects[effectIndex].flag0048);
+                  spawn.y = ((effects[effectIndex].y - (double)(unsigned short)RandomRange(0,0x50)) +
                              40.0) - 30.0;
                   spawn.flag0018 = (unsigned char)effects[effectIndex].flag0048;
                   spawn.layer = 1;
@@ -3650,11 +3647,10 @@ effects[effectIndex].frame < 8 &&
                 if ((3 < effects[effectIndex].frame) &&
                    (effects[effectIndex].frame < 9)) {
                   spawn.type = (0x32 < (unsigned short)RandomRange(0,100)) + 0x1cf;
-                  spawn.x = (double)(int)(((unsigned short)RandomRange(0,0x28) & 0xffff) *
-                                          (int)(char)effects[effectIndex].flag0048) +
-                             effects[effectIndex].x;
-                  frameDuration = RandomRange(0,0x78);
-                  spawn.y = ((effects[effectIndex].y - (double)frameDuration) +
+                  spawn.x = effects[effectIndex].x +
+                             (double)(int)((((unsigned short)RandomRange(0,0x28)) & 0xffff) *
+                             (int)(char)effects[effectIndex].flag0048);
+                  spawn.y = ((effects[effectIndex].y - (double)(unsigned short)RandomRange(0,0x78)) +
                              60.0) - 30.0;
                   spawn.flag0018 = (unsigned char)effects[effectIndex].flag0048;
                   spawn.layer = 1;
@@ -3736,13 +3732,10 @@ effects[effectIndex].frame < 8 &&
                   uVar5 = RandomRange(0,100);
 
                   spawn.type = (0x46 < frameDuration) + 0x1cf + (unsigned short)(0x1e < uVar5);
-                  uVar6 = RandomRange(0,0x28);
-
-                  spawn.x = (double)(int)((uVar6 & 0xffff) *
-                                          (int)(char)effects[effectIndex].flag0048) +
-                             effects[effectIndex].x;
-                  frameDuration = RandomRange(0,0x8c);
-                  spawn.y = ((effects[effectIndex].y - (double)frameDuration) +
+                  spawn.x = effects[effectIndex].x +
+                             (double)(int)((((unsigned int)RandomRange(0,0x28)) & 0xffff) *
+                             (int)(char)effects[effectIndex].flag0048);
+                  spawn.y = ((effects[effectIndex].y - (double)(unsigned short)RandomRange(0,0x8c)) +
                              70.0) - 30.0;
                   spawn.flag0018 = (unsigned char)effects[effectIndex].flag0048;
                   spawn.layer = 1;

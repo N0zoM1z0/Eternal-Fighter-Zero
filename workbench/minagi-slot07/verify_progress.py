@@ -467,6 +467,17 @@ def main():
             or fragment_454_456.count('effects[effectIndex].frame < 8')!=3
             or 'spawn.type = (0x32 < (unsigned short)RandomRange(0,100)) + 0x1cf;' not in fragment_454_456):
         raise AssertionError('Minagi 454..456 interval / one-use RNG semantics regressed')
+    # Three closely related 454..456 particle cases now evaluate random
+    # offset * sign as one expression added to the current X coordinate.
+    # This is ordinary typed C++ source, not a register or opcode imitation.
+    # These one-use random samples are not re-consumed or reordered.
+    particle_cases=source.split('case 0x1c6:',1)[1].split('case 0x1c9:',1)[0]
+    if (particle_cases.count('spawn.x = effects[effectIndex].x +')!=3
+            or particle_cases.count('spawn.y = ((effects[effectIndex].y - (double)(unsigned short)RandomRange(')!=3
+            or 'RandomRange(0,0x1e)' not in particle_cases
+            or 'RandomRange(0,0x78)' not in particle_cases
+            or 'RandomRange(0,0x8c)' not in particle_cases):
+        raise AssertionError('Minagi 454..456 native random coordinate expression regressed')
     # Native case 0x191 skips active transitions outside [8,17). All 25
     # successfully handled action states exit the effect switch directly;
     # only an unmatched state reaches the common frame-advance path.
@@ -594,7 +605,7 @@ def main():
         raise AssertionError(('native vs candidate real x86 instruction count regressed',
                               structural_audit))
     if (structural_audit['matching_normalized_instructions_between_float_anchors']
-            < 14211):
+            < 14259):
         raise AssertionError(('Minagi instruction structure regressed',
                               structural_audit))
 
@@ -663,6 +674,7 @@ def main():
                 len(candidate_code)-ORIGINAL_SIZE,
             'executable_code_instructions':structural_audit['candidate_decoded_instructions'],
             'native_effect_0x1f0_spawn_first_and_frame_bounds_restored':True,
+            'native_454_455_456_inlined_coordinate_random_bounds':[30,40,80,120,140],
             'restored_native_field_first_float_comparisons':restored_threshold_counts,
             'object':str(OBJECT.relative_to(ROOT)),
             # Whole-COFF object hashes can change with compiler-local symbols,
