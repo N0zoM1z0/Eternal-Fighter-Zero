@@ -28,11 +28,11 @@ void Character21::Slot07()
         case 400:
           field3154[effectIndex] = 0;
           effects[effectIndex].field0084 = 0;
-          if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-            effects[effectIndex].flag0048 = -1;
+          if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+            effects[effectIndex].flag0048 = 1;
           }
           else {
-            effects[effectIndex].flag0048 = 1;
+            effects[effectIndex].flag0048 = -1;
           }
           effects[effectIndex].vx = 0.0;
           effects[effectIndex].vy = 0.0;
@@ -248,11 +248,11 @@ void Character21::Slot07()
           effects[effectIndex].vy = 0.0;
           effects[effectIndex].vx = 0.0;
           effects[effectIndex].field0084 = 0;
-          if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-            effects[effectIndex].flag0048 = -1;
+          if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+            effects[effectIndex].flag0048 = 1;
           }
           else {
-            effects[effectIndex].flag0048 = 1;
+            effects[effectIndex].flag0048 = -1;
           }
           effects[effectIndex].vx = 0.0;
           effects[effectIndex].vy = 0.0;
@@ -490,11 +490,11 @@ void Character21::Slot07()
           }
           if ((((short)field0008 == 0xfd) && (field000a == 2)) ||
              (((short)field0008 == 0x109 && (field000a == 3)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x194;
@@ -504,11 +504,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0xfe) && (field000a == 2)) ||
                   (((short)field0008 == 0x10a && (field000a == 3)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x195;
@@ -518,11 +518,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0xff) && (field000a == 2)) ||
                   (((short)field0008 == 0x10b && (field000a == 3)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x196;
@@ -532,11 +532,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x100) && (field000a == 2)) ||
                   (((short)field0008 == 0x10d && (field000a == 3)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x197;
@@ -546,11 +546,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x101) && (field000a == 2)) ||
                   (((short)field0008 == 0x10e && (field000a == 3)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x198;
@@ -560,11 +560,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x102) && (field000a == 2)) ||
                   (((short)field0008 == 0x10f && (field000a == 3)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x199;
@@ -574,11 +574,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x103) && (field000a == 2)) ||
                   (((short)field0008 == 0x110 && (field000a == 3)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x19a;
@@ -588,11 +588,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x104) && (field000a == 2)) ||
                   (((short)field0008 == 0x111 && (field000a == 3)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x19b;
@@ -602,11 +602,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x105) && (field000a == 2)) ||
                   (((short)field0008 == 0x112 && (field000a == 3)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x19c;
@@ -615,11 +615,11 @@ void Character21::Slot07()
             field3154[effectIndex] = 0;
           }
           else if (((short)field0008 == 0x113) && (field000a == 2)) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1d2;
@@ -628,11 +628,11 @@ void Character21::Slot07()
             field3154[effectIndex] = 0;
           }
           else if (((short)field0008 == 0x114) && (field000a == 2)) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1d3;
@@ -641,11 +641,11 @@ void Character21::Slot07()
             field3154[effectIndex] = 0;
           }
           else if (((short)field0008 == 0x115) && (field000a == 2)) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1d4;
@@ -655,11 +655,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 300) && (field000a == 2)) ||
                   (((short)field0008 == 0x132 && (field000a == 1)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c6;
@@ -669,11 +669,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x12d) && (field000a == 2)) ||
                   (((short)field0008 == 0x133 && (field000a == 1)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c7;
@@ -683,11 +683,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x12e) && (field000a == 2)) ||
                   (((short)field0008 == 0x134 && (field000a == 1)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c8;
@@ -697,11 +697,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x12f) && (field000a == 2)) ||
                   (((short)field0008 == 0x135 && (field000a == 1)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1a0;
@@ -711,11 +711,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x130) && (field000a == 2)) ||
                   (((short)field0008 == 0x136 && (field000a == 1)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1a2;
@@ -725,11 +725,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x131) && (field000a == 2)) ||
                   (((short)field0008 == 0x137 && (field000a == 1)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1a4;
@@ -739,11 +739,11 @@ void Character21::Slot07()
           }
           else if (((((short)field0008 == 0x138) || ((short)field0008 == 0x139)) ||
                    ((short)field0008 == 0x13a)) && (field000a == 2)) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1b5;
@@ -752,11 +752,11 @@ void Character21::Slot07()
             field3154[effectIndex] = 0;
           }
           else if (((short)field0008 == 0x13b) && (field000a == 3)) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1be;
@@ -766,11 +766,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x13c) && (field000a == 2)) ||
                   (((short)field0008 == 0x13f && (field000a == 1)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c6;
@@ -780,11 +780,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x13d) && (field000a == 2)) ||
                   (((short)field0008 == 0x140 && (field000a == 1)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c7;
@@ -794,11 +794,11 @@ void Character21::Slot07()
           }
           else if ((((short)field0008 == 0x13e) && (field000a == 2)) ||
                   (((short)field0008 == 0x141 && (field000a == 1)))) {
-            if (effects[effectIndex].x > (*opponentSlot)->positionX) {
-              effects[effectIndex].flag0048 = -1;
+            if (effects[effectIndex].x <= (*opponentSlot)->positionX) {
+              effects[effectIndex].flag0048 = 1;
             }
             else {
-              effects[effectIndex].flag0048 = 1;
+              effects[effectIndex].flag0048 = -1;
             }
             field3148 = 4;
             effects[effectIndex].type = 0x1c8;
