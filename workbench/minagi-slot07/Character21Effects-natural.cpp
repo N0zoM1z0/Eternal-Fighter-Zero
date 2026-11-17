@@ -3183,12 +3183,10 @@ void Character21::Slot07()
               ((short)effects[effectIndex].tick == 0)) && (field3254[effectIndex] == 0)) {
             effects[effectIndex].field0084 = 1;
             field3254[effectIndex] = field3254[effectIndex] + 1;
-            uVar5 = RandomRange(0,10);
             effects[effectIndex].vx =
-                 (double)uVar5 * 0.1 + 1.2;
-            uVar5 = RandomRange(0,10);
+                 (double)(unsigned short)RandomRange(0,10) * 0.1 + 1.2;
             effects[effectIndex].vy =
-                 (double)uVar5 * 0.1 + 0.0;
+                 (double)(unsigned short)RandomRange(0,10) * 0.1 + 0.0;
           }
           if ((0.8 < effects[effectIndex].vx) &&
              (effects[effectIndex].vx =
@@ -3218,12 +3216,10 @@ void Character21::Slot07()
               ((short)effects[effectIndex].tick == 0)) && (field3254[effectIndex] == 0)) {
             effects[effectIndex].field0084 = 1;
             field3254[effectIndex] = field3254[effectIndex] + 1;
-            uVar5 = RandomRange(0,10);
             effects[effectIndex].vx =
-                 (double)uVar5 * 0.1 + 1.6;
-            uVar5 = RandomRange(0,10);
+                 (double)(unsigned short)RandomRange(0,10) * 0.1 + 1.6;
             effects[effectIndex].vy =
-                 (double)uVar5 * 0.1 + 0.0;
+                 (double)(unsigned short)RandomRange(0,10) * 0.1 + 0.0;
           }
           if ((0.8 < effects[effectIndex].vx) &&
              (effects[effectIndex].vx =
@@ -3253,12 +3249,10 @@ void Character21::Slot07()
               ((short)effects[effectIndex].tick == 0)) && (field3254[effectIndex] == 0)) {
             effects[effectIndex].field0084 = 1;
             field3254[effectIndex] = field3254[effectIndex] + 1;
-            uVar5 = RandomRange(0,10);
             effects[effectIndex].vx =
-                 (double)uVar5 * 0.1 + 2.0;
-            uVar5 = RandomRange(0,10);
+                 (double)(unsigned short)RandomRange(0,10) * 0.1 + 2.0;
             effects[effectIndex].vy =
-                 (double)uVar5 * 0.1 + 0.0;
+                 (double)(unsigned short)RandomRange(0,10) * 0.1 + 0.0;
           }
           if ((0.8 < effects[effectIndex].vx) &&
              (effects[effectIndex].vx =
@@ -3288,12 +3282,10 @@ void Character21::Slot07()
               ((short)effects[effectIndex].tick == 0)) && (field3254[effectIndex] == 0)) {
             effects[effectIndex].field0084 = 1;
             field3254[effectIndex] = field3254[effectIndex] + 1;
-            uVar5 = RandomRange(0,10);
             effects[effectIndex].vx =
-                 (double)uVar5 * 0.1 + 0.5;
-            uVar5 = RandomRange(0,10);
+                 (double)(unsigned short)RandomRange(0,10) * 0.1 + 0.5;
             effects[effectIndex].vy =
-                 (double)uVar5 * 0.1 + 0.0;
+                 (double)(unsigned short)RandomRange(0,10) * 0.1 + 0.0;
           }
           if ((0.8 < effects[effectIndex].vx) &&
              (effects[effectIndex].vx =
@@ -3351,8 +3343,7 @@ void Character21::Slot07()
                field3354[effectIndex] < 1)) {
               spawn.type = 0x1bf;
               spawn.owner = 1;
-              uVar5 = RandomRange(0,0x1e0);
-              spawn.x = ((positionX - (double)uVar5) + 240.0) -
+              spawn.x = ((positionX - (double)(unsigned short)RandomRange(0,0x1e0)) + 240.0) -
                          (double)((char)effects[effectIndex].flag0048 * 0x78);
               spawn.y = -480.0;
               spawn.group = 2;
@@ -3643,9 +3634,7 @@ effects[effectIndex].frame <= 7 &&
                   frameDuration = RandomRange(0,100);
 
                   spawn.type = (0x32 < frameDuration) + 0x1cf;
-                  uVar6 = RandomRange(0,0x28);
-
-                  spawn.x = (double)(int)((uVar6 & 0xffff) *
+                  spawn.x = (double)(int)(((unsigned short)RandomRange(0,0x28) & 0xffff) *
                                           (int)(char)effects[effectIndex].flag0048) +
                              effects[effectIndex].x;
                   frameDuration = RandomRange(0,0x78);

@@ -297,9 +297,9 @@
   },
   "candidate": {
     "source": "workbench/minagi-slot07/Character21Effects-natural.cpp",
-    "source_sha256": "8cf84b80c94a077179139f6ac9e90a14cebd6577ca6740f904664b1715733832",
+    "source_sha256": "9e7299594d4c92b7aa944535a6a782028fa8f856f03a0a75f6834023041254ac",
     "object": "build/minagi-slot07/Character21Effects-natural.obj",
-    "function_body_sha256": "f186eae04ebf576e44e1ea09ecd3294c62bbfe04def924e06d9b992220ca8662",
+    "function_body_sha256": "9718b435cd0ed8e7ec0a4925564499aab9e1bb128015d839fac09224e2bfcbca",
     "compiler_flags": [
       "/Od",
       "/G6",
@@ -308,8 +308,8 @@
       "/W3"
     ],
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-    "compiled_function_bytes": 88231,
-    "native_size_delta": 433,
+    "compiled_function_bytes": 88180,
+    "native_size_delta": 382,
     "dispatch_cases": 68,
     "dispatch_ids_match_original": true,
     "coff_relocations": 954,
