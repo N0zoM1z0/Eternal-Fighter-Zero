@@ -76,8 +76,29 @@ void Character21::Slot05()
     forwardSeparation = (double)(int)facing *
             ((*opponentSlot)->positionX - positionX);
     verticalSeparation = fabs(positionY - (*opponentSlot)->positionY);
-    if (((field0008 < 0x32) || (0x96 < field0008)) ||
-       (field000c != 0)) {
+    if (field0008 >= 0x32 && field0008 <= 0x96 && field000c == 0) {
+      randomRoll = RandomRange(0,100);
+      if (8.0f * field00a8 <= (float)randomRoll) {
+        field3114 = 0;
+      }
+      else {
+        field3114 = 3;
+      }
+      randomRoll = RandomRange(0,100);
+      inputX = (randomRoll < 0x32) * -2 + '\x01';
+      randomRoll = RandomRange(0,0xf0);
+      buttonPulse[3] = (double)randomRoll < verticalSeparation;
+      randomRoll = RandomRange(0,0x140);
+      buttonPulse[3] = (double)randomRoll < forwardSeparation;
+      if ((((199 < (*opponentSlot)->field0008) &&
+           ((*opponentSlot)->field0008 < 0xfa)) &&
+          ((*opponentSlot)->field000a < 3)) &&
+         ((verticalSeparation < 100.0 && (forwardSeparation < 150.0)))) {
+        buttonPulse[3] = 0;
+      }
+          return;
+    }
+
       if (((((field0008 < 4) || (6 < field0008)) &&
            ((field0008 < 10 || (0xc < field0008)))) ||
           (positionY != 0.0)) &&
@@ -1418,28 +1439,7 @@ void Character21::Slot05()
           recognizedCommand = 0x34;
         }
       }
-    }
-    else {
-      randomRoll = RandomRange(0,100);
-      if (8.0f * field00a8 <= (float)randomRoll) {
-        field3114 = 0;
-      }
-      else {
-        field3114 = 3;
-      }
-      randomRoll = RandomRange(0,100);
-      inputX = (randomRoll < 0x32) * -2 + '\x01';
-      randomRoll = RandomRange(0,0xf0);
-      buttonPulse[3] = (double)randomRoll < verticalSeparation;
-      randomRoll = RandomRange(0,0x140);
-      buttonPulse[3] = (double)randomRoll < forwardSeparation;
-      if ((((199 < (*opponentSlot)->field0008) &&
-           ((*opponentSlot)->field0008 < 0xfa)) &&
-          ((*opponentSlot)->field000a < 3)) &&
-         ((verticalSeparation < 100.0 && (forwardSeparation < 150.0)))) {
-        buttonPulse[3] = 0;
-      }
-    }
+
   }
   return;
 }

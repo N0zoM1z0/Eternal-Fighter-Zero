@@ -82,6 +82,47 @@ def candidate_calls_and_literals(relocs:list[dict], candidate:bytes):
             raise AssertionError(('unexpected external COFF relocation',reloc))
     return called,floats
 
+def calls_with_random_bounds(data:bytes, name:str,
+                             call_targets:list[tuple[int,int]], base:int=0):
+    """Track call order *and* original RandomRange immediate upper bounds.
+
+    Every source/original RandomRange here pushes an immediate upper bound and
+    lower bound zero immediately before ECX=this and the direct E8 call.
+    Comparing targets alone misses random-reordering regressions.
+    """
+    instructions=[]
+    for line in disasm(data,name,base):
+        entry=re.match(r'^\s*([0-9a-f]+):\s+((?:[0-9a-f]{2}\s+)+)\s+(.+)$',
+                       line)
+        if entry:
+            instructions.append((int(entry.group(1),16)-base,
+                                 entry.group(3).strip()))
+    by_offset={off:i for i,(off,asm) in enumerate(instructions)}
+    result=[]
+    for offset,target in call_targets:
+        if offset not in by_offset:
+            raise AssertionError(('direct helper call missing from disassembly',
+                                  name,hex(offset)))
+        i=by_offset[offset]
+        if not instructions[i][1].startswith('call '):
+            raise AssertionError(('not an E8 call instruction',name,offset))
+        limit=None
+        if target==0x004108A0:
+            # The two argument pushes must be the last two preceding
+            # immediate pushes (the lower bound is always zero in this owner).
+            pushes=[]
+            for _,asm in instructions[max(0,i-10):i]:
+                match=re.fullmatch(r'push\s+(0x[0-9a-f]+|[0-9]+)',asm)
+                if match:
+                    pushes.append(int(match.group(1),0))
+            if len(pushes)<2 or pushes[-1]!=0:
+                raise AssertionError(('cannot verify RandomRange arguments',
+                                      name,hex(offset),pushes))
+            limit=pushes[-2]
+        result.append((target,limit))
+    return result
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rebuild',action='store_true')
@@ -121,6 +162,18 @@ def main():
     native_call_order=[addr for _,addr in native_calls]
     candidate_call_order=[addr for _,addr,_ in called]
     call_in_order=sum(a==b for a,b in zip(native_call_order,candidate_call_order))
+    native_signatures=calls_with_random_bounds(
+        native,'original-direct-arg-audit.bin',native_calls,ORIGINAL)
+    candidate_signatures=calls_with_random_bounds(
+        candidate,'candidate-direct-arg-audit.bin',
+        [(off,target) for off,target,_ in called])
+    call_bounds_in_order=sum(a==b for a,b in zip(
+        native_signatures,candidate_signatures))
+    if call_bounds_in_order!=111:
+        raise AssertionError(('CPU direct helper call / RNG argument order',
+                              call_bounds_in_order,111))
+    call_signature_sha=hashlib.sha256(json.dumps(
+        native_signatures,separators=(',',':')).encode()).hexdigest()
     if len(native_literals)!=207 or len(candidate_literals)!=207:
         raise AssertionError(('unexpected native/candidate static literals',
                               len(native_literals),len(candidate_literals)))
@@ -148,6 +201,7 @@ def main():
             'sha256':hashlib.sha256(native).hexdigest(),
             'direct_call_sites':len(native_calls),
             'direct_call_targets':{hex(a):n for a,n in sorted(original_counts.items())},
+            'direct_call_with_rng_bound_order_sha256':call_signature_sha,
             'static_floating_literal_refs':len(native_literals),
             'static_floating_literal_histogram_sha256':histogram_sha,
         },
@@ -165,6 +219,8 @@ def main():
             'direct_call_targets':{hex(a):n for a,n in sorted(counted.items())},
             'direct_calls_in_original_order':call_in_order,
             'direct_calls_out_of_original_order':len(native_calls)-call_in_order,
+            'direct_calls_with_rng_bounds_in_original_order':call_bounds_in_order,
+            'direct_call_with_rng_bound_order_sha256':call_signature_sha,
             'static_floating_literal_refs':len(candidate_literals),
             'static_floating_literals_values_match_native':True,
             'static_floating_literals_in_original_order':literal_order_matches,
@@ -178,8 +234,10 @@ def main():
             'This is a full natural-C++ CPU decision candidate, with 111 native '
             'external helper calls matched by target multiplicity and 207 x87 '
             'static floating references matched by IEEE-754 value and count. '
-            'Some native/candidate call and literal reference order differs; '
-            'code size, instruction identity, side-effect order, and full '
+            'All 111 helper targets, including all 108 RandomRange immediate '
+            'bounds, are matched in original call order, as are all 207 '
+            'floating literal values, widths, and reference order. '
+            'Code size, instruction identity, side-effect order, and full '
             'branch equivalence remain unproven. This source stays outside '
             'accepted Exact and implemented-function ledgers.'
         )
@@ -192,6 +250,7 @@ def main():
         'size_delta':len(candidate)-NATIVE_SIZE,
         'direct_helper_calls':len(called),
         'direct_calls_in_native_order':call_in_order,
+        'direct_calls_with_rng_bounds_in_native_order':call_bounds_in_order,
         'static_literal_values_matched':len(candidate_literals),
         'static_literals_in_native_order':literal_order_matches,
         'exact':False
