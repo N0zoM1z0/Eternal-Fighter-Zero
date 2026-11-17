@@ -499,46 +499,44 @@ void Character19::Slot05()
             }
             else if (((field0008 == 0xd0) && (attackCollisionResult == 3)) &&
                     (5 < field000a)) {
-              if (((!(distance.forward > 80.0)) || (!(velocityX < 0.0))) ||
-                 ((*opponentSlot)->positionY - positionY <=
-                  -40.0)) {
-                if ((((*opponentSlot)->airActionLockFrames >= 0x2d) ||
-                    (airActionCount <= 0)) ||
-                   ((!(distance.vertical < 40.0) ||
-                    (!((*opponentSlot)->positionY - positionY < 0.0))))
-                   ) {
-                  if (((*opponentSlot)->airActionLockFrames >= 0x2d) ||
-                     (velocityX < 0.0)) {
-                    if ((((!(distance.vertical < 20.0)) ||
-                         ((*opponentSlot)->positionY <=
-                          positionY)) &&
-                        ((*opponentSlot)->positionY >= positionY)) ||
-                       (((*opponentSlot)->airActionLockFrames <= 0x54 ||
-                        (airActionCount >= 2)))) {
-                      if ((distance.vertical > 90.0) &&
-                         ((((*opponentSlot)->positionY <
-                            positionY &&
-                           ((*opponentSlot)->airActionLockFrames >= 0x2e)) &&
-                          (airActionCount <= 1)))) {
-                        inputX = facing;
-                        inputY = 0xff;
-                      }
-                    }
-                    else {
-                      inputX = facing;
-                      inputY = 0;
-                    }
-                  }
-                  else {
-                    buttonPulse[2] = 1;
-                  }
-                }
-                else {
-                  recognizedCommand = 10;
+              if (!(distance.forward > 80.0)) goto kanna_state11_outer;
+              if (!(velocityX < 0.0)) goto kanna_state11_outer;
+              if (!((*opponentSlot)->positionY - positionY > -40.0)) goto kanna_state11_outer;
+              recognizedCommand = 10;
+              return;
+
+kanna_state11_outer:
+              if ((*opponentSlot)->airActionLockFrames >= 0x2d) goto kanna_state11_second;
+              if (airActionCount <= 0) goto kanna_state11_second;
+              if (!(distance.vertical < 40.0)) goto kanna_state11_second;
+              if (!((*opponentSlot)->positionY - positionY < 0.0)) goto kanna_state11_second;
+              recognizedCommand = 10;
+              return;
+
+kanna_state11_second:
+              if ((*opponentSlot)->airActionLockFrames >= 0x2d) goto kanna_state11_deeper;
+              if (velocityX >= 0.0) goto kanna_state11_pulse;
+              goto kanna_state11_deeper;
+kanna_state11_pulse:
+              buttonPulse[2] = 1;
+              return;
+kanna_state11_deeper:
+              if ((((!(distance.vertical < 20.0)) ||
+                   ((*opponentSlot)->positionY <= positionY)) &&
+                  ((*opponentSlot)->positionY >= positionY)) ||
+                 (((*opponentSlot)->airActionLockFrames <= 0x54 ||
+                  (airActionCount >= 2)))) {
+                if ((distance.vertical > 90.0) &&
+                   ((((*opponentSlot)->positionY < positionY &&
+                     ((*opponentSlot)->airActionLockFrames >= 0x2e)) &&
+                    (airActionCount <= 1)))) {
+                  inputX = facing;
+                  inputY = 0xff;
                 }
               }
               else {
-                recognizedCommand = 10;
+                inputX = facing;
+                inputY = 0;
               }
             }
           }
