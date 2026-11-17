@@ -1630,7 +1630,7 @@ state-range gate is reconstructed as the native-order early command return,
 with exact signed-byte and opponent-state boundaries. Native x87 unordered-compare paths are preserved with explicit negated
 relational tests where the original branches treat unordered values as true;
 `positionY == 0.0` remains a true equality test.
-Targeted instruction alignment reports 3,906 of 4,447 candidate instructions
+Targeted instruction alignment reports 3,925 of 4,446 candidate instructions
 aligned with native order/semantics. The source also restores native unsigned
 RNG zero-extension and signed air-action-lock `<= 0` tests. The candidate remains **not Exact** and
 has not been promoted into `src/` or the match ledger. Rebuild only this owner
