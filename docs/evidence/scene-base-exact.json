@@ -26,15 +26,15 @@
       "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
       "target_address": "0x00759C10",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "b10706e007a27b5a864841681e0f364d07493309b48479bc98a1296bd794c510",
-      "object_sha256": "98e4bcb3e17f0386661844774a5a276339781a41a899db29e0815ca7a478a903",
+      "boundary_ledger_sha256": "bad15aaa64f1b9c49c44074ba4b417806aa53670d391292b3c4229f916c0552b",
+      "object_sha256": "dce520f25663e61288bca52dda42c4e60f5b4b2a8224c5e246758cef341908f4",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
-        "src/Engine.h": "00cc6a6a1cb29f8f7d3306e30772b6fd7572c0659160b84220a2107b750402c7",
+        "src/Engine.h": "c7eb19d4115e7558aff543a161a0c702429fb1b63dfab62ea0f3664dbbdd5b4b",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "5d2833d8069fc627ea73f80a8a42d000aeac3a7304c005c6d28da61869cf74f9",
+      "units_manifest_sha256": "e248a768098e4dee2e33082d8704bce930a091403bb808dc97e2ac5b2e989759",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "ce8ecd051054f8831a3dd13ee86f0e17c10b841e8015def3af7172223f50fce5",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -135,15 +135,15 @@
       "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
       "target_address": "0x00759C90",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "b10706e007a27b5a864841681e0f364d07493309b48479bc98a1296bd794c510",
-      "object_sha256": "26f418867a8848ebcb7242b445d5548373c6276b40e753a3961bae60ed7f978b",
+      "boundary_ledger_sha256": "bad15aaa64f1b9c49c44074ba4b417806aa53670d391292b3c4229f916c0552b",
+      "object_sha256": "8cede05d7acbbb44ab0ce7d963bec09c30e27b0c1ec19225a82bfbf8f9162328",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
-        "src/Engine.h": "00cc6a6a1cb29f8f7d3306e30772b6fd7572c0659160b84220a2107b750402c7",
+        "src/Engine.h": "c7eb19d4115e7558aff543a161a0c702429fb1b63dfab62ea0f3664dbbdd5b4b",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "5d2833d8069fc627ea73f80a8a42d000aeac3a7304c005c6d28da61869cf74f9",
+      "units_manifest_sha256": "e248a768098e4dee2e33082d8704bce930a091403bb808dc97e2ac5b2e989759",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "4e725c0c654d1c91448a285742ea86f02db6011d5510575b7d8f276070c8e1d2",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -226,20 +226,20 @@
       "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
       "target_address": "0x00759E20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "b10706e007a27b5a864841681e0f364d07493309b48479bc98a1296bd794c510",
-      "object_sha256": "8fbc3b0c98e445caca3e1728cffa3d3e0e15d2a4cacec5f80453cab4f76c6062",
+      "boundary_ledger_sha256": "bad15aaa64f1b9c49c44074ba4b417806aa53670d391292b3c4229f916c0552b",
+      "object_sha256": "2e0dd1d99378cfdfa89386eab58a0205d88ba8e862387aa20c3963aba29207cc",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
-        "src/Engine.h": "00cc6a6a1cb29f8f7d3306e30772b6fd7572c0659160b84220a2107b750402c7",
+        "src/Engine.h": "c7eb19d4115e7558aff543a161a0c702429fb1b63dfab62ea0f3664dbbdd5b4b",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "5d2833d8069fc627ea73f80a8a42d000aeac3a7304c005c6d28da61869cf74f9",
+      "units_manifest_sha256": "e248a768098e4dee2e33082d8704bce930a091403bb808dc97e2ac5b2e989759",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "1123789c769b07bd0da83a79a62933750d088ce2a328a069169ee3a5ffe210fd",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "Selected SceneBase and Scene6 typed-field header consumers. All normal COFF function bodies compared strictly Exact with PE; no whole cold replay."
+  "latest_selected_replay": "Selected Scene6 0x750/0x754 header consumers: local original native function strict comparisons only, no full replay."
 }

@@ -1155,15 +1155,15 @@
       "symbol": "?UpdatePaletteFade@Context@@QAEXXZ",
       "target_address": "0x00407D10",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "b10706e007a27b5a864841681e0f364d07493309b48479bc98a1296bd794c510",
-      "object_sha256": "df44c01158406498e6645207e703d7f4c3a88a82ba4497c05d023d2710868e8a",
+      "boundary_ledger_sha256": "bad15aaa64f1b9c49c44074ba4b417806aa53670d391292b3c4229f916c0552b",
+      "object_sha256": "ff44c684c0e0069d1f40a092a5a9141ae1a666acc03ce27ac6f85988bf26bbd6",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
-        "src/Engine.h": "00cc6a6a1cb29f8f7d3306e30772b6fd7572c0659160b84220a2107b750402c7",
+        "src/Engine.h": "c7eb19d4115e7558aff543a161a0c702429fb1b63dfab62ea0f3664dbbdd5b4b",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "5d2833d8069fc627ea73f80a8a42d000aeac3a7304c005c6d28da61869cf74f9",
+      "units_manifest_sha256": "e248a768098e4dee2e33082d8704bce930a091403bb808dc97e2ac5b2e989759",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "1c2c0e74e1174e276910ae3b4f4d5bc2c1e5b2fd3eea345399f25601352b89c0",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1182,15 +1182,15 @@
       "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
       "target_address": "0x0040BE20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "b10706e007a27b5a864841681e0f364d07493309b48479bc98a1296bd794c510",
-      "object_sha256": "250743f33041649cc4172e905d0f1014f8d0ea4cf36605c0b3ba46400665878d",
+      "boundary_ledger_sha256": "bad15aaa64f1b9c49c44074ba4b417806aa53670d391292b3c4229f916c0552b",
+      "object_sha256": "efe316f934036da7f2cf6f2397720ca4ef2bdca683d9c4dd8f92b499739d3e60",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
-        "src/Engine.h": "00cc6a6a1cb29f8f7d3306e30772b6fd7572c0659160b84220a2107b750402c7",
+        "src/Engine.h": "c7eb19d4115e7558aff543a161a0c702429fb1b63dfab62ea0f3664dbbdd5b4b",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "5d2833d8069fc627ea73f80a8a42d000aeac3a7304c005c6d28da61869cf74f9",
+      "units_manifest_sha256": "e248a768098e4dee2e33082d8704bce930a091403bb808dc97e2ac5b2e989759",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "b96a927e30ff0ce829463f49a413e1047f08b389eb24452df346663943ae6c56",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1209,15 +1209,15 @@
       "symbol": "?LightenPalette@Video@@QAEXPBEEEE@Z",
       "target_address": "0x0040BF20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "b10706e007a27b5a864841681e0f364d07493309b48479bc98a1296bd794c510",
-      "object_sha256": "d613d80cc8db5d41502f80e52c26fbad92de7379ef63b6f6c06a95de56f62870",
+      "boundary_ledger_sha256": "bad15aaa64f1b9c49c44074ba4b417806aa53670d391292b3c4229f916c0552b",
+      "object_sha256": "9acd5730efefdf32cde29d2518625c06ed45702327acda663e706c766941d577",
       "source_sha256": "067269ee9daf9527480f77f0100002fe69f323c7fad5ca9ca0c9243b2834f801",
       "dependencies": {
-        "src/Engine.h": "00cc6a6a1cb29f8f7d3306e30772b6fd7572c0659160b84220a2107b750402c7",
+        "src/Engine.h": "c7eb19d4115e7558aff543a161a0c702429fb1b63dfab62ea0f3664dbbdd5b4b",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "5d2833d8069fc627ea73f80a8a42d000aeac3a7304c005c6d28da61869cf74f9",
+      "units_manifest_sha256": "e248a768098e4dee2e33082d8704bce930a091403bb808dc97e2ac5b2e989759",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "83c83974a7232b982f38d7bd626ceea3965ba67e5c739ab73bba53d13053e157",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1251,5 +1251,5 @@
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "Selected current Scene6 typed offset +0x754 source-header consumers. Native palette function code and declared relocations strictly Exact; no broad replay."
+  "latest_selected_replay": "Selected palette/UI and Minagi native functions recompiled after Scene6 typed UI animation fields, no full replay."
 }
