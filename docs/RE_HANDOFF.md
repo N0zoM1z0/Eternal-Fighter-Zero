@@ -1623,14 +1623,14 @@ updates two adjacent signed 32-bit cooldowns at object offsets `+0x314C` and
 instead of an opaque eight-byte region; the class layout and offsets are
 unchanged. The complete 17,176-byte CPU function now has a natural C++ workbench
 reconstruction at `workbench/character19-cpu/Character19Cpu-decomp.cpp`.
-The selected VC7.1 `/Od` candidate is 17,161 bytes (15 bytes shorter than
+The selected VC7.1 `/Od` candidate is 17,173 bytes (3 bytes shorter than
 native), with the original `0xCC` stack frame and matching entry prologue.
 The large AI/state branches and neutral-input fallback are present. The final
 state-range gate is reconstructed as the native-order early command return,
 with exact signed-byte and opponent-state boundaries. Native x87 unordered-compare paths are preserved with explicit negated
 relational tests where the original branches treat unordered values as true;
 `positionY == 0.0` remains a true equality test.
-Targeted instruction alignment reports 4,188 of 4,447 candidate instructions
+Targeted instruction alignment reports 4,192 of 4,447 candidate instructions
 aligned with native order/semantics. The source also restores native unsigned
 RNG zero-extension, signed air-action-lock `<= 0` tests, and an explicit short-circuit/early-exit reconstruction of the state-0x11
 aerial decision tree with unordered-aware x87 relational forms. The final
@@ -1649,8 +1649,10 @@ dispatch epilogue jumps. The ground-range random direction uses an explicit inte
 recover the native zeroed-register plus `setl` materialization. The final AI
 gate uses natural early-return guards for both facing-command
 fallthroughs, moving their byte-to-command conversions back to the native
-branch sites and eliminating the synthesized tail conversion block. The
-state-0x11 inverse vertical-decision predicate now preserves the `20`,
+branch sites and eliminating the synthesized tail conversion block. All 4,447 candidate instructions now align in native order and semantics after
+branch-target normalization. The only remaining byte-size discrepancy is one
+three-byte near-versus-short return jump in state 0x20; all 298 COFF relocations
+and the original stack frame remain intact. The state-0x11 inverse vertical-decision predicate now preserves the `20`,
 `84`, and `90` thresholds and its native early-exit path. The state-0x21 cancel-roll branch now uses the native
 positive `RandomRange(0, 100) < 0x32` guard before selecting state 6. The 0xcb follow-up now uses the positive
 `distance.forward < 120` branch so unordered x87 values keep native command 0x1f. The grounded movement branch

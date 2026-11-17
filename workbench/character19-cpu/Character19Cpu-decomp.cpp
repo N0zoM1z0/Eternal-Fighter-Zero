@@ -634,13 +634,14 @@ kanna_state11_deeper:
             }
             if (field0008 == 0xcb) {
               field3114 = 0x21;
+              return;
             }
-            else if ((*opponentSlot)->airActionLockFrames < 0x3c) {
+            if ((*opponentSlot)->airActionLockFrames < 0x3c) {
               buttonPulse[2] = 1;
+              return;
             }
-            else {
-              field3114 = 0xe;
-            }
+            field3114 = 0xe;
+            return;
           }
           else {
             if (field3114 == 0x21) {
@@ -692,10 +693,10 @@ kanna_state11_deeper:
               }
               if ((field0008 == 0xab) || (field0008 == 0xa7)) {
                 field3114 = 0x25;
+                return;
               }
-              else {
-                recognizedCommand = 0x34;
-              }
+              recognizedCommand = 0x34;
+              return;
             }
             else if (field3114 == 0x25) {
               if (positionY == 0.0) {
@@ -703,10 +704,10 @@ kanna_state11_deeper:
               }
               if (field0008 == 0xd0) {
                 field3114 = 0;
+                return;
               }
-              else {
-                buttonPulse[1] = 1;
-              }
+              buttonPulse[1] = 1;
+              return;
             }
             else {
               if ((((1 < attackCollisionResult) && (hitstopFrames == 0)) &&
