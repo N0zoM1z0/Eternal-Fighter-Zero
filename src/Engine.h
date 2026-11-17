@@ -679,7 +679,10 @@ public:
 class Scene3;
 DECLARE_SCENE(Scene5, 0x474)
 class Scene6 : public Scene {
-    unsigned char unknown_0430[0x760 - sizeof(Scene)];
+    // Original settings UI easing value at native object offset 0x754.
+    unsigned char unknown_0430[0x754 - sizeof(Scene)];
+    int settingsSlideOffset;
+    unsigned char unknown_0758[0x760 - 0x758];
 public:
     Scene6(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
     virtual void Slot0();
@@ -688,6 +691,7 @@ public:
     // Original settings-scene palette transitions (0x0075D8D0, 0x0075D970).
     void FadeConfigPalette(unsigned char);
     void FadeConfigPaletteIn(unsigned char);
+    void AnimateSettingsSlide(unsigned char reverse);
 };
 DECLARE_SCENE(Scene7, 0x448)
 DECLARE_SCENE(Scene8, 0x758)

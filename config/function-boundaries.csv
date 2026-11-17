@@ -523,3 +523,4 @@ address,end,size,status,evidence
 0x005AA3F0,0x005AD4F9,12553,reviewed,docs/evidence/character-21-slot04-exact.json; original Minagi vtable slot4 0x00788950 selects full native C++ action owner [0x005AA3F0,0x005AD4F9) ending RET 0x005AD4F8; seven subsequent CC alignment bytes excluded
 0x0075D8D0,0x0075D962,146,reviewed,docs/evidence/scene6-palette-fades-exact.json
 0x0075D970,0x0075DA25,181,reviewed,docs/evidence/scene6-palette-fades-exact.json
+0x0075DA30,0x0075DB6E,318,reviewed,docs/evidence/scene6-settings-slide-exact.json

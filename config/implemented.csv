@@ -501,3 +501,4 @@ address,name,source,symbol,status,evidence
 0x00405470,_sinf,src/EffectUpdate.cpp,_sinf,complete,docs/evidence/float-load-standard-library-codegen.json
 0x0075D8D0,Scene6::FadeConfigPalette,src/Scene6PaletteFade.cpp,?FadeConfigPalette@Scene6@@QAEXE@Z,complete,docs/evidence/scene6-palette-fades-exact.json
 0x0075D970,Scene6::FadeConfigPaletteIn,src/Scene6PaletteFade.cpp,?FadeConfigPaletteIn@Scene6@@QAEXE@Z,complete,docs/evidence/scene6-palette-fades-exact.json
+0x0075DA30,Scene6::AnimateSettingsSlide,src/Scene6SettingsAnimation.cpp,?AnimateSettingsSlide@Scene6@@QAEXE@Z,complete,docs/evidence/scene6-settings-slide-exact.json
