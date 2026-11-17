@@ -170881,3 +170881,188 @@ type = "DIR32"
 symbol = "$L61484"
 target = 0x0075bb02
 evidence = "Original EFZ PE 0x0075D25C operand: compiler COFF symbol $L61484 resolves to 0x0075BB02"
+
+[units.scene6-number-backdrop]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Scene6NumberBackdrop.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/Scene6BackdropPaths.cpp"]
+object = "build/match-units/scene6-number-backdrop/Scene6NumberBackdrop.obj"
+symbol = "?TransitionNumberBackdrop@Scene6@@QAEXXZ"
+target_address = 0x0075d660
+size = 615
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "Original EFZ PE 0x0075D667 independently reviewed ___security_cookie operand target 0x0078F050"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 19
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "Original EFZ PE 0x0075D673 independently reviewed __imp__timeGetTime@0 operand target 0x007871E0"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 95
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "Original EFZ PE 0x0075D6BF independently reviewed ?DarkenPalette@Video@@QAEXPBEEEE@Z operand target 0x0040BE20"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 101
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "Original EFZ PE 0x0075D6C5 independently reviewed __imp__timeGetTime@0 operand target 0x007871E0"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 127
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "Original EFZ PE 0x0075D6DF independently reviewed __imp__timeGetTime@0 operand target 0x007871E0"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 149
+type = "DIR32"
+symbol = "?scene6BackdropNumberPrefix@@3QBDB"
+target = 0x00789580
+evidence = "Original EFZ PE 0x0075D6F5 independently reviewed ?scene6BackdropNumberPrefix@@3QBDB operand target 0x00789580"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 158
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "Original EFZ PE 0x0075D6FE independently reviewed _strcpy operand target 0x00778080"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 178
+type = "DIR32"
+symbol = "?scene6BackdropHundredsZero@@3QBDB"
+target = 0x00789590
+evidence = "Original EFZ PE 0x0075D712 independently reviewed ?scene6BackdropHundredsZero@@3QBDB operand target 0x00789590"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 187
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "Original EFZ PE 0x0075D71B independently reviewed _strcat operand target 0x00778090"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 207
+type = "DIR32"
+symbol = "?scene6BackdropTensZero@@3QBDB"
+target = 0x00789594
+evidence = "Original EFZ PE 0x0075D72F independently reviewed ?scene6BackdropTensZero@@3QBDB operand target 0x00789594"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 216
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "Original EFZ PE 0x0075D738 independently reviewed _strcat operand target 0x00778090"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 240
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "Original EFZ PE 0x0075D750 independently reviewed __itoa operand target 0x00777F55"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 256
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "Original EFZ PE 0x0075D760 independently reviewed _strcat operand target 0x00778090"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 322
+type = "DIR32"
+symbol = "?scene6BackdropPackedExtension@@3QBDB"
+target = 0x00789598
+evidence = "Original EFZ PE 0x0075D7A2 independently reviewed ?scene6BackdropPackedExtension@@3QBDB operand target 0x00789598"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 331
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "Original EFZ PE 0x0075D7AB independently reviewed _strcat operand target 0x00778090"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 362
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "Original EFZ PE 0x0075D7CA independently reviewed ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z operand target 0x00406DB0"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 393
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "Original EFZ PE 0x0075D7E9 independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z operand target 0x0040B760"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 400
+type = "DIR32"
+symbol = "?scene6BackdropBitmapExtension@@3QBDB"
+target = 0x007895a0
+evidence = "Original EFZ PE 0x0075D7F0 independently reviewed ?scene6BackdropBitmapExtension@@3QBDB operand target 0x007895A0"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 409
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "Original EFZ PE 0x0075D7F9 independently reviewed _strcat operand target 0x00778090"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 443
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "Original EFZ PE 0x0075D81B independently reviewed ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z operand target 0x00408D00"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 474
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "Original EFZ PE 0x0075D83A independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z operand target 0x0040B640"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 550
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "Original EFZ PE 0x0075D886 independently reviewed ?DarkenPalette@Video@@QAEXPBEEEE@Z operand target 0x0040BE20"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 556
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "Original EFZ PE 0x0075D88C independently reviewed __imp__timeGetTime@0 operand target 0x007871E0"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 582
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "Original EFZ PE 0x0075D8A6 independently reviewed __imp__timeGetTime@0 operand target 0x007871E0"
+
+[[units.scene6-number-backdrop.relocations]]
+offset = 607
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "Original EFZ PE 0x0075D8BF independently reviewed @__security_check_cookie@4 operand target 0x007781DC"

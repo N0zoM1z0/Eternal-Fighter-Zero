@@ -559,7 +559,7 @@ address,size,span_end,body_size,current_name,is_thunk,body_ranges,boundary_statu
 0x0075D350,171,0x0075D3FA,171,Scene6::PollKeyboard,false,0x0075D350:0x0075D3FA,reviewed
 0x0075D400,375,0x0075D576,375,Scene6::ReloadSelectedPreview,false,0x0075D400:0x0075D576,reviewed
 0x0075D580,219,0x0075D65A,219,Scene6::AnimateSettingsPreview,false,0x0075D580:0x0075D65A,reviewed
-0x0075D660,615,0x0075D8C6,615,FUN_0075d660,false,0x0075D660:0x0075D8C6,unreviewed
+0x0075D660,615,0x0075D8C6,615,Scene6::TransitionNumberBackdrop,false,0x0075D660:0x0075D8C6,reviewed
 0x0075D8D0,146,0x0075D961,146,Scene6::FadeConfigPalette,false,0x0075D8D0:0x0075D961,reviewed
 0x0075D970,181,0x0075DA24,181,Scene6::FadeConfigPaletteIn,false,0x0075D970:0x0075DA24,reviewed
 0x0075DA30,318,0x0075DB6D,318,Scene6::AnimateSettingsSlide,false,0x0075DA30:0x0075DB6D,reviewed

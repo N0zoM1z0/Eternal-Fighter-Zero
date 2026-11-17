@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "authority": "Full canonical EFZ PE 615-byte natural C++ original-bound strict codegen identity",
+  "owner": "Scene6::TransitionNumberBackdrop",
+  "native_extent": {
+    "address": "0x0075D660",
+    "exclusive_end": "0x0075D8C7",
+    "bytes": 615
+  },
+  "method": "Selected normal VC7.1 /Od /G6 /MT /Gy /GS /W3 compile, all original function bytes checked after independently original-bound 25 COFF relocations, no ASM, byte patches, padding, or cold replay",
+  "behavior": "11-frame palette fade out and fade in; WinMM clock pacing; decimal-indexed background DAT/BMP path generation; DirectDraw resource reload and palette transition",
+  "original_cpp_lifetime": "Natural nested scope for decimal digits and clock inside real frame/path owner restores original stack slot allocation; no inert variables or fake ABI",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 615,
+      "matched_bytes": 615,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "Original EFZ PE 0x0075D667 independently reviewed ___security_cookie operand target 0x0078F050",
+          "addend": 0
+        },
+        {
+          "offset": 19,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "Original EFZ PE 0x0075D673 independently reviewed __imp__timeGetTime@0 operand target 0x007871E0",
+          "addend": 0
+        },
+        {
+          "offset": 95,
+          "target": 4242976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "Original EFZ PE 0x0075D6BF independently reviewed ?DarkenPalette@Video@@QAEXPBEEEE@Z operand target 0x0040BE20",
+          "addend": 0
+        },
+        {
+          "offset": 101,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "Original EFZ PE 0x0075D6C5 independently reviewed __imp__timeGetTime@0 operand target 0x007871E0",
+          "addend": 0
+        },
+        {
+          "offset": 127,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "Original EFZ PE 0x0075D6DF independently reviewed __imp__timeGetTime@0 operand target 0x007871E0",
+          "addend": 0
+        },
+        {
+          "offset": 149,
+          "target": 7902592,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6BackdropNumberPrefix@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075D6F5 independently reviewed ?scene6BackdropNumberPrefix@@3QBDB operand target 0x00789580",
+          "addend": 0
+        },
+        {
+          "offset": 158,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ PE 0x0075D6FE independently reviewed _strcpy operand target 0x00778080",
+          "addend": 0
+        },
+        {
+          "offset": 178,
+          "target": 7902608,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6BackdropHundredsZero@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075D712 independently reviewed ?scene6BackdropHundredsZero@@3QBDB operand target 0x00789590",
+          "addend": 0
+        },
+        {
+          "offset": 187,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "Original EFZ PE 0x0075D71B independently reviewed _strcat operand target 0x00778090",
+          "addend": 0
+        },
+        {
+          "offset": 207,
+          "target": 7902612,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6BackdropTensZero@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075D72F independently reviewed ?scene6BackdropTensZero@@3QBDB operand target 0x00789594",
+          "addend": 0
+        },
+        {
+          "offset": 216,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "Original EFZ PE 0x0075D738 independently reviewed _strcat operand target 0x00778090",
+          "addend": 0
+        },
+        {
+          "offset": 240,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "Original EFZ PE 0x0075D750 independently reviewed __itoa operand target 0x00777F55",
+          "addend": 0
+        },
+        {
+          "offset": 256,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "Original EFZ PE 0x0075D760 independently reviewed _strcat operand target 0x00778090",
+          "addend": 0
+        },
+        {
+          "offset": 322,
+          "target": 7902616,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6BackdropPackedExtension@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075D7A2 independently reviewed ?scene6BackdropPackedExtension@@3QBDB operand target 0x00789598",
+          "addend": 0
+        },
+        {
+          "offset": 331,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "Original EFZ PE 0x0075D7AB independently reviewed _strcat operand target 0x00778090",
+          "addend": 0
+        },
+        {
+          "offset": 362,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "Original EFZ PE 0x0075D7CA independently reviewed ?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z operand target 0x00406DB0",
+          "addend": 0
+        },
+        {
+          "offset": 393,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE 0x0075D7E9 independently reviewed ?LoadPalette@Video@@QAEHPAEPBDHHH@Z operand target 0x0040B760",
+          "addend": 0
+        },
+        {
+          "offset": 400,
+          "target": 7902624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?scene6BackdropBitmapExtension@@3QBDB",
+          "evidence": "Original EFZ PE 0x0075D7F0 independently reviewed ?scene6BackdropBitmapExtension@@3QBDB operand target 0x007895A0",
+          "addend": 0
+        },
+        {
+          "offset": 409,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "Original EFZ PE 0x0075D7F9 independently reviewed _strcat operand target 0x00778090",
+          "addend": 0
+        },
+        {
+          "offset": 443,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "Original EFZ PE 0x0075D81B independently reviewed ?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z operand target 0x00408D00",
+          "addend": 0
+        },
+        {
+          "offset": 474,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "Original EFZ PE 0x0075D83A independently reviewed ?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z operand target 0x0040B640",
+          "addend": 0
+        },
+        {
+          "offset": 550,
+          "target": 4242976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "Original EFZ PE 0x0075D886 independently reviewed ?DarkenPalette@Video@@QAEXPBEEEE@Z operand target 0x0040BE20",
+          "addend": 0
+        },
+        {
+          "offset": 556,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "Original EFZ PE 0x0075D88C independently reviewed __imp__timeGetTime@0 operand target 0x007871E0",
+          "addend": 0
+        },
+        {
+          "offset": 582,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "Original EFZ PE 0x0075D8A6 independently reviewed __imp__timeGetTime@0 operand target 0x007871E0",
+          "addend": 0
+        },
+        {
+          "offset": 607,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "Original EFZ PE 0x0075D8BF independently reviewed @__security_check_cookie@4 operand target 0x007781DC",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a9d018e5f82d18ba287d637e9ce562db4b38f4f8433e529ea52069a780107ef4",
+      "target_extent_sha256": "a9d018e5f82d18ba287d637e9ce562db4b38f4f8433e529ea52069a780107ef4",
+      "unit": "scene6-number-backdrop",
+      "symbol": "?TransitionNumberBackdrop@Scene6@@QAEXXZ",
+      "target_address": "0x0075D660",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a0767afcb7b58d277c3088fbde524d63e05614855632c256650c3015233696b4",
+      "object_sha256": "5dda2049de2776b064de82d716cbc0b186d64d8daba5aacc36b676d492b0393d",
+      "source_sha256": "efeddda6d01d2848666fcf27be900acf190f10ac7eccfe94329dfea0ff1a5de8",
+      "dependencies": {
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/Scene6BackdropPaths.cpp": "b8a5f2b8aba1e424bce45259a8b9a00b331e55021b9462ca933234f22c742bc6"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "3a8a947c9c826db783f2c0398ad45814a507008e7ae72b8c0756138cbc72dc60",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e10eb45112aa788f36e2d068c3e3e51ba19b269e47f8649589b5020478c4c55b",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

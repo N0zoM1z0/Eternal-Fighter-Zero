@@ -559,7 +559,7 @@ address,origin,status,evidence
 0x0075D350,authored,reviewed,docs/evidence/scene6-keyboard-exact.json
 0x0075D400,authored,reviewed,docs/evidence/scene6-preview-reload-exact.json
 0x0075D580,authored,reviewed,docs/evidence/scene6-settings-preview-exact.json
-0x0075D660,unknown,unreviewed,
+0x0075D660,authored,reviewed,docs/evidence/scene6-number-backdrop-exact.json
 0x0075D8D0,authored,reviewed,docs/evidence/scene6-palette-fades-exact.json
 0x0075D970,authored,reviewed,docs/evidence/scene6-palette-fades-exact.json
 0x0075DA30,authored,reviewed,docs/evidence/scene6-settings-slide-exact.json
