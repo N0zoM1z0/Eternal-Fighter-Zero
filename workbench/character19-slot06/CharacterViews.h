@@ -428,7 +428,6 @@ public:
     void Slot06UpdateDashTrailCharge(unsigned short, unsigned short);
     void Slot06UpdateAirborneTrailDash(unsigned short, unsigned short);
     void Slot06UpdateStunEffectRecovery(unsigned short, unsigned short, EffectSpawn *);
-    void Slot06UpdateImpactEffectPair(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateDampedImpactFinish(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateLoopingAerialBounce(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateFinalFaceTransition(unsigned short, unsigned short);

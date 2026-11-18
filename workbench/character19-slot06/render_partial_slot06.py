@@ -592,8 +592,9 @@ lines += [
 
 lines += labels(0x65)
 lines += [
-    "        Slot06UpdateImpactEffectPair(",
-    "            timing.frameDuration, timing.animationFrameCount, &spawn);",
+    "        {",
+    '#include "Character19Slot06Case65.inc"',
+    "        }",
     "        break;",
     "",
 ]

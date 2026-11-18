@@ -156,15 +156,6 @@ helpers = {
         "spawn->layer = 1;", "spawn->palette = 0x13;", "contextOwner->EmitEffect(spawn);",
         "attackCollisionResult = 0;", "FaceOpponent();", "ResetPose();",
     )),
-    "pair": ("Slot06UpdateImpactEffectPair", (
-        "ResetFrame();", "field000a == 4", "spawn->type = 0x1f;",
-        "spawn->group = 0;", "spawn->layer = 1;", "spawn->facing = (facing != 1);",
-        "contextOwner->EmitEffect(spawn);", "meter = meter + 45;",
-        "pendingCharacterSoundSlot = 1;", "spawn->type = 0x194;",
-        "spawn->x = (double)((int)positionX - (int)facing * 0x50);",
-        "spawn->y = (double)((int)positionY - 0x28);", "spawn->flag0018 = (unsigned char)facing;",
-        "EmitLocalEffect(spawn);", "field000a < 5)", "field0008 = 0;", "ResetPose();",
-    )),
     "damped": ("Slot06UpdateDampedImpactFinish", (
         "velocityX = velocityX * 0.3;", "velocityY = velocityY * 0.3;",
         "velocityY = velocityY + 0.01;", "velocityY > 0.3", "velocityY = 0.3;",
@@ -182,6 +173,33 @@ for key, (name, expressions) in helpers.items():
     for expression in expressions:
         assert expression in helper, (key, expression)
 
+pair_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case65.inc").read_text()
+for expression in (
+    "ResetFrame();",
+    "field000a == 4",
+    "spawn.type = 0x1f;",
+    "spawn.group = 0;",
+    "spawn.layer = 1;",
+    "spawn.facing = (facing != 1);",
+    "contextOwner->EmitEffect(&spawn);",
+    "meter = meter + 45;",
+    "pendingCharacterSoundSlot = 1;",
+    "spawn.owner = 1;",
+    "spawn.type = 0x194;",
+    "spawn.x = (double)((int)positionX - (int)facing * 0x50);",
+    "spawn.y = (double)((int)positionY - 0x28);",
+    "spawn.flag0018 = (unsigned char)facing;",
+    "EmitLocalEffect(&spawn);",
+    "field000a < 5)",
+    "field0008 = 0;",
+    "ResetPose();",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
+):
+    assert expression in pair_helper, expression
+assert pair_helper.count("spawn.owner = 1;") == 1
+assert pair_helper.index("contextOwner->EmitEffect(&spawn);") < pair_helper.index("spawn.owner = 1;")
+
 # The native stack EffectSpawn is zeroed once by FUN_00405490. Thus context
 # effects that do not overwrite owner stay owner 0; only local effects explicitly
 # set owner 1 before calling EmitLocalEffect.
@@ -192,11 +210,7 @@ assert "std::memset(this, 0, sizeof(*this));" in cpp_spawn_init
 stun_start = source.index("void Character19::Slot06UpdateStunEffectRecovery")
 stun_end = source.index("\n}\n", stun_start) + 3
 assert "spawn->owner = 1;" not in source[stun_start:stun_end]
-pair_start = source.index("void Character19::Slot06UpdateImpactEffectPair")
-pair_end = source.index("\n}\n", pair_start) + 3
-pair_helper = source[pair_start:pair_end]
-assert pair_helper.count("spawn->owner = 1;") == 1
-assert pair_helper.index("contextOwner->EmitEffect(spawn);") < pair_helper.index("spawn->owner = 1;")
+assert "Slot06UpdateImpactEffectPair" not in source
 combo_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case66.inc").read_text()
 for expression in (
     "ResetFrame();",
@@ -279,7 +293,7 @@ for expression in (
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 for state, name in (
     (249, "Slot06UpdateStunEffectRecovery"),
-    (250, "Slot06UpdateImpactEffectPair"),
+    (250, "Character19Slot06Case65.inc"),
     (251, "Character19Slot06Case66.inc"),
     (253, "Slot06UpdateDampedImpactFinish"),
 ):

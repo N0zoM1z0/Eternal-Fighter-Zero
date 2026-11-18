@@ -618,8 +618,9 @@ void Character19::Slot06()
         break;
 
     case 101:
-        Slot06UpdateImpactEffectPair(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case65.inc"
+        }
         break;
 
     case 102:
