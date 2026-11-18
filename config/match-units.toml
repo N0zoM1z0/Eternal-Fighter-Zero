@@ -173640,3 +173640,13 @@ type = "REL32"
 symbol = "?RandomRange@Secondary@@QAEFFF@Z"
 target = 0x004108a0
 evidence = "Canonical EFZ.exe @ 0x0067CF30: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[units.character-19-slot07]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character19Effects.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-19-slot07/Character19Effects.obj"
+symbol = "?Slot07@Character19@@UAEXXZ"
+target_address = 0x0067CF50
+size = 25787

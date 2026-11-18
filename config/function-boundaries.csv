@@ -560,3 +560,4 @@ address,end,size,status,evidence
 0x00677E60,0x00678C28,3528,reviewed,docs/evidence/character-19-slot02-exact.json
 0x006763C0,0x00677E05,6725,reviewed,docs/evidence/character-19-slot04-exact.json
 0x00678C30,0x0067CF48,17176,reviewed,docs/evidence/character-19-slot05-exact.json
+0x0067CF50,0x0068340B,25787,reviewed,workbench/character19-slot07/README.md

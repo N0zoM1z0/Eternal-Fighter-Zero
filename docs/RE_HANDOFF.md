@@ -1637,3 +1637,9 @@ Next substantial Kanna owner: `Character19::Slot07` at `0x0067CF50` (provisional
 Ghidra body size 25,787 bytes, selected by vtable offset `+0x1c`). The adjacent
 `Character19::Slot06` at `0x00667570` is a smaller follow-up candidate; review
 its boundary and code before treating the name/extent as final.
+
+## Kanna (Character19) CPU Slot07 — natural C++ port started — 2026-11-18
+
+Character19::Slot07 at 0x0067CF50 is now a complete natural C++ source port in src/Character19Effects.cpp. The reviewed owner extent is [0x0067CF50, 0x0068340B), 25,787 bytes, selected by the Character19 vtable entry at 0x00788CE0 + 0x1c. The source covers all 54 native effect-type cases, the 64-entry local-effect ring, frame/lifetime progression, local effect emission/removal, random motion, camera-bound spawning, and the Kanna state/sound branches.
+
+The selected VC7.1 /Od /G6 /MT /Gy /W3 build succeeds and currently emits 26,455 bytes (668 bytes larger than native) with 265 COFF relocations. This is substantial implementation progress but not Exact yet. The remaining gap is being attacked through natural C++ local-variable lifetime and control-flow shape; no ASM, padding, or byte patching is being used. The exact replay is intentionally not accepted until the candidate reaches the native extent and all original relocations are explicitly bound.
