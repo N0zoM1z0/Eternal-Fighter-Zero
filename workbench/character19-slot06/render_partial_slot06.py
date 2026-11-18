@@ -9,7 +9,7 @@ states_by_case = {
     ]
     for row in rows
 }
-implemented = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
+implemented = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
 mapped = {
     state
     for case, states in states_by_case.items()
@@ -21,7 +21,7 @@ unimplemented = sorted(set(range(1, 0x137)) - mapped)
 lines = [
     "// Partial natural-C++ reconstruction of Character19::Slot06.",
     "// State IDs are grouped using the native 310-byte selector table.",
-    "// Cases 0-7, 10, 0x70-0x74, and the shared 0x75 fallback are restored.",
+    "// Cases 0-0x11, 0x70-0x74, and the shared 0x75 fallback are restored.",
     "// are implemented; remaining native handlers are explicitly TODO.",
     '#include "CharacterViews.h"',
     "",
@@ -150,6 +150,26 @@ lines += [
     "        break;",
     "",
 ]
+
+for case, config in [
+    (0x0b, (3, 0.0, -3.5, 2, 0)),
+    (0x0c, (3, 1.5, -2.5, 2, 0)),
+    (0x0d, (2, -1.5, -2.5, 1, 0)),
+    (0x0e, (3, 2.0, -0.5, 2, 1)),
+    (0x0f, (3, 1.5, -0.5, 2, 0)),
+    (0x10, (2, -2.0, -0.5, 1, 1)),
+    (0x11, (2, -1.5, -0.5, 1, 0)),
+]:
+    launch_frame, velocity_x, velocity_y, acceleration_frame, fixed_acceleration = config
+    lines += labels(case)
+    lines += [
+        "        Slot06UpdateAirMovement(",
+        "            timing.frameDuration, timing.animationFrameCount,",
+        f"            {launch_frame}, {velocity_x}, {velocity_y},",
+        f"            {acceleration_frame}, {fixed_acceleration});",
+        "        break;",
+        "",
+    ]
 
 for case, method in [
     (3, "Slot06Case03"),

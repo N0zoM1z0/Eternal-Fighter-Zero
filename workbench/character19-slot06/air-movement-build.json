@@ -1,0 +1,107 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_cases": {
+    "selector_range": [
+      "0x0B",
+      "0x11"
+    ],
+    "case_bytes_each": 931,
+    "state_ids": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "shared_input_and_timer_logic": "validated identical in all seven native branches"
+  },
+  "shared_helpers": {
+    "Slot06TryAirAction": {
+      "bytes": 616,
+      "relocations": 0
+    },
+    "Slot06UpdateAirMovement": {
+      "bytes": 420,
+      "relocations": 8
+    }
+  },
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+    "source_sha256": "9a246362c6645be9c39c020f278b2982a6b666c700345778372b4ecaee3006eb",
+    "object": "build/character19-slot06/Character19Slot06Cases.obj",
+    "object_sha256": "2b77c20a539d745638b08ae9683ebcad9aa0589a6899f07ad9e8866429d0e4e2",
+    "members": {
+      "?Slot06TryAirAction@Character19@@QAEHXZ": {
+        "bytes": 616,
+        "relocations": 0
+      },
+      "?Slot06UpdateAirMovement@Character19@@QAEXGGGNNGH@Z": {
+        "bytes": 420,
+        "relocations": 8
+      },
+      "?Slot06Case03@Character19@@QAEXXZ": {
+        "bytes": 974,
+        "relocations": 7
+      },
+      "?Slot06Case04@Character19@@QAEXXZ": {
+        "bytes": 992,
+        "relocations": 8
+      },
+      "?Slot06Case05@Character19@@QAEXXZ": {
+        "bytes": 992,
+        "relocations": 8
+      },
+      "?Slot06Case08@Character19@@QAEXXZ": {
+        "bytes": 847,
+        "relocations": 2
+      },
+      "?Slot06Case09@Character19@@QAEXXZ": {
+        "bytes": 891,
+        "relocations": 5
+      },
+      "?Slot06Case70@Character19@@QAEXXZ": {
+        "bytes": 1023,
+        "relocations": 20
+      },
+      "?Slot06Case71@Character19@@QAEXXZ": {
+        "bytes": 759,
+        "relocations": 16
+      },
+      "?Slot06Case72@Character19@@QAEXXZ": {
+        "bytes": 573,
+        "relocations": 13
+      },
+      "?Slot06Case73@Character19@@QAEXXZ": {
+        "bytes": 2438,
+        "relocations": 53
+      },
+      "?Slot06Case74@Character19@@QAEXXZ": {
+        "bytes": 241,
+        "relocations": 4
+      }
+    },
+    "status": "semantic-workbench-only-not-exact"
+  },
+  "dispatcher": {
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "2068c9f3f006cf002cc1634435dcd9e992454f42fc08de4e8806846cee796b83",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "7ebb8909d5c4471ba4a5910b663bb7f081d0ede2d0def00735993ff6488a61b7",
+    "symbol_bytes": 2168,
+    "relocations": 80,
+    "implemented_state_ids": 216,
+    "unimplemented_state_ids": 94,
+    "status": "partial-semantic-workbench-not-exact"
+  },
+  "compiler_flags": [
+    "/Od",
+    "/G6",
+    "/MT",
+    "/Gy",
+    "/W3",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/workbench/character19-slot06",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/src"
+  ]
+}
