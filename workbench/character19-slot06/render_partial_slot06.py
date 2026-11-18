@@ -515,8 +515,9 @@ lines += [
 
 lines += labels(0x59)
 lines += [
-    "        Slot06UpdateAerialGroundSlam(",
-    "            timing.frameDuration, timing.animationFrameCount, &spawn);",
+    "        {",
+    '#include "Character19Slot06Case59.inc"',
+    "        }",
     "        break;",
     "",
 ]

@@ -57,6 +57,7 @@ The 0x33/0x34 airborne knockback landing pair (467/482 native bytes) is also inl
 The nine 0x13-0x1B counter-movement cases (497-byte native bodies, with the final three 473 bytes) are now restored as nine natural C++ branches. Each owns its meter gain, opponent-scaled launch speed, field-decay constant, stage-edge pushback calculation, and input-dependent versus forced-standing finish.
 The 0x2C-0x2E ground-skid family (509/509/485 native bytes) is now inline. It preserves the initial meter/velocity setup, 0.06 horizontal braking, stage-edge pushback scaling by opponent height, and the two input-driven versus forced-standing finish modes.
 The 0x2F airborne recoil (485 native bytes) is now inline too, including its local type-499 hit effect, knockback velocity restore, 0.032 gravity, horizontal correction, and knockdown-dependent landing state.
+The 0x59 aerial ground-slam (443 native bytes) is now inline as well. Its first-frame meter/sound burst, collision escape to 0xD5, ground-crossing reset, context-owned type-3 effect, 0xD6 landing transition, and two-frame repeat-back are preserved in the case itself.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 

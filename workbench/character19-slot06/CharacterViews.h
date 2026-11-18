@@ -423,7 +423,6 @@ public:
     void Slot06UpdateDashRecovery(unsigned short, unsigned short);
     void Slot06UpdateAerialLaunchLanding(unsigned short, unsigned short);
     void Slot06UpdateDashFollowupCancel(unsigned short, unsigned short);
-    void Slot06UpdateAerialGroundSlam(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateAerialKickback(unsigned short, unsigned short);
     void Slot06UpdateGroundImpactRecovery(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateDashTrailCharge(unsigned short, unsigned short);

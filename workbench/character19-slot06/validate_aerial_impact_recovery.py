@@ -112,8 +112,8 @@ for address, expected_value in constants.items():
     assert actual == expected_value, (hex(address), actual, expected_value)
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
+assert "Slot06UpdateAerialGroundSlam" not in source
 helpers = {
-    "slam": "Slot06UpdateAerialGroundSlam",
     "kickback": "Slot06UpdateAerialKickback",
     "ground": "Slot06UpdateGroundImpactRecovery",
 }
@@ -122,6 +122,8 @@ for key, name in helpers.items():
     start = source.index(f"void Character19::{name}")
     end = source.index("\n}\n", start) + 3
     helper_text[key] = source[start:end]
+
+slam_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case59.inc").read_text()
 
 for expression in (
     "velocityY = velocityY + gravity;",
@@ -137,18 +139,21 @@ for expression in (
     "(positionY + velocityY) >= 0.0",
     "positionY = 0.0;",
     "SetVerticalShake(3, 0);",
-    "spawn->type = 3;",
-    "spawn->x = (double)(int)positionX;",
-    "spawn->y = (double)(int)positionY;",
-    "spawn->group = 2;",
-    "spawn->layer = 0;",
-    "spawn->palette = 7;",
-    "contextOwner->EmitEffect(spawn);",
+    "spawn.type = 3;",
+    "spawn.x = (double)(int)positionX;",
+    "spawn.y = (double)(int)positionY;",
+    "spawn.group = 2;",
+    "spawn.layer = 0;",
+    "spawn.palette = 7;",
+    "contextOwner->EmitEffect(&spawn);",
     "pendingContextSoundSlot = 7;",
     "field0008 = 0xd6;",
     "field000a = field000a - 2;",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
 ):
-    assert expression in helper_text["slam"], expression
+    assert expression in slam_helper, expression
+assert "spawn.owner = 1;" not in slam_helper
 
 for expression in (
     "gravity = 0.042;",
@@ -161,9 +166,6 @@ for expression in (
 ):
     assert expression in helper_text["kickback"], expression
 
-slam_start = source.index("void Character19::Slot06UpdateAerialGroundSlam")
-slam_end = source.index("\n}\n", slam_start) + 3
-assert "spawn->owner = 1;" not in source[slam_start:slam_end]
 ground_start = source.index("void Character19::Slot06UpdateGroundImpactRecovery")
 ground_end = source.index("\n}\n", ground_start) + 3
 assert "spawn->owner = 1;" not in source[ground_start:ground_end]
@@ -226,8 +228,10 @@ for expression in (
     assert expression in native_emit, expression
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+assert_selector_case(dispatcher, 212)
+assert '#include "Character19Slot06Case59.inc"' in dispatcher
+assert "Slot06UpdateAerialGroundSlam(" not in dispatcher
 for state, helper in (
-    (212, "Slot06UpdateAerialGroundSlam"),
     (213, "Slot06UpdateAerialKickback"),
     (214, "Slot06UpdateGroundImpactRecovery"),
 ):

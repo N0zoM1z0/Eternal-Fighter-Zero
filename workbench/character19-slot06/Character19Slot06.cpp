@@ -551,8 +551,9 @@ void Character19::Slot06()
         break;
 
     case 89:
-        Slot06UpdateAerialGroundSlam(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case59.inc"
+        }
         break;
 
     case 90:
