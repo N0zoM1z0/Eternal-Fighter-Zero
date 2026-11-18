@@ -7,14 +7,14 @@
   },
   "partial_candidate": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "d628f013b67667c94deb822fb0829bde6bc087231dc1701872eec3e889d5cad2",
+    "source_sha256": "86455d837c0a09b213e7ccdcaba1b0e92c83151682f19071ed6426654d56fa67",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "31c38cafdbc616b3e43e43001f2453a9f159e4e1b269a2a53460323095021ee7",
+    "object_sha256": "d046b70d67660d172d08df2ed7cef42c2900eacb8c0a2fbdb7f5df9ce533040a",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 3358,
-    "relocation_count": 154,
-    "implemented_state_ids": 232,
-    "unimplemented_state_ids": 78,
+    "symbol_size": 3638,
+    "relocation_count": 174,
+    "implemented_state_ids": 236,
+    "unimplemented_state_ids": 74,
     "status": "partial-semantic-workbench-not-exact"
   },
   "compiler_flags": [

@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "2a9e490cfb1fd448f337a491556c05802d9883c06eb74232da98a57b813202da",
+  "source_sha256": "44b1096240bcd4227b16a403ac9095d27169a408a845da5ee6ae7d66ffbafa59",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "23c999e73889ce0e1e7f33909592ee5eaf2779f5e792909d70701782220376b3",
+  "object_sha256": "684ce449940fa196e95c38697148b71680930f0e4cfc5b5301ee831d2e662441",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -71,6 +71,14 @@
     "?Slot06UpdateKnockbackFall@Character19@@QAEXGGNHNN@Z": {
       "candidate_size": 611,
       "relocations": 9
+    },
+    "?Slot06OpponentWithinKnockbackRange@Character19@@QAEHXZ": {
+      "candidate_size": 226,
+      "relocations": 11
+    },
+    "?Slot06UpdateKnockbackFall@Character19@@QAEXGGNHNNH@Z": {
+      "candidate_size": 664,
+      "relocations": 10
     }
   },
   "status": "semantic-workbench-only-not-exact"

@@ -11,6 +11,10 @@
       "0x1E": 511,
       "0x1F": 439,
       "0x20": 427,
+      "0x21": 561,
+      "0x22": 561,
+      "0x23": 489,
+      "0x24": 477,
       "0x28": 427
     },
     "state_ids": [
@@ -19,17 +23,21 @@
       61,
       62,
       63,
+      64,
+      65,
+      66,
+      67,
       71
     ]
   },
   "candidate": {
     "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-    "source_sha256": "2a9e490cfb1fd448f337a491556c05802d9883c06eb74232da98a57b813202da",
+    "source_sha256": "44b1096240bcd4227b16a403ac9095d27169a408a845da5ee6ae7d66ffbafa59",
     "object": "build/character19-slot06/Character19Slot06Cases.obj",
-    "object_sha256": "23c999e73889ce0e1e7f33909592ee5eaf2779f5e792909d70701782220376b3",
-    "symbol": "?Slot06UpdateKnockbackFall@Character19@@QAEXGGNHNN@Z",
-    "symbol_size": 611,
-    "relocations": 9,
+    "object_sha256": "684ce449940fa196e95c38697148b71680930f0e4cfc5b5301ee831d2e662441",
+    "symbol": "?Slot06UpdateKnockbackFall@Character19@@QAEXGGNHNNH@Z",
+    "symbol_size": 664,
+    "relocations": 10,
     "clamp_modes": {
       "0x1C": [
         -2.0,
@@ -51,47 +59,87 @@
         -2.0,
         1,
         0.75,
-        0.032
+        0.032,
+        0
       ],
       "0x1D": [
         -4.0,
         1,
         0.75,
-        0.032
+        0.032,
+        0
       ],
       "0x1E": [
         -6.0,
         1,
         0.75,
-        0.032
+        0.032,
+        0
       ],
       "0x1F": [
         0.0,
         0,
         0.75,
-        0.032
+        0.032,
+        0
       ],
       "0x20": [
         0.0,
         0,
         0.0,
-        0.032
+        0.032,
+        0
+      ],
+      "0x21": [
+        -2.0,
+        1,
+        0.75,
+        0.032,
+        1
+      ],
+      "0x22": [
+        -4.0,
+        1,
+        0.75,
+        0.032,
+        1
+      ],
+      "0x23": [
+        0.0,
+        0,
+        0.75,
+        0.032,
+        1
+      ],
+      "0x24": [
+        0.0,
+        0,
+        0.0,
+        0.032,
+        1
       ],
       "0x28": [
         0.0,
         0,
         0.0,
-        0.072
+        0.072,
+        0
       ]
+    },
+    "range_helper": {
+      "symbol": "?Slot06OpponentWithinKnockbackRange@Character19@@QAEHXZ",
+      "symbol_size": 226,
+      "relocations": 11,
+      "meaning": "returns true only when opponent is within 280 units and both characters satisfy native 20-unit stage-edge clearance"
     }
   },
   "dispatcher": {
-    "source_sha256": "d628f013b67667c94deb822fb0829bde6bc087231dc1701872eec3e889d5cad2",
-    "object_sha256": "31c38cafdbc616b3e43e43001f2453a9f159e4e1b269a2a53460323095021ee7",
-    "symbol_size": 3358,
-    "relocations": 154,
-    "implemented_state_ids": 232,
-    "unimplemented_state_ids": 78
+    "source_sha256": "86455d837c0a09b213e7ccdcaba1b0e92c83151682f19071ed6426654d56fa67",
+    "object_sha256": "d046b70d67660d172d08df2ed7cef42c2900eacb8c0a2fbdb7f5df9ce533040a",
+    "symbol_size": 3638,
+    "relocations": 174,
+    "implemented_state_ids": 236,
+    "unimplemented_state_ids": 74
   },
   "compiler_flags": [
     "/Od",

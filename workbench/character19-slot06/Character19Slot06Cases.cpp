@@ -1177,16 +1177,48 @@ void Character19::Slot06UpdateCounterMove(
 
 
 // Shared hit-knockback fall sequence for native selector cases 0x1c-0x1f.
+// Natural-C++ reconstruction of the 0x0040ff70 opponent-range predicate.
+// The native helper returns zero only while the two characters are within
+// 280 units and both have the required 20-unit stage-edge clearance.
+int Character19::Slot06OpponentWithinKnockbackRange()
+{
+    double opponentX = (*opponentSlot)->positionX;
+    double leftEdgeAdjustment = (opponentX <= 20.0) ? 1.0 : 0.0;
+    if (!(leftEdgeAdjustment < positionX - 20.0)) {
+        return 0;
+    }
+    if (opponentX - positionX > 280.0) {
+        return 0;
+    }
+
+    double rightEdgeLimit = 639.0 - ((opponentX >= 619.0) ? 1.0 : 0.0);
+    if (!(rightEdgeLimit > positionX + 20.0)) {
+        return 0;
+    }
+    if (positionX - opponentX > 280.0) {
+        return 0;
+    }
+    return 1;
+}
+
 void Character19::Slot06UpdateKnockbackFall(
     unsigned short frameDuration,
     unsigned short frameCount,
     double minimumVerticalVelocity,
     int clampVerticalVelocity,
     double velocityBlend,
-    double gravityValue)
+    double gravityValue,
+    int interruptOutsideRange)
 {
     if (field0120 != 0) {
         field0118 = field0118 - 0.8;
+    }
+
+    if (interruptOutsideRange && (field000a != 0) &&
+        !Slot06OpponentWithinKnockbackRange()) {
+        field0008 = 0x46;
+        ResetPose();
+        return;
     }
 
     if ((field000a == 0) && (field000c == 0)) {
