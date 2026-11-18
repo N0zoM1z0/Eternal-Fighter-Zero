@@ -48,7 +48,6 @@ assert "?Slot06UpdateGroundRecovery@Character19@@QAEXGGH@Z" in helper_members
 assert "?Slot06UpdateGroundSkid@Character19@@QAEXGGH@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateAirKnockback@Character19@@") for symbol in helper_members)
 assert "?Slot06UpdateRepeatedAirKnockback@Character19@@QAEXGG@Z" in helper_members
-assert any(symbol.startswith("?Slot06UpdateAirborneRebound@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneKnockbackLanding@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateLocalEffectRecovery@Character19@@") for symbol in helper_members)
 assert "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z" in helper_members
@@ -138,7 +137,7 @@ dispatcher_record = {
         f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
             (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
         ).hexdigest()
-        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x54, 0x55, 0x56, 0x66, 0x69, 0x70, 0x71, 0x72, 0x73, 0x74)
+        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x31, 0x32, 0x54, 0x55, 0x56, 0x66, 0x69, 0x70, 0x71, 0x72, 0x73, 0x74)
     },
     "status": "partial-semantic-workbench-not-exact",
 }
@@ -296,10 +295,6 @@ repeated_helper = "?Slot06UpdateRepeatedAirKnockback@Character19@@QAEXGG@Z"
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-rebound_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateAirborneRebound@")
-)
 (workbench / "airborne-rebound-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": {
@@ -307,12 +302,16 @@ rebound_helper = next(
         "0x32": {"entry": "0x0066DDF8", "bytes": 581, "state_id": 84},
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": rebound_helper,
-        **helper_members[rebound_helper],
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "inlined_case_sources": {
+            f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
+                (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
+            ).hexdigest()
+            for case in (0x31, 0x32)
+        },
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

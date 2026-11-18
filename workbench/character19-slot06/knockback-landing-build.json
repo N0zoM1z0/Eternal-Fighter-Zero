@@ -23,10 +23,10 @@
     "status": "semantic-workbench-only-not-exact"
   },
   "dispatcher": {
-    "source_sha256": "a2ef1cd8b1e1639d76654cb0da2625fbdcda54bb818e5e72fd6ec1ff65cc0d11",
-    "object_sha256": "6155ccecd77c13a138bc2170984d90f55657a2f6008d8a028583cd2511c6b984",
-    "symbol_size": 35698,
-    "relocations": 659,
+    "source_sha256": "c1628dcb39368acf2533d34a22ccbbf748c2c4c3ef0d30fd787c2c628a1e57b3",
+    "object_sha256": "561901e069fa91f56156dbd99b80d999023064850534f32cbd2d49c7230ae171",
+    "symbol_size": 36804,
+    "relocations": 687,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0
   },

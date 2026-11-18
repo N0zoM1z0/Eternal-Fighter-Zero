@@ -74,31 +74,36 @@ for address, expected in constants.items():
     assert actual == expected, (hex(address), actual, expected)
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
-    "void Character19::Slot06UpdateAirborneRebound",
-    "if (field3144 == 0)",
-    "spawn->type = 0x1f0;",
-    "spawn->owner = 1;",
-    "spawn->group = 0;",
-    "spawn->layer = 0;",
-    "spawn->flag0018 = (unsigned char)facing;",
-    "EmitLocalEffect(spawn);",
-    "field3144 = 1;",
-    "field0118 = field0118 - 30.0",
-    "pendingContextSoundSlot = 0x21;",
-    "velocityY = -1.5;",
-    "velocityX = -0.8;",
-    "meter = meter + 30;",
-    "velocityY = velocityY + 0.04;",
-    "(positionY + velocityY) <= 0.0",
-    "velocityX = velocityX + 0.01;",
-    "velocityX = -2.0;",
-    "velocityX = velocityX + 0.06;",
-    "if (velocityX > 0.0)",
-    "ResetPose();",
-    "FaceOpponent();",
-):
-    assert expression in source, expression
+assert "Slot06UpdateAirborneRebound" not in source
+for case in (0x31, 0x32):
+    fragment = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        "if (field3144 == 0)",
+        "spawn.type = 0x1f0;",
+        "spawn.owner = 1;",
+        "spawn.group = 0;",
+        "spawn.layer = 0;",
+        "spawn.flag0018 = (unsigned char)facing;",
+        "EmitLocalEffect(&spawn);",
+        "field3144 = 1;",
+        "field0118 = field0118 - 30.0",
+        "pendingContextSoundSlot = 0x21;",
+        "velocityY = -1.5;",
+        "velocityX = -0.8;",
+        "meter = meter + 30;",
+        "velocityY = velocityY + 0.04;",
+        "(positionY + velocityY) <= 0.0",
+        "velocityX = velocityX + 0.01;",
+        "velocityX = -2.0;",
+        "velocityX = velocityX + 0.06;",
+        "if (velocityX > 0.0)",
+        "ResetPose();",
+        "FaceOpponent();",
+        "timing.frameDuration",
+        "timing.animationFrameCount",
+    ):
+        assert expression in fragment, (hex(case), expression)
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 
 analog = (ROOT / "src/Character23State.cpp").read_text()
 for expression in (

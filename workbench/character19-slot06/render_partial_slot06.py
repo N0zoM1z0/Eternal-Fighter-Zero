@@ -287,8 +287,9 @@ lines += [
 for case in (0x31, 0x32):
     lines += labels(case)
     lines += [
-        "        Slot06UpdateAirborneRebound(",
-        "            timing.frameDuration, timing.animationFrameCount, &spawn);",
+        "        {",
+        f'#include "Character19Slot06Case{case:02X}.inc"',
+        "        }",
         "        break;",
         "",
     ]

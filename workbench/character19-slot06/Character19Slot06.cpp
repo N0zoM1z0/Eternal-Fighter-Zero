@@ -276,13 +276,15 @@ void Character19::Slot06()
         break;
 
     case 49:
-        Slot06UpdateAirborneRebound(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case31.inc"
+        }
         break;
 
     case 50:
-        Slot06UpdateAirborneRebound(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case32.inc"
+        }
         break;
 
     case 51:
