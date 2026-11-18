@@ -233,3 +233,12 @@ The 188-byte state 213 sets gravity to 0.042 every update, integrates vertical v
 ## Ground impact recovery: selector case 0x5b
 
 The 287-byte state 214 holds both velocities at zero. On frame 0 it applies vertical shake (3,0) and emits context effect type 3 at integer-truncated character coordinates with group 2, layer 0 and palette 7. Each animation-frame transition clears attackCollisionResult. Completion chooses state 3 for up input, otherwise state 7, then faces the opponent and resets pose.
+
+
+## Opponent capture impact: selector case 0x5c
+
+The 480-byte state 220 holds the attacker still. During frame 1 it sets remainingHitCount only when the opponent is grounded. A confirmed result exactly equal to 3 resets the attacker pose/frame and the opponent frame/pose, sets the attacker's state to 0xdd, disables the opponent's air actions, and emits context effect type 0 at integer-truncated attacker coordinates offset by +37 facing and -42 Y (group 2, layer 1). Without the hit, animation frames advance normally, clear attackCollisionResult, and finish in state 0 or state 3 for up input.
+
+## Opponent stage combo: selector case 0x5d
+
+The 594-byte state 221 drives opponent repositioning at animation-frame boundaries. Frame 1 puts the opponent in state 0x67, resets its frame/pose, and places it at (attacker X + 41 facing, -86). Frames 2 and 3 move it to Y=-97 at X offsets 36 and 34; frame 3 also reverses its facing. Frame 4 applies vertical shake (3,0), puts the opponent in state 0x61, resets its frame/pose, and positions it at ground level with a 36-facing offset. The native damage request occurs at the start of frame 4: ApplyDamage(0x4e2, 750.0). Completion returns the attacker to state 0 after facing the opponent and resetting pose. The implementation deliberately does not import Character23's additional frame-5 throw/knockback sequence, which is absent from Kanna's native 0x5d.

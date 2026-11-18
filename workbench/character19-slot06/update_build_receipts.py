@@ -70,6 +70,8 @@ assert any(symbol.startswith("?Slot06UpdateDashFollowupCancel@Character19@@") fo
 assert any(symbol.startswith("?Slot06UpdateAerialGroundSlam@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateGroundImpactRecovery@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateOpponentCaptureImpact@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateOpponentStageCombo@Character19@@") for symbol in helper_members)
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -98,7 +100,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 290
+assert len(implemented_states) == 292
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -866,6 +868,72 @@ ground_impact_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": ground_impact_helper,
         **helper_members[ground_impact_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+
+opponent_capture_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateOpponentCaptureImpact@")
+)
+(workbench / "opponent-capture-impact-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x5C",
+        "entry": "0x006725FD",
+        "bytes": 480,
+        "state_id": 220,
+        "hit_gate": "field000a==1 && attackCollisionResult==3",
+        "remaining_hit_gate": "field000a==1 && field000c==0 && opponent.positionY==0",
+        "own_state": "0xDD",
+        "opponent_air_action_disabled": 1,
+        "effect": {"type": 0, "x_offset": "trunc(positionX)+facing*37", "y_offset": "trunc(positionY)-42", "group": 2, "layer": 1},
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": opponent_capture_helper,
+        **helper_members[opponent_capture_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+opponent_stage_combo_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateOpponentStageCombo@")
+)
+(workbench / "opponent-stage-combo-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x5D",
+        "entry": "0x006727DD",
+        "bytes": 594,
+        "state_id": 221,
+        "damage_frame": 4,
+        "damage": 0x4E2,
+        "damage_scale": 750.0,
+        "opponent_frames": {
+            "1": {"state": 0x67, "x_offset": 0x29, "y": -86.0},
+            "2": {"x_offset": 0x24, "y": -97.0},
+            "3": {"x_offset": 0x22, "y": -97.0, "facing": "-facing"},
+            "4": {"state": 0x61, "x_offset": 0x24, "y": 0.0, "vertical_shake": [3,0]},
+        },
+        "completion_state": 0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": opponent_stage_combo_helper,
+        **helper_members[opponent_stage_combo_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

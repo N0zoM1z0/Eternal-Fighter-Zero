@@ -547,6 +547,16 @@ void Character19::Slot06()
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
+    case 220:
+        Slot06UpdateOpponentCaptureImpact(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
+    case 221:
+        Slot06UpdateOpponentStageCombo(
+            timing.frameDuration, timing.animationFrameCount);
+        break;
+
     case 59:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
@@ -926,8 +936,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 220:
-    case 221:
     case 230:
     case 231:
     case 232:

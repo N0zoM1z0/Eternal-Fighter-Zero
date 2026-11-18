@@ -441,6 +441,8 @@ public:
     void Slot06UpdateAerialGroundSlam(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateAerialKickback(unsigned short, unsigned short);
     void Slot06UpdateGroundImpactRecovery(unsigned short, unsigned short, EffectSpawn *);
+    void Slot06UpdateOpponentCaptureImpact(unsigned short, unsigned short, EffectSpawn *);
+    void Slot06UpdateOpponentStageCombo(unsigned short, unsigned short);
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
     void Slot06Case04();
