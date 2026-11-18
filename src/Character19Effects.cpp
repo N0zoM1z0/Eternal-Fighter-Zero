@@ -1334,8 +1334,8 @@ void Character19::Slot07()
           }
           effects[i].vy =
                effects[i].vy + 0.05;
-          if ((0.0 < effects[i].y) &&
-             (0.0 < effects[i].vy)) {
+          if ((effects[i].y > 0.0) &&
+             (effects[i].vy > 0.0)) {
             effects[i].vy =
                  -effects[i].vy;
           }
@@ -1346,15 +1346,13 @@ void Character19::Slot07()
             RemoveLocalEffect((short)i);
           }
           else {
-            effects[i].tick =
-                 effects[i].tick + 1;
+            ++effects[i].tick;
             field3254[i] = field3254[i] + -1;
-            if (frameDuration <= effects[i].tick) {
+            if (effects[i].tick >= frameDuration) {
               effects[i].tick = 0;
-              effects[i].frame =
-                   effects[i].frame + 1;
+              ++effects[i].frame;
               effects[i].field0080 = 0;
-              if (frameCount <= effects[i].frame) {
+              if (effects[i].frame >= frameCount) {
                 effects[i].frame = 0;
               }
             }
@@ -1368,9 +1366,9 @@ void Character19::Slot07()
                  (unsigned int)(rand() > 16000) * 0x28;
             field3154[i] = field3154[i] + 1;
             effects[i].vx =
+                 (double)(rand() > 16000) +
                  (double)(rand() > 16000) * 0.5 +
-                 (double)(rand() > 16000) * 1.5 +
-                 (double)(rand() > 16000) + -1.5;
+                 (double)(rand() > 16000) * 1.5 + -1.5;
             effects[i].vy =
                  -1.0 - ((double)(rand() > 16000) * 0.5 +
                          (double)(rand() > 16000) * 0.8 +
@@ -1378,8 +1376,8 @@ void Character19::Slot07()
           }
           effects[i].vy =
                effects[i].vy + 0.03;
-          if ((0.0 < effects[i].y) &&
-             (0.0 < effects[i].vy)) {
+          if ((effects[i].y > 0.0) &&
+             (effects[i].vy > 0.0)) {
             effects[i].vy =
                  -effects[i].vy;
           }
@@ -1390,15 +1388,13 @@ void Character19::Slot07()
             RemoveLocalEffect((short)i);
           }
           else {
-            effects[i].tick =
-                 effects[i].tick + 1;
+            ++effects[i].tick;
             field3254[i] = field3254[i] + -1;
-            if (frameDuration <= effects[i].tick) {
+            if (effects[i].tick >= frameDuration) {
               effects[i].tick = 0;
-              effects[i].frame =
-                   effects[i].frame + 1;
+              ++effects[i].frame;
               effects[i].field0080 = 0;
-              if (frameCount <= effects[i].frame) {
+              if (effects[i].frame >= frameCount) {
                 effects[i].frame = 0;
               }
             }
