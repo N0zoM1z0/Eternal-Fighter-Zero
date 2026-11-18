@@ -1207,6 +1207,18 @@ void Character19::Slot07()
             }
           }
           break;
+        case 0x1c0:
+          effects[i].tick = effects[i].tick + 1;
+          if (frameDuration <= effects[i].tick) {
+            effects[i].tick = 0;
+            effects[i].frame =
+                 effects[i].frame + 1;
+            effects[i].field0080 = 0;
+            if (frameCount <= effects[i].frame) {
+              RemoveLocalEffect((short)i);
+            }
+          }
+          break;
         case 0x1ef:
           effects[i].vx = -0.02;
           effects[i].field008c = 30000;
@@ -1224,10 +1236,10 @@ void Character19::Slot07()
           }
           break;
         case 0x1f0:
-          if (((((((short)field0008 == 0x53) || ((short)field0008 == 0x54)) ||
-                ((short)field0008 == 0x55)) || ((short)field0008 == 0x56)) &&
-              (((short)field0008 != 0x53 || (field000a < 2)))) &&
-             (((short)field0008 != 0x54 || (field000a < 2)))) {
+          if ((((((field0008 == 0x53) || (field0008 == 0x54)) ||
+                (field0008 == 0x55)) || (field0008 == 0x56)) &&
+              ((field0008 != 0x53 || (field000a <= 1)))) &&
+             ((field0008 != 0x54 || (field000a <= 1)))) {
             effects[i].tick =
                  effects[i].tick + 1;
             if (frameDuration <= effects[i].tick) {
@@ -1242,72 +1254,72 @@ void Character19::Slot07()
           }
           else {
             spawn.type = 0x1f1;
-            spawn.x = (double)((int)effects[i].x + (char)facing * 0x17);
-            spawn.y = (double)((int)effects[i].y + -4);
-            spawn.field0030 = 0;
+            spawn.x = (double)((int)positionX + (char)facing * 0x17);
+            spawn.y = (double)((int)positionY + -4);
+            spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            spawn.x = (double)((int)effects[i].x + (char)facing * -4);
-            spawn.y = (double)((int)effects[i].y + -6);
-            spawn.field0030 = 0;
+            spawn.x = (double)((int)positionX + (char)facing * -4);
+            spawn.y = (double)((int)positionY + -6);
+            spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            spawn.x = (double)((int)effects[i].x + (char)facing * -0xe);
-            spawn.y = (double)((int)effects[i].y + -0x1a);
-            spawn.field0030 = 0;
+            spawn.x = (double)((int)positionX + (char)facing * -0xe);
+            spawn.y = (double)((int)positionY + -0x1a);
+            spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            spawn.x = (double)(int)effects[i].x;
-            spawn.y = (double)(int)effects[i].y;
-            spawn.field0030 = 0;
+            spawn.x = (double)(int)positionX;
+            spawn.y = (double)(int)positionY;
+            spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            spawn.x = (double)((int)effects[i].x + (char)facing * 0x1e);
-            spawn.y = (double)((int)effects[i].y + -0x28);
-            spawn.field0030 = 0;
+            spawn.x = (double)((int)positionX + (char)facing * 0x1e);
+            spawn.y = (double)((int)positionY + -0x28);
+            spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            spawn.x = (double)((int)effects[i].x + (char)facing * -0x19);
-            spawn.y = (double)((int)effects[i].y + -0x50);
-            spawn.field0030 = 0;
+            spawn.x = (double)((int)positionX + (char)facing * -0x19);
+            spawn.y = (double)((int)positionY + -0x50);
+            spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f2;
-            spawn.x = (double)((int)effects[i].x + (char)facing * -0x23);
-            spawn.y = (double)((int)effects[i].y + -0x2a);
-            spawn.field0030 = 0;
+            spawn.x = (double)((int)positionX + (char)facing * -0x23);
+            spawn.y = (double)((int)positionY + -0x2a);
+            spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f2;
-            spawn.x = (double)((int)effects[i].x + (char)facing * -0x12);
-            spawn.y = (double)((int)effects[i].y + -0x14);
-            spawn.field0030 = 0;
+            spawn.x = (double)((int)positionX + (char)facing * -0x12);
+            spawn.y = (double)((int)positionY + -0x14);
+            spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f2;
-            spawn.x = (double)((int)effects[i].x + (char)facing * 2);
-            spawn.y = (double)((int)effects[i].y + -0x41);
-            spawn.field0030 = 0;
+            spawn.x = (double)((int)positionX + (char)facing * 2);
+            spawn.y = (double)((int)positionY + -0x41);
+            spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f2;
-            spawn.x = (double)((int)effects[i].x + (char)facing * 0x10);
-            spawn.y = (double)((int)effects[i].y + -0x50);
-            spawn.field0030 = 0;
+            spawn.x = (double)((int)positionX + (char)facing * 0x10);
+            spawn.y = (double)((int)positionY + -0x50);
+            spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
@@ -1397,18 +1409,6 @@ void Character19::Slot07()
               if (effects[i].frame >= frameCount) {
                 effects[i].frame = 0;
               }
-            }
-          }
-          break;
-        case 0x1c0:
-          effects[i].tick = effects[i].tick + 1;
-          if (frameDuration <= effects[i].tick) {
-            effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
-            effects[i].field0080 = 0;
-            if (frameCount <= effects[i].frame) {
-              RemoveLocalEffect((short)i);
             }
           }
           break;
