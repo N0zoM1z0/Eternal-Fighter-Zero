@@ -48,37 +48,62 @@ for expression in (
     "velocityX = 0.5",
     "velocityY = -2.5",
     "gravity = 0.025",
-    "reinterpret_cast<unsigned char *>(&soundSlots[49])[1] = 0x1f;",
-    "spawn.owner = 0;",
+    "ResetLocalEffectSpawn(&spawn);",
+    "pendingContextSoundSlot = 0x1f;",
     "spawn.type = 0;",
+    "spawn.x = (double)(int)positionX;",
+    "spawn.y = (double)(int)positionY;",
     "spawn.group = 2;",
     "spawn.layer = 1;",
     "contextOwner->EmitEffect(&spawn);",
-    "Slot06RoundToNearestEven(positionX)",
-    "Slot06RoundToNearestEven(positionY)",
 ):
     assert expression in source, expression
 
-def round_nearest_even(value):
-    integral = int(value)
-    fraction = value - integral
-    if fraction > 0.5 or (fraction == 0.5 and integral % 2 != 0):
-        return integral + 1
-    if fraction < -0.5 or (fraction == -0.5 and integral % 2 != 0):
-        return integral - 1
-    return integral
+# FUN_007783b8 is the VC floating-to-integer helper: it corrects the
+# x87 rounded FISTP result toward zero for both signs.
+helper_asm = (ROOT / ".analysis/kanna-slot06/helpers/7783b8.asm").read_text()
+for instruction in ("FISTP qword ptr", "FSUBP", "ADC EAX", "SBB EAX"):
+    assert instruction in helper_asm, instruction
 
 for value, expected in [
-    (1.4,1),(1.5,2),(2.5,2),(3.5,4),
-    (-1.4,-1),(-1.5,-2),(-2.5,-2),(-3.5,-4),
+    (1.4,1),(1.5,1),(1.9,1),(2.5,2),(3.9,3),
+    (-1.4,-1),(-1.5,-1),(-1.9,-1),(-2.5,-2),(-3.9,-3),
 ]:
-    assert round_nearest_even(value) == expected
+    assert int(value) == expected
+
+assert source.index("timing.animationFrameCount = patterns[field0008].count;") < source.index("ResetLocalEffectSpawn(&spawn);") < source.index("switch (field0008)")
+spawn_reset = (ROOT / "src/SecondarySpawn.cpp").read_text()
+for expression in (
+    "spawn->owner = 0;",
+    "spawn->group = 0;",
+    "spawn->palette = 255;",
+    "spawn->payload = 0;",
+    "spawn->field0028 = 0;",
+    "spawn->field0030 = 0;",
+    "spawn->bounds.left = 0;",
+    "spawn->bounds.top = 0;",
+    "spawn->bounds.right = 0;",
+    "spawn->bounds.bottom = 0;",
+):
+    assert expression in spawn_reset, expression
+
+effect_pool = (ROOT / "src/EffectPool.cpp").read_text()
+for expression in (
+    "effects[field1380].type = spawn->type;",
+    "effects[field1380].x = spawn->x;",
+    "effects[field1380].y = spawn->y;",
+    "effects[field1380].group = spawn->group;",
+    "effects[field1380].layer = spawn->layer;",
+    "effects[field1380].palette = spawn->palette;",
+    "AdvanceEffectWrite();",
+):
+    assert expression in effect_pool, expression
 
 print({
     "selector_case":"0x27",
     "state_id":70,
     "native_bytes":480,
     "verified_constants":len(constants),
-    "rounding":"nearest-even",
-    "effect": "Context::EmitEffect with rounded character position",
+    "conversion":"truncate-toward-zero",
+    "effect": "Context::EmitEffect with integer-truncated character position",
 })

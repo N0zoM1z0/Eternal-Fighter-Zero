@@ -99,7 +99,7 @@ These two branches restore the final knockback landing phase. Both apply the 1.5
 
 State ID 70 is a 480-byte native branch. On its first frame, guarded by field3138==0, it adds 30 meter, increments field3138, adds 120 air-action-lock frames, sets velocityX=0.5, velocityY=-2.5 and gravity=0.025, and writes marker byte 0x2c9=0x1f.
 
-It also emits a context effect at the character's rounded world position. The call to 0x007783B8 is not random-number generation: the native helper is an x87 double-to-integer conversion using the active nearest-even rounding mode. The C++ dispatcher now uses a small explicit nearest-even helper for both coordinates and reuses the common EffectSpawn initialized in the Slot06 prologue. The effect has type 0, owner 0, group 2, layer 1, and the default palette from ResetLocalEffectSpawn.
+It also emits a context effect at the character's integer-truncated world position. The call to 0x007783B8 is not random-number generation: it is the VC floating-to-integer helper, which corrects the x87 FISTP result toward zero for both signs. The C++ dispatcher uses ordinary int casts for both coordinates, which compile through the same conversion helper, and reuses the common EffectSpawn initialized in the Slot06 prologue. The effect has type 0, owner 0, group 2, layer 1, and the default palette from ResetLocalEffectSpawn.
 
 The effect is emitted through the reconstructed Context::EmitEffect method. The case then advances the animation, applies gravity, and selects the normal/knockdown landing state. This is compiled and semantically validated, not an Exact owner claim.
 

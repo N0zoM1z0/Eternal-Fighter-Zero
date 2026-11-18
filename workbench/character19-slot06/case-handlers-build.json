@@ -3,7 +3,7 @@
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
   "source_sha256": "1d5dfc7b2ee3ce44f4a3baa0367fe83905ed6960897f61af6c8359dbf3366717",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "8f24488232976fe4fc68bcb8d984180df24c90f44c46215c46d4909d706e4455",
+  "object_sha256": "a587d8a1489c7c8bfcfea4cefba8267a16c2a9f9bf0dfee6cbe9bff6fdb18169",
   "compiler_flags": [
     "/Od",
     "/G6",

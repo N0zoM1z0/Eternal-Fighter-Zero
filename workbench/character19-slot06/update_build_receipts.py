@@ -123,6 +123,13 @@ for filename in (
         "implemented_state_ids": len(implemented_states),
         "unimplemented_state_ids": 310 - len(implemented_states),
     })
+    if filename == "case27-build.json":
+        data["candidate"].update({
+            "source_sha256": main_receipt["source_sha256"],
+            "object_sha256": main_receipt["object_sha256"],
+            "symbol_size": len(main_body),
+            "relocations": len(main_relocations),
+        })
     path.write_text(json.dumps(data, indent=2) + "\n")
 
 ground_helper = next(
