@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "d46fa71dca565d4b8f59e88218888a2b38d193868dec5501bad5eb9cd2e88675",
+  "source_sha256": "29a16948b72b3fadecd258ea3daaca3b5879ab0a0b42638aa6b8215628fd4ebc",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "629a6579a4c8b47085c190536daff5f4679e5fd2c4840a3ac135f05170085aa0",
+  "object_sha256": "e9f4aab1e72750b7ab57ca1a9082c3722d25911626109080689dea254891d740",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -63,7 +63,7 @@
       "relocations": 0
     },
     "?Slot06UpdateAerialGroundSlam@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
-      "candidate_size": 481,
+      "candidate_size": 472,
       "relocations": 11
     },
     "?Slot06UpdateAerialKickback@Character19@@QAEXGG@Z": {
@@ -170,12 +170,16 @@
       "candidate_size": 155,
       "relocations": 1
     },
+    "?Slot06UpdateFinalEffectPair@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
+      "candidate_size": 536,
+      "relocations": 5
+    },
     "?Slot06UpdateFinalFaceTransition@Character19@@QAEXGG@Z": {
       "candidate_size": 126,
       "relocations": 1
     },
     "?Slot06UpdateGroundImpactRecovery@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
-      "candidate_size": 310,
+      "candidate_size": 301,
       "relocations": 7
     },
     "?Slot06UpdateGroundRecovery@Character19@@QAEXGGH@Z": {
@@ -219,7 +223,7 @@
       "relocations": 8
     },
     "?Slot06UpdateOpponentCaptureImpact@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
-      "candidate_size": 499,
+      "candidate_size": 490,
       "relocations": 12
     },
     "?Slot06UpdateOpponentStageCombo@Character19@@QAEXGG@Z": {
@@ -237,6 +241,10 @@
     "?Slot06UpdateTrailDashFinish@Character19@@QAEXGGGFEGG@Z": {
       "candidate_size": 326,
       "relocations": 6
+    },
+    "?Slot06UpdateTrailEffectFinish@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
+      "candidate_size": 552,
+      "relocations": 9
     }
   },
   "status": "semantic-workbench-only-not-exact"

@@ -276,3 +276,10 @@ The 434-byte state 253 scales both velocities by 0.3 on entry, then adds 0.01 to
 Case 0x68 (state 256) resets frame kinematics, sets two remaining hits, and loops a frame-3 bounce at vertical velocity -2.5/gravity 0.045 with local effect 0x1b9. It exits to state 0x103 on the native airborne-to-ground crossing. Case 0x69 (state 257) is the longer combo variant: spacing-1 trail, one-shot opening field0118 decay and owner-0 context effect 0x21, frame-1 owner-1 local effect 0x1b9, a one-time frame-3 launch at -3.5/gravity 0.015, and up to five frame-8 loops using field3138 before completion in state 9. It uses field313c as the one-shot/launch phase counter and also exits to 0x103 on ground contact.
 
 Case 0x6a (state 259) is a short pure animation transition which clears collision each frame and completes by facing the opponent and returning to state 3. Cases 0x6b-0x6d (states 263-265) share a local-effect finisher: types 0x190/0x191/0x192, position offset +30 facing/-40 Y, group 0, layer 1, facing flag and field0028=1, then +45 meter and character sound 2. Collision is cleared only after frame 9; completion returns to state 0.
+
+
+## Final effect pair and trail burst: selector cases 0x6e-0x6f
+
+Case 0x6e (state 266) resets frame kinematics, emits local effect 0x195 at frame 7 (rounded X + 35 facing, rounded Y - 63), then local effect 0x196 at frame 8 (rounded X + 80 facing, rounded Y - 63). Both are owner 1, group 2, layer 1, carry the native facing/flag fields and clear field0028. The second effect grants 45 meter and character sound 2. It completes in state 0 without clearing attackCollisionResult.
+
+Case 0x6f (state 267) resets frame state, starts trail spacing 3, decays field0118 by 500 or 250 according to field0120, and emits an owner-0 context effect 0x21 at rounded X / rounded Y - 50 (group 2, layer 1, palette 0xb). Frame 7 emits owner-1 local effect 0x1ad at rounded X + 35 facing / rounded Y - 63 (group 2, layer 1, field0028=0). Frame 8 grants 45 meter and character sound 2. Completion returns to state 0 without clearing attackCollisionResult.

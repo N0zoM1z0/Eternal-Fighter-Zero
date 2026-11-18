@@ -645,6 +645,16 @@ void Character19::Slot06()
             timing.frameDuration, timing.animationFrameCount, 402);
         break;
 
+    case 266:
+        Slot06UpdateFinalEffectPair(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
+    case 267:
+        Slot06UpdateTrailEffectFinish(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
     case 59:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
@@ -1024,8 +1034,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 266:
-    case 267:
         // This valid state belongs to an untranslated native case group.
         break;
 

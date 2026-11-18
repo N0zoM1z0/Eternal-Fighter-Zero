@@ -135,7 +135,6 @@ for expression in (
     "(positionY + velocityY) >= 0.0",
     "positionY = 0.0;",
     "SetVerticalShake(3, 0);",
-    "spawn->owner = 1;",
     "spawn->type = 3;",
     "spawn->x = (double)(int)positionX;",
     "spawn->y = (double)(int)positionY;",
@@ -160,11 +159,17 @@ for expression in (
 ):
     assert expression in helper_text["kickback"], expression
 
+slam_start = source.index("void Character19::Slot06UpdateAerialGroundSlam")
+slam_end = source.index("\n}\n", slam_start) + 3
+assert "spawn->owner = 1;" not in source[slam_start:slam_end]
+ground_start = source.index("void Character19::Slot06UpdateGroundImpactRecovery")
+ground_end = source.index("\n}\n", ground_start) + 3
+assert "spawn->owner = 1;" not in source[ground_start:ground_end]
+
 for expression in (
     "velocityX = 0.0;",
     "velocityY = 0.0;",
     "SetVerticalShake(3, 0);",
-    "spawn->owner = 1;",
     "spawn->type = 3;",
     "spawn->x = (double)(int)positionX;",
     "spawn->y = (double)(int)positionY;",

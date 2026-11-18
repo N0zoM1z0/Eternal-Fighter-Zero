@@ -2607,7 +2607,6 @@ void Character19::Slot06UpdateAerialGroundSlam(
         velocityY = 0.0;
         SetVerticalShake(3, 0);
 
-        spawn->owner = 1;
         spawn->type = 3;
         spawn->x = (double)(int)positionX;
         spawn->y = (double)(int)positionY;
@@ -2670,7 +2669,6 @@ void Character19::Slot06UpdateGroundImpactRecovery(
     if ((field000a == 0) && (field000c == 0)) {
         SetVerticalShake(3, 0);
 
-        spawn->owner = 1;
         spawn->type = 3;
         spawn->x = (double)(int)positionX;
         spawn->y = (double)(int)positionY;
@@ -2726,7 +2724,6 @@ void Character19::Slot06UpdateOpponentCaptureImpact(
         field0008 = 0xdd;
         target->airActionDisabled = 1;
 
-        spawn->owner = 1;
         spawn->type = 0;
         spawn->x = (double)((int)positionX + (int)facing * 0x25);
         spawn->y = (double)((int)positionY - 0x2a);
@@ -3334,6 +3331,113 @@ void Character19::Slot06UpdateLocalEffectFinish(
         if (field000a > 9) {
             attackCollisionResult = 0;
         }
+        if (frameCount <= field000a) {
+            field0008 = 0;
+            ResetPose();
+        }
+    }
+}
+
+
+// Two-stage local-effect finisher: distinct frame-7 and frame-8 resources,
+// with meter and character sound coupled only to the second burst.
+void Character19::Slot06UpdateFinalEffectPair(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    EffectSpawn *spawn)
+{
+    if ((field000a == 0) && (field000c == 0)) {
+        ResetFrame();
+    }
+
+    if ((field000a == 7) && (field000c == 0)) {
+        spawn->owner = 1;
+        spawn->type = 0x195;
+        spawn->x = (double)((int)positionX + (int)facing * 0x23);
+        spawn->y = (double)((int)positionY - 0x3f);
+        spawn->group = 2;
+        spawn->layer = 1;
+        spawn->facing = (facing != 1);
+        spawn->flag0018 = (unsigned char)facing;
+        spawn->field0028 = 0;
+        EmitLocalEffect(spawn);
+    }
+
+    if ((field000a == 8) && (field000c == 0)) {
+        spawn->owner = 1;
+        spawn->type = 0x196;
+        spawn->x = (double)((int)positionX + (int)facing * 0x50);
+        spawn->y = (double)((int)positionY - 0x3f);
+        spawn->group = 2;
+        spawn->layer = 1;
+        spawn->facing = (facing != 1);
+        spawn->flag0018 = (unsigned char)facing;
+        spawn->field0028 = 0;
+        EmitLocalEffect(spawn);
+
+        meter = meter + 45;
+        pendingCharacterSoundSlot = 2;
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        if (frameCount <= field000a) {
+            field0008 = 0;
+            ResetPose();
+        }
+    }
+}
+
+// Trail-backed final burst: the opening context flash is unowned (the native
+// zero-initialized spawn record), while the frame-7 local effect belongs to us.
+void Character19::Slot06UpdateTrailEffectFinish(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    EffectSpawn *spawn)
+{
+    if ((field000a == 0) && (field000c == 0)) {
+        ResetFrame();
+        StartTrail(3);
+
+        if (field0120 == 0) {
+            field0118 = field0118 - 500.0;
+        } else {
+            field0118 = field0118 - 250.0;
+        }
+
+        spawn->type = 0x21;
+        spawn->x = (double)(int)positionX;
+        spawn->y = (double)((int)positionY - 0x32);
+        spawn->group = 2;
+        spawn->layer = 1;
+        spawn->palette = 0xb;
+        contextOwner->EmitEffect(spawn);
+    }
+
+    if ((field000a == 7) && (field000c == 0)) {
+        spawn->owner = 1;
+        spawn->type = 0x1ad;
+        spawn->x = (double)((int)positionX + (int)facing * 0x23);
+        spawn->y = (double)((int)positionY - 0x3f);
+        spawn->group = 2;
+        spawn->layer = 1;
+        spawn->facing = (facing != 1);
+        spawn->flag0018 = (unsigned char)facing;
+        spawn->field0028 = 0;
+        EmitLocalEffect(spawn);
+    }
+
+    if ((field000a == 8) && (field000c == 0)) {
+        meter = meter + 45;
+        pendingCharacterSoundSlot = 2;
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
         if (frameCount <= field000a) {
             field0008 = 0;
             ResetPose();

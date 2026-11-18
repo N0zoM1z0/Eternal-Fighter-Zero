@@ -152,7 +152,6 @@ for expression in (
     "target->ResetPose();",
     "field0008 = 0xdd;",
     "target->airActionDisabled = 1;",
-    "spawn->owner = 1;",
     "spawn->type = 0;",
     "spawn->x = (double)((int)positionX + (int)facing * 0x25);",
     "spawn->y = (double)((int)positionY - 0x2a);",
@@ -162,6 +161,7 @@ for expression in (
 ):
     assert expression in capture_helper, expression
 assert "target->field0008 = 0x6e" not in capture_helper
+assert "spawn->owner = 1;" not in capture_helper
 
 stage_start = source.index("void Character19::Slot06UpdateOpponentStageCombo")
 stage_end = source.index("\n}\n", stage_start) + 3

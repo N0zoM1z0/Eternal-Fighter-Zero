@@ -454,6 +454,8 @@ public:
     void Slot06UpdateComboAerialBounce(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateFinalFaceTransition(unsigned short, unsigned short);
     void Slot06UpdateLocalEffectFinish(unsigned short, unsigned short, unsigned short);
+    void Slot06UpdateFinalEffectPair(unsigned short, unsigned short, EffectSpawn *);
+    void Slot06UpdateTrailEffectFinish(unsigned short, unsigned short, EffectSpawn *);
 
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
