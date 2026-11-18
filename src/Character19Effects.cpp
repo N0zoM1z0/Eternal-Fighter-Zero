@@ -47,7 +47,7 @@ void Character19::Slot07()
             effects[i].tick = 0;
             effects[i].frame = 9;
             spawn.type = 0x193;
-            spawn.x = (double)(rand() + (char)facing * 0x32);
+            spawn.x = (double)((int)effects[i].x + (char)facing * 0x32);
             spawn.y = 0.0;
             spawn.field0030 = 0;
             spawn.group = 1;
@@ -104,7 +104,7 @@ void Character19::Slot07()
             effects[i].tick = 0;
             effects[i].frame = 9;
             spawn.type = 0x193;
-            spawn.x = (double)(rand() + (char)facing * 0x7d);
+            spawn.x = (double)((int)effects[i].x + (char)facing * 0x7d);
             spawn.y = 0.0;
             spawn.field0030 = 0;
             spawn.group = 1;
@@ -161,7 +161,7 @@ void Character19::Slot07()
             effects[i].tick = 0;
             effects[i].frame = 9;
             spawn.type = 0x193;
-            spawn.x = (double)(rand() + (char)facing * 200);
+            spawn.x = (double)((int)effects[i].x + (char)facing * 200);
             spawn.y = 0.0;
             spawn.field0030 = 0;
             spawn.group = 1;
@@ -359,8 +359,8 @@ void Character19::Slot07()
               effects[i].frame = 1;
               effects[i].vy = -1.5;
               spawn.type = 0x19c;
-              spawn.x = (double)rand();
-              spawn.y = (double)rand();
+              spawn.x = (double)(int)effects[i].x;
+              spawn.y = (double)(int)effects[i].y;
               spawn.field0030 = 0;
               spawn.layer = 1;
               spawn.flag0018 = facing;
@@ -429,8 +429,8 @@ void Character19::Slot07()
               effects[i].frame = 1;
               effects[i].vy = -1.5;
               spawn.type = 0x19e;
-              spawn.x = (double)rand();
-              spawn.y = (double)rand();
+              spawn.x = (double)(int)effects[i].x;
+              spawn.y = (double)(int)effects[i].y;
               spawn.field0030 = 0;
               spawn.layer = 1;
               spawn.flag0018 = facing;
@@ -745,7 +745,7 @@ void Character19::Slot07()
             if (effects[i].frame == 4) {
               spawn.type = 0x1ac;
               spawn.x = (double)contextOwner->cameraBounds.left;
-              spawn.y = (double)(rand() - 0x3c);
+              spawn.y = (double)((int)effects[i].y + -0x3c);
               spawn.field0030 = 2;
               spawn.layer = 1;
               spawn.flag0018 = 1;
@@ -776,8 +776,8 @@ void Character19::Slot07()
             ++effects[i].frame;
             if (effects[i].frame == 4) {
               spawn.type = 0x1ae;
-              spawn.x = (double)rand();
-              spawn.y = (double)rand();
+              spawn.x = (double)(int)effects[i].x;
+              spawn.y = (double)(int)effects[i].y;
               spawn.field0030 = 2;
               spawn.layer = 1;
               spawn.flag0018 = effects[i].flag0048;
@@ -836,8 +836,8 @@ void Character19::Slot07()
           }
           if (effects[i].tick == 0) {
             spawn.type = 0x1af;
-            spawn.x = (double)rand();
-            spawn.y = (double)rand();
+            spawn.x = (double)(int)effects[i].x;
+            spawn.y = (double)(int)effects[i].y;
             spawn.field0030 = 2;
             spawn.layer = 1;
             spawn.flag0018 = effects[i].flag0048;
