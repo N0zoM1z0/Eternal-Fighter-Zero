@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "7f7dae0f9fb44b1dc06a935b3de26d9f4bbe44e48dd671db66142aad0ecb8779",
+  "source_sha256": "2ab88512f83b1f88eb3f5b2d3143d6fcc4e0aaaf965ff567467db888f7588c0d",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "4714a21f0f6e875d57826a18ec9bba03da079218b531aee38e7d2009fb72bf2f",
+  "object_sha256": "5761935e5dd930f939d97d3df314570f322cc51307b520e29d1eba6b7b35c63e",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -66,20 +66,12 @@
       "candidate_size": 758,
       "relocations": 14
     },
-    "?Slot06UpdateComboImpactBurst@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
-      "candidate_size": 844,
-      "relocations": 18
-    },
     "?Slot06UpdateCounterMove@Character19@@QAEXGGFNNH@Z": {
       "candidate_size": 519,
       "relocations": 16
     },
     "?Slot06UpdateDampedImpactFinish@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
       "candidate_size": 435,
-      "relocations": 7
-    },
-    "?Slot06UpdateDashAttackSustain@Character19@@QAEXGG@Z": {
-      "candidate_size": 441,
       "relocations": 7
     },
     "?Slot06UpdateDashFollowupCancel@Character19@@QAEXGG@Z": {

@@ -1071,52 +1071,8 @@ void Character19::Slot06UpdateDashRecovery(
 
 
 
-// Sustained dash-attack state 206: momentum lasts through phase 2, then only the
-// one-shot phase-3 meter event and animation completion remain.
-void Character19::Slot06UpdateDashAttackSustain(
-    unsigned short frameDuration,
-    unsigned short frameCount)
-{
-    if ((dashMomentumFlag == 0) && (field000a == 0) && (field000c == 0)) {
-        velocityX = 0.0;
-        velocityY = 0.0;
-    }
 
-    if ((velocityX <= 0.0) || (dashMomentumFlag != 1) || (field000a > 2)) {
-        dashMomentumFlag = 0;
-    } else {
-        velocityX = velocityX - 0.03;
-    }
 
-    if (velocityX < 0.0) {
-        velocityX = 0.0;
-    }
-
-    if ((field000a == 1) && (field000c == 0)) {
-        remainingHitCount = 1;
-    }
-
-    if ((field000a == 3) && (field000c == 0) && (field3138 == 0)) {
-        meter = meter + 25;
-        pendingContextSoundSlot = 0x14;
-        field3138 = field3138 + 1;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        attackCollisionResult = 0;
-        if (frameCount <= field000a) {
-            field0008 = 0;
-            if (inputY == 1) {
-                field0008 = 3;
-            }
-            FaceOpponent();
-            ResetPose();
-        }
-    }
-}
 
 
 // Airborne follow-up family with both down-cancel and neutral-horizontal follow-up routes.
@@ -1750,84 +1706,7 @@ void Character19::Slot06UpdateImpactEffectPair(
 
 // Combo impact burst with a one-time trail capture, combo-scale decay and
 // three distinct effect timings (opening context, frame-2 local, frame-4 pair).
-void Character19::Slot06UpdateComboImpactBurst(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    EffectSpawn *spawn)
-{
-    if ((field000a == 0) && (field000c == 0)) {
-        ResetFrame();
-        StartTrail(3);
-        if (field0120 == 0) {
-            field0118 = field0118 - 500.0;
-        } else {
-            field0118 = field0118 - 250.0;
-        }
 
-        spawn->type = 0x21;
-        spawn->x = (double)(int)positionX;
-        spawn->y = (double)((int)positionY - 0x32);
-        spawn->group = 2;
-        spawn->layer = 1;
-        spawn->palette = 0xb;
-        contextOwner->EmitEffect(spawn);
-
-        remainingHitCount = 1;
-        velocityX = 0.0;
-        velocityY = 0.0;
-        horizontalDeceleration = 0.0;
-        if (positionY < 0.0) {
-            field000a = 6;
-        }
-    }
-
-    if ((field000a == 4) && (field000c == 0)) {
-        spawn->type = 0x1f;
-        spawn->x = (double)(int)positionX;
-        spawn->y = (double)(int)positionY;
-        spawn->group = 0;
-        spawn->layer = 1;
-        spawn->facing = (facing != 1);
-        contextOwner->EmitEffect(spawn);
-
-        remainingHitCount = 1;
-        meter = meter + 45;
-        pendingCharacterSoundSlot = 1;
-
-        spawn->owner = 1;
-        spawn->type = 0x194;
-        spawn->x = (double)((int)positionX - (int)facing * 0x50);
-        spawn->y = (double)((int)positionY - 0x28);
-        spawn->group = 2;
-        spawn->layer = 1;
-        spawn->flag0018 = (unsigned char)facing;
-        EmitLocalEffect(spawn);
-    }
-
-    if ((field000a == 2) && (field000c == 0)) {
-        spawn->owner = 1;
-        spawn->type = 0x1ab;
-        spawn->x = (double)(int)positionX;
-        spawn->y = (double)(int)positionY;
-        spawn->group = 2;
-        spawn->layer = 1;
-        spawn->flag0018 = (unsigned char)facing;
-        EmitLocalEffect(spawn);
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (field000a < 5) {
-            attackCollisionResult = 0;
-        }
-        if (frameCount <= field000a) {
-            field0008 = 0;
-            ResetPose();
-        }
-    }
-}
 
 // Damped impact finish: attenuate the launch once, then cap positive vertical
 // drift while the frame-4 meter/effect event completes the animation.

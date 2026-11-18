@@ -513,8 +513,9 @@ void Character19::Slot06()
         break;
 
     case 83:
-        Slot06UpdateDashAttackSustain(
-            timing.frameDuration, timing.animationFrameCount);
+        {
+#include "Character19Slot06Case53.inc"
+        }
         break;
 
     case 84:
@@ -622,8 +623,9 @@ void Character19::Slot06()
         break;
 
     case 102:
-        Slot06UpdateComboImpactBurst(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case66.inc"
+        }
         break;
 
     case 103:

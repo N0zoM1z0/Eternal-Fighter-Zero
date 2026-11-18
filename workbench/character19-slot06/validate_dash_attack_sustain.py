@@ -69,9 +69,8 @@ actual = struct.unpack("<d", target_bytes(pe, 0x00787CA0, 8))[0]
 assert actual == 0.03, actual
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-start = source.index("void Character19::Slot06UpdateDashAttackSustain")
-end = source.index("\n}\n", start) + 3
-helper = source[start:end]
+assert "void Character19::Slot06UpdateDashAttackSustain" not in source
+fragment = (ROOT / "workbench/character19-slot06/Character19Slot06Case53.inc").read_text()
 for expression in (
     "if ((dashMomentumFlag == 0) && (field000a == 0) && (field000c == 0))",
     "velocityX = 0.0;",
@@ -92,12 +91,15 @@ for expression in (
     "field0008 = 3;",
     "FaceOpponent();",
     "ResetPose();",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
 ):
-    assert expression in helper, expression
+    assert expression in fragment, expression
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 206)
-assert "Slot06UpdateDashAttackSustain(" in dispatcher
+assert '#include "Character19Slot06Case53.inc"' in dispatcher
+
 print({
     "selector": "0x53",
     "native_bytes": 435,

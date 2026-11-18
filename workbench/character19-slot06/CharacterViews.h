@@ -430,7 +430,6 @@ public:
     void Slot06UpdateAirborneHitstunRestore(unsigned short, unsigned short);
     void Slot06UpdateDefeatImpactVelocityRestore(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateDashRecovery(unsigned short, unsigned short);
-    void Slot06UpdateDashAttackSustain(unsigned short, unsigned short);
     void Slot06UpdateAirborneDashFollowup(unsigned short, unsigned short, EffectSpawn *, unsigned short, short, unsigned short, unsigned short, unsigned short, unsigned short);
     void Slot06UpdateAerialLaunchLanding(unsigned short, unsigned short);
     void Slot06UpdateDashFollowupCancel(unsigned short, unsigned short);
@@ -444,7 +443,6 @@ public:
     void Slot06UpdateAirborneTrailDash(unsigned short, unsigned short);
     void Slot06UpdateStunEffectRecovery(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateImpactEffectPair(unsigned short, unsigned short, EffectSpawn *);
-    void Slot06UpdateComboImpactBurst(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateDampedImpactFinish(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateLoopingAerialBounce(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateComboAerialBounce(unsigned short, unsigned short, EffectSpawn *);

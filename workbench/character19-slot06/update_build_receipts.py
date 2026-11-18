@@ -62,7 +62,6 @@ assert any(symbol.startswith("?Slot06UpdateKnockbackImpactFinish@Character19@@")
 assert any(symbol.startswith("?Slot06UpdateAirborneHitstunRestore@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDefeatImpactVelocityRestore@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashRecovery@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateDashAttackSustain@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneDashFollowup@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAerialLaunchLanding@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashFollowupCancel@Character19@@") for symbol in helper_members)
@@ -76,7 +75,6 @@ assert any(symbol.startswith("?Slot06UpdateDashTrailCharge@Character19@@") for s
 assert any(symbol.startswith("?Slot06UpdateAirborneTrailDash@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateStunEffectRecovery@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateImpactEffectPair@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateComboImpactBurst@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDampedImpactFinish@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateLoopingAerialBounce@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateComboAerialBounce@Character19@@") for symbol in helper_members)
@@ -142,7 +140,7 @@ dispatcher_record = {
         f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
             (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
         ).hexdigest()
-        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x70, 0x71, 0x72, 0x73, 0x74)
+        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x66, 0x70, 0x71, 0x72, 0x73, 0x74)
     },
     "status": "partial-semantic-workbench-not-exact",
 }
@@ -699,10 +697,6 @@ dash_recovery_helper = next(
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-dash_attack_sustain_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateDashAttackSustain@")
-)
 (workbench / "dash-attack-sustain-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
@@ -711,26 +705,27 @@ dash_attack_sustain_helper = next(
         "bytes": 435,
         "state_id": 206,
         "deceleration": 0.03,
-        "momentum_cutoff_frame": 2,
         "meter_frame": 3,
         "meter_gain": 25,
-        "sound": 0x14,
-        "one_shot_gate": "field3138==0",
-        "completion": "inputY==1 ? 3 : 0",
+        "sound_slot": 0x14,
+        "one_shot_gate": "field3138 == 0",
+        "completion": "inputY == 1 ? 3 : 0",
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": dash_attack_sustain_helper,
-        **helper_members[dash_attack_sustain_helper],
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case53.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case53.inc").read_bytes()
+            ).hexdigest(),
+        },
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
 }, indent=2) + "\n")
-
 
 airborne_dash_followup_helper = next(
     symbol for symbol in helper_members
@@ -1142,10 +1137,6 @@ impact_pair_helper = next(
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-combo_burst_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateComboImpactBurst@")
-)
 (workbench / "combo-impact-burst-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
@@ -1164,12 +1155,15 @@ combo_burst_helper = next(
         "completion_state": 0,
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": combo_burst_helper,
-        **helper_members[combo_burst_helper],
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case66.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case66.inc").read_bytes()
+            ).hexdigest(),
+        },
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

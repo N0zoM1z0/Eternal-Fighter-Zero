@@ -165,19 +165,6 @@ helpers = {
         "spawn->y = (double)((int)positionY - 0x28);", "spawn->flag0018 = (unsigned char)facing;",
         "EmitLocalEffect(spawn);", "field000a < 5)", "field0008 = 0;", "ResetPose();",
     )),
-    "combo": ("Slot06UpdateComboImpactBurst", (
-        "ResetFrame();", "StartTrail(3);", "field0120 == 0",
-        "field0118 = field0118 - 500.0;", "field0118 = field0118 - 250.0;",
-        "spawn->type = 0x21;", "spawn->y = (double)((int)positionY - 0x32);",
-        "spawn->group = 2;", "spawn->layer = 1;", "spawn->palette = 0xb;",
-        "contextOwner->EmitEffect(spawn);", "remainingHitCount = 1;",
-        "velocityX = 0.0;", "velocityY = 0.0;", "horizontalDeceleration = 0.0;",
-        "positionY < 0.0", "field000a = 6;", "spawn->type = 0x1f;",
-        "spawn->facing = (facing != 1);", "meter = meter + 45;",
-        "pendingCharacterSoundSlot = 1;", "spawn->type = 0x194;",
-        "EmitLocalEffect(spawn);", "field000a == 2", "spawn->type = 0x1ab;",
-        "field000a < 5)", "field0008 = 0;", "ResetPose();",
-    )),
     "damped": ("Slot06UpdateDampedImpactFinish", (
         "velocityX = velocityX * 0.3;", "velocityY = velocityY * 0.3;",
         "velocityY = velocityY + 0.01;", "velocityY > 0.3", "velocityY = 0.3;",
@@ -210,11 +197,46 @@ pair_end = source.index("\n}\n", pair_start) + 3
 pair_helper = source[pair_start:pair_end]
 assert pair_helper.count("spawn->owner = 1;") == 1
 assert pair_helper.index("contextOwner->EmitEffect(spawn);") < pair_helper.index("spawn->owner = 1;")
-combo_start = source.index("void Character19::Slot06UpdateComboImpactBurst")
-combo_end = source.index("\n}\n", combo_start) + 3
-combo_helper = source[combo_start:combo_end]
-assert combo_helper.count("spawn->owner = 1;") == 2
-assert combo_helper.count("contextOwner->EmitEffect(spawn);") == 2
+combo_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case66.inc").read_text()
+for expression in (
+    "ResetFrame();",
+    "StartTrail(3);",
+    "field0120 == 0",
+    "field0118 = field0118 - 500.0;",
+    "field0118 = field0118 - 250.0;",
+    "spawn.type = 0x21;",
+    "spawn.y = (double)((int)positionY - 0x32);",
+    "spawn.group = 2;",
+    "spawn.layer = 1;",
+    "spawn.palette = 0xb;",
+    "contextOwner->EmitEffect(&spawn);",
+    "remainingHitCount = 1;",
+    "velocityX = 0.0;",
+    "velocityY = 0.0;",
+    "horizontalDeceleration = 0.0;",
+    "positionY < 0.0",
+    "field000a = 6;",
+    "spawn.type = 0x1f;",
+    "spawn.group = 0;",
+    "spawn.facing = (facing != 1);",
+    "meter = meter + 45;",
+    "pendingCharacterSoundSlot = 1;",
+    "spawn.owner = 1;",
+    "spawn.type = 0x194;",
+    "spawn.x = (double)((int)positionX - (int)facing * 0x50);",
+    "spawn.y = (double)((int)positionY - 0x28);",
+    "EmitLocalEffect(&spawn);",
+    "field000a == 2",
+    "spawn.type = 0x1ab;",
+    "field000a < 5)",
+    "field0008 = 0;",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
+):
+    assert expression in combo_helper, expression
+assert combo_helper.count("spawn.owner = 1;") == 2
+assert combo_helper.count("contextOwner->EmitEffect(&spawn);") == 2
+assert combo_helper.count("EmitLocalEffect(&spawn);") == 2
 
 # Confirm the shared C++ leaf functions that replace the native helpers.
 reset = (ROOT / "src/SecondaryState.cpp").read_text()
@@ -258,11 +280,14 @@ dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_
 for state, name in (
     (249, "Slot06UpdateStunEffectRecovery"),
     (250, "Slot06UpdateImpactEffectPair"),
-    (251, "Slot06UpdateComboImpactBurst"),
+    (251, "Character19Slot06Case66.inc"),
     (253, "Slot06UpdateDampedImpactFinish"),
 ):
     assert_selector_case(dispatcher, state)
-    assert f"{name}(" in dispatcher
+    if name.endswith(".inc"):
+        assert f'#include "{name}"' in dispatcher
+    else:
+        assert f"{name}(" in dispatcher
 
 print({
     "variants": 4,

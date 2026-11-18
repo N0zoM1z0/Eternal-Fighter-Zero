@@ -488,8 +488,9 @@ for case in (0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52):
 
 lines += labels(0x53)
 lines += [
-    "        Slot06UpdateDashAttackSustain(",
-    "            timing.frameDuration, timing.animationFrameCount);",
+    "        {",
+    '#include "Character19Slot06Case53.inc"',
+    "        }",
     "        break;",
     "",
 ]
@@ -616,8 +617,9 @@ lines += [
 
 lines += labels(0x66)
 lines += [
-    "        Slot06UpdateComboImpactBurst(",
-    "            timing.frameDuration, timing.animationFrameCount, &spawn);",
+    "        {",
+    '#include "Character19Slot06Case66.inc"',
+    "        }",
     "        break;",
     "",
 ]
