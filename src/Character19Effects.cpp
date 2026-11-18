@@ -5,22 +5,22 @@
 
 void Character19::Slot07()
 {
-    EffectSpawn spawn;
-    unsigned short frameDuration;
-    unsigned short frameCount;
-    unsigned short uVar5;
-    unsigned short uVar6;
     int i;
   if ((*opponentSlot)->hitstunFrames > 0) return;
   i = (int)effectRead;
+    EffectSpawn spawn;
     
   while (i != effectWrite) {
       if (((effectActive[i] != 0) &&
           (effects[i].field0086 == 0)) &&
          ((hitstunFrames == 0 ||
           ((0 < hitstunFrames && (effects[i].field0088 != 0)))))) {
+        unsigned short frameDuration;
+        unsigned short frameCount;
         frameDuration = patterns[effects[i].type].frames[effects[i].frame].duration;
         frameCount = patterns[effects[i].type].count;
+        unsigned short uVar5;
+        unsigned short uVar6;
         ResetLocalEffectSpawn(&spawn);
         switch(effects[i].type) {
         case 400:
