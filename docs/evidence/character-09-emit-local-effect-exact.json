@@ -26,20 +26,58 @@
       "symbol": "?EmitLocalEffect@Character09@@UAEXPAUSecondaryEffectSpawn@@@Z",
       "target_address": "0x00449390",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "d1fe4fb347dbe9d51e89f7feefed940fb1f00ffb3e98d6c8d9bb823bd60e942d",
-      "object_sha256": "f1edf0c3a9c901f216df41ba251eb94fa104f235e29f79b8435484c00092640d",
+      "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
+      "object_sha256": "ccdae255209978b91558a11b6ba6ce35db894dfc6a8602d9f60daa5a03e97147",
       "source_sha256": "17549889f96ed12dfec5584431d1c1b3124b0738ed7b36171a2249eeed694f18",
       "dependencies": {
-        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/CharacterViews.h": "67719139719eff631f507727d91d308e8d760f955719822297eb9ad87db1fa4b"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "e7522aa9f16bf6b000c07a3bc1cdbf1831961d0f33951eb1d4bc077e2c476c33",
+      "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "2394ba77690bdba3226905f5b38a469fa9316ed789aa7e9f7c47ce23478735f0",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }
-  ]
+  ],
+  "latest_selected_replay": {
+    "result": "exact",
+    "size": 47,
+    "matched_bytes": 47,
+    "difference_count": 0,
+    "first_differences": [],
+    "relocations": [
+      {
+        "offset": 37,
+        "target": 4270864,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+        "evidence": "EFZ.exe vtable 0x0078815C selects 0x00449390; original direct CALL operand at 0x004493B5 targets reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10",
+        "addend": 0
+      }
+    ],
+    "relocated_sha256": "46365444c73e3bdace0df958722b30049796fc83eb469586f5616b7641bf6229",
+    "target_extent_sha256": "46365444c73e3bdace0df958722b30049796fc83eb469586f5616b7641bf6229",
+    "unit": "character-09-emit-local-effect",
+    "symbol": "?EmitLocalEffect@Character09@@UAEXPAUSecondaryEffectSpawn@@@Z",
+    "target_address": "0x00449390",
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
+    "object_sha256": "ccdae255209978b91558a11b6ba6ce35db894dfc6a8602d9f60daa5a03e97147",
+    "source_sha256": "17549889f96ed12dfec5584431d1c1b3124b0738ed7b36171a2249eeed694f18",
+    "dependencies": {
+      "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+      "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+      "src/CharacterViews.h": "67719139719eff631f507727d91d308e8d760f955719822297eb9ad87db1fa4b"
+    },
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+    "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
+    "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+    "unit_sha256": "2394ba77690bdba3226905f5b38a469fa9316ed789aa7e9f7c47ce23478735f0",
+    "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+    "acceptance_authority": "complete-function-codegen"
+  }
 }

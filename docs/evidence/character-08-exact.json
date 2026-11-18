@@ -1181,16 +1181,16 @@
       "symbol": "?EmitLocalEffect@Character08@@UAEXPAUSecondaryEffectSpawn@@@Z",
       "target_address": "0x004261C0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
-      "object_sha256": "dd5d04a198fc95bcfed41bb3632570d15b8793bf47914d6e638b271076301af1",
+      "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
+      "object_sha256": "811894117af5b8f21ddd6ac27f5a2e1ccfefe515dfd13ae71939a17070e504bf",
       "source_sha256": "c38245b586c1ea27adade024e2708df87df27302f4c8807889fa15eb40cd67ee",
       "dependencies": {
-        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+        "src/CharacterViews.h": "67719139719eff631f507727d91d308e8d760f955719822297eb9ad87db1fa4b"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
+      "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "4036b7299e027c53a64e7d0e46131268ea3361291505bfc66bbc8f84f298a4a9",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -7931,5 +7931,42 @@
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "10 new Misuzu units and27 actual CharacterViews.h consumers;17 serial cold artifacts; all37 complete strict comparisons exact; unaffected reports retain earlier evidence"
+  "latest_selected_replay": {
+    "result": "exact",
+    "size": 47,
+    "matched_bytes": 47,
+    "difference_count": 0,
+    "first_differences": [],
+    "relocations": [
+      {
+        "offset": 37,
+        "target": 4270864,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+        "evidence": "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+        "addend": 0
+      }
+    ],
+    "relocated_sha256": "9585608522622adcb2bf64d2c1f33c00f490607b99afac5874153efaaf559020",
+    "target_extent_sha256": "9585608522622adcb2bf64d2c1f33c00f490607b99afac5874153efaaf559020",
+    "unit": "character-08-emit-local-effect",
+    "symbol": "?EmitLocalEffect@Character08@@UAEXPAUSecondaryEffectSpawn@@@Z",
+    "target_address": "0x004261C0",
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
+    "object_sha256": "811894117af5b8f21ddd6ac27f5a2e1ccfefe515dfd13ae71939a17070e504bf",
+    "source_sha256": "c38245b586c1ea27adade024e2708df87df27302f4c8807889fa15eb40cd67ee",
+    "dependencies": {
+      "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+      "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+      "src/CharacterViews.h": "67719139719eff631f507727d91d308e8d760f955719822297eb9ad87db1fa4b"
+    },
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+    "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
+    "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+    "unit_sha256": "4036b7299e027c53a64e7d0e46131268ea3361291505bfc66bbc8f84f298a4a9",
+    "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+    "acceptance_authority": "complete-function-codegen"
+  }
 }

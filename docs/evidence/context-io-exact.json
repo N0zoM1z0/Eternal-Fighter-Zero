@@ -435,20 +435,46 @@
       "symbol": "?FadeMusic@Context@@QAEXHF@Z",
       "target_address": "0x00406A70",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "bb8e5e37bafe8341a184b79e849b818ace70858291a0df8f3b261020c46639d7",
-      "object_sha256": "0143ab41469a29f5c710bc56eca26575e65e087ac2303733a88e1c87725bc2b0",
+      "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
+      "object_sha256": "ac4a841176359f09ebc2eff3cac707b91447c434f8715f5f40ebcdb3be314e8f",
       "source_sha256": "455d901a33e766c88cc5d014dfa0c301add264919a25f516c9d21aa334dfa123",
       "dependencies": {
-        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "b9718cd929ab8c46cefb7730aa93b818fd1f3d160caf31d630f48a0b3ee36b85",
+      "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "e7dd46806ea57100e1ca9853532b412994e0ce399920a7e29bea4d206a545c77",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "seven new loading/Mizuka functions and204 actual Engine.h consumers;57 serial cold artifacts; all211 complete strict comparisons exact; compiler-local destination/offsets and four original string payloads independently checked before symbol-name refresh"
+  "latest_selected_replay": {
+    "result": "exact",
+    "size": 39,
+    "matched_bytes": 39,
+    "difference_count": 0,
+    "first_differences": [],
+    "relocations": [],
+    "relocated_sha256": "3857bd5d729b0eead07dd32ecb353e2456eac0f1d5818e760781a9e11d2ce070",
+    "target_extent_sha256": "3857bd5d729b0eead07dd32ecb353e2456eac0f1d5818e760781a9e11d2ce070",
+    "unit": "context-fade-music",
+    "symbol": "?FadeMusic@Context@@QAEXHF@Z",
+    "target_address": "0x00406A70",
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
+    "object_sha256": "ac4a841176359f09ebc2eff3cac707b91447c434f8715f5f40ebcdb3be314e8f",
+    "source_sha256": "455d901a33e766c88cc5d014dfa0c301add264919a25f516c9d21aa334dfa123",
+    "dependencies": {
+      "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+      "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+    },
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+    "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
+    "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+    "unit_sha256": "e7dd46806ea57100e1ca9853532b412994e0ce399920a7e29bea4d206a545c77",
+    "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+    "acceptance_authority": "complete-function-codegen"
+  }
 }
