@@ -1,0 +1,48 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_case": {
+    "selector": "0x4C",
+    "entry": "0x006706ED",
+    "bytes": 312,
+    "state_id": 178,
+    "horizontal_deceleration": 0.03,
+    "cancel": "inputY==-1 && field000a!=0 && field015c<3",
+    "cancel_states": [
+      4,
+      5,
+      6
+    ],
+    "completion_state": 0
+  },
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+    "source_sha256": "d7045ef6e36014bcc4852404eeea53093b908e5770fce798d84ee5b0522b9bb6",
+    "object": "build/character19-slot06/Character19Slot06Cases.obj",
+    "object_sha256": "c8b63121e8b9d83d188674be6a0694e96cacaf8e7569f726173e36f808fc1915",
+    "symbol": "?Slot06UpdateDashRecovery@Character19@@QAEXGG@Z",
+    "candidate_size": 298,
+    "relocations": 3,
+    "status": "semantic-workbench-only-not-exact"
+  },
+  "dispatcher": {
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "573d1d7490d3b9f6586a46be63b6044f8d79af9938274fa5d2e5bf8a82a1894e",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "4ebc61f12ff33c9862a04767491507f9dcce805932ea74f7fe3becb51222d198",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 5620,
+    "relocation_count": 287,
+    "implemented_state_ids": 275,
+    "unimplemented_state_ids": 35,
+    "status": "partial-semantic-workbench-not-exact"
+  },
+  "compiler_flags": [
+    "/Od",
+    "/G6",
+    "/MT",
+    "/Gy",
+    "/W3",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/workbench/character19-slot06",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/src"
+  ]
+}

@@ -432,6 +432,7 @@ public:
     void Slot06UpdateKnockbackImpactFinish(unsigned short, unsigned short, EffectSpawn *, unsigned short);
     void Slot06UpdateAirborneHitstunRestore(unsigned short, unsigned short);
     void Slot06UpdateDefeatImpactVelocityRestore(unsigned short, unsigned short, EffectSpawn *);
+    void Slot06UpdateDashRecovery(unsigned short, unsigned short);
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
     void Slot06Case04();

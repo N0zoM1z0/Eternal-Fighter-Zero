@@ -186,3 +186,8 @@ The 457-byte state 170 stores the incoming horizontal and vertical velocities as
 ## Defeat impact with velocity restore: selector case 0x4b
 
 The 584-byte state 171 stores the incoming velocities in field3138/field313c at 100x scale and freezes them. When field0120 is set, it adds field0118 * 5.0 to comboDamageScale, then clears field0118, starts 90 frames of hitstun, and applies tint 0xb0 for 3 frames. At animation frame 1 it requests context sound 0x12 and emits context effect type 1; at frame 2 it emits type 4. Both effects use integer-truncated character coordinates, group 2, layer 1. Every completed animation frame clears attackCollisionResult. At animation completion it enters state 9, restores field3138/field313c at 0.01 scale, sets gravity 0.035, then resets pose. The implementation uses the correct native velocity fields rather than adjacent Character19 extension fields.
+
+
+## Horizontal dash recovery: selector case 0x4c
+
+The 312-byte state 178 reduces velocityX by 0.03 each update and clamps it to zero; dashMomentumFlag is cleared only when the strict negative-velocity test fires. While the animation has advanced beyond frame zero, down input can cancel into states 4, 5, or 6 according to inputX versus facing, but only while field015c is below 3. That cancel clears attackCollisionResult and resets pose. Otherwise the frame timer advances and the handler completes in state 0 with ResetPose; unlike several later dash attacks, this branch does not call the facing helper at completion.

@@ -61,6 +61,7 @@ assert any(symbol.startswith("?Slot06UpdateDefeatImpactEffect@Character19@@") fo
 assert any(symbol.startswith("?Slot06UpdateKnockbackImpactFinish@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneHitstunRestore@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDefeatImpactVelocityRestore@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateDashRecovery@Character19@@") for symbol in helper_members)
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -89,7 +90,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 274
+assert len(implemented_states) == 275
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -584,6 +585,36 @@ defeat_velocity_restore_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": defeat_velocity_restore_helper,
         **helper_members[defeat_velocity_restore_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+
+dash_recovery_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateDashRecovery@")
+)
+(workbench / "dash-recovery-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x4C",
+        "entry": "0x006706ED",
+        "bytes": 312,
+        "state_id": 178,
+        "horizontal_deceleration": 0.03,
+        "cancel": "inputY==-1 && field000a!=0 && field015c<3",
+        "cancel_states": [4, 5, 6],
+        "completion_state": 0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": dash_recovery_helper,
+        **helper_members[dash_recovery_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

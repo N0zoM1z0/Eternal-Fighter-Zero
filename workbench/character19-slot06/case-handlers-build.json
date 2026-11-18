@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "b01db7839cf0ee1534697c667c4bf328e24942ad717e5f25d166606e17baac3a",
+  "source_sha256": "d7045ef6e36014bcc4852404eeea53093b908e5770fce798d84ee5b0522b9bb6",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "88544549c459ef17ffea6cc7fcdf91874a5a76224765932a27268be42081ee5a",
+  "object_sha256": "c8b63121e8b9d83d188674be6a0694e96cacaf8e7569f726173e36f808fc1915",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -97,6 +97,10 @@
     "?Slot06UpdateCounterMove@Character19@@QAEXGGFNNH@Z": {
       "candidate_size": 519,
       "relocations": 16
+    },
+    "?Slot06UpdateDashRecovery@Character19@@QAEXGG@Z": {
+      "candidate_size": 298,
+      "relocations": 3
     },
     "?Slot06UpdateDefeatImpact@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
       "candidate_size": 259,
