@@ -47,8 +47,9 @@ for address, expected in constants.items():
     assert actual == expected, (hex(address), actual, expected)
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
+assert "Slot06UpdateRepeatedAirKnockback" not in source
+fragment = (ROOT / "workbench/character19-slot06/Character19Slot06Case30.inc").read_text()
 for expression in (
-    "void Character19::Slot06UpdateRepeatedAirKnockback",
     "field0118 = field0118 - 0.8",
     "pendingContextSoundSlot = 0x1e;",
     "velocityY = -0.45;",
@@ -69,12 +70,15 @@ for expression in (
     "field000a > 4",
     "field0008 = 0x61;",
     "field0008 = 0x62;",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
 ):
-    assert expression in source, expression
+    assert expression in fragment, expression
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 82)
-assert "Slot06UpdateRepeatedAirKnockback(" in dispatcher
+assert '#include "Character19Slot06Case30.inc"' in dispatcher
+assert "Slot06UpdateRepeatedAirKnockback(" not in dispatcher
 
 analog = (ROOT / "src/Character23State.cpp").read_text()
 for expression in (

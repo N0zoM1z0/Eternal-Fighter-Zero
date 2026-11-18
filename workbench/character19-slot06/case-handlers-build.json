@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "c134e0052fbdea5ca42f6aba66a1f874e7095d9f5557a9c92815a12e676448ca",
+  "source_sha256": "dad5e8913637d2fa9272e19c1ce8b7180aef5aa0f9fed17d5b68b846d91c5f01",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "051fe361a1a36c34b1a94526ebcc26030754b9a69c574aaf954903d9bc03e838",
+  "object_sha256": "8695fe9a701ffa50e26825d2e10203889fc7c6360c9574816df30bac3649c3d2",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -145,10 +145,6 @@
     "?Slot06UpdateOpponentStageCombo@Character19@@QAEXGG@Z": {
       "candidate_size": 495,
       "relocations": 10
-    },
-    "?Slot06UpdateRepeatedAirKnockback@Character19@@QAEXGG@Z": {
-      "candidate_size": 542,
-      "relocations": 7
     },
     "?Slot06UpdateStunEffectRecovery@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
       "candidate_size": 334,

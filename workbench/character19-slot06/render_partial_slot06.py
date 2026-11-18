@@ -278,8 +278,9 @@ lines += [
 
 lines += labels(0x30)
 lines += [
-    "        Slot06UpdateRepeatedAirKnockback(",
-    "            timing.frameDuration, timing.animationFrameCount);",
+    "        {",
+    '#include "Character19Slot06Case30.inc"',
+    "        }",
     "        break;",
     "",
 ]
