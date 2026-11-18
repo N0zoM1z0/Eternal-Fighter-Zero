@@ -16,7 +16,7 @@ Currently implemented state coverage:
 - selector cases 0-10: state IDs 1-11 except 12, plus state 13
 - selector cases 0x70-0x74: state IDs 300, 303, 306, 309, 310, dispatched to isolated C++ handlers
 - selector case 0x75: all 193 native fallback state IDs
-- remaining 71 valid state IDs: explicitly marked TODO, not silently routed to the fallback
+- remaining 68 valid state IDs: explicitly marked TODO, not silently routed to the fallback
 
 Character19Slot06Cases.cpp contains ten isolated natural-C++ handlers plus two shared airborne-state helpers for selector cases 0x70-0x74. The native intervals and candidate member sizes are:
 
@@ -102,3 +102,8 @@ State ID 70 is a 480-byte native branch. On its first frame, guarded by field313
 It also emits a context effect at the character's rounded world position. The call to 0x007783B8 is not random-number generation: the native helper is an x87 double-to-integer conversion using the active nearest-even rounding mode. The C++ dispatcher now uses a small explicit nearest-even helper for both coordinates and reuses the common EffectSpawn initialized in the Slot06 prologue. The effect has type 0, owner 0, group 2, layer 1, and the default palette from ResetLocalEffectSpawn.
 
 The effect is emitted through the reconstructed Context::EmitEffect method. The case then advances the animation, applies gravity, and selects the normal/knockdown landing state. This is compiled and semantically validated, not an Exact owner claim.
+
+
+## Ground recovery family: selector cases 0x29-0x2b
+
+These three states share the same recovery/landing sequence. On frame zero they face the opponent, zero horizontal/vertical velocity, set gravity, and write the landing marker byte 0x2c9=9. The normal cases use zero gravity and land into state 0x0d; case 0x2a uses gravity -1.3 and lands into state 9. If the character is not yet grounded after frame 3, the animation timer advances and completion returns to state 0. The shared helper is compiled as natural C++ and validated against all three native blocks.

@@ -220,6 +220,24 @@ void Character19::Slot06()
             0);
         break;
 
+    case 72:
+        Slot06UpdateGroundRecovery(
+            timing.frameDuration, timing.animationFrameCount,
+            0);
+        break;
+
+    case 73:
+        Slot06UpdateGroundRecovery(
+            timing.frameDuration, timing.animationFrameCount,
+            0);
+        break;
+
+    case 74:
+        Slot06UpdateGroundRecovery(
+            timing.frameDuration, timing.animationFrameCount,
+            1);
+        break;
+
     case 70:
         if (field0120 != 0) {
             field0118 = field0118 - 0.8;
@@ -639,9 +657,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 72:
-    case 73:
-    case 74:
     case 75:
     case 76:
     case 77:
