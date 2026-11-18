@@ -1236,23 +1236,10 @@ void Character19::Slot07()
           }
           break;
         case 0x1f0:
-          if ((((((field0008 == 0x53) || (field0008 == 0x54)) ||
+          if (!((((((field0008 == 0x53) || (field0008 == 0x54)) ||
                 (field0008 == 0x55)) || (field0008 == 0x56)) &&
               ((field0008 != 0x53 || (field000a <= 1)))) &&
-             ((field0008 != 0x54 || (field000a <= 1)))) {
-            effects[i].tick =
-                 effects[i].tick + 1;
-            if (frameDuration <= effects[i].tick) {
-              effects[i].tick = 0;
-              effects[i].frame =
-                   effects[i].frame + 1;
-              effects[i].field0080 = 0;
-              if (frameCount <= effects[i].frame) {
-                effects[i].frame = 0;
-              }
-            }
-          }
-          else {
+             ((field0008 != 0x54 || (field000a <= 1))))) {
             spawn.type = 0x1f1;
             spawn.x = (double)((int)positionX + (char)facing * 0x17);
             spawn.y = (double)((int)positionY + -4);
@@ -1326,6 +1313,18 @@ void Character19::Slot07()
             pendingContextSoundSlot = 0x22;
             RemoveLocalEffect((short)i);
             field3144 = 0;
+          } else {
+            effects[i].tick =
+                 effects[i].tick + 1;
+            if (frameDuration <= effects[i].tick) {
+              effects[i].tick = 0;
+              effects[i].frame =
+                   effects[i].frame + 1;
+              effects[i].field0080 = 0;
+              if (frameCount <= effects[i].frame) {
+                effects[i].frame = 0;
+              }
+            }
           }
           break;
         case 0x1f1:
