@@ -171544,3 +171544,2099 @@ type = "REL32"
 symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
 target = 0x0040f170
 evidence = "Canonical original EFZ PE operand at 0x00677DF4, independently reviewed target 0x0040F170"
+
+[units.character-19-slot05]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character19Cpu.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-19-slot05/Character19Cpu.obj"
+symbol = "?Slot05@Character19@@UAEXXZ"
+target_address = 0x00678c30
+size = 17176
+
+[[units.character-19-slot05.relocations]]
+offset = 301
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x00678D5B: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 339
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00678D82: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 357
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787f10
+evidence = "Canonical EFZ.exe @ 0x00678D93: original instruction `FLD float ptr [0x00787f10]` binds DIR32 symbol __real@41c80000 to 0x00787F10; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 523
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00678E3A: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 561
+type = "DIR32"
+symbol = "__real@4010000000000000"
+target = 0x00787f08
+evidence = "Canonical EFZ.exe @ 0x00678E5F: original instruction `FMUL double ptr [0x00787f08]` binds DIR32 symbol __real@4010000000000000 to 0x00787F08; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 567
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "Canonical EFZ.exe @ 0x00678E65: original instruction `FADD double ptr [0x007875c0]` binds DIR32 symbol __real@3ff0000000000000 to 0x007875C0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 573
+type = "DIR32"
+symbol = "__real@4020000000000000"
+target = 0x00787f00
+evidence = "Canonical EFZ.exe @ 0x00678E6B: original instruction `FMUL double ptr [0x00787f00]` binds DIR32 symbol __real@4020000000000000 to 0x00787F00; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 633
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00678EA8: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 651
+type = "DIR32"
+symbol = "__real@42200000"
+target = 0x00787efc
+evidence = "Canonical EFZ.exe @ 0x00678EB9: original instruction `FLD float ptr [0x00787efc]` binds DIR32 symbol __real@42200000 to 0x00787EFC; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 825
+type = "REL32"
+symbol = "_fabs"
+target = 0x0077842d
+evidence = "Canonical EFZ.exe @ 0x00678F68: original instruction `CALL 0x0077842d` binds REL32 symbol _fabs to 0x0077842D; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 893
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00678FAC: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 911
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787ef8
+evidence = "Canonical EFZ.exe @ 0x00678FBD: original instruction `FLD float ptr [0x00787ef8]` binds DIR32 symbol __real@41000000 to 0x00787EF8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 966
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00678FF5: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1010
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679021: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1066
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679059: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1173
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x006790C3: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1189
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "Canonical EFZ.exe @ 0x006790D3: original instruction `FCOMP double ptr [0x00787ef0]` binds DIR32 symbol __real@4062c00000000000 to 0x00787EF0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1330
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x00679160: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1378
+type = "DIR32"
+symbol = "__real@4046800000000000"
+target = 0x00788170
+evidence = "Canonical EFZ.exe @ 0x00679190: original instruction `FCOMP double ptr [0x00788170]` binds DIR32 symbol __real@4046800000000000 to 0x00788170; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1397
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006791A4: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1460
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "Canonical EFZ.exe @ 0x006791E2: original instruction `FCOMP double ptr [0x00787ce8]` binds DIR32 symbol __real@404e000000000000 to 0x00787CE8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1479
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006791F6: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1503
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "Canonical EFZ.exe @ 0x0067920D: original instruction `FMUL float ptr [0x00787ed8]` binds DIR32 symbol __real@3f800000 to 0x00787ED8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1637
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x00679293: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1681
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "Canonical EFZ.exe @ 0x006792BF: original instruction `FCOMP double ptr [0x00787ce8]` binds DIR32 symbol __real@404e000000000000 to 0x00787CE8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1697
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "Canonical EFZ.exe @ 0x006792CF: original instruction `FCOMP double ptr [0x00787ee0]` binds DIR32 symbol __real@4054000000000000 to 0x00787EE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1716
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006792E3: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1740
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "Canonical EFZ.exe @ 0x006792FA: original instruction `FMUL float ptr [0x00787ed8]` binds DIR32 symbol __real@3f800000 to 0x00787ED8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1833
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679358: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1866
+type = "DIR32"
+symbol = "__real@40800000"
+target = 0x007872e0
+evidence = "Canonical EFZ.exe @ 0x00679378: original instruction `FMUL float ptr [0x007872e0]` binds DIR32 symbol __real@40800000 to 0x007872E0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1890
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x00679390: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1923
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "Canonical EFZ.exe @ 0x006793B1: original instruction `FCOMP double ptr [0x00787c10]` binds DIR32 symbol __real@4034000000000000 to 0x00787C10; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1949
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006793CC: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1973
+type = "DIR32"
+symbol = "__real@40800000"
+target = 0x007872e0
+evidence = "Canonical EFZ.exe @ 0x006793E3: original instruction `FMUL float ptr [0x007872e0]` binds DIR32 symbol __real@40800000 to 0x007872E0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 1997
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x006793FB: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2030
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "Canonical EFZ.exe @ 0x0067941C: original instruction `FCOMP double ptr [0x00787ce8]` binds DIR32 symbol __real@404e000000000000 to 0x00787CE8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2049
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679430: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2073
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "Canonical EFZ.exe @ 0x00679447: original instruction `FMUL float ptr [0x00787ed8]` binds DIR32 symbol __real@3f800000 to 0x00787ED8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2119
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679476: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2143
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "Canonical EFZ.exe @ 0x0067948D: original instruction `FMUL float ptr [0x00787ed8]` binds DIR32 symbol __real@3f800000 to 0x00787ED8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2198
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006794C5: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2222
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "Canonical EFZ.exe @ 0x006794DC: original instruction `FMUL float ptr [0x00787ee8]` binds DIR32 symbol __real@40400000 to 0x00787EE8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2240
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x006794EE: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2291
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "Canonical EFZ.exe @ 0x00679521: original instruction `FCOMP double ptr [0x00787ef0]` binds DIR32 symbol __real@4062c00000000000 to 0x00787EF0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2311
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x00679535: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2334
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067954D: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2358
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "Canonical EFZ.exe @ 0x00679564: original instruction `FMUL float ptr [0x00787ee8]` binds DIR32 symbol __real@40400000 to 0x00787EE8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2382
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x0067957C: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2415
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x0067959D: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2434
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006795B1: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2458
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "Canonical EFZ.exe @ 0x006795C8: original instruction `FMUL float ptr [0x00787ed8]` binds DIR32 symbol __real@3f800000 to 0x00787ED8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2504
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006795F7: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2528
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "Canonical EFZ.exe @ 0x0067960E: original instruction `FMUL float ptr [0x00787ed8]` binds DIR32 symbol __real@3f800000 to 0x00787ED8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2574
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067963D: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2604
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "Canonical EFZ.exe @ 0x0067965A: original instruction `FMUL float ptr [0x00787ed8]` binds DIR32 symbol __real@3f800000 to 0x00787ED8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2677
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "Canonical EFZ.exe @ 0x006796A3: original instruction `FCOMP double ptr [0x00787ef0]` binds DIR32 symbol __real@4062c00000000000 to 0x00787EF0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2700
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006796BB: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2730
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "Canonical EFZ.exe @ 0x006796D8: original instruction `FMUL float ptr [0x00787ed8]` binds DIR32 symbol __real@3f800000 to 0x00787ED8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2754
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x006796F0: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2790
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679715: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2820
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "Canonical EFZ.exe @ 0x00679732: original instruction `FMUL float ptr [0x00787ed8]` binds DIR32 symbol __real@3f800000 to 0x00787ED8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2907
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067978A: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2937
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "Canonical EFZ.exe @ 0x006797A7: original instruction `FMUL float ptr [0x00787ec8]` binds DIR32 symbol __real@40a00000 to 0x00787EC8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 2987
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x006797D9: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3017
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787e48
+evidence = "Canonical EFZ.exe @ 0x006797F7: original instruction `FCOMP double ptr [0x00787e48]` binds DIR32 symbol __real@c044000000000000 to 0x00787E48; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3033
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "Canonical EFZ.exe @ 0x00679807: original instruction `FCOMP double ptr [0x00787ee0]` binds DIR32 symbol __real@4054000000000000 to 0x00787EE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3052
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067981B: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3082
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "Canonical EFZ.exe @ 0x00679838: original instruction `FMUL float ptr [0x00787ec8]` binds DIR32 symbol __real@40a00000 to 0x00787EC8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3129
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875c8
+evidence = "Canonical EFZ.exe @ 0x00679867: original instruction `FCOMP double ptr [0x007875c8]` binds DIR32 symbol __real@c059000000000000 to 0x007875C8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3159
+type = "DIR32"
+symbol = "__real@c049000000000000"
+target = 0x00787ec0
+evidence = "Canonical EFZ.exe @ 0x00679885: original instruction `FCOMP double ptr [0x00787ec0]` binds DIR32 symbol __real@c049000000000000 to 0x00787EC0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3175
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "Canonical EFZ.exe @ 0x00679895: original instruction `FCOMP double ptr [0x00787ee0]` binds DIR32 symbol __real@4054000000000000 to 0x00787EE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3194
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006798A9: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3224
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "Canonical EFZ.exe @ 0x006798C6: original instruction `FMUL float ptr [0x00787ec8]` binds DIR32 symbol __real@40a00000 to 0x00787EC8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3271
+type = "DIR32"
+symbol = "__real@c049000000000000"
+target = 0x00787ec0
+evidence = "Canonical EFZ.exe @ 0x006798F5: original instruction `FCOMP double ptr [0x00787ec0]` binds DIR32 symbol __real@c049000000000000 to 0x00787EC0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3301
+type = "DIR32"
+symbol = "__real@c049000000000000"
+target = 0x00787ec0
+evidence = "Canonical EFZ.exe @ 0x00679913: original instruction `FCOMP double ptr [0x00787ec0]` binds DIR32 symbol __real@c049000000000000 to 0x00787EC0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3317
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x00679923: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3336
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679937: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3366
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "Canonical EFZ.exe @ 0x00679954: original instruction `FMUL float ptr [0x00787ec8]` binds DIR32 symbol __real@40a00000 to 0x00787EC8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3409
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "Canonical EFZ.exe @ 0x0067997F: original instruction `FCOMP double ptr [0x00787eb8]` binds DIR32 symbol __real@4049000000000000 to 0x00787EB8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3425
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x0067998F: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3444
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006799A3: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3491
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006799D2: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3527
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x006799F6: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3651
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x00679A71: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3679
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679A8E: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3703
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787eb0
+evidence = "Canonical EFZ.exe @ 0x00679AA5: original instruction `FLD float ptr [0x00787eb0]` binds DIR32 symbol __real@41700000 to 0x00787EB0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3773
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679AEC: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 3812
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x00679B12: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4059
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x00679C09: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4082
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679C21: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4106
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787eb0
+evidence = "Canonical EFZ.exe @ 0x00679C38: original instruction `FLD float ptr [0x00787eb0]` binds DIR32 symbol __real@41700000 to 0x00787EB0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4179
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679C82: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4329
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x00679D17: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4366
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679D3D: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4390
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787ef8
+evidence = "Canonical EFZ.exe @ 0x00679D54: original instruction `FLD float ptr [0x00787ef8]` binds DIR32 symbol __real@41000000 to 0x00787EF8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4489
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679DB8: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4523
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679DDA: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4556
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x00679DFA: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4665
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x00679E67: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4681
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x00679E77: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4697
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "Canonical EFZ.exe @ 0x00679E87: original instruction `FCOMP double ptr [0x00787e80]` binds DIR32 symbol __real@4060400000000000 to 0x00787E80; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4810
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x00679EF8: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4826
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "Canonical EFZ.exe @ 0x00679F08: original instruction `FCOMP double ptr [0x00787eb8]` binds DIR32 symbol __real@4049000000000000 to 0x00787EB8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4842
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "Canonical EFZ.exe @ 0x00679F18: original instruction `FCOMP double ptr [0x00787e38]` binds DIR32 symbol __real@4051800000000000 to 0x00787E38; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 4984
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x00679FA7: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 5000
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "Canonical EFZ.exe @ 0x00679FB6: original instruction `FCOMP double ptr [0x00787ef0]` binds DIR32 symbol __real@4062c00000000000 to 0x00787EF0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 5033
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "Canonical EFZ.exe @ 0x00679FD7: original instruction `FCOMP double ptr [0x00787ef0]` binds DIR32 symbol __real@4062c00000000000 to 0x00787EF0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 5265
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067A0C0: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 5845
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067A303: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 6007
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067A3A5: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 6095
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067A3FD: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 6249
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "Canonical EFZ.exe @ 0x0067A497: original instruction `FCOMP double ptr [0x00787ee0]` binds DIR32 symbol __real@4054000000000000 to 0x00787EE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 6331
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x0067A4E9: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 6597
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067A5F3: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 6637
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067A61C: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 6869
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "Canonical EFZ.exe @ 0x0067A703: original instruction `FCOMP double ptr [0x00787ee0]` binds DIR32 symbol __real@4054000000000000 to 0x00787EE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 6888
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067A716: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 6918
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787e48
+evidence = "Canonical EFZ.exe @ 0x0067A734: original instruction `FCOMP double ptr [0x00787e48]` binds DIR32 symbol __real@c044000000000000 to 0x00787E48; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 6985
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "Canonical EFZ.exe @ 0x0067A777: original instruction `FCOMP double ptr [0x00787ce0]` binds DIR32 symbol __real@4044000000000000 to 0x00787CE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7015
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067A795: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7071
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067A7CD: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7102
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "Canonical EFZ.exe @ 0x0067A7EC: original instruction `FCOMP double ptr [0x00787c10]` binds DIR32 symbol __real@4034000000000000 to 0x00787C10; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7231
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "Canonical EFZ.exe @ 0x0067A86D: original instruction `FCOMP double ptr [0x00787ea0]` binds DIR32 symbol __real@4056800000000000 to 0x00787EA0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7372
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067A8FA: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7438
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "Canonical EFZ.exe @ 0x0067A93C: original instruction `FCOMP double ptr [0x00787e80]` binds DIR32 symbol __real@4060400000000000 to 0x00787E80; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7505
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067A97F: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7572
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "Canonical EFZ.exe @ 0x0067A9C2: original instruction `FCOMP double ptr [0x00787e80]` binds DIR32 symbol __real@4060400000000000 to 0x00787E80; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7639
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067AA05: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7706
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "Canonical EFZ.exe @ 0x0067AA48: original instruction `FCOMP double ptr [0x00787e80]` binds DIR32 symbol __real@4060400000000000 to 0x00787E80; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7778
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067AA90: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7845
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "Canonical EFZ.exe @ 0x0067AAD3: original instruction `FCOMP double ptr [0x00787e80]` binds DIR32 symbol __real@4060400000000000 to 0x00787E80; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 7917
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067AB1B: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8053
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067ABA3: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8212
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067AC42: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8311
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067ACA6: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8366
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067ACDD: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8389
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x0067ACF3: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8439
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067AD26: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8510
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "Canonical EFZ.exe @ 0x0067AD6C: original instruction `FCOMP double ptr [0x00787eb8]` binds DIR32 symbol __real@4049000000000000 to 0x00787EB8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8551
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "Canonical EFZ.exe @ 0x0067AD95: original instruction `FCOMP double ptr [0x00787ea0]` binds DIR32 symbol __real@4056800000000000 to 0x00787EA0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8705
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067AE2F: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8823
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067AEA6: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8853
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787f10
+evidence = "Canonical EFZ.exe @ 0x0067AEC3: original instruction `FMUL float ptr [0x00787f10]` binds DIR32 symbol __real@41c80000 to 0x00787F10; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8913
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067AF00: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 8961
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067AF2F: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9017
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "Canonical EFZ.exe @ 0x0067AF67: original instruction `FCOMP double ptr [0x00787e80]` binds DIR32 symbol __real@4060400000000000 to 0x00787E80; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9085
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x0067AFAB: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9183
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B00D: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9272
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B066: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9361
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B0BF: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9477
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "Canonical EFZ.exe @ 0x0067B133: original instruction `FCOMP double ptr [0x00787e98]` binds DIR32 symbol __real@405b800000000000 to 0x00787E98; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9588
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067B1A3: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9631
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B1CD: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9677
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "Canonical EFZ.exe @ 0x0067B1FB: original instruction `FCOMP double ptr [0x00787ef0]` binds DIR32 symbol __real@4062c00000000000 to 0x00787EF0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9754
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067B249: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9792
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B26E: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9915
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "Canonical EFZ.exe @ 0x0067B2E9: original instruction `FCOMP double ptr [0x00787e78]` binds DIR32 symbol __real@4061800000000000 to 0x00787E78; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 9982
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B32C: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 10028
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067B35B: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 10091
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067B39A: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 10175
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x0067B3ED: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 10268
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B44A: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 10324
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "Canonical EFZ.exe @ 0x0067B482: original instruction `FCOMP double ptr [0x00787e38]` binds DIR32 symbol __real@4051800000000000 to 0x00787E38; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 10392
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "Canonical EFZ.exe @ 0x0067B4C6: original instruction `FCOMP double ptr [0x00787e80]` binds DIR32 symbol __real@4060400000000000 to 0x00787E80; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 10489
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B527: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 10627
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x0067B5B1: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 10746
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067B629: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 10822
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067B675: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 10900
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x0067B6C2: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11020
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B73A: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11062
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B764: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11108
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "Canonical EFZ.exe @ 0x0067B792: original instruction `FCOMP double ptr [0x00787ce8]` binds DIR32 symbol __real@404e000000000000 to 0x00787CE8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11154
+type = "DIR32"
+symbol = "__real@405f400000000000"
+target = 0x00787ea8
+evidence = "Canonical EFZ.exe @ 0x0067B7C0: original instruction `FCOMP double ptr [0x00787ea8]` binds DIR32 symbol __real@405f400000000000 to 0x00787EA8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11256
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067B827: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11328
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B86E: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11406
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B8BC: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11511
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067B926: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11545
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067B947: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11599
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787e48
+evidence = "Canonical EFZ.exe @ 0x0067B97D: original instruction `FCOMP double ptr [0x00787e48]` binds DIR32 symbol __real@c044000000000000 to 0x00787E48; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11727
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067B9FE: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11809
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067BA4F: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11851
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x0067BA79: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11940
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067BAD2: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 11994
+type = "DIR32"
+symbol = "__real@c051800000000000"
+target = 0x00787e40
+evidence = "Canonical EFZ.exe @ 0x0067BB08: original instruction `FCOMP double ptr [0x00787e40]` binds DIR32 symbol __real@c051800000000000 to 0x00787E40; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12088
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x0067BB66: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12110
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x0067BB7C: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12199
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067BBD6: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12240
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067BBFF: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12319
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067BC4E: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12340
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "Canonical EFZ.exe @ 0x0067BC62: original instruction `FCOMP double ptr [0x00787ce0]` binds DIR32 symbol __real@4044000000000000 to 0x00787CE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12356
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "Canonical EFZ.exe @ 0x0067BC72: original instruction `FCOMP double ptr [0x00787ea0]` binds DIR32 symbol __real@4056800000000000 to 0x00787EA0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12397
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067BC9C: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12431
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "Canonical EFZ.exe @ 0x0067BCBD: original instruction `FCOMP double ptr [0x00787ea0]` binds DIR32 symbol __real@4056800000000000 to 0x00787EA0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12472
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067BCE7: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12495
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x0067BCFD: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12543
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067BD2D: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12573
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067BD4B: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12619
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "Canonical EFZ.exe @ 0x0067BD79: original instruction `FCOMP double ptr [0x00787ee0]` binds DIR32 symbol __real@4054000000000000 to 0x00787EE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12753
+type = "DIR32"
+symbol = "__real@4052c00000000000"
+target = 0x00787e88
+evidence = "Canonical EFZ.exe @ 0x0067BDFF: original instruction `FCOMP double ptr [0x00787e88]` binds DIR32 symbol __real@4052c00000000000 to 0x00787E88; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12888
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "Canonical EFZ.exe @ 0x0067BE86: original instruction `FCOMP double ptr [0x00787ce0]` binds DIR32 symbol __real@4044000000000000 to 0x00787CE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 12908
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "Canonical EFZ.exe @ 0x0067BE9A: original instruction `FCOMP double ptr [0x00787e78]` binds DIR32 symbol __real@4061800000000000 to 0x00787E78; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13059
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "Canonical EFZ.exe @ 0x0067BF31: original instruction `FCOMP double ptr [0x00787e78]` binds DIR32 symbol __real@4061800000000000 to 0x00787E78; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13075
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "Canonical EFZ.exe @ 0x0067BF41: original instruction `FCOMP double ptr [0x00787ce8]` binds DIR32 symbol __real@404e000000000000 to 0x00787CE8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13143
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067BF86: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13177
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "Canonical EFZ.exe @ 0x0067BFA7: original instruction `FCOMP double ptr [0x00787e38]` binds DIR32 symbol __real@4051800000000000 to 0x00787E38; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13253
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x0067BFF3: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13329
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "Canonical EFZ.exe @ 0x0067C03F: original instruction `FCOMP double ptr [0x00787eb8]` binds DIR32 symbol __real@4049000000000000 to 0x00787EB8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13345
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "Canonical EFZ.exe @ 0x0067C04F: original instruction `FCOMP double ptr [0x00787340]` binds DIR32 symbol __real@4066800000000000 to 0x00787340; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13361
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "Canonical EFZ.exe @ 0x0067C05F: original instruction `FCOMP double ptr [0x00787eb8]` binds DIR32 symbol __real@4049000000000000 to 0x00787EB8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13436
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "Canonical EFZ.exe @ 0x0067C0AA: original instruction `FCOMP double ptr [0x00787ea0]` binds DIR32 symbol __real@4056800000000000 to 0x00787EA0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13528
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x0067C106: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13561
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "Canonical EFZ.exe @ 0x0067C127: original instruction `FCOMP double ptr [0x00787e80]` binds DIR32 symbol __real@4060400000000000 to 0x00787E80; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13636
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "Canonical EFZ.exe @ 0x0067C172: original instruction `FCOMP double ptr [0x00787e80]` binds DIR32 symbol __real@4060400000000000 to 0x00787E80; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13711
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "Canonical EFZ.exe @ 0x0067C1BD: original instruction `FCOMP double ptr [0x00787e80]` binds DIR32 symbol __real@4060400000000000 to 0x00787E80; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13775
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x0067C1FD: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13808
+type = "DIR32"
+symbol = "__real@4069000000000000"
+target = 0x00787e70
+evidence = "Canonical EFZ.exe @ 0x0067C21E: original instruction `FCOMP double ptr [0x00787e70]` binds DIR32 symbol __real@4069000000000000 to 0x00787E70; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13824
+type = "DIR32"
+symbol = "__real@406e000000000000"
+target = 0x00787e68
+evidence = "Canonical EFZ.exe @ 0x0067C22E: original instruction `FCOMP double ptr [0x00787e68]` binds DIR32 symbol __real@406e000000000000 to 0x00787E68; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13899
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "Canonical EFZ.exe @ 0x0067C279: original instruction `FCOMP double ptr [0x00787340]` binds DIR32 symbol __real@4066800000000000 to 0x00787340; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13915
+type = "DIR32"
+symbol = "__real@4074000000000000"
+target = 0x00788448
+evidence = "Canonical EFZ.exe @ 0x0067C289: original instruction `FCOMP double ptr [0x00788448]` binds DIR32 symbol __real@4074000000000000 to 0x00788448; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 13990
+type = "DIR32"
+symbol = "__real@406e000000000000"
+target = 0x00787e68
+evidence = "Canonical EFZ.exe @ 0x0067C2D4: original instruction `FCOMP double ptr [0x00787e68]` binds DIR32 symbol __real@406e000000000000 to 0x00787E68; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14006
+type = "DIR32"
+symbol = "__real@4074000000000000"
+target = 0x00788448
+evidence = "Canonical EFZ.exe @ 0x0067C2E4: original instruction `FCOMP double ptr [0x00788448]` binds DIR32 symbol __real@4074000000000000 to 0x00788448; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14081
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x0067C32F: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14201
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067C3A7: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14221
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "Canonical EFZ.exe @ 0x0067C3BB: original instruction `FCOMP double ptr [0x00787ee0]` binds DIR32 symbol __real@4054000000000000 to 0x00787EE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14243
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x0067C3D1: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14296
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067C406: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14316
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "Canonical EFZ.exe @ 0x0067C41A: original instruction `FCOMP double ptr [0x00787ee0]` binds DIR32 symbol __real@4054000000000000 to 0x00787EE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14332
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x0067C42A: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14393
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "Canonical EFZ.exe @ 0x0067C467: original instruction `FCOMP double ptr [0x00787ce0]` binds DIR32 symbol __real@4044000000000000 to 0x00787CE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14409
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x0067C477: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14470
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067C4B4: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14490
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "Canonical EFZ.exe @ 0x0067C4C8: original instruction `FCOMP double ptr [0x00787ea0]` binds DIR32 symbol __real@4056800000000000 to 0x00787EA0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14506
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "Canonical EFZ.exe @ 0x0067C4D8: original instruction `FCOMP double ptr [0x00787e78]` binds DIR32 symbol __real@4061800000000000 to 0x00787E78; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14567
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "Canonical EFZ.exe @ 0x0067C515: original instruction `FCOMP double ptr [0x00787c30]` binds DIR32 symbol __real@407f400000000000 to 0x00787C30; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14614
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x0067C544: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14630
+type = "DIR32"
+symbol = "__real@4065400000000000"
+target = 0x00787e50
+evidence = "Canonical EFZ.exe @ 0x0067C554: original instruction `FCOMP double ptr [0x00787e50]` binds DIR32 symbol __real@4065400000000000 to 0x00787E50; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14646
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "Canonical EFZ.exe @ 0x0067C564: original instruction `FCOMP double ptr [0x00787ee0]` binds DIR32 symbol __real@4054000000000000 to 0x00787EE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14711
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "Canonical EFZ.exe @ 0x0067C5A5: original instruction `FCOMP double ptr [0x00787ce8]` binds DIR32 symbol __real@404e000000000000 to 0x00787CE8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14727
+type = "DIR32"
+symbol = "__real@406a400000000000"
+target = 0x00788440
+evidence = "Canonical EFZ.exe @ 0x0067C5B5: original instruction `FCOMP double ptr [0x00788440]` binds DIR32 symbol __real@406a400000000000 to 0x00788440; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14743
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x0067C5C5: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14814
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067C60C: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14850
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "Canonical EFZ.exe @ 0x0067C630: original instruction `FCOMP double ptr [0x00787340]` binds DIR32 symbol __real@4066800000000000 to 0x00787340; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14866
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "Canonical EFZ.exe @ 0x0067C640: original instruction `FCOMP double ptr [0x00787340]` binds DIR32 symbol __real@4066800000000000 to 0x00787340; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14954
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067C698: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14979
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x0067C6B1: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 14995
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x0067C6C1: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15053
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "Canonical EFZ.exe @ 0x0067C6FB: original instruction `FCOMP double ptr [0x00787e98]` binds DIR32 symbol __real@405b800000000000 to 0x00787E98; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15069
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "Canonical EFZ.exe @ 0x0067C70B: original instruction `FCOMP double ptr [0x00787340]` binds DIR32 symbol __real@4066800000000000 to 0x00787340; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15138
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067C750: original instruction `FCOMP double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15158
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "Canonical EFZ.exe @ 0x0067C764: original instruction `FCOMP double ptr [0x00787ee0]` binds DIR32 symbol __real@4054000000000000 to 0x00787EE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15174
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x0067C774: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15244
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "Canonical EFZ.exe @ 0x0067C7BA: original instruction `FCOMP double ptr [0x00787c10]` binds DIR32 symbol __real@4034000000000000 to 0x00787C10; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15260
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "Canonical EFZ.exe @ 0x0067C7CA: original instruction `FCOMP double ptr [0x00787e78]` binds DIR32 symbol __real@4061800000000000 to 0x00787E78; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15276
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "Canonical EFZ.exe @ 0x0067C7DA: original instruction `FCOMP double ptr [0x00787ce8]` binds DIR32 symbol __real@404e000000000000 to 0x00787CE8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15292
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "Canonical EFZ.exe @ 0x0067C7EA: original instruction `FCOMP double ptr [0x00787e78]` binds DIR32 symbol __real@4061800000000000 to 0x00787E78; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15475
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067C8A1: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15502
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067C8BD: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15526
+type = "DIR32"
+symbol = "__real@40800000"
+target = 0x007872e0
+evidence = "Canonical EFZ.exe @ 0x0067C8D4: original instruction `FLD float ptr [0x007872e0]` binds DIR32 symbol __real@40800000 to 0x007872E0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15647
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "Canonical EFZ.exe @ 0x0067C94D: original instruction `FCOMP double ptr [0x00787ee0]` binds DIR32 symbol __real@4054000000000000 to 0x00787EE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15667
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe @ 0x0067C961: original instruction `FCOMP double ptr [0x00787368]` binds DIR32 symbol __real@405e000000000000 to 0x00787368; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15693
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067C97C: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15756
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "Canonical EFZ.exe @ 0x0067C9BA: original instruction `FCOMP double ptr [0x00787ef0]` binds DIR32 symbol __real@4062c00000000000 to 0x00787EF0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15775
+type = "DIR32"
+symbol = "__real@407ea00000000000"
+target = 0x00788690
+evidence = "Canonical EFZ.exe @ 0x0067C9CD: original instruction `FCOMP double ptr [0x00788690]` binds DIR32 symbol __real@407ea00000000000 to 0x00788690; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15878
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x0067CA34: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15904
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CA4F: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15949
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CA7C: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 15969
+type = "DIR32"
+symbol = "__real@c066800000000000"
+target = 0x00788d18
+evidence = "Canonical EFZ.exe @ 0x0067CA8F: original instruction `FCOMP double ptr [0x00788d18]` binds DIR32 symbol __real@c066800000000000 to 0x00788D18; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16010
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CAB9: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16042
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CAD9: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16094
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CB0D: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16156
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CB4B: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16202
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x0067CB78: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16228
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CB93: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16258
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CBB1: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16293
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CBD4: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16348
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CC0B: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16400
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CC3F: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16465
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CC80: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16486
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067CC94: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16514
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CCB1: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16556
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "Canonical EFZ.exe @ 0x0067CCDA: original instruction `FCOMP double ptr [0x00787ce0]` binds DIR32 symbol __real@4044000000000000 to 0x00787CE0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16572
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "Canonical EFZ.exe @ 0x0067CCEA: original instruction `FCOMP double ptr [0x00787ef0]` binds DIR32 symbol __real@4062c00000000000 to 0x00787EF0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16594
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CD01: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16629
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "Canonical EFZ.exe @ 0x0067CD23: original instruction `FCOMP double ptr [0x00787ef0]` binds DIR32 symbol __real@4062c00000000000 to 0x00787EF0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16651
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CD3A: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16686
+type = "DIR32"
+symbol = "__real@4069000000000000"
+target = 0x00787e70
+evidence = "Canonical EFZ.exe @ 0x0067CD5C: original instruction `FCOMP double ptr [0x00787e70]` binds DIR32 symbol __real@4069000000000000 to 0x00787E70; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16708
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CD73: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16755
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "Canonical EFZ.exe @ 0x0067CDA1: original instruction `FCOMP double ptr [0x007875d0]` binds DIR32 symbol __real@4059000000000000 to 0x007875D0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16777
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CDB8: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16827
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "Canonical EFZ.exe @ 0x0067CDE9: original instruction `FLD double ptr [0x007872f8]` binds DIR32 symbol __real@0000000000000000 to 0x007872F8; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16863
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040ff70
+evidence = "Canonical EFZ.exe @ 0x0067CE0E: original instruction `CALL 0x0040ff70` binds REL32 symbol ?CollisionSide@Secondary@@QAEDXZ to 0x0040FF70; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16930
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040ff70
+evidence = "Canonical EFZ.exe @ 0x0067CE51: original instruction `CALL 0x0040ff70` binds REL32 symbol ?CollisionSide@Secondary@@QAEDXZ to 0x0040FF70; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 16992
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CE8F: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 17027
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CEB2: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 17059
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CED2: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 17086
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CEED: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 17121
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CF10: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."
+
+[[units.character-19-slot05.relocations]]
+offset = 17153
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "Canonical EFZ.exe @ 0x0067CF30: original instruction `CALL 0x004108a0` binds REL32 symbol ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0; original operand bytes and destination literal were verified."

@@ -537,3 +537,4 @@ address,name,source,symbol,status,evidence
 0x00675FD0,Character19::UpdateLocomotionState,src/Character19Locomotion.cpp,?UpdateLocomotionState@Character19@@QAEXXZ,complete,docs/evidence/character-19-locomotion-exact.json
 0x00677E60,Character19::Slot02,src/Character19Commands.cpp,?Slot02@Character19@@UAEXXZ,complete,docs/evidence/character-19-slot02-exact.json
 0x006763C0,Character19::Slot04,src/Character19Action.cpp,?Slot04@Character19@@UAEXXZ,complete,docs/evidence/character-19-slot04-exact.json
+0x00678C30,Character19::Slot05,src/Character19Cpu.cpp,?Slot05@Character19@@UAEXXZ,complete,docs/evidence/character-19-slot05-exact.json

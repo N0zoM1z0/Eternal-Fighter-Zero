@@ -1615,66 +1615,25 @@ and selected recipes. No cleanup archive, deletion manifest or receipt refresh
 is required for later housekeeping. Commit coherent increments as `gpt-web: `;
 never push unless explicitly instructed.
 
-## Kanna (Character19) CPU cooldown layout identified — 2026-11-17
+## Kanna (Character19) CPU Slot05 — promoted and exact — 2026-11-18
 
-The native CPU/AI virtual `Character19::Slot05` at `0x00678C30` reads and
-updates two adjacent signed 32-bit cooldowns at object offsets `+0x314C` and
-`+0x3150`. `Character19` now names those fields `field314c` and `field3150`
-instead of an opaque eight-byte region; the class layout and offsets are
-unchanged. The complete 17,176-byte CPU function now has a natural C++ workbench
-reconstruction at `workbench/character19-cpu/Character19Cpu-decomp.cpp`.
-The selected VC7.1 `/Od` candidate is 17,173 bytes (3 bytes shorter than
-native), with the original `0xCC` stack frame and matching entry prologue.
-The large AI/state branches and neutral-input fallback are present. The final
-state-range gate is reconstructed as the native-order early command return,
-with exact signed-byte and opponent-state boundaries. Native x87 unordered-compare paths are preserved with explicit negated
-relational tests where the original branches treat unordered values as true;
-`positionY == 0.0` remains a true equality test.
-Targeted instruction alignment reports 4,192 of 4,447 candidate instructions
-aligned with native order/semantics. The source also restores native unsigned
-RNG zero-extension, signed air-action-lock `<= 0` tests, and an explicit short-circuit/early-exit reconstruction of the state-0x11
-aerial decision tree with unordered-aware x87 relational forms. The final
-grounded-movement cooldown owner now follows native right/left active-frame
-priority, collision clamping, and randomized cooldown assignment order. The
-large AI gate also restores native unsigned state-code boundaries and
-unordered-aware floating-point range predicates, including RNG probability
-comparisons. Early CPU-state gates also use the native unsigned `0x31`/`0x96`
-boundary comparisons. State-0x11 aerial gates now use nested positive
-short-circuit predicates that preserve native x87 branch polarity. The
-vertical-position tests retain the native operand order and unordered cases.
-The state-0xc9 lock fallback now uses `!(lockFrames > 0x3c)` to retain the
-native `cmp 0x3c` / `jg` branch. The state-0xf/0x10/0x11/0x14/0x15/0x16/0x1e handlers now preserve their
-branch-local exits and fallthrough paths, recovering all seven native state
-dispatch epilogue jumps. The ground-range random direction uses an explicit integer-valued ternary to
-recover the native zeroed-register plus `setl` materialization. The final AI
-gate uses natural early-return guards for both facing-command
-fallthroughs, moving their byte-to-command conversions back to the native
-branch sites and eliminating the synthesized tail conversion block. All 4,447 candidate instructions now align in native order and semantics after
-branch-target normalization. The only remaining byte-size discrepancy is one
-three-byte near-versus-short return jump in state 0x20; all 298 COFF relocations
-and the original stack frame remain intact. The state-0x11 inverse vertical-decision predicate now preserves the `20`,
-`84`, and `90` thresholds and its native early-exit path. The state-0x21 cancel-roll branch now uses the native
-positive `RandomRange(0, 100) < 0x32` guard before selecting state 6. The 0xcb follow-up now uses the positive
-`distance.forward < 120` branch so unordered x87 values keep native command 0x1f. The grounded movement branch
-now compares opponent and player Y in the native operand order. Repeated opponent-state tiers now use the native
-`0x31 < state < 0x9c` bounds, and the state-0x21 lock threshold is `<= 0x3c`. The state-0xcf random follow-up now uses the native positive
-`RandomRange(0, 4) == 0` branch and shared exit.
-The state-0x11 grounded-input fallback now returns through the owner exit before
-the later state checks, as in the native control flow. The candidate remains **not Exact** and
-has not been promoted into `src/` or the match ledger. Rebuild only this owner
-with `scripts/repo-python workbench/character19-cpu/check-decomp.py`; no full
-cold replay is needed.
+`src/Character19Cpu.cpp` contains the complete natural C++ implementation of
+`Character19::Slot05`, selected by vtable `0x00788CE0 + 0x14` at
+`0x00678C30`. The reviewed owner is `[0x00678C30, 0x0067CF48)`, 17,176 bytes,
+ending at RET `0x0067CF47`; the next vtable method begins at `0x0067CF50`
+after eight alignment bytes. Ghidra reports a complete non-thunk body.
 
-## Kanna (Character19) CPU state-0x1f exits restored — 2026-11-18
+The selected-only `scripts/repo-python scripts/replay-exact-units.py --unit
+character-19-slot05` run reports **17,176/17,176 bytes Exact**, zero
+differences, and **298/298 original-bound relocations** (212 DIR32, 86 REL32;
+44 unique symbols). All 41 floating-point literal destinations were verified
+against their original target bytes. The state-0x0f, 0x11 and 0x1f return paths
+were recovered as natural C++ early exits. Certificate:
+`docs/evidence/character-19-slot05-exact.json`. Boundary, authored-origin,
+implemented-source and exact-match ledgers are updated. This is a single-owner
+replay, not a full cold replay.
 
-In `workbench/character19-cpu/Character19Cpu-decomp.cpp`, both outcomes of
-the `field3114 == 0x1f` branch now return immediately: the `0xc9`/`0xca`
-transition writes state `0x20`, and the fallback sets `buttonPulse[1]`. The
-native instructions at `0x0067AB57` and `0x0067AB69` each jump directly to
-the owner epilogue at `0x0067CF44`; the old candidate factored the first path
-through a short local jump and was three bytes too short. The scoped VC7.1
-rebuild now produces 17,176 bytes (native extent 17,176), retains all 298
-COFF relocations and the original stack frame. A first focused raw-byte pass
-finds 11 non-relocation branch-displacement bytes still differing; this
-function is not Exact yet. Continue with the state-0x0f return edge and the
-state-0x11 early exits, then bind all 298 relocations before any promotion.
+Next substantial Kanna owner: `Character19::Slot07` at `0x0067CF50` (provisional
+Ghidra body size 25,787 bytes, selected by vtable offset `+0x1c`). The adjacent
+`Character19::Slot06` at `0x00667570` is a smaller follow-up candidate; review
+its boundary and code before treating the name/extent as final.

@@ -35,9 +35,10 @@ symbols. All 39 floating-point literal symbols were checked against their
 original target bytes. The relocated candidate matches all 17,176 original
 bytes with zero differences. The state-0x0f branch now has separate early and
 fallback returns, and the state-0x11 decision chain returns after each of its
-five terminal choices. Formal match-unit replay and production-source
-promotion remain to be recorded; the workbench comparison alone is not an
-accepted receipt. The large AI gate now preserves native unsigned
+five terminal choices. The exact member has been promoted to `src/Character19Cpu.cpp`; the
+selected `character-19-slot05` match-unit replay and independent ledgers now
+record the complete result. The workbench file remains as the experiment
+reference. The large AI gate now preserves native unsigned
 state-code bounds and unordered-aware floating-point range predicates, including the two AI
 probability-gate comparisons against RNG values. The early CPU-state gates
 now use the native `0x31`/`0x96` comparison boundaries directly.

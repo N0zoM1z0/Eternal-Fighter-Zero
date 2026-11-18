@@ -8464,3 +8464,29 @@ accepted lifecycle leaves and full initializer, this brings the character
 to **eight accepted functions totalling 5,490 original executable bytes**.
 The large Akane Slot04/Slot05/Slot06/Slot07 owners remain open. No full
 cold replay, inline ASM, `_emit` or artificial padding was used.
+
+## Kanna Character19 CPU/AI Slot05 — complete natural C++ owner
+
+`src/Character19Cpu.cpp` reconstructs the complete `Character19::Slot05`
+virtual member at `0x00678C30`. The Kanna vtable at `0x00788CE0` has the
+Slot05 function pointer at `+0x14`. The reviewed owner extent is
+`[0x00678C30, 0x0067CF48)`, ending at the original RET at `0x0067CF47`; the
+next vtable method begins at `0x0067CF50` after eight excluded alignment
+bytes. Ghidra reports a 17,176-byte body and `is_thunk=false`, supporting the
+reviewed authored origin.
+
+The routine maintains movement cooldowns and guard frames, clears per-frame
+input/pulse state, evaluates random guard and attack gates, measures opponent
+distance, and drives the CPU state/command selection through the ground and
+air decision paths. The source preserves the original x87 floating-point
+comparison behavior and branch-local exits, including state `0x0f`, `0x11`
+and `0x1f` return paths. It uses 83 `Secondary::RandomRange` calls, two
+`Secondary::CollisionSide` calls and one `fabs` call.
+
+Selected-only VC7.1 `/Od /G6 /MT /Gy /W3` normal COFF replay proves
+**17,176/17,176 bytes Exact**, zero differences, with **298/298 original-bound
+relocations** (212 DIR32, 86 REL32; 44 unique symbols). All 41 unique
+floating-point literal destinations were checked against their original target
+bytes. Certificate: `docs/evidence/character-19-slot05-exact.json`. This is
+a complete authored boss function, not a leaf-only substitution, ASM wrapper,
+padding or byte patch. No full cold replay was run.
