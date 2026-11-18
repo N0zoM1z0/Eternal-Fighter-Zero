@@ -8,10 +8,6 @@ void Character19::Slot07()
     EffectSpawn spawn;
     unsigned short frameDuration;
     unsigned short frameCount;
-    int iVar7;
-    int iVar8;
-    double dVar2;
-    double dVar3;
     unsigned short uVar5;
     unsigned short uVar6;
     int i;
@@ -1376,25 +1372,18 @@ void Character19::Slot07()
         case 0x1f1:
           if (((effects[i].frame == 0) &&
               (effects[i].tick == 0)) && (field3154[i] == 0)) {
-            iVar7 = rand();
-            iVar8 = rand();
             field3254[i] =
-                 (unsigned int)(16000 < iVar7) * 0x28 + 0x50 + (unsigned int)(16000 < iVar8) * 0x14;
+                 (unsigned int)(rand() > 16000) * 0x28 + 0x50 +
+                 (unsigned int)(rand() > 16000) * 0x14;
             field3154[i] = field3154[i] + 1;
-            iVar7 = rand();
-            dVar2 = (double)(16000 < iVar7) * 1.2;
-            iVar7 = rand();
-            dVar3 = (double)(16000 < iVar7) * 0.7;
-            iVar7 = rand();
             effects[i].vx =
-                 (double)(16000 < iVar7) * 1.7 + dVar3 + dVar2 + -1.8;
-            iVar7 = rand();
-            dVar2 = (double)(16000 < iVar7) * 0.6;
-            iVar7 = rand();
-            dVar3 = (double)(16000 < iVar7) * 0.9;
-            iVar7 = rand();
+                 (double)(rand() > 16000) * 1.2 +
+                 (double)(rand() > 16000) * 0.7 +
+                 (double)(rand() > 16000) * 1.7 + -1.8;
             effects[i].vy =
-                 -1.2 - ((double)(16000 < iVar7) * 1.4 + dVar3 + dVar2);
+                 -1.2 - ((double)(rand() > 16000) * 0.6 +
+                         (double)(rand() > 16000) * 0.9 +
+                         (double)(rand() > 16000) * 1.4);
           }
           effects[i].vy =
                effects[i].vy + 0.05;
@@ -1427,25 +1416,18 @@ void Character19::Slot07()
         case 0x1f2:
           if (((effects[i].frame == 0) &&
               (effects[i].tick == 0)) && (field3154[i] == 0)) {
-            iVar7 = rand();
-            iVar8 = rand();
             field3254[i] =
-                 (unsigned int)(16000 < iVar7) * 0x3c + 0x78 + (unsigned int)(16000 < iVar8) * 0x28;
+                 (unsigned int)(rand() > 16000) * 0x3c + 0x78 +
+                 (unsigned int)(rand() > 16000) * 0x28;
             field3154[i] = field3154[i] + 1;
-            iVar7 = rand();
-            iVar8 = rand();
-            dVar2 = (double)(16000 < iVar8) * 0.5;
-            iVar8 = rand();
             effects[i].vx =
-                 (double)(16000 < iVar8) * 1.5 + dVar2 + (double)(16000 < iVar7) +
-                 -1.5;
-            iVar7 = rand();
-            dVar2 = (double)(16000 < iVar7) * 0.5;
-            iVar7 = rand();
-            dVar3 = (double)(16000 < iVar7) * 0.8;
-            iVar7 = rand();
+                 (double)(rand() > 16000) * 0.5 +
+                 (double)(rand() > 16000) * 1.5 +
+                 (double)(rand() > 16000) + -1.5;
             effects[i].vy =
-                 -1.0 - ((double)(16000 < iVar7) * 1.2 + dVar3 + dVar2);
+                 -1.0 - ((double)(rand() > 16000) * 0.5 +
+                         (double)(rand() > 16000) * 0.8 +
+                         (double)(rand() > 16000) * 1.2);
           }
           effects[i].vy =
                effects[i].vy + 0.03;
