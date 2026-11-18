@@ -9,7 +9,7 @@ states_by_case = {
     ]
     for row in rows
 }
-implemented = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
+implemented = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x28, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
 mapped = {
     state
     for case, states in states_by_case.items()
@@ -21,7 +21,7 @@ unimplemented = sorted(set(range(1, 0x137)) - mapped)
 lines = [
     "// Partial natural-C++ reconstruction of Character19::Slot06.",
     "// State IDs are grouped using the native 310-byte selector table.",
-    "// Cases 0-0x17, 0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x70-0x74, and the shared 0x75 fallback are restored.",
+    "// Cases 0-0x17, 0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x28, 0x70-0x74, and the shared 0x75 fallback are restored.",
     "// are implemented; remaining native handlers are explicitly TODO.",
     '#include "CharacterViews.h"',
     "",
@@ -203,17 +203,20 @@ lines += [
 ]
 
 for case, config in [
-    (0x1c, (-2.0, 1)),
-    (0x1d, (-4.0, 1)),
-    (0x1e, (-6.0, 1)),
-    (0x1f, (0.0, 0)),
+    (0x1c, (-2.0, 1, 0.75, 0.032)),
+    (0x1d, (-4.0, 1, 0.75, 0.032)),
+    (0x1e, (-6.0, 1, 0.75, 0.032)),
+    (0x1f, (0.0, 0, 0.75, 0.032)),
+    (0x20, (0.0, 0, 0.0, 0.032)),
+    (0x28, (0.0, 0, 0.0, 0.072)),
 ]:
-    lower_velocity, clamp_velocity = config
+    lower_velocity, clamp_velocity, velocity_blend, gravity_value = config
     lines += labels(case)
     lines += [
         "        Slot06UpdateKnockbackFall(",
         "            timing.frameDuration, timing.animationFrameCount,",
-        f"            {lower_velocity}, {clamp_velocity});",
+        f"            {lower_velocity}, {clamp_velocity},",
+        f"            {velocity_blend}, {gravity_value});",
         "        break;",
         "",
     ]

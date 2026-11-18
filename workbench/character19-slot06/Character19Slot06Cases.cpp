@@ -1181,7 +1181,9 @@ void Character19::Slot06UpdateKnockbackFall(
     unsigned short frameDuration,
     unsigned short frameCount,
     double minimumVerticalVelocity,
-    int clampVerticalVelocity)
+    int clampVerticalVelocity,
+    double velocityBlend,
+    double gravityValue)
 {
     if (field0120 != 0) {
         field0118 = field0118 - 0.8;
@@ -1190,7 +1192,11 @@ void Character19::Slot06UpdateKnockbackFall(
     if ((field000a == 0) && (field000c == 0)) {
         meter = meter + 30;
         velocityX = knockbackVelocityX;
-        velocityY = velocityY * 0.75 + knockbackVelocityY;
+        if (velocityBlend == 0.0) {
+            velocityY = knockbackVelocityY;
+        } else {
+            velocityY = velocityY * velocityBlend + knockbackVelocityY;
+        }
         if (clampVerticalVelocity) {
             if (minimumVerticalVelocity <= velocityY) {
                 if (-0.5 < velocityY) {
@@ -1200,7 +1206,7 @@ void Character19::Slot06UpdateKnockbackFall(
                 velocityY = minimumVerticalVelocity;
             }
         }
-        gravity = 0.032;
+        gravity = gravityValue;
     }
 
     if (((velocityY < 0.0) != (velocityY == 0.0)) &&

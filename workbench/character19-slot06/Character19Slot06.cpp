@@ -1,6 +1,6 @@
 // Partial natural-C++ reconstruction of Character19::Slot06.
 // State IDs are grouped using the native 310-byte selector table.
-// Cases 0-0x17, 0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x70-0x74, and the shared 0x75 fallback are restored.
+// Cases 0-0x17, 0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x28, 0x70-0x74, and the shared 0x75 fallback are restored.
 // are implemented; remaining native handlers are explicitly TODO.
 #include "CharacterViews.h"
 
@@ -198,25 +198,43 @@ void Character19::Slot06()
     case 59:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
-            -2.0, 1);
+            -2.0, 1,
+            0.75, 0.032);
         break;
 
     case 60:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
-            -4.0, 1);
+            -4.0, 1,
+            0.75, 0.032);
         break;
 
     case 61:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
-            -6.0, 1);
+            -6.0, 1,
+            0.75, 0.032);
         break;
 
     case 62:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
-            0.0, 0);
+            0.0, 0,
+            0.75, 0.032);
+        break;
+
+    case 63:
+        Slot06UpdateKnockbackFall(
+            timing.frameDuration, timing.animationFrameCount,
+            0.0, 0,
+            0.0, 0.032);
+        break;
+
+    case 71:
+        Slot06UpdateKnockbackFall(
+            timing.frameDuration, timing.animationFrameCount,
+            0.0, 0,
+            0.0, 0.072);
         break;
 
     case 50:
@@ -528,7 +546,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 63:
     case 64:
     case 65:
     case 66:
@@ -536,7 +553,6 @@ void Character19::Slot06()
     case 68:
     case 69:
     case 70:
-    case 71:
     case 72:
     case 73:
     case 74:
