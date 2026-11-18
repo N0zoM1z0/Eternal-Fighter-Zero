@@ -2477,3 +2477,101 @@ void Character19::Slot06UpdateAirborneDashFollowup(
         }
     }
 }
+
+
+// Multi-phase aerial launch: hold at phase 4 until the phase-5 ground test succeeds.
+void Character19::Slot06UpdateAerialLaunchLanding(
+    unsigned short frameDuration,
+    unsigned short frameCount)
+{
+    if ((field000a == 0) && (field000c == 0)) {
+        velocityX = 0.0;
+        velocityY = 0.0;
+    }
+
+    if ((field000a == 1) && (field000c == 0)) {
+        velocityX = 1.4;
+        velocityY = -1.5;
+        gravity = 0.08;
+    }
+
+    if ((field000a == 2) && (field000c == 0)) {
+        meter = meter + 15;
+        pendingContextSoundSlot = 0x14;
+        remainingHitCount = 1;
+    }
+
+    if ((field000a == 5) && (field000c == 0)) {
+        velocityX = 0.0;
+        velocityY = 0.0;
+        gravity = 0.0;
+    }
+
+    if (field000a > 0) {
+        velocityY = velocityY + gravity;
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        attackCollisionResult = 0;
+
+        if (field000a == 5) {
+            if ((positionY + velocityY) < 0.0) {
+                field000a = field000a - 1;
+            } else {
+                positionY = 0.0;
+            }
+        }
+
+        if (frameCount <= field000a) {
+            field0008 = 0;
+            FaceOpponent();
+            ResetPose();
+        }
+    }
+}
+
+// Ground dash follow-up with a down-input cancel window and a late meter event.
+void Character19::Slot06UpdateDashFollowupCancel(
+    unsigned short frameDuration,
+    unsigned short frameCount)
+{
+    if ((inputY == -1) && (field000a > 0) &&
+        (field015c < 3) && (attackCollisionResult > 1)) {
+        field0008 = 4;
+        if (inputX == facing) {
+            field0008 = 5;
+        }
+        if (inputX == -facing) {
+            field0008 = 6;
+        }
+        attackCollisionResult = 0;
+        ResetPose();
+        return;
+    }
+
+    if ((field000a == 0) && (field000c == 0)) {
+        velocityX = 0.0;
+        velocityY = 0.0;
+    }
+
+    if ((field000a == 3) && (field000c == 0)) {
+        meter = meter + 30;
+        pendingContextSoundSlot = 0x14;
+        remainingHitCount = 1;
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        attackCollisionResult = 0;
+        if (frameCount <= field000a) {
+            field0008 = 0;
+            FaceOpponent();
+            ResetPose();
+        }
+    }
+}

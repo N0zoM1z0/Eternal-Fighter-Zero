@@ -65,6 +65,8 @@ assert any(symbol.startswith("?Slot06UpdateDashRecovery@Character19@@") for symb
 assert any(symbol.startswith("?Slot06UpdateDashAttack@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashAttackSustain@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneDashFollowup@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateAerialLaunchLanding@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateDashFollowupCancel@Character19@@") for symbol in helper_members)
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -93,7 +95,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 285
+assert len(implemented_states) == 287
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -704,6 +706,71 @@ airborne_dash_followup_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": airborne_dash_followup_helper,
         **helper_members[airborne_dash_followup_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+
+aerial_launch_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateAerialLaunchLanding@")
+)
+(workbench / "aerial-launch-landing-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x57",
+        "entry": "0x00671F1E",
+        "bytes": 454,
+        "state_id": 210,
+        "launch_frame": 1,
+        "launch_velocity": [1.4, -1.5],
+        "gravity": 0.08,
+        "meter_frame": 2,
+        "meter_gain": 15,
+        "stop_frame": 5,
+        "landing_gate": "frame-5 holds at frame-4 until positionY+velocityY>=0",
+        "completion_state": 0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": aerial_launch_helper,
+        **helper_members[aerial_launch_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+dash_followup_cancel_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateDashFollowupCancel@")
+)
+(workbench / "dash-followup-cancel-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x58",
+        "entry": "0x006720E4",
+        "bytes": 387,
+        "state_id": 211,
+        "cancel": "inputY==-1 && field000a>0 && field015c<3 && attackCollisionResult>1",
+        "cancel_states": [4, 5, 6],
+        "meter_frame": 3,
+        "meter_gain": 30,
+        "sound": 0x14,
+        "completion_state": 0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": dash_followup_cancel_helper,
+        **helper_members[dash_followup_cancel_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

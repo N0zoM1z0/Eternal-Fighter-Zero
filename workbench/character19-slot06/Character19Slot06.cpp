@@ -522,6 +522,16 @@ void Character19::Slot06()
             1, 425, 3);
         break;
 
+    case 210:
+        Slot06UpdateAerialLaunchLanding(
+            timing.frameDuration, timing.animationFrameCount);
+        break;
+
+    case 211:
+        Slot06UpdateDashFollowupCancel(
+            timing.frameDuration, timing.animationFrameCount);
+        break;
+
     case 59:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
@@ -901,8 +911,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 210:
-    case 211:
     case 212:
     case 213:
     case 214:

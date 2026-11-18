@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "f8d338d9e517ed635d293088165d4169ad686122e99bf77e00a6feb45ed8fd78",
+  "source_sha256": "ec5ff161bdb8e573e17abc5c00906ae7951ad13850abd38354ebfb984c013834",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "d7f738848b0bb52a091fa33d03978eb955e145a59fec1b73b62bff74dc43c408",
+  "object_sha256": "86f8e54da3774339301537bf9f1c632c42729c81ef05142b4e82cd833257d570",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -62,6 +62,10 @@
       "candidate_size": 616,
       "relocations": 0
     },
+    "?Slot06UpdateAerialLaunchLanding@Character19@@QAEXGG@Z": {
+      "candidate_size": 459,
+      "relocations": 11
+    },
     "?Slot06UpdateAirKnockback@Character19@@QAEXGGPAUSecondaryEffectSpawn@@@Z": {
       "candidate_size": 485,
       "relocations": 9
@@ -109,6 +113,10 @@
     "?Slot06UpdateDashAttackSustain@Character19@@QAEXGG@Z": {
       "candidate_size": 441,
       "relocations": 7
+    },
+    "?Slot06UpdateDashFollowupCancel@Character19@@QAEXGG@Z": {
+      "candidate_size": 393,
+      "relocations": 3
     },
     "?Slot06UpdateDashRecovery@Character19@@QAEXGG@Z": {
       "candidate_size": 298,

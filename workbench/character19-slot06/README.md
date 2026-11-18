@@ -211,3 +211,12 @@ The 435-byte state 206 zeros velocity only on its initial frame when dashMomentu
 ## Airborne dash follow-up family: selector cases 0x54-0x56
 
 All three states integrate the existing gravity before input handling. They support two distinct aerial cancels: down input routes to states 14/15/16; neutral vertical input with a horizontal direction routes to 0xa5/0xa6. Both require a nonzero animation phase, field015c<3, attackCollisionResult>1 and airActionCount<2, and both increment airActionCount before resetting pose. Case 0x54 grants 5 meter at phase 2 with sound 0x15 and has no local effect; 0x55 grants 13 meter at phase 2 with sound 0x14 and emits local effect 0x1a7 at phase 3; 0x56 grants 30 meter at phase 1 with sound 0x14 and emits effect 0x1a9 at phase 1. Effects use integer-truncated current coordinates, owner 1, facing flag, group 2 and layer 1. Ground crossing clamps Y and enters state 13; animation completion enters state 9. AttackCollisionResult is cleared during the early frames using per-variant limits 3/4/3. Case 0x56 also has a one-time frame-7 rewind by three frames, guarded by field3138<1; it returns to frame 4 and increments field3138 before the final frame-count test.
+
+
+## Multi-phase aerial launch: selector case 0x57
+
+The 454-byte state 210 clears both velocities on phase 0, launches at phase 1 with velocity (1.4, -1.5) and gravity 0.08, then grants 15 meter and requests sound 0x14 at phase 2. Phase 5 clears horizontal/vertical velocity and gravity. Vertical integration is active after phase 0. When the animation advances into phase 5, the handler holds at phase 4 while positionY+velocityY remains below zero; otherwise it clamps Y to zero and lets the phase-5 stop/finish run. Every animation-frame transition clears attackCollisionResult. Completion faces the opponent and resets pose into state 0.
+
+## Dash follow-up cancel: selector case 0x58
+
+The 387-byte state 211 supports down-input cancel after phase 0 when field015c<3 and attackCollisionResult>1, routing to states 4/5/6 by inputX relative to facing. Without cancellation, phase 0 clears both velocities, phase 3 grants 30 meter and requests sound 0x14, and every completed animation frame clears attackCollisionResult. Completion faces the opponent and returns to state 0. This native branch has no gravity integration or airborne landing logic; it is deliberately not aliased to the superficially similar Character23 state 211.
