@@ -818,23 +818,33 @@ void Character19::Slot06()
         break;
 
     case 3:
-        Slot06Case03();
+        {
+#include "Character19Slot06Case03.inc"
+        }
         break;
 
     case 4:
-        Slot06Case04();
+        {
+#include "Character19Slot06Case04.inc"
+        }
         break;
 
     case 5:
-        Slot06Case05();
+        {
+#include "Character19Slot06Case05.inc"
+        }
         break;
 
     case 8:
-        Slot06Case08();
+        {
+#include "Character19Slot06Case08.inc"
+        }
         break;
 
     case 9:
-        Slot06Case09();
+        {
+#include "Character19Slot06Case09.inc"
+        }
         break;
 
     case 112:

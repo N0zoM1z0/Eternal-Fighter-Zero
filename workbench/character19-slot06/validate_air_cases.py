@@ -84,6 +84,30 @@ assert "inputY == -1" in (ROOT / "workbench/character19-slot06/Character19Slot06
 assert "inputY == 1" in (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
 assert "reinterpret_cast<unsigned char *>(&soundSlots[49])[0] = 0;" in (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
 assert "reinterpret_cast<unsigned char *>(&soundSlots[49])[1] = 9;" in (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
+
+# The five legacy aerial state handlers now live inside the common native
+# dispatcher and reuse its one PatternSequence frame-timing snapshot.
+dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+helper_source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
+legacy_cases = {
+    0x03: ("gravity = 0.045;", "velocityY = -2.5;"),
+    0x04: ("gravity = 0.045;", "velocityX = 1.5;"),
+    0x05: ("gravity = 0.045;", "velocityX = -1.5;"),
+    0x08: ("velocityY = velocityY + gravity;", "field3140 = field3140 + 1;"),
+    0x09: ("velocityY > 0.4", "velocityX = velocityX * 0.3;"),
+}
+for case, expressions in legacy_cases.items():
+    body = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
+    assert "timing.frameDuration" in body
+    assert "timing.animationFrameCount" in body
+    assert "struct FrameTiming" not in body
+    assert "patterns[" not in body
+    for expression in expressions:
+        assert expression in body, (hex(case), expression)
+    assert f"Slot06Case{case:02X}" not in helper_source
+    print(f"selector 0x{case:02x}: inlined shared-frame body ({len(body)} source bytes)")
+
 print({
     "native_variants": len(blocks),
     "shared_input_lines": len(input_sections[0]),

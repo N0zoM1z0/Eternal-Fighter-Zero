@@ -750,7 +750,7 @@ for case, method in [
     (0x74, "Slot06Case74"),
 ]:
     lines += labels(case)
-    if case in (0x70, 0x71, 0x72, 0x73, 0x74):
+    if case in (3, 4, 5, 8, 9, 0x70, 0x71, 0x72, 0x73, 0x74):
         lines += [
             "        {",
             f'#include "Character19Slot06Case{case:02X}.inc"',

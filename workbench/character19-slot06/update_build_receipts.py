@@ -144,10 +144,37 @@ dispatcher_record = {
         f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
             (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
         ).hexdigest()
-        for case in (0x70, 0x71, 0x72, 0x73, 0x74)
+        for case in (3, 4, 5, 8, 9, 0x70, 0x71, 0x72, 0x73, 0x74)
     },
     "status": "partial-semantic-workbench-not-exact",
 }
+air_path = workbench / "air-movement-build.json"
+air = json.loads(air_path.read_text())
+air["candidate"].update({
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": main_receipt["source_sha256"],
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": main_receipt["object_sha256"],
+    "members": {
+        symbol: helper_members[symbol]
+        for symbol in helper_members
+        if symbol.startswith("?Slot06TryAirAction@")
+        or symbol.startswith("?Slot06UpdateAirMovement@")
+    },
+    "inlined_case_sources": {
+        f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
+            (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
+        ).hexdigest()
+        for case in (3, 4, 5, 8, 9)
+    },
+    "status": "semantic-workbench-only-not-exact",
+})
+air["dispatcher"] = {
+    **dispatcher_record,
+    "symbol_bytes": len(main_body),
+}
+air_path.write_text(json.dumps(air, indent=2) + "\n")
+
 slot06_path = workbench / "slot06-build.json"
 slot06 = json.loads(slot06_path.read_text())
 slot06["partial_candidate"].update(dispatcher_record)

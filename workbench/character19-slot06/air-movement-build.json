@@ -28,72 +28,53 @@
     }
   },
   "candidate": {
-    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-    "source_sha256": "9a246362c6645be9c39c020f278b2982a6b666c700345778372b4ecaee3006eb",
-    "object": "build/character19-slot06/Character19Slot06Cases.obj",
-    "object_sha256": "2b77c20a539d745638b08ae9683ebcad9aa0589a6899f07ad9e8866429d0e4e2",
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "2dbae227db75c5491a05dc07ad09386e5d50346d344a597b19c338d253c02d11",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "9825c7c5af7dea523431361323974942b921286f7313ff066a124c17fdc69d44",
     "members": {
       "?Slot06TryAirAction@Character19@@QAEHXZ": {
-        "bytes": 616,
+        "candidate_size": 616,
         "relocations": 0
       },
       "?Slot06UpdateAirMovement@Character19@@QAEXGGGNNGH@Z": {
-        "bytes": 420,
+        "candidate_size": 420,
         "relocations": 8
-      },
-      "?Slot06Case03@Character19@@QAEXXZ": {
-        "bytes": 974,
-        "relocations": 7
-      },
-      "?Slot06Case04@Character19@@QAEXXZ": {
-        "bytes": 992,
-        "relocations": 8
-      },
-      "?Slot06Case05@Character19@@QAEXXZ": {
-        "bytes": 992,
-        "relocations": 8
-      },
-      "?Slot06Case08@Character19@@QAEXXZ": {
-        "bytes": 847,
-        "relocations": 2
-      },
-      "?Slot06Case09@Character19@@QAEXXZ": {
-        "bytes": 891,
-        "relocations": 5
-      },
-      "?Slot06Case70@Character19@@QAEXXZ": {
-        "bytes": 1023,
-        "relocations": 20
-      },
-      "?Slot06Case71@Character19@@QAEXXZ": {
-        "bytes": 759,
-        "relocations": 16
-      },
-      "?Slot06Case72@Character19@@QAEXXZ": {
-        "bytes": 573,
-        "relocations": 13
-      },
-      "?Slot06Case73@Character19@@QAEXXZ": {
-        "bytes": 2438,
-        "relocations": 53
-      },
-      "?Slot06Case74@Character19@@QAEXXZ": {
-        "bytes": 241,
-        "relocations": 4
       }
     },
-    "status": "semantic-workbench-only-not-exact"
+    "status": "semantic-workbench-only-not-exact",
+    "inlined_case_sources": {
+      "workbench/character19-slot06/Character19Slot06Case03.inc": "9732e974652353abc05a5a79c0f82b7fcb232865aff3ffcc9bd1282ece5cd98b",
+      "workbench/character19-slot06/Character19Slot06Case04.inc": "b4b2da3a05f66f6f557689c2594157491d713b200bacf1aa89f4b07fa908950e",
+      "workbench/character19-slot06/Character19Slot06Case05.inc": "0eb2219872bd7ff14b3a53347e9c7492aa88fed84a25c63e7bf76b49c9973d9c",
+      "workbench/character19-slot06/Character19Slot06Case08.inc": "5cc555cbf9d5dd0dbabe3fa59126eae27202474ee702e5687c9fec8b24ef584d",
+      "workbench/character19-slot06/Character19Slot06Case09.inc": "ad72171a92ed163a594d0fab5fbba8bb04b0e64e75530b97db5c6d4b60944a4d"
+    }
   },
   "dispatcher": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "2068c9f3f006cf002cc1634435dcd9e992454f42fc08de4e8806846cee796b83",
+    "source_sha256": "2dbae227db75c5491a05dc07ad09386e5d50346d344a597b19c338d253c02d11",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "7ebb8909d5c4471ba4a5910b663bb7f081d0ede2d0def00735993ff6488a61b7",
-    "symbol_bytes": 2168,
-    "relocations": 80,
-    "implemented_state_ids": 216,
-    "unimplemented_state_ids": 94,
-    "status": "partial-semantic-workbench-not-exact"
+    "object_sha256": "9825c7c5af7dea523431361323974942b921286f7313ff066a124c17fdc69d44",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 15485,
+    "relocation_count": 472,
+    "implemented_state_ids": 310,
+    "unimplemented_state_ids": 0,
+    "included_sources": {
+      "workbench/character19-slot06/Character19Slot06Case03.inc": "9732e974652353abc05a5a79c0f82b7fcb232865aff3ffcc9bd1282ece5cd98b",
+      "workbench/character19-slot06/Character19Slot06Case04.inc": "b4b2da3a05f66f6f557689c2594157491d713b200bacf1aa89f4b07fa908950e",
+      "workbench/character19-slot06/Character19Slot06Case05.inc": "0eb2219872bd7ff14b3a53347e9c7492aa88fed84a25c63e7bf76b49c9973d9c",
+      "workbench/character19-slot06/Character19Slot06Case08.inc": "5cc555cbf9d5dd0dbabe3fa59126eae27202474ee702e5687c9fec8b24ef584d",
+      "workbench/character19-slot06/Character19Slot06Case09.inc": "ad72171a92ed163a594d0fab5fbba8bb04b0e64e75530b97db5c6d4b60944a4d",
+      "workbench/character19-slot06/Character19Slot06Case70.inc": "49c3931fa6e30978960cb88b5b6db5a9f913890557537c96bd6b76e12d7abca5",
+      "workbench/character19-slot06/Character19Slot06Case71.inc": "54849bd5e889b71ba598487dfcd7b49f9928df79541789bfc8f23978f7674033",
+      "workbench/character19-slot06/Character19Slot06Case72.inc": "edddd4aa1a8f150d2f8e94bde261d88290066bffd5dbe1566dbc75078372f048",
+      "workbench/character19-slot06/Character19Slot06Case73.inc": "2c3851f72f6a44d52f8776f351c23e228b1a9ed9ea483d3bdbceb6d119d960b9",
+      "workbench/character19-slot06/Character19Slot06Case74.inc": "185a6c5d9d8c214e419d251fad2a028685a21329073ce27da68b78f037a2f9b2"
+    },
+    "status": "partial-semantic-workbench-not-exact",
+    "symbol_bytes": 15485
   },
   "compiler_flags": [
     "/Od",

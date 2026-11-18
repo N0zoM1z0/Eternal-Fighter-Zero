@@ -14,7 +14,7 @@ Character19Slot06.cpp is a partial natural-C++ reconstruction of the common prol
 
 The generated dispatcher maps all **310 native state IDs** through the complete **118-entry selector table**. The 193 IDs assigned to selector 0x75 use the actual shared native fallback; the other 117 selector cases have explicit natural-C++ switch bodies or dedicated state helpers. No valid state ID is silently mapped to a TODO branch. Out-of-range states and state 0 resolve to the same 0x75 fallback, as in the native unsigned range check.
 
-Character19Slot06Cases.cpp contains the remaining out-of-line natural-C++ state helpers. All five large 0x70-0x74 super/KO bodies are now included directly in Character19Slot06.cpp through their case .inc fragments, sharing the dispatcher's single EffectSpawn and frame-timing locals just like the native owner. The five large super/KO selectors are:
+Character19Slot06Cases.cpp contains the remaining out-of-line natural-C++ state helpers. The five large 0x70-0x74 super/KO bodies and the five legacy aerial state handlers (selectors 0x03-0x05, 0x08 and 0x09) are now included directly in Character19Slot06.cpp through their case .inc fragments. They share the dispatcher's frame-timing locals; the super/KO cases also share its EffectSpawn. The five large super/KO selectors are:
 
 | Selector | State ID | Native bytes | Candidate layout |
 |---|---:|---:|---|
@@ -24,7 +24,19 @@ Character19Slot06Cases.cpp contains the remaining out-of-line natural-C++ state 
 | 0x73 | 309 | 2,400 | inlined in Slot06 |
 | 0x74 | 310 | 177 | inlined in Slot06 |
 
-All five native bodies now reuse the dispatcher-owned EffectSpawn and FrameTiming, avoiding duplicate spawn objects and redundant pattern reads. The main dispatcher grew from 6,916 to 11,459 bytes after inlining all five bosses. These are semantic workbench reconstructions, not Exact claims.
+All ten inlined bodies now reuse the dispatcher-owned FrameTiming, avoiding duplicate pattern reads. The five super/KO bodies also reuse the dispatcher's EffectSpawn. The main dispatcher grew from 6,916 to 11,459 bytes after the super/KO cluster and to 15,485 bytes after inlining the five legacy aerial handlers. These are semantic workbench reconstructions, not Exact claims.
+
+The five legacy aerial handlers are substantial native case bodies, not trivial wrappers:
+
+| Selector | State ID | Native bytes | Candidate layout |
+|---|---:|---:|---|
+| 0x03 | 4 | 905 | inlined in Slot06 |
+| 0x04 | 5 | 912 | inlined in Slot06 |
+| 0x05 | 6 | 912 | inlined in Slot06 |
+| 0x08 | 9 | 767 | inlined in Slot06 |
+| 0x09 | 10 | 822 | inlined in Slot06 |
+
+Their 4,318 native bytes now use the common dispatcher-owned frame timing instead of five separate timing structs and metadata reads. The original input recovery, air-action limits, gravity, distinct launch velocities, and ground-crossing transitions remain in the case fragments. The separate Slot06TryAirAction and Slot06UpdateAirMovement helpers remain for the seven 0x0b-0x11 variants.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 
