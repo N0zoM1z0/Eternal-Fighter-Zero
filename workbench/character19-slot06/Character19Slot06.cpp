@@ -595,6 +595,26 @@ void Character19::Slot06()
             timing.frameDuration, timing.animationFrameCount);
         break;
 
+    case 249:
+        Slot06UpdateStunEffectRecovery(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
+    case 250:
+        Slot06UpdateImpactEffectPair(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
+    case 251:
+        Slot06UpdateComboImpactBurst(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
+    case 253:
+        Slot06UpdateDampedImpactFinish(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
     case 59:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
@@ -974,10 +994,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 249:
-    case 250:
-    case 251:
-    case 253:
     case 256:
     case 257:
     case 259:

@@ -446,6 +446,10 @@ public:
     void Slot06UpdateTrailDashFinish(unsigned short, unsigned short, unsigned short, short, unsigned char, unsigned short, unsigned short);
     void Slot06UpdateDashTrailCharge(unsigned short, unsigned short);
     void Slot06UpdateAirborneTrailDash(unsigned short, unsigned short);
+    void Slot06UpdateStunEffectRecovery(unsigned short, unsigned short, EffectSpawn *);
+    void Slot06UpdateImpactEffectPair(unsigned short, unsigned short, EffectSpawn *);
+    void Slot06UpdateComboImpactBurst(unsigned short, unsigned short, EffectSpawn *);
+    void Slot06UpdateDampedImpactFinish(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
     void Slot06Case04();

@@ -75,6 +75,10 @@ assert any(symbol.startswith("?Slot06UpdateOpponentStageCombo@Character19@@") fo
 assert any(symbol.startswith("?Slot06UpdateTrailDashFinish@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashTrailCharge@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneTrailDash@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateStunEffectRecovery@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateImpactEffectPair@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateComboImpactBurst@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateDampedImpactFinish@Character19@@") for symbol in helper_members)
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -103,7 +107,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 298
+assert len(implemented_states) == 302
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -1039,6 +1043,134 @@ airborne_trail_dash_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": airborne_trail_dash_helper,
         **helper_members[airborne_trail_dash_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+
+stun_effect_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateStunEffectRecovery@")
+)
+(workbench / "stun-effect-recovery-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x64",
+        "entry": "0x00673290",
+        "bytes": 320,
+        "state_id": 249,
+        "opening_fields": {"field00dc": 4, "field00de": 0xec, "velocityX": 0.0, "remainingHitCount": 1, "guardInputFrames": 0, "hitstunFrames": 60},
+        "context_effect": {"type": 0x28, "x_offset": "trunc(positionX)+facing*10", "y_offset": "trunc(positionY)-40", "group": 2, "layer": 1, "palette": 0x13},
+        "completion_state": 0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": stun_effect_helper,
+        **helper_members[stun_effect_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+impact_pair_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateImpactEffectPair@")
+)
+(workbench / "impact-effect-pair-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x65",
+        "entry": "0x006733D0",
+        "bytes": 465,
+        "state_id": 250,
+        "opening": "ResetFrame",
+        "frame4_meter_gain": 45,
+        "character_sound": 1,
+        "context_effect": {"type": 0x1f, "group": 0, "layer": 1},
+        "local_effect": {"type": 0x194, "x_offset": "trunc(positionX)-facing*80", "y_offset": "trunc(positionY)-40", "group": 2, "layer": 1},
+        "collision_clear_before_frame": 5,
+        "completion_state": 0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": impact_pair_helper,
+        **helper_members[impact_pair_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+combo_burst_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateComboImpactBurst@")
+)
+(workbench / "combo-impact-burst-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x66",
+        "entry": "0x006735A1",
+        "bytes": 708,
+        "state_id": 251,
+        "opening": "ResetFrame; StartTrail(3)",
+        "field0118_decay": {"field0120_zero": 500.0, "field0120_nonzero": 250.0},
+        "opening_context_effect": {"type": 0x21, "y_offset": -50, "group": 2, "layer": 1, "palette": 0xb},
+        "frame2_local_effect": 0x1ab,
+        "frame4_meter_gain": 45,
+        "frame4_context_effect": 0x1f,
+        "frame4_local_effect": 0x194,
+        "collision_clear_before_frame": 5,
+        "completion_state": 0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": combo_burst_helper,
+        **helper_members[combo_burst_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+damped_finish_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateDampedImpactFinish@")
+)
+(workbench / "damped-impact-finish-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x67",
+        "entry": "0x00673865",
+        "bytes": 434,
+        "state_id": 253,
+        "opening_velocity_scale": 0.3,
+        "vertical_acceleration": 0.01,
+        "positive_vertical_velocity_cap": 0.3,
+        "frame4_meter_gain": 45,
+        "character_sound": 1,
+        "frame4_local_effect": 0x194,
+        "collision_clear_before_frame": 5,
+        "completion_state": 9,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": damped_finish_helper,
+        **helper_members[damped_finish_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

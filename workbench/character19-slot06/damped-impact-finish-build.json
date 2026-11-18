@@ -1,0 +1,48 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_case": {
+    "selector": "0x67",
+    "entry": "0x00673865",
+    "bytes": 434,
+    "state_id": 253,
+    "opening_velocity_scale": 0.3,
+    "vertical_acceleration": 0.01,
+    "positive_vertical_velocity_cap": 0.3,
+    "frame4_meter_gain": 45,
+    "character_sound": 1,
+    "frame4_local_effect": 404,
+    "collision_clear_before_frame": 5,
+    "completion_state": 9
+  },
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+    "source_sha256": "b8702b5a97b341c859371158f38fdcbfe15261f09ca7a629f6a9e7355e504e24",
+    "object": "build/character19-slot06/Character19Slot06Cases.obj",
+    "object_sha256": "a4e5670fe60cf36783a8bac46a757f5eb3b53ecc2d89e0951e0830780868117d",
+    "symbol": "?Slot06UpdateDampedImpactFinish@Character19@@QAEXGGPAUEffectSpawn@@@Z",
+    "candidate_size": 435,
+    "relocations": 7,
+    "status": "semantic-workbench-only-not-exact"
+  },
+  "dispatcher": {
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "2434cadb65bf2f16114f48954c368b3a0c28653ffe4f55095fe778b00a1e2462",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "d1567d4d26c96b72828ac575608e05855d4036ef278e8f79f6ac53efd7a459ef",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 6675,
+    "relocation_count": 347,
+    "implemented_state_ids": 302,
+    "unimplemented_state_ids": 8,
+    "status": "partial-semantic-workbench-not-exact"
+  },
+  "compiler_flags": [
+    "/Od",
+    "/G6",
+    "/MT",
+    "/Gy",
+    "/W3",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/workbench/character19-slot06",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/src"
+  ]
+}

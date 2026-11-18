@@ -252,3 +252,20 @@ Both 307-byte states begin a spacing-3 trail every update, clear dashMomentumFla
 ## Trail dash charge and airborne follow-up: selector cases 0x60-0x63
 
 Case 0x60 starts a spacing-3 trail, clears dash momentum, holds horizontal velocity at zero through frame 2, then launches at 3.0 on frame 3 while decaying by 0.07 each update. It grants 35 meter and requests sound 0x14 on that launch frame. Case 0x63 uses the same trail start and pre-launch hold, launches at (1.5,-1.5) with gravity 0.032 on frame 3, integrates until the strict ground crossing positionY+velocityY>0, then moves to terminal frame 15; it grants 35 meter and sound 0x14 at frame 7 if still airborne. Cases 0x61/0x62 share the frame-0 (2.0,0.0) trail dash finisher with 0.03 decay, but preserve distinct meter timing and completion: 0x61 grants +5/sound 0x15 at frame 1, clears collision before frame 5 and completes in state 3; 0x62 grants +10/sound 0x14 at frame 2, clears before frame 3 and also completes in state 3.
+
+
+## Stun effect recovery: selector case 0x64
+
+The 320-byte state 249 configures field00dc=4, field00de=0xec, clears horizontal velocity and guard-input frames, sets remainingHitCount=1 and 60 hitstun frames, then emits context effect 0x28 at integer-truncated position plus a facing-dependent 10-pixel X offset and -40 Y (group 2, layer 1, palette 0x13). Every animation-frame transition clears attackCollisionResult; completion faces the opponent and returns to state 0.
+
+## Paired impact effects: selector case 0x65
+
+The 465-byte state 250 resets frame state on entry. At frame 4 it emits context effect 0x1f (group 0, layer 1, with facing-dependent orientation), grants 45 meter and character sound 1, then emits local effect 0x194 at X minus 80 facing and Y minus 40 (group 2, layer 1). Collision results clear before frame 5; completion returns to state 0.
+
+## Combo impact burst: selector case 0x66
+
+The 708-byte state 251 resets frame state and starts trail spacing 3 on entry. It reduces field0118 by 500 when field0120 is zero, otherwise 250, then emits context effect 0x21 at Y-50 (group 2, layer 1, palette 11), clears the frame kinematics through ResetFrame, explicitly clears horizontal deceleration, and marks one remaining hit. If the character is airborne it skips to frame 6. Frame 2 emits local effect 0x1ab at the current integer position. Frame 4 emits context effect 0x1f, grants 45 meter and character sound 1, and emits local effect 0x194 at X-80 facing/Y-40. Collision results clear before frame 5; completion returns to state 0.
+
+## Damped impact finish: selector case 0x67
+
+The 434-byte state 253 scales both velocities by 0.3 on entry, then adds 0.01 to vertical velocity each update and caps positive vertical velocity at 0.3. Frame 4 grants 45 meter, requests character sound 1 and emits local effect 0x194 at X-80 facing/Y-40. Collision results clear before frame 5; completion enters state 9.
