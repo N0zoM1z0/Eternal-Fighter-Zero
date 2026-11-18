@@ -15,10 +15,10 @@ void Character19::Slot07()
     double dVar3;
     unsigned short uVar5;
     unsigned short uVar6;
-  if ((*opponentSlot)->hitstunFrames < 1) {
-    i = (int)effectRead;
+  if ((*opponentSlot)->hitstunFrames > 0) return;
+  i = (int)effectRead;
     
-    while (i != effectWrite) {
+  while (i != effectWrite) {
       if (((effectActive[i] != 0) &&
           (effects[i].field0086 == 0)) &&
          ((hitstunFrames == 0 ||
@@ -1507,6 +1507,4 @@ void Character19::Slot07()
         i = 0;
       }
     }
-  }
-  return;
 }
