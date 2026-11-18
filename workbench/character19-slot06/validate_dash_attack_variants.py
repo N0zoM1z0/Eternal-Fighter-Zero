@@ -178,5 +178,5 @@ dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_
 assert "ResetLocalEffectSpawn(&spawn);" in dispatcher
 for state in (200, 201, 202, 203, 204):
     assert f"case {state}:" in dispatcher
-assert dispatcher.count("Slot06UpdateDashAttack(") == 5
+assert dispatcher.count("Slot06UpdateDashAttack(") == 6
 print({"variants": 5, "native_bytes": [467, 587, 434, 587, 491], "state_ids": [200,201,202,203,204], "verified_constants": len(constants)})

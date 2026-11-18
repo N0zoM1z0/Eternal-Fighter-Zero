@@ -196,3 +196,8 @@ The 312-byte state 178 reduces velocityX by 0.03 each update and clamps it to ze
 ## Dash-attack follow-through family: selector cases 0x4d-0x51
 
 Five handlers share the native dash-momentum decay and frame/cancel state machine, but retain their distinct timing and side effects. Cases 0x4d/0x4e/0x4f/0x50/0x51 use horizontal deceleration 0.06/0.03/0.06/0.06/0.03. The cancel gate requires down input, a nonzero animation frame and field015c<3; cases 0x4d/0x4e/0x51 require attackCollisionResult>1, 0x50 requires exactly 3, and 0x4f has no cancel branch. The cancel routes to states 4/5/6 according to inputX versus facing. Meter/sound events occur at frames 2 (+5, sound 0x15), 3 (+15, sound 0x14), 4 (+15, sound 0x14), 4 (+35, sound 0x23), and 1 (+5, sound 0x15), respectively. Cases 0x4e/0x4f/0x50 also emit local effects 0x1a4/0x1a5/0x1a8 at frames 1/3/6, using integer-truncated current coordinates, owner 1, facing flag, group 2 and layer 1. The 0x4e effect is emitted before the cancel check; the 0x50 effect is emitted only after the cancel check. Case 0x51 finishes in state 3 when inputY==1, otherwise state 0; the others finish in state 0. All normal completions face the opponent and reset pose.
+
+
+## Extended dash follow-through: selector case 0x52
+
+The 611-byte state 205 reuses the shared dash-attack state machine with 0.03 horizontal decay and the down-input/attackCollisionResult>1 cancel gate. It emits local effect 0x1a6 at frame 1, then grants 13 meter and requests sound 0x14 at frame 2. The effect uses current integer-truncated X/Y, owner 1, the facing flag, group 2 and layer 1. Normal completion chooses state 3 when inputY==1, otherwise state 0, then faces the opponent and resets pose.

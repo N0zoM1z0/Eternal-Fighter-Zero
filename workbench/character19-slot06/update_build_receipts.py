@@ -91,7 +91,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 280
+assert len(implemented_states) == 281
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -635,6 +635,7 @@ dash_attack_helper = next(
         "0x4F": {"entry": "0x00670C43", "bytes": 434, "state_id": 202, "deceleration": 0.06, "cancel": None, "effect_frame": 3, "effect_type": 0x1A5, "meter_frame": 4, "meter_gain": 15, "sound": 0x14},
         "0x50": {"entry": "0x00670DF5", "bytes": 587, "state_id": 203, "deceleration": 0.06, "cancel": "attackCollisionResult==3", "meter_frame": 4, "meter_gain": 35, "sound": 0x23, "effect_frame": 6, "effect_type": 0x1A8},
         "0x51": {"entry": "0x00671040", "bytes": 491, "state_id": 204, "deceleration": 0.03, "cancel": "attackCollisionResult>1", "meter_frame": 1, "meter_gain": 5, "sound": 0x15, "completion": "inputY==1 ? 3 : 0"},
+        "0x52": {"entry": "0x0067122B", "bytes": 611, "state_id": 205, "deceleration": 0.03, "cancel": "attackCollisionResult>1", "meter_frame": 2, "meter_gain": 13, "sound": 0x14, "effect_frame": 1, "effect_type": 0x1A6, "completion": "inputY==1 ? 3 : 0"},
     },
     "candidate": {
         "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
