@@ -148,52 +148,45 @@ void Character19::Slot06()
         break;
 
     case 11:
-        Slot06UpdateAirMovement(
-            timing.frameDuration, timing.animationFrameCount,
-            3, 0.0, -3.5,
-            2, 0);
+        {
+#include "Character19Slot06Case0B.inc"
+        }
         break;
 
     case 12:
-        Slot06UpdateAirMovement(
-            timing.frameDuration, timing.animationFrameCount,
-            3, 1.5, -2.5,
-            2, 0);
+        {
+#include "Character19Slot06Case0C.inc"
+        }
         break;
 
     case 13:
-        Slot06UpdateAirMovement(
-            timing.frameDuration, timing.animationFrameCount,
-            2, -1.5, -2.5,
-            1, 0);
+        {
+#include "Character19Slot06Case0D.inc"
+        }
         break;
 
     case 14:
-        Slot06UpdateAirMovement(
-            timing.frameDuration, timing.animationFrameCount,
-            3, 2.0, -0.5,
-            2, 1);
+        {
+#include "Character19Slot06Case0E.inc"
+        }
         break;
 
     case 15:
-        Slot06UpdateAirMovement(
-            timing.frameDuration, timing.animationFrameCount,
-            3, 1.5, -0.5,
-            2, 0);
+        {
+#include "Character19Slot06Case0F.inc"
+        }
         break;
 
     case 16:
-        Slot06UpdateAirMovement(
-            timing.frameDuration, timing.animationFrameCount,
-            2, -2.0, -0.5,
-            1, 1);
+        {
+#include "Character19Slot06Case10.inc"
+        }
         break;
 
     case 17:
-        Slot06UpdateAirMovement(
-            timing.frameDuration, timing.animationFrameCount,
-            2, -1.5, -0.5,
-            1, 0);
+        {
+#include "Character19Slot06Case11.inc"
+        }
         break;
 
     case 18:

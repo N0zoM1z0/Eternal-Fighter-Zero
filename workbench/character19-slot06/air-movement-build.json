@@ -17,48 +17,36 @@
     ],
     "shared_input_and_timer_logic": "validated identical in all seven native branches"
   },
-  "shared_helpers": {
-    "Slot06TryAirAction": {
-      "bytes": 616,
-      "relocations": 0
-    },
-    "Slot06UpdateAirMovement": {
-      "bytes": 420,
-      "relocations": 8
-    }
-  },
   "candidate": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "2dbae227db75c5491a05dc07ad09386e5d50346d344a597b19c338d253c02d11",
+    "source_sha256": "4fd3f950f623f96c6c520d974dc7340d88bfd0b79a181115a3d660bdd34da8e1",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "9825c7c5af7dea523431361323974942b921286f7313ff066a124c17fdc69d44",
-    "members": {
-      "?Slot06TryAirAction@Character19@@QAEHXZ": {
-        "candidate_size": 616,
-        "relocations": 0
-      },
-      "?Slot06UpdateAirMovement@Character19@@QAEXGGGNNGH@Z": {
-        "candidate_size": 420,
-        "relocations": 8
-      }
-    },
+    "object_sha256": "8dbee332726dac602c62ccd2b2e35e06eaefa44d89907851cfb4a6240da8efb4",
+    "members": {},
     "status": "semantic-workbench-only-not-exact",
     "inlined_case_sources": {
       "workbench/character19-slot06/Character19Slot06Case03.inc": "9732e974652353abc05a5a79c0f82b7fcb232865aff3ffcc9bd1282ece5cd98b",
       "workbench/character19-slot06/Character19Slot06Case04.inc": "b4b2da3a05f66f6f557689c2594157491d713b200bacf1aa89f4b07fa908950e",
       "workbench/character19-slot06/Character19Slot06Case05.inc": "0eb2219872bd7ff14b3a53347e9c7492aa88fed84a25c63e7bf76b49c9973d9c",
       "workbench/character19-slot06/Character19Slot06Case08.inc": "5cc555cbf9d5dd0dbabe3fa59126eae27202474ee702e5687c9fec8b24ef584d",
-      "workbench/character19-slot06/Character19Slot06Case09.inc": "ad72171a92ed163a594d0fab5fbba8bb04b0e64e75530b97db5c6d4b60944a4d"
+      "workbench/character19-slot06/Character19Slot06Case09.inc": "ad72171a92ed163a594d0fab5fbba8bb04b0e64e75530b97db5c6d4b60944a4d",
+      "workbench/character19-slot06/Character19Slot06Case0B.inc": "0966e344cd7ce35f287147c42c11393f9aa172eee3833a97ec5ea7a76bccb5f8",
+      "workbench/character19-slot06/Character19Slot06Case0C.inc": "c84848ca1a1a41b8de65d4b9d254379199512e136c2f0589071911f390eafd3b",
+      "workbench/character19-slot06/Character19Slot06Case0D.inc": "f9a71da5b11d94f675d6d442443f03998f39e057fab278be92417887501ab30b",
+      "workbench/character19-slot06/Character19Slot06Case0E.inc": "08bdeb8437f434fdc839563a3f3068e5cb2ff473ab19f52e2ce0e9e6985bcced",
+      "workbench/character19-slot06/Character19Slot06Case0F.inc": "cfa0e7d315cf3b776ecf770f1822357765b63631270e7fcc72ecf60e671fd45e",
+      "workbench/character19-slot06/Character19Slot06Case10.inc": "db9451ad1becf89c911abc16d0298978f61c8330bf60956efff11030f4447c41",
+      "workbench/character19-slot06/Character19Slot06Case11.inc": "8c037a203aaa1568aa1c316954ba8130d7e799b4fc2e725506150d9145e955de"
     }
   },
   "dispatcher": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "2dbae227db75c5491a05dc07ad09386e5d50346d344a597b19c338d253c02d11",
+    "source_sha256": "4fd3f950f623f96c6c520d974dc7340d88bfd0b79a181115a3d660bdd34da8e1",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "9825c7c5af7dea523431361323974942b921286f7313ff066a124c17fdc69d44",
+    "object_sha256": "8dbee332726dac602c62ccd2b2e35e06eaefa44d89907851cfb4a6240da8efb4",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 15485,
-    "relocation_count": 472,
+    "symbol_size": 21743,
+    "relocation_count": 509,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0,
     "included_sources": {
@@ -74,7 +62,7 @@
       "workbench/character19-slot06/Character19Slot06Case74.inc": "185a6c5d9d8c214e419d251fad2a028685a21329073ce27da68b78f037a2f9b2"
     },
     "status": "partial-semantic-workbench-not-exact",
-    "symbol_bytes": 15485
+    "symbol_bytes": 21743
   },
   "compiler_flags": [
     "/Od",
@@ -84,5 +72,12 @@
     "/W3",
     "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/workbench/character19-slot06",
     "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/src"
-  ]
+  ],
+  "native_shared_logic": {
+    "input_recovery_lines": 56,
+    "frame_and_landing_tail_lines": 17,
+    "identical_across_native_cases": 7,
+    "candidate_layout": "duplicated-inline-case-fragments",
+    "early_return": "direct return from Character19::Slot06"
+  }
 }

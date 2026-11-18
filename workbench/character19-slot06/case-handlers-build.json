@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "aa0a4b4ade79a4f34af2116178e4ea6f99ac3d2ccd08ddecebdd9147278faa24",
+  "source_sha256": "6ab1037f9841d7c150e484da5768ccbd8b6e72bb52e165a9ba2a92be9ada49da",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "9e43e94e63a74910b9a46c5955c8040182b315414501ce40a845871731829512",
+  "object_sha256": "07373342865255ed1e5ed0c5092fa6aa001aeee91779ec9da6a68573a6f3ed54",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -17,10 +17,6 @@
     "?Slot06OpponentWithinKnockbackRange@Character19@@QAEHXZ": {
       "candidate_size": 226,
       "relocations": 11
-    },
-    "?Slot06TryAirAction@Character19@@QAEHXZ": {
-      "candidate_size": 616,
-      "relocations": 0
     },
     "?Slot06UpdateAerialGroundSlam@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
       "candidate_size": 472,
@@ -37,10 +33,6 @@
     "?Slot06UpdateAirKnockback@Character19@@QAEXGGPAUSecondaryEffectSpawn@@@Z": {
       "candidate_size": 485,
       "relocations": 9
-    },
-    "?Slot06UpdateAirMovement@Character19@@QAEXGGGNNGH@Z": {
-      "candidate_size": 420,
-      "relocations": 8
     },
     "?Slot06UpdateAirborneBounce@Character19@@QAEXGGEGNNNNHH@Z": {
       "candidate_size": 551,

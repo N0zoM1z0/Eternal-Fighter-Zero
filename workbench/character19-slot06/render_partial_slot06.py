@@ -189,10 +189,9 @@ for case, config in [
     launch_frame, velocity_x, velocity_y, acceleration_frame, fixed_acceleration = config
     lines += labels(case)
     lines += [
-        "        Slot06UpdateAirMovement(",
-        "            timing.frameDuration, timing.animationFrameCount,",
-        f"            {launch_frame}, {velocity_x}, {velocity_y},",
-        f"            {acceleration_frame}, {fixed_acceleration});",
+        "        {",
+        f'#include "Character19Slot06Case{case:02X}.inc"',
+        "        }",
         "        break;",
         "",
     ]

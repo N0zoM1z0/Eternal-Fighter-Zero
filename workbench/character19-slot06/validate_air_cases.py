@@ -78,12 +78,28 @@ for case, config in expected.items():
             f"{acceleration_frame}, {1 if acceleration == 'fixed-0.01' else 0})") in renderer
     print(f"case 0x{case:02x}: {config}")
 
-assert "airActionCount < 2" in (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-assert "field015c < 3" in (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-assert "inputY == -1" in (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-assert "inputY == 1" in (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-assert "reinterpret_cast<unsigned char *>(&soundSlots[49])[0] = 0;" in (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-assert "reinterpret_cast<unsigned char *>(&soundSlots[49])[1] = 9;" in (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
+air_source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
+assert "Slot06TryAirAction" not in air_source
+assert "Slot06UpdateAirMovement" not in air_source
+for case in range(0x0b, 0x12):
+    body = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    assert "airActionCount < 2" in body
+    assert "field015c < 3" in body
+    assert "inputY == -1" in body
+    assert "inputY == 1" in body
+    assert "reinterpret_cast<unsigned char *>(&soundSlots[49])[0] = 0;" in body
+    assert "reinterpret_cast<unsigned char *>(&soundSlots[49])[1] = 9;" in body
+    assert "timing.frameDuration" in body
+    assert "timing.animationFrameCount" in body
+    assert "Slot06TryAirAction" not in body
+    assert "Slot06UpdateAirMovement" not in body
+    assert "if (0)" not in body and "if (1)" not in body
+    if case in (0x0e, 0x10):
+        assert "velocityY = velocityY + 0.01;" in body
+        assert "velocityY = velocityY + gravity;" not in body
+    else:
+        assert "velocityY = velocityY + gravity;" in body
+        assert "velocityY = velocityY + 0.01;" not in body
 
 # The five legacy aerial state handlers now live inside the common native
 # dispatcher and reuse its one PatternSequence frame-timing snapshot.

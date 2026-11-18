@@ -36,15 +36,13 @@ The five legacy aerial handlers are substantial native case bodies, not trivial 
 | 0x08 | 9 | 767 | inlined in Slot06 |
 | 0x09 | 10 | 822 | inlined in Slot06 |
 
-Their 4,318 native bytes now use the common dispatcher-owned frame timing instead of five separate timing structs and metadata reads. The original input recovery, air-action limits, gravity, distinct launch velocities, and ground-crossing transitions remain in the case fragments. The separate Slot06TryAirAction and Slot06UpdateAirMovement helpers remain for the seven 0x0b-0x11 variants.
+Their 4,318 native bytes now use the common dispatcher-owned frame timing instead of five separate timing structs and metadata reads. The original input recovery, air-action limits, gravity, distinct launch velocities, and ground-crossing transitions remain in the case fragments. The seven 0x0b-0x11 variants are now also inlined as separate case fragments. Each contains the shared input-recovery sequence and its per-case launch/acceleration constants directly in the common dispatcher; the former Slot06TryAirAction and Slot06UpdateAirMovement helpers have been removed. The two fixed-0.01 variants are source-specialized to that acceleration, while the other five read gravity directly; no constant-dead branch remains. Together these seven native cases own 6,517 bytes and no longer pay for two out-of-line helper prologues or calls.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 
 The seven 931-byte native branches (state IDs 14-20) share the same 56-line input/recovery state machine and 17-line frame/landing tail. The validator script checks those identical native sections against the target-attested Ghidra decompilation, then validates each branch's launch-frame and velocity/acceleration tuple.
 
-The natural-C++ implementation factors that common behavior into:
-- Slot06TryAirAction: 616-byte VC7.1 member, handling up/down/left/right air-action transitions and the original early-return behavior
-- Slot06UpdateAirMovement: 420-byte VC7.1 member, handling launch, gravity/fixed-0.01 acceleration, frame advance, and landing
+The natural-C++ implementation now reproduces that shared behavior directly in each of the seven case fragments, matching the native owner's duplicated case bodies. The former Slot06TryAirAction and Slot06UpdateAirMovement helper members have been removed; each case returns directly from Slot06 on the same input-transition paths as the native function. The launch and acceleration parameters are specialized per case, so the fixed-0.01 variants do not retain a dynamic helper branch.
 
 The seven dispatch variants preserve their distinct launch parameters:
 - 0x0b: frame 3, (vx=0, vy=-3.5), gravity acceleration
@@ -55,11 +53,11 @@ The seven dispatch variants preserve their distinct launch parameters:
 - 0x10: frame 2, (vx=-2, vy=-0.5), fixed 0.01 acceleration
 - 0x11: frame 2, (vx=-1.5, vy=-0.5), gravity acceleration
 
-The two one-byte native writes at Secondary offsets 0x2c8 and 0x2c9 are represented as byte accesses to the final soundSlots[49] storage. This preserves the observed layout without falsely assigning a semantic name to the bytes. This family is compiled and semantically mapped, not yet Exact; the full Slot06 owner remains incomplete. The partial Slot06 object and the helper object both compile with the pinned VC7.1 /Od /G6 /MT /Gy /W3 profile.
+The two one-byte native writes at Secondary offsets 0x2c8 and 0x2c9 are represented as byte accesses to the final soundSlots[49] storage. This preserves the observed layout without falsely assigning a semantic name to the bytes. This family is compiled and semantically mapped, not yet Exact; the full Slot06 owner remains incomplete. The 21,743-byte dispatcher candidate and the remaining helper object compile with the pinned VC7.1 /Od /G6 /MT /Gy /W3 profile.
 
 The local CharacterViews.h copy adds only non-virtual draft helper declarations; production headers and vtable layout are unchanged. No assembly, padding, or byte patching is used.
 
-Next: translate the remaining selector cases, replace the temporary helper calls with inline case bodies, and compare the complete 58,363-byte owner. Do not promote Slot06 as Exact while any valid state remains a TODO.
+Next: continue inlining the remaining large state helpers into the common dispatcher, then recover the original full stack frame and compare the complete 58,363-byte owner. All 310 state IDs are mapped, but out-of-line semantic helpers and substantial codegen differences remain; do not promote Slot06 as Exact.
 
 
 ## Short hop / landing correction: selector case 0x12

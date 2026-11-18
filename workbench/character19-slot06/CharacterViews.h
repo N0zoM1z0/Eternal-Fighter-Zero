@@ -409,8 +409,6 @@ public:
     virtual void RemoveLocalEffect(short);
     virtual void InitializeState();
     void UpdateLocomotionState();
-    int Slot06TryAirAction();
-    void Slot06UpdateAirMovement(unsigned short, unsigned short, unsigned short, double, double, unsigned short, int);
     void Slot06UpdateCounterMove(unsigned short, unsigned short, short, double, double, int);
     int Slot06OpponentWithinKnockbackRange();
     void Slot06UpdateKnockbackLanding(unsigned short, unsigned short, int);
