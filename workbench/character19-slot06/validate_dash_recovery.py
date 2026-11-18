@@ -5,6 +5,8 @@ import struct
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 lines = (ROOT / ".analysis/kanna-slot06/native.c").read_text().splitlines()
 starts = []
@@ -83,6 +85,6 @@ assert "velocityX = velocityX - 0.03;" in analog
 assert "dashMomentumFlag = 0;" in analog
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert "case 178:" in dispatcher
+assert_selector_case(dispatcher, 178)
 assert "Slot06UpdateDashRecovery(" in dispatcher
 print({"selector": "0x4C", "native_bytes": 312, "state_id": 178, "deceleration": actual, "cancel_states": [4,5,6]})

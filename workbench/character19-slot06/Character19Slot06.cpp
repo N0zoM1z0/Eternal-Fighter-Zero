@@ -1,8 +1,31 @@
 // Natural-C++ reconstruction of Character19::Slot06.
 // State IDs are grouped using the native 310-byte selector table.
 // All 310 native state IDs map through 118 selector cases; 193 use shared 0x75.
-// The 0x70-0x74 selectors retain their dedicated multi-phase super/KO handlers.
+// The 0x70-0x74 super/KO handlers share the native dispatcher frame.
 #include "CharacterViews.h"
+
+static const unsigned char Character19Slot06SelectorCases[0x136] = {
+    0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x75, 0x75, 0x0a, 0x0b, 0x0c, 0x0d,
+    0x0e, 0x0f, 0x10, 0x11, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75,
+    0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x12, 0x75,
+    0x75, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21,
+    0x22, 0x23, 0x24, 0x25, 0x26, 0x27, 0x28, 0x29, 0x2a, 0x2b, 0x2c, 0x2d, 0x2e, 0x75, 0x75, 0x75,
+    0x2f, 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x36,
+    0x37, 0x38, 0x39, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75,
+    0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75,
+    0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75,
+    0x75, 0x75, 0x75, 0x75, 0x75, 0x3a, 0x3b, 0x3c, 0x3d, 0x3e, 0x3f, 0x40, 0x41, 0x42, 0x75, 0x75,
+    0x75, 0x75, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49, 0x4a, 0x4b, 0x75, 0x75, 0x75, 0x75, 0x75,
+    0x75, 0x4c, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75,
+    0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x54, 0x55,
+    0x56, 0x57, 0x58, 0x59, 0x5a, 0x5b, 0x75, 0x75, 0x75, 0x75, 0x75, 0x5c, 0x5d, 0x75, 0x75, 0x75,
+    0x75, 0x75, 0x75, 0x75, 0x75, 0x5e, 0x5f, 0x60, 0x61, 0x62, 0x63, 0x75, 0x75, 0x75, 0x75, 0x75,
+    0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x64, 0x65, 0x66, 0x75, 0x67, 0x75, 0x75, 0x68,
+    0x69, 0x75, 0x6a, 0x75, 0x75, 0x75, 0x6b, 0x6c, 0x6d, 0x6e, 0x6f, 0x75, 0x75, 0x75, 0x75, 0x75,
+    0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75,
+    0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x75, 0x70, 0x75, 0x75, 0x71, 0x75,
+    0x75, 0x72, 0x75, 0x75, 0x73, 0x74,
+};
 
 void Character19::Slot06()
 {
@@ -15,6 +38,7 @@ void Character19::Slot06()
 
     EffectSpawn spawn;
     unsigned short randomValue;
+    unsigned char selectorCase;
     struct FrameTiming {
         __declspec(align(4)) unsigned short animationFrameCount;
         __declspec(align(4)) unsigned short frameDuration;
@@ -23,9 +47,13 @@ void Character19::Slot06()
     timing.frameDuration = patterns[field0008].frames[field000a].duration;
     timing.animationFrameCount = patterns[field0008].count;
     ResetLocalEffectSpawn(&spawn);
+    selectorCase = 0x75;
+    if ((field0008 != 0) && (field0008 <= 0x136)) {
+        selectorCase = Character19Slot06SelectorCases[field0008 - 1];
+    }
 
-    switch (field0008) {
-    case 1:
+    switch (selectorCase) {
+    case 0:
         dashMomentumFlag = 0;
         velocityX = 0.8;
         velocityY = 0.0;
@@ -38,7 +66,7 @@ void Character19::Slot06()
             }
         }
         break;
-    case 2:
+    case 1:
         dashMomentumFlag = 0;
         velocityX = -0.8;
         velocityY = 0.0;
@@ -51,7 +79,7 @@ void Character19::Slot06()
             }
         }
         break;
-    case 3:
+    case 2:
         velocityX = 0.0;
         velocityY = 0.0;
         dashMomentumFlag = 0;
@@ -65,7 +93,7 @@ void Character19::Slot06()
             }
         }
         break;
-    case 7:
+    case 6:
         velocityX = 0.0;
         velocityY = 0.0;
         dashMomentumFlag = 0;
@@ -82,7 +110,7 @@ void Character19::Slot06()
         }
         break;
 
-    case 8:
+    case 7:
         velocityX = 0.0;
         velocityY = 0.0;
         dashMomentumFlag = 0;
@@ -99,7 +127,7 @@ void Character19::Slot06()
         }
         break;
 
-    case 13:
+    case 10:
         velocityX = 0.0;
         velocityY = 0.0;
         dashMomentumFlag = 0;
@@ -119,56 +147,56 @@ void Character19::Slot06()
         }
         break;
 
-    case 14:
+    case 11:
         Slot06UpdateAirMovement(
             timing.frameDuration, timing.animationFrameCount,
             3, 0.0, -3.5,
             2, 0);
         break;
 
-    case 15:
+    case 12:
         Slot06UpdateAirMovement(
             timing.frameDuration, timing.animationFrameCount,
             3, 1.5, -2.5,
             2, 0);
         break;
 
-    case 16:
+    case 13:
         Slot06UpdateAirMovement(
             timing.frameDuration, timing.animationFrameCount,
             2, -1.5, -2.5,
             1, 0);
         break;
 
-    case 17:
+    case 14:
         Slot06UpdateAirMovement(
             timing.frameDuration, timing.animationFrameCount,
             3, 2.0, -0.5,
             2, 1);
         break;
 
-    case 18:
+    case 15:
         Slot06UpdateAirMovement(
             timing.frameDuration, timing.animationFrameCount,
             3, 1.5, -0.5,
             2, 0);
         break;
 
-    case 19:
+    case 16:
         Slot06UpdateAirMovement(
             timing.frameDuration, timing.animationFrameCount,
             2, -2.0, -0.5,
             1, 1);
         break;
 
-    case 20:
+    case 17:
         Slot06UpdateAirMovement(
             timing.frameDuration, timing.animationFrameCount,
             2, -1.5, -0.5,
             1, 0);
         break;
 
-    case 47:
+    case 18:
         if ((field000a == 0) && (field000c == 0)) {
             velocityX = 0.0;
             gravity = 0.035;
@@ -196,148 +224,148 @@ void Character19::Slot06()
         }
         break;
 
-    case 68:
+    case 37:
         Slot06UpdateKnockbackLanding(
             timing.frameDuration, timing.animationFrameCount,
             1);
         break;
 
-    case 69:
+    case 38:
         Slot06UpdateKnockbackLanding(
             timing.frameDuration, timing.animationFrameCount,
             0);
         break;
 
-    case 72:
+    case 41:
         Slot06UpdateGroundRecovery(
             timing.frameDuration, timing.animationFrameCount,
             0);
         break;
 
-    case 73:
+    case 42:
         Slot06UpdateGroundRecovery(
             timing.frameDuration, timing.animationFrameCount,
             0);
         break;
 
-    case 74:
+    case 43:
         Slot06UpdateGroundRecovery(
             timing.frameDuration, timing.animationFrameCount,
             1);
         break;
 
-    case 75:
+    case 44:
         Slot06UpdateGroundSkid(
             timing.frameDuration, timing.animationFrameCount,
             0);
         break;
 
-    case 76:
+    case 45:
         Slot06UpdateGroundSkid(
             timing.frameDuration, timing.animationFrameCount,
             0);
         break;
 
-    case 77:
+    case 46:
         Slot06UpdateGroundSkid(
             timing.frameDuration, timing.animationFrameCount,
             1);
         break;
 
-    case 81:
+    case 47:
         Slot06UpdateAirKnockback(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 82:
+    case 48:
         Slot06UpdateRepeatedAirKnockback(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 83:
+    case 49:
         Slot06UpdateAirborneRebound(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 84:
+    case 50:
         Slot06UpdateAirborneRebound(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 85:
+    case 51:
         Slot06UpdateAirborneKnockbackLanding(
             timing.frameDuration, timing.animationFrameCount, &spawn, 0x21,
             0.04, 0, 1);
         break;
 
-    case 86:
+    case 52:
         Slot06UpdateAirborneKnockbackLanding(
             timing.frameDuration, timing.animationFrameCount, &spawn, 0x21,
             0.06, 1, 0);
         break;
 
-    case 87:
+    case 53:
         Slot06UpdateLocalEffectRecovery(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 96:
+    case 54:
         Slot06UpdateFaceRecovery(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 97:
+    case 55:
         Slot06UpdateDefeatImpact(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 98:
+    case 56:
         Slot06UpdateDefeatImpact(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 99:
+    case 57:
         Slot06UpdateDefeatWait(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 150:
+    case 58:
         Slot06UpdateHorizontalRecovery(
             timing.frameDuration, timing.animationFrameCount,
             10, -1.5, 0);
         break;
 
-    case 151:
+    case 59:
         Slot06UpdateHorizontalRecovery(
             timing.frameDuration, timing.animationFrameCount,
             15, -1.8, 0);
         break;
 
-    case 152:
+    case 60:
         Slot06UpdateHorizontalRecovery(
             timing.frameDuration, timing.animationFrameCount,
             20, -2.3, 0);
         break;
 
-    case 153:
+    case 61:
         Slot06UpdateHorizontalRecovery(
             timing.frameDuration, timing.animationFrameCount,
             10, -1.5, 1);
         break;
 
-    case 154:
+    case 62:
         Slot06UpdateHorizontalRecovery(
             timing.frameDuration, timing.animationFrameCount,
             15, -1.8, 1);
         break;
 
-    case 155:
+    case 63:
         Slot06UpdateHorizontalRecovery(
             timing.frameDuration, timing.animationFrameCount,
             20, -2.3, 1);
         break;
 
-    case 70:
+    case 39:
         if (field0120 != 0) {
             field0118 = field0118 - 0.8;
         }
@@ -376,662 +404,470 @@ void Character19::Slot06()
         }
         break;
 
-    case 156:
+    case 64:
         Slot06UpdateAirborneKnockdown(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             -1.2, -2.6, 0.06,
             15, 0, 0, 0, 0);
         break;
 
-    case 157:
+    case 65:
         Slot06UpdateAirborneKnockdown(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             1.0, -2.3, 0.045,
             0, 8, 1, 1, 1);
         break;
 
-    case 158:
+    case 66:
         Slot06UpdateAirborneKnockdown(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             -1.0, -2.3, 0.045,
             0, 8, 1, 1, 1);
         break;
 
-    case 163:
+    case 67:
         Slot06UpdateAirborneBounce(
             timing.frameDuration, timing.animationFrameCount,
             3, 3, 2.0, -1.0,
             0.02, 0.04, 1, 0);
         break;
 
-    case 164:
+    case 68:
         Slot06UpdateAirborneBounce(
             timing.frameDuration, timing.animationFrameCount,
             2, 2, -2.0, -1.0,
             0.035, 0.0, 0, 13);
         break;
 
-    case 165:
+    case 69:
         Slot06UpdateAirborneFollowup(
             timing.frameDuration, timing.animationFrameCount,
             3, 2.0);
         break;
 
-    case 166:
+    case 70:
         Slot06UpdateAirborneFollowup(
             timing.frameDuration, timing.animationFrameCount,
             2, -2.0);
         break;
 
-    case 167:
+    case 71:
         Slot06UpdateDefeatImpactEffect(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 168:
+    case 72:
         Slot06UpdateKnockbackImpactFinish(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             0);
         break;
 
-    case 169:
+    case 73:
         Slot06UpdateKnockbackImpactFinish(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             3);
         break;
 
-    case 170:
+    case 74:
         Slot06UpdateAirborneHitstunRestore(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 171:
+    case 75:
         Slot06UpdateDefeatImpactVelocityRestore(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 178:
+    case 76:
         Slot06UpdateDashRecovery(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 200:
+    case 77:
         Slot06UpdateDashAttack(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             0.06, 1, 2, 5, 21,
             0, 0, 0, 0);
         break;
 
-    case 201:
+    case 78:
         Slot06UpdateDashAttack(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             0.03, 1, 3, 15, 20,
             1, 420, 1, 0);
         break;
 
-    case 202:
+    case 79:
         Slot06UpdateDashAttack(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             0.06, 0, 4, 15, 20,
             3, 421, 0, 0);
         break;
 
-    case 203:
+    case 80:
         Slot06UpdateDashAttack(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             0.06, 2, 4, 35, 35,
             6, 424, 0, 0);
         break;
 
-    case 204:
+    case 81:
         Slot06UpdateDashAttack(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             0.03, 1, 1, 5, 21,
             0, 0, 0, 1);
         break;
 
-    case 205:
+    case 82:
         Slot06UpdateDashAttack(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             0.03, 1, 2, 13, 20,
             1, 422, 0, 1);
         break;
 
-    case 206:
+    case 83:
         Slot06UpdateDashAttackSustain(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 207:
+    case 84:
         Slot06UpdateAirborneDashFollowup(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             2, 5, 21,
             0, 0, 3);
         break;
 
-    case 208:
+    case 85:
         Slot06UpdateAirborneDashFollowup(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             2, 13, 20,
             3, 423, 4);
         break;
 
-    case 209:
+    case 86:
         Slot06UpdateAirborneDashFollowup(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             1, 30, 20,
             1, 425, 3);
         break;
 
-    case 210:
+    case 87:
         Slot06UpdateAerialLaunchLanding(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 211:
+    case 88:
         Slot06UpdateDashFollowupCancel(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 212:
+    case 89:
         Slot06UpdateAerialGroundSlam(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 213:
+    case 90:
         Slot06UpdateAerialKickback(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 214:
+    case 91:
         Slot06UpdateGroundImpactRecovery(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 220:
+    case 92:
         Slot06UpdateOpponentCaptureImpact(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 221:
+    case 93:
         Slot06UpdateOpponentStageCombo(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 230:
+    case 94:
         Slot06UpdateTrailDashFinish(
             timing.frameDuration, timing.animationFrameCount,
             2, 5, 21,
             3, 0);
         break;
 
-    case 231:
+    case 95:
         Slot06UpdateTrailDashFinish(
             timing.frameDuration, timing.animationFrameCount,
             2, 10, 20,
             3, 0);
         break;
 
-    case 233:
+    case 97:
         Slot06UpdateTrailDashFinish(
             timing.frameDuration, timing.animationFrameCount,
             1, 5, 21,
             5, 3);
         break;
 
-    case 234:
+    case 98:
         Slot06UpdateTrailDashFinish(
             timing.frameDuration, timing.animationFrameCount,
             2, 10, 20,
             3, 3);
         break;
 
-    case 232:
+    case 96:
         Slot06UpdateDashTrailCharge(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 235:
+    case 99:
         Slot06UpdateAirborneTrailDash(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 249:
+    case 100:
         Slot06UpdateStunEffectRecovery(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 250:
+    case 101:
         Slot06UpdateImpactEffectPair(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 251:
+    case 102:
         Slot06UpdateComboImpactBurst(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 253:
+    case 103:
         Slot06UpdateDampedImpactFinish(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 256:
+    case 104:
         Slot06UpdateLoopingAerialBounce(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 257:
+    case 105:
         Slot06UpdateComboAerialBounce(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 259:
+    case 106:
         Slot06UpdateFinalFaceTransition(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
-    case 263:
+    case 107:
         Slot06UpdateLocalEffectFinish(
             timing.frameDuration, timing.animationFrameCount, 400);
         break;
 
-    case 264:
+    case 108:
         Slot06UpdateLocalEffectFinish(
             timing.frameDuration, timing.animationFrameCount, 401);
         break;
 
-    case 265:
+    case 109:
         Slot06UpdateLocalEffectFinish(
             timing.frameDuration, timing.animationFrameCount, 402);
         break;
 
-    case 266:
+    case 110:
         Slot06UpdateFinalEffectPair(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 267:
+    case 111:
         Slot06UpdateTrailEffectFinish(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
-    case 59:
+    case 28:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
             -2.0, 1,
             0.75, 0.032, 0);
         break;
 
-    case 60:
+    case 29:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
             -4.0, 1,
             0.75, 0.032, 0);
         break;
 
-    case 61:
+    case 30:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
             -6.0, 1,
             0.75, 0.032, 0);
         break;
 
-    case 62:
+    case 31:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
             0.0, 0,
             0.75, 0.032, 0);
         break;
 
-    case 63:
+    case 32:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
             0.0, 0,
             0.0, 0.032, 0);
         break;
 
-    case 64:
+    case 33:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
             -2.0, 1,
             0.75, 0.032, 1);
         break;
 
-    case 65:
+    case 34:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
             -4.0, 1,
             0.75, 0.032, 1);
         break;
 
-    case 66:
+    case 35:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
             0.0, 0,
             0.75, 0.032, 1);
         break;
 
-    case 67:
+    case 36:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
             0.0, 0,
             0.0, 0.032, 1);
         break;
 
-    case 71:
+    case 40:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
             0.0, 0,
             0.0, 0.072, 0);
         break;
 
-    case 50:
+    case 19:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
             10, -1.1, 10.0,
             0);
         break;
 
-    case 51:
+    case 20:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
             15, -1.5, 20.0,
             0);
         break;
 
-    case 52:
+    case 21:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
             20, -1.8, 30.0,
             0);
         break;
 
-    case 53:
+    case 22:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
             10, -1.1, 10.0,
             0);
         break;
 
-    case 54:
+    case 23:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
             15, -1.5, 20.0,
             0);
         break;
 
-    case 55:
+    case 24:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
             20, -1.8, 30.0,
             0);
         break;
 
-    case 56:
+    case 25:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
             10, -1.1, 10.0,
             1);
         break;
 
-    case 57:
+    case 26:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
             15, -1.5, 20.0,
             1);
         break;
 
-    case 58:
+    case 27:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
             20, -1.8, 30.0,
             1);
         break;
 
-    case 4:
+    case 3:
         Slot06Case03();
         break;
 
-    case 5:
+    case 4:
         Slot06Case04();
         break;
 
-    case 6:
+    case 5:
         Slot06Case05();
         break;
 
-    case 9:
+    case 8:
         Slot06Case08();
         break;
 
-    case 10:
+    case 9:
         Slot06Case09();
         break;
 
-    case 300:
+    case 112:
         {
 #include "Character19Slot06Case70.inc"
         }
         break;
 
-    case 303:
+    case 113:
         {
 #include "Character19Slot06Case71.inc"
         }
         break;
 
-    case 306:
+    case 114:
         {
 #include "Character19Slot06Case72.inc"
         }
         break;
 
-    case 309:
+    case 115:
         {
 #include "Character19Slot06Case73.inc"
         }
         break;
 
-    case 310:
+    case 116:
         {
 #include "Character19Slot06Case74.inc"
         }
         break;
 
-    case 11:
-    case 12:
-    case 21:
-    case 22:
-    case 23:
-    case 24:
-    case 25:
-    case 26:
-    case 27:
-    case 28:
-    case 29:
-    case 30:
-    case 31:
-    case 32:
-    case 33:
-    case 34:
-    case 35:
-    case 36:
-    case 37:
-    case 38:
-    case 39:
-    case 40:
-    case 41:
-    case 42:
-    case 43:
-    case 44:
-    case 45:
-    case 46:
-    case 48:
-    case 49:
-    case 78:
-    case 79:
-    case 80:
-    case 88:
-    case 89:
-    case 90:
-    case 91:
-    case 92:
-    case 93:
-    case 94:
-    case 95:
-    case 100:
-    case 101:
-    case 102:
-    case 103:
-    case 104:
-    case 105:
-    case 106:
-    case 107:
-    case 108:
-    case 109:
-    case 110:
-    case 111:
-    case 112:
-    case 113:
-    case 114:
-    case 115:
-    case 116:
     case 117:
-    case 118:
-    case 119:
-    case 120:
-    case 121:
-    case 122:
-    case 123:
-    case 124:
-    case 125:
-    case 126:
-    case 127:
-    case 128:
-    case 129:
-    case 130:
-    case 131:
-    case 132:
-    case 133:
-    case 134:
-    case 135:
-    case 136:
-    case 137:
-    case 138:
-    case 139:
-    case 140:
-    case 141:
-    case 142:
-    case 143:
-    case 144:
-    case 145:
-    case 146:
-    case 147:
-    case 148:
-    case 149:
-    case 159:
-    case 160:
-    case 161:
-    case 162:
-    case 172:
-    case 173:
-    case 174:
-    case 175:
-    case 176:
-    case 177:
-    case 179:
-    case 180:
-    case 181:
-    case 182:
-    case 183:
-    case 184:
-    case 185:
-    case 186:
-    case 187:
-    case 188:
-    case 189:
-    case 190:
-    case 191:
-    case 192:
-    case 193:
-    case 194:
-    case 195:
-    case 196:
-    case 197:
-    case 198:
-    case 199:
-    case 215:
-    case 216:
-    case 217:
-    case 218:
-    case 219:
-    case 222:
-    case 223:
-    case 224:
-    case 225:
-    case 226:
-    case 227:
-    case 228:
-    case 229:
-    case 236:
-    case 237:
-    case 238:
-    case 239:
-    case 240:
-    case 241:
-    case 242:
-    case 243:
-    case 244:
-    case 245:
-    case 246:
-    case 247:
-    case 248:
-    case 252:
-    case 254:
-    case 255:
-    case 258:
-    case 260:
-    case 261:
-    case 262:
-    case 268:
-    case 269:
-    case 270:
-    case 271:
-    case 272:
-    case 273:
-    case 274:
-    case 275:
-    case 276:
-    case 277:
-    case 278:
-    case 279:
-    case 280:
-    case 281:
-    case 282:
-    case 283:
-    case 284:
-    case 285:
-    case 286:
-    case 287:
-    case 288:
-    case 289:
-    case 290:
-    case 291:
-    case 292:
-    case 293:
-    case 294:
-    case 295:
-    case 296:
-    case 297:
-    case 298:
-    case 299:
-    case 301:
-    case 302:
-    case 304:
-    case 305:
-    case 307:
-    case 308:
         dashMomentumFlag = 0;
         velocityX = 0.0;
         velocityY = 0.0;
@@ -1043,9 +879,6 @@ void Character19::Slot06()
                 field000a = 0;
             }
         }
-        break;
-
-        // This valid state belongs to an untranslated native case group.
         break;
 
     default:

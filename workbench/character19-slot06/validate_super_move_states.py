@@ -297,19 +297,9 @@ reset = (ROOT / "src/SecondaryState.cpp").read_text()
 assert "void Secondary::ResetFrame()" in reset
 
 renderer = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-for state, name in (
-    (300, "Slot06Case70"),
-    (303, "Slot06Case71"),
-    (306, "Slot06Case72"),
-    (309, "Slot06Case73"),
-    (310, "Slot06Case74"),
-):
-    assert f"case {state}:" in renderer
-    if state in (300, 303, 306, 309, 310):
-        case = {300: 0x70, 303: 0x71, 306: 0x72, 309: 0x73, 310: 0x74}[state]
-        assert f'#include "Character19Slot06Case{case:02X}.inc"' in renderer
-    else:
-        assert f"{name}();" in renderer
+for selector_case in (0x70, 0x71, 0x72, 0x73, 0x74):
+    assert f"case {selector_case}:" in renderer
+    assert f'#include "Character19Slot06Case{selector_case:02X}.inc"' in renderer
 
 # The native RandomRange helper consumes the same CRT/replay word and scales by 32768.
 random_disasm = subprocess.run(

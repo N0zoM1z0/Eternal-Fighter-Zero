@@ -6,6 +6,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 lines = (ROOT / ".analysis/kanna-slot06/native.c").read_text().splitlines()
 starts = []
@@ -205,8 +207,10 @@ shake = (ROOT / "src/SecondaryEffectControls.cpp").read_text()
 assert "void Secondary::SetVerticalShake(int magnitude, int hold)" in shake
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert "case 220:" in dispatcher and "Slot06UpdateOpponentCaptureImpact(" in dispatcher
-assert "case 221:" in dispatcher and "Slot06UpdateOpponentStageCombo(" in dispatcher
+assert_selector_case(dispatcher, 220)
+assert "Slot06UpdateOpponentCaptureImpact(" in dispatcher
+assert_selector_case(dispatcher, 221)
+assert "Slot06UpdateOpponentStageCombo(" in dispatcher
 print({
     "variants": 2,
     "native_bytes": [480, 594],

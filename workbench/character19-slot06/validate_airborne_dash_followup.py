@@ -5,6 +5,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 lines = (ROOT / ".analysis/kanna-slot06/native.c").read_text().splitlines()
 starts = []
@@ -155,6 +157,6 @@ assert "(0x56, (1, 30, 0x14, 1, 0x1a9, 3))" in renderer
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 for state in (207, 208, 209):
-    assert f"case {state}:" in dispatcher
+    assert_selector_case(dispatcher, state)
 assert dispatcher.count("Slot06UpdateAirborneDashFollowup(") == 3
 print({"variants": 3, "state_ids": [207,208,209], "effect_types": [0x1A7,0x1A9]})

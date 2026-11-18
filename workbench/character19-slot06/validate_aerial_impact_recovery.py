@@ -5,6 +5,8 @@ import struct
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 lines = (ROOT / ".analysis/kanna-slot06/native.c").read_text().splitlines()
 starts = []
@@ -229,7 +231,7 @@ for state, helper in (
     (213, "Slot06UpdateAerialKickback"),
     (214, "Slot06UpdateGroundImpactRecovery"),
 ):
-    assert f"case {state}:" in dispatcher
+    assert_selector_case(dispatcher, state)
     assert helper in dispatcher
 
 print({

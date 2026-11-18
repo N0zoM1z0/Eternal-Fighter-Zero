@@ -6,6 +6,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 lines = (ROOT / ".analysis/kanna-slot06/native.c").read_text().splitlines()
 starts = []
@@ -209,7 +211,7 @@ for state, name in (
     (264, "Slot06UpdateLocalEffectFinish"),
     (265, "Slot06UpdateLocalEffectFinish"),
 ):
-    assert f"case {state}:" in dispatcher
+    assert_selector_case(dispatcher, state)
     assert name in dispatcher
 
 print({

@@ -4,6 +4,8 @@ import re
 import subprocess
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 lines = (ROOT / ".analysis/kanna-slot06/native.c").read_text().splitlines()
 starts = []
@@ -97,6 +99,6 @@ assert "gravity" not in helper
 assert "positionY" not in helper
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert "case 211:" in dispatcher
+assert_selector_case(dispatcher, 211)
 assert "Slot06UpdateDashFollowupCancel(" in dispatcher
 print({"selector": "0x58", "native_bytes": 387, "state_id": 211, "meter_gain": 30, "cancel_states": [4,5,6], "gravity_integration": False})

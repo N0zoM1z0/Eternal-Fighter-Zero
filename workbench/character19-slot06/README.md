@@ -10,9 +10,9 @@ The state selector maps 310 animation-state IDs onto 118 shared case handlers. 1
 
 ## Current natural-C++ work
 
-Character19Slot06.cpp is a partial natural-C++ reconstruction of the common prologue and switch dispatch. It has the original hitstop/opponent-hitstun early exits, constructs and resets the local EffectSpawn, snapshots PatternSequence frame timing, and groups the real 310 state IDs according to the recovered selector table.
+Character19Slot06.cpp is a partial natural-C++ reconstruction of the common prologue and switch dispatch. It has the original hitstop/opponent-hitstun early exits, constructs and resets the local EffectSpawn, snapshots PatternSequence frame timing, and now reproduces the native two-level dispatch shape: a 310-byte state-to-selector array followed by a dense 118-case switch. validate_selector_dispatch.py verifies both the 310 selector bytes at 0x00675B43 and the 118 four-byte case targets at 0x0067596B byte-for-byte against the target executable and case-map.csv.
 
-The generated dispatcher maps all **310 native state IDs** through the complete **118-entry selector table**. The 193 IDs assigned to selector 0x75 use the actual shared native fallback; the other 117 selector cases have explicit natural-C++ switch bodies or dedicated state helpers. No valid state ID is silently mapped to a TODO branch.
+The generated dispatcher maps all **310 native state IDs** through the complete **118-entry selector table**. The 193 IDs assigned to selector 0x75 use the actual shared native fallback; the other 117 selector cases have explicit natural-C++ switch bodies or dedicated state helpers. No valid state ID is silently mapped to a TODO branch. Out-of-range states and state 0 resolve to the same 0x75 fallback, as in the native unsigned range check.
 
 Character19Slot06Cases.cpp contains the remaining out-of-line natural-C++ state helpers. All five large 0x70-0x74 super/KO bodies are now included directly in Character19Slot06.cpp through their case .inc fragments, sharing the dispatcher's single EffectSpawn and frame-timing locals just like the native owner. The five large super/KO selectors are:
 

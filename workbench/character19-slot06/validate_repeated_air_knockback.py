@@ -4,6 +4,8 @@ import struct
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 native = (ROOT / ".analysis/kanna-slot06/native.c").read_text()
 match = re.search(r"^\s*case 0x30:(.*?)(?=^\s*case )", native, re.M | re.S)
@@ -71,7 +73,7 @@ for expression in (
     assert expression in source, expression
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert "case 82:" in dispatcher
+assert_selector_case(dispatcher, 82)
 assert "Slot06UpdateRepeatedAirKnockback(" in dispatcher
 
 analog = (ROOT / "src/Character23State.cpp").read_text()

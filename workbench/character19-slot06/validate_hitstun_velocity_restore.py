@@ -6,6 +6,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 TARGET = ROOT / "resources/EFZ.exe"
 NATIVE = (ROOT / ".analysis/kanna-slot06/native.c").read_text()
@@ -239,7 +241,7 @@ for state, helper in (
     (170, "Slot06UpdateAirborneHitstunRestore"),
     (171, "Slot06UpdateDefeatImpactVelocityRestore"),
 ):
-    assert f"case {state}:" in dispatcher
+    assert_selector_case(dispatcher, state)
     assert helper in dispatcher
 
 print({

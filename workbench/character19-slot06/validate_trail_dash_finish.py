@@ -6,6 +6,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 lines = (ROOT / ".analysis/kanna-slot06/native.c").read_text().splitlines()
 starts = []
@@ -134,8 +136,8 @@ assert "(0x5f, (2, 10, 0x14, 3, 0))" in renderer
 assert "(0x61, (1, 5, 0x15, 5, 3))" in renderer
 assert "(0x62, (2, 10, 0x14, 3, 3))" in renderer
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert "case 230:" in dispatcher and "Slot06UpdateTrailDashFinish(" in dispatcher
-assert "case 231:" in dispatcher and "Slot06UpdateTrailDashFinish(" in dispatcher
-assert "case 233:" in dispatcher and "Slot06UpdateTrailDashFinish(" in dispatcher
-assert "case 234:" in dispatcher and "Slot06UpdateTrailDashFinish(" in dispatcher
+assert_selector_case(dispatcher, 230) and "Slot06UpdateTrailDashFinish(" in dispatcher
+assert_selector_case(dispatcher, 231) and "Slot06UpdateTrailDashFinish(" in dispatcher
+assert_selector_case(dispatcher, 233) and "Slot06UpdateTrailDashFinish(" in dispatcher
+assert_selector_case(dispatcher, 234) and "Slot06UpdateTrailDashFinish(" in dispatcher
 print({"variants": 4, "native_bytes": [307,307,307,307], "state_ids": [230,231,233,234], "trail_spacing": 3, "meter": [5,10,5,10]})

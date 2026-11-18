@@ -6,6 +6,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 lines = (ROOT / ".analysis/kanna-slot06/native.c").read_text().splitlines()
 starts = []
@@ -119,6 +121,6 @@ for expression in (
     assert expression in helper, expression
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert "case 210:" in dispatcher
+assert_selector_case(dispatcher, 210)
 assert "Slot06UpdateAerialLaunchLanding(" in dispatcher
 print({"selector": "0x57", "native_bytes": 454, "state_id": 210, "launch": [1.4,-1.5], "gravity": 0.08, "meter": 15})

@@ -6,6 +6,8 @@ import struct
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 native = (ROOT / ".analysis/kanna-slot06/native.c").read_text()
 lines = native.splitlines()
@@ -126,5 +128,6 @@ for expression in (
     assert expression in source, expression
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert "case 165:" in dispatcher and "case 166:" in dispatcher
+assert_selector_case(dispatcher, 165)
+assert_selector_case(dispatcher, 166)
 print({"native_variants": 2, "normalized_bodies_equal": True, "verified_constants": len(constants), "state_ids": [165,166]})

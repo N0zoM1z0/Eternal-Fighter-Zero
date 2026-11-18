@@ -5,6 +5,8 @@ import struct
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 native = (ROOT / ".analysis/kanna-slot06/native.c").read_text()
 lines = native.splitlines()
@@ -132,9 +134,11 @@ actual = struct.unpack("<d", target_bytes(pe, 0x007872c0, 8))[0]
 assert actual == 5.0, actual
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert "case 167:" in dispatcher
+assert_selector_case(dispatcher, 167)
 assert "Slot06UpdateDefeatImpactEffect(" in dispatcher
-assert "case 167:" not in dispatcher[dispatcher.index("case 168:"):]
+assert dispatcher.index(f"case {selector_case_for_state(167)}:") < dispatcher.index(
+    f"case {selector_case_for_state(168)}:"
+)
 print({
     "selector": "0x47",
     "native_bytes": 488,

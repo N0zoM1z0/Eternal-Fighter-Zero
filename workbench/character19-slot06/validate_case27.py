@@ -71,7 +71,7 @@ for value, expected in [
 ]:
     assert int(value) == expected
 
-assert source.index("timing.animationFrameCount = patterns[field0008].count;") < source.index("ResetLocalEffectSpawn(&spawn);") < source.index("switch (field0008)")
+assert source.index("timing.animationFrameCount = patterns[field0008].count;") < source.index("ResetLocalEffectSpawn(&spawn);") < source.index("switch (selectorCase)")
 spawn_reset = (ROOT / "src/SecondarySpawn.cpp").read_text()
 for expression in (
     "spawn->owner = 0;",

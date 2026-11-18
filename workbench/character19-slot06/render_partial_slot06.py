@@ -18,12 +18,32 @@ mapped = {
 }
 unimplemented = sorted(set(range(1, 0x137)) - mapped)
 
+# The native owner performs two-level dispatch: a 310-byte state->selector
+# table followed by a 118-entry switch. Rebuild the exact byte table from the
+# reviewed native case map rather than expanding 310 state labels in C++.
+selector_by_state = [None] * 0x136
+for selector_case, state_ids in states_by_case.items():
+    for state_id in state_ids:
+        assert 1 <= state_id <= 0x136
+        assert selector_by_state[state_id - 1] is None
+        selector_by_state[state_id - 1] = selector_case
+assert all(value is not None for value in selector_by_state)
+assert not unimplemented
+
 lines = [
     "// Natural-C++ reconstruction of Character19::Slot06.",
     "// State IDs are grouped using the native 310-byte selector table.",
     "// All 310 native state IDs map through 118 selector cases; 193 use shared 0x75.",
-    "// The 0x70-0x74 selectors retain their dedicated multi-phase super/KO handlers.",
+    "// The 0x70-0x74 super/KO handlers share the native dispatcher frame.",
     '#include "CharacterViews.h"',
+    "",
+    "static const unsigned char Character19Slot06SelectorCases[0x136] = {",
+]
+for offset in range(0, len(selector_by_state), 16):
+    values = selector_by_state[offset:offset + 16]
+    lines.append("    " + ", ".join(f"0x{value:02x}" for value in values) + ",")
+lines += [
+    "};",
     "",
     "void Character19::Slot06()",
     "{",
@@ -36,6 +56,7 @@ lines = [
     "",
     "    EffectSpawn spawn;",
     "    unsigned short randomValue;",
+    "    unsigned char selectorCase;",
     "    struct FrameTiming {",
     "        __declspec(align(4)) unsigned short animationFrameCount;",
     "        __declspec(align(4)) unsigned short frameDuration;",
@@ -44,12 +65,16 @@ lines = [
     "    timing.frameDuration = patterns[field0008].frames[field000a].duration;",
     "    timing.animationFrameCount = patterns[field0008].count;",
     "    ResetLocalEffectSpawn(&spawn);",
+    "    selectorCase = 0x75;",
+    "    if ((field0008 != 0) && (field0008 <= 0x136)) {",
+    "        selectorCase = Character19Slot06SelectorCases[field0008 - 1];",
+    "    }",
     "",
-    "    switch (field0008) {",
+    "    switch (selectorCase) {",
 ]
 
 def labels(case):
-    return [f"    case {state}:" for state in states_by_case[case]]
+    return [f"    case {case}:"]
 
 def advance_frame():
     return [
@@ -744,12 +769,7 @@ lines += [
 ]
 lines += advance_frame()
 
-lines += [""]
-for state in unimplemented:
-    lines.append(f"    case {state}:")
 lines += [
-    "        // This valid state belongs to an untranslated native case group.",
-    "        break;",
     "",
     "    default:",
     "        // Native out-of-range states use the same 0x75 fallback.",

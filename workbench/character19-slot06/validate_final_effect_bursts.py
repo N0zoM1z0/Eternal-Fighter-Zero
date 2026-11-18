@@ -6,6 +6,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from selector_support import assert_selector_case, selector_case_for_state
+
 ROOT = Path(__file__).resolve().parents[2]
 lines = (ROOT / ".analysis/kanna-slot06/native.c").read_text().splitlines()
 starts = []
@@ -173,8 +175,8 @@ assert trail_helper.count("spawn->owner = 1;") == 1
 assert trail_helper.index("contextOwner->EmitEffect(spawn);") < trail_helper.index("spawn->owner = 1;")
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert "case 266:" in dispatcher and "Slot06UpdateFinalEffectPair(" in dispatcher
-assert "case 267:" in dispatcher and "Slot06UpdateTrailEffectFinish(" in dispatcher
+assert_selector_case(dispatcher, 266) and "Slot06UpdateFinalEffectPair(" in dispatcher
+assert_selector_case(dispatcher, 267) and "Slot06UpdateTrailEffectFinish(" in dispatcher
 
 disasm = subprocess.run(
     [
