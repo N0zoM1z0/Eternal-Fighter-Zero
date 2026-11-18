@@ -414,17 +414,12 @@ for case, config in [
         "",
     ]
 
-for case, config in [
-    (0x43, (3, 3, 2.0, -1.0, 0.02, 0.04, 1, 0)),
-    (0x44, (2, 2, -2.0, -1.0, 0.035, 0.0, 0, 13)),
-]:
-    trail_spacing, launch_frame, launch_vx, launch_vy, launch_gravity, brake, loop_seven, landing_state = config
+for case in (0x43, 0x44):
     lines += labels(case)
     lines += [
-        "        Slot06UpdateAirborneBounce(",
-        "            timing.frameDuration, timing.animationFrameCount,",
-        f"            {trail_spacing}, {launch_frame}, {launch_vx}, {launch_vy},",
-        f"            {launch_gravity}, {brake}, {loop_seven}, {landing_state});",
+        "        {",
+        f'#include "Character19Slot06Case{case:02X}.inc"',
+        "        }",
         "        break;",
         "",
     ]

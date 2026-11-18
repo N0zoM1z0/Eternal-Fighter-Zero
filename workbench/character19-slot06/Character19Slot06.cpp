@@ -422,17 +422,15 @@ void Character19::Slot06()
         break;
 
     case 67:
-        Slot06UpdateAirborneBounce(
-            timing.frameDuration, timing.animationFrameCount,
-            3, 3, 2.0, -1.0,
-            0.02, 0.04, 1, 0);
+        {
+#include "Character19Slot06Case43.inc"
+        }
         break;
 
     case 68:
-        Slot06UpdateAirborneBounce(
-            timing.frameDuration, timing.animationFrameCount,
-            2, 2, -2.0, -1.0,
-            0.035, 0.0, 0, 13);
+        {
+#include "Character19Slot06Case44.inc"
+        }
         break;
 
     case 69:

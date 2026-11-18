@@ -592,73 +592,7 @@ void Character19::Slot06UpdateAirborneKnockdown(
 
 
 // Trail-assisted airborne bounce/recovery for native selectors 0x43 and 0x44.
-void Character19::Slot06UpdateAirborneBounce(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    unsigned char trailSpacing,
-    unsigned short launchFrame,
-    double launchVelocityX,
-    double launchVelocityY,
-    double launchGravity,
-    double lateHorizontalDeceleration,
-    int loopAfterFrameSeven,
-    int landingState)
-{
-    if ((field000a == 0) && (field000c == 0)) {
-        StartTrail(trailSpacing);
-        ResetFrame();
-    }
 
-    if ((field000a == launchFrame) && (field000c == 0)) {
-        velocityX = launchVelocityX;
-        velocityY = launchVelocityY;
-        gravity = launchGravity;
-        pendingCharacterSoundSlot = 0;
-    }
-
-    int continueAirborne = (positionY >= 0.0);
-    if (!continueAirborne) {
-        velocityY = velocityY + gravity;
-        continueAirborne = (positionY + velocityY <= 0.0);
-    }
-
-    if (continueAirborne) {
-        if ((field000a > 6) && (lateHorizontalDeceleration != 0.0)) {
-            velocityX = velocityX - lateHorizontalDeceleration;
-            if (velocityX < 0.0) {
-                velocityX = 0.0;
-            }
-        }
-
-        field000c = field000c + 1;
-        if (frameDuration <= field000c) {
-            field000c = 0;
-            field000a = field000a + 1;
-            if (loopAfterFrameSeven && (field000a == 7)) {
-                field000a = field000a - 2;
-            }
-            if (frameCount <= field000a) {
-                if (landingState == 0) {
-                    field0008 = 0;
-                    ResetPose();
-                } else {
-                    field000a = field000a - 1;
-                }
-            }
-        }
-    } else {
-        positionY = 0.0;
-        if (landingState == 0) {
-            velocityY = 0.0;
-            field000c = 0;
-            field000a = 7;
-        } else {
-            ResetPose();
-            ResetFrame();
-            field0008 = (unsigned short)landingState;
-        }
-    }
-}
 
 
 // Long airborne follow-up/counter state machine shared by selectors 0x45/0x46.

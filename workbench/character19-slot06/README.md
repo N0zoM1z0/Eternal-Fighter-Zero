@@ -47,6 +47,7 @@ The ten knockback-fall variants (native bodies from 427 to 561 bytes) are now in
 The paired 0x31/0x32 airborne rebound states (581 native bytes each) are now inline too. Their one-shot local effect, field3144 gate, meter/sound burst, bounce impulse, slide acceleration, and neutral return are duplicated in the two native owner cases.
 The 0x4B defeat-impact velocity restore (584 native bytes) is now inline. It snapshots horizontal/vertical velocity into the native centi-unit fields, applies the tint and 90-frame hitstun, emits the two ordered context effects, then restores velocity and gravity on animation completion.
 The 0x30 repeated airborne knockback loop (546 native bytes) is now inline too. It preserves the eight-hit repetition gate, per-cycle knockback velocity reload, gravity phase, and knockdown-dependent landing state.
+The paired 0x43/0x44 trail-assisted airborne bounce states are also inline (412 and 317 native bytes). Their launch constants, frame-7 loop, late horizontal braking, and distinct neutral versus 0x0D landing paths are specialized directly in their own cases.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 

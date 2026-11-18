@@ -54,7 +54,6 @@ assert any(symbol.startswith("?Slot06UpdateDefeatImpact@Character19@@") for symb
 assert "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateHorizontalRecovery@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneKnockdown@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateAirborneBounce@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDefeatImpactEffect@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateKnockbackImpactFinish@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneHitstunRestore@Character19@@") for symbol in helper_members)
@@ -135,7 +134,7 @@ dispatcher_record = {
         f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
             (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
         ).hexdigest()
-        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x30, 0x31, 0x32, 0x4b, 0x54, 0x55, 0x56, 0x66, 0x69, 0x70, 0x71, 0x72, 0x73, 0x74)
+        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x30, 0x31, 0x32, 0x43, 0x44, 0x4b, 0x54, 0x55, 0x56, 0x66, 0x69, 0x70, 0x71, 0x72, 0x73, 0x74)
     },
     "status": "partial-semantic-workbench-not-exact",
 }
@@ -493,23 +492,23 @@ airborne_knockdown_helper = next(
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-airborne_bounce_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateAirborneBounce@")
-)
 (workbench / "airborne-bounce-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": {
-        "0x43": {"entry": "0x0066F440", "bytes": 412, "state_id": 163, "trail_spacing": 3, "launch_frame": 3, "launch_vx": 2.0, "launch_vy": -1.0, "gravity": 0.02, "late_deceleration": 0.04},
-        "0x44": {"entry": "0x0066F5DC", "bytes": 317, "state_id": 164, "trail_spacing": 2, "launch_frame": 2, "launch_vx": -2.0, "launch_vy": -1.0, "gravity": 0.035, "landing_state": 13},
+        "0x43": {"entry": "0x0066F440", "bytes": 412, "state_id": 163, "trail_spacing": 3, "launch_frame": 3, "launch_vx": 2.0, "launch_vy": -1.0, "gravity": 0.02, "late_deceleration": 0.04, "loop_after_frame_7": True, "landing_state": 0},
+        "0x44": {"entry": "0x0066F5DC", "bytes": 317, "state_id": 164, "trail_spacing": 2, "launch_frame": 2, "launch_vx": -2.0, "launch_vy": -1.0, "gravity": 0.035, "late_deceleration": 0.0, "loop_after_frame_7": False, "landing_state": 13},
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": airborne_bounce_helper,
-        **helper_members[airborne_bounce_helper],
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "inlined_case_sources": {
+            f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
+                (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
+            ).hexdigest()
+            for case in (0x43, 0x44)
+        },
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

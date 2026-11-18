@@ -33,17 +33,11 @@ case_rows = {
     int(row["case_index"], 16): row
     for row in csv.DictReader((ROOT / "workbench/character19-slot06/case-map.csv").open())
 }
-renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
 for case, values in expected.items():
     native_size, state, spacing, launch_frame, vx, vy, gravity, brake, loop7, landing_state = values
     row = case_rows[case]
     assert int(row["native_code_bytes"]) == native_size
     assert [int(x) for x in row["state_ids"].split(";") if x] == [state]
-    config = (
-        f"({hex(case)}, ({spacing}, {launch_frame}, {vx}, {vy}, "
-        f"{gravity}, {brake}, {loop7}, {landing_state}))"
-    )
-    assert config in renderer, (hex(case), config)
     block = "\n".join(blocks[case])
     for expression in (
         "FUN_004109d0();",
@@ -99,27 +93,44 @@ for address, expected_value in constants.items():
     assert actual == expected_value, (hex(address), actual, expected_value)
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
-    "void Character19::Slot06UpdateAirborneBounce",
-    "StartTrail(trailSpacing);",
-    "ResetFrame();",
-    "field000a == launchFrame",
-    "velocityX = launchVelocityX;",
-    "velocityY = launchVelocityY;",
-    "gravity = launchGravity;",
-    "pendingCharacterSoundSlot = 0;",
-    "int continueAirborne = (positionY >= 0.0);",
-    "velocityY = velocityY + gravity;",
-    "positionY + velocityY <= 0.0",
-    "field000a > 6",
-    "velocityX = velocityX - lateHorizontalDeceleration;",
-    "field000a == 7",
-    "field000a = field000a - 2;",
-    "field000a = field000a - 1;",
-    "field0008 = 0;",
-    "field0008 = (unsigned short)landingState;",
-):
-    assert expression in source, expression
+assert "Slot06UpdateAirborneBounce" not in source
+for case, values in expected.items():
+    native_size, state, spacing, launch_frame, vx, vy, gravity, brake, loop7, landing_state = values
+    fragment = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        f"StartTrail({spacing});",
+        "ResetFrame();",
+        f"field000a == {launch_frame}",
+        f"velocityX = {vx};",
+        f"velocityY = {vy};",
+        f"gravity = {gravity};",
+        "pendingCharacterSoundSlot = 0;",
+        "int continueAirborne = (positionY >= 0.0);",
+        "velocityY = velocityY + gravity;",
+        "positionY + velocityY <= 0.0",
+        "field000c = field000c + 1;",
+        "timing.frameDuration",
+        "timing.animationFrameCount",
+    ):
+        assert expression in fragment, (hex(case), expression)
+    if brake:
+        assert f"velocityX = velocityX - {brake};" in fragment
+    else:
+        assert "velocityX = velocityX - " not in fragment
+    if loop7:
+        assert "if (field000a == 7)" in fragment
+        assert "field000a = field000a - 2;" in fragment
+    else:
+        assert "field000a = field000a - 2;" not in fragment
+    if landing_state == 0:
+        assert "field0008 = 0;" in fragment
+        assert "field000a = 7;" in fragment
+        assert "field0008 = 13;" not in fragment
+    else:
+        assert "field0008 = 13;" in fragment
+        assert "ResetPose();" in fragment
+        assert "ResetFrame();" in fragment
+        assert "field000a = 7;" not in fragment
 
 # Native FUN_004109d0 is the trail begin wrapper, while FUN_0040f1e0 is
 # Secondary::ResetFrame (zeroes all four motion fields and outgoing pushback).
@@ -156,4 +167,5 @@ for expression in (
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 for state in (163, 164):
     assert_selector_case(dispatcher, state)
+assert "Slot06UpdateAirborneBounce(" not in dispatcher
 print({"variants": 2, "verified_constants": len(constants), "state_ids": [163,164]})
