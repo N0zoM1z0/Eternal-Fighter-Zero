@@ -5,7 +5,6 @@
 
 void Character19::Slot07()
 {
-    int i;
     EffectSpawn spawn;
     unsigned short frameDuration;
     unsigned short frameCount;
@@ -15,6 +14,7 @@ void Character19::Slot07()
     double dVar3;
     unsigned short uVar5;
     unsigned short uVar6;
+    int i;
   if ((*opponentSlot)->hitstunFrames > 0) return;
   i = (int)effectRead;
     
