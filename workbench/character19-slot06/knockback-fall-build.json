@@ -1,0 +1,61 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_cases": {
+    "selector_range": [
+      "0x1C",
+      "0x1F"
+    ],
+    "case_bytes": {
+      "0x1C": 511,
+      "0x1D": 511,
+      "0x1E": 511,
+      "0x1F": 439
+    },
+    "state_ids": [
+      59,
+      60,
+      61,
+      62
+    ]
+  },
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+    "source_sha256": "9c237e85500933c2070837abba03b2ace4ef4a025a0e0d90eceaedd78fc51846",
+    "object": "build/character19-slot06/Character19Slot06Cases.obj",
+    "object_sha256": "0fe1cf855932c9c2505d2fac9f04b449c61f4f0c8b6fd2290eb5db7ccd106e65",
+    "symbol": "?Slot06UpdateKnockbackFall@Character19@@QAEXGGNH@Z",
+    "symbol_size": 582,
+    "relocations": 10,
+    "clamp_modes": {
+      "0x1C": [
+        -2.0,
+        -0.5
+      ],
+      "0x1D": [
+        -4.0,
+        -0.5
+      ],
+      "0x1E": [
+        -6.0,
+        -0.5
+      ],
+      "0x1F": null
+    },
+    "status": "semantic-workbench-only-not-exact"
+  },
+  "dispatcher": {
+    "source_sha256": "1eef1351a9c489792eef311a7824c944818bf7cdf311db11909c404f1e7b825b",
+    "object_sha256": "5b0201b1aa85140af43c6551303b7bfe3213beb2bd3593c2e27eba57fe0d5522",
+    "symbol_size": 3132,
+    "relocations": 136,
+    "implemented_state_ids": 230,
+    "unimplemented_state_ids": 80
+  },
+  "compiler_flags": [
+    "/Od",
+    "/G6",
+    "/MT",
+    "/Gy",
+    "/W3"
+  ]
+}

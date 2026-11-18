@@ -1174,3 +1174,63 @@ void Character19::Slot06UpdateCounterMove(
         }
     }
 }
+
+
+// Shared hit-knockback fall sequence for native selector cases 0x1c-0x1f.
+void Character19::Slot06UpdateKnockbackFall(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    double minimumVerticalVelocity,
+    int clampVerticalVelocity)
+{
+    if (field0120 != 0) {
+        field0118 = field0118 - 0.8;
+    }
+
+    if ((field000a == 0) && (field000c == 0)) {
+        meter = meter + 30;
+        velocityX = knockbackVelocityX;
+        velocityY = velocityY * 0.75 + knockbackVelocityY;
+        if (clampVerticalVelocity) {
+            if (minimumVerticalVelocity <= velocityY) {
+                if (-0.5 < velocityY) {
+                    velocityY = -0.5;
+                }
+            } else {
+                velocityY = minimumVerticalVelocity;
+            }
+        }
+        gravity = 0.032;
+    }
+
+    if (((velocityY < 0.0) != (velocityY == 0.0)) &&
+        (field000a < 2)) {
+        field000a = 1;
+        field000c = 0;
+    }
+
+    if ((0.0 <= velocityY) && (field000a < 2)) {
+        field000a = 2;
+        field000c = 0;
+    }
+
+    velocityY = velocityY + gravity;
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        if (frameCount <= field000a) {
+            field000a = field000a - 2;
+        }
+    }
+
+    if (((positionY + velocityY) >= 0.0) && (field000a > 1)) {
+        positionY = 0.0;
+        if (knockdownOnLanding == 0) {
+            field0008 = 0x62;
+        } else {
+            field0008 = 0x61;
+        }
+        ResetPose();
+    }
+}
