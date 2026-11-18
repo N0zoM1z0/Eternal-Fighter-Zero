@@ -37,6 +37,7 @@ The five legacy aerial handlers are substantial native case bodies, not trivial 
 | 0x09 | 10 | 822 | inlined in Slot06 |
 
 Their 4,318 native bytes now use the common dispatcher-owned frame timing instead of five separate timing structs and metadata reads. The original input recovery, air-action limits, gravity, distinct launch velocities, and ground-crossing transitions remain in the case fragments. The seven 0x0b-0x11 variants are now also inlined as separate case fragments. Each contains the shared input-recovery sequence and its per-case launch/acceleration constants directly in the common dispatcher; the former Slot06TryAirAction and Slot06UpdateAirMovement helpers have been removed. The two fixed-0.01 variants are source-specialized to that acceleration, while the other five read gravity directly; no constant-dead branch remains. Together these seven native cases own 6,517 bytes and no longer pay for two out-of-line helper prologues or calls.
+The paired 0x45/0x46 airborne follow-up states (native 932/931 bytes) are now inlined too. Their launch frames and opposite horizontal velocities are specialized in the two fragments, while the input-cancel, animation, gravity, and landing transitions remain duplicated in the owning dispatcher. The 958-byte out-of-line follow-up helper has been removed.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 
@@ -53,7 +54,7 @@ The seven dispatch variants preserve their distinct launch parameters:
 - 0x10: frame 2, (vx=-2, vy=-0.5), fixed 0.01 acceleration
 - 0x11: frame 2, (vx=-1.5, vy=-0.5), gravity acceleration
 
-The two one-byte native writes at Secondary offsets 0x2c8 and 0x2c9 are represented as byte accesses to the final soundSlots[49] storage. This preserves the observed layout without falsely assigning a semantic name to the bytes. This family is compiled and semantically mapped, not yet Exact; the full Slot06 owner remains incomplete. The 21,743-byte dispatcher candidate and the remaining helper object compile with the pinned VC7.1 /Od /G6 /MT /Gy /W3 profile.
+The two one-byte native writes at Secondary offsets 0x2c8 and 0x2c9 are represented as byte accesses to the final soundSlots[49] storage. This preserves the observed layout without falsely assigning a semantic name to the bytes. This family is compiled and semantically mapped, not yet Exact; the full Slot06 owner remains incomplete. The 23,563-byte dispatcher candidate and the remaining helper object compile with the pinned VC7.1 /Od /G6 /MT /Gy /W3 profile.
 
 The local CharacterViews.h copy adds only non-virtual draft helper declarations; production headers and vtable layout are unchanged. No assembly, padding, or byte patching is used.
 

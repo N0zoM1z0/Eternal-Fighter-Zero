@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "6ab1037f9841d7c150e484da5768ccbd8b6e72bb52e165a9ba2a92be9ada49da",
+  "source_sha256": "661209cd1a26004d004162b51b71b1a7f47a7c9726e6036de53dee28fd7ba2aa",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "07373342865255ed1e5ed0c5092fa6aa001aeee91779ec9da6a68573a6f3ed54",
+  "object_sha256": "dc2aa7caad8cc2ad0e947576c9242ec6e842cc46f2c23ce95b0c817fb36ebefa",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -41,10 +41,6 @@
     "?Slot06UpdateAirborneDashFollowup@Character19@@QAEXGGPAUEffectSpawn@@GFGGGG@Z": {
       "candidate_size": 840,
       "relocations": 4
-    },
-    "?Slot06UpdateAirborneFollowup@Character19@@QAEXGGGN@Z": {
-      "candidate_size": 958,
-      "relocations": 8
     },
     "?Slot06UpdateAirborneHitstunRestore@Character19@@QAEXGG@Z": {
       "candidate_size": 452,

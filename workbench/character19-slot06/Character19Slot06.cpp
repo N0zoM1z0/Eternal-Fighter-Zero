@@ -433,15 +433,15 @@ void Character19::Slot06()
         break;
 
     case 69:
-        Slot06UpdateAirborneFollowup(
-            timing.frameDuration, timing.animationFrameCount,
-            3, 2.0);
+        {
+#include "Character19Slot06Case45.inc"
+        }
         break;
 
     case 70:
-        Slot06UpdateAirborneFollowup(
-            timing.frameDuration, timing.animationFrameCount,
-            2, -2.0);
+        {
+#include "Character19Slot06Case46.inc"
+        }
         break;
 
     case 71:

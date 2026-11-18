@@ -134,10 +134,10 @@
     }
   },
   "dispatcher": {
-    "source_sha256": "4fd3f950f623f96c6c520d974dc7340d88bfd0b79a181115a3d660bdd34da8e1",
-    "object_sha256": "8dbee332726dac602c62ccd2b2e35e06eaefa44d89907851cfb4a6240da8efb4",
-    "symbol_size": 21743,
-    "relocations": 509,
+    "source_sha256": "64383746e3ee531b44914637587d2c482310889febc1d62dddc222fb50f583d0",
+    "object_sha256": "57bc3400af4d75157eaec5ec5dc1e42e7fab2d13f20ca6ebae2812c614d95d2e",
+    "symbol_size": 23563,
+    "relocations": 523,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0
   },

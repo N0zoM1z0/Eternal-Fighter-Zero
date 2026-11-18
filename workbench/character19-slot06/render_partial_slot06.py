@@ -427,15 +427,12 @@ for case, config in [
         "",
     ]
 
-for case, launch_frame, launch_velocity_x in [
-    (0x45, 3, 2.0),
-    (0x46, 2, -2.0),
-]:
+for case in (0x45, 0x46):
     lines += labels(case)
     lines += [
-        "        Slot06UpdateAirborneFollowup(",
-        "            timing.frameDuration, timing.animationFrameCount,",
-        f"            {launch_frame}, {launch_velocity_x});",
+        "        {",
+        f'#include "Character19Slot06Case{case:02X}.inc"',
+        "        }",
         "        break;",
         "",
     ]

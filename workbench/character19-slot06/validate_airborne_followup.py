@@ -49,11 +49,13 @@ case_rows = {
     for row in csv.DictReader((ROOT / "workbench/character19-slot06/case-map.csv").open())
 }
 renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
+dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 for case, (native_size, state, launch_frame, initial_vx) in expected.items():
     row = case_rows[case]
     assert int(row["native_code_bytes"]) == native_size
     assert [int(x) for x in row["state_ids"].split(";") if x] == [state]
-    assert f"({hex(case)}, {launch_frame}, {initial_vx})" in renderer
+    assert f"case in (0x45, 0x46)" in renderer
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
     block = "\n".join(blocks[case])
     for expression in (
         "param_1[0xc50] = param_1[0xc50] + 1;",
@@ -92,42 +94,47 @@ for address, expected_value in constants.items():
     actual = struct.unpack("<d", target_bytes(pe, address, 8))[0]
     assert actual == expected_value, (hex(address), actual, expected_value)
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
-    "void Character19::Slot06UpdateAirborneFollowup",
-    "field000a == 0",
-    "velocityX = 0.0;",
-    "velocityY = 0.0;",
-    "field3140 = field3140 + 1;",
-    "field3148 < field3140",
-    "inputY == -1",
-    "field015c < 3",
-    "airActionCount < 2",
-    "field0008 = 14;",
-    "field0008 = 15;",
-    "field0008 = 16;",
-    "inputY == 1",
-    "field0008 = 9;",
-    "field0008 = 18;",
-    "field0008 = 20;",
-    "field0008 = 17;",
-    "field0008 = 19;",
-    "attackCollisionResult = 0;",
-    "field000a == launchFrame",
-    "gravity = 0.045;",
-    "velocityY = -0.5;",
-    "velocityX = launchVelocityX;",
-    "pendingCharacterSoundSlot = 0;",
-    "field000a >= launchFrame",
-    "velocityY = velocityY + 0.01;",
-    "field0008 = 10;",
-    "pendingContextSoundSlot = 9;",
-    "FaceOpponent();",
-    "field0008 = 0x0d;",
-):
-    assert expression in source, expression
+helper_source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
+assert "Slot06UpdateAirborneFollowup" not in helper_source
+for case, launch_frame, initial_vx in ((0x45, 3, "2.0"), (0x46, 2, "-2.0")):
+    source = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        "field000a == 0",
+        "velocityX = 0.0;",
+        "velocityY = 0.0;",
+        "field3140 = field3140 + 1;",
+        "field3148 < field3140",
+        "inputY == -1",
+        "field015c < 3",
+        "airActionCount < 2",
+        "field0008 = 14;",
+        "field0008 = 15;",
+        "field0008 = 16;",
+        "inputY == 1",
+        "field0008 = 9;",
+        "field0008 = 18;",
+        "field0008 = 20;",
+        "field0008 = 17;",
+        "field0008 = 19;",
+        "attackCollisionResult = 0;",
+        "gravity = 0.045;",
+        "velocityY = -0.5;",
+        "pendingCharacterSoundSlot = 0;",
+        "velocityY = velocityY + 0.01;",
+        "field0008 = 10;",
+        "pendingContextSoundSlot = 9;",
+        "FaceOpponent();",
+        "field0008 = 0x0d;",
+        "timing.frameDuration",
+        "timing.animationFrameCount",
+    ):
+        assert expression in source, (hex(case), expression)
+    assert f"field000a == {launch_frame}" in source
+    assert f"velocityX = {initial_vx};" in source
+    assert "launchFrame" not in source
+    assert "launchVelocityX" not in source
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
 
-dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 165)
 assert_selector_case(dispatcher, 166)
 print({"native_variants": 2, "normalized_bodies_equal": True, "verified_constants": len(constants), "state_ids": [165,166]})
