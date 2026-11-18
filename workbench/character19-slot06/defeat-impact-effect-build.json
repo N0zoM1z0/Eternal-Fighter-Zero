@@ -1,0 +1,50 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_case": {
+    "selector": "0x47",
+    "entry": "0x0066FE60",
+    "bytes": 488,
+    "state_id": 167,
+    "tint": [
+      176,
+      3
+    ],
+    "context_effect_types": [
+      1,
+      4
+    ],
+    "context_sound": 18,
+    "combo_damage_scale_multiplier": 5.0
+  },
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+    "source_sha256": "acce93d165c5443592adf61ac9e530179aec5379392a5e8b931df6ff6bbba380",
+    "object": "build/character19-slot06/Character19Slot06Cases.obj",
+    "object_sha256": "f14d5145498442aaa130a1da79b145eb32f99e89ec2a7818aef784f6e6bc3795",
+    "symbol": "?Slot06UpdateDefeatImpactEffect@Character19@@QAEXGGPAUEffectSpawn@@@Z",
+    "candidate_size": 502,
+    "relocations": 12,
+    "status": "semantic-workbench-only-not-exact"
+  },
+  "dispatcher": {
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "eab7446439e64fd3b00a21c3488f0f11ce651852c6fe669d0bb95aab2920b62e",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "50ca026bceba2883d5f8a0abe234987db31ed3523ce6a3f3b6e992ab7fc7a919",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 5469,
+    "relocation_count": 277,
+    "implemented_state_ids": 270,
+    "unimplemented_state_ids": 40,
+    "status": "partial-semantic-workbench-not-exact"
+  },
+  "compiler_flags": [
+    "/Od",
+    "/G6",
+    "/MT",
+    "/Gy",
+    "/W3",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/workbench/character19-slot06",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/src"
+  ]
+}

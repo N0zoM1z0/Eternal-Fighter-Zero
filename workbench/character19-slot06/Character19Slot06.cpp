@@ -1,6 +1,6 @@
 // Partial natural-C++ reconstruction of Character19::Slot06.
 // State IDs are grouped using the native 310-byte selector table.
-// Cases 0-0x2f, 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x3a, 0x3b, 0x3c, 0x3d, 0x3e, 0x3f, 0x40, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x70-0x74, and the shared 0x75 fallback are restored.
+// Cases 0-0x2f, 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x3a, 0x3b, 0x3c, 0x3d, 0x3e, 0x3f, 0x40, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x70-0x74, and the shared 0x75 fallback are restored.
 // are implemented; remaining native handlers are explicitly TODO.
 #include "CharacterViews.h"
 
@@ -422,6 +422,11 @@ void Character19::Slot06()
             2, -2.0);
         break;
 
+    case 167:
+        Slot06UpdateDefeatImpactEffect(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
     case 59:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
@@ -801,7 +806,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 167:
     case 168:
     case 169:
     case 170:

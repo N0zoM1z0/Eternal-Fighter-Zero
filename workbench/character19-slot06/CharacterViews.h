@@ -428,6 +428,7 @@ public:
     void Slot06UpdateAirborneKnockdown(unsigned short, unsigned short, EffectSpawn *, double, double, double, short, int, int, int, int);
     void Slot06UpdateAirborneBounce(unsigned short, unsigned short, unsigned char, unsigned short, double, double, double, double, int, int);
     void Slot06UpdateAirborneFollowup(unsigned short, unsigned short, unsigned short, double);
+    void Slot06UpdateDefeatImpactEffect(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
     void Slot06Case04();

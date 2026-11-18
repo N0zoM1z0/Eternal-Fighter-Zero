@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "18b7c85ab48dbdcfacd6fe37efacf0d3069f9dc6729b0875fd55f4696ecda3ba",
+  "source_sha256": "acce93d165c5443592adf61ac9e530179aec5379392a5e8b931df6ff6bbba380",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "c2b099b983519b4e2990cbeeaee24a4beb7b85c63494980c2bc225db920e5623",
+  "object_sha256": "f14d5145498442aaa130a1da79b145eb32f99e89ec2a7818aef784f6e6bc3795",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -97,6 +97,10 @@
     "?Slot06UpdateDefeatImpact@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
       "candidate_size": 259,
       "relocations": 6
+    },
+    "?Slot06UpdateDefeatImpactEffect@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
+      "candidate_size": 502,
+      "relocations": 12
     },
     "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z": {
       "candidate_size": 192,

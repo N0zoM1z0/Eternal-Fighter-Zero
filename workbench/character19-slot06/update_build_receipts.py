@@ -57,6 +57,7 @@ assert any(symbol.startswith("?Slot06UpdateHorizontalRecovery@Character19@@") fo
 assert any(symbol.startswith("?Slot06UpdateAirborneKnockdown@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneBounce@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneFollowup@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateDefeatImpactEffect@Character19@@") for symbol in helper_members)
 
 main_source = workbench / "Character19Slot06.cpp"
 main_object = build_dir / "Character19Slot06.obj"
@@ -84,7 +85,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 269
+assert len(implemented_states) == 270
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -462,6 +463,35 @@ airborne_followup_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": airborne_followup_helper,
         **helper_members[airborne_followup_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+defeat_impact_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateDefeatImpactEffect@")
+)
+(workbench / "defeat-impact-effect-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x47",
+        "entry": "0x0066FE60",
+        "bytes": 488,
+        "state_id": 167,
+        "tint": [0xb0, 3],
+        "context_effect_types": [1, 4],
+        "context_sound": 0x12,
+        "combo_damage_scale_multiplier": 5.0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": defeat_impact_helper,
+        **helper_members[defeat_impact_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,
