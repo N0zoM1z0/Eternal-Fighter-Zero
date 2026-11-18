@@ -16,7 +16,7 @@ Currently implemented state coverage:
 - selector cases 0-10: state IDs 1-11 except 12, plus state 13
 - selector cases 0x70-0x74: state IDs 300, 303, 306, 309, 310, dispatched to isolated C++ handlers
 - selector case 0x75: all 193 native fallback state IDs
-- remaining 94 valid state IDs: explicitly marked TODO, not silently routed to the fallback
+- remaining 89 valid state IDs: explicitly marked TODO, not silently routed to the fallback
 
 Character19Slot06Cases.cpp contains ten isolated natural-C++ handlers plus two shared airborne-state helpers for selector cases 0x70-0x74. The native intervals and candidate member sizes are:
 
@@ -57,3 +57,19 @@ The two one-byte native writes at Secondary offsets 0x2c8 and 0x2c9 are represen
 The local CharacterViews.h copy adds only non-virtual draft helper declarations; production headers and vtable layout are unchanged. No assembly, padding, or byte patching is used.
 
 Next: translate the remaining selector cases, replace the temporary helper calls with inline case bodies, and compare the complete 58,363-byte owner. Do not promote Slot06 as Exact while any valid state remains a TODO.
+
+
+## Counter-movement family: selector cases 0x13-0x17
+
+The five 497-byte native branches (state IDs 50-54) share one 43-line body after normalizing only local temporary names and three per-case constants. The target-backed validator checks that equivalence and verifies all 13 numeric constants used by the source.
+
+Slot06UpdateCounterMove is a 502-byte VC7.1 member. It preserves the per-frame field0118 decay, per-case meter gain, opponent combo-scale-dependent horizontal launch, horizontal velocity damping/clamp, stage-edge outgoing pushback calculation, frame progression, and the inputY==1 return to the standing state.
+
+Per-case parameters:
+- 0x13: meter +10, launch scale -1.1, field0118 first-frame decay 10
+- 0x14: meter +15, launch scale -1.5, decay 20
+- 0x15: meter +20, launch scale -1.8, decay 30
+- 0x16: meter +10, launch scale -1.1, decay 10
+- 0x17: meter +15, launch scale -1.5, decay 20
+
+The boundary test is expressed as positionX <= 20 or positionX >= 619, equivalent to the original pair of floating-point comparisons. The source retains the positionY-dependent 0.2 factor when writing outgoingPushbackVelocityX; positionY is reset to zero earlier in the same handler, as in the native sequence. This family is compiled and semantically mapped, not Exact.

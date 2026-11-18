@@ -167,6 +167,36 @@ void Character19::Slot06()
             1, 0);
         break;
 
+    case 50:
+        Slot06UpdateCounterMove(
+            timing.frameDuration, timing.animationFrameCount,
+            10, -1.1, 10.0);
+        break;
+
+    case 51:
+        Slot06UpdateCounterMove(
+            timing.frameDuration, timing.animationFrameCount,
+            15, -1.5, 20.0);
+        break;
+
+    case 52:
+        Slot06UpdateCounterMove(
+            timing.frameDuration, timing.animationFrameCount,
+            20, -1.8, 30.0);
+        break;
+
+    case 53:
+        Slot06UpdateCounterMove(
+            timing.frameDuration, timing.animationFrameCount,
+            10, -1.1, 10.0);
+        break;
+
+    case 54:
+        Slot06UpdateCounterMove(
+            timing.frameDuration, timing.animationFrameCount,
+            15, -1.5, 20.0);
+        break;
+
     case 4:
         Slot06Case03();
         break;
@@ -414,11 +444,6 @@ void Character19::Slot06()
         break;
 
     case 47:
-    case 50:
-    case 51:
-    case 52:
-    case 53:
-    case 54:
     case 55:
     case 56:
     case 57:

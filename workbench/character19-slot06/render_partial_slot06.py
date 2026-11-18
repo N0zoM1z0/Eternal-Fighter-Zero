@@ -9,7 +9,7 @@ states_by_case = {
     ]
     for row in rows
 }
-implemented = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
+implemented = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x13, 0x14, 0x15, 0x16, 0x17, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
 mapped = {
     state
     for case, states in states_by_case.items()
@@ -167,6 +167,23 @@ for case, config in [
         "            timing.frameDuration, timing.animationFrameCount,",
         f"            {launch_frame}, {velocity_x}, {velocity_y},",
         f"            {acceleration_frame}, {fixed_acceleration});",
+        "        break;",
+        "",
+    ]
+
+for case, config in [
+    (0x13, (10, -1.1, 10.0)),
+    (0x14, (15, -1.5, 20.0)),
+    (0x15, (20, -1.8, 30.0)),
+    (0x16, (10, -1.1, 10.0)),
+    (0x17, (15, -1.5, 20.0)),
+]:
+    meter_gain, launch_scale, field_decay = config
+    lines += labels(case)
+    lines += [
+        "        Slot06UpdateCounterMove(",
+        "            timing.frameDuration, timing.animationFrameCount,",
+        f"            {meter_gain}, {launch_scale}, {field_decay});",
         "        break;",
         "",
     ]

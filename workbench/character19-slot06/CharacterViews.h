@@ -411,6 +411,7 @@ public:
     void UpdateLocomotionState();
     int Slot06TryAirAction();
     void Slot06UpdateAirMovement(unsigned short, unsigned short, unsigned short, double, double, unsigned short, int);
+    void Slot06UpdateCounterMove(unsigned short, unsigned short, short, double, double);
     void Slot06Case03();
     void Slot06Case04();
     void Slot06Case05();
