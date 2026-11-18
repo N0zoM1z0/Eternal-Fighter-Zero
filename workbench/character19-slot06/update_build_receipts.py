@@ -81,7 +81,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 260
+assert len(implemented_states) == 262
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -379,6 +379,8 @@ horizontal_helper = next(
         "0x3B": {"entry": "0x0066E960", "bytes": 380, "state_id": 151, "meter_gain": 15, "initial_velocity_x": -1.8, "force_standing": False},
         "0x3C": {"entry": "0x0066EADC", "bytes": 380, "state_id": 152, "meter_gain": 20, "initial_velocity_x": -2.3, "force_standing": False},
         "0x3D": {"entry": "0x0066EC58", "bytes": 356, "state_id": 153, "meter_gain": 10, "initial_velocity_x": -1.5, "force_standing": True},
+        "0x3E": {"entry": "0x0066EDBC", "bytes": 356, "state_id": 154, "meter_gain": 15, "initial_velocity_x": -1.8, "force_standing": True},
+        "0x3F": {"entry": "0x0066EF20", "bytes": 356, "state_id": 155, "meter_gain": 20, "initial_velocity_x": -2.3, "force_standing": True},
     },
     "candidate": {
         "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
