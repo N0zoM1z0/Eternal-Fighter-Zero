@@ -53,6 +53,7 @@ assert any(symbol.startswith("?Slot06UpdateLocalEffectRecovery@Character19@@") f
 assert "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateDefeatImpact@Character19@@") for symbol in helper_members)
 assert "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z" in helper_members
+assert "?Slot06UpdateHorizontalRecovery@Character19@@QAEXGGFN@Z" in helper_members
 
 main_source = workbench / "Character19Slot06.cpp"
 main_object = build_dir / "Character19Slot06.obj"
@@ -80,7 +81,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 256
+assert len(implemented_states) == 258
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -361,6 +362,46 @@ defeat_wait_helper = "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z"
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": defeat_wait_helper,
         **helper_members[defeat_wait_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+horizontal_helper = "?Slot06UpdateHorizontalRecovery@Character19@@QAEXGGFN@Z"
+(workbench / "horizontal-recovery-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": {
+        "0x3A": {"entry": "0x0066E7E4", "bytes": 380, "state_id": 150, "meter_gain": 10, "initial_velocity_x": -1.5},
+        "0x3B": {"entry": "0x0066E960", "bytes": 380, "state_id": 151, "meter_gain": 15, "initial_velocity_x": -1.8},
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": horizontal_helper,
+        **helper_members[horizontal_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+horizontal_helper = "?Slot06UpdateHorizontalRecovery@Character19@@QAEXGGFN@Z"
+(workbench / "horizontal-recovery-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": {
+        "0x3A": {"entry": "0x0066E7E4", "bytes": 380, "state_id": 150, "meter_gain": 10, "initial_velocity_x": -1.5},
+        "0x3B": {"entry": "0x0066E960", "bytes": 380, "state_id": 151, "meter_gain": 15, "initial_velocity_x": -1.8},
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": horizontal_helper,
+        **helper_members[horizontal_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

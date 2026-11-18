@@ -142,3 +142,8 @@ Three short but distinct end-state handlers are now restored. Case 0x35 (state 8
 ## Defeat wait: selector case 0x39
 
 State ID 99 is a short defeat-wait handler. If health remains positive after the native strict 60-frame timeout while frame index is zero, it transitions to state 0x60, resets pose, and clears dashMomentumFlag. Independently, it advances the animation timer, faces the opponent exactly when the frame index reaches frameCount, and transitions to state 0x60 again once the animation completes. The target uses 60 here (not the 100-frame threshold found in another character's analogous state), which is retained explicitly.
+
+
+## Horizontal recovery variants: selector cases 0x3a-0x3b
+
+These two 380-byte branches share the same braking and stage-edge pushback body. On their first frame they clear dashMomentumFlag, add 10/15 meter, seed velocityX to -1.5/-1.8, and zero vertical position/velocity. Every update adds 0.06 horizontal acceleration, clamps positive velocity to zero, and copies the resulting velocity into outgoingPushbackVelocityX only at the stage edges. At the frame-count boundary they face the opponent, then return to state 0 or state 3 according to inputY. The common Slot06UpdateHorizontalRecovery helper preserves the per-case meter and launch-speed parameters.
