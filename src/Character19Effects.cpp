@@ -19,8 +19,6 @@ void Character19::Slot07()
         unsigned short frameCount;
         frameDuration = patterns[effects[i].type].frames[effects[i].frame].duration;
         frameCount = patterns[effects[i].type].count;
-        unsigned short uVar5;
-        unsigned short uVar6;
         ResetLocalEffectSpawn(&spawn);
         switch(effects[i].type) {
         case 400:
@@ -345,12 +343,8 @@ void Character19::Slot07()
           if ((effects[i].frame == 0) &&
              (effects[i].tick == 0)) {
             effects[i].field0084 = 1;
-            uVar5 = RandomRange(0,10);
-            effects[i].vx =
-                 (double)uVar5 * 0.1 + 2.5;
-            uVar5 = RandomRange(0,0x14);
-            effects[i].vy =
-                 -1.2 - (double)uVar5 * 0.1;
+            effects[i].vx = (double)(unsigned short)RandomRange(0,10) * 0.1 + 2.5;
+            effects[i].vy = -1.2 - (double)(unsigned short)RandomRange(0,0x14) * 0.1;
           }
           effects[i].vy =
                effects[i].vy + 0.05;
@@ -392,9 +386,7 @@ void Character19::Slot07()
         case 0x19c:
           if ((effects[i].frame == 0) &&
              (effects[i].tick == 0)) {
-            uVar5 = RandomRange(0,10);
-            effects[i].vx =
-                 (double)uVar5 * 0.1 + 1.5;
+            effects[i].vx = (double)(unsigned short)RandomRange(0,10) * 0.1 + 1.5;
             effects[i].vy = -1.5;
           }
           effects[i].vy =
@@ -421,12 +413,8 @@ void Character19::Slot07()
           if ((effects[i].frame == 0) &&
              (effects[i].tick == 0)) {
             effects[i].field0084 = 1;
-            uVar5 = RandomRange(0,0x14);
-            effects[i].vx =
-                 (double)uVar5 * 0.1 + 1.7;
-            uVar5 = RandomRange(0,10);
-            effects[i].vy =
-                 -0.5 - (double)uVar5 * 0.1;
+            effects[i].vx = (double)(unsigned short)RandomRange(0,0x14) * 0.1 + 1.7;
+            effects[i].vy = -0.5 - (double)(unsigned short)RandomRange(0,10) * 0.1;
           }
           effects[i].vy =
                effects[i].vy + 0.05;
@@ -468,9 +456,7 @@ void Character19::Slot07()
         case 0x19e:
           if ((effects[i].frame == 0) &&
              (effects[i].tick == 0)) {
-            uVar5 = RandomRange(0,10);
-            effects[i].vx =
-                 (double)uVar5 * 0.1 + 1.5;
+            effects[i].vx = (double)(unsigned short)RandomRange(0,10) * 0.1 + 1.5;
             effects[i].vy = -1.5;
           }
           effects[i].vy =
@@ -525,14 +511,10 @@ void Character19::Slot07()
           if (field3154[i] == 0) {
             effects[i].field0084 = 1;
             field3154[i] = field3154[i] + 1;
-            uVar5 = RandomRange(0,100);
-            effects[i].vx =
-                 (double)uVar5 * 0.01 + 1.0;
-            uVar5 = RandomRange(0,100);
-            effects[i].ay = (double)uVar5 * 0.0002;
+            effects[i].vx = (double)(unsigned short)RandomRange(0,100) * 0.01 + 1.0;
+            effects[i].ay = (double)(unsigned short)RandomRange(0,100) * 0.0002;
             effects[i].vy = 0.5;
-            uVar6 = RandomRange(0,0xf);
-            effects[i].frame = uVar6;
+            effects[i].frame = (unsigned short)RandomRange(0,0xf);
           }
           effects[i].vy =
                effects[i].vy -
@@ -558,14 +540,10 @@ void Character19::Slot07()
           if (field3154[i] == 0) {
             effects[i].field0084 = 1;
             field3154[i] = field3154[i] + 1;
-            uVar5 = RandomRange(0,100);
-            effects[i].vx =
-                 (double)uVar5 * 0.01 + 3.5;
-            uVar5 = RandomRange(0,100);
-            effects[i].ay = (double)uVar5 * 0.00015;
+            effects[i].vx = (double)(unsigned short)RandomRange(0,100) * 0.01 + 3.5;
+            effects[i].ay = (double)(unsigned short)RandomRange(0,100) * 0.00015;
             effects[i].vy = 0.5;
-            uVar6 = RandomRange(0,0xf);
-            effects[i].frame = uVar6;
+            effects[i].frame = (unsigned short)RandomRange(0,0xf);
           }
           effects[i].vy =
                effects[i].vy -
