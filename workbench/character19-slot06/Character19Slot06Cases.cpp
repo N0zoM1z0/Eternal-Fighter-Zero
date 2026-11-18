@@ -1578,6 +1578,7 @@ void Character19::Slot06UpdateAirborneKnockbackLanding(
     unsigned short frameDuration,
     unsigned short frameCount,
     SecondaryEffectSpawn *spawn,
+    unsigned short soundSlot,
     double verticalAcceleration,
     int gateFirstHit,
     int finishNeutral)
@@ -1599,7 +1600,7 @@ void Character19::Slot06UpdateAirborneKnockbackLanding(
             if (field0120 != 0) {
                 field0118 = field0118 - 30.0;
             }
-            pendingContextSoundSlot = 0x21;
+            pendingContextSoundSlot = soundSlot;
             velocityX = knockbackVelocityX;
             velocityY = knockbackVelocityY;
             meter = meter + 30;
@@ -1786,5 +1787,71 @@ void Character19::Slot06UpdateHorizontalRecovery(
             }
             ResetPose();
         }
+    }
+}
+
+
+// Airborne knockback/impact variants for native selectors 0x40-0x42.
+void Character19::Slot06UpdateAirborneKnockdown(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    EffectSpawn *spawn,
+    double horizontalVelocity,
+    double initialVerticalVelocity,
+    double gravityValue,
+    short meterGain,
+    int effectType,
+    int clearDashMomentumFlag,
+    int gravitySetEveryFrame,
+    int skipGravityOnFirstFrame)
+{
+    const int firstFrame = (field000a == 0) && (field000c == 0);
+
+    velocityX = horizontalVelocity;
+    if (clearDashMomentumFlag) {
+        dashMomentumFlag = 0;
+    }
+    if (gravitySetEveryFrame) {
+        gravity = gravityValue;
+    }
+
+    if (firstFrame) {
+        velocityY = initialVerticalVelocity;
+        if (meterGain != 0) {
+            meter = meter + meterGain;
+        }
+        if (!gravitySetEveryFrame) {
+            gravity = gravityValue;
+        }
+        if (effectType != 0) {
+            spawn->type = (unsigned short)effectType;
+            spawn->x = (double)(int)positionX;
+            spawn->y = (double)(int)positionY;
+            spawn->group = 2;
+            spawn->layer = 0;
+            contextOwner->EmitEffect(spawn);
+        }
+    }
+
+    if (!firstFrame || !skipGravityOnFirstFrame) {
+        velocityY = velocityY + gravity;
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        if (frameCount <= field000a) {
+            field0008 = 9;
+            ResetPose();
+        }
+    }
+
+    if ((positionY + velocityY) >= 0.0) {
+        positionY = 0.0;
+        pendingContextSoundSlot = 9;
+        FaceOpponent();
+        field0008 = 0x0d;
+        ResetPose();
     }
 }

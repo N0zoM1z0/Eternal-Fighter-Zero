@@ -54,6 +54,7 @@ assert "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateDefeatImpact@Character19@@") for symbol in helper_members)
 assert "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateHorizontalRecovery@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateAirborneKnockdown@Character19@@") for symbol in helper_members)
 
 main_source = workbench / "Character19Slot06.cpp"
 main_object = build_dir / "Character19Slot06.obj"
@@ -81,7 +82,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 262
+assert len(implemented_states) == 265
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -389,6 +390,30 @@ horizontal_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": horizontal_helper,
         **helper_members[horizontal_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+airborne_knockdown_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateAirborneKnockdown@")
+)
+(workbench / "knockback-followup-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": {
+        "0x40": {"entry": "0x0066F084", "bytes": 272, "state_id": 156, "initial_vx": -1.2, "initial_vy": -2.6, "gravity": 0.06, "meter_gain": 15, "effect_type": 0},
+        "0x41": {"entry": "0x0066F194", "bytes": 342, "state_id": 157, "initial_vx": 1.0, "initial_vy": -2.3, "gravity": 0.045, "meter_gain": 0, "effect_type": 8},
+        "0x42": {"entry": "0x0066F2EA", "bytes": 342, "state_id": 158, "initial_vx": -1.0, "initial_vy": -2.3, "gravity": 0.045, "meter_gain": 0, "effect_type": 8},
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": airborne_knockdown_helper,
+        **helper_members[airborne_knockdown_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

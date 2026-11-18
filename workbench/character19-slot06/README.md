@@ -147,3 +147,18 @@ State ID 99 is a short defeat-wait handler. If health remains positive after the
 ## Horizontal recovery variants: selector cases 0x3a-0x3f
 
 These six native branches share the same braking and stage-edge pushback body. On their first frame they clear dashMomentumFlag, add 10/15/20/10/15/20 meter, seed velocityX to -1.5/-1.8/-2.3/-1.5/-1.8/-2.3, and zero vertical position/velocity. Every update adds 0.06 horizontal acceleration, clamps positive velocity to zero, and copies the resulting velocity into outgoingPushbackVelocityX only at the stage edges. At the frame-count boundary they call the native facing helper (reconstructed by FaceOpponent), then finish in state 0 or state 3 according to inputY. Variants 0x3d-0x3f always select state 3. The shared Slot06UpdateHorizontalRecovery helper preserves each variant's meter gain, launch speed, and forced-standing flag.
+
+
+## Knockback effect follow-ups: selector cases 0x42-0x43
+
+Case 0x42 (state 162) is a knockback-fall variant guarded by field313c. Its first frame applies the 0.8 field0118 decay, adds 30 meter, seeds knockback velocity with 0.032 gravity, requests sound 0x1f, increments field313c, and emits local effect 0x1f0 (owner 1, group/layer 0, facing flag). It then uses the common airborne phase and landing logic. Case 0x43 (state 163) instead gates the launch on field3144, applies the 30-point field0118 decay, requests sound 0x21, adds 30 meter, and uses 0.04 vertical acceleration without emitting a local effect. Animation completion returns to state 0 and faces the opponent; ground crossing selects 0x61/0x62. Both are implemented as natural C++ helpers with separate one-shot guards.
+
+
+## Field3144-gated knockback: selector cases 0x43-0x45
+
+These three airborne knockback variants share the same one-shot launch guard. On the first frame while field3144 is zero they apply the 30-point field0118 decay when enabled, request sound 0x21, copy knockbackVelocityX/knockbackVelocityY, add 30 meter, and increment field3144. Case 0x43 uses direct 0.04 vertical acceleration, 0x44 uses direct 0.06, and 0x45 stores 0.032 in gravity and accumulates through that member. Each returns to state 0 and faces the opponent at animation completion; ground crossing selects 0x61/0x62. The shared helper keeps direct-acceleration and stored-gravity semantics distinct.
+
+
+## Airborne knockdown and impact variants: selector cases 0x40-0x42
+
+The three native branches share a landing transition but differ in launch setup. Case 0x40 seeds horizontal/vertical velocity (-1.2,-2.6), adds 15 meter, and stores 0.06 gravity on the first frame; gravity is then applied immediately on that same update. Cases 0x41/0x42 use horizontal velocities +1.0/-1.0, initial vertical velocity -2.3 and 0.045 gravity; they clear dashMomentumFlag every update and emit a context-owned type-8 impact effect at the integer-truncated character position (group 2, layer 0) on the first frame. The latter two defer gravity integration until the following update. All three advance to state 9 when the animation completes; ground crossing clamps positionY, requests context sound 9, faces the opponent, and transitions to state 0x0d. The shared natural-C++ helper preserves the distinct first-frame integration rules and uses Context::EmitEffect for the type-8 event.

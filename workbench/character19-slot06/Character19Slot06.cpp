@@ -1,6 +1,6 @@
 // Partial natural-C++ reconstruction of Character19::Slot06.
 // State IDs are grouped using the native 310-byte selector table.
-// Cases 0-0x2f, 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x3a, 0x3b, 0x3c, 0x3d, 0x3e, 0x3f, 0x70-0x74, and the shared 0x75 fallback are restored.
+// Cases 0-0x2f, 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x3a, 0x3b, 0x3c, 0x3d, 0x3e, 0x3f, 0x40, 0x41, 0x42, 0x70-0x74, and the shared 0x75 fallback are restored.
 // are implemented; remaining native handlers are explicitly TODO.
 #include "CharacterViews.h"
 
@@ -265,13 +265,13 @@ void Character19::Slot06()
 
     case 85:
         Slot06UpdateAirborneKnockbackLanding(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
+            timing.frameDuration, timing.animationFrameCount, &spawn, 0x21,
             0.04, 0, 1);
         break;
 
     case 86:
         Slot06UpdateAirborneKnockbackLanding(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
+            timing.frameDuration, timing.animationFrameCount, &spawn, 0x21,
             0.06, 1, 0);
         break;
 
@@ -373,6 +373,27 @@ void Character19::Slot06()
             }
             ResetPose();
         }
+        break;
+
+    case 156:
+        Slot06UpdateAirborneKnockdown(
+            timing.frameDuration, timing.animationFrameCount, &spawn,
+            -1.2, -2.6, 0.06,
+            15, 0, 0, 0, 0);
+        break;
+
+    case 157:
+        Slot06UpdateAirborneKnockdown(
+            timing.frameDuration, timing.animationFrameCount, &spawn,
+            1.0, -2.3, 0.045,
+            0, 8, 1, 1, 1);
+        break;
+
+    case 158:
+        Slot06UpdateAirborneKnockdown(
+            timing.frameDuration, timing.animationFrameCount, &spawn,
+            -1.0, -2.3, 0.045,
+            0, 8, 1, 1, 1);
         break;
 
     case 59:
@@ -754,9 +775,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 156:
-    case 157:
-    case 158:
     case 163:
     case 164:
     case 165:

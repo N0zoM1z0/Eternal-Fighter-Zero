@@ -77,7 +77,7 @@ for expression in (
     "field3144 = 1;",
     "if (!gateFirstHit || (field3138 == 0))",
     "field0118 = field0118 - 30.0",
-    "pendingContextSoundSlot = 0x21;",
+    "pendingContextSoundSlot = soundSlot;",
     "velocityX = knockbackVelocityX;",
     "velocityY = knockbackVelocityY;",
     "velocityY = velocityY + verticalAcceleration;",
@@ -89,6 +89,9 @@ for expression in (
     "field0008 = 0x62;",
 ):
     assert expression in source, expression
+
+renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
+assert renderer.count("timing.frameDuration, timing.animationFrameCount, &spawn, 0x21,") == 1
 
 analog = (ROOT / "src/Character23State.cpp").read_text()
 for expression in (
