@@ -537,7 +537,7 @@ void Character19::Slot07()
           effects[i].vy =
                effects[i].vy -
                effects[i].ay;
-          effects[i].tick = effects[i].tick + 1;
+          ++effects[i].tick;
           if ((((680.0 < effects[i].x) &&
                ((char)effects[i].flag0048 == '\x01')) ||
               ((effects[i].x < -60.0 &&
@@ -547,8 +547,7 @@ void Character19::Slot07()
           }
           else if (frameDuration <= effects[i].tick) {
             effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
+            ++effects[i].frame;
             effects[i].field0080 = 0;
             if (frameCount <= effects[i].frame) {
               effects[i].frame = 0;
@@ -571,7 +570,7 @@ void Character19::Slot07()
           effects[i].vy =
                effects[i].vy -
                effects[i].ay;
-          effects[i].tick = effects[i].tick + 1;
+          ++effects[i].tick;
           if ((((680.0 < effects[i].x) &&
                ((char)effects[i].flag0048 == '\x01')) ||
               ((effects[i].x < -60.0 &&
@@ -581,8 +580,7 @@ void Character19::Slot07()
           }
           else if (frameDuration <= effects[i].tick) {
             effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
+            ++effects[i].frame;
             effects[i].field0080 = 0;
             if (frameCount <= effects[i].frame) {
               effects[i].frame = 0;
@@ -595,11 +593,10 @@ void Character19::Slot07()
                  (double)((char)effects[i].flag0048 * 10) + positionX +
                  0.0;
           }
-          effects[i].tick = effects[i].tick + 1;
+          ++effects[i].tick;
           if (frameDuration <= effects[i].tick) {
             effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
+            ++effects[i].frame;
             effects[i].field0080 = 0;
             if (((effects[i].frame == 9) &&
                 (field000a < 0xd)) && ((short)field0008 == 0x12f)) {
@@ -612,15 +609,14 @@ void Character19::Slot07()
           }
           break;
         case 0x1a3:
-          effects[i].tick = effects[i].tick + 1;
+          ++effects[i].tick;
           if (((short)field0008 == 0x100) && (0 < hitstopFrames)) {
             effects[i].tick =
                  effects[i].tick + -1;
           }
           if (frameDuration <= effects[i].tick) {
             effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
+            ++effects[i].frame;
             effects[i].field0080 = 0;
             if (frameCount <= effects[i].frame) {
               RemoveLocalEffect((short)i);
@@ -633,15 +629,14 @@ void Character19::Slot07()
           }
           effects[i].x = positionX;
           effects[i].y = positionY;
-          effects[i].tick = effects[i].tick + 1;
+          ++effects[i].tick;
           if (((short)field0008 == 0xc9) && (0 < hitstopFrames)) {
             effects[i].tick =
                  effects[i].tick + -1;
           }
           if (frameDuration <= effects[i].tick) {
             effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
+            ++effects[i].frame;
             effects[i].field0080 = 0;
             if (frameCount <= effects[i].frame) {
               RemoveLocalEffect((short)i);
@@ -654,15 +649,14 @@ void Character19::Slot07()
           }
           effects[i].x = positionX;
           effects[i].y = positionY;
-          effects[i].tick = effects[i].tick + 1;
+          ++effects[i].tick;
           if (((short)field0008 == 0xca) && (0 < hitstopFrames)) {
             effects[i].tick =
                  effects[i].tick + -1;
           }
           if (frameDuration <= effects[i].tick) {
             effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
+            ++effects[i].frame;
             effects[i].field0080 = 0;
             if (frameCount <= effects[i].frame) {
               RemoveLocalEffect((short)i);
@@ -675,15 +669,14 @@ void Character19::Slot07()
           }
           effects[i].x = positionX;
           effects[i].y = positionY;
-          effects[i].tick = effects[i].tick + 1;
+          ++effects[i].tick;
           if (((short)field0008 == 0xcd) && (0 < hitstopFrames)) {
             effects[i].tick =
                  effects[i].tick + -1;
           }
           if (frameDuration <= effects[i].tick) {
             effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
+            ++effects[i].frame;
             effects[i].field0080 = 0;
             if (frameCount <= effects[i].frame) {
               RemoveLocalEffect((short)i);
@@ -696,15 +689,14 @@ void Character19::Slot07()
           }
           effects[i].x = positionX;
           effects[i].y = positionY;
-          effects[i].tick = effects[i].tick + 1;
+          ++effects[i].tick;
           if (((short)field0008 == 0xd0) && (0 < hitstopFrames)) {
             effects[i].tick =
                  effects[i].tick + -1;
           }
           if (frameDuration <= effects[i].tick) {
             effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
+            ++effects[i].frame;
             effects[i].field0080 = 0;
             if (frameCount <= effects[i].frame) {
               RemoveLocalEffect((short)i);
@@ -717,15 +709,14 @@ void Character19::Slot07()
           }
           effects[i].x = positionX;
           effects[i].y = positionY;
-          effects[i].tick = effects[i].tick + 1;
+          ++effects[i].tick;
           if (((short)field0008 == 0xcb) && (0 < hitstopFrames)) {
             effects[i].tick =
                  effects[i].tick + -1;
           }
           if (frameDuration <= effects[i].tick) {
             effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
+            ++effects[i].frame;
             effects[i].field0080 = 0;
             if (frameCount <= effects[i].frame) {
               RemoveLocalEffect((short)i);
@@ -738,15 +729,14 @@ void Character19::Slot07()
           }
           effects[i].x = positionX;
           effects[i].y = positionY;
-          effects[i].tick = effects[i].tick + 1;
+          ++effects[i].tick;
           if (((short)field0008 == 0xd1) && (0 < hitstopFrames)) {
             effects[i].tick =
                  effects[i].tick + -1;
           }
           if (frameDuration <= effects[i].tick) {
             effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
+            ++effects[i].frame;
             effects[i].field0080 = 0;
             if (frameCount <= effects[i].frame) {
               RemoveLocalEffect((short)i);
