@@ -44,6 +44,8 @@ for symbol in helper_symbols:
         "relocations": len(relocations),
     }
 assert "?Slot06UpdateGroundRecovery@Character19@@QAEXGGH@Z" in helper_members
+assert "?Slot06UpdateGroundSkid@Character19@@QAEXGGH@Z" in helper_members
+assert "?Slot06UpdateGroundSkid@Character19@@QAEXGGH@Z" in helper_members
 
 main_source = workbench / "Character19Slot06.cpp"
 main_object = build_dir / "Character19Slot06.obj"
@@ -71,7 +73,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 242
+assert len(implemented_states) == 245
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -111,6 +113,7 @@ for filename in (
     "counter-movement-build.json",
     "knockback-fall-build.json",
     "knockback-landing-build.json",
+    "ground-recovery-build.json",
     "case27-build.json",
 ):
     path = workbench / filename
@@ -135,6 +138,10 @@ for filename in (
 ground_helper = next(
     symbol for symbol in helper_members
     if symbol.startswith("?Slot06UpdateGroundRecovery@")
+)
+skid_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateGroundSkid@")
 )
 (workbench / "ground-recovery-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -168,3 +175,24 @@ print({
     "implemented_state_ids": len(implemented_states),
     "unimplemented_state_ids": 310 - len(implemented_states),
 })
+
+
+(workbench / "ground-skid-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": {
+        "0x2C": {"bytes": 509, "state_id": 75, "completion_state": "inputY==1 ? 3 : 7"},
+        "0x2D": {"bytes": 509, "state_id": 76, "completion_state": "inputY==1 ? 3 : 7"},
+        "0x2E": {"bytes": 485, "state_id": 77, "completion_state": "3"},
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": skid_helper,
+        **helper_members[skid_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")

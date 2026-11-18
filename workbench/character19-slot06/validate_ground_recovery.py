@@ -37,6 +37,7 @@ for case, (native_size, state, force_standing) in expected.items():
     assert "*(double *)(param_1 + 0xc) = _DAT_007872f8;" in block
     assert "*(double *)(param_1 + 0xe) = _DAT_007872f8;" in block
     assert "*(double *)(param_1 + 0x2e) =" in block
+    assert "*(double *)(*(int *)param_1[0x1e] + 0x28) < _DAT_007872f8" in block
     assert "*(short *)(param_1 + 3) = (short)param_1[3] + 1;" in block
     assert "*(short *)((int)param_1 + 10) = *(short *)((int)param_1 + 10) + 1;" in block
     if force_standing:
@@ -69,11 +70,10 @@ for expression in (
     "dashMomentumFlag = 0;",
     "velocityX = 0.0;",
     "velocityY = 0.0;",
-    "positionX - 20.0 < 0.0",
+    "positionX - 20.0 <= 0.0",
     "639.0 <= positionX + 20.0",
     "outgoingPushbackVelocityX =",
-    "(*opponentSlot)->positionX < 0.0",
-    "(*opponentSlot)->positionX < 0.0) * 0.25",
+    "(*opponentSlot)->positionY < 0.0",
     "field000c = field000c + 1;",
     "field0008 = 7;",
     "forceStandingState || (inputY == 1)",
@@ -84,9 +84,10 @@ for expression in (
 # Native state selection is inputY==1 for 0x29/0x2a and unconditional
 # state 3 for 0x2b. Boundary predicates retain their strict/inclusive edges.
 def edge(x):
-    return x - 20.0 < 0.0 or 639.0 <= x + 20.0
+    return x - 20.0 <= 0.0 or 639.0 <= x + 20.0
 assert edge(19.999)
-assert not edge(20.0)
+assert edge(20.0)
+assert not edge(20.001)
 assert not edge(618.999)
 assert edge(619.0)
 print({"variants": 3, "verified_constants": len(constants), "state_ids": [72,73,74]})

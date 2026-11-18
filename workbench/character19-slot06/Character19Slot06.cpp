@@ -1,6 +1,6 @@
 // Partial natural-C++ reconstruction of Character19::Slot06.
 // State IDs are grouped using the native 310-byte selector table.
-// Cases 0-0x28, 0x70-0x74, and the shared 0x75 fallback are restored.
+// Cases 0-0x2e, 0x70-0x74, and the shared 0x75 fallback are restored.
 // are implemented; remaining native handlers are explicitly TODO.
 #include "CharacterViews.h"
 
@@ -221,6 +221,24 @@ void Character19::Slot06()
 
     case 74:
         Slot06UpdateGroundRecovery(
+            timing.frameDuration, timing.animationFrameCount,
+            1);
+        break;
+
+    case 75:
+        Slot06UpdateGroundSkid(
+            timing.frameDuration, timing.animationFrameCount,
+            0);
+        break;
+
+    case 76:
+        Slot06UpdateGroundSkid(
+            timing.frameDuration, timing.animationFrameCount,
+            0);
+        break;
+
+    case 77:
+        Slot06UpdateGroundSkid(
             timing.frameDuration, timing.animationFrameCount,
             1);
         break;
@@ -643,9 +661,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 75:
-    case 76:
-    case 77:
     case 81:
     case 82:
     case 83:
