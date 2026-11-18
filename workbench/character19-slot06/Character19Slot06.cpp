@@ -130,6 +130,14 @@ void Character19::Slot06()
         Slot06Case05();
         break;
 
+    case 9:
+        Slot06Case08();
+        break;
+
+    case 10:
+        Slot06Case09();
+        break;
+
     case 300:
         Slot06Case70();
         break;
@@ -356,8 +364,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 9:
-    case 10:
     case 14:
     case 15:
     case 16:

@@ -412,6 +412,8 @@ public:
     void Slot06Case03();
     void Slot06Case04();
     void Slot06Case05();
+    void Slot06Case08();
+    void Slot06Case09();
     void Slot06Case70();
     void Slot06Case71();
     void Slot06Case72();
