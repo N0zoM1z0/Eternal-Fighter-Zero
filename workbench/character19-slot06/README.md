@@ -16,7 +16,7 @@ Currently implemented state coverage:
 - selector cases 0-10: state IDs 1-11 except 12, plus state 13
 - selector cases 0x70-0x74: state IDs 300, 303, 306, 309, 310, dispatched to isolated C++ handlers
 - selector case 0x75: all 193 native fallback state IDs
-- remaining 89 valid state IDs: explicitly marked TODO, not silently routed to the fallback
+- remaining 88 valid state IDs: explicitly marked TODO, not silently routed to the fallback
 
 Character19Slot06Cases.cpp contains ten isolated natural-C++ handlers plus two shared airborne-state helpers for selector cases 0x70-0x74. The native intervals and candidate member sizes are:
 
@@ -58,6 +58,10 @@ The local CharacterViews.h copy adds only non-virtual draft helper declarations;
 
 Next: translate the remaining selector cases, replace the temporary helper calls with inline case bodies, and compare the complete 58,363-byte owner. Do not promote Slot06 as Exact while any valid state remains a TODO.
 
+
+## Short hop / landing correction: selector case 0x12
+
+State ID 47 is a standalone 304-byte native branch. The C++ dispatcher now preserves its 0.035 gravity, strict predicted-ground-crossing test, frame-2 clamp, native marker-byte write (Secondary offset 0x2c9 = 7), and the unusual frame-index wrap/decrement sequence. The target-backed validator checks the constant and all of these control-flow operations. This case is compiled as part of the partial Slot06 dispatcher; it is not an Exact owner claim.
 
 ## Counter-movement family: selector cases 0x13-0x17
 

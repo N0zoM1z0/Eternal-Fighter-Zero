@@ -1,6 +1,6 @@
 // Partial natural-C++ reconstruction of Character19::Slot06.
 // State IDs are grouped using the native 310-byte selector table.
-// Cases 0-0x11, 0x70-0x74, and the shared 0x75 fallback are restored.
+// Cases 0-0x17, 0x70-0x74, and the shared 0x75 fallback are restored.
 // are implemented; remaining native handlers are explicitly TODO.
 #include "CharacterViews.h"
 
@@ -165,6 +165,34 @@ void Character19::Slot06()
             timing.frameDuration, timing.animationFrameCount,
             2, -1.5, -0.5,
             1, 0);
+        break;
+
+    case 47:
+        if ((field000a == 0) && (field000c == 0)) {
+            velocityX = 0.0;
+            gravity = 0.035;
+        }
+        velocityY = velocityY + gravity;
+        if (((positionY + velocityY) > 0.0) && (field000a < 2)) {
+            field000c = 0;
+            field000a = 2;
+            reinterpret_cast<unsigned char *>(&soundSlots[49])[1] = 7;
+            positionY = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+            velocityX = 0.0;
+        }
+        field000c = field000c + 1;
+        if (timing.frameDuration <= field000c) {
+            field000c = 0;
+            field000a = field000a + 1;
+            if (field000a == 2) {
+                field000a = field000a - 2;
+            }
+            if (timing.animationFrameCount <= field000a) {
+                field000a = field000a - 1;
+            }
+        }
         break;
 
     case 50:
@@ -443,7 +471,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 47:
     case 55:
     case 56:
     case 57:

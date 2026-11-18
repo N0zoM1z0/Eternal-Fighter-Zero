@@ -9,7 +9,7 @@ states_by_case = {
     ]
     for row in rows
 }
-implemented = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x13, 0x14, 0x15, 0x16, 0x17, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
+implemented = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
 mapped = {
     state
     for case, states in states_by_case.items()
@@ -21,7 +21,7 @@ unimplemented = sorted(set(range(1, 0x137)) - mapped)
 lines = [
     "// Partial natural-C++ reconstruction of Character19::Slot06.",
     "// State IDs are grouped using the native 310-byte selector table.",
-    "// Cases 0-0x11, 0x70-0x74, and the shared 0x75 fallback are restored.",
+    "// Cases 0-0x17, 0x70-0x74, and the shared 0x75 fallback are restored.",
     "// are implemented; remaining native handlers are explicitly TODO.",
     '#include "CharacterViews.h"',
     "",
@@ -170,6 +170,37 @@ for case, config in [
         "        break;",
         "",
     ]
+
+lines += labels(0x12)
+lines += [
+    "        if ((field000a == 0) && (field000c == 0)) {",
+    "            velocityX = 0.0;",
+    "            gravity = 0.035;",
+    "        }",
+    "        velocityY = velocityY + gravity;",
+    "        if (((positionY + velocityY) > 0.0) && (field000a < 2)) {",
+    "            field000c = 0;",
+    "            field000a = 2;",
+    "            reinterpret_cast<unsigned char *>(&soundSlots[49])[1] = 7;",
+    "            positionY = 0.0;",
+    "            velocityY = 0.0;",
+    "            gravity = 0.0;",
+    "            velocityX = 0.0;",
+    "        }",
+    "        field000c = field000c + 1;",
+    "        if (timing.frameDuration <= field000c) {",
+    "            field000c = 0;",
+    "            field000a = field000a + 1;",
+    "            if (field000a == 2) {",
+    "                field000a = field000a - 2;",
+    "            }",
+    "            if (timing.animationFrameCount <= field000a) {",
+    "                field000a = field000a - 1;",
+    "            }",
+    "        }",
+    "        break;",
+    "",
+]
 
 for case, config in [
     (0x13, (10, -1.1, 10.0)),

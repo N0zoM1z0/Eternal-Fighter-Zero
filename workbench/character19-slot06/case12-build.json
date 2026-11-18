@@ -1,0 +1,24 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_case": {
+    "selector": "0x12",
+    "state_id": 47,
+    "entry": "0x0066A422",
+    "end_exclusive": "0x0066A552",
+    "bytes": 304
+  },
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "da3772584b86f58da1726bbd036b59d4338620a381357d58b87da4cd4fff1f76",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "b800ea57347d6bfa2ac02e3d379466658739ba460a2fee14e83708fc3eab975d",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 2738,
+    "relocations": 108,
+    "status": "partial-semantic-workbench-not-exact"
+  },
+  "gravity": 0.035,
+  "marker_byte_offset": "0x2c9",
+  "marker_value": 7,
+  "status": "semantic-workbench-only-not-exact"
+}
