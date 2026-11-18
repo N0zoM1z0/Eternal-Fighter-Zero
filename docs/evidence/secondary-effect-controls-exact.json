@@ -80,15 +80,15 @@
       "symbol": "?SetVerticalShake@Secondary@@QAEXHH@Z",
       "target_address": "0x00410A10",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "bb8e5e37bafe8341a184b79e849b818ace70858291a0df8f3b261020c46639d7",
-      "object_sha256": "bd0938b0ea2d3a45f62205bdfc750cebd4eb72bce24ed16aef3d9134b9651e6c",
+      "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
+      "object_sha256": "a230724dd53de14d33aa9a55be952a0bfa4c0c254ce0141c9bb40fb6652b17d1",
       "source_sha256": "68d0a8b5608481634f817aa49e794fcf8a45d8e7c673ec7d3fd775805e333131",
       "dependencies": {
-        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "b9718cd929ab8c46cefb7730aa93b818fd1f3d160caf31d630f48a0b3ee36b85",
+      "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "137c58982d158346e7eb40a0ff21fae72b75dd580024391f738118373479ef75",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -179,66 +179,28 @@
   "method": "selected complete contribution comparison; 41 cold source/profile/dependency artifacts cover10 new Makoto constructor/frame/input/command units and79 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
   "latest_selected_replay": {
     "result": "exact",
-    "size": 77,
-    "matched_bytes": 77,
+    "size": 43,
+    "matched_bytes": 43,
     "difference_count": 0,
     "first_differences": [],
-    "relocations": [
-      {
-        "offset": 12,
-        "target": 7897080,
-        "type": "DIR32",
-        "type_id": 6,
-        "symbol": "__real@404ca5dc7e61df46",
-        "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff8; literal 57.29579143313326 and COFF payload bytes independently verified",
-        "addend": 0
-      },
-      {
-        "offset": 23,
-        "target": 7832244,
-        "type": "REL32",
-        "type_id": 20,
-        "symbol": "_cos",
-        "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained",
-        "addend": 0
-      },
-      {
-        "offset": 44,
-        "target": 7897080,
-        "type": "DIR32",
-        "type_id": 6,
-        "symbol": "__real@404ca5dc7e61df46",
-        "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff8; literal 57.29579143313326 and COFF payload bytes independently verified",
-        "addend": 0
-      },
-      {
-        "offset": 55,
-        "target": 7832068,
-        "type": "REL32",
-        "type_id": 20,
-        "symbol": "_sin",
-        "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained",
-        "addend": 0
-      }
-    ],
-    "relocated_sha256": "497d756200ad47f2a87ef2f2186506db676d403a233f28525a21137317311f37",
-    "target_extent_sha256": "497d756200ad47f2a87ef2f2186506db676d403a233f28525a21137317311f37",
-    "unit": "secondary-effect-set-polar-velocity",
-    "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
-    "target_address": "0x00434010",
+    "relocations": [],
+    "relocated_sha256": "63da85902d6263e7193af3404095c4d02ef40cca48833408fd9da477906829e0",
+    "target_extent_sha256": "63da85902d6263e7193af3404095c4d02ef40cca48833408fd9da477906829e0",
+    "unit": "secondary-set-vertical-shake",
+    "symbol": "?SetVerticalShake@Secondary@@QAEXHH@Z",
+    "target_address": "0x00410A10",
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
-    "object_sha256": "3a9f222306d7e2d5abbccdeca12f6f399a6dfb237e1780fad0e6387cacbc27f5",
-    "source_sha256": "6e6657f1b039425992d901430c37734a566d7cfcee44ed52ed388e5cb97858e1",
+    "object_sha256": "a230724dd53de14d33aa9a55be952a0bfa4c0c254ce0141c9bb40fb6652b17d1",
+    "source_sha256": "68d0a8b5608481634f817aa49e794fcf8a45d8e7c673ec7d3fd775805e333131",
     "dependencies": {
       "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
-      "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
-      "src/CharacterViews.h": "67719139719eff631f507727d91d308e8d760f955719822297eb9ad87db1fa4b"
+      "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
     },
     "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
     "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
     "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-    "unit_sha256": "398295450b2bbd43067bbc7bc3690696a5f8e92771f81c199971b465192d3083",
+    "unit_sha256": "137c58982d158346e7eb40a0ff21fae72b75dd580024391f738118373479ef75",
     "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
     "acceptance_authority": "complete-function-codegen"
   }

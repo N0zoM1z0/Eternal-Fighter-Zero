@@ -664,21 +664,75 @@
       "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
       "target_address": "0x004108A0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "e46cccced8e10a758d731d76eaedd038ef548e02a0175a29ca946fb8589a0f99",
-      "object_sha256": "72562924886cc0a9f2a8e6e5b99404704a0d7661509c334acbe5440235a34dc9",
+      "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
+      "object_sha256": "f641e3347d29a46a67566bd551ed7cdb6d773b9cda58972ceb312dc00c14d009",
       "source_sha256": "30f51cccb3da13309f537b8a9a3f866aa529ed9f0c496860e67dcd7fa843e375",
       "dependencies": {
         "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
         "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "ba3f9739ea0d5878ebbe704f9b0de0e4f38989e3e2f9a7278f038e63d2d47639",
+      "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "11b78a31703eb4ee926a8fe8cb74870cfdb9c96a6bd28ae109f4fbfe249aef84",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "seven new loading/Mizuka functions and204 actual Engine.h consumers;57 serial cold artifacts; all211 complete strict comparisons exact; compiler-local destination/offsets and four original string payloads independently checked before symbol-name refresh",
+  "latest_selected_replay": {
+    "result": "exact",
+    "size": 148,
+    "matched_bytes": 148,
+    "difference_count": 0,
+    "first_differences": [],
+    "relocations": [
+      {
+        "offset": 10,
+        "target": 7830881,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "_rand",
+        "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+        "addend": 0
+      },
+      {
+        "offset": 49,
+        "target": 4218800,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ReadWord@WordFile@@QAEGXZ",
+        "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+        "addend": 0
+      },
+      {
+        "offset": 95,
+        "target": 4218912,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?WriteWord@WordFile@@QAEXG@Z",
+        "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+        "addend": 0
+      }
+    ],
+    "relocated_sha256": "747130457267c92c4ba6ba2f527a64348c212e8a764413bf119eec56cd8e557b",
+    "target_extent_sha256": "747130457267c92c4ba6ba2f527a64348c212e8a764413bf119eec56cd8e557b",
+    "unit": "secondary-random-range",
+    "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+    "target_address": "0x004108A0",
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
+    "object_sha256": "f641e3347d29a46a67566bd551ed7cdb6d773b9cda58972ceb312dc00c14d009",
+    "source_sha256": "30f51cccb3da13309f537b8a9a3f866aa529ed9f0c496860e67dcd7fa843e375",
+    "dependencies": {
+      "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+      "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+    },
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+    "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
+    "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+    "unit_sha256": "11b78a31703eb4ee926a8fe8cb74870cfdb9c96a6bd28ae109f4fbfe249aef84",
+    "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+    "acceptance_authority": "complete-function-codegen"
+  },
   "selected_native_header_signedness_replay": "Every function in affected source groups was recompiled with recovered signed Scene6/Context setting bytes and compared against the complete original owner with exact relocations; eight Scene0 switch label renames were individually checked against native local target offsets."
 }
