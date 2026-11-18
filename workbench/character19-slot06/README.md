@@ -12,28 +12,19 @@ The state selector maps 310 animation-state IDs onto 118 shared case handlers. 1
 
 Character19Slot06.cpp is a partial natural-C++ reconstruction of the common prologue and switch dispatch. It has the original hitstop/opponent-hitstun early exits, constructs and resets the local EffectSpawn, snapshots PatternSequence frame timing, and groups the real 310 state IDs according to the recovered selector table.
 
-Currently implemented state coverage:
-- selector cases 0-10: state IDs 1-11 except 12, plus state 13
-- selector cases 0x70-0x74: state IDs 300, 303, 306, 309, 310, dispatched to isolated C++ handlers
-- selector case 0x75: all 193 native fallback state IDs
-- remaining 68 valid state IDs: explicitly marked TODO, not silently routed to the fallback
+The generated dispatcher maps all **310 native state IDs** through the complete **118-entry selector table**. The 193 IDs assigned to selector 0x75 use the actual shared native fallback; the other 117 selector cases have explicit natural-C++ switch bodies or dedicated state helpers. No valid state ID is silently mapped to a TODO branch.
 
-Character19Slot06Cases.cpp contains ten isolated natural-C++ handlers plus two shared airborne-state helpers for selector cases 0x70-0x74. The native intervals and candidate member sizes are:
+Character19Slot06Cases.cpp contains the out-of-line natural-C++ state helpers. The largest 0x73 super/KO body is now included directly in Character19Slot06.cpp through Character19Slot06Case73.inc, so it shares the dispatcher's single EffectSpawn and frame-timing locals just like the native owner. The five large super/KO selectors are:
 
-| Selector | State ID | Native bytes | Candidate bytes |
-|---|---:|---:|---:|
-| 0x03 | 4 | 905 | 974 |
-| 0x04 | 5 | 912 | 992 |
-| 0x05 | 6 | 912 | 992 |
-| 0x08 | 9 | 767 | 847 |
-| 0x09 | 10 | 822 | 891 |
-| 0x70 | 300 | 970 | 1,023 |
-| 0x71 | 303 | 698 | 759 |
-| 0x72 | 306 | 501 | 573 |
-| 0x73 | 309 | 2,400 | 2,438 |
-| 0x74 | 310 | 177 | 241 |
+| Selector | State ID | Native bytes | Candidate layout |
+|---|---:|---:|---|
+| 0x70 | 300 | 970 | dedicated helper |
+| 0x71 | 303 | 698 | dedicated helper |
+| 0x72 | 306 | 501 | dedicated helper |
+| 0x73 | 309 | 2,400 | inlined in Slot06 |
+| 0x74 | 310 | 177 | dedicated helper |
 
-The candidate members include separate helper prologues/epilogues and local spawn/timing setup; the native function shares those through its common frame. These are semantic workbench results, not Exact claims.
+The native 0x73 body now reuses the dispatcher-owned EffectSpawn and FrameTiming, avoiding a second local spawn object and redundant pattern reads. The case is still a semantic workbench reconstruction, not an Exact claim.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 
@@ -287,6 +278,6 @@ Case 0x6f (state 267) resets frame state, starts trail spacing 3, decays field01
 
 ## Long super/KO state machines: selector cases 0x70-0x74
 
-The final five dedicated selectors are substantial native state machines, not padding or generic aliases. Case 0x70 (state 300, 970 bytes) runs a 13-cycle super loop with tint, a scene timer, random local debris and repeated frame-17 loops. Case 0x71 (state 303, 698 bytes) is a freeze/impact sequence with vertical shake and paired local effects; its frame-13 loop rewinds two frames ten times using a descending field3138 counter. Case 0x72 (state 306, 501 bytes) is a shorter launch/impact sequence with gravity 0.035 and a state-9 completion. Case 0x73 (state 309, 2400 bytes) is the long multi-phase KO/super: opponent hitstop and KO-delay writes, multiple context and local effects, conditional branches on collision result and opponent health, several velocity/gravity phases, repeated animation loops, and a landing exit to state 0x0d. Case 0x74 (state 310, 177 bytes) is the final neutralizing face/pose transition.
+The final five dedicated selectors are substantial native state machines, not padding or generic aliases. Case 0x70 (state 300, 970 bytes) runs a 13-cycle super loop with tint, a scene timer, random local debris and repeated frame-17 loops. Case 0x71 (state 303, 698 bytes) is a freeze/impact sequence with vertical shake and paired local effects; its frame-13 loop rewinds two frames ten times using a descending field3138 counter. Case 0x72 (state 306, 501 bytes) is a shorter launch/impact sequence with gravity 0.035 and a state-9 completion. Case 0x73 (state 309, 2400 bytes) is now inlined into the common dispatcher and is the long multi-phase KO/super: opponent hitstop and KO-delay writes, multiple context and local effects, conditional branches on collision result and opponent health, several velocity/gravity phases, repeated animation loops, and a landing exit to state 0x0d. Case 0x74 (state 310, 177 bytes) is the final neutralizing face/pose transition.
 
-These handlers reuse the recovered natural C++ leaves for random/replay sampling, scene timer, shake/offset, tint and ResetFrame. The 0x73 frame-0 initialization now calls ResetFrame rather than duplicating its five kinematic field writes.
+These handlers reuse the recovered natural C++ leaves for random/replay sampling, scene timer, shake/offset, tint and ResetFrame. The 0x73 frame-0 and landing initialization now call ResetFrame rather than duplicating its five kinematic field writes.

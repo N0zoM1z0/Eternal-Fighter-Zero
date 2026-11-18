@@ -466,7 +466,6 @@ public:
     void Slot06Case70();
     void Slot06Case71();
     void Slot06Case72();
-    void Slot06Case73();
     void Slot06Case74();
 };
 class Character20 : public Secondary {

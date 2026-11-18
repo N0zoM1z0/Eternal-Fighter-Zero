@@ -218,7 +218,7 @@ source_helpers = {
          "spawn.type = 0x1aa;", "spawn.x = positionX;", "spawn.y = positionY;",
          "attackCollisionResult = 0;", "field0008 = 9;", "FaceOpponent();", "ResetPose();")),
     0x73: (
-        "Slot06Case73",
+        None,
         ("ResetFrame();", "hitstunFrames = 0x78;", "meter = meter - 3000;",
          "SetTint(0xb0, 3);", "spawn.type = 0x46;", "spawn.type = 0x47;",
          "spawn.type = 0x1b2;", "spawn.type = 0x1b3;",
@@ -239,11 +239,28 @@ source_helpers = {
          "attackCollisionResult = 0;", "field0008 = 0;", "FaceOpponent();", "ResetPose();")),
 }
 for case, (name, expressions) in source_helpers.items():
-    start = source.index(f"void Character19::{name}")
-    end = source.index("\n}\n", start) + 3
-    body = source[start:end]
+    if case == 0x73:
+        body = (ROOT / "workbench/character19-slot06/Character19Slot06Case73.inc").read_text()
+    else:
+        start = source.index(f"void Character19::{name}")
+        end = source.index("\n}\n", start) + 3
+        body = source[start:end]
     for expression in expressions:
         assert expression in body, (hex(case), expression)
+
+inline73 = (ROOT / "workbench/character19-slot06/Character19Slot06Case73.inc").read_text()
+assert inline73.count("ResetFrame();") == 2
+assert "ResetLocalEffectSpawn" not in inline73
+assert "EffectSpawn spawn" not in inline73
+assert "timing.frameDuration" in inline73
+assert "timing.animationFrameCount" in inline73
+landing_reset = inline73.rindex("ResetFrame();")
+landing_pose = inline73.rindex("ResetPose();")
+landing_y = inline73.rindex("positionY = 0.0;")
+landing_state = inline73.rindex("field0008 = 0x0d;")
+assert landing_reset < landing_pose < landing_y < landing_state
+assert "EffectSpawn spawn;" in (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+assert "ResetLocalEffectSpawn(&spawn);" in (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 
 # Validate the natural leaf functions used by these bosses.
 random_source = (ROOT / "src/SecondaryCombat.cpp").read_text()
@@ -280,7 +297,10 @@ for state, name in (
     (310, "Slot06Case74"),
 ):
     assert f"case {state}:" in renderer
-    assert f"{name}();" in renderer
+    if state == 309:
+        assert '#include "Character19Slot06Case73.inc"' in renderer
+    else:
+        assert f"{name}();" in renderer
 
 # The native RandomRange helper consumes the same CRT/replay word and scales by 32768.
 random_disasm = subprocess.run(

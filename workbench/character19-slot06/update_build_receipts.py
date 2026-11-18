@@ -2,6 +2,7 @@
 import ast
 import csv
 import json
+import hashlib
 import re
 import subprocess
 import sys
@@ -88,7 +89,6 @@ assert any(symbol.startswith("?Slot06UpdateTrailEffectFinish@Character19@@") for
 assert "?Slot06Case70@Character19@@QAEXXZ" in helper_members
 assert "?Slot06Case71@Character19@@QAEXXZ" in helper_members
 assert "?Slot06Case72@Character19@@QAEXXZ" in helper_members
-assert "?Slot06Case73@Character19@@QAEXXZ" in helper_members
 assert "?Slot06Case74@Character19@@QAEXXZ" in helper_members
 
 
@@ -144,6 +144,11 @@ dispatcher_record = {
     "relocation_count": len(main_relocations),
     "implemented_state_ids": len(implemented_states),
     "unimplemented_state_ids": 310 - len(implemented_states),
+    "included_sources": {
+        "workbench/character19-slot06/Character19Slot06Case73.inc": hashlib.sha256(
+            (workbench / "Character19Slot06Case73.inc").read_bytes()
+        ).hexdigest(),
+    },
     "status": "partial-semantic-workbench-not-exact",
 }
 slot06_path = workbench / "slot06-build.json"
@@ -1394,8 +1399,16 @@ super_state_symbols = {
         (0x74, "0x006758BA", 177, 310),
     )
 }
-for record in super_state_symbols.values():
-    record.update(helper_members[record["symbol"]])
+for case, record in super_state_symbols.items():
+    if case == "0x73":
+        record["symbol"] = None
+        record["inline_source"] = "workbench/character19-slot06/Character19Slot06Case73.inc"
+        record["inline_source_sha256"] = hashlib.sha256(
+            (ROOT / record["inline_source"]).read_bytes()
+        ).hexdigest()
+        record["candidate_status"] = "inlined-natural-cpp-semantic-candidate"
+    else:
+        record.update(helper_members[record["symbol"]])
 (workbench / "super-move-states-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": super_state_symbols,
@@ -1416,11 +1429,13 @@ for record in super_state_symbols.values():
         "ResetFrame": "FUN_0040f1e0",
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "status": "semantic-workbench-only-not-exact",
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "inlined_case_body": "workbench/character19-slot06/Character19Slot06Case73.inc",
+        "inlined_case_body_sha256": super_state_symbols["0x73"]["inline_source_sha256"],
+        "status": "natural-cpp-semantic-workbench-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,

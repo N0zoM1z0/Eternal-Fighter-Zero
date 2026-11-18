@@ -821,7 +821,9 @@ void Character19::Slot06()
         break;
 
     case 309:
-        Slot06Case73();
+        {
+#include "Character19Slot06Case73.inc"
+        }
         break;
 
     case 310:

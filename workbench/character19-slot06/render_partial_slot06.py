@@ -724,7 +724,16 @@ for case, method in [
     (0x74, "Slot06Case74"),
 ]:
     lines += labels(case)
-    lines += [f"        {method}();", "        break;", ""]
+    if case == 0x73:
+        lines += [
+            "        {",
+            '#include "Character19Slot06Case73.inc"',
+            "        }",
+            "        break;",
+            "",
+        ]
+    else:
+        lines += [f"        {method}();", "        break;", ""]
 
 lines += labels(0x75)
 lines += [
