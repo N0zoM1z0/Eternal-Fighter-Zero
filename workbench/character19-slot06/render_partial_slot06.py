@@ -254,16 +254,12 @@ for case, force_standing in [
         "",
     ]
 
-for case, force_standing in [
-    (0x2c, 0),
-    (0x2d, 0),
-    (0x2e, 1),
-]:
+for case in (0x2c, 0x2d, 0x2e):
     lines += labels(case)
     lines += [
-        "        Slot06UpdateGroundSkid(",
-        "            timing.frameDuration, timing.animationFrameCount,",
-        f"            {force_standing});",
+        "        {",
+        f'#include "Character19Slot06Case{case:02X}.inc"',
+        "        }",
         "        break;",
         "",
     ]

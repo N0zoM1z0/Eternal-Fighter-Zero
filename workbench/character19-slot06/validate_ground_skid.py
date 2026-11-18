@@ -28,10 +28,8 @@ expected = {
     0x2D: (509, 76, 0),
     0x2E: (485, 77, 1),
 }
-renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
 for case, (native_size, state, force_standing) in expected.items():
     block = "\n".join(blocks[case])
-    assert f"(0x{case:02x}, {force_standing})" in renderer
     for expression in (
         "*(double *)(param_1 + 0x46) = *(double *)(param_1 + 0x46) - _DAT_00787db8;",
         "*(undefined1 *)(param_1 + 0x56) = 0;",
@@ -73,25 +71,45 @@ for address, expected_value in constants.items():
     assert actual == expected_value, (hex(address), actual, expected_value)
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
-    "void Character19::Slot06UpdateGroundSkid",
-    "field0118 = field0118 - 0.6",
-    "meter = meter + 30",
-    "field0118 = field0118 - 30.0",
-    "velocityX = 2.2",
-    "velocityY = 0.0",
-    "positionY = 0.0",
-    "gravity = 0.0",
-    "horizontalDeceleration = 0.06",
-    "velocityX = velocityX - horizontalDeceleration",
-    "if (velocityX < 0.0)",
-    "positionX - 20.0 <= 0.0",
-    "639.0 <= positionX + 20.0",
-    "(*opponentSlot)->positionY < 0.0",
-    "field0008 = 7;",
-    "forceStandingState || (inputY == 1)",
-):
-    assert expression in source, expression
+assert "Slot06UpdateGroundSkid" not in source
+dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+for case, (native_size, state, force_standing) in expected.items():
+    fragment = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        "field0118 = field0118 - 0.6;",
+        "dashMomentumFlag = 0;",
+        "field000a == 0",
+        "meter = meter + 30;",
+        "field0118 = field0118 - 30.0;",
+        "velocityX = 2.2;",
+        "velocityY = 0.0;",
+        "positionY = 0.0;",
+        "gravity = 0.0;",
+        "horizontalDeceleration = 0.06;",
+        "velocityX = velocityX - horizontalDeceleration;",
+        "if (velocityX < 0.0)",
+        "positionX - 20.0 <= 0.0",
+        "639.0 <= positionX + 20.0",
+        "(*opponentSlot)->positionY < 0.0",
+        "outgoingPushbackVelocityX =",
+        "field000c = field000c + 1;",
+        "if (timing.frameDuration <= field000c)",
+        "if (timing.animationFrameCount <= field000a)",
+        "ResetPose();",
+        "timing.frameDuration",
+        "timing.animationFrameCount",
+    ):
+        assert expression in fragment, (hex(case), expression)
+    if force_standing:
+        assert "field0008 = 3;" in fragment
+        assert "field0008 = 7;" not in fragment
+        assert "inputY == 1" not in fragment
+    else:
+        assert "field0008 = 7;" in fragment
+        assert "if (inputY == 1)" in fragment
+        assert "field0008 = 3;" in fragment
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
+assert "Slot06UpdateGroundSkid(" not in dispatcher
 
 # The other recovered character's state-75..77 implementation independently
 # confirms the same movement order and opponent vertical-position test.

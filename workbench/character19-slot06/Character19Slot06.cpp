@@ -248,21 +248,21 @@ void Character19::Slot06()
         break;
 
     case 44:
-        Slot06UpdateGroundSkid(
-            timing.frameDuration, timing.animationFrameCount,
-            0);
+        {
+#include "Character19Slot06Case2C.inc"
+        }
         break;
 
     case 45:
-        Slot06UpdateGroundSkid(
-            timing.frameDuration, timing.animationFrameCount,
-            0);
+        {
+#include "Character19Slot06Case2D.inc"
+        }
         break;
 
     case 46:
-        Slot06UpdateGroundSkid(
-            timing.frameDuration, timing.animationFrameCount,
-            1);
+        {
+#include "Character19Slot06Case2E.inc"
+        }
         break;
 
     case 47:

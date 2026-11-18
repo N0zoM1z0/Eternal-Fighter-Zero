@@ -55,6 +55,7 @@ The 0x5C opponent-capture and 0x5D stage-combo handlers are now inline (480/594 
 The four 0x5E/0x5F/0x61/0x62 trail dash finishers (307 native bytes each) are now inline individually. Their meter frame/gain, sound slot, collision-clear frame, and completion state are compile-time case constants rather than a shared parameterized helper.
 The 0x33/0x34 airborne knockback landing pair (467/482 native bytes) is also inline. Each keeps its own vertical acceleration, one-shot first-hit gate, 0x1F0 local marker, meter/sound event, and neutral-loop versus finish-neutral transition.
 The nine 0x13-0x1B counter-movement cases (497-byte native bodies, with the final three 473 bytes) are now restored as nine natural C++ branches. Each owns its meter gain, opponent-scaled launch speed, field-decay constant, stage-edge pushback calculation, and input-dependent versus forced-standing finish.
+The 0x2C-0x2E ground-skid family (509/509/485 native bytes) is now inline. It preserves the initial meter/velocity setup, 0.06 horizontal braking, stage-edge pushback scaling by opponent height, and the two input-driven versus forced-standing finish modes.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 

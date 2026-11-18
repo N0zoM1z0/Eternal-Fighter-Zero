@@ -412,7 +412,6 @@ public:
     int Slot06OpponentWithinKnockbackRange();
     void Slot06UpdateKnockbackLanding(unsigned short, unsigned short, int);
     void Slot06UpdateGroundRecovery(unsigned short, unsigned short, int);
-    void Slot06UpdateGroundSkid(unsigned short, unsigned short, int);
     void Slot06UpdateAirKnockback(unsigned short, unsigned short, SecondaryEffectSpawn *);
     void Slot06UpdateLocalEffectRecovery(unsigned short, unsigned short, SecondaryEffectSpawn *);
     void Slot06UpdateFaceRecovery(unsigned short, unsigned short);
