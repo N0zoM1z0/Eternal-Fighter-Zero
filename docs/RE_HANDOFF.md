@@ -1645,3 +1645,16 @@ Character19::Slot07 at 0x0067CF50 is now a complete natural C++ source port in s
 The selected VC7.1 /Od /G6 /MT /Gy /W3 build succeeds. The current COFF symbol is 26,059 bytes, including 320 bytes of switch data (55 four-byte jump entries plus a 100-byte selector table) placed after the native code owner. The candidate code prefix is 25,739 bytes versus the 25,787-byte native owner, 48 bytes shorter; the selector table matches the native bytes exactly. The object has 265 relocations that still require original-target binding and verification.
 
 The current source pass moved case 0x1c0 into native switch-arm order and corrected ten case-0x1f0 spawn pairs to use Secondary::positionX/positionY rather than the active effect slot coordinates. It also corrected ten spawn group writes from field0030 to the actual group byte, matching the native local-spawn layout, removed incorrect signed casts from unsigned-short type tests, and inverted the equivalent if/else to reproduce the native spawn-first/frame-update-last branch layout. These natural C++ corrections reduced the code prefix by 294 bytes (26,033 to 25,739). Case 0x1f0 is now 1,399 bytes versus its 1,401-byte native interval; other per-arm instruction differences remain. This is substantial implementation progress but not Exact. No ASM, padding, or byte patching is being used. The exact replay is not accepted until code and data extents, instruction bytes, and all original relocations are explicitly bound and verified.
+
+## Character19 lifecycle leaf replay
+
+A targeted scripts/replay-exact-units.py run rebuilt only the six existing Character19 lifecycle units. All six returned result: exact, difference_count: 0, and complete native extent matches:
+
+- character-19-initialize-state: 283 bytes, one bound REL32.
+- character-19-reset-pose: 58 bytes, one bound REL32.
+- character-19-remove-local-effect: 80 bytes, one bound REL32.
+- character-19-slot01: 11 bytes, no relocations.
+- character-19-slot08: 11 bytes, no relocations.
+- character-19-emit-local-effect: 47 bytes, one bound REL32.
+
+The three base-call destinations are independently recorded in the unit manifest; the two empty virtual slots match byte-for-byte. This was intentionally scoped to these six owners and did not run a full cold replay. The evidence is local code-generation evidence, not a claim of canonical Factory acceptance.
