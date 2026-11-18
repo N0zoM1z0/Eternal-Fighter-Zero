@@ -52,6 +52,7 @@ assert any(symbol.startswith("?Slot06UpdateAirborneKnockbackLanding@Character19@
 assert any(symbol.startswith("?Slot06UpdateLocalEffectRecovery@Character19@@") for symbol in helper_members)
 assert "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateDefeatImpact@Character19@@") for symbol in helper_members)
+assert "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z" in helper_members
 
 main_source = workbench / "Character19Slot06.cpp"
 main_object = build_dir / "Character19Slot06.obj"
@@ -79,7 +80,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 254
+assert len(implemented_states) == 256
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -344,6 +345,26 @@ defeat_helper = next(
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
     "status": "semantic-workbench-only-not-exact",
+}, indent=2) + "\n")
+
+defeat_wait_helper = "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z"
+(workbench / "final-defeat-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": {
+        "0x38": {"entry": "0x0066E632", "bytes": 248, "state_id": 98, "same_body_as": "0x37"},
+        "0x39": {"entry": "0x0066E72A", "bytes": 186, "state_id": 99, "transition_state": 0x60, "health_timeout_frames": 60},
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": defeat_wait_helper,
+        **helper_members[defeat_wait_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
 }, indent=2) + "\n")
 
 print({

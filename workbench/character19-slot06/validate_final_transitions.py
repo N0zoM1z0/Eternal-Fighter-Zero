@@ -19,11 +19,12 @@ for i, line in enumerate(lines):
 
 blocks = {}
 for n, (i, value) in enumerate(starts):
-    if value in (0x35, 0x36, 0x37):
+    if value in (0x35, 0x36, 0x37, 0x38, 0x39):
         blocks[value] = lines[i:starts[n + 1][0]]
-assert set(blocks) == {0x35, 0x36, 0x37}
+assert set(blocks) == {0x35, 0x36, 0x37, 0x38, 0x39}
+assert re.sub(r"case 0x[0-9a-f]+:", "case X:", "\n".join(blocks[0x37])) == re.sub(r"case 0x[0-9a-f]+:", "case X:", "\n".join(blocks[0x38]))
 
-expected = {0x35:(179,87),0x36:(149,96),0x37:(248,97)}
+expected = {0x35:(179,87),0x36:(149,96),0x37:(248,97),0x38:(248,98),0x39:(186,99)}
 for case,(native_size,state) in expected.items():
     block="\n".join(blocks[case])
     if case == 0x35:
@@ -49,7 +50,7 @@ for case,(native_size,state) in expected.items():
             "*(undefined2 *)(param_1 + 2) = 3;",
         ):
             assert expression in block, (hex(case),expression)
-    else:
+    elif case == 0x37:
         for expression in (
             "*(double *)(param_1 + 0xc) = _DAT_007872f8;",
             "*(double *)(param_1 + 0xe) = _DAT_007872f8;",
@@ -63,6 +64,17 @@ for case,(native_size,state) in expected.items():
             "*(undefined2 *)(param_1 + 2) = 99;",
         ):
             assert expression in block, (hex(case),expression)
+    elif case == 0x38:
+        assert re.sub(r"case 0x[0-9a-f]+:", "case X:", "\n".join(blocks[case])) == re.sub(r"case 0x[0-9a-f]+:", "case X:", "\n".join(blocks[0x37]))
+    else:
+        for expression in (
+            "0x3c < *(ushort *)(param_1 + 3)",
+            "0 < param_1[0x42]",
+            "*(undefined2 *)(param_1 + 2) = 0x60;",
+            "*(undefined1 *)(param_1 + 0x56) = 0;",
+            "FUN_0040e630();",
+        ):
+            assert expression in block, (hex(case), expression)
     print(f"case 0x{case:02x}: native={native_size}, state={state}")
 
 sys.path.insert(0,str(ROOT/"scripts"))
@@ -92,6 +104,10 @@ for expression in (
     "contextOwner->EmitEffect(spawn);",
     "pendingContextSoundSlot = 7;",
     "field0008 = 99;",
+    "void Character19::Slot06UpdateDefeatWait",
+    "(health > 0) && (field000c > 60) && (field000a == 0)",
+    "dashMomentumFlag = 0;",
+    "field0008 = 0x60;",
 ):
     assert expression in source,expression
 
@@ -114,4 +130,4 @@ for expression in (
 ):
     assert expression in analog,expression
 
-print({"verified_constants":len(constants),"state_ids":[87,96,97]})
+print({"verified_constants":len(constants),"state_ids":[87,96,97,98,99]})

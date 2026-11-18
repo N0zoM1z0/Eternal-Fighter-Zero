@@ -137,3 +137,8 @@ These branches reuse the one-time local effect type 0x1f0 (owner 1, group/layer 
 ## Final transition effects: selector cases 0x35-0x37
 
 Three short but distinct end-state handlers are now restored. Case 0x35 (state 87) emits local effect 0x1ef at fixed coordinates (60,40), with payload and flag set, then advances to state 0 at animation completion. Case 0x36 (state 96) has no effect; it faces the opponent on the penultimate frame and finishes in state 7 or 3 according to inputY. Case 0x37 (state 97) zeros movement, requests vertical shake (3,0), emits context effect type 3 at the integer-truncated character position, requests sound 7, and transitions to state 99 at the end of its animation. The implementation uses the existing local-effect, context-effect and shake methods rather than duplicating their internals.
+
+
+## Defeat wait: selector case 0x39
+
+State ID 99 is a short defeat-wait handler. If health remains positive after the native strict 60-frame timeout while frame index is zero, it transitions to state 0x60, resets pose, and clears dashMomentumFlag. Independently, it advances the animation timer, faces the opponent exactly when the frame index reaches frameCount, and transitions to state 0x60 again once the animation completes. The target uses 60 here (not the 100-frame threshold found in another character's analogous state), which is retained explicitly.
