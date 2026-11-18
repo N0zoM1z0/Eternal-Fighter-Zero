@@ -137,10 +137,11 @@ for address, expected_value in constants.items():
     assert actual == expected_value, (hex(address), actual, expected_value)
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-capture_start = source.index("void Character19::Slot06UpdateOpponentCaptureImpact")
-capture_end = source.index("\n}\n", capture_start) + 3
-capture_helper = source[capture_start:capture_end]
+assert "Slot06UpdateOpponentCaptureImpact" not in source
+assert "Slot06UpdateOpponentStageCombo" not in source
+capture_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case5C.inc").read_text()
 for expression in (
+    "Secondary *target = *opponentSlot;",
     "velocityX = 0.0;",
     "velocityY = 0.0;",
     "target->positionY == 0.0",
@@ -154,21 +155,22 @@ for expression in (
     "target->ResetPose();",
     "field0008 = 0xdd;",
     "target->airActionDisabled = 1;",
-    "spawn->type = 0;",
-    "spawn->x = (double)((int)positionX + (int)facing * 0x25);",
-    "spawn->y = (double)((int)positionY - 0x2a);",
-    "spawn->group = 2;",
-    "spawn->layer = 1;",
-    "contextOwner->EmitEffect(spawn);",
+    "spawn.type = 0;",
+    "spawn.x = (double)((int)positionX + (int)facing * 0x25);",
+    "spawn.y = (double)((int)positionY - 0x2a);",
+    "spawn.group = 2;",
+    "spawn.layer = 1;",
+    "contextOwner->EmitEffect(&spawn);",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
 ):
     assert expression in capture_helper, expression
 assert "target->field0008 = 0x6e" not in capture_helper
-assert "spawn->owner = 1;" not in capture_helper
+assert "spawn.owner = 1;" not in capture_helper
 
-stage_start = source.index("void Character19::Slot06UpdateOpponentStageCombo")
-stage_end = source.index("\n}\n", stage_start) + 3
-stage_helper = source[stage_start:stage_end]
+stage_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case5D.inc").read_text()
 for expression in (
+    "Secondary *target = *opponentSlot;",
     "field000a == 4",
     "ApplyDamage(0x4e2, 750.0);",
     "target->field0008 = 0x67;",
@@ -186,6 +188,8 @@ for expression in (
     "field0008 = 0;",
     "FaceOpponent();",
     "ResetPose();",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
 ):
     assert expression in stage_helper, expression
 for wrong in ("SetHorizontalShake", "airActionDisabled", "knockbackVelocity", "field0008 = 0x3b"):
@@ -208,9 +212,11 @@ assert "void Secondary::SetVerticalShake(int magnitude, int hold)" in shake
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 220)
-assert "Slot06UpdateOpponentCaptureImpact(" in dispatcher
+assert '#include "Character19Slot06Case5C.inc"' in dispatcher
+assert "Slot06UpdateOpponentCaptureImpact(" not in dispatcher
 assert_selector_case(dispatcher, 221)
-assert "Slot06UpdateOpponentStageCombo(" in dispatcher
+assert '#include "Character19Slot06Case5D.inc"' in dispatcher
+assert "Slot06UpdateOpponentStageCombo(" not in dispatcher
 print({
     "variants": 2,
     "native_bytes": [480, 594],

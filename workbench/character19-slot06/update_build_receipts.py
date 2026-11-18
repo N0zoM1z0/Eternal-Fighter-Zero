@@ -62,8 +62,6 @@ assert any(symbol.startswith("?Slot06UpdateDashFollowupCancel@Character19@@") fo
 assert any(symbol.startswith("?Slot06UpdateAerialGroundSlam@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateGroundImpactRecovery@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateOpponentCaptureImpact@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateOpponentStageCombo@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateTrailDashFinish@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashTrailCharge@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneTrailDash@Character19@@") for symbol in helper_members)
@@ -131,7 +129,7 @@ dispatcher_record = {
         f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
             (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
         ).hexdigest()
-        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x30, 0x31, 0x32, 0x43, 0x44, 0x47, 0x4b, 0x54, 0x55, 0x56, 0x66, 0x69, 0x6e, 0x6f, 0x70, 0x71, 0x72, 0x73, 0x74)
+        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x30, 0x31, 0x32, 0x43, 0x44, 0x47, 0x4b, 0x54, 0x55, 0x56, 0x5c, 0x5d, 0x66, 0x69, 0x6e, 0x6f, 0x70, 0x71, 0x72, 0x73, 0x74)
     },
     "status": "partial-semantic-workbench-not-exact",
 }
@@ -919,10 +917,6 @@ ground_impact_helper = next(
 }, indent=2) + "\n")
 
 
-opponent_capture_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateOpponentCaptureImpact@")
-)
 (workbench / "opponent-capture-impact-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
@@ -930,29 +924,27 @@ opponent_capture_helper = next(
         "entry": "0x006725FD",
         "bytes": 480,
         "state_id": 220,
-        "hit_gate": "field000a==1 && attackCollisionResult==3",
-        "remaining_hit_gate": "field000a==1 && field000c==0 && opponent.positionY==0",
-        "own_state": "0xDD",
-        "opponent_air_action_disabled": 1,
-        "effect": {"owner": 0, "type": 0, "x_offset": "trunc(positionX)+facing*37", "y_offset": "trunc(positionY)-42", "group": 2, "layer": 1},
+        "capture_state": 0xdd,
+        "opponent_air_action_disabled": True,
+        "local_effect": None,
+        "context_effect": {"owner": 0, "type": 0, "x_offset": 0x25, "y_offset": -0x2a, "group": 2, "layer": 1},
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": opponent_capture_helper,
-        **helper_members[opponent_capture_helper],
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case5C.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case5C.inc").read_bytes()
+            ).hexdigest(),
+        },
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-opponent_stage_combo_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateOpponentStageCombo@")
-)
 (workbench / "opponent-stage-combo-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
@@ -960,30 +952,26 @@ opponent_stage_combo_helper = next(
         "entry": "0x006727DD",
         "bytes": 594,
         "state_id": 221,
-        "damage_frame": 4,
-        "damage": 0x4E2,
-        "damage_scale": 750.0,
-        "opponent_frames": {
-            "1": {"state": 0x67, "x_offset": 0x29, "y": -86.0},
-            "2": {"x_offset": 0x24, "y": -97.0},
-            "3": {"x_offset": 0x22, "y": -97.0, "facing": "-facing"},
-            "4": {"state": 0x61, "x_offset": 0x24, "y": 0.0, "vertical_shake": [3,0]},
-        },
-        "completion_state": 0,
+        "damage": {"value": 0x4e2, "scale": 750.0, "frame": 4},
+        "opponent_positions": [-86.0, -97.0, -97.0, 0.0],
+        "opponent_states": [0x67, 0x61],
+        "vertical_shake": [3, 0],
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": opponent_stage_combo_helper,
-        **helper_members[opponent_stage_combo_helper],
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case5D.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case5D.inc").read_bytes()
+            ).hexdigest(),
+        },
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
 }, indent=2) + "\n")
-
 
 trail_dash_helper = next(
     symbol for symbol in helper_members

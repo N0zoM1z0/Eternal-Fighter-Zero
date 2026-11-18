@@ -430,8 +430,6 @@ public:
     void Slot06UpdateAerialGroundSlam(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateAerialKickback(unsigned short, unsigned short);
     void Slot06UpdateGroundImpactRecovery(unsigned short, unsigned short, EffectSpawn *);
-    void Slot06UpdateOpponentCaptureImpact(unsigned short, unsigned short, EffectSpawn *);
-    void Slot06UpdateOpponentStageCombo(unsigned short, unsigned short);
     void Slot06UpdateTrailDashFinish(unsigned short, unsigned short, unsigned short, short, unsigned char, unsigned short, unsigned short);
     void Slot06UpdateDashTrailCharge(unsigned short, unsigned short);
     void Slot06UpdateAirborneTrailDash(unsigned short, unsigned short);

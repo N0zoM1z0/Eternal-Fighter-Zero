@@ -953,113 +953,12 @@ void Character19::Slot06UpdateGroundImpactRecovery(
 
 // Opponent capture impact: on the confirmed hit, reset both fighters, lock the
 // opponent's air actions, and emit the native type-0 scene effect.
-void Character19::Slot06UpdateOpponentCaptureImpact(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    EffectSpawn *spawn)
-{
-    Secondary *target = *opponentSlot;
-    velocityX = 0.0;
-    velocityY = 0.0;
 
-    if ((field000a == 1) && (field000c == 0) &&
-        (target->positionY == 0.0)) {
-        remainingHitCount = 1;
-    } else {
-        remainingHitCount = 0;
-    }
-
-    if ((field000a == 1) && (attackCollisionResult == 3)) {
-        velocityX = 0.0;
-        velocityY = 0.0;
-        outgoingPushbackVelocityX = 0.0;
-        ResetPose();
-        ResetFrame();
-        target->ResetFrame();
-        target->ResetPose();
-        field0008 = 0xdd;
-        target->airActionDisabled = 1;
-
-        spawn->type = 0;
-        spawn->x = (double)((int)positionX + (int)facing * 0x25);
-        spawn->y = (double)((int)positionY - 0x2a);
-        spawn->group = 2;
-        spawn->layer = 1;
-        contextOwner->EmitEffect(spawn);
-        return;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        attackCollisionResult = 0;
-        if (frameCount <= field000a) {
-            field0008 = 0;
-            if (inputY == 1) {
-                field0008 = 3;
-            }
-            FaceOpponent();
-            ResetPose();
-        }
-    }
-}
 
 // Multi-frame opponent stage combo. All opponent repositioning is tied to
 // animation-frame boundaries; damage is applied at frame 4 before that frame
 // advances, matching the native 0x4e2 / 750.0 damage request.
-void Character19::Slot06UpdateOpponentStageCombo(
-    unsigned short frameDuration,
-    unsigned short frameCount)
-{
-    Secondary *target = *opponentSlot;
 
-    if ((field000a == 4) && (field000c == 0)) {
-        ApplyDamage(0x4e2, 750.0);
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        attackCollisionResult = 0;
-
-        if (field000a == 1) {
-            target->field0008 = 0x67;
-            target->ResetFrame();
-            target->ResetPose();
-            target->positionY = -86.0;
-            target->positionX = positionX + (double)((int)facing * 0x29);
-        }
-
-        if (field000a == 2) {
-            target->positionY = -97.0;
-            target->positionX = positionX + (double)((int)facing * 0x24);
-        }
-
-        if (field000a == 3) {
-            target->positionY = -97.0;
-            target->positionX = positionX + (double)((int)facing * 0x22);
-            target->facing = -facing;
-        }
-
-        if (field000a == 4) {
-            target->positionY = 0.0;
-            target->positionX = positionX + (double)((int)facing * 0x24);
-            target->facing = -facing;
-            SetVerticalShake(3, 0);
-            target->field0008 = 0x61;
-            target->ResetFrame();
-            target->ResetPose();
-        }
-
-        if (frameCount <= field000a) {
-            field0008 = 0;
-            FaceOpponent();
-            ResetPose();
-        }
-    }
-}
 
 
 // Trail-backed dash finishers 0x5e/0x5f share movement and frame timing; only

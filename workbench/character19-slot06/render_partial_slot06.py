@@ -545,16 +545,18 @@ lines += [
 
 lines += labels(0x5c)
 lines += [
-    "        Slot06UpdateOpponentCaptureImpact(",
-    "            timing.frameDuration, timing.animationFrameCount, &spawn);",
+    "        {",
+    '#include "Character19Slot06Case5C.inc"',
+    "        }",
     "        break;",
     "",
 ]
 
 lines += labels(0x5d)
 lines += [
-    "        Slot06UpdateOpponentStageCombo(",
-    "            timing.frameDuration, timing.animationFrameCount);",
+    "        {",
+    '#include "Character19Slot06Case5D.inc"',
+    "        }",
     "        break;",
     "",
 ]

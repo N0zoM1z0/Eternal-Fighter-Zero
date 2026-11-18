@@ -565,13 +565,15 @@ void Character19::Slot06()
         break;
 
     case 92:
-        Slot06UpdateOpponentCaptureImpact(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case5C.inc"
+        }
         break;
 
     case 93:
-        Slot06UpdateOpponentStageCombo(
-            timing.frameDuration, timing.animationFrameCount);
+        {
+#include "Character19Slot06Case5D.inc"
+        }
         break;
 
     case 94:
