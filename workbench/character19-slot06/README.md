@@ -45,6 +45,7 @@ The three 0x54-0x56 airborne dash follow-up states (2,269 native bytes) are now 
 The 0x69 combo aerial bounce (704 native bytes) is also inlined. It retains the field313c-gated context burst, frame-1 local marker, frame-3 relaunch, five-cycle field3138 loop, and 0x103 landing exit inside its own dispatcher case.
 The ten knockback-fall variants (native bodies from 427 to 561 bytes) are now inlined individually. Each owns its clamp/blend/gravity specialization and interrupt gate; the shared opponent-range leaf remains only for the separate 0x25/0x26 landing path.
 The paired 0x31/0x32 airborne rebound states (581 native bytes each) are now inline too. Their one-shot local effect, field3144 gate, meter/sound burst, bounce impulse, slide acceleration, and neutral return are duplicated in the two native owner cases.
+The 0x4B defeat-impact velocity restore (584 native bytes) is now inline. It snapshots horizontal/vertical velocity into the native centi-unit fields, applies the tint and 90-frame hitstun, emits the two ordered context effects, then restores velocity and gravity on animation completion.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 

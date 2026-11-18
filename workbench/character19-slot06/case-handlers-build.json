@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "f2c467a2d73c06b1277ebc65ff8f71e5e0b21c4fd9bb50e5ac33358fb228990f",
+  "source_sha256": "c134e0052fbdea5ca42f6aba66a1f874e7095d9f5557a9c92815a12e676448ca",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "a0136629602016f9eac88a088187c89d9baa4445c6e036964308a79cdf892a84",
+  "object_sha256": "051fe361a1a36c34b1a94526ebcc26030754b9a69c574aaf954903d9bc03e838",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -81,10 +81,6 @@
     "?Slot06UpdateDefeatImpactEffect@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
       "candidate_size": 502,
       "relocations": 12
-    },
-    "?Slot06UpdateDefeatImpactVelocityRestore@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
-      "candidate_size": 594,
-      "relocations": 18
     },
     "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z": {
       "candidate_size": 192,

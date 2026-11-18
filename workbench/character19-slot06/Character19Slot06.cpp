@@ -469,8 +469,9 @@ void Character19::Slot06()
         break;
 
     case 75:
-        Slot06UpdateDefeatImpactVelocityRestore(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case4B.inc"
+        }
         break;
 
     case 76:

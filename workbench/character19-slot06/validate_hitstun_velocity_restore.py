@@ -163,9 +163,8 @@ for expression in (
     assert expression in hitstun_source, expression
 assert "dashMomentumFlag" not in hitstun_source
 
-start = source.index("void Character19::Slot06UpdateDefeatImpactVelocityRestore")
-mid = source.index("\n}\n", start) + 3
-defeat_source = source[start:mid]
+assert "Slot06UpdateDefeatImpactVelocityRestore" not in source
+defeat_source = (ROOT / "workbench/character19-slot06/Character19Slot06Case4B.inc").read_text()
 for expression in (
     "field3138 = (int)(velocityX * 100.0);",
     "field313c = (int)(velocityY * 100.0);",
@@ -176,19 +175,22 @@ for expression in (
     "hitstunFrames = 90;",
     "SetTint(0xb0, 3);",
     "pendingContextSoundSlot = 0x12;",
-    "spawn->type = 1;",
-    "spawn->type = 4;",
-    "spawn->group = 2;",
-    "spawn->layer = 1;",
-    "contextOwner->EmitEffect(spawn);",
+    "spawn.type = 1;",
+    "spawn.type = 4;",
+    "spawn.group = 2;",
+    "spawn.layer = 1;",
+    "contextOwner->EmitEffect(&spawn);",
     "attackCollisionResult = 0;",
     "field0008 = 9;",
     "velocityX = (double)field3138 * 0.01;",
     "velocityY = (double)field313c * 0.01;",
     "gravity = 0.035;",
     "ResetPose();",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
 ):
     assert expression in defeat_source, expression
+assert defeat_source.count("contextOwner->EmitEffect(&spawn);") == 2
 for wrong in ("field3144", "field3148", "field314c", "dashMomentumFlag"):
     assert wrong not in defeat_source, wrong
 
@@ -235,14 +237,13 @@ for expression in (
     assert expression in analog, expression
 
 renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
-assert "(0x4a" in renderer and "(0x4b" in renderer
+assert "(0x4a" in renderer
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-for state, helper in (
-    (170, "Slot06UpdateAirborneHitstunRestore"),
-    (171, "Slot06UpdateDefeatImpactVelocityRestore"),
-):
-    assert_selector_case(dispatcher, state)
-    assert helper in dispatcher
+assert_selector_case(dispatcher, 170)
+assert_selector_case(dispatcher, 171)
+assert "Slot06UpdateAirborneHitstunRestore" in dispatcher
+assert '#include "Character19Slot06Case4B.inc"' in dispatcher
+assert "Slot06UpdateDefeatImpactVelocityRestore" not in dispatcher
 
 print({
     "variants": 2,

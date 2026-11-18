@@ -14,9 +14,9 @@
   },
   "candidate": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "c1628dcb39368acf2533d34a22ccbbf748c2c4c3ef0d30fd787c2c628a1e57b3",
+    "source_sha256": "b9fc1a1ba214cc04f4dd6e3b3b9b05df082bad12c5bd94ba4016f3e545ee5075",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "561901e069fa91f56156dbd99b80d999023064850534f32cbd2d49c7230ae171",
+    "object_sha256": "4d07efa6957442e0be95d78bdc243dd1b07d23a8189f073ee5a166539b8b6f61",
     "inlined_case_sources": {
       "workbench/character19-slot06/Character19Slot06Case31.inc": "52b18180cf573a202f7f88389acaec1f83e8ff9a6ff5d750de6c906a85ad8acb",
       "workbench/character19-slot06/Character19Slot06Case32.inc": "52b18180cf573a202f7f88389acaec1f83e8ff9a6ff5d750de6c906a85ad8acb"
@@ -25,12 +25,12 @@
   },
   "dispatcher": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "c1628dcb39368acf2533d34a22ccbbf748c2c4c3ef0d30fd787c2c628a1e57b3",
+    "source_sha256": "b9fc1a1ba214cc04f4dd6e3b3b9b05df082bad12c5bd94ba4016f3e545ee5075",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "561901e069fa91f56156dbd99b80d999023064850534f32cbd2d49c7230ae171",
+    "object_sha256": "4d07efa6957442e0be95d78bdc243dd1b07d23a8189f073ee5a166539b8b6f61",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 36804,
-    "relocation_count": 687,
+    "symbol_size": 37355,
+    "relocation_count": 704,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0,
     "included_sources": {
@@ -60,6 +60,7 @@
       "workbench/character19-slot06/Character19Slot06Case28.inc": "d81ce1bd9921bd3204e0d346ce4c0a8069fbbfafcdef848cd612d0f97f0ada0d",
       "workbench/character19-slot06/Character19Slot06Case31.inc": "52b18180cf573a202f7f88389acaec1f83e8ff9a6ff5d750de6c906a85ad8acb",
       "workbench/character19-slot06/Character19Slot06Case32.inc": "52b18180cf573a202f7f88389acaec1f83e8ff9a6ff5d750de6c906a85ad8acb",
+      "workbench/character19-slot06/Character19Slot06Case4B.inc": "8a35b6d6a15d32d8a97fca8f617bee97489621b63237cc214b89b3fb44ebd88a",
       "workbench/character19-slot06/Character19Slot06Case54.inc": "97c20cb49b29c2a6cb9769aef629671ef08750ad1696a096fb50bcb213a9e292",
       "workbench/character19-slot06/Character19Slot06Case55.inc": "fec4d610abe7fb58158bc9cb0a31a2b49ff83e4fa02706e7f9772e3e5f373993",
       "workbench/character19-slot06/Character19Slot06Case56.inc": "64e1ab4d2112ceb476ee759999fb69daf5b7c89eb095c5c34e5aa8547e8f2a21",
