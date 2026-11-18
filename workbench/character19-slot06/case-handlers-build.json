@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "b319b096c9bc69bf2a37f2e2240e8e1035adfbd8adcdb5b9b784186e9bbb87e3",
+  "source_sha256": "f34c8a5cb97beabdff149b43e1ccbf1d203c15c53cc017c668678a332d04fabf",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "5493022fefa89dd72bc7808b60571b6083ec67dff3edcd12413eec500198ddda",
+  "object_sha256": "8ada34e6af28732a1a50e6d95c1a5f26b9d1bb9e88acc82a739282437c11dfeb",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -129,10 +129,6 @@
     "?Slot06UpdateStunEffectRecovery@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
       "candidate_size": 334,
       "relocations": 5
-    },
-    "?Slot06UpdateTrailDashFinish@Character19@@QAEXGGGFEGG@Z": {
-      "candidate_size": 326,
-      "relocations": 6
     }
   },
   "status": "semantic-workbench-only-not-exact"

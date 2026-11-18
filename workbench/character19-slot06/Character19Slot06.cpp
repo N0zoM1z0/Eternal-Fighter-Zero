@@ -577,31 +577,27 @@ void Character19::Slot06()
         break;
 
     case 94:
-        Slot06UpdateTrailDashFinish(
-            timing.frameDuration, timing.animationFrameCount,
-            2, 5, 21,
-            3, 0);
+        {
+#include "Character19Slot06Case5E.inc"
+        }
         break;
 
     case 95:
-        Slot06UpdateTrailDashFinish(
-            timing.frameDuration, timing.animationFrameCount,
-            2, 10, 20,
-            3, 0);
+        {
+#include "Character19Slot06Case5F.inc"
+        }
         break;
 
     case 97:
-        Slot06UpdateTrailDashFinish(
-            timing.frameDuration, timing.animationFrameCount,
-            1, 5, 21,
-            5, 3);
+        {
+#include "Character19Slot06Case61.inc"
+        }
         break;
 
     case 98:
-        Slot06UpdateTrailDashFinish(
-            timing.frameDuration, timing.animationFrameCount,
-            2, 10, 20,
-            3, 3);
+        {
+#include "Character19Slot06Case62.inc"
+        }
         break;
 
     case 96:

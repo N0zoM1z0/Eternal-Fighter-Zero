@@ -62,7 +62,6 @@ assert any(symbol.startswith("?Slot06UpdateDashFollowupCancel@Character19@@") fo
 assert any(symbol.startswith("?Slot06UpdateAerialGroundSlam@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateGroundImpactRecovery@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateTrailDashFinish@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashTrailCharge@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneTrailDash@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateStunEffectRecovery@Character19@@") for symbol in helper_members)
@@ -129,7 +128,7 @@ dispatcher_record = {
         f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
             (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
         ).hexdigest()
-        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x30, 0x31, 0x32, 0x43, 0x44, 0x47, 0x4b, 0x54, 0x55, 0x56, 0x5c, 0x5d, 0x66, 0x69, 0x6e, 0x6f, 0x70, 0x71, 0x72, 0x73, 0x74)
+        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x30, 0x31, 0x32, 0x43, 0x44, 0x47, 0x4b, 0x54, 0x55, 0x56, 0x5c, 0x5d, 0x5e, 0x5f, 0x61, 0x62, 0x66, 0x69, 0x6e, 0x6f, 0x70, 0x71, 0x72, 0x73, 0x74)
     },
     "status": "partial-semantic-workbench-not-exact",
 }
@@ -973,10 +972,6 @@ ground_impact_helper = next(
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-trail_dash_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateTrailDashFinish@")
-)
 (workbench / "trail-dash-finish-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": {
@@ -991,21 +986,23 @@ trail_dash_helper = next(
         "horizontal_deceleration": 0.03,
         "initial_velocity": [2.0, 0.0],
         "collision_clear_before_frame": 3,
-        "completion_state": 0,
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": trail_dash_helper,
-        **helper_members[trail_dash_helper],
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "inlined_case_sources": {
+            f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
+                (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
+            ).hexdigest()
+            for case in (0x5e, 0x5f, 0x61, 0x62)
+        },
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
 }, indent=2) + "\n")
-
 
 dash_trail_charge_helper = next(
     symbol for symbol in helper_members

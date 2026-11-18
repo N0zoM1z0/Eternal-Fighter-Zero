@@ -106,38 +106,34 @@ for expression in (
     assert expression in disasm, expression
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-start = source.index("void Character19::Slot06UpdateTrailDashFinish")
-end = source.index("\n}\n", start) + 3
-helper = source[start:end]
-for expression in (
-    "StartTrail(3);",
-    "dashMomentumFlag = 0;",
-    "velocityX = velocityX - 0.03;",
-    "if (velocityX < 0.0)",
-    "velocityX = 0.0;",
-    "field000a == 0",
-    "velocityX = 2.0;",
-    "velocityY = 0.0;",
-    "field000a == meterFrame",
-    "meter = meter + meterGain;",
-    "pendingContextSoundSlot = (char)soundSlot;",
-    "remainingHitCount = 1;",
-    "field000a < collisionClearFrame",
-    "attackCollisionResult = 0;",
-    "field0008 = completionState;",
-    "ResetPose();",
-):
-    assert expression in helper, expression
-assert "FaceOpponent" not in helper
-
-renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
-assert "(0x5e, (2, 5, 0x15, 3, 0))" in renderer
-assert "(0x5f, (2, 10, 0x14, 3, 0))" in renderer
-assert "(0x61, (1, 5, 0x15, 5, 3))" in renderer
-assert "(0x62, (2, 10, 0x14, 3, 3))" in renderer
+assert "Slot06UpdateTrailDashFinish" not in source
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert_selector_case(dispatcher, 230) and "Slot06UpdateTrailDashFinish(" in dispatcher
-assert_selector_case(dispatcher, 231) and "Slot06UpdateTrailDashFinish(" in dispatcher
-assert_selector_case(dispatcher, 233) and "Slot06UpdateTrailDashFinish(" in dispatcher
-assert_selector_case(dispatcher, 234) and "Slot06UpdateTrailDashFinish(" in dispatcher
+for case, (size, state, entry, meter_frame, meter_gain, sound, collision_clear_frame, completion_state) in expected.items():
+    fragment = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        "StartTrail(3);",
+        "dashMomentumFlag = 0;",
+        "velocityX = velocityX - 0.03;",
+        "if (velocityX < 0.0)",
+        "velocityX = 0.0;",
+        "field000a == 0",
+        "velocityX = 2.0;",
+        "velocityY = 0.0;",
+        f"field000a == {meter_frame}",
+        f"meter = meter + {meter_gain};",
+        f"pendingContextSoundSlot = (char){hex(sound)};",
+        "remainingHitCount = 1;",
+        f"field000a < {collision_clear_frame}",
+        f"field0008 = {completion_state};",
+        "ResetPose();",
+        "timing.frameDuration",
+        "timing.animationFrameCount",
+    ):
+        assert expression in fragment, (hex(case), expression)
+    assert "FaceOpponent" not in fragment
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
+for state in (230, 231, 233, 234):
+    assert_selector_case(dispatcher, state)
+assert "Slot06UpdateTrailDashFinish(" not in dispatcher
+
 print({"variants": 4, "native_bytes": [307,307,307,307], "state_ids": [230,231,233,234], "trail_spacing": 3, "meter": [5,10,5,10]})

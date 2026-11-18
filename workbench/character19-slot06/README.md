@@ -52,6 +52,7 @@ The 0x6E final-effect pair (536 native bytes) is now inline too. Its frame-7 typ
 The 0x6F trail-effect finish (552 native bytes) is now inline as well. It preserves the unowned opening context flash, frame-7 owned type-0x1AD local effect, and frame-8 meter/sound event in their original order.
 The 0x47 defeat-impact effect (488 native bytes) is now inline. Its 90-frame hitstun, tint, combo-damage scaling, and ordered frame-1/frame-2 context effects remain in the main dispatcher.
 The 0x5C opponent-capture and 0x5D stage-combo handlers are now inline (480/594 native bytes). They preserve the capture cancel, opponent state transition, context effect, 0x4E2/750 damage event, frame-boundary repositioning, and final vertical shake.
+The four 0x5E/0x5F/0x61/0x62 trail dash finishers (307 native bytes each) are now inline individually. Their meter frame/gain, sound slot, collision-clear frame, and completion state are compile-time case constants rather than a shared parameterized helper.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 

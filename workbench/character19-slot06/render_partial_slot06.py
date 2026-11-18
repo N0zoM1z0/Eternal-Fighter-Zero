@@ -561,19 +561,12 @@ lines += [
     "",
 ]
 
-for case, config in [
-    (0x5e, (2, 5, 0x15, 3, 0)),
-    (0x5f, (2, 10, 0x14, 3, 0)),
-    (0x61, (1, 5, 0x15, 5, 3)),
-    (0x62, (2, 10, 0x14, 3, 3)),
-]:
-    meter_frame, meter_gain, sound_slot, collision_clear_frame, completion_state = config
+for case in (0x5e, 0x5f, 0x61, 0x62):
     lines += labels(case)
     lines += [
-        "        Slot06UpdateTrailDashFinish(",
-        "            timing.frameDuration, timing.animationFrameCount,",
-        f"            {meter_frame}, {meter_gain}, {sound_slot},",
-        f"            {collision_clear_frame}, {completion_state});",
+        "        {",
+        f'#include "Character19Slot06Case{case:02X}.inc"',
+        "        }",
         "        break;",
         "",
     ]

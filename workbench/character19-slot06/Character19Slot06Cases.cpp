@@ -963,47 +963,7 @@ void Character19::Slot06UpdateGroundImpactRecovery(
 
 // Trail-backed dash finishers 0x5e/0x5f share movement and frame timing; only
 // the frame-2 meter/sound event differs.
-void Character19::Slot06UpdateTrailDashFinish(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    unsigned short meterFrame,
-    short meterGain,
-    unsigned char soundSlot,
-    unsigned short collisionClearFrame,
-    unsigned short completionState)
-{
-    StartTrail(3);
-    dashMomentumFlag = 0;
 
-    velocityX = velocityX - 0.03;
-    if (velocityX < 0.0) {
-        velocityX = 0.0;
-    }
-
-    if ((field000a == 0) && (field000c == 0)) {
-        velocityX = 2.0;
-        velocityY = 0.0;
-    }
-
-    if ((field000a == meterFrame) && (field000c == 0)) {
-        meter = meter + meterGain;
-        pendingContextSoundSlot = (char)soundSlot;
-        remainingHitCount = 1;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (field000a < collisionClearFrame) {
-            attackCollisionResult = 0;
-        }
-        if (frameCount <= field000a) {
-            field0008 = completionState;
-            ResetPose();
-        }
-    }
-}
 
 
 // Trail-backed dash strike with a frame-3 speed burst and sustained 0.07 decay.
