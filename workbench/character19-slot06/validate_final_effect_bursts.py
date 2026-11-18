@@ -110,33 +110,34 @@ cpp_init = (ROOT / "src/EffectPool.cpp").read_text()
 assert "std::memset(this, 0, sizeof(*this));" in cpp_init
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-pair_start = source.index("void Character19::Slot06UpdateFinalEffectPair")
-pair_end = source.index("\n}\n", pair_start) + 3
-pair_helper = source[pair_start:pair_end]
+assert "Slot06UpdateFinalEffectPair" not in source
+pair_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case6E.inc").read_text()
 for expression in (
     "field000a == 0",
     "ResetFrame();",
     "field000a == 7",
-    "spawn->owner = 1;",
-    "spawn->type = 0x195;",
-    "spawn->x = (double)((int)positionX + (int)facing * 0x23);",
-    "spawn->y = (double)((int)positionY - 0x3f);",
-    "spawn->group = 2;",
-    "spawn->layer = 1;",
-    "spawn->facing = (facing != 1);",
-    "spawn->flag0018 = (unsigned char)facing;",
-    "spawn->field0028 = 0;",
-    "EmitLocalEffect(spawn);",
+    "spawn.owner = 1;",
+    "spawn.type = 0x195;",
+    "spawn.x = (double)((int)positionX + (int)facing * 0x23);",
+    "spawn.y = (double)((int)positionY - 0x3f);",
+    "spawn.group = 2;",
+    "spawn.layer = 1;",
+    "spawn.facing = (facing != 1);",
+    "spawn.flag0018 = (unsigned char)facing;",
+    "spawn.field0028 = 0;",
+    "EmitLocalEffect(&spawn);",
     "field000a == 8",
-    "spawn->type = 0x196;",
-    "spawn->x = (double)((int)positionX + (int)facing * 0x50);",
+    "spawn.type = 0x196;",
+    "spawn.x = (double)((int)positionX + (int)facing * 0x50);",
     "meter = meter + 45;",
     "pendingCharacterSoundSlot = 2;",
     "field0008 = 0;",
     "ResetPose();",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
 ):
     assert expression in pair_helper, expression
-assert pair_helper.count("spawn->owner = 1;") == 2
+assert pair_helper.count("spawn.owner = 1;") == 2
 
 trail_start = source.index("void Character19::Slot06UpdateTrailEffectFinish")
 trail_end = source.index("\n}\n", trail_start) + 3
@@ -175,7 +176,9 @@ assert trail_helper.count("spawn->owner = 1;") == 1
 assert trail_helper.index("contextOwner->EmitEffect(spawn);") < trail_helper.index("spawn->owner = 1;")
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert_selector_case(dispatcher, 266) and "Slot06UpdateFinalEffectPair(" in dispatcher
+assert_selector_case(dispatcher, 266)
+assert '#include "Character19Slot06Case6E.inc"' in dispatcher
+assert "Slot06UpdateFinalEffectPair(" not in dispatcher
 assert_selector_case(dispatcher, 267) and "Slot06UpdateTrailEffectFinish(" in dispatcher
 
 disasm = subprocess.run(

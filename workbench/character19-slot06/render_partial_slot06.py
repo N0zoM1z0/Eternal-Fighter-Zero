@@ -660,8 +660,9 @@ for case, effect_type in ((0x6b, 0x190), (0x6c, 0x191), (0x6d, 0x192)):
 
 lines += labels(0x6e)
 lines += [
-    "        Slot06UpdateFinalEffectPair(",
-    "            timing.frameDuration, timing.animationFrameCount, &spawn);",
+    "        {",
+    '#include "Character19Slot06Case6E.inc"',
+    "        }",
     "        break;",
     "",
 ]

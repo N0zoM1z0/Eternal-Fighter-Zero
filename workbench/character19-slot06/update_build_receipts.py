@@ -74,7 +74,6 @@ assert any(symbol.startswith("?Slot06UpdateDampedImpactFinish@Character19@@") fo
 assert any(symbol.startswith("?Slot06UpdateLoopingAerialBounce@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateFinalFaceTransition@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateLocalEffectFinish@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateFinalEffectPair@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateTrailEffectFinish@Character19@@") for symbol in helper_members)
 
 
@@ -134,7 +133,7 @@ dispatcher_record = {
         f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
             (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
         ).hexdigest()
-        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x30, 0x31, 0x32, 0x43, 0x44, 0x4b, 0x54, 0x55, 0x56, 0x66, 0x69, 0x70, 0x71, 0x72, 0x73, 0x74)
+        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x30, 0x31, 0x32, 0x43, 0x44, 0x4b, 0x54, 0x55, 0x56, 0x66, 0x69, 0x6e, 0x70, 0x71, 0x72, 0x73, 0x74)
     },
     "status": "partial-semantic-workbench-not-exact",
 }
@@ -1342,31 +1341,28 @@ local_finish_helper = next(
 }, indent=2) + "\n")
 
 
-final_effect_pair_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateFinalEffectPair@")
-)
 (workbench / "final-effect-pair-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
         "selector": "0x6E",
         "entry": "0x006742E1",
-        "bytes": 500,
+        "bytes": 536,
         "state_id": 266,
-        "frame7_local_effect": {"owner": 1, "type": 0x195, "x_offset": "round(positionX)+facing*35", "y_offset": "round(positionY)-63", "group": 2, "layer": 1, "field0028": 0},
-        "frame8_local_effect": {"owner": 1, "type": 0x196, "x_offset": "round(positionX)+facing*80", "y_offset": "round(positionY)-63", "group": 2, "layer": 1, "field0028": 0},
+        "frame7_effect": {"owner": 1, "type": 0x195, "x_offset": 0x23, "y_offset": -0x3f},
+        "frame8_effect": {"owner": 1, "type": 0x196, "x_offset": 0x50, "y_offset": -0x3f},
         "frame8_meter_gain": 45,
-        "character_sound": 2,
-        "completion_state": 0,
-        "collision_clear": False,
+        "frame8_sound": 2,
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": final_effect_pair_helper,
-        **helper_members[final_effect_pair_helper],
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case6E.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case6E.inc").read_bytes()
+            ).hexdigest(),
+        },
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,
