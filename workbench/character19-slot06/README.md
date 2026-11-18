@@ -54,6 +54,7 @@ The 0x47 defeat-impact effect (488 native bytes) is now inline. Its 90-frame hit
 The 0x5C opponent-capture and 0x5D stage-combo handlers are now inline (480/594 native bytes). They preserve the capture cancel, opponent state transition, context effect, 0x4E2/750 damage event, frame-boundary repositioning, and final vertical shake.
 The four 0x5E/0x5F/0x61/0x62 trail dash finishers (307 native bytes each) are now inline individually. Their meter frame/gain, sound slot, collision-clear frame, and completion state are compile-time case constants rather than a shared parameterized helper.
 The 0x33/0x34 airborne knockback landing pair (467/482 native bytes) is also inline. Each keeps its own vertical acceleration, one-shot first-hit gate, 0x1F0 local marker, meter/sound event, and neutral-loop versus finish-neutral transition.
+The nine 0x13-0x1B counter-movement cases (497-byte native bodies, with the final three 473 bytes) are now restored as nine natural C++ branches. Each owns its meter gain, opponent-scaled launch speed, field-decay constant, stage-edge pushback calculation, and input-dependent versus forced-standing finish.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 

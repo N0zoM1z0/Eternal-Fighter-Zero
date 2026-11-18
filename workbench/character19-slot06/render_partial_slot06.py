@@ -679,24 +679,12 @@ for case in (0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28):
         "",
     ]
 
-for case, config in [
-    (0x13, (10, -1.1, 10.0, 0)),
-    (0x14, (15, -1.5, 20.0, 0)),
-    (0x15, (20, -1.8, 30.0, 0)),
-    (0x16, (10, -1.1, 10.0, 0)),
-    (0x17, (15, -1.5, 20.0, 0)),
-    (0x18, (20, -1.8, 30.0, 0)),
-    (0x19, (10, -1.1, 10.0, 1)),
-    (0x1a, (15, -1.5, 20.0, 1)),
-    (0x1b, (20, -1.8, 30.0, 1)),
-]:
-    meter_gain, launch_scale, field_decay, force_standing = config
+for case in range(0x13, 0x1c):
     lines += labels(case)
     lines += [
-        "        Slot06UpdateCounterMove(",
-        "            timing.frameDuration, timing.animationFrameCount,",
-        f"            {meter_gain}, {launch_scale}, {field_decay},",
-        f"            {force_standing});",
+        "        {",
+        f'#include "Character19Slot06Case{case:02X}.inc"',
+        "        }",
         "        break;",
         "",
     ]

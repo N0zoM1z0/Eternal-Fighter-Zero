@@ -735,66 +735,57 @@ void Character19::Slot06()
         break;
 
     case 19:
-        Slot06UpdateCounterMove(
-            timing.frameDuration, timing.animationFrameCount,
-            10, -1.1, 10.0,
-            0);
+        {
+#include "Character19Slot06Case13.inc"
+        }
         break;
 
     case 20:
-        Slot06UpdateCounterMove(
-            timing.frameDuration, timing.animationFrameCount,
-            15, -1.5, 20.0,
-            0);
+        {
+#include "Character19Slot06Case14.inc"
+        }
         break;
 
     case 21:
-        Slot06UpdateCounterMove(
-            timing.frameDuration, timing.animationFrameCount,
-            20, -1.8, 30.0,
-            0);
+        {
+#include "Character19Slot06Case15.inc"
+        }
         break;
 
     case 22:
-        Slot06UpdateCounterMove(
-            timing.frameDuration, timing.animationFrameCount,
-            10, -1.1, 10.0,
-            0);
+        {
+#include "Character19Slot06Case16.inc"
+        }
         break;
 
     case 23:
-        Slot06UpdateCounterMove(
-            timing.frameDuration, timing.animationFrameCount,
-            15, -1.5, 20.0,
-            0);
+        {
+#include "Character19Slot06Case17.inc"
+        }
         break;
 
     case 24:
-        Slot06UpdateCounterMove(
-            timing.frameDuration, timing.animationFrameCount,
-            20, -1.8, 30.0,
-            0);
+        {
+#include "Character19Slot06Case18.inc"
+        }
         break;
 
     case 25:
-        Slot06UpdateCounterMove(
-            timing.frameDuration, timing.animationFrameCount,
-            10, -1.1, 10.0,
-            1);
+        {
+#include "Character19Slot06Case19.inc"
+        }
         break;
 
     case 26:
-        Slot06UpdateCounterMove(
-            timing.frameDuration, timing.animationFrameCount,
-            15, -1.5, 20.0,
-            1);
+        {
+#include "Character19Slot06Case1A.inc"
+        }
         break;
 
     case 27:
-        Slot06UpdateCounterMove(
-            timing.frameDuration, timing.animationFrameCount,
-            20, -1.8, 30.0,
-            1);
+        {
+#include "Character19Slot06Case1B.inc"
+        }
         break;
 
     case 3:

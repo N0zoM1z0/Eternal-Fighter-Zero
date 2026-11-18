@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "44f13fa0e552fc14b325b3a6ae6fe109f6407bc2356d8a8b78ab3d4a12da54fe",
+  "source_sha256": "ccc3d6ddc4a51ac9a0fceea9835e4245c400ca00048d811a391fc2d6b1d04094",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "7e3302f7c4f89d9778a17139038b3f61c88e2925d487b2e5d3c69fe9c0db77ee",
+  "object_sha256": "586dafd5d89fd54d0c95e0472201d09c9e9b02f34c2cc6c5b5f20f1f2fb9225b",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -45,10 +45,6 @@
     "?Slot06UpdateAirborneTrailDash@Character19@@QAEXGG@Z": {
       "candidate_size": 399,
       "relocations": 8
-    },
-    "?Slot06UpdateCounterMove@Character19@@QAEXGGFNNH@Z": {
-      "candidate_size": 519,
-      "relocations": 16
     },
     "?Slot06UpdateDampedImpactFinish@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
       "candidate_size": 435,

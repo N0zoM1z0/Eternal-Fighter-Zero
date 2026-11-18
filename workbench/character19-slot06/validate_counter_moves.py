@@ -65,11 +65,8 @@ expected = {
     0x1A: (15, -1.5, 20.0, 1),
     0x1B: (20, -1.8, 30.0, 1),
 }
-config_source = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
 for case, (meter_gain, launch_scale, decay, force_standing) in expected.items():
     assert len(blocks[case]) == (43 if case <= 0x18 else 40)
-    config = f"0x{case:02x}, ({meter_gain}, {launch_scale}, {decay}, {force_standing})"
-    assert config in config_source, (hex(case), config)
     if force_standing:
         assert "*(undefined2 *)(param_1 + 2) = 3;" in "\n".join(blocks[case])
         assert "*(char *)((int)param_1 + 0x189) == '\\x01'" not in "\n".join(blocks[case])
@@ -100,16 +97,43 @@ for address, expected_value in constants.items():
     assert actual == expected_value, (hex(address), actual, expected_value)
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
-    "field0118 = field0118 - 0.6",
-    "(*opponentSlot)->comboDamageScale / 10000.0",
-    "velocityX = velocityX + 0.06",
-    "positionX - 20.0 <= 0.0",
-    "639.0 <= positionX + 20.0",
-    "outgoingPushbackVelocityX",
-    "if (forceStandingState)",
-):
-    assert expression in source, expression
+assert "Slot06UpdateCounterMove" not in source
+dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+for case, (meter_gain, launch_scale, decay, force_standing) in expected.items():
+    fragment = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        "if (field0120 != 0)",
+        "field0118 = field0118 - 0.6;",
+        "dashMomentumFlag = 0;",
+        "if ((field000a == 0) && (field000c == 0))",
+        f"meter = meter + {meter_gain};",
+        "(*opponentSlot)->comboDamageScale / 10000.0",
+        f"field0118 = field0118 - {decay};",
+        "velocityY = 0.0;",
+        "positionY = 0.0;",
+        "velocityX = velocityX + 0.06;",
+        "if (velocityX > 0.0)",
+        "velocityX = 0.0;",
+        "positionX - 20.0 <= 0.0",
+        "639.0 <= positionX + 20.0",
+        "outgoingPushbackVelocityX =",
+        "field000c = field000c + 1;",
+        "if (timing.frameDuration <= field000c)",
+        "if (timing.animationFrameCount <= field000a)",
+        "ResetPose();",
+    ):
+        assert expression in fragment, (hex(case), expression)
+    assert f") * {launch_scale};" in fragment or f"*\n                {launch_scale};" in fragment
+    if force_standing:
+        assert "field0008 = 3;" in fragment
+        assert "inputY == 1" not in fragment
+    else:
+        assert "field0008 = 0;" in fragment
+        assert "if (inputY == 1)" in fragment
+        assert "field0008 = 3;" in fragment
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
+assert "Slot06UpdateCounterMove(" not in dispatcher
+
 
 print({
     "native_variants": len(blocks),
