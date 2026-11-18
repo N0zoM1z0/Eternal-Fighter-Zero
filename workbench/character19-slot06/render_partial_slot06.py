@@ -19,10 +19,10 @@ mapped = {
 unimplemented = sorted(set(range(1, 0x137)) - mapped)
 
 lines = [
-    "// Partial natural-C++ reconstruction of Character19::Slot06.",
+    "// Natural-C++ reconstruction of Character19::Slot06.",
     "// State IDs are grouped using the native 310-byte selector table.",
-    "// Cases 0-0x2f, 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x3a, 0x3b, 0x3c, 0x3d, 0x3e, 0x3f, 0x40, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49, 0x4a, 0x4b, 0x4c-0x56, 0x70-0x74, and the shared 0x75 fallback are restored.",
-    "// are implemented; remaining native handlers are explicitly TODO.",
+    "// All 310 native state IDs map through 118 selector cases; 193 use shared 0x75.",
+    "// The 0x70-0x74 selectors retain their dedicated multi-phase super/KO handlers.",
     '#include "CharacterViews.h"',
     "",
     "void Character19::Slot06()",

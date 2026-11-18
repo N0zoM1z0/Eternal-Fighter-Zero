@@ -1,5 +1,5 @@
-// Workbench reconstruction of Character19::Slot06 switch case 0x73.
-// This is an isolated natural-C++ state handler, not yet wired into Slot06.
+// Natural-C++ reconstruction of Kanna's long multi-phase super state 0x73.
+// The native state includes opponent hitstop/KO control and multiple local effects.
 #include "CharacterViews.h"
 
 void Character19::Slot06Case73()
@@ -13,11 +13,7 @@ void Character19::Slot06Case73()
     ResetLocalEffectSpawn(&spawn);
 
     if ((field000a == 0) && (field000c == 0)) {
-        velocityX = 0.0;
-        velocityY = 0.0;
-        horizontalDeceleration = 0.0;
-        gravity = 0.0;
-        outgoingPushbackVelocityX = 0.0;
+        ResetFrame();
     }
 
     if ((field000a == 4) && (field000c == 0)) {
@@ -408,10 +404,11 @@ void Character19::Slot06Case71()
         field000a = field000a + 1;
         attackCollisionResult = 0;
 
-        if ((field3138 < 0x0d) && (field000a == 0x11)) {
-            field000a = field000a - 3;
-            field3138 = field3138 + 1;
-        } else if (frameCount <= field000a) {
+        if ((field000a == 0x0d) && (field3138 > 0)) {
+            field000a = field000a - 2;
+            field3138 = field3138 - 1;
+        }
+        if (frameCount <= field000a) {
             FaceOpponent();
             ResetPose();
             field0008 = 0;

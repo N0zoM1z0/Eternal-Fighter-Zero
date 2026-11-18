@@ -85,6 +85,11 @@ assert any(symbol.startswith("?Slot06UpdateFinalFaceTransition@Character19@@") f
 assert any(symbol.startswith("?Slot06UpdateLocalEffectFinish@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateFinalEffectPair@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateTrailEffectFinish@Character19@@") for symbol in helper_members)
+assert "?Slot06Case70@Character19@@QAEXXZ" in helper_members
+assert "?Slot06Case71@Character19@@QAEXXZ" in helper_members
+assert "?Slot06Case72@Character19@@QAEXXZ" in helper_members
+assert "?Slot06Case73@Character19@@QAEXXZ" in helper_members
+assert "?Slot06Case74@Character19@@QAEXXZ" in helper_members
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -1367,6 +1372,54 @@ trail_effect_finish_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": trail_effect_finish_helper,
         **helper_members[trail_effect_finish_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+
+super_state_symbols = {
+    f"0x{case:02X}": {
+        "entry": entry,
+        "bytes": native_bytes,
+        "state_id": state,
+        "symbol": f"?Slot06Case{case:02X}@Character19@@QAEXXZ",
+    }
+    for case, entry, native_bytes, state in (
+        (0x70, "0x006746E1", 970, 300),
+        (0x71, "0x00674AAB", 698, 303),
+        (0x72, "0x00674D65", 501, 306),
+        (0x73, "0x00674F5A", 2400, 309),
+        (0x74, "0x006758BA", 177, 310),
+    )
+}
+for record in super_state_symbols.values():
+    record.update(helper_members[record["symbol"]])
+(workbench / "super-move-states-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": super_state_symbols,
+    "case_0x71_loop": {
+        "initial_field3138": 10,
+        "loop_frame": 13,
+        "loop_condition": "field3138>0",
+        "frame_rewind": 2,
+        "counter_delta": -1,
+    },
+    "shared_leafs": {
+        "RandomRange": "FUN_004108a0",
+        "SetSceneTimer": "FUN_004080c0",
+        "SetHorizontalOffset": "FUN_00410a40",
+        "SetHorizontalShake": "FUN_00410a80",
+        "SetVerticalShake": "FUN_00410a10",
+        "SetTint": "FUN_00410b10",
+        "ResetFrame": "FUN_0040f1e0",
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

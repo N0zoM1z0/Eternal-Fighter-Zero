@@ -39,9 +39,9 @@
   },
   "candidate": {
     "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-    "source_sha256": "29a16948b72b3fadecd258ea3daaca3b5879ab0a0b42638aa6b8215628fd4ebc",
+    "source_sha256": "842ec737972a2d31b36e202e67d07c07c984a085d52af85742d85d55fe9a907a",
     "object": "build/character19-slot06/Character19Slot06Cases.obj",
-    "object_sha256": "e9f4aab1e72750b7ab57ca1a9082c3722d25911626109080689dea254891d740",
+    "object_sha256": "e01537a0cc0a79c339d502a144d8ef6c86dc59ea7b448d7313319853e5f2085f",
     "symbol": "?Slot06UpdateComboAerialBounce@Character19@@QAEXGGPAUEffectSpawn@@@Z",
     "candidate_size": 758,
     "relocations": 14,
@@ -49,9 +49,9 @@
   },
   "dispatcher": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "0be2ac421550effc19129b34d3d366e5848f27b22d66727efc9c537c212348e3",
+    "source_sha256": "e3f7b8e2cbe3c8039b934132a358b8f3cac2340d54e97b55ed6083f377bdfc60",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "88eaee18fc4f6eb54554322d8ac2ade8bdc260dfd67a1a49bfbaff4d3114903e",
+    "object_sha256": "bf0ceb55e9e0e6f81e65786c3cd68e50212090414812bcb8ea920a27372267c0",
     "symbol": "?Slot06@Character19@@UAEXXZ",
     "symbol_size": 6916,
     "relocation_count": 362,
