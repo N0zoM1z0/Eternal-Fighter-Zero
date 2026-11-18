@@ -201,3 +201,8 @@ Five handlers share the native dash-momentum decay and frame/cancel state machin
 ## Extended dash follow-through: selector case 0x52
 
 The 611-byte state 205 reuses the shared dash-attack state machine with 0.03 horizontal decay and the down-input/attackCollisionResult>1 cancel gate. It emits local effect 0x1a6 at frame 1, then grants 13 meter and requests sound 0x14 at frame 2. The effect uses current integer-truncated X/Y, owner 1, the facing flag, group 2 and layer 1. Normal completion chooses state 3 when inputY==1, otherwise state 0, then faces the opponent and resets pose.
+
+
+## Sustained dash attack: selector case 0x53
+
+The 435-byte state 206 zeros velocity only on its initial frame when dashMomentumFlag is already clear. Positive momentum decays by 0.03 while the flag remains set and the animation is at or before phase 2; after that the flag is cleared, with negative horizontal velocity clamped to zero. Phase 1 sets remainingHitCount to 1. Phase 3 grants 25 meter and requests sound 0x14 only while field3138 is zero, then increments that per-state one-shot gate. Each completed animation frame clears attackCollisionResult; completion chooses state 3 when inputY==1, otherwise state 0, then faces the opponent and resets pose. Unlike the adjacent dash-attack variants, this branch has no input cancel and no local effect.
