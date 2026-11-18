@@ -122,3 +122,8 @@ State ID 81 is a 485-byte native branch. On its first frame it emits local effec
 ## Repeated airborne knockback: selector case 0x30
 
 State ID 82 is a 546-byte repeated-launch sequence. It decays field0118 by 0.8 when enabled. Its first frame requests context sound 0x1e, launches with velocity (-0.1, -0.45), increments field3138, and adds 30 meter. At frame 4 it reloads the knockback velocities and 0.032 gravity; positive vertical velocity advances to phase 5. The frame timer loops back to phase 0 while field3138 is below 8, then applies the native frame-count correction. Ground crossing after phase 4 selects state 0x61 or 0x62 based on knockdownOnLanding. Slot06UpdateRepeatedAirKnockback is compiled as natural C++ and cross-checked against Character23's independently recovered state 82.
+
+
+## Paired airborne rebound/slide: selector cases 0x31-0x32
+
+These two 581-byte native branches are identical after normalizing local temporary names. On the first frame they emit local effect type 0x1f0 once (owner 1, group/layer 0, facing copied into the effect flag), subtract 30 from field0118 when enabled, request context sound 0x21, set velocity to (-0.8,-1.5), and add 30 meter. Vertical velocity gains 0.04 per update. If the initial upward movement immediately crosses the ground plane, the handler clamps position/velocity and advances to phase 1. Otherwise phase 1 adds 0.01 horizontal acceleration; phase 2 seeds -2.0; later phases add 0.06. Positive horizontal velocity is clamped to zero. At animation completion the state returns to 0, resets pose, and faces the opponent. Slot06UpdateAirborneRebound is cross-checked against Character23's matching states 83/84.
