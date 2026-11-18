@@ -49,6 +49,9 @@ assert any(symbol.startswith("?Slot06UpdateAirKnockback@Character19@@") for symb
 assert "?Slot06UpdateRepeatedAirKnockback@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateAirborneRebound@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAirborneKnockbackLanding@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateLocalEffectRecovery@Character19@@") for symbol in helper_members)
+assert "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z" in helper_members
+assert any(symbol.startswith("?Slot06UpdateDefeatImpact@Character19@@") for symbol in helper_members)
 
 main_source = workbench / "Character19Slot06.cpp"
 main_object = build_dir / "Character19Slot06.obj"
@@ -76,7 +79,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 251
+assert len(implemented_states) == 254
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -285,6 +288,62 @@ landing_helper = next(
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
+}, indent=2) + "\n")
+
+local_effect_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateLocalEffectRecovery@")
+)
+face_helper = "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z"
+defeat_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateDefeatImpact@")
+)
+(workbench / "final-transition-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": {
+        "0x35": {"entry": "0x0066E3F2", "bytes": 179, "state_id": 87, "effect_type": 0x1ef},
+        "0x36": {"entry": "0x0066E4A5", "bytes": 149, "state_id": 96},
+        "0x37": {"entry": "0x0066E53A", "bytes": 248, "state_id": 97, "end_state": 99},
+    },
+    "candidates": {
+        local_effect_helper: helper_members[local_effect_helper],
+        face_helper: helper_members[face_helper],
+        defeat_helper: helper_members[defeat_helper],
+    },
+    "source_sha256": helper_receipt["source_sha256"],
+    "object_sha256": helper_receipt["object_sha256"],
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+    "status": "semantic-workbench-only-not-exact",
+}, indent=2) + "\n")
+
+local_effect_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateLocalEffectRecovery@")
+)
+face_helper = "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z"
+defeat_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateDefeatImpact@")
+)
+(workbench / "final-transition-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": {
+        "0x35": {"entry": "0x0066E3F2", "bytes": 179, "state_id": 87, "effect_type": 0x1ef},
+        "0x36": {"entry": "0x0066E4A5", "bytes": 149, "state_id": 96},
+        "0x37": {"entry": "0x0066E53A", "bytes": 248, "state_id": 97, "end_state": 99},
+    },
+    "candidates": {
+        local_effect_helper: helper_members[local_effect_helper],
+        face_helper: helper_members[face_helper],
+        defeat_helper: helper_members[defeat_helper],
+    },
+    "source_sha256": helper_receipt["source_sha256"],
+    "object_sha256": helper_receipt["object_sha256"],
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+    "status": "semantic-workbench-only-not-exact",
 }, indent=2) + "\n")
 
 print({

@@ -132,3 +132,8 @@ These two 581-byte native branches are identical after normalizing local tempora
 ## Airborne knockback landing variants: selector cases 0x33-0x34
 
 These branches reuse the one-time local effect type 0x1f0 (owner 1, group/layer 0, facing flag) and the 0x21 context sound. Both seed knockbackVelocityX/knockbackVelocityY and add 30 meter; when field0120 is enabled they subtract 30 from field0118. Case 0x33 applies 0.04 vertical acceleration, then on animation completion returns to state 0 and faces the opponent; the subsequent ground-crossing check selects 0x61/0x62. Case 0x34 gates its first launch on field3138==0, increments that counter, applies 0.06 vertical acceleration, and wraps the animation frame index to zero instead of changing state at frame-count completion. Both preserve the same knockdownOnLanding branch. The shared helper is cross-checked against Character23's matching states 85/86.
+
+
+## Final transition effects: selector cases 0x35-0x37
+
+Three short but distinct end-state handlers are now restored. Case 0x35 (state 87) emits local effect 0x1ef at fixed coordinates (60,40), with payload and flag set, then advances to state 0 at animation completion. Case 0x36 (state 96) has no effect; it faces the opponent on the penultimate frame and finishes in state 7 or 3 according to inputY. Case 0x37 (state 97) zeros movement, requests vertical shake (3,0), emits context effect type 3 at the integer-truncated character position, requests sound 7, and transitions to state 99 at the end of its animation. The implementation uses the existing local-effect, context-effect and shake methods rather than duplicating their internals.

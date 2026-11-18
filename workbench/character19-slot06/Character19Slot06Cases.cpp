@@ -1635,3 +1635,84 @@ void Character19::Slot06UpdateAirborneKnockbackLanding(
         ResetPose();
     }
 }
+
+
+// Local effect 0x1ef and short animation recovery (selector 0x35).
+void Character19::Slot06UpdateLocalEffectRecovery(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    SecondaryEffectSpawn *spawn)
+{
+    if ((field000a == 0) && (field000c == 0)) {
+        spawn->type = 0x1ef;
+        spawn->x = 60.0;
+        spawn->y = 40.0;
+        spawn->payload = 1;
+        spawn->flag0018 = 1;
+        spawn->group = 0;
+        spawn->layer = 0;
+        EmitLocalEffect(spawn);
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        if (frameCount <= field000a) {
+            field0008 = 0;
+            ResetPose();
+        }
+    }
+}
+
+// Brief face-opponent recovery with an input-dependent landing state (0x36).
+void Character19::Slot06UpdateFaceRecovery(
+    unsigned short frameDuration,
+    unsigned short frameCount)
+{
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        if (field000a == frameCount - 1) {
+            FaceOpponent();
+        }
+        if (frameCount <= field000a) {
+            field0008 = 7;
+            if (inputY == 1) {
+                field0008 = 3;
+            }
+            ResetPose();
+        }
+    }
+}
+
+// Defeat-impact transition with a camera shake and a context-owned effect (0x37).
+void Character19::Slot06UpdateDefeatImpact(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    EffectSpawn *spawn)
+{
+    velocityX = 0.0;
+    velocityY = 0.0;
+    if ((field000a == 0) && (field000c == 0)) {
+        SetVerticalShake(3, 0);
+        spawn->type = 3;
+        spawn->x = (double)(int)positionX;
+        spawn->y = (double)(int)positionY;
+        spawn->group = 2;
+        spawn->layer = 0;
+        contextOwner->EmitEffect(spawn);
+        pendingContextSoundSlot = 7;
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        if (frameCount <= field000a) {
+            field0008 = 99;
+            ResetPose();
+        }
+    }
+}

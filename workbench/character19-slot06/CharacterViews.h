@@ -420,6 +420,9 @@ public:
     void Slot06UpdateRepeatedAirKnockback(unsigned short, unsigned short);
     void Slot06UpdateAirborneRebound(unsigned short, unsigned short, SecondaryEffectSpawn *);
     void Slot06UpdateAirborneKnockbackLanding(unsigned short, unsigned short, SecondaryEffectSpawn *, double, int, int);
+    void Slot06UpdateLocalEffectRecovery(unsigned short, unsigned short, SecondaryEffectSpawn *);
+    void Slot06UpdateFaceRecovery(unsigned short, unsigned short);
+    void Slot06UpdateDefeatImpact(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
     void Slot06Case04();
