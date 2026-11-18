@@ -2815,15 +2815,15 @@
       "symbol": "??0EffectSpawn@@QAE@XZ",
       "target_address": "0x00405490",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "bb8e5e37bafe8341a184b79e849b818ace70858291a0df8f3b261020c46639d7",
-      "object_sha256": "9ac83b4c496aa920bc5cb7818bc57b708b7d65ca1ffc16baeb4c62709484009c",
+      "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
+      "object_sha256": "fec08cd6347862d549fc4992e924e8a1e29ed3564e67adbe42474e9c4b488f5d",
       "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
       "dependencies": {
-        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
-        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+        "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+        "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "b9718cd929ab8c46cefb7730aa93b818fd1f3d160caf31d630f48a0b3ee36b85",
+      "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "64b6cd45571a019417c5ffe7c6bea3fe5f4810c1270ac41a0bbf6e97d119eebf",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -2921,5 +2921,41 @@
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "latest_selected_replay": "seven new loading/Mizuka functions and204 actual Engine.h consumers;57 serial cold artifacts; all211 complete strict comparisons exact; compiler-local destination/offsets and four original string payloads independently checked before symbol-name refresh"
+  "latest_selected_replay": {
+    "result": "exact",
+    "size": 30,
+    "matched_bytes": 30,
+    "difference_count": 0,
+    "first_differences": [],
+    "relocations": [
+      {
+        "offset": 16,
+        "target": 7830976,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "_memset",
+        "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed complete pool body and original call operands",
+        "addend": 0
+      }
+    ],
+    "relocated_sha256": "6e29f4e9f7c18111358377512b098e4c62371280882858f2b58d016499f01c06",
+    "target_extent_sha256": "6e29f4e9f7c18111358377512b098e4c62371280882858f2b58d016499f01c06",
+    "unit": "effect-spawn-construct",
+    "symbol": "??0EffectSpawn@@QAE@XZ",
+    "target_address": "0x00405490",
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "boundary_ledger_sha256": "195828f61d6ea7fd6eb878c186f1fdf9cf61115d082e5b133d1599dc231846f3",
+    "object_sha256": "fec08cd6347862d549fc4992e924e8a1e29ed3564e67adbe42474e9c4b488f5d",
+    "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
+    "dependencies": {
+      "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+      "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+    },
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+    "units_manifest_sha256": "640dd8d27f3c3bae83f7f7b6a93c4ec3537b99cafb47c3d69c14d79c104a433e",
+    "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+    "unit_sha256": "64b6cd45571a019417c5ffe7c6bea3fe5f4810c1270ac41a0bbf6e97d119eebf",
+    "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+    "acceptance_authority": "complete-function-codegen"
+  }
 }
