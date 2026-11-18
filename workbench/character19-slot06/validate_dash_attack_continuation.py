@@ -96,10 +96,17 @@ actual = struct.unpack("<d", target_bytes(pe, 0x00787CA0, 8))[0]
 assert actual == 0.03, actual
 
 renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
-assert "(0x52, (0.03, 1, 2, 13, 0x14, 1, 0x1a6, 0, 1))" in renderer
+assert "for case in (0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52)" in renderer
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+fragment = (ROOT / "workbench/character19-slot06/Character19Slot06Case52.inc").read_text()
 assert_selector_case(dispatcher, 205)
-assert "Slot06UpdateDashAttack(" in dispatcher
+assert '#include "Character19Slot06Case52.inc"' in dispatcher
+assert "velocityX = velocityX - 0.03;" in fragment
+assert "meter = meter + 13;" in fragment
+assert "if ((field000a == 1) && (field000c == 0))" in fragment
+assert "spawn.type = 0x1a6;" in fragment
+assert "EmitLocalEffect(&spawn);" in fragment
+assert fragment.index("int cancel = 0;") < fragment.index("spawn.type = 0x1a6;")
 print({
     "selector": "0x52",
     "native_bytes": 611,

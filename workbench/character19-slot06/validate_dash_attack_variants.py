@@ -117,51 +117,61 @@ for address, expected_value in constants.items():
     actual = struct.unpack("<d", target_bytes(pe, address, 8))[0]
     assert actual == expected_value, (hex(address), actual, expected_value)
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-start = source.index("void Character19::Slot06UpdateDashAttack")
-end = source.index("\n}\n", start) + 3
-helper = source[start:end]
-for expression in (
-    "void Character19::Slot06UpdateDashAttack",
-    "if (dashMomentumFlag == 0)",
-    "velocityX = 0.0;",
-    "velocityY = 0.0;",
-    "velocityX > 0.0",
-    "dashMomentumFlag == 1",
-    "velocityX = velocityX - horizontalDeceleration;",
-    "dashMomentumFlag = 0;",
-    "effectBeforeCancel",
-    "spawn->owner = 1;",
-    "spawn->type = effectType;",
-    "spawn->x = (double)(int)positionX;",
-    "spawn->y = (double)(int)positionY;",
-    "spawn->flag0018 = (unsigned char)facing;",
-    "spawn->group = 2;",
-    "spawn->layer = 1;",
-    "EmitLocalEffect(spawn);",
-    "inputY == -1",
-    "field000a > 0",
-    "field015c < 3",
-    "attackCollisionResult > 1",
-    "attackCollisionResult == 3",
-    "field0008 = 4;",
-    "field0008 = 5;",
-    "field0008 = 6;",
-    "attackCollisionResult = 0;",
-    "meter = meter + meterGain;",
-    "pendingContextSoundSlot = (char)soundSlot;",
-    "remainingHitCount = 1;",
-    "field000a < 3",
-    "field0008 = 0;",
-    "finishStanding && (inputY == 1)",
-    "FaceOpponent();",
-    "ResetPose();",
-):
-    assert expression in helper, expression
+helper_source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
+assert "Slot06UpdateDashAttack(" not in helper_source
+dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+for case, values in expected.items():
+    native_size, state, decel, cancel_mode, meter_frame, meter_gain, sound, effect_frame, effect_type, effect_before_cancel = values
+    fragment = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    assert f"velocityX = velocityX - {decel};" in fragment
+    assert "if (dashMomentumFlag == 0)" in fragment
+    assert "velocityY = 0.0;" in fragment
+    assert f"field000a == {meter_frame}" in fragment
+    assert f"meter = meter + {meter_gain};" in fragment
+    assert f"pendingContextSoundSlot = (char){sound};" in fragment
+    assert "remainingHitCount = 1;" in fragment
+    assert "timing.frameDuration" in fragment
+    assert "timing.animationFrameCount" in fragment
+    if cancel_mode:
+        predicate = "attackCollisionResult > 1" if cancel_mode == 1 else "attackCollisionResult == 3"
+        assert "int cancel = 0;" in fragment
+        assert "(inputY == -1)" in fragment
+        assert "(field000a > 0)" in fragment
+        assert "(field015c < 3)" in fragment
+        assert predicate in fragment
+        assert "field0008 = 4;" in fragment
+        assert "field0008 = 5;" in fragment
+        assert "field0008 = 6;" in fragment
+        assert "attackCollisionResult = 0;" in fragment
+        assert "ResetPose();" in fragment
+    else:
+        assert "int cancel = 0;" not in fragment
+        assert "field0008 = 4;" not in fragment
+    if effect_type:
+        assert f"if ((field000a == {effect_frame}) && (field000c == 0))" in fragment
+        assert f"spawn.type = {hex(effect_type)};" in fragment
+        assert "spawn.owner = 1;" in fragment
+        assert "spawn.x = (double)(int)positionX;" in fragment
+        assert "spawn.y = (double)(int)positionY;" in fragment
+        assert "spawn.flag0018 = (unsigned char)facing;" in fragment
+        assert "spawn.group = 2;" in fragment
+        assert "spawn.layer = 1;" in fragment
+        assert "EmitLocalEffect(&spawn);" in fragment
+    else:
+        assert "spawn.type" not in fragment
+    if case in (0x51, 0x52):
+        assert "if (inputY == 1)" in fragment
+        assert "field0008 = 3;" in fragment
+    else:
+        assert "field0008 = 3;" not in fragment
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
 
-# The source-level effect-before-cancel split is important for 0x4e.
-assert helper.index("if (effectBeforeCancel") < helper.index("int cancel = 0;")
-assert helper.index("if (!effectBeforeCancel") > helper.index("if (cancel)")
+# The native 0x4e branch emits before checking the cancel input, while 0x50
+# checks cancellation first and suppresses its late effect when cancelled.
+fragment_4e = (ROOT / "workbench/character19-slot06/Character19Slot06Case4E.inc").read_text()
+fragment_50 = (ROOT / "workbench/character19-slot06/Character19Slot06Case50.inc").read_text()
+assert fragment_4e.index("spawn.type = 0x1a4;") < fragment_4e.index("int cancel = 0;")
+assert fragment_50.index("int cancel = 0;") < fragment_50.index("spawn.type = 0x1a8;")
 
 analog15 = (ROOT / "src/Character15State.cpp").read_text()
 for expression in (
@@ -176,9 +186,8 @@ for expression in (
 ):
     assert expression in analog15, expression
 
-dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert "ResetLocalEffectSpawn(&spawn);" in dispatcher
-for state in (200, 201, 202, 203, 204):
+for state in (200, 201, 202, 203, 204, 205):
     assert_selector_case(dispatcher, state)
-assert dispatcher.count("Slot06UpdateDashAttack(") == 6
-print({"variants": 5, "native_bytes": [467, 587, 434, 587, 491], "state_ids": [200,201,202,203,204], "verified_constants": len(constants)})
+assert dispatcher.count("Slot06UpdateDashAttack(") == 0
+print({"variants": 6, "native_bytes": [467, 587, 434, 587, 491, 611], "state_ids": [200,201,202,203,204,205], "verified_constants": len(constants)})

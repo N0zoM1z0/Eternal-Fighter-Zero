@@ -477,45 +477,39 @@ void Character19::Slot06()
         break;
 
     case 77:
-        Slot06UpdateDashAttack(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            0.06, 1, 2, 5, 21,
-            0, 0, 0, 0);
+        {
+#include "Character19Slot06Case4D.inc"
+        }
         break;
 
     case 78:
-        Slot06UpdateDashAttack(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            0.03, 1, 3, 15, 20,
-            1, 420, 1, 0);
+        {
+#include "Character19Slot06Case4E.inc"
+        }
         break;
 
     case 79:
-        Slot06UpdateDashAttack(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            0.06, 0, 4, 15, 20,
-            3, 421, 0, 0);
+        {
+#include "Character19Slot06Case4F.inc"
+        }
         break;
 
     case 80:
-        Slot06UpdateDashAttack(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            0.06, 2, 4, 35, 35,
-            6, 424, 0, 0);
+        {
+#include "Character19Slot06Case50.inc"
+        }
         break;
 
     case 81:
-        Slot06UpdateDashAttack(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            0.03, 1, 1, 5, 21,
-            0, 0, 0, 1);
+        {
+#include "Character19Slot06Case51.inc"
+        }
         break;
 
     case 82:
-        Slot06UpdateDashAttack(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            0.03, 1, 2, 13, 20,
-            1, 422, 0, 1);
+        {
+#include "Character19Slot06Case52.inc"
+        }
         break;
 
     case 83:

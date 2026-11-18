@@ -476,21 +476,12 @@ lines += [
     "        break;",
     "",
 ]
-for case, config in [
-    (0x4d, (0.06, 1, 2, 5, 0x15, 0, 0, 0, 0)),
-    (0x4e, (0.03, 1, 3, 15, 0x14, 1, 0x1a4, 1, 0)),
-    (0x4f, (0.06, 0, 4, 15, 0x14, 3, 0x1a5, 0, 0)),
-    (0x50, (0.06, 2, 4, 35, 0x23, 6, 0x1a8, 0, 0)),
-    (0x51, (0.03, 1, 1, 5, 0x15, 0, 0, 0, 1)),
-    (0x52, (0.03, 1, 2, 13, 0x14, 1, 0x1a6, 0, 1)),
-]:
-    deceleration, cancel_mode, meter_frame, meter_gain, sound_slot, effect_frame, effect_type, effect_before_cancel, finish_standing = config
+for case in (0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52):
     lines += labels(case)
     lines += [
-        "        Slot06UpdateDashAttack(",
-        "            timing.frameDuration, timing.animationFrameCount, &spawn,",
-        f"            {deceleration}, {cancel_mode}, {meter_frame}, {meter_gain}, {sound_slot},",
-        f"            {effect_frame}, {effect_type}, {effect_before_cancel}, {finish_standing});",
+        "        {",
+        f'#include "Character19Slot06Case{case:02X}.inc"',
+        "        }",
         "        break;",
         "",
     ]
