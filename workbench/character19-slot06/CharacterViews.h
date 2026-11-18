@@ -417,6 +417,7 @@ public:
     void Slot06UpdateGroundRecovery(unsigned short, unsigned short, int);
     void Slot06UpdateGroundSkid(unsigned short, unsigned short, int);
     void Slot06UpdateAirKnockback(unsigned short, unsigned short, SecondaryEffectSpawn *);
+    void Slot06UpdateRepeatedAirKnockback(unsigned short, unsigned short);
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
     void Slot06Case04();

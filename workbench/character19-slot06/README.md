@@ -117,3 +117,8 @@ The three native branches (state IDs 75-77) share the same horizontal braking se
 ## Airborne recoil and local hit effect: selector case 0x2f
 
 State ID 81 is a 485-byte native branch. On its first frame it emits local effect type 499 at the integer-truncated character position, copies the character facing into the effect flag, sets layer 1, adds 30 meter, and seeds velocity from knockbackVelocityX/knockbackVelocityY with 0.032 gravity. Each frame adds 0.02 horizontal acceleration and gravity to vertical velocity, clamps positive horizontal velocity to zero, and advances the animation timer. At the animation limit it backs the frame index up by one; when the predicted ground crossing occurs on frame 1, it selects state 0x61 or 0x62 according to knockdownOnLanding. Slot06UpdateAirKnockback is a shared natural-C++ helper using the already-reset EffectSpawn and the existing Character19::EmitLocalEffect path.
+
+
+## Repeated airborne knockback: selector case 0x30
+
+State ID 82 is a 546-byte repeated-launch sequence. It decays field0118 by 0.8 when enabled. Its first frame requests context sound 0x1e, launches with velocity (-0.1, -0.45), increments field3138, and adds 30 meter. At frame 4 it reloads the knockback velocities and 0.032 gravity; positive vertical velocity advances to phase 5. The frame timer loops back to phase 0 while field3138 is below 8, then applies the native frame-count correction. Ground crossing after phase 4 selects state 0x61 or 0x62 based on knockdownOnLanding. Slot06UpdateRepeatedAirKnockback is compiled as natural C++ and cross-checked against Character23's independently recovered state 82.

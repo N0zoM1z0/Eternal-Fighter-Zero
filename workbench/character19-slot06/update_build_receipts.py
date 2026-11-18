@@ -46,6 +46,7 @@ for symbol in helper_symbols:
 assert "?Slot06UpdateGroundRecovery@Character19@@QAEXGGH@Z" in helper_members
 assert "?Slot06UpdateGroundSkid@Character19@@QAEXGGH@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateAirKnockback@Character19@@") for symbol in helper_members)
+assert "?Slot06UpdateRepeatedAirKnockback@Character19@@QAEXGG@Z" in helper_members
 
 main_source = workbench / "Character19Slot06.cpp"
 main_object = build_dir / "Character19Slot06.obj"
@@ -73,7 +74,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 246
+assert len(implemented_states) == 247
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -184,6 +185,31 @@ air_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": air_helper,
         **helper_members[air_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+repeated_helper = "?Slot06UpdateRepeatedAirKnockback@Character19@@QAEXGG@Z"
+(workbench / "repeated-air-knockback-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x30",
+        "entry": "0x0066D991",
+        "bytes": 546,
+        "state_id": 82,
+        "sound_request": 0x1e,
+        "repeat_limit": 8,
+        "landing_states": [0x61, 0x62],
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": repeated_helper,
+        **helper_members[repeated_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,
