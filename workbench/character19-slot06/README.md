@@ -16,7 +16,7 @@ Currently implemented state coverage:
 - selector cases 0-10: state IDs 1-11 except 12, plus state 13
 - selector cases 0x70-0x74: state IDs 300, 303, 306, 309, 310, dispatched to isolated C++ handlers
 - selector case 0x75: all 193 native fallback state IDs
-- remaining 74 valid state IDs: explicitly marked TODO, not silently routed to the fallback
+- remaining 72 valid state IDs: explicitly marked TODO, not silently routed to the fallback
 
 Character19Slot06Cases.cpp contains ten isolated natural-C++ handlers plus two shared airborne-state helpers for selector cases 0x70-0x74. The native intervals and candidate member sizes are:
 
@@ -88,3 +88,8 @@ The first six branches (0x13-0x18) choose state 0 or 3 on completion based on in
 The ten native branches (0x1c-0x24 and 0x28) use the same airborne knockback progression. They decay field0118 while its enable byte is set, add 30 meter on the first frame, seed horizontal velocity from knockbackVelocityX, blend vertical velocity as velocityY * 0.75 + knockbackVelocityY, and use 0.032 gravity. The vertical sign selects frame 1 or 2, then the frame timer and predicted ground crossing choose the landing transition. knockdownOnLanding selects state 0x62 or 0x61.
 
 Cases 0x1c-0x1e clamp vertical velocity to [-2,-0.5], [-4,-0.5], and [-6,-0.5], respectively. Case 0x1f deliberately has no vertical clamp. Cases 0x20 and 0x28 take the unblended knockback vertical velocity directly and use gravity 0.032 and 0.072, respectively. Slot06UpdateKnockbackFall is a 664-byte VC7.1 member and keeps blend, gravity, and clamp differences as explicit parameters. Cases 0x21-0x24 also call the recovered opponent-range predicate before continuing: it requires a 280-unit horizontal range and 20-unit stage-edge clearance, otherwise transitioning to state 0x46. The predicate is a separate 226-byte natural-C++ helper. The target-backed validator checks the eight movement constants, all case-specific clamp/blend/gravity modes, and boundary probes for the opponent-range predicate. This family is compiled and semantically mapped, not Exact.
+
+
+## Follow-up knockback landing: selector cases 0x25-0x26
+
+These two branches restore the final knockback landing phase. Both apply the 1.5 field0118 decay, add 3 meter per update, copy the pending knockback X/Y velocities, advance the frame timer, and choose state 0x62 or 0x61 from knockdownOnLanding when ground is reached. Case 0x25 performs the recovered opponent-range guard after incrementing the tick and switches to state 0x46 when outside the valid range; case 0x26 deliberately omits that guard. Slot06UpdateKnockbackLanding is a 315-byte VC7.1 helper. The target-backed validator confirms the different native extents (316 and 277 bytes) and the guard's ordering.

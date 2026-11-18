@@ -1272,3 +1272,44 @@ void Character19::Slot06UpdateKnockbackFall(
         ResetPose();
     }
 }
+
+
+// Follow-up knockback landing path for native selector cases 0x25 and 0x26.
+void Character19::Slot06UpdateKnockbackLanding(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    int interruptOutsideRange)
+{
+    if (field0120 != 0) {
+        field0118 = field0118 - 1.5;
+    }
+
+    meter = meter + 3;
+    velocityX = knockbackVelocityX;
+    velocityY = knockbackVelocityY;
+    field000c = field000c + 1;
+
+    if (interruptOutsideRange && !Slot06OpponentWithinKnockbackRange()) {
+        field0008 = 0x46;
+        ResetPose();
+        return;
+    }
+
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        if (frameCount <= field000a) {
+            field000a = field000a - 2;
+        }
+    }
+
+    if ((positionY + velocityY) >= 0.0) {
+        positionY = 0.0;
+        if (knockdownOnLanding == 0) {
+            field0008 = 0x62;
+        } else {
+            field0008 = 0x61;
+        }
+        ResetPose();
+    }
+}

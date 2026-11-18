@@ -413,6 +413,7 @@ public:
     void Slot06UpdateAirMovement(unsigned short, unsigned short, unsigned short, double, double, unsigned short, int);
     void Slot06UpdateCounterMove(unsigned short, unsigned short, short, double, double, int);
     int Slot06OpponentWithinKnockbackRange();
+    void Slot06UpdateKnockbackLanding(unsigned short, unsigned short, int);
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
     void Slot06Case04();
