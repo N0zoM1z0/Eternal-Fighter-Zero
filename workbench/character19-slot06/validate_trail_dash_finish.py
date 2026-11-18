@@ -1,4 +1,4 @@
-"""Validate trail-backed dash finish selectors 0x5e and 0x5f."""
+"""Validate trail-backed dash finish selectors 0x5e/0x5f and 0x61/0x62."""
 import csv
 import re
 import struct
@@ -19,19 +19,21 @@ for i, line in enumerate(lines):
         starts.append((i, value))
 blocks = {}
 for n, (i, value) in enumerate(starts):
-    if value in (0x5E, 0x5F):
+    if value in (0x5E, 0x5F, 0x61, 0x62):
         blocks[value] = lines[i:starts[n + 1][0]]
-assert set(blocks) == {0x5E, 0x5F}
+assert set(blocks) == {0x5E, 0x5F, 0x61, 0x62}
 
 expected = {
-    0x5E: (307, 230, 0x00672A2F, 5, 0x15, 0),
-    0x5F: (307, 231, 0x00672B62, 10, 0x14, 1),
+    0x5E: (307, 230, 0x00672A2F, 2, 5, 0x15, 3, 0),
+    0x5F: (307, 231, 0x00672B62, 2, 10, 0x14, 3, 0),
+    0x61: (307, 233, 0x00672E47, 1, 5, 0x15, 5, 3),
+    0x62: (307, 234, 0x00672F7A, 2, 10, 0x14, 3, 3),
 }
 rows = {
     int(row["case_index"], 16): row
     for row in csv.DictReader((ROOT / "workbench/character19-slot06/case-map.csv").open())
 }
-for case, (size, state, entry, meter_gain, sound, reverse_init_order) in expected.items():
+for case, (size, state, entry, meter_frame, meter_gain, sound, collision_clear_frame, completion_state) in expected.items():
     row = rows[case]
     assert int(row["native_entry"], 16) == entry
     assert int(row["native_code_bytes"]) == size
@@ -47,16 +49,15 @@ for case, (size, state, entry, meter_gain, sound, reverse_init_order) in expecte
         "((short)param_1[3] == 0)",
         "*(double *)(param_1 + 0xc) = _DAT_00787328;",
         "*(double *)(param_1 + 0xe) = _DAT_007872f8;",
-        "*(short *)((int)param_1 + 10) == 2",
+        f"*(short *)((int)param_1 + 10) == {meter_frame}",
         f"*(short *)(param_1 + 0x52) = (short)param_1[0x52] + {meter_gain};",
         f"*(undefined1 *)((int)param_1 + 0x2c9) = {hex(sound)};",
         "*(undefined2 *)(param_1 + 0x5b) = 1;",
         "*(short *)(param_1 + 3) = (short)param_1[3] + 1;",
         "param_1[0x5a] = 0;",
-        "*(undefined2 *)(param_1 + 2) = 0;",
+        f"*(undefined2 *)(param_1 + 2) = {completion_state};",
     ):
         assert expression in block, (hex(case), expression)
-    assert "*(undefined2 *)(param_1 + 2) = 3;" not in block
 
 # Native FUN_004109d0(3) is the wrapper for Secondary::StartTrail(3).
 wrapper = (ROOT / ".analysis/kanna-slot06/helpers/4109d0.c").read_text()
@@ -115,21 +116,26 @@ for expression in (
     "field000a == 0",
     "velocityX = 2.0;",
     "velocityY = 0.0;",
-    "field000a == 2",
+    "field000a == meterFrame",
     "meter = meter + meterGain;",
     "pendingContextSoundSlot = (char)soundSlot;",
     "remainingHitCount = 1;",
+    "field000a < collisionClearFrame",
     "attackCollisionResult = 0;",
-    "field0008 = 0;",
+    "field0008 = completionState;",
     "ResetPose();",
 ):
     assert expression in helper, expression
 assert "FaceOpponent" not in helper
 
 renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
-assert "(0x5e, (5, 0x15))" in renderer
-assert "(0x5f, (10, 0x14))" in renderer
+assert "(0x5e, (2, 5, 0x15, 3, 0))" in renderer
+assert "(0x5f, (2, 10, 0x14, 3, 0))" in renderer
+assert "(0x61, (1, 5, 0x15, 5, 3))" in renderer
+assert "(0x62, (2, 10, 0x14, 3, 3))" in renderer
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert "case 230:" in dispatcher and "Slot06UpdateTrailDashFinish(" in dispatcher
 assert "case 231:" in dispatcher and "Slot06UpdateTrailDashFinish(" in dispatcher
-print({"variants": 2, "native_bytes": [307,307], "state_ids": [230,231], "trail_spacing": 3, "meter": [5,10]})
+assert "case 233:" in dispatcher and "Slot06UpdateTrailDashFinish(" in dispatcher
+assert "case 234:" in dispatcher and "Slot06UpdateTrailDashFinish(" in dispatcher
+print({"variants": 4, "native_bytes": [307,307,307,307], "state_ids": [230,231,233,234], "trail_spacing": 3, "meter": [5,10,5,10]})

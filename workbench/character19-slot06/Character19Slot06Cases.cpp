@@ -2814,8 +2814,11 @@ void Character19::Slot06UpdateOpponentStageCombo(
 void Character19::Slot06UpdateTrailDashFinish(
     unsigned short frameDuration,
     unsigned short frameCount,
+    unsigned short meterFrame,
     short meterGain,
-    unsigned char soundSlot)
+    unsigned char soundSlot,
+    unsigned short collisionClearFrame,
+    unsigned short completionState)
 {
     StartTrail(3);
     dashMomentumFlag = 0;
@@ -2830,7 +2833,7 @@ void Character19::Slot06UpdateTrailDashFinish(
         velocityY = 0.0;
     }
 
-    if ((field000a == 2) && (field000c == 0)) {
+    if ((field000a == meterFrame) && (field000c == 0)) {
         meter = meter + meterGain;
         pendingContextSoundSlot = (char)soundSlot;
         remainingHitCount = 1;
@@ -2840,8 +2843,97 @@ void Character19::Slot06UpdateTrailDashFinish(
     if (frameDuration <= field000c) {
         field000c = 0;
         field000a = field000a + 1;
+        if (field000a < collisionClearFrame) {
+            attackCollisionResult = 0;
+        }
+        if (frameCount <= field000a) {
+            field0008 = completionState;
+            ResetPose();
+        }
+    }
+}
+
+
+// Trail-backed dash strike with a frame-3 speed burst and sustained 0.07 decay.
+void Character19::Slot06UpdateDashTrailCharge(
+    unsigned short frameDuration,
+    unsigned short frameCount)
+{
+    StartTrail(3);
+    dashMomentumFlag = 0;
+
+    if (field000a < 3) {
+        velocityX = 0.0;
+    }
+
+    if ((field000a == 3) && (field000c == 0)) {
+        pendingContextSoundSlot = 0x14;
+        velocityX = 3.0;
+        remainingHitCount = 1;
+        meter = meter + 35;
+    }
+
+    if (velocityX > 0.0) {
+        velocityX = velocityX - 0.07;
+    }
+    if (velocityX < 0.0) {
+        velocityX = 0.0;
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
         if (field000a < 3) {
             attackCollisionResult = 0;
+        }
+        if (frameCount <= field000a) {
+            field0008 = 0;
+            ResetPose();
+        }
+    }
+}
+
+// Trail-backed airborne dash: frame 3 launches, then gravity runs until a
+// strict ground crossing moves the animation to its terminal frame 15.
+void Character19::Slot06UpdateAirborneTrailDash(
+    unsigned short frameDuration,
+    unsigned short frameCount)
+{
+    StartTrail(3);
+    dashMomentumFlag = 0;
+
+    if (field000a < 3) {
+        velocityX = 0.0;
+    }
+
+    if ((field000a > 2) && (field000a < 0xf)) {
+        velocityY = velocityY + gravity;
+        if ((positionY + velocityY) > 0.0) {
+            field000c = 0;
+            ResetFrame();
+            positionY = 0.0;
+            field000a = 0xf;
+        }
+    }
+
+    if ((field000a == 7) && (field000c == 0)) {
+        pendingContextSoundSlot = 0x14;
+        remainingHitCount = 1;
+        meter = meter + 35;
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        if (field000a < 3) {
+            attackCollisionResult = 0;
+        }
+        if (field000a == 3) {
+            velocityX = 1.5;
+            velocityY = -1.5;
+            gravity = 0.032;
         }
         if (frameCount <= field000a) {
             field0008 = 0;

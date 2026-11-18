@@ -73,6 +73,8 @@ assert any(symbol.startswith("?Slot06UpdateGroundImpactRecovery@Character19@@") 
 assert any(symbol.startswith("?Slot06UpdateOpponentCaptureImpact@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateOpponentStageCombo@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateTrailDashFinish@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateDashTrailCharge@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateAirborneTrailDash@Character19@@") for symbol in helper_members)
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -101,7 +103,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 294
+assert len(implemented_states) == 298
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -949,8 +951,10 @@ trail_dash_helper = next(
 (workbench / "trail-dash-finish-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": {
-        "0x5E": {"entry": "0x00672A2F", "bytes": 307, "state_id": 230, "meter_frame": 2, "meter_gain": 5, "sound": 0x15},
-        "0x5F": {"entry": "0x00672B62", "bytes": 307, "state_id": 231, "meter_frame": 2, "meter_gain": 10, "sound": 0x14},
+        "0x5E": {"entry": "0x00672A2F", "bytes": 307, "state_id": 230, "meter_frame": 2, "meter_gain": 5, "sound": 0x15, "collision_clear_frame": 3, "completion_state": 0},
+        "0x5F": {"entry": "0x00672B62", "bytes": 307, "state_id": 231, "meter_frame": 2, "meter_gain": 10, "sound": 0x14, "collision_clear_frame": 3, "completion_state": 0},
+        "0x61": {"entry": "0x00672E47", "bytes": 307, "state_id": 233, "meter_frame": 1, "meter_gain": 5, "sound": 0x15, "collision_clear_frame": 5, "completion_state": 3},
+        "0x62": {"entry": "0x00672F7A", "bytes": 307, "state_id": 234, "meter_frame": 2, "meter_gain": 10, "sound": 0x14, "collision_clear_frame": 3, "completion_state": 3},
     },
     "shared_native_behavior": {
         "trail_spacing": 3,
@@ -967,6 +971,74 @@ trail_dash_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": trail_dash_helper,
         **helper_members[trail_dash_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+
+dash_trail_charge_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateDashTrailCharge@")
+)
+(workbench / "dash-trail-charge-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x60",
+        "entry": "0x00672C95",
+        "bytes": 434,
+        "state_id": 232,
+        "trail_spacing": 3,
+        "frame_3_velocity_x": 3.0,
+        "post_burst_decay": 0.07,
+        "meter_frame": 3,
+        "meter_gain": 35,
+        "sound": 0x14,
+        "completion_state": 0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": dash_trail_charge_helper,
+        **helper_members[dash_trail_charge_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+airborne_trail_dash_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateAirborneTrailDash@")
+)
+(workbench / "airborne-trail-dash-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x63",
+        "entry": "0x006730AD",
+        "bytes": 483,
+        "state_id": 235,
+        "trail_spacing": 3,
+        "launch_frame": 3,
+        "launch_velocity": [1.5, -1.5],
+        "gravity": 0.032,
+        "landing_predicate": "positionY+velocityY>0",
+        "landing_frame": 15,
+        "meter_frame": 7,
+        "meter_gain": 35,
+        "sound": 0x14,
+        "completion_state": 0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": airborne_trail_dash_helper,
+        **helper_members[airborne_trail_dash_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

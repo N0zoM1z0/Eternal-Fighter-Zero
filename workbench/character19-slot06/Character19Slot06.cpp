@@ -560,13 +560,39 @@ void Character19::Slot06()
     case 230:
         Slot06UpdateTrailDashFinish(
             timing.frameDuration, timing.animationFrameCount,
-            5, 21);
+            2, 5, 21,
+            3, 0);
         break;
 
     case 231:
         Slot06UpdateTrailDashFinish(
             timing.frameDuration, timing.animationFrameCount,
-            10, 20);
+            2, 10, 20,
+            3, 0);
+        break;
+
+    case 233:
+        Slot06UpdateTrailDashFinish(
+            timing.frameDuration, timing.animationFrameCount,
+            1, 5, 21,
+            5, 3);
+        break;
+
+    case 234:
+        Slot06UpdateTrailDashFinish(
+            timing.frameDuration, timing.animationFrameCount,
+            2, 10, 20,
+            3, 3);
+        break;
+
+    case 232:
+        Slot06UpdateDashTrailCharge(
+            timing.frameDuration, timing.animationFrameCount);
+        break;
+
+    case 235:
+        Slot06UpdateAirborneTrailDash(
+            timing.frameDuration, timing.animationFrameCount);
         break;
 
     case 59:
@@ -948,10 +974,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 232:
-    case 233:
-    case 234:
-    case 235:
     case 249:
     case 250:
     case 251:

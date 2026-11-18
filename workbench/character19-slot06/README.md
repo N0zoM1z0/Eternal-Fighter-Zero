@@ -247,3 +247,8 @@ The 594-byte state 221 drives opponent repositioning at animation-frame boundari
 ## Trail-backed dash finishers: selector cases 0x5e-0x5f
 
 Both 307-byte states begin a spacing-3 trail every update, clear dashMomentumFlag, reduce horizontal velocity by 0.03 with a zero clamp, and initialize frame-0 velocity to (2.0, 0.0). At frame 2 they award different meter/sound pairs: 0x5e gives +5 and sound 0x15; 0x5f gives +10 and sound 0x14. Each frame transition clears attackCollisionResult while the new frame is below 3. Completion enters state 0 and resets pose without a FaceOpponent call. The shared StartTrail(3) call is the natural C++ mapping of native FUN_004109d0(3) through FUN_00412a10.
+
+
+## Trail dash charge and airborne follow-up: selector cases 0x60-0x63
+
+Case 0x60 starts a spacing-3 trail, clears dash momentum, holds horizontal velocity at zero through frame 2, then launches at 3.0 on frame 3 while decaying by 0.07 each update. It grants 35 meter and requests sound 0x14 on that launch frame. Case 0x63 uses the same trail start and pre-launch hold, launches at (1.5,-1.5) with gravity 0.032 on frame 3, integrates until the strict ground crossing positionY+velocityY>0, then moves to terminal frame 15; it grants 35 meter and sound 0x14 at frame 7 if still airborne. Cases 0x61/0x62 share the frame-0 (2.0,0.0) trail dash finisher with 0.03 decay, but preserve distinct meter timing and completion: 0x61 grants +5/sound 0x15 at frame 1, clears collision before frame 5 and completes in state 3; 0x62 grants +10/sound 0x14 at frame 2, clears before frame 3 and also completes in state 3.
