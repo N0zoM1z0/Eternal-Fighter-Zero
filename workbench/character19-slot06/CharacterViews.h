@@ -409,6 +409,8 @@ public:
     virtual void RemoveLocalEffect(short);
     virtual void InitializeState();
     void UpdateLocomotionState();
+    void Slot06Case03();
+    void Slot06Case04();
     void Slot06Case70();
     void Slot06Case71();
     void Slot06Case72();

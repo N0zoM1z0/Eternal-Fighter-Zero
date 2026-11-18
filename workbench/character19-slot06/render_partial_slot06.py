@@ -9,7 +9,7 @@ states_by_case = {
     ]
     for row in rows
 }
-implemented = {0, 1, 2, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
+implemented = {0, 1, 2, 3, 4, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
 mapped = {
     state
     for case, states in states_by_case.items()
@@ -89,6 +89,8 @@ lines += [
 lines += advance_frame()[:-1]
 
 for case, method in [
+    (3, "Slot06Case03"),
+    (4, "Slot06Case04"),
     (0x70, "Slot06Case70"),
     (0x71, "Slot06Case71"),
     (0x72, "Slot06Case72"),

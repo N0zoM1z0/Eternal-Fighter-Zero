@@ -16,14 +16,14 @@
   },
   "partial_candidate": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "ea22d7cb82da78560b84f6efbd0c4ae7c90d78226b386d7dc1e97aec9153abbb",
+    "source_sha256": "5da9546b9d304f53027316f8e14db15ac8e11572f1b7f6f0987ea8647a446f9f",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "8e2d7543e79ac663e83b9de0fbd013f3b5856b0c26708ed54802fed3626dd06d",
+    "object_sha256": "dd5afdc4c7033109afc0395fb29daee567b1726a2801e9cd00050e6429a371af",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 1277,
-    "relocation_count": 38,
-    "implemented_state_ids": 201,
-    "unimplemented_state_ids": 109,
+    "symbol_size": 1221,
+    "relocation_count": 34,
+    "implemented_state_ids": 203,
+    "unimplemented_state_ids": 107,
     "status": "partial-semantic-workbench-not-exact"
   },
   "helper_candidate": {
@@ -40,5 +40,11 @@
     },
     "status": "semantic-workbench-only-not-exact"
   },
-  "compiler_flags": ["/Od", "/G6", "/MT", "/Gy", "/W3"]
+  "compiler_flags": [
+    "/Od",
+    "/G6",
+    "/MT",
+    "/Gy",
+    "/W3"
+  ]
 }

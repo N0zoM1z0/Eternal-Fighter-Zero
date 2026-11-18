@@ -61,6 +61,14 @@ void Character19::Slot06()
                 field000a = 0;
             }
         }
+    case 4:
+        Slot06Case03();
+        break;
+
+    case 5:
+        Slot06Case04();
+        break;
+
     case 300:
         Slot06Case70();
         break;
@@ -286,8 +294,6 @@ void Character19::Slot06()
             }
         }
 
-    case 4:
-    case 5:
     case 6:
     case 7:
     case 8:
