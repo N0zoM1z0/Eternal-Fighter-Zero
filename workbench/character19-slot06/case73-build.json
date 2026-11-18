@@ -1,0 +1,28 @@
+{
+  "target": "resources/EFZ.exe",
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_owner": {
+    "entry": "0x00667570",
+    "end_exclusive": "0x0067596B",
+    "size": 58363
+  },
+  "case": {
+    "selector": "0x73",
+    "state_id": 309,
+    "native_entry": "0x00674F5A",
+    "native_end_exclusive": "0x006758BA",
+    "native_size": 2400
+  },
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06Case73.cpp",
+    "source_sha256": "13709324401716d7d04155917ab44197f97391358d2a37e71189d873ed3f69fb",
+    "object": "build/character19-slot06/Character19Slot06Case73.obj",
+    "object_sha256": "c0e1de3281b2ead842e0e64206c8adc4a851bb10396745a31a3517e823a4b443",
+    "symbol": "?Slot06Case73@Character19@@QAEXXZ",
+    "symbol_size": 2438,
+    "relocation_count": 53,
+    "size_delta": 38,
+    "status": "semantic-workbench-only-not-exact"
+  },
+  "compiler_flags": ["/Od", "/G6", "/MT", "/Gy", "/W3"]
+}
