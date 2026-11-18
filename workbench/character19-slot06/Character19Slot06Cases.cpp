@@ -1744,12 +1744,13 @@ void Character19::Slot06UpdateDefeatWait(
 }
 
 
-// Shared horizontal recovery/braking for native selectors 0x3a and 0x3b.
+// Shared horizontal recovery/braking for native selectors 0x3a-0x3d.
 void Character19::Slot06UpdateHorizontalRecovery(
     unsigned short frameDuration,
     unsigned short frameCount,
     short meterGain,
-    double initialVelocityX)
+    double initialVelocityX,
+    int forceStandingState)
 {
     if ((field000a == 0) && (field000c == 0)) {
         dashMomentumFlag = 0;
@@ -1780,7 +1781,7 @@ void Character19::Slot06UpdateHorizontalRecovery(
         }
         if (frameCount <= field000a) {
             field0008 = 0;
-            if (inputY == 1) {
+            if (forceStandingState || (inputY == 1)) {
                 field0008 = 3;
             }
             ResetPose();

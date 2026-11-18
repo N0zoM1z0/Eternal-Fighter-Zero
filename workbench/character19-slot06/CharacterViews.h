@@ -424,7 +424,7 @@ public:
     void Slot06UpdateFaceRecovery(unsigned short, unsigned short);
     void Slot06UpdateDefeatImpact(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateDefeatWait(unsigned short, unsigned short);
-    void Slot06UpdateHorizontalRecovery(unsigned short, unsigned short, short, double);
+    void Slot06UpdateHorizontalRecovery(unsigned short, unsigned short, short, double, int);
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
     void Slot06Case04();
