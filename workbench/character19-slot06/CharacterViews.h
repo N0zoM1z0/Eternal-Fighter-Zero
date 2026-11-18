@@ -444,7 +444,6 @@ public:
     void Slot06UpdateImpactEffectPair(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateDampedImpactFinish(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateLoopingAerialBounce(unsigned short, unsigned short, EffectSpawn *);
-    void Slot06UpdateComboAerialBounce(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateFinalFaceTransition(unsigned short, unsigned short);
     void Slot06UpdateLocalEffectFinish(unsigned short, unsigned short, unsigned short);
     void Slot06UpdateFinalEffectPair(unsigned short, unsigned short, EffectSpawn *);

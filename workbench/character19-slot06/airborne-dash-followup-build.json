@@ -36,9 +36,9 @@
   },
   "candidate": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "045163d5274634c75cfe74fbdc706bf1eccd3071fd317f1c0e6239c1a2faf980",
+    "source_sha256": "1844954867cc072fb0b5bab63184a0369c9a3ccc441359d073673022a84727a0",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "2b2b77347309a6edf11a9d9c5658e487c0e1372835f9622f92139004581d3db5",
+    "object_sha256": "83f5402f7147a3c02a385832de74b7e46a2ea0d7b13ffe82ab9aa15102fe759d",
     "inlined_case_sources": {
       "workbench/character19-slot06/Character19Slot06Case54.inc": "97c20cb49b29c2a6cb9769aef629671ef08750ad1696a096fb50bcb213a9e292",
       "workbench/character19-slot06/Character19Slot06Case55.inc": "fec4d610abe7fb58158bc9cb0a31a2b49ff83e4fa02706e7f9772e3e5f373993",
@@ -48,12 +48,12 @@
   },
   "dispatcher": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "045163d5274634c75cfe74fbdc706bf1eccd3071fd317f1c0e6239c1a2faf980",
+    "source_sha256": "1844954867cc072fb0b5bab63184a0369c9a3ccc441359d073673022a84727a0",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "2b2b77347309a6edf11a9d9c5658e487c0e1372835f9622f92139004581d3db5",
+    "object_sha256": "83f5402f7147a3c02a385832de74b7e46a2ea0d7b13ffe82ab9aa15102fe759d",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 29941,
-    "relocation_count": 585,
+    "symbol_size": 30636,
+    "relocation_count": 598,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0,
     "included_sources": {
@@ -75,6 +75,7 @@
       "workbench/character19-slot06/Character19Slot06Case55.inc": "fec4d610abe7fb58158bc9cb0a31a2b49ff83e4fa02706e7f9772e3e5f373993",
       "workbench/character19-slot06/Character19Slot06Case56.inc": "64e1ab4d2112ceb476ee759999fb69daf5b7c89eb095c5c34e5aa8547e8f2a21",
       "workbench/character19-slot06/Character19Slot06Case66.inc": "a541225ed37635750226eff9a159dff08bf9d35fef219245ea1eaae10aec95e8",
+      "workbench/character19-slot06/Character19Slot06Case69.inc": "bf39558eab0cecfdede986a8169264b5841582ced48ed0e42bf9aee475132ed3",
       "workbench/character19-slot06/Character19Slot06Case70.inc": "49c3931fa6e30978960cb88b5b6db5a9f913890557537c96bd6b76e12d7abca5",
       "workbench/character19-slot06/Character19Slot06Case71.inc": "54849bd5e889b71ba598487dfcd7b49f9928df79541789bfc8f23978f7674033",
       "workbench/character19-slot06/Character19Slot06Case72.inc": "edddd4aa1a8f150d2f8e94bde261d88290066bffd5dbe1566dbc75078372f048",

@@ -636,8 +636,9 @@ lines += [
 
 lines += labels(0x69)
 lines += [
-    "        Slot06UpdateComboAerialBounce(",
-    "            timing.frameDuration, timing.animationFrameCount, &spawn);",
+    "        {",
+    '#include "Character19Slot06Case69.inc"',
+    "        }",
     "        break;",
     "",
 ]

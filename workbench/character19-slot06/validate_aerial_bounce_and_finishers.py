@@ -159,20 +159,6 @@ helpers = {
         "attackCollisionResult = 0;", "field000a = field000a - 2;",
         "positionY = 0.0;", "ResetPose();", "ResetFrame();", "field0008 = 0x103;",
     )),
-    "combo": ("Slot06UpdateComboAerialBounce", (
-        "StartTrail(1);", "field313c == 0", "ResetFrame();",
-        "field0118 = field0118 - 500.0;", "field0118 = field0118 - 250.0;",
-        "spawn->type = 0x21;", "spawn->y = (double)((int)positionY - 0x32);",
-        "spawn->group = 2;", "spawn->layer = 1;", "spawn->palette = 0xb;",
-        "contextOwner->EmitEffect(spawn);", "field313c = field313c + 1;",
-        "remainingHitCount = 1;", "field000a == 1", "spawn->owner = 1;",
-        "spawn->type = 0x1b9;", "EmitLocalEffect(spawn);",
-        "velocityY = velocityY + gravity;", "field000a == 3",
-        "field313c == 1", "velocityY = -3.5;", "gravity = 0.015;",
-        "field3138 < 5", "field000a = 0;", "field3138 = field3138 + 1;",
-        "field000a == 9", "ResetPose();", "field0008 = 9;",
-        "field0008 = 0x103;",
-    )),
     "face": ("Slot06UpdateFinalFaceTransition", (
         "field000c = field000c + 1;", "field000a = field000a + 1;",
         "attackCollisionResult = 0;", "field0008 = 3;",
@@ -202,17 +188,58 @@ assert "_memset(param_1,0,0x48);" in native_init
 cpp_init = (ROOT / "src/EffectPool.cpp").read_text()
 assert "std::memset(this, 0, sizeof(*this));" in cpp_init
 
+combo_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case69.inc").read_text()
+for expression in (
+    "StartTrail(1);",
+    "field313c == 0",
+    "ResetFrame();",
+    "field0118 = field0118 - 500.0;",
+    "field0118 = field0118 - 250.0;",
+    "spawn.type = 0x21;",
+    "spawn.y = (double)((int)positionY - 0x32);",
+    "spawn.group = 2;",
+    "spawn.layer = 1;",
+    "spawn.palette = 0xb;",
+    "contextOwner->EmitEffect(&spawn);",
+    "field313c = field313c + 1;",
+    "remainingHitCount = 1;",
+    "field000a == 1",
+    "spawn.owner = 1;",
+    "spawn.type = 0x1b9;",
+    "EmitLocalEffect(&spawn);",
+    "velocityY = velocityY + gravity;",
+    "field000a == 3",
+    "field313c == 1",
+    "velocityY = -3.5;",
+    "gravity = 0.015;",
+    "field3138 < 5",
+    "field000a = 0;",
+    "field3138 = field3138 + 1;",
+    "field000a == 9",
+    "ResetPose();",
+    "field0008 = 9;",
+    "field0008 = 0x103;",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
+):
+    assert expression in combo_helper, expression
+assert combo_helper.count("contextOwner->EmitEffect(&spawn);") == 1
+assert combo_helper.count("EmitLocalEffect(&spawn);") == 1
+
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 for state, name in (
     (256, "Slot06UpdateLoopingAerialBounce"),
-    (257, "Slot06UpdateComboAerialBounce"),
+    (257, "Character19Slot06Case69.inc"),
     (259, "Slot06UpdateFinalFaceTransition"),
     (263, "Slot06UpdateLocalEffectFinish"),
     (264, "Slot06UpdateLocalEffectFinish"),
     (265, "Slot06UpdateLocalEffectFinish"),
 ):
     assert_selector_case(dispatcher, state)
-    assert name in dispatcher
+    if name.endswith(".inc"):
+        assert f'#include "{name}"' in dispatcher
+    else:
+        assert name in dispatcher
 
 print({
     "variants": 6,

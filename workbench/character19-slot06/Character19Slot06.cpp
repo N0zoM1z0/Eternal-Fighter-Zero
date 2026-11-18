@@ -636,8 +636,9 @@ void Character19::Slot06()
         break;
 
     case 105:
-        Slot06UpdateComboAerialBounce(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case69.inc"
+        }
         break;
 
     case 106:
