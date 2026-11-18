@@ -1,6 +1,6 @@
 // Partial natural-C++ reconstruction of Character19::Slot06.
 // State IDs are grouped using the native 310-byte selector table.
-// Cases 0-0x2f, 0x30, 0x31, 0x32, 0x70-0x74, and the shared 0x75 fallback are restored.
+// Cases 0-0x2f, 0x30, 0x31, 0x32, 0x33, 0x34, 0x70-0x74, and the shared 0x75 fallback are restored.
 // are implemented; remaining native handlers are explicitly TODO.
 #include "CharacterViews.h"
 
@@ -261,6 +261,18 @@ void Character19::Slot06()
     case 84:
         Slot06UpdateAirborneRebound(
             timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
+    case 85:
+        Slot06UpdateAirborneKnockbackLanding(
+            timing.frameDuration, timing.animationFrameCount, &spawn,
+            0.04, 0, 1);
+        break;
+
+    case 86:
+        Slot06UpdateAirborneKnockbackLanding(
+            timing.frameDuration, timing.animationFrameCount, &spawn,
+            0.06, 1, 0);
         break;
 
     case 70:
@@ -681,8 +693,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 85:
-    case 86:
     case 87:
     case 96:
     case 97:
