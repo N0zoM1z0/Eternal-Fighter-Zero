@@ -43,15 +43,17 @@ for address, expected in constants.items():
     assert actual == expected, (hex(address), actual, expected)
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
+assert "Slot06UpdateAirKnockback" not in source
+fragment = (ROOT / "workbench/character19-slot06/Character19Slot06Case2F.inc").read_text()
 for expression in (
-    "void Character19::Slot06UpdateAirKnockback",
-    "field0118 = field0118 - 0.8",
-    "spawn->type = 499;",
-    "spawn->x = (double)(int)positionX;",
-    "spawn->y = (double)(int)positionY;",
-    "spawn->flag0018 = (unsigned char)facing;",
-    "spawn->layer = 1;",
-    "EmitLocalEffect(spawn);",
+    "field0118 = field0118 - 0.8;",
+    "field000a == 0",
+    "spawn.type = 499;",
+    "spawn.x = (double)(int)positionX;",
+    "spawn.y = (double)(int)positionY;",
+    "spawn.flag0018 = (unsigned char)facing;",
+    "spawn.layer = 1;",
+    "EmitLocalEffect(&spawn);",
     "meter = meter + 30;",
     "velocityX = knockbackVelocityX;",
     "velocityY = knockbackVelocityY;",
@@ -64,12 +66,15 @@ for expression in (
     "field000a == 1",
     "field0008 = 0x61;",
     "field0008 = 0x62;",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
 ):
-    assert expression in source, expression
+    assert expression in fragment, expression
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 81)
-assert "Slot06UpdateAirKnockback(" in dispatcher
+assert '#include "Character19Slot06Case2F.inc"' in dispatcher
+assert "Slot06UpdateAirKnockback(" not in dispatcher
 assert dispatcher.index("ResetLocalEffectSpawn(&spawn);") < dispatcher.index("switch (selectorCase)")
 
 # Independently recovered characters share the same state-81 semantics.

@@ -266,8 +266,9 @@ void Character19::Slot06()
         break;
 
     case 47:
-        Slot06UpdateAirKnockback(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case2F.inc"
+        }
         break;
 
     case 48:

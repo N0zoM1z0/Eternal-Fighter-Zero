@@ -45,7 +45,6 @@ for symbol in helper_symbols:
         "relocations": len(relocations),
     }
 assert "?Slot06UpdateGroundRecovery@Character19@@QAEXGGH@Z" in helper_members
-assert any(symbol.startswith("?Slot06UpdateAirKnockback@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateLocalEffectRecovery@Character19@@") for symbol in helper_members)
 assert "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateDefeatImpact@Character19@@") for symbol in helper_members)
@@ -126,7 +125,7 @@ dispatcher_record = {
         f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
             (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
         ).hexdigest()
-        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1a, 0x1b, 0x2c, 0x2d, 0x2e, 0x30, 0x31, 0x32, 0x33, 0x34, 0x43, 0x44, 0x47, 0x4b, 0x54, 0x55, 0x56, 0x5c, 0x5d, 0x5e, 0x5f, 0x61, 0x62, 0x66, 0x69, 0x6e, 0x6f, 0x70, 0x71, 0x72, 0x73, 0x74)
+        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1a, 0x1b, 0x2c, 0x2d, 0x2e, 0x2f, 0x30, 0x31, 0x32, 0x33, 0x34, 0x43, 0x44, 0x47, 0x4b, 0x54, 0x55, 0x56, 0x5c, 0x5d, 0x5e, 0x5f, 0x61, 0x62, 0x66, 0x69, 0x6e, 0x6f, 0x70, 0x71, 0x72, 0x73, 0x74)
     },
     "status": "partial-semantic-workbench-not-exact",
 }
@@ -256,10 +255,6 @@ ground_helper = next(
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-air_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateAirKnockback@")
-)
 (workbench / "air-knockback-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
@@ -269,14 +264,19 @@ air_helper = next(
         "state_id": 81,
         "local_effect_type": 499,
         "landing_states": [0x61, 0x62],
+        "gravity": 0.032,
+        "horizontal_acceleration": 0.02,
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": air_helper,
-        **helper_members[air_helper],
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case2F.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case2F.inc").read_bytes()
+            ).hexdigest(),
+        },
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

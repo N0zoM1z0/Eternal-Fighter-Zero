@@ -266,8 +266,9 @@ for case in (0x2c, 0x2d, 0x2e):
 
 lines += labels(0x2f)
 lines += [
-    "        Slot06UpdateAirKnockback(",
-    "            timing.frameDuration, timing.animationFrameCount, &spawn);",
+    "        {",
+    '#include "Character19Slot06Case2F.inc"',
+    "        }",
     "        break;",
     "",
 ]
