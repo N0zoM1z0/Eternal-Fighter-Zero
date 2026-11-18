@@ -1,6 +1,6 @@
 // Partial natural-C++ reconstruction of Character19::Slot06.
 // State IDs are grouped using the native 310-byte selector table.
-// Only cases 0, 1, 2, 0x70-0x74, and the shared 0x75 fallback
+// Cases 0-7, 10, 0x70-0x74, and the shared 0x75 fallback are restored.
 // are implemented; remaining native handlers are explicitly TODO.
 #include "CharacterViews.h"
 
@@ -36,6 +36,7 @@ void Character19::Slot06()
                 field000a = 0;
             }
         }
+        break;
     case 2:
         dashMomentumFlag = 0;
         velocityX = -0.8;
@@ -48,6 +49,7 @@ void Character19::Slot06()
                 field000a = 0;
             }
         }
+        break;
     case 3:
         velocityX = 0.0;
         velocityY = 0.0;
@@ -61,12 +63,71 @@ void Character19::Slot06()
                 field000a = 0;
             }
         }
+        break;
+    case 7:
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        FaceOpponent();
+        field000c = field000c + 1;
+        if (timing.frameDuration <= field000c) {
+            field000c = 0;
+            field000a = field000a + 1;
+            if (timing.animationFrameCount <= field000a) {
+                field000a = 0;
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+
+    case 8:
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        FaceOpponent();
+        field000c = field000c + 1;
+        if (timing.frameDuration <= field000c) {
+            field000c = 0;
+            field000a = field000a + 1;
+            if (timing.animationFrameCount <= field000a) {
+                field000a = 0;
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+
+    case 13:
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        FaceOpponent();
+        field000c = field000c + 1;
+        if (timing.frameDuration <= field000c) {
+            field000c = 0;
+            field000a = field000a + 1;
+            if (timing.animationFrameCount <= field000a) {
+                field000a = 0;
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+
     case 4:
         Slot06Case03();
         break;
 
     case 5:
         Slot06Case04();
+        break;
+
+    case 6:
+        Slot06Case05();
         break;
 
     case 300:
@@ -293,13 +354,10 @@ void Character19::Slot06()
                 field000a = 0;
             }
         }
+        break;
 
-    case 6:
-    case 7:
-    case 8:
     case 9:
     case 10:
-    case 13:
     case 14:
     case 15:
     case 16:

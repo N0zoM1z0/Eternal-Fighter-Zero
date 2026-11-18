@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "c05100e85e74713ea0106f9dd40e17e26d9fbf1bc03008ba3ee8827840fa32cb",
+  "source_sha256": "85cef446343250b7ffe289fcec0c13894744b237cae06344e304f847f401d46b",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "2ff68b88170bca863b4d18bcb650be4354b4b2e03c4854ed865234bf4ed924db",
+  "object_sha256": "39713fd872255185923063a77814a9effc6856d0bcb964fdaece80ec834e0cf5",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -17,6 +17,10 @@
       "relocations": 7
     },
     "?Slot06Case04@Character19@@QAEXXZ": {
+      "candidate_size": 992,
+      "relocations": 8
+    },
+    "?Slot06Case05@Character19@@QAEXXZ": {
       "candidate_size": 992,
       "relocations": 8
     },

@@ -9,7 +9,7 @@ states_by_case = {
     ]
     for row in rows
 }
-implemented = {0, 1, 2, 3, 4, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
+implemented = {0, 1, 2, 3, 4, 5, 6, 7, 10, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
 mapped = {
     state
     for case, states in states_by_case.items()
@@ -21,7 +21,7 @@ unimplemented = sorted(set(range(1, 0x137)) - mapped)
 lines = [
     "// Partial natural-C++ reconstruction of Character19::Slot06.",
     "// State IDs are grouped using the native 310-byte selector table.",
-    "// Only cases 0, 1, 2, 0x70-0x74, and the shared 0x75 fallback",
+    "// Cases 0-7, 10, 0x70-0x74, and the shared 0x75 fallback are restored.",
     "// are implemented; remaining native handlers are explicitly TODO.",
     '#include "CharacterViews.h"',
     "",
@@ -69,7 +69,7 @@ lines += [
     "        velocityX = 0.8;",
     "        velocityY = 0.0;",
 ]
-lines += advance_frame()[:-1]
+lines += advance_frame()
 
 lines += labels(1)
 lines += [
@@ -77,7 +77,7 @@ lines += [
     "        velocityX = -0.8;",
     "        velocityY = 0.0;",
 ]
-lines += advance_frame()[:-1]
+lines += advance_frame()
 
 lines += labels(2)
 lines += [
@@ -86,11 +86,75 @@ lines += [
     "        dashMomentumFlag = 0;",
     "        FaceOpponent();",
 ]
-lines += advance_frame()[:-1]
+lines += advance_frame()
+
+lines += labels(6)
+lines += [
+    "        velocityX = 0.0;",
+    "        velocityY = 0.0;",
+    "        dashMomentumFlag = 0;",
+    "        FaceOpponent();",
+    "        field000c = field000c + 1;",
+    "        if (timing.frameDuration <= field000c) {",
+    "            field000c = 0;",
+    "            field000a = field000a + 1;",
+    "            if (timing.animationFrameCount <= field000a) {",
+    "                field000a = 0;",
+    "                field0008 = 0;",
+    "                ResetPose();",
+    "            }",
+    "        }",
+    "        break;",
+    "",
+]
+
+lines += labels(7)
+lines += [
+    "        velocityX = 0.0;",
+    "        velocityY = 0.0;",
+    "        dashMomentumFlag = 0;",
+    "        FaceOpponent();",
+    "        field000c = field000c + 1;",
+    "        if (timing.frameDuration <= field000c) {",
+    "            field000c = 0;",
+    "            field000a = field000a + 1;",
+    "            if (timing.animationFrameCount <= field000a) {",
+    "                field000a = 0;",
+    "                field0008 = 3;",
+    "                ResetPose();",
+    "            }",
+    "        }",
+    "        break;",
+    "",
+]
+
+lines += labels(10)
+lines += [
+    "        velocityX = 0.0;",
+    "        velocityY = 0.0;",
+    "        dashMomentumFlag = 0;",
+    "        FaceOpponent();",
+    "        field000c = field000c + 1;",
+    "        if (timing.frameDuration <= field000c) {",
+    "            field000c = 0;",
+    "            field000a = field000a + 1;",
+    "            if (timing.animationFrameCount <= field000a) {",
+    "                field000a = 0;",
+    "                field0008 = 7;",
+    "                if (inputY == 1) {",
+    "                    field0008 = 3;",
+    "                }",
+    "                ResetPose();",
+    "            }",
+    "        }",
+    "        break;",
+    "",
+]
 
 for case, method in [
     (3, "Slot06Case03"),
     (4, "Slot06Case04"),
+    (5, "Slot06Case05"),
     (0x70, "Slot06Case70"),
     (0x71, "Slot06Case71"),
     (0x72, "Slot06Case72"),
@@ -106,7 +170,7 @@ lines += [
     "        velocityX = 0.0;",
     "        velocityY = 0.0;",
 ]
-lines += advance_frame()[:-1]
+lines += advance_frame()
 
 lines += [""]
 for state in unimplemented:
