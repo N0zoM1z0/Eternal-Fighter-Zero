@@ -64,6 +64,7 @@ assert any(symbol.startswith("?Slot06UpdateDefeatImpactVelocityRestore@Character
 assert any(symbol.startswith("?Slot06UpdateDashRecovery@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashAttack@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashAttackSustain@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateAirborneDashFollowup@Character19@@") for symbol in helper_members)
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -92,7 +93,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 282
+assert len(implemented_states) == 285
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -678,6 +679,31 @@ dash_attack_sustain_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": dash_attack_sustain_helper,
         **helper_members[dash_attack_sustain_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+
+airborne_dash_followup_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateAirborneDashFollowup@")
+)
+(workbench / "airborne-dash-followup-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": {
+        "0x54": {"entry": "0x00671641", "bytes": 675, "state_id": 207, "meter_frame": 2, "meter_gain": 5, "sound": 0x15, "effect_type": 0, "collision_clear_frame": 3},
+        "0x55": {"entry": "0x006718E4", "bytes": 797, "state_id": 208, "meter_frame": 2, "meter_gain": 13, "sound": 0x14, "effect_frame": 3, "effect_type": 0x1A7, "collision_clear_frame": 4},
+        "0x56": {"entry": "0x00671C01", "bytes": 797, "state_id": 209, "meter_frame": 1, "meter_gain": 30, "sound": 0x14, "effect_frame": 1, "effect_type": 0x1A9, "collision_clear_frame": 3, "repeat_frame": 7, "repeat_back": 3, "repeat_limit": 1},
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": airborne_dash_followup_helper,
+        **helper_members[airborne_dash_followup_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

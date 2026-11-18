@@ -435,6 +435,7 @@ public:
     void Slot06UpdateDashRecovery(unsigned short, unsigned short);
     void Slot06UpdateDashAttack(unsigned short, unsigned short, EffectSpawn *, double, int, unsigned short, short, unsigned short, unsigned short, unsigned short, int, int);
     void Slot06UpdateDashAttackSustain(unsigned short, unsigned short);
+    void Slot06UpdateAirborneDashFollowup(unsigned short, unsigned short, EffectSpawn *, unsigned short, short, unsigned short, unsigned short, unsigned short, unsigned short, unsigned short, unsigned short, unsigned short);
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
     void Slot06Case04();
