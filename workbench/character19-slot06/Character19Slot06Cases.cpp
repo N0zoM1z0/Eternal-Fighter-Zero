@@ -2247,3 +2247,102 @@ void Character19::Slot06UpdateDashRecovery(
         }
     }
 }
+
+
+// Shared dash-attack follow-through, hit-cancel and local-effect sequencing for selectors 0x4d-0x51.
+void Character19::Slot06UpdateDashAttack(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    EffectSpawn *spawn,
+    double horizontalDeceleration,
+    int cancelMode,
+    unsigned short meterFrame,
+    short meterGain,
+    unsigned short soundSlot,
+    unsigned short effectFrame,
+    unsigned short effectType,
+    int effectBeforeCancel,
+    int finishStanding)
+{
+    if (dashMomentumFlag == 0) {
+        velocityX = 0.0;
+        velocityY = 0.0;
+    }
+
+    if ((velocityX > 0.0) && (dashMomentumFlag == 1)) {
+        velocityX = velocityX - horizontalDeceleration;
+    } else {
+        velocityX = 0.0;
+        dashMomentumFlag = 0;
+    }
+
+    if (effectBeforeCancel && (effectFrame != 0) &&
+        (field000a == effectFrame) && (field000c == 0)) {
+        spawn->owner = 1;
+        spawn->type = effectType;
+        spawn->x = (double)(int)positionX;
+        spawn->y = (double)(int)positionY;
+        spawn->flag0018 = (unsigned char)facing;
+        spawn->group = 2;
+        spawn->layer = 1;
+        EmitLocalEffect(spawn);
+    }
+
+    int cancel = 0;
+    if ((cancelMode != 0) && (inputY == -1) &&
+        (field000a > 0) && (field015c < 3)) {
+        if ((cancelMode == 1) && (attackCollisionResult > 1)) {
+            cancel = 1;
+        } else if ((cancelMode == 2) && (attackCollisionResult == 3)) {
+            cancel = 1;
+        }
+    }
+
+    if (cancel) {
+        field0008 = 4;
+        if (inputX == facing) {
+            field0008 = 5;
+        }
+        if (inputX == -facing) {
+            field0008 = 6;
+        }
+        attackCollisionResult = 0;
+        ResetPose();
+        return;
+    }
+
+    if ((field000a == meterFrame) && (field000c == 0)) {
+        meter = meter + meterGain;
+        pendingContextSoundSlot = (char)soundSlot;
+        remainingHitCount = 1;
+    }
+
+    if (!effectBeforeCancel && (effectFrame != 0) &&
+        (field000a == effectFrame) && (field000c == 0)) {
+        spawn->owner = 1;
+        spawn->type = effectType;
+        spawn->x = (double)(int)positionX;
+        spawn->y = (double)(int)positionY;
+        spawn->flag0018 = (unsigned char)facing;
+        spawn->group = 2;
+        spawn->layer = 1;
+        EmitLocalEffect(spawn);
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        if (field000a < 3) {
+            attackCollisionResult = 0;
+        }
+        if (frameCount <= field000a) {
+            field0008 = 0;
+            if (finishStanding && (inputY == 1)) {
+                field0008 = 3;
+            }
+            FaceOpponent();
+            ResetPose();
+        }
+    }
+}

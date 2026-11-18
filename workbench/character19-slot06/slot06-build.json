@@ -6,13 +6,13 @@
     "size": 58363
   },
   "partial_candidate": {
-    "source_sha256": "573d1d7490d3b9f6586a46be63b6044f8d79af9938274fa5d2e5bf8a82a1894e",
-    "object_sha256": "4ebc61f12ff33c9862a04767491507f9dcce805932ea74f7fe3becb51222d198",
+    "source_sha256": "a03c39eab65df9296dea383eb36afff7517cda94f120cda6979c5885fc228e03",
+    "object_sha256": "1118715f37448c1396f7f29d97807ce09bccd42e7b565742c646e59954599ec7",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 5620,
-    "relocation_count": 287,
-    "implemented_state_ids": 275,
-    "unimplemented_state_ids": 35,
+    "symbol_size": 5924,
+    "relocation_count": 302,
+    "implemented_state_ids": 280,
+    "unimplemented_state_ids": 30,
     "status": "partial-semantic-workbench-not-exact"
   },
   "compiler_flags": [

@@ -62,6 +62,7 @@ assert any(symbol.startswith("?Slot06UpdateKnockbackImpactFinish@Character19@@")
 assert any(symbol.startswith("?Slot06UpdateAirborneHitstunRestore@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDefeatImpactVelocityRestore@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashRecovery@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateDashAttack@Character19@@") for symbol in helper_members)
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -90,7 +91,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 275
+assert len(implemented_states) == 280
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -615,6 +616,33 @@ dash_recovery_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": dash_recovery_helper,
         **helper_members[dash_recovery_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+
+dash_attack_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateDashAttack@")
+)
+(workbench / "dash-attack-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": {
+        "0x4D": {"entry": "0x00670825", "bytes": 467, "state_id": 200, "deceleration": 0.06, "cancel": "attackCollisionResult>1", "meter_frame": 2, "meter_gain": 5, "sound": 0x15},
+        "0x4E": {"entry": "0x006709F8", "bytes": 587, "state_id": 201, "deceleration": 0.03, "cancel": "attackCollisionResult>1", "effect_frame": 1, "effect_type": 0x1A4, "meter_frame": 3, "meter_gain": 15, "sound": 0x14},
+        "0x4F": {"entry": "0x00670C43", "bytes": 434, "state_id": 202, "deceleration": 0.06, "cancel": None, "effect_frame": 3, "effect_type": 0x1A5, "meter_frame": 4, "meter_gain": 15, "sound": 0x14},
+        "0x50": {"entry": "0x00670DF5", "bytes": 587, "state_id": 203, "deceleration": 0.06, "cancel": "attackCollisionResult==3", "meter_frame": 4, "meter_gain": 35, "sound": 0x23, "effect_frame": 6, "effect_type": 0x1A8},
+        "0x51": {"entry": "0x00671040", "bytes": 491, "state_id": 204, "deceleration": 0.03, "cancel": "attackCollisionResult>1", "meter_frame": 1, "meter_gain": 5, "sound": 0x15, "completion": "inputY==1 ? 3 : 0"},
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": dash_attack_helper,
+        **helper_members[dash_attack_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,
