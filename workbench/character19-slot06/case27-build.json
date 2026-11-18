@@ -1,0 +1,32 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_case": {
+    "selector": "0x27",
+    "state_id": 70,
+    "entry": "0x0066CA5B",
+    "end_exclusive": "0x0066CC3B",
+    "bytes": 480
+  },
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "92bf900078cdbaaf707be49559d8eb0c8b050922057d81b572f4783b27548e2a",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "5c7aa4eb1cb3c508a9b9a56549e70aa75ddb14675fbe9f539942d7a218ab3643",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 4187,
+    "relocations": 188,
+    "status": "partial-semantic-workbench-not-exact"
+  },
+  "native_helpers": {
+    "round_to_nearest_even": "0x007783B8",
+    "context_emit_effect": "0x00407100"
+  },
+  "effect": {
+    "owner": 0,
+    "type": 0,
+    "group": 2,
+    "layer": 1,
+    "palette": "ResetLocalEffectSpawn default 255"
+  },
+  "status": "semantic-workbench-only-not-exact"
+}

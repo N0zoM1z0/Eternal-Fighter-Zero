@@ -16,7 +16,7 @@ Currently implemented state coverage:
 - selector cases 0-10: state IDs 1-11 except 12, plus state 13
 - selector cases 0x70-0x74: state IDs 300, 303, 306, 309, 310, dispatched to isolated C++ handlers
 - selector case 0x75: all 193 native fallback state IDs
-- remaining 72 valid state IDs: explicitly marked TODO, not silently routed to the fallback
+- remaining 71 valid state IDs: explicitly marked TODO, not silently routed to the fallback
 
 Character19Slot06Cases.cpp contains ten isolated natural-C++ handlers plus two shared airborne-state helpers for selector cases 0x70-0x74. The native intervals and candidate member sizes are:
 
@@ -93,3 +93,12 @@ Cases 0x1c-0x1e clamp vertical velocity to [-2,-0.5], [-4,-0.5], and [-6,-0.5], 
 ## Follow-up knockback landing: selector cases 0x25-0x26
 
 These two branches restore the final knockback landing phase. Both apply the 1.5 field0118 decay, add 3 meter per update, copy the pending knockback X/Y velocities, advance the frame timer, and choose state 0x62 or 0x61 from knockdownOnLanding when ground is reached. Case 0x25 performs the recovered opponent-range guard after incrementing the tick and switches to state 0x46 when outside the valid range; case 0x26 deliberately omits that guard. Slot06UpdateKnockbackLanding is a 315-byte VC7.1 helper. The target-backed validator confirms the different native extents (316 and 277 bytes) and the guard's ordering.
+
+
+## Special knockback effect: selector case 0x27
+
+State ID 70 is a 480-byte native branch. On its first frame, guarded by field3138==0, it adds 30 meter, increments field3138, adds 120 air-action-lock frames, sets velocityX=0.5, velocityY=-2.5 and gravity=0.025, and writes marker byte 0x2c9=0x1f.
+
+It also emits a context effect at the character's rounded world position. The call to 0x007783B8 is not random-number generation: the native helper is an x87 double-to-integer conversion using the active nearest-even rounding mode. The C++ dispatcher now uses a small explicit nearest-even helper for both coordinates and reuses the common EffectSpawn initialized in the Slot06 prologue. The effect has type 0, owner 0, group 2, layer 1, and the default palette from ResetLocalEffectSpawn.
+
+The effect is emitted through the reconstructed Context::EmitEffect method. The case then advances the animation, applies gravity, and selects the normal/knockdown landing state. This is compiled and semantically validated, not an Exact owner claim.
