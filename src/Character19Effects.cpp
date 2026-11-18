@@ -3,12 +3,18 @@
 #include "CharacterViews.h"
 #include <cstdlib>
 
+#pragma var_order(i, spawn, frameDuration, frameCount, this, iVar7, iVar8, dVar2, dVar3, uVar5, uVar6)
 void Character19::Slot07()
 {
-    EffectSpawn spawn;
+    SecondaryEffectSpawn spawn;
     unsigned short frameDuration;
     unsigned short frameCount;
     int iVar7;
+    int iVar8;
+    double dVar2;
+    double dVar3;
+    unsigned short uVar5;
+    unsigned short uVar6;
     int i;
   if ((*opponentSlot)->hitstunFrames < 1) {
     i = (int)effectRead;
@@ -22,12 +28,6 @@ void Character19::Slot07()
         frameCount = patterns[effects[i].type].count;
         ResetLocalEffectSpawn(&spawn);
         switch(effects[i].type) {
-            unsigned short uVar5;
-            unsigned short uVar6;
-            int iVar7;
-            int iVar8;
-            double dVar2;
-            double dVar3;
         case 400:
           if (field3154[i] == 0) {
             field3154[i] = field3154[i] + 1;
@@ -1274,18 +1274,6 @@ void Character19::Slot07()
             }
           }
           break;
-        case 0x1c0:
-          effects[i].tick = effects[i].tick + 1;
-          if (frameDuration <= effects[i].tick) {
-            effects[i].tick = 0;
-            effects[i].frame =
-                 effects[i].frame + 1;
-            effects[i].field0080 = 0;
-            if (frameCount <= effects[i].frame) {
-              RemoveLocalEffect((short)i);
-            }
-          }
-          break;
         case 0x1ef:
           effects[i].vx = -0.02;
           effects[i].field008c = 30000;
@@ -1529,6 +1517,18 @@ void Character19::Slot07()
               if (frameCount <= effects[i].frame) {
                 effects[i].frame = 0;
               }
+            }
+          }
+          break;
+        case 0x1c0:
+          effects[i].tick = effects[i].tick + 1;
+          if (frameDuration <= effects[i].tick) {
+            effects[i].tick = 0;
+            effects[i].frame =
+                 effects[i].frame + 1;
+            effects[i].field0080 = 0;
+            if (frameCount <= effects[i].frame) {
+              RemoveLocalEffect((short)i);
             }
           }
           break;
