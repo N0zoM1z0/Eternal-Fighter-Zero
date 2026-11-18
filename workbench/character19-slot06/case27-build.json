@@ -28,5 +28,13 @@
     "layer": 1,
     "palette": "ResetLocalEffectSpawn default 255"
   },
-  "status": "semantic-workbench-only-not-exact"
+  "status": "semantic-workbench-only-not-exact",
+  "dispatcher": {
+    "source_sha256": "a1ebd20e9c0074cf2cac338affc07996fb011907bca4dccf21134775429133cf",
+    "object_sha256": "ca083a298358fcca96ab5a453f748ca2d11b71fd263a97905e50f9f83436efa6",
+    "symbol_size": 4274,
+    "relocations": 194,
+    "implemented_state_ids": 242,
+    "unimplemented_state_ids": 68
+  }
 }

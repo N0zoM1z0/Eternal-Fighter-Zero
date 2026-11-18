@@ -1,15 +1,17 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "5cc022c0ea12596a8543f7448e7bb1be38295a7461b4569c18451186c3a1c280",
+  "source_sha256": "1d5dfc7b2ee3ce44f4a3baa0367fe83905ed6960897f61af6c8359dbf3366717",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "d8492e077dcbd916c28f687462acbce5e3210d51f521753b7008cfb0660aed2e",
+  "object_sha256": "8f24488232976fe4fc68bcb8d984180df24c90f44c46215c46d4909d706e4455",
   "compiler_flags": [
     "/Od",
     "/G6",
     "/MT",
     "/Gy",
-    "/W3"
+    "/W3",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/workbench/character19-slot06",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/src"
   ],
   "handlers": {
     "?Slot06Case03@Character19@@QAEXXZ": {
@@ -52,6 +54,10 @@
       "candidate_size": 241,
       "relocations": 4
     },
+    "?Slot06OpponentWithinKnockbackRange@Character19@@QAEHXZ": {
+      "candidate_size": 226,
+      "relocations": 11
+    },
     "?Slot06TryAirAction@Character19@@QAEHXZ": {
       "candidate_size": 616,
       "relocations": 0
@@ -64,16 +70,8 @@
       "candidate_size": 519,
       "relocations": 16
     },
-    "?Slot06UpdateKnockbackFall@Character19@@QAEXGGNH@Z": {
-      "candidate_size": 582,
-      "relocations": 10
-    },
-    "?Slot06UpdateKnockbackFall@Character19@@QAEXGGNHNN@Z": {
-      "candidate_size": 611,
-      "relocations": 9
-    },
-    "?Slot06OpponentWithinKnockbackRange@Character19@@QAEHXZ": {
-      "candidate_size": 226,
+    "?Slot06UpdateGroundRecovery@Character19@@QAEXGGH@Z": {
+      "candidate_size": 346,
       "relocations": 11
     },
     "?Slot06UpdateKnockbackFall@Character19@@QAEXGGNHNNH@Z": {

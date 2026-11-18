@@ -43,7 +43,7 @@ for symbol in helper_symbols:
         "candidate_size": len(body),
         "relocations": len(relocations),
     }
-assert "?Slot06UpdateGroundRecovery@Character19@@QAEXGGNG@Z" in helper_members
+assert "?Slot06UpdateGroundRecovery@Character19@@QAEXGGH@Z" in helper_members
 
 main_source = workbench / "Character19Slot06.cpp"
 main_object = build_dir / "Character19Slot06.obj"
@@ -115,7 +115,7 @@ for filename in (
 ):
     path = workbench / filename
     data = json.loads(path.read_text())
-    data["dispatcher"].update({
+    data.setdefault("dispatcher", {}).update({
         "source_sha256": main_receipt["source_sha256"],
         "object_sha256": main_receipt["object_sha256"],
         "symbol_size": len(main_body),
@@ -132,9 +132,9 @@ ground_helper = next(
 (workbench / "ground-recovery-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": {
-        "0x29": {"bytes": 341, "state_id": 72, "gravity": 0.0, "landing_state": 13},
-        "0x2A": {"bytes": 341, "state_id": 73, "gravity": -1.3, "landing_state": 9},
-        "0x2B": {"bytes": 317, "state_id": 74, "gravity": 0.0, "landing_state": 13},
+        "0x29": {"bytes": 341, "state_id": 72, "completion_state": "inputY==1 ? 3 : 7"},
+        "0x2A": {"bytes": 341, "state_id": 73, "completion_state": "inputY==1 ? 3 : 7"},
+        "0x2B": {"bytes": 317, "state_id": 74, "completion_state": "3"},
     },
     "candidate": {
         "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",

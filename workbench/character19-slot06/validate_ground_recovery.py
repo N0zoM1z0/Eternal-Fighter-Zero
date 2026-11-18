@@ -39,11 +39,12 @@ for case, (native_size, state, force_standing) in expected.items():
     assert "*(double *)(param_1 + 0x2e) =" in block
     assert "*(short *)(param_1 + 3) = (short)param_1[3] + 1;" in block
     assert "*(short *)((int)param_1 + 10) = *(short *)((int)param_1 + 10) + 1;" in block
-    assert "*(undefined2 *)(param_1 + 2) = 7;" in block
     if force_standing:
         assert "*(undefined2 *)(param_1 + 2) = 3;" in block
+        assert "*(undefined2 *)(param_1 + 2) = 7;" not in block
         assert "*(char *)((int)param_1 + 0x189)" not in block
     else:
+        assert "*(undefined2 *)(param_1 + 2) = 7;" in block
         assert "*(char *)((int)param_1 + 0x189) == '\\x01'" in block
         assert "*(undefined2 *)(param_1 + 2) = 3;" in block
     print(f"case 0x{case:02x}: native={native_size}, state={state}, force-state-3={force_standing}")
@@ -56,7 +57,7 @@ constants = {
     0x00787c10: 20.0,
     0x00787da0: 639.0,
     0x007875c0: 1.0,
-    0x00787d28: 0.2,
+    0x00787d28: 0.25,
 }
 for address, expected_value in constants.items():
     actual = struct.unpack("<d", target_bytes(pe, address, 8))[0]
@@ -72,6 +73,7 @@ for expression in (
     "639.0 <= positionX + 20.0",
     "outgoingPushbackVelocityX =",
     "(*opponentSlot)->positionX < 0.0",
+    "(*opponentSlot)->positionX < 0.0) * 0.25",
     "field000c = field000c + 1;",
     "field0008 = 7;",
     "forceStandingState || (inputY == 1)",

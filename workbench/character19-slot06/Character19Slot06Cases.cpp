@@ -1331,7 +1331,7 @@ void Character19::Slot06UpdateGroundRecovery(
 
     if ((positionX - 20.0 < 0.0) || (639.0 <= positionX + 20.0)) {
         outgoingPushbackVelocityX =
-            (1.0 - (double)((*opponentSlot)->positionX < 0.0) * 0.2) *
+            (1.0 - (double)((*opponentSlot)->positionX < 0.0) * 0.25) *
             velocityX;
     } else {
         outgoingPushbackVelocityX = 0.0;
