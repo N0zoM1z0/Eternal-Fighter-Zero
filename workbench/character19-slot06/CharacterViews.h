@@ -409,7 +409,11 @@ public:
     virtual void RemoveLocalEffect(short);
     virtual void InitializeState();
     void UpdateLocomotionState();
+    void Slot06Case70();
+    void Slot06Case71();
+    void Slot06Case72();
     void Slot06Case73();
+    void Slot06Case74();
 };
 class Character20 : public Secondary {
     int field3138, field313c, field3140, field3144, field3148;

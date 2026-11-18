@@ -1,0 +1,44 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_owner": {
+    "entry": "0x00667570",
+    "end_exclusive": "0x0067596B",
+    "size": 58363
+  },
+  "native_switch_data": {
+    "jump_table_start": "0x0067596B",
+    "jump_table_entries": 118,
+    "jump_table_bytes": 472,
+    "selector_table_start": "0x00675B43",
+    "selector_table_bytes": 310,
+    "fallback_selector_case": "0x75",
+    "fallback_state_count": 193
+  },
+  "partial_candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "ea22d7cb82da78560b84f6efbd0c4ae7c90d78226b386d7dc1e97aec9153abbb",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "8e2d7543e79ac663e83b9de0fbd013f3b5856b0c26708ed54802fed3626dd06d",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 1277,
+    "relocation_count": 38,
+    "implemented_state_ids": 201,
+    "unimplemented_state_ids": 109,
+    "status": "partial-semantic-workbench-not-exact"
+  },
+  "helper_candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+    "source_sha256": "d98a36064287942af2707996c39fcf5c156c67e8d110ea2e171c52e95a4977e9",
+    "object": "build/character19-slot06/Character19Slot06Cases.obj",
+    "object_sha256": "bed36c1b4f4b87b3e15b2366f6b2019a44eec7c1b526a8fbd147ca9001cc91b8",
+    "handlers": {
+      "0x70": 1023,
+      "0x71": 759,
+      "0x72": 573,
+      "0x73": 2438,
+      "0x74": 241
+    },
+    "status": "semantic-workbench-only-not-exact"
+  },
+  "compiler_flags": ["/Od", "/G6", "/MT", "/Gy", "/W3"]
+}

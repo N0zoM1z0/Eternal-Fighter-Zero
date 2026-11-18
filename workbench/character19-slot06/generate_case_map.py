@@ -28,7 +28,6 @@ for state_id, case_index in enumerate(selector, 1):
         raise SystemExit(f"state {state_id}: invalid selector {case_index:#x}")
     states[case_index].append(state_id)
 
-decomp = (ROOT / ".analysis/kanna-slot06/native.c").read_text()
 # Recover the native code interval for each case from its actual switch target.
 ordered = sorted(set(case_addresses))
 ends = {

@@ -1,0 +1,42 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+  "source_sha256": "d98a36064287942af2707996c39fcf5c156c67e8d110ea2e171c52e95a4977e9",
+  "object": "build/character19-slot06/Character19Slot06Cases.obj",
+  "object_sha256": "bed36c1b4f4b87b3e15b2366f6b2019a44eec7c1b526a8fbd147ca9001cc91b8",
+  "compiler_flags": [
+    "/Od",
+    "/G6",
+    "/MT",
+    "/Gy",
+    "/W3"
+  ],
+  "handlers": {
+    "0x70": {
+      "symbol": "?Slot06Case70@Character19@@QAEXXZ",
+      "candidate_size": 1023,
+      "relocations": 20
+    },
+    "0x71": {
+      "symbol": "?Slot06Case71@Character19@@QAEXXZ",
+      "candidate_size": 759,
+      "relocations": 16
+    },
+    "0x72": {
+      "symbol": "?Slot06Case72@Character19@@QAEXXZ",
+      "candidate_size": 573,
+      "relocations": 13
+    },
+    "0x73": {
+      "symbol": "?Slot06Case73@Character19@@QAEXXZ",
+      "candidate_size": 2438,
+      "relocations": 53
+    },
+    "0x74": {
+      "symbol": "?Slot06Case74@Character19@@QAEXXZ",
+      "candidate_size": 241,
+      "relocations": 4
+    }
+  },
+  "status": "semantic-workbench-only-not-exact"
+}
