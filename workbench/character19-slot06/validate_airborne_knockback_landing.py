@@ -65,33 +65,51 @@ for address, expected_value in constants.items():
     assert actual == expected_value, (hex(address), actual, expected_value)
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
-    "void Character19::Slot06UpdateAirborneKnockbackLanding",
-    "if (field3144 == 0)",
-    "spawn->type = 0x1f0;",
-    "spawn->owner = 1;",
-    "spawn->group = 0;",
-    "spawn->layer = 0;",
-    "spawn->flag0018 = (unsigned char)facing;",
-    "EmitLocalEffect(spawn);",
-    "field3144 = 1;",
-    "if (!gateFirstHit || (field3138 == 0))",
-    "field0118 = field0118 - 30.0",
-    "pendingContextSoundSlot = soundSlot;",
-    "velocityX = knockbackVelocityX;",
-    "velocityY = knockbackVelocityY;",
-    "velocityY = velocityY + verticalAcceleration;",
-    "if (finishNeutral)",
-    "FaceOpponent();",
-    "field000a = 0;",
-    "if ((positionY + velocityY) >= 0.0)",
-    "field0008 = 0x61;",
-    "field0008 = 0x62;",
-):
-    assert expression in source, expression
-
-renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
-assert renderer.count("timing.frameDuration, timing.animationFrameCount, &spawn, 0x21,") == 1
+assert "Slot06UpdateAirborneKnockbackLanding" not in source
+dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+for case, (native_size, state, acceleration, gate_first_hit, finish_neutral) in expected.items():
+    fragment = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        "if (field3144 == 0)",
+        "spawn.type = 0x1f0;",
+        "spawn.owner = 1;",
+        "spawn.group = 0;",
+        "spawn.layer = 0;",
+        "spawn.flag0018 = (unsigned char)facing;",
+        "EmitLocalEffect(&spawn);",
+        "field3144 = 1;",
+        "if (field0120 != 0)",
+        "field0118 = field0118 - 30.0;",
+        "pendingContextSoundSlot = 0x21;",
+        "velocityX = knockbackVelocityX;",
+        "velocityY = knockbackVelocityY;",
+        "meter = meter + 30;",
+        f"velocityY = velocityY + {acceleration};",
+        "field000c = field000c + 1;",
+        "if (timing.frameDuration <= field000c)",
+        "if (timing.animationFrameCount <= field000a)",
+        "if ((positionY + velocityY) >= 0.0)",
+        "positionY = 0.0;",
+        "field0008 = 0x61;",
+        "field0008 = 0x62;",
+    ):
+        assert expression in fragment, (hex(case), expression)
+    if gate_first_hit:
+        assert "if (field3138 == 0)" in fragment
+        assert "field3138 = field3138 + 1;" in fragment
+    else:
+        assert "if (field3138 == 0)" not in fragment
+        assert "field3138 = field3138 + 1;" not in fragment
+    if finish_neutral:
+        assert "field0008 = 0;" in fragment
+        assert "FaceOpponent();" in fragment
+        assert "field000a = 0;" not in fragment
+    else:
+        assert "field000a = 0;" in fragment
+        assert "FaceOpponent();" not in fragment
+        assert "field0008 = 0;" not in fragment
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
+assert "Slot06UpdateAirborneKnockbackLanding(" not in dispatcher
 
 analog = (ROOT / "src/Character23State.cpp").read_text()
 for expression in (

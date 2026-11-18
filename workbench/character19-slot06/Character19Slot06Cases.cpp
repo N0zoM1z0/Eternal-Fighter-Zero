@@ -308,68 +308,7 @@ void Character19::Slot06UpdateAirKnockback(
 
 
 // Shared airborne knockback landing for native selector cases 0x33 and 0x34.
-void Character19::Slot06UpdateAirborneKnockbackLanding(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    SecondaryEffectSpawn *spawn,
-    unsigned short soundSlot,
-    double verticalAcceleration,
-    int gateFirstHit,
-    int finishNeutral)
-{
-    if ((field000a == 0) && (field000c == 0)) {
-        if (field3144 == 0) {
-            spawn->type = 0x1f0;
-            spawn->x = (double)(int)positionX;
-            spawn->y = (double)(int)positionY;
-            spawn->group = 0;
-            spawn->layer = 0;
-            spawn->owner = 1;
-            spawn->flag0018 = (unsigned char)facing;
-            EmitLocalEffect(spawn);
-            field3144 = 1;
-        }
 
-        if (!gateFirstHit || (field3138 == 0)) {
-            if (field0120 != 0) {
-                field0118 = field0118 - 30.0;
-            }
-            pendingContextSoundSlot = soundSlot;
-            velocityX = knockbackVelocityX;
-            velocityY = knockbackVelocityY;
-            meter = meter + 30;
-            if (gateFirstHit) {
-                field3138 = field3138 + 1;
-            }
-        }
-    }
-
-    velocityY = velocityY + verticalAcceleration;
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (frameCount <= field000a) {
-            if (finishNeutral) {
-                field0008 = 0;
-                ResetPose();
-                FaceOpponent();
-            } else {
-                field000a = 0;
-            }
-        }
-    }
-
-    if ((positionY + velocityY) >= 0.0) {
-        positionY = 0.0;
-        if (knockdownOnLanding != 0) {
-            field0008 = 0x61;
-        } else {
-            field0008 = 0x62;
-        }
-        ResetPose();
-    }
-}
 
 
 // Local effect 0x1ef and short animation recovery (selector 0x35).

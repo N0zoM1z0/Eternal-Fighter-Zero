@@ -289,15 +289,15 @@ void Character19::Slot06()
         break;
 
     case 51:
-        Slot06UpdateAirborneKnockbackLanding(
-            timing.frameDuration, timing.animationFrameCount, &spawn, 0x21,
-            0.04, 0, 1);
+        {
+#include "Character19Slot06Case33.inc"
+        }
         break;
 
     case 52:
-        Slot06UpdateAirborneKnockbackLanding(
-            timing.frameDuration, timing.animationFrameCount, &spawn, 0x21,
-            0.06, 1, 0);
+        {
+#include "Character19Slot06Case34.inc"
+        }
         break;
 
     case 53:

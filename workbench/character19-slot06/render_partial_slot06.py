@@ -295,15 +295,12 @@ for case in (0x31, 0x32):
         "",
     ]
 
-for case, acceleration, gate_first_hit, finish_neutral in [
-    (0x33, 0.04, 0, 1),
-    (0x34, 0.06, 1, 0),
-]:
+for case in (0x33, 0x34):
     lines += labels(case)
     lines += [
-        "        Slot06UpdateAirborneKnockbackLanding(",
-        "            timing.frameDuration, timing.animationFrameCount, &spawn, 0x21,",
-        f"            {acceleration}, {gate_first_hit}, {finish_neutral});",
+        "        {",
+        f'#include "Character19Slot06Case{case:02X}.inc"',
+        "        }",
         "        break;",
         "",
     ]
