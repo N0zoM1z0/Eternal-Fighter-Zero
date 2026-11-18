@@ -2077,3 +2077,39 @@ void Character19::Slot06UpdateDefeatImpactEffect(
         }
     }
 }
+
+
+// Paired type-8 knockback impact finishers (selectors 0x48/0x49).
+void Character19::Slot06UpdateKnockbackImpactFinish(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    EffectSpawn *spawn,
+    unsigned short completionState)
+{
+    if ((field000a == 0) && (field000c == 0)) {
+        dashMomentumFlag = 0;
+        ResetFrame();
+        positionY = 0.0;
+        guardInputFrames = 0;
+
+        spawn->type = 8;
+        spawn->x = (double)(int)positionX;
+        spawn->y = (double)(int)positionY;
+        spawn->group = 2;
+        spawn->layer = 1;
+        contextOwner->EmitEffect(spawn);
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        if (field000a == frameCount) {
+            FaceOpponent();
+        }
+        if (frameCount <= field000a) {
+            field0008 = completionState;
+            ResetPose();
+        }
+    }
+}

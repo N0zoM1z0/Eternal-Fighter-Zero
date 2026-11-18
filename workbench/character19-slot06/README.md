@@ -172,3 +172,8 @@ Both branches initialize the trail and reset the motion frame, then launch at a 
 ## Long airborne follow-up/counter state machine: selector cases 0x45-0x46
 
 These 932/931-byte native branches are almost identical; their only structural differences are the launch phase (3 versus 2), initial horizontal velocity (+2.0 versus -2.0), and the matching start phase for gravity integration. Each update increments field3140 and, once it passes field3148, routes directional input into states 9, 14-20 according to inputY, inputX versus facing, field015c, and airActionCount. Those transitions preserve the native attackCollisionResult reset and ResetPose ordering. If no follow-up input consumes the state, the launch phase seeds velocityY=-0.5, gravity=0.045, clears pendingCharacterSoundSlot, and starts horizontal movement. From the launch phase onward vertical velocity gains 0.01 each update. Animation completion selects state 10; ground crossing after phase 3 clamps Y, requests context sound 9, faces the opponent, and selects state 0x0d. The shared Slot06UpdateAirborneFollowup helper preserves both phase variants without duplicating the large input/state-routing block.
+
+
+## Paired type-8 knockback impact finishers: selector cases 0x48-0x49
+
+Both 330-byte native branches clear dash momentum and reset motion, Y position and guard-input frames, then emit context effect type 8 at the integer-truncated character position (group 2, layer 1). They advance the animation timer, face the opponent on the exact frame-count boundary, and finish in state 0 (0x48) or state 3 (0x49). The shared helper uses ResetFrame for the native motion-field clearing and Context::EmitEffect for the impact flash.
