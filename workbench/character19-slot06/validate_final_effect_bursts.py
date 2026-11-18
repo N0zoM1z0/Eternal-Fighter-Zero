@@ -139,9 +139,8 @@ for expression in (
     assert expression in pair_helper, expression
 assert pair_helper.count("spawn.owner = 1;") == 2
 
-trail_start = source.index("void Character19::Slot06UpdateTrailEffectFinish")
-trail_end = source.index("\n}\n", trail_start) + 3
-trail_helper = source[trail_start:trail_end]
+assert "Slot06UpdateTrailEffectFinish" not in source
+trail_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case6F.inc").read_text()
 for expression in (
     "field000a == 0",
     "ResetFrame();",
@@ -149,37 +148,41 @@ for expression in (
     "field0120 == 0",
     "field0118 = field0118 - 500.0;",
     "field0118 = field0118 - 250.0;",
-    "spawn->type = 0x21;",
-    "spawn->x = (double)(int)positionX;",
-    "spawn->y = (double)((int)positionY - 0x32);",
-    "spawn->group = 2;",
-    "spawn->layer = 1;",
-    "spawn->palette = 0xb;",
-    "contextOwner->EmitEffect(spawn);",
+    "spawn.type = 0x21;",
+    "spawn.x = (double)(int)positionX;",
+    "spawn.y = (double)((int)positionY - 0x32);",
+    "spawn.group = 2;",
+    "spawn.layer = 1;",
+    "spawn.palette = 0xb;",
+    "contextOwner->EmitEffect(&spawn);",
     "field000a == 7",
-    "spawn->owner = 1;",
-    "spawn->type = 0x1ad;",
-    "spawn->x = (double)((int)positionX + (int)facing * 0x23);",
-    "spawn->y = (double)((int)positionY - 0x3f);",
-    "spawn->facing = (facing != 1);",
-    "spawn->flag0018 = (unsigned char)facing;",
-    "spawn->field0028 = 0;",
-    "EmitLocalEffect(spawn);",
+    "spawn.owner = 1;",
+    "spawn.type = 0x1ad;",
+    "spawn.x = (double)((int)positionX + (int)facing * 0x23);",
+    "spawn.y = (double)((int)positionY - 0x3f);",
+    "spawn.facing = (facing != 1);",
+    "spawn.flag0018 = (unsigned char)facing;",
+    "spawn.field0028 = 0;",
+    "EmitLocalEffect(&spawn);",
     "field000a == 8",
     "meter = meter + 45;",
     "pendingCharacterSoundSlot = 2;",
     "field0008 = 0;",
     "ResetPose();",
+    "timing.frameDuration",
+    "timing.animationFrameCount",
 ):
     assert expression in trail_helper, expression
-assert trail_helper.count("spawn->owner = 1;") == 1
-assert trail_helper.index("contextOwner->EmitEffect(spawn);") < trail_helper.index("spawn->owner = 1;")
+assert trail_helper.count("spawn.owner = 1;") == 1
+assert trail_helper.index("contextOwner->EmitEffect(&spawn);") < trail_helper.index("spawn.owner = 1;")
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 266)
 assert '#include "Character19Slot06Case6E.inc"' in dispatcher
 assert "Slot06UpdateFinalEffectPair(" not in dispatcher
-assert_selector_case(dispatcher, 267) and "Slot06UpdateTrailEffectFinish(" in dispatcher
+assert_selector_case(dispatcher, 267)
+assert '#include "Character19Slot06Case6F.inc"' in dispatcher
+assert "Slot06UpdateTrailEffectFinish(" not in dispatcher
 
 disasm = subprocess.run(
     [

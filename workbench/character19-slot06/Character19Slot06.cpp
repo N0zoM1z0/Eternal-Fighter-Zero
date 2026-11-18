@@ -670,8 +670,9 @@ void Character19::Slot06()
         break;
 
     case 111:
-        Slot06UpdateTrailEffectFinish(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case6F.inc"
+        }
         break;
 
     case 28:

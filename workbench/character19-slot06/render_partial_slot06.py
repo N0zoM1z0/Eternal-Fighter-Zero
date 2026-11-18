@@ -669,8 +669,9 @@ lines += [
 
 lines += labels(0x6f)
 lines += [
-    "        Slot06UpdateTrailEffectFinish(",
-    "            timing.frameDuration, timing.animationFrameCount, &spawn);",
+    "        {",
+    '#include "Character19Slot06Case6F.inc"',
+    "        }",
     "        break;",
     "",
 ]

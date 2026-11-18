@@ -49,6 +49,7 @@ The 0x4B defeat-impact velocity restore (584 native bytes) is now inline. It sna
 The 0x30 repeated airborne knockback loop (546 native bytes) is now inline too. It preserves the eight-hit repetition gate, per-cycle knockback velocity reload, gravity phase, and knockdown-dependent landing state.
 The paired 0x43/0x44 trail-assisted airborne bounce states are also inline (412 and 317 native bytes). Their launch constants, frame-7 loop, late horizontal braking, and distinct neutral versus 0x0D landing paths are specialized directly in their own cases.
 The 0x6E final-effect pair (536 native bytes) is now inline too. Its frame-7 type-0x195 and frame-8 type-0x196 local effects preserve their distinct facing-relative offsets, owner flags, and frame-8 meter/sound event.
+The 0x6F trail-effect finish (552 native bytes) is now inline as well. It preserves the unowned opening context flash, frame-7 owned type-0x1AD local effect, and frame-8 meter/sound event in their original order.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 

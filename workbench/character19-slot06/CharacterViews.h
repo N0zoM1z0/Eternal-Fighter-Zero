@@ -442,7 +442,6 @@ public:
     void Slot06UpdateLoopingAerialBounce(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateFinalFaceTransition(unsigned short, unsigned short);
     void Slot06UpdateLocalEffectFinish(unsigned short, unsigned short, unsigned short);
-    void Slot06UpdateTrailEffectFinish(unsigned short, unsigned short, EffectSpawn *);
 
 };
 class Character20 : public Secondary {
