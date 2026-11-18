@@ -557,6 +557,18 @@ void Character19::Slot06()
             timing.frameDuration, timing.animationFrameCount);
         break;
 
+    case 230:
+        Slot06UpdateTrailDashFinish(
+            timing.frameDuration, timing.animationFrameCount,
+            5, 21);
+        break;
+
+    case 231:
+        Slot06UpdateTrailDashFinish(
+            timing.frameDuration, timing.animationFrameCount,
+            10, 20);
+        break;
+
     case 59:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
@@ -936,8 +948,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 230:
-    case 231:
     case 232:
     case 233:
     case 234:

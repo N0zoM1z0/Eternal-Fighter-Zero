@@ -443,6 +443,7 @@ public:
     void Slot06UpdateGroundImpactRecovery(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateOpponentCaptureImpact(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateOpponentStageCombo(unsigned short, unsigned short);
+    void Slot06UpdateTrailDashFinish(unsigned short, unsigned short, short, unsigned char);
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
     void Slot06Case04();

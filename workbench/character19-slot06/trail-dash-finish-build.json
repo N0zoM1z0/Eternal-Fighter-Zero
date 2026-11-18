@@ -1,0 +1,63 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_cases": {
+    "0x5E": {
+      "entry": "0x00672A2F",
+      "bytes": 307,
+      "state_id": 230,
+      "meter_frame": 2,
+      "meter_gain": 5,
+      "sound": 21
+    },
+    "0x5F": {
+      "entry": "0x00672B62",
+      "bytes": 307,
+      "state_id": 231,
+      "meter_frame": 2,
+      "meter_gain": 10,
+      "sound": 20
+    }
+  },
+  "shared_native_behavior": {
+    "trail_spacing": 3,
+    "clear_dash_momentum": true,
+    "horizontal_deceleration": 0.03,
+    "initial_velocity": [
+      2.0,
+      0.0
+    ],
+    "collision_clear_before_frame": 3,
+    "completion_state": 0
+  },
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+    "source_sha256": "4c251d0600b25fc1bf231d4bcbfb76202d662e372de2f180dfcaa96727141124",
+    "object": "build/character19-slot06/Character19Slot06Cases.obj",
+    "object_sha256": "dfd1a4b4fc2b6e07a67caea18c8d8c7e1bf728ed57fb60ae206d77f4c5e903cd",
+    "symbol": "?Slot06UpdateTrailDashFinish@Character19@@QAEXGGFE@Z",
+    "candidate_size": 318,
+    "relocations": 6,
+    "status": "semantic-workbench-only-not-exact"
+  },
+  "dispatcher": {
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "0c8224c5c7a1e3e51b4780a58bd237d4964c80a25d7993eb14ce8235193f33e1",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "4adac833b0654c7290900da80a8e172b5e1891e0838e90188fc044ef69df02ae",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 6411,
+    "relocation_count": 331,
+    "implemented_state_ids": 294,
+    "unimplemented_state_ids": 16,
+    "status": "partial-semantic-workbench-not-exact"
+  },
+  "compiler_flags": [
+    "/Od",
+    "/G6",
+    "/MT",
+    "/Gy",
+    "/W3",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/workbench/character19-slot06",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/src"
+  ]
+}

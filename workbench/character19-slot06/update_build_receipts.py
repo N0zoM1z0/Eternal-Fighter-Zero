@@ -72,6 +72,7 @@ assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for sy
 assert any(symbol.startswith("?Slot06UpdateGroundImpactRecovery@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateOpponentCaptureImpact@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateOpponentStageCombo@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateTrailDashFinish@Character19@@") for symbol in helper_members)
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -100,7 +101,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 292
+assert len(implemented_states) == 294
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -934,6 +935,38 @@ opponent_stage_combo_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": opponent_stage_combo_helper,
         **helper_members[opponent_stage_combo_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+
+trail_dash_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateTrailDashFinish@")
+)
+(workbench / "trail-dash-finish-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": {
+        "0x5E": {"entry": "0x00672A2F", "bytes": 307, "state_id": 230, "meter_frame": 2, "meter_gain": 5, "sound": 0x15},
+        "0x5F": {"entry": "0x00672B62", "bytes": 307, "state_id": 231, "meter_frame": 2, "meter_gain": 10, "sound": 0x14},
+    },
+    "shared_native_behavior": {
+        "trail_spacing": 3,
+        "clear_dash_momentum": True,
+        "horizontal_deceleration": 0.03,
+        "initial_velocity": [2.0, 0.0],
+        "collision_clear_before_frame": 3,
+        "completion_state": 0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": trail_dash_helper,
+        **helper_members[trail_dash_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

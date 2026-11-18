@@ -242,3 +242,8 @@ The 480-byte state 220 holds the attacker still. During frame 1 it sets remainin
 ## Opponent stage combo: selector case 0x5d
 
 The 594-byte state 221 drives opponent repositioning at animation-frame boundaries. Frame 1 puts the opponent in state 0x67, resets its frame/pose, and places it at (attacker X + 41 facing, -86). Frames 2 and 3 move it to Y=-97 at X offsets 36 and 34; frame 3 also reverses its facing. Frame 4 applies vertical shake (3,0), puts the opponent in state 0x61, resets its frame/pose, and positions it at ground level with a 36-facing offset. The native damage request occurs at the start of frame 4: ApplyDamage(0x4e2, 750.0). Completion returns the attacker to state 0 after facing the opponent and resetting pose. The implementation deliberately does not import Character23's additional frame-5 throw/knockback sequence, which is absent from Kanna's native 0x5d.
+
+
+## Trail-backed dash finishers: selector cases 0x5e-0x5f
+
+Both 307-byte states begin a spacing-3 trail every update, clear dashMomentumFlag, reduce horizontal velocity by 0.03 with a zero clamp, and initialize frame-0 velocity to (2.0, 0.0). At frame 2 they award different meter/sound pairs: 0x5e gives +5 and sound 0x15; 0x5f gives +10 and sound 0x14. Each frame transition clears attackCollisionResult while the new frame is below 3. Completion enters state 0 and resets pose without a FaceOpponent call. The shared StartTrail(3) call is the natural C++ mapping of native FUN_004109d0(3) through FUN_00412a10.
