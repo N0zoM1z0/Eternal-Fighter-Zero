@@ -14,17 +14,17 @@ Character19Slot06.cpp is a partial natural-C++ reconstruction of the common prol
 
 The generated dispatcher maps all **310 native state IDs** through the complete **118-entry selector table**. The 193 IDs assigned to selector 0x75 use the actual shared native fallback; the other 117 selector cases have explicit natural-C++ switch bodies or dedicated state helpers. No valid state ID is silently mapped to a TODO branch.
 
-Character19Slot06Cases.cpp contains the out-of-line natural-C++ state helpers. The largest 0x73 super/KO body is now included directly in Character19Slot06.cpp through Character19Slot06Case73.inc, so it shares the dispatcher's single EffectSpawn and frame-timing locals just like the native owner. The five large super/KO selectors are:
+Character19Slot06Cases.cpp contains the remaining out-of-line natural-C++ state helpers. All five large 0x70-0x74 super/KO bodies are now included directly in Character19Slot06.cpp through their case .inc fragments, sharing the dispatcher's single EffectSpawn and frame-timing locals just like the native owner. The five large super/KO selectors are:
 
 | Selector | State ID | Native bytes | Candidate layout |
 |---|---:|---:|---|
-| 0x70 | 300 | 970 | dedicated helper |
-| 0x71 | 303 | 698 | dedicated helper |
-| 0x72 | 306 | 501 | dedicated helper |
+| 0x70 | 300 | 970 | inlined in Slot06 |
+| 0x71 | 303 | 698 | inlined in Slot06 |
+| 0x72 | 306 | 501 | inlined in Slot06 |
 | 0x73 | 309 | 2,400 | inlined in Slot06 |
-| 0x74 | 310 | 177 | dedicated helper |
+| 0x74 | 310 | 177 | inlined in Slot06 |
 
-The native 0x73 body now reuses the dispatcher-owned EffectSpawn and FrameTiming, avoiding a second local spawn object and redundant pattern reads. The case is still a semantic workbench reconstruction, not an Exact claim.
+All five native bodies now reuse the dispatcher-owned EffectSpawn and FrameTiming, avoiding duplicate spawn objects and redundant pattern reads. The main dispatcher grew from 6,916 to 11,459 bytes after inlining all five bosses. These are semantic workbench reconstructions, not Exact claims.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 

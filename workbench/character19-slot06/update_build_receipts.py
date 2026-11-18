@@ -86,10 +86,6 @@ assert any(symbol.startswith("?Slot06UpdateFinalFaceTransition@Character19@@") f
 assert any(symbol.startswith("?Slot06UpdateLocalEffectFinish@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateFinalEffectPair@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateTrailEffectFinish@Character19@@") for symbol in helper_members)
-assert "?Slot06Case70@Character19@@QAEXXZ" in helper_members
-assert "?Slot06Case71@Character19@@QAEXXZ" in helper_members
-assert "?Slot06Case72@Character19@@QAEXXZ" in helper_members
-assert "?Slot06Case74@Character19@@QAEXXZ" in helper_members
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -145,9 +141,10 @@ dispatcher_record = {
     "implemented_state_ids": len(implemented_states),
     "unimplemented_state_ids": 310 - len(implemented_states),
     "included_sources": {
-        "workbench/character19-slot06/Character19Slot06Case73.inc": hashlib.sha256(
-            (workbench / "Character19Slot06Case73.inc").read_bytes()
-        ).hexdigest(),
+        f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
+            (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
+        ).hexdigest()
+        for case in (0x70, 0x71, 0x72, 0x73, 0x74)
     },
     "status": "partial-semantic-workbench-not-exact",
 }
@@ -1400,15 +1397,13 @@ super_state_symbols = {
     )
 }
 for case, record in super_state_symbols.items():
-    if case == "0x73":
-        record["symbol"] = None
-        record["inline_source"] = "workbench/character19-slot06/Character19Slot06Case73.inc"
-        record["inline_source_sha256"] = hashlib.sha256(
-            (ROOT / record["inline_source"]).read_bytes()
-        ).hexdigest()
-        record["candidate_status"] = "inlined-natural-cpp-semantic-candidate"
-    else:
-        record.update(helper_members[record["symbol"]])
+    record["symbol"] = None
+    case_number = int(case, 16)
+    record["inline_source"] = f"workbench/character19-slot06/Character19Slot06Case{case_number:02X}.inc"
+    record["inline_source_sha256"] = hashlib.sha256(
+        (ROOT / record["inline_source"]).read_bytes()
+    ).hexdigest()
+    record["candidate_status"] = "inlined-natural-cpp-semantic-candidate"
 (workbench / "super-move-states-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": super_state_symbols,

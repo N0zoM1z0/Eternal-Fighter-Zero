@@ -14,6 +14,7 @@ void Character19::Slot06()
     }
 
     EffectSpawn spawn;
+    unsigned short randomValue;
     struct FrameTiming {
         __declspec(align(4)) unsigned short animationFrameCount;
         __declspec(align(4)) unsigned short frameDuration;
@@ -809,15 +810,21 @@ void Character19::Slot06()
         break;
 
     case 300:
-        Slot06Case70();
+        {
+#include "Character19Slot06Case70.inc"
+        }
         break;
 
     case 303:
-        Slot06Case71();
+        {
+#include "Character19Slot06Case71.inc"
+        }
         break;
 
     case 306:
-        Slot06Case72();
+        {
+#include "Character19Slot06Case72.inc"
+        }
         break;
 
     case 309:
@@ -827,7 +834,9 @@ void Character19::Slot06()
         break;
 
     case 310:
-        Slot06Case74();
+        {
+#include "Character19Slot06Case74.inc"
+        }
         break;
 
     case 11:

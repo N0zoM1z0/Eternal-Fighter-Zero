@@ -463,10 +463,6 @@ public:
     void Slot06Case05();
     void Slot06Case08();
     void Slot06Case09();
-    void Slot06Case70();
-    void Slot06Case71();
-    void Slot06Case72();
-    void Slot06Case74();
 };
 class Character20 : public Secondary {
     int field3138, field313c, field3140, field3144, field3148;

@@ -239,8 +239,8 @@ source_helpers = {
          "attackCollisionResult = 0;", "field0008 = 0;", "FaceOpponent();", "ResetPose();")),
 }
 for case, (name, expressions) in source_helpers.items():
-    if case == 0x73:
-        body = (ROOT / "workbench/character19-slot06/Character19Slot06Case73.inc").read_text()
+    if case in (0x70, 0x71, 0x72, 0x73, 0x74):
+        body = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
     else:
         start = source.index(f"void Character19::{name}")
         end = source.index("\n}\n", start) + 3
@@ -248,19 +248,27 @@ for case, (name, expressions) in source_helpers.items():
     for expression in expressions:
         assert expression in body, (hex(case), expression)
 
+for case in (0x70, 0x71, 0x72, 0x73):
+    body = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    assert "ResetLocalEffectSpawn" not in body
+    assert "EffectSpawn spawn" not in body
+    assert "timing.frameDuration" in body
+    assert "timing.animationFrameCount" in body
+
 inline73 = (ROOT / "workbench/character19-slot06/Character19Slot06Case73.inc").read_text()
 assert inline73.count("ResetFrame();") == 2
-assert "ResetLocalEffectSpawn" not in inline73
-assert "EffectSpawn spawn" not in inline73
-assert "timing.frameDuration" in inline73
-assert "timing.animationFrameCount" in inline73
 landing_reset = inline73.rindex("ResetFrame();")
 landing_pose = inline73.rindex("ResetPose();")
 landing_y = inline73.rindex("positionY = 0.0;")
 landing_state = inline73.rindex("field0008 = 0x0d;")
 assert landing_reset < landing_pose < landing_y < landing_state
-assert "EffectSpawn spawn;" in (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert "ResetLocalEffectSpawn(&spawn);" in (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+
+dispatcher_source = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+assert "EffectSpawn spawn;" in dispatcher_source
+assert "unsigned short randomValue;" in dispatcher_source
+assert "ResetLocalEffectSpawn(&spawn);" in dispatcher_source
+for case in (0x70, 0x71, 0x72, 0x73, 0x74):
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher_source
 
 # Validate the natural leaf functions used by these bosses.
 random_source = (ROOT / "src/SecondaryCombat.cpp").read_text()
@@ -297,8 +305,9 @@ for state, name in (
     (310, "Slot06Case74"),
 ):
     assert f"case {state}:" in renderer
-    if state == 309:
-        assert '#include "Character19Slot06Case73.inc"' in renderer
+    if state in (300, 303, 306, 309, 310):
+        case = {300: 0x70, 303: 0x71, 306: 0x72, 309: 0x73, 310: 0x74}[state]
+        assert f'#include "Character19Slot06Case{case:02X}.inc"' in renderer
     else:
         assert f"{name}();" in renderer
 

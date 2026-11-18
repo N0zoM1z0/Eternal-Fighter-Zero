@@ -35,6 +35,7 @@ lines = [
     "    }",
     "",
     "    EffectSpawn spawn;",
+    "    unsigned short randomValue;",
     "    struct FrameTiming {",
     "        __declspec(align(4)) unsigned short animationFrameCount;",
     "        __declspec(align(4)) unsigned short frameDuration;",
@@ -724,10 +725,10 @@ for case, method in [
     (0x74, "Slot06Case74"),
 ]:
     lines += labels(case)
-    if case == 0x73:
+    if case in (0x70, 0x71, 0x72, 0x73, 0x74):
         lines += [
             "        {",
-            '#include "Character19Slot06Case73.inc"',
+            f'#include "Character19Slot06Case{case:02X}.inc"',
             "        }",
             "        break;",
             "",
