@@ -436,8 +436,9 @@ for case in (0x45, 0x46):
 
 lines += labels(0x47)
 lines += [
-    "        Slot06UpdateDefeatImpactEffect(",
-    "            timing.frameDuration, timing.animationFrameCount, &spawn);",
+    "        {",
+    '#include "Character19Slot06Case47.inc"',
+    "        }",
     "        break;",
     "",
 ]
