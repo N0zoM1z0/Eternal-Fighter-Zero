@@ -462,8 +462,8 @@ void Character19::Slot05()
               }
               if ((field0008 == 0xd0) || (field0008 == 0xcf)) {
                 field3114 = 0x10;
+                return;
               }
-              return;
             }
             return;
           }
@@ -489,18 +489,23 @@ void Character19::Slot05()
 
             if (((unsigned short)RandomRange(0,200) == 1) && (meter == 3000)) {
               recognizedCommand = 0x65;
+              return;
             }
             else if (field0008 == 0xd1) {
               field3114 = 0;
+              return;
             }
             else if (field0008 == 0xfd) {
               field3114 = 0;
+              return;
             }
             else if (field0008 == 0xa5) {
               field3114 = 0x14;
+              return;
             }
             else if (field0008 == 0xf) {
               field3114 = 0x14;
+              return;
             }
             else if (((field0008 == 0xd0) && (attackCollisionResult == 3)) &&
                     (5 < field000a)) {

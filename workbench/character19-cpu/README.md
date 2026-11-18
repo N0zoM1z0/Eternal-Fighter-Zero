@@ -29,12 +29,15 @@ fallthroughs; their byte-to-command conversions are emitted at the native
 branch sites instead of a synthesized tail block. The state-0x11 aerial decision tree now has explicit native-order short-circuit
 branches and early exits, with unordered-aware x87 relational expressions and
 exact signed/unsigned byte/word bounds. All 4,447 candidate instructions now align in native order and semantics after
-branch-target normalization. The function extent now matches exactly and all 298 COFF relocation entries
-remain present. This is not yet a complete byte-exact result: after excluding
-relocation fields, a focused instruction-byte comparison still finds 11
-branch-displacement bytes to reconcile. The native target and candidate must
-be compared after every relocation is explicitly bound; matching size alone
-is not Exact. The large AI gate now preserves native unsigned
+branch-target normalization. The function is now byte-exact after all 298 COFF relocations are explicitly
+bound: 212 `DIR32` references and 86 `REL32` calls, covering 44 unique
+symbols. All 39 floating-point literal symbols were checked against their
+original target bytes. The relocated candidate matches all 17,176 original
+bytes with zero differences. The state-0x0f branch now has separate early and
+fallback returns, and the state-0x11 decision chain returns after each of its
+five terminal choices. Formal match-unit replay and production-source
+promotion remain to be recorded; the workbench comparison alone is not an
+accepted receipt. The large AI gate now preserves native unsigned
 state-code bounds and unordered-aware floating-point range predicates, including the two AI
 probability-gate comparisons against RNG values. The early CPU-state gates
 now use the native `0x31`/`0x96` comparison boundaries directly.
