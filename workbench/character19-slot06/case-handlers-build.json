@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "acce93d165c5443592adf61ac9e530179aec5379392a5e8b931df6ff6bbba380",
+  "source_sha256": "b01db7839cf0ee1534697c667c4bf328e24942ad717e5f25d166606e17baac3a",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "f14d5145498442aaa130a1da79b145eb32f99e89ec2a7818aef784f6e6bc3795",
+  "object_sha256": "88544549c459ef17ffea6cc7fcdf91874a5a76224765932a27268be42081ee5a",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -78,6 +78,10 @@
       "candidate_size": 958,
       "relocations": 8
     },
+    "?Slot06UpdateAirborneHitstunRestore@Character19@@QAEXGG@Z": {
+      "candidate_size": 452,
+      "relocations": 14
+    },
     "?Slot06UpdateAirborneKnockbackLanding@Character19@@QAEXGGPAUSecondaryEffectSpawn@@GNHH@Z": {
       "candidate_size": 538,
       "relocations": 6
@@ -102,6 +106,10 @@
       "candidate_size": 502,
       "relocations": 12
     },
+    "?Slot06UpdateDefeatImpactVelocityRestore@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
+      "candidate_size": 594,
+      "relocations": 18
+    },
     "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z": {
       "candidate_size": 192,
       "relocations": 1
@@ -125,6 +133,10 @@
     "?Slot06UpdateKnockbackFall@Character19@@QAEXGGNHNNH@Z": {
       "candidate_size": 664,
       "relocations": 10
+    },
+    "?Slot06UpdateKnockbackImpactFinish@Character19@@QAEXGGPAUEffectSpawn@@G@Z": {
+      "candidate_size": 284,
+      "relocations": 6
     },
     "?Slot06UpdateKnockbackLanding@Character19@@QAEXGGH@Z": {
       "candidate_size": 315,

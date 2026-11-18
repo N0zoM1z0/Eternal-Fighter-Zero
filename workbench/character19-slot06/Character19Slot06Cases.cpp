@@ -2113,3 +2113,102 @@ void Character19::Slot06UpdateKnockbackImpactFinish(
         }
     }
 }
+
+
+// Airborne hitstun release with scaled velocity restoration (selector 0x4a).
+void Character19::Slot06UpdateAirborneHitstunRestore(
+    unsigned short frameDuration,
+    unsigned short frameCount)
+{
+    if ((field000a == 0) && (field000c == 0)) {
+        field3138 = (int)(velocityX * 100.0);
+        field313c = (int)(velocityY * 100.0);
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (gravity == 0.0) {
+            gravity = 0.035;
+        }
+        guardInputFrames = 0;
+        outgoingPushbackVelocityX = 0.0;
+        hitstunFrames = 60;
+    }
+
+    if ((hitstunFrames == 0) && (field3140 == 0)) {
+        field3140 = 1;
+        velocityX = (double)field3138 * 0.01;
+        velocityY = (double)field313c * 0.01;
+    }
+
+    if (hitstunFrames == 0) {
+        velocityY = velocityY + gravity;
+    }
+
+    if ((positionY + velocityY) > 0.0) {
+        ResetFrame();
+        positionY = 0.0;
+        field0008 = 0xa9;
+    } else {
+        field000c = field000c + 1;
+        if (frameDuration <= field000c) {
+            field000c = 0;
+            field000a = field000a + 1;
+            if (frameCount <= field000a) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+    }
+}
+
+// Defeat impact flash followed by restoration of the stored launch velocity (0x4b).
+void Character19::Slot06UpdateDefeatImpactVelocityRestore(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    EffectSpawn *spawn)
+{
+    if ((field000a == 0) && (field000c == 0)) {
+        field3138 = (int)(velocityX * 100.0);
+        field313c = (int)(velocityY * 100.0);
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field0120 == 1) {
+            comboDamageScale = comboDamageScale + (field0118 * 5.0);
+        }
+        field0118 = 0.0;
+        hitstunFrames = 90;
+        SetTint(0xb0, 3);
+    }
+
+    if ((field000a == 1) && (field000c == 0)) {
+        pendingContextSoundSlot = 0x12;
+        spawn->type = 1;
+        spawn->x = (double)(int)positionX;
+        spawn->y = (double)(int)positionY;
+        spawn->group = 2;
+        spawn->layer = 1;
+        contextOwner->EmitEffect(spawn);
+    }
+
+    if ((field000a == 2) && (field000c == 0)) {
+        spawn->type = 4;
+        spawn->x = (double)(int)positionX;
+        spawn->y = (double)(int)positionY;
+        spawn->group = 2;
+        spawn->layer = 1;
+        contextOwner->EmitEffect(spawn);
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        attackCollisionResult = 0;
+        if (frameCount <= field000a) {
+            field0008 = 9;
+            velocityX = (double)field3138 * 0.01;
+            velocityY = (double)field313c * 0.01;
+            gravity = 0.035;
+            ResetPose();
+        }
+    }
+}

@@ -177,3 +177,12 @@ These 932/931-byte native branches are almost identical; their only structural d
 ## Paired type-8 knockback impact finishers: selector cases 0x48-0x49
 
 Both 330-byte native branches clear dash momentum and reset motion, Y position and guard-input frames, then emit context effect type 8 at the integer-truncated character position (group 2, layer 1). They advance the animation timer, face the opponent on the exact frame-count boundary, and finish in state 0 (0x48) or state 3 (0x49). The shared helper uses ResetFrame for the native motion-field clearing and Context::EmitEffect for the impact flash.
+
+
+## Airborne hitstun velocity restore: selector case 0x4a
+
+The 457-byte state 170 stores the incoming horizontal and vertical velocities as 100x integer components in field3138/field313c, then freezes both velocities. It defaults gravity to 0.035 only when gravity was zero, clears guard-input frames and outgoing pushback, and starts 60 frames of hitstun. Once hitstun reaches zero, field3140 gates a one-time restoration of the stored velocities at 0.01 scale; gravity is then integrated each update. A strict ground crossing (positionY + velocityY > 0) resets motion, clamps Y, and enters state 0xa9. Otherwise the animation timer continues and finishes in state 9. This handler intentionally does not clear dashMomentumFlag.
+
+## Defeat impact with velocity restore: selector case 0x4b
+
+The 584-byte state 171 stores the incoming velocities in field3138/field313c at 100x scale and freezes them. When field0120 is set, it adds field0118 * 5.0 to comboDamageScale, then clears field0118, starts 90 frames of hitstun, and applies tint 0xb0 for 3 frames. At animation frame 1 it requests context sound 0x12 and emits context effect type 1; at frame 2 it emits type 4. Both effects use integer-truncated character coordinates, group 2, layer 1. Every completed animation frame clears attackCollisionResult. At animation completion it enters state 9, restores field3138/field313c at 0.01 scale, sets gravity 0.035, then resets pose. The implementation uses the correct native velocity fields rather than adjacent Character19 extension fields.
