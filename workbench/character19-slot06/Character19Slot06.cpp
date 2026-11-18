@@ -532,6 +532,21 @@ void Character19::Slot06()
             timing.frameDuration, timing.animationFrameCount);
         break;
 
+    case 212:
+        Slot06UpdateAerialGroundSlam(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
+    case 213:
+        Slot06UpdateAerialKickback(
+            timing.frameDuration, timing.animationFrameCount);
+        break;
+
+    case 214:
+        Slot06UpdateGroundImpactRecovery(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
     case 59:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
@@ -911,9 +926,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 212:
-    case 213:
-    case 214:
     case 220:
     case 221:
     case 230:

@@ -220,3 +220,16 @@ The 454-byte state 210 clears both velocities on phase 0, launches at phase 1 wi
 ## Dash follow-up cancel: selector case 0x58
 
 The 387-byte state 211 supports down-input cancel after phase 0 when field015c<3 and attackCollisionResult>1, routing to states 4/5/6 by inputX relative to facing. Without cancellation, phase 0 clears both velocities, phase 3 grants 30 meter and requests sound 0x14, and every completed animation frame clears attackCollisionResult. Completion faces the opponent and returns to state 0. This native branch has no gravity integration or airborne landing logic; it is deliberately not aliased to the superficially similar Character23 state 211.
+
+
+## Repeating aerial ground slam: selector case 0x59
+
+The 443-byte state 212 integrates gravity first. On frame 0 it grants 30 meter, requests sound 0x14, halves horizontal velocity and sets gravity to 0.07. An attack-collision result above 1 exits to state 0xd5 after ResetPose and ResetFrame. Otherwise it advances the animation while airborne and rewinds two frames when the animation reaches its end. Ground contact clamps Y, resets motion, applies vertical shake (3,0), emits context effect type 3 at integer-truncated character coordinates (group 2, layer 0, palette 7), requests sound 7 and exits to state 0xd6.
+
+## Aerial kickback: selector case 0x5a
+
+The 188-byte state 213 sets gravity to 0.042 every update, integrates vertical velocity, and initializes horizontal/vertical launch velocity to (-1.0,-2.4) on frame 0. Every animation-frame transition clears attackCollisionResult; completion enters state 9 and resets pose.
+
+## Ground impact recovery: selector case 0x5b
+
+The 287-byte state 214 holds both velocities at zero. On frame 0 it applies vertical shake (3,0) and emits context effect type 3 at integer-truncated character coordinates with group 2, layer 0 and palette 7. Each animation-frame transition clears attackCollisionResult. Completion chooses state 3 for up input, otherwise state 7, then faces the opponent and resets pose.

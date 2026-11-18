@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "ec5ff161bdb8e573e17abc5c00906ae7951ad13850abd38354ebfb984c013834",
+  "source_sha256": "e49c758380f495a85e3b61527c54c1b2dd29fe6eccc4fb7764152061943e118c",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "86f8e54da3774339301537bf9f1c632c42729c81ef05142b4e82cd833257d570",
+  "object_sha256": "6b42a2a4ad6d9bcb28b63e45db0c981328952a3cbb28ed243f4dc53ace764848",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -61,6 +61,14 @@
     "?Slot06TryAirAction@Character19@@QAEHXZ": {
       "candidate_size": 616,
       "relocations": 0
+    },
+    "?Slot06UpdateAerialGroundSlam@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
+      "candidate_size": 481,
+      "relocations": 11
+    },
+    "?Slot06UpdateAerialKickback@Character19@@QAEXGG@Z": {
+      "candidate_size": 194,
+      "relocations": 3
     },
     "?Slot06UpdateAerialLaunchLanding@Character19@@QAEXGG@Z": {
       "candidate_size": 459,
@@ -141,6 +149,10 @@
     "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z": {
       "candidate_size": 155,
       "relocations": 1
+    },
+    "?Slot06UpdateGroundImpactRecovery@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
+      "candidate_size": 310,
+      "relocations": 7
     },
     "?Slot06UpdateGroundRecovery@Character19@@QAEXGGH@Z": {
       "candidate_size": 346,

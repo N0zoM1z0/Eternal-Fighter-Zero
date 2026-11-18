@@ -438,6 +438,9 @@ public:
     void Slot06UpdateAirborneDashFollowup(unsigned short, unsigned short, EffectSpawn *, unsigned short, short, unsigned short, unsigned short, unsigned short, unsigned short);
     void Slot06UpdateAerialLaunchLanding(unsigned short, unsigned short);
     void Slot06UpdateDashFollowupCancel(unsigned short, unsigned short);
+    void Slot06UpdateAerialGroundSlam(unsigned short, unsigned short, EffectSpawn *);
+    void Slot06UpdateAerialKickback(unsigned short, unsigned short);
+    void Slot06UpdateGroundImpactRecovery(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
     void Slot06Case03();
     void Slot06Case04();

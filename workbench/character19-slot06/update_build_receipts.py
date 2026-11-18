@@ -67,6 +67,9 @@ assert any(symbol.startswith("?Slot06UpdateDashAttackSustain@Character19@@") for
 assert any(symbol.startswith("?Slot06UpdateAirborneDashFollowup@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAerialLaunchLanding@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashFollowupCancel@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateAerialGroundSlam@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateGroundImpactRecovery@Character19@@") for symbol in helper_members)
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -95,7 +98,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 287
+assert len(implemented_states) == 290
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -771,6 +774,98 @@ dash_followup_cancel_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": dash_followup_cancel_helper,
         **helper_members[dash_followup_cancel_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+
+aerial_ground_slam_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateAerialGroundSlam@")
+)
+(workbench / "aerial-ground-slam-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x59",
+        "entry": "0x00672267",
+        "bytes": 443,
+        "state_id": 212,
+        "meter_frame": 0,
+        "meter_gain": 30,
+        "sound": 0x14,
+        "velocity_x_scale": 0.5,
+        "gravity": 0.07,
+        "collision_exit_state": "0xD5",
+        "landing_state": "0xD6",
+        "landing_effect": {"type": 3, "group": 2, "layer": 0, "palette": 7},
+        "animation_repeat_back": 2,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": aerial_ground_slam_helper,
+        **helper_members[aerial_ground_slam_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+aerial_kickback_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateAerialKickback@")
+)
+(workbench / "aerial-kickback-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x5A",
+        "entry": "0x00672422",
+        "bytes": 188,
+        "state_id": 213,
+        "velocity_x": -1.0,
+        "velocity_y": -2.4,
+        "gravity": 0.042,
+        "completion_state": 9,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": aerial_kickback_helper,
+        **helper_members[aerial_kickback_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+ground_impact_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateGroundImpactRecovery@")
+)
+(workbench / "ground-impact-recovery-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x5B",
+        "entry": "0x006724DE",
+        "bytes": 287,
+        "state_id": 214,
+        "vertical_shake": [3, 0],
+        "effect": {"type": 3, "group": 2, "layer": 0, "palette": 7},
+        "completion": "inputY==1 ? 3 : 7",
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": ground_impact_helper,
+        **helper_members[ground_impact_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,
