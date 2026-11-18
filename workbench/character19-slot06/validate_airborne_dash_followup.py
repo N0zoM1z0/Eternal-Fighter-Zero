@@ -61,6 +61,7 @@ for case, values in expected.items():
     assert f"*(short *)(param_1 + 0x52) = (short)param_1[0x52] + {meter_literal};" in block
     assert f"*(undefined1 *)((int)param_1 + 0x2c9) = {hex(sound)};" in block
     assert f"*(ushort *)((int)param_1 + 10) < {clear_frame}" in block
+    assert "param_1[0xc4e]" not in block
     if effect_type:
         assert f"local_50 = {hex(effect_type)};" in block
         assert f"*(short *)((int)param_1 + 10) == {effect_frame}" in block
@@ -142,6 +143,15 @@ for expression in (
     "ResetPose();",
 ):
     assert expression in helper, expression
+assert "repeatFrame" not in helper
+assert "repeatBack" not in helper
+assert "repeatLimit" not in helper
+assert "field3138" not in helper
+
+renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
+assert "(0x54, (2, 5, 0x15, 0, 0, 3))" in renderer
+assert "(0x55, (2, 13, 0x14, 3, 0x1a7, 4))" in renderer
+assert "(0x56, (1, 30, 0x14, 1, 0x1a9, 3))" in renderer
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 for state in (207, 208, 209):

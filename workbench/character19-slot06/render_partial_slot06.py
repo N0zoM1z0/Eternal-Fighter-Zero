@@ -491,8 +491,7 @@ for case, config in [
         "        Slot06UpdateAirborneDashFollowup(",
         "            timing.frameDuration, timing.animationFrameCount, &spawn,",
         f"            {meter_frame}, {meter_gain}, {sound_slot},",
-        f"            {effect_frame}, {effect_type}, {collision_clear_frame},",
-        f"            {repeat_frame}, {repeat_back}, {repeat_limit});",
+        f"            {effect_frame}, {effect_type}, {collision_clear_frame});",
         "        break;",
         "",
     ]

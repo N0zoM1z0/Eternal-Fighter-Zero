@@ -2406,10 +2406,7 @@ void Character19::Slot06UpdateAirborneDashFollowup(
     unsigned short soundSlot,
     unsigned short effectFrame,
     unsigned short effectType,
-    unsigned short attackCollisionClearFrame,
-    unsigned short repeatFrame,
-    unsigned short repeatBack,
-    unsigned short repeatLimit)
+    unsigned short attackCollisionClearFrame)
 {
     velocityY = velocityY + gravity;
 
@@ -2473,11 +2470,6 @@ void Character19::Slot06UpdateAirborneDashFollowup(
         field000a = field000a + 1;
         if (field000a < attackCollisionClearFrame) {
             attackCollisionResult = 0;
-        }
-        if ((repeatFrame != 0) && (field000a == repeatFrame) &&
-            (field3138 < repeatLimit)) {
-            field000a = field000a - repeatBack;
-            field3138 = field3138 + 1;
         }
         if (frameCount <= field000a) {
             field0008 = 9;

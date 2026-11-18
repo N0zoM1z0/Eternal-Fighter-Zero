@@ -695,7 +695,7 @@ airborne_dash_followup_helper = next(
     "native_cases": {
         "0x54": {"entry": "0x00671641", "bytes": 675, "state_id": 207, "meter_frame": 2, "meter_gain": 5, "sound": 0x15, "effect_type": 0, "collision_clear_frame": 3},
         "0x55": {"entry": "0x006718E4", "bytes": 797, "state_id": 208, "meter_frame": 2, "meter_gain": 13, "sound": 0x14, "effect_frame": 3, "effect_type": 0x1A7, "collision_clear_frame": 4},
-        "0x56": {"entry": "0x00671C01", "bytes": 797, "state_id": 209, "meter_frame": 1, "meter_gain": 30, "sound": 0x14, "effect_frame": 1, "effect_type": 0x1A9, "collision_clear_frame": 3, "repeat_frame": 7, "repeat_back": 3, "repeat_limit": 1},
+        "0x56": {"entry": "0x00671C01", "bytes": 797, "state_id": 209, "meter_frame": 1, "meter_gain": 30, "sound": 0x14, "effect_frame": 1, "effect_type": 0x1A9, "collision_clear_frame": 3},
     },
     "candidate": {
         "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
