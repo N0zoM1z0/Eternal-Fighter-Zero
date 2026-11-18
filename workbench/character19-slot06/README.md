@@ -112,3 +112,8 @@ These three states share the same end-of-recovery sequence. Each update applies 
 ## Horizontal ground-skid family: selector cases 0x2c-0x2e
 
 The three native branches (state IDs 75-77) share the same horizontal braking sequence. When field0120 is enabled they decay field0118 by 0.6 each update and apply an additional 30-point decay on the first frame. The first frame adds 30 meter and seeds velocityX=2.2. Every frame then zeros vertical motion, sets gravity to zero, applies 0.06 horizontal deceleration, clamps velocityX at zero, and updates edge pushback using the opponent's vertical position and the native 0.25 multiplier. The timer advances to state 7 (or state 3 when inputY==1) for cases 0x2c/0x2d; case 0x2e always completes into state 3. The three native bodies are identical apart from their local temporary names and final state selection. Slot06UpdateGroundSkid is a shared natural-C++ implementation.
+
+
+## Airborne recoil and local hit effect: selector case 0x2f
+
+State ID 81 is a 485-byte native branch. On its first frame it emits local effect type 499 at the integer-truncated character position, copies the character facing into the effect flag, sets layer 1, adds 30 meter, and seeds velocity from knockbackVelocityX/knockbackVelocityY with 0.032 gravity. Each frame adds 0.02 horizontal acceleration and gravity to vertical velocity, clamps positive horizontal velocity to zero, and advances the animation timer. At the animation limit it backs the frame index up by one; when the predicted ground crossing occurs on frame 1, it selects state 0x61 or 0x62 according to knockdownOnLanding. Slot06UpdateAirKnockback is a shared natural-C++ helper using the already-reset EffectSpawn and the existing Character19::EmitLocalEffect path.
