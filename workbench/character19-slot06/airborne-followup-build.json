@@ -1,0 +1,56 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_cases": {
+    "0x45": {
+      "entry": "0x0066F719",
+      "bytes": 932,
+      "state_id": 165,
+      "launch_frame": 3,
+      "launch_vx": 2.0,
+      "launch_vy": -0.5,
+      "gravity": 0.045,
+      "vertical_acceleration": 0.01
+    },
+    "0x46": {
+      "entry": "0x0066FABD",
+      "bytes": 931,
+      "state_id": 166,
+      "launch_frame": 2,
+      "launch_vx": -2.0,
+      "launch_vy": -0.5,
+      "gravity": 0.045,
+      "vertical_acceleration": 0.01
+    }
+  },
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+    "source_sha256": "18b7c85ab48dbdcfacd6fe37efacf0d3069f9dc6729b0875fd55f4696ecda3ba",
+    "object": "build/character19-slot06/Character19Slot06Cases.obj",
+    "object_sha256": "c2b099b983519b4e2990cbeeaee24a4beb7b85c63494980c2bc225db920e5623",
+    "symbol": "?Slot06UpdateAirborneFollowup@Character19@@QAEXGGGN@Z",
+    "candidate_size": 958,
+    "relocations": 8,
+    "status": "semantic-workbench-only-not-exact"
+  },
+  "dispatcher": {
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "46ef3559f9d536e76e73f5e7efdb2c5d78442b5d7920581d3466ff8a8a840176",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "461f404903f259d91b028d36b415119575fe3d2c70f74e260b205e10550d4db0",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 5438,
+    "relocation_count": 275,
+    "implemented_state_ids": 269,
+    "unimplemented_state_ids": 41,
+    "status": "partial-semantic-workbench-not-exact"
+  },
+  "compiler_flags": [
+    "/Od",
+    "/G6",
+    "/MT",
+    "/Gy",
+    "/W3",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/workbench/character19-slot06",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/src"
+  ]
+}

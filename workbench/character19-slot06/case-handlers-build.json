@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "178f67984a9569c4278d01e889c49e606cb4ea70a90a161b4636ede995ef07ce",
+  "source_sha256": "18b7c85ab48dbdcfacd6fe37efacf0d3069f9dc6729b0875fd55f4696ecda3ba",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "6fc67170cd500025014f9e5e5d76f6777b438d6280d91c08592c92f58c02f34e",
+  "object_sha256": "c2b099b983519b4e2990cbeeaee24a4beb7b85c63494980c2bc225db920e5623",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -73,6 +73,10 @@
     "?Slot06UpdateAirborneBounce@Character19@@QAEXGGEGNNNNHH@Z": {
       "candidate_size": 551,
       "relocations": 10
+    },
+    "?Slot06UpdateAirborneFollowup@Character19@@QAEXGGGN@Z": {
+      "candidate_size": 958,
+      "relocations": 8
     },
     "?Slot06UpdateAirborneKnockbackLanding@Character19@@QAEXGGPAUSecondaryEffectSpawn@@GNHH@Z": {
       "candidate_size": 538,
