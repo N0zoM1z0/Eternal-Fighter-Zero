@@ -3,10 +3,10 @@
 #include "CharacterViews.h"
 #include <cstdlib>
 
-#pragma var_order(i, spawn, frameDuration, frameCount, this, iVar7, iVar8, dVar2, dVar3, uVar5, uVar6)
 void Character19::Slot07()
 {
-    SecondaryEffectSpawn spawn;
+    int i;
+    EffectSpawn spawn;
     unsigned short frameDuration;
     unsigned short frameCount;
     int iVar7;
@@ -15,7 +15,6 @@ void Character19::Slot07()
     double dVar3;
     unsigned short uVar5;
     unsigned short uVar6;
-    int i;
   if ((*opponentSlot)->hitstunFrames < 1) {
     i = (int)effectRead;
     
@@ -75,9 +74,7 @@ void Character19::Slot07()
             effects[i].tick = 0;
             effects[i].frame = 9;
             spawn.type = 0x193;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * 0x32;
-            spawn.x = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * 0x32);
             spawn.y = 0.0;
             spawn.field0030 = 0;
             spawn.group = 1;
@@ -134,9 +131,7 @@ void Character19::Slot07()
             effects[i].tick = 0;
             effects[i].frame = 9;
             spawn.type = 0x193;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * 0x7d;
-            spawn.x = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * 0x7d);
             spawn.y = 0.0;
             spawn.field0030 = 0;
             spawn.group = 1;
@@ -193,9 +188,7 @@ void Character19::Slot07()
             effects[i].tick = 0;
             effects[i].frame = 9;
             spawn.type = 0x193;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * 200;
-            spawn.x = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * 200);
             spawn.y = 0.0;
             spawn.field0030 = 0;
             spawn.group = 1;
@@ -376,10 +369,8 @@ void Character19::Slot07()
               effects[i].frame = 1;
               effects[i].vy = -1.5;
               spawn.type = 0x19c;
-              iVar7 = (int)effects[i].x;
-              spawn.x = (double)iVar7;
-              iVar7 = (int)effects[i].y;
-              spawn.y = (double)iVar7;
+              spawn.x = (double)(int)effects[i].x;
+              spawn.y = (double)(int)effects[i].y;
               spawn.field0030 = 0;
               spawn.layer = 1;
               spawn.flag0018 = facing;
@@ -792,9 +783,7 @@ void Character19::Slot07()
             if (effects[i].frame == 4) {
               spawn.type = 0x1ac;
               spawn.x = (double)contextOwner->cameraBounds.left;
-              iVar7 = (int)effects[i].y;
-              iVar7 = iVar7 + -0x3c;
-              spawn.y = (double)iVar7;
+              spawn.y = (double)((int)effects[i].y + -0x3c);
               spawn.field0030 = 2;
               spawn.layer = 1;
               spawn.flag0018 = 1;
@@ -1310,34 +1299,22 @@ void Character19::Slot07()
           }
           else {
             spawn.type = 0x1f1;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * 0x17;
-            spawn.x = (double)iVar7;
-            iVar7 = (int)effects[i].y;
-            iVar7 = iVar7 + -4;
-            spawn.y = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * 0x17);
+            spawn.y = (double)((int)effects[i].y + -4);
             spawn.field0030 = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * -4;
-            spawn.x = (double)iVar7;
-            iVar7 = (int)effects[i].y;
-            iVar7 = iVar7 + -6;
-            spawn.y = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * -4);
+            spawn.y = (double)((int)effects[i].y + -6);
             spawn.field0030 = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * -0xe;
-            spawn.x = (double)iVar7;
-            iVar7 = (int)effects[i].y;
-            iVar7 = iVar7 + -0x1a;
-            spawn.y = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * -0xe);
+            spawn.y = (double)((int)effects[i].y + -0x1a);
             spawn.field0030 = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
@@ -1350,64 +1327,42 @@ void Character19::Slot07()
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * 0x1e;
-            spawn.x = (double)iVar7;
-            iVar7 = (int)effects[i].y;
-            iVar7 = iVar7 + -0x28;
-            spawn.y = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * 0x1e);
+            spawn.y = (double)((int)effects[i].y + -0x28);
             spawn.field0030 = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * -0x19;
-            spawn.x = (double)iVar7;
-            iVar7 = (int)effects[i].y;
-            iVar7 = iVar7 + -0x50;
-            spawn.y = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * -0x19);
+            spawn.y = (double)((int)effects[i].y + -0x50);
             spawn.field0030 = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f2;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * -0x23;
-            spawn.x = (double)iVar7;
-            iVar7 = (int)effects[i].y;
-            iVar7 = iVar7 + -0x2a;
-            spawn.y = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * -0x23);
+            spawn.y = (double)((int)effects[i].y + -0x2a);
             spawn.field0030 = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f2;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * -0x12;
-            spawn.x = (double)iVar7;
-            iVar7 = (int)effects[i].y;
-            iVar7 = iVar7 + -0x14;
-            spawn.y = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * -0x12);
+            spawn.y = (double)((int)effects[i].y + -0x14);
             spawn.field0030 = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f2;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * 2;
-            spawn.x = (double)iVar7;
-            iVar7 = (int)effects[i].y;
-            iVar7 = iVar7 + -0x41;
-            spawn.y = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * 2);
+            spawn.y = (double)((int)effects[i].y + -0x41);
             spawn.field0030 = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f2;
-            iVar7 = (int)effects[i].x;
-            iVar7 = iVar7 + (char)facing * 0x10;
-            spawn.x = (double)iVar7;
+            spawn.x = (double)((int)effects[i].x + (char)facing * 0x10);
             spawn.y = (double)((int)effects[i].y + -0x50);
             spawn.field0030 = 0;
             spawn.layer = 1;
