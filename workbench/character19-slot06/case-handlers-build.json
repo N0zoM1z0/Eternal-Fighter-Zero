@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "b8702b5a97b341c859371158f38fdcbfe15261f09ca7a629f6a9e7355e504e24",
+  "source_sha256": "d46fa71dca565d4b8f59e88218888a2b38d193868dec5501bad5eb9cd2e88675",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "a4e5670fe60cf36783a8bac46a757f5eb3b53ecc2d89e0951e0830780868117d",
+  "object_sha256": "629a6579a4c8b47085c190536daff5f4679e5fd2c4840a3ac135f05170085aa0",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -114,8 +114,12 @@
       "candidate_size": 399,
       "relocations": 8
     },
+    "?Slot06UpdateComboAerialBounce@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
+      "candidate_size": 758,
+      "relocations": 14
+    },
     "?Slot06UpdateComboImpactBurst@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
-      "candidate_size": 862,
+      "candidate_size": 844,
       "relocations": 18
     },
     "?Slot06UpdateCounterMove@Character19@@QAEXGGFNNH@Z": {
@@ -166,6 +170,10 @@
       "candidate_size": 155,
       "relocations": 1
     },
+    "?Slot06UpdateFinalFaceTransition@Character19@@QAEXGG@Z": {
+      "candidate_size": 126,
+      "relocations": 1
+    },
     "?Slot06UpdateGroundImpactRecovery@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
       "candidate_size": 310,
       "relocations": 7
@@ -183,7 +191,7 @@
       "relocations": 12
     },
     "?Slot06UpdateImpactEffectPair@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
-      "candidate_size": 473,
+      "candidate_size": 464,
       "relocations": 6
     },
     "?Slot06UpdateKnockbackFall@Character19@@QAEXGGNHNNH@Z": {
@@ -198,9 +206,17 @@
       "candidate_size": 315,
       "relocations": 4
     },
+    "?Slot06UpdateLocalEffectFinish@Character19@@QAEXGGG@Z": {
+      "candidate_size": 339,
+      "relocations": 4
+    },
     "?Slot06UpdateLocalEffectRecovery@Character19@@QAEXGGPAUSecondaryEffectSpawn@@@Z": {
       "candidate_size": 206,
       "relocations": 2
+    },
+    "?Slot06UpdateLoopingAerialBounce@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
+      "candidate_size": 414,
+      "relocations": 8
     },
     "?Slot06UpdateOpponentCaptureImpact@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
       "candidate_size": 499,
@@ -215,7 +231,7 @@
       "relocations": 7
     },
     "?Slot06UpdateStunEffectRecovery@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
-      "candidate_size": 343,
+      "candidate_size": 334,
       "relocations": 5
     },
     "?Slot06UpdateTrailDashFinish@Character19@@QAEXGGGFEGG@Z": {

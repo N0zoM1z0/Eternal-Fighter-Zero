@@ -1,0 +1,71 @@
+{
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "native_cases": {
+    "0x6B": {
+      "entry": "0x00673EB8",
+      "bytes": 355,
+      "state_id": 263,
+      "effect_type": 400
+    },
+    "0x6C": {
+      "entry": "0x0067401B",
+      "bytes": 355,
+      "state_id": 264,
+      "effect_type": 401
+    },
+    "0x6D": {
+      "entry": "0x0067417E",
+      "bytes": 355,
+      "state_id": 265,
+      "effect_type": 402
+    }
+  },
+  "shared_native_behavior": {
+    "opening": "ResetFrame",
+    "effect": {
+      "owner": 1,
+      "x_offset": "round(positionX)+facing*30",
+      "y_offset": "round(positionY)-40",
+      "group": 0,
+      "layer": 1,
+      "facing": "facing!=1",
+      "flag0018": "facing",
+      "field0028": 1
+    },
+    "meter_gain": 45,
+    "character_sound": 2,
+    "collision_clear_after_frame": 9,
+    "completion_state": 0
+  },
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+    "source_sha256": "d46fa71dca565d4b8f59e88218888a2b38d193868dec5501bad5eb9cd2e88675",
+    "object": "build/character19-slot06/Character19Slot06Cases.obj",
+    "object_sha256": "629a6579a4c8b47085c190536daff5f4679e5fd2c4840a3ac135f05170085aa0",
+    "symbol": "?Slot06UpdateLocalEffectFinish@Character19@@QAEXGGG@Z",
+    "candidate_size": 339,
+    "relocations": 4,
+    "status": "semantic-workbench-only-not-exact"
+  },
+  "dispatcher": {
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "3dac6d912b229b0fed0b19f5d30b6c32d8a7bb83618a285f58b521b0af833886",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "73ec453ef6123c700b0dfcbab907c358e68b1beb7f2b5d56a2be851bfd1e1583",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 6860,
+    "relocation_count": 359,
+    "implemented_state_ids": 308,
+    "unimplemented_state_ids": 2,
+    "status": "partial-semantic-workbench-not-exact"
+  },
+  "compiler_flags": [
+    "/Od",
+    "/G6",
+    "/MT",
+    "/Gy",
+    "/W3",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/workbench/character19-slot06",
+    "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/src"
+  ]
+}

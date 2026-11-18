@@ -79,6 +79,10 @@ assert any(symbol.startswith("?Slot06UpdateStunEffectRecovery@Character19@@") fo
 assert any(symbol.startswith("?Slot06UpdateImpactEffectPair@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateComboImpactBurst@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDampedImpactFinish@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateLoopingAerialBounce@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateComboAerialBounce@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateFinalFaceTransition@Character19@@") for symbol in helper_members)
+assert any(symbol.startswith("?Slot06UpdateLocalEffectFinish@Character19@@") for symbol in helper_members)
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -107,7 +111,7 @@ implemented_states = {
     for case in implemented_cases
     for state in states_by_case.get(case, [])
 }
-assert len(implemented_states) == 302
+assert len(implemented_states) == 308
 
 helper_record = {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
@@ -1062,7 +1066,7 @@ stun_effect_helper = next(
         "bytes": 320,
         "state_id": 249,
         "opening_fields": {"field00dc": 4, "field00de": 0xec, "velocityX": 0.0, "remainingHitCount": 1, "guardInputFrames": 0, "hitstunFrames": 60},
-        "context_effect": {"type": 0x28, "x_offset": "trunc(positionX)+facing*10", "y_offset": "trunc(positionY)-40", "group": 2, "layer": 1, "palette": 0x13},
+        "context_effect": {"owner": 0, "type": 0x28, "x_offset": "trunc(positionX)+facing*10", "y_offset": "trunc(positionY)-40", "group": 2, "layer": 1, "palette": 0x13},
         "completion_state": 0,
     },
     "candidate": {
@@ -1092,8 +1096,8 @@ impact_pair_helper = next(
         "opening": "ResetFrame",
         "frame4_meter_gain": 45,
         "character_sound": 1,
-        "context_effect": {"type": 0x1f, "group": 0, "layer": 1},
-        "local_effect": {"type": 0x194, "x_offset": "trunc(positionX)-facing*80", "y_offset": "trunc(positionY)-40", "group": 2, "layer": 1},
+        "context_effect": {"owner": 0, "type": 0x1f, "group": 0, "layer": 1},
+        "local_effect": {"owner": 1, "type": 0x194, "x_offset": "trunc(positionX)-facing*80", "y_offset": "trunc(positionY)-40", "group": 2, "layer": 1},
         "collision_clear_before_frame": 5,
         "completion_state": 0,
     },
@@ -1123,11 +1127,11 @@ combo_burst_helper = next(
         "state_id": 251,
         "opening": "ResetFrame; StartTrail(3)",
         "field0118_decay": {"field0120_zero": 500.0, "field0120_nonzero": 250.0},
-        "opening_context_effect": {"type": 0x21, "y_offset": -50, "group": 2, "layer": 1, "palette": 0xb},
-        "frame2_local_effect": 0x1ab,
+        "opening_context_effect": {"owner": 0, "type": 0x21, "y_offset": -50, "group": 2, "layer": 1, "palette": 0xb},
+        "frame2_local_effect": {"owner": 1, "type": 0x1ab},
         "frame4_meter_gain": 45,
-        "frame4_context_effect": 0x1f,
-        "frame4_local_effect": 0x194,
+        "frame4_context_effect": {"owner": 0, "type": 0x1f},
+        "frame4_local_effect": {"owner": 1, "type": 0x194},
         "collision_clear_before_frame": 5,
         "completion_state": 0,
     },
@@ -1160,7 +1164,7 @@ damped_finish_helper = next(
         "positive_vertical_velocity_cap": 0.3,
         "frame4_meter_gain": 45,
         "character_sound": 1,
-        "frame4_local_effect": 0x194,
+        "frame4_local_effect": {"owner": 1, "type": 0x194},
         "collision_clear_before_frame": 5,
         "completion_state": 9,
     },
@@ -1171,6 +1175,132 @@ damped_finish_helper = next(
         "object_sha256": helper_receipt["object_sha256"],
         "symbol": damped_finish_helper,
         **helper_members[damped_finish_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+
+looping_aerial_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateLoopingAerialBounce@")
+)
+(workbench / "looping-aerial-bounce-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x68",
+        "entry": "0x00673A17",
+        "bytes": 361,
+        "state_id": 256,
+        "opening": "ResetFrame; remainingHitCount=2",
+        "airborne_predicate": "positionY>=0 || positionY+velocityY<0 after gravity integration",
+        "frame3_launch": {"velocityY": -2.5, "gravity": 0.045},
+        "frame3_local_effect": {"owner": 1, "type": 0x1b9, "group": 2, "layer": 1},
+        "loop_back": 2,
+        "landing_state": 0x103,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": looping_aerial_helper,
+        **helper_members[looping_aerial_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+combo_aerial_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateComboAerialBounce@")
+)
+(workbench / "combo-aerial-bounce-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x69",
+        "entry": "0x00673B80",
+        "bytes": 704,
+        "state_id": 257,
+        "trail_spacing": 1,
+        "one_shot_opening_gate": "field313c==0",
+        "field0118_decay": {"field0120_zero": 500.0, "field0120_nonzero": 250.0},
+        "opening_context_effect": {"owner": 0, "type": 0x21, "y_offset": -50, "group": 2, "layer": 1, "palette": 0xb},
+        "frame1_local_effect": {"owner": 1, "type": 0x1b9, "group": 2, "layer": 1},
+        "frame3_launch": {"velocityY": -3.5, "gravity": 0.015, "one_shot_gate": "field313c==1"},
+        "loop_back": {"frame": 8, "counter": "field3138<5"},
+        "landing_state": 0x103,
+        "completion_state": 9,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": combo_aerial_helper,
+        **helper_members[combo_aerial_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+face_transition_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateFinalFaceTransition@")
+)
+(workbench / "final-face-transition-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_case": {
+        "selector": "0x6A",
+        "entry": "0x00673E40",
+        "bytes": 120,
+        "state_id": 259,
+        "completion_state": 3,
+        "completion_actions": ["FaceOpponent", "ResetPose"],
+        "collision_clear": "every animation-frame transition",
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": face_transition_helper,
+        **helper_members[face_transition_helper],
+        "status": "semantic-workbench-only-not-exact",
+    },
+    "dispatcher": dispatcher_record,
+    "compiler_flags": flags,
+}, indent=2) + "\n")
+
+local_finish_helper = next(
+    symbol for symbol in helper_members
+    if symbol.startswith("?Slot06UpdateLocalEffectFinish@")
+)
+(workbench / "local-effect-finishes-build.json").write_text(json.dumps({
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "native_cases": {
+        "0x6B": {"entry": "0x00673EB8", "bytes": 355, "state_id": 263, "effect_type": 0x190},
+        "0x6C": {"entry": "0x0067401B", "bytes": 355, "state_id": 264, "effect_type": 0x191},
+        "0x6D": {"entry": "0x0067417E", "bytes": 355, "state_id": 265, "effect_type": 0x192},
+    },
+    "shared_native_behavior": {
+        "opening": "ResetFrame",
+        "effect": {"owner": 1, "x_offset": "round(positionX)+facing*30", "y_offset": "round(positionY)-40", "group": 0, "layer": 1, "facing": "facing!=1", "flag0018": "facing", "field0028": 1},
+        "meter_gain": 45,
+        "character_sound": 2,
+        "collision_clear_after_frame": 9,
+        "completion_state": 0,
+    },
+    "candidate": {
+        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
+        "source_sha256": helper_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06Cases.obj",
+        "object_sha256": helper_receipt["object_sha256"],
+        "symbol": local_finish_helper,
+        **helper_members[local_finish_helper],
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,

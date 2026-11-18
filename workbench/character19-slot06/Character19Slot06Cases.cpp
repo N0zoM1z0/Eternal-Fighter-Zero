@@ -2958,7 +2958,6 @@ void Character19::Slot06UpdateStunEffectRecovery(
         guardInputFrames = 0;
         hitstunFrames = 60;
 
-        spawn->owner = 1;
         spawn->type = 0x28;
         spawn->x = (double)((int)positionX + (int)facing * 10);
         spawn->y = (double)((int)positionY - 0x28);
@@ -2993,7 +2992,6 @@ void Character19::Slot06UpdateImpactEffectPair(
     }
 
     if ((field000a == 4) && (field000c == 0)) {
-        spawn->owner = 1;
         spawn->type = 0x1f;
         spawn->x = (double)(int)positionX;
         spawn->y = (double)(int)positionY;
@@ -3046,7 +3044,6 @@ void Character19::Slot06UpdateComboImpactBurst(
             field0118 = field0118 - 250.0;
         }
 
-        spawn->owner = 1;
         spawn->type = 0x21;
         spawn->x = (double)(int)positionX;
         spawn->y = (double)((int)positionY - 0x32);
@@ -3065,7 +3062,6 @@ void Character19::Slot06UpdateComboImpactBurst(
     }
 
     if ((field000a == 4) && (field000c == 0)) {
-        spawn->owner = 1;
         spawn->type = 0x1f;
         spawn->x = (double)(int)positionX;
         spawn->y = (double)(int)positionY;
@@ -3154,6 +3150,192 @@ void Character19::Slot06UpdateDampedImpactFinish(
         }
         if (frameCount <= field000a) {
             field0008 = 9;
+            ResetPose();
+        }
+    }
+}
+
+
+// Looping aerial bounce. A confirmed ground crossing exits to the native
+// landing state 0x103; otherwise frame 3 re-launches and the animation loops.
+void Character19::Slot06UpdateLoopingAerialBounce(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    EffectSpawn *spawn)
+{
+    if ((field000a == 0) && (field000c == 0)) {
+        ResetFrame();
+        remainingHitCount = 2;
+    }
+
+    if (positionY < 0.0) {
+        velocityY = velocityY + gravity;
+    }
+
+    if ((positionY >= 0.0) || ((positionY + velocityY) < 0.0)) {
+        if ((field000a == 3) && (field000c == 0)) {
+            velocityY = -2.5;
+            gravity = 0.045;
+
+            spawn->owner = 1;
+            spawn->type = 0x1b9;
+            spawn->x = positionX;
+            spawn->y = positionY;
+            spawn->flag0018 = (unsigned char)facing;
+            spawn->group = 2;
+            spawn->layer = 1;
+            EmitLocalEffect(spawn);
+        }
+
+        field000c = field000c + 1;
+        if (frameDuration <= field000c) {
+            field000c = 0;
+            field000a = field000a + 1;
+            attackCollisionResult = 0;
+            if (frameCount <= field000a) {
+                field000a = field000a - 2;
+            }
+        }
+    } else {
+        positionY = 0.0;
+        ResetPose();
+        ResetFrame();
+        field0008 = 0x103;
+    }
+}
+
+// The combo version adds a one-shot context burst, a frame-1 local marker,
+// and a five-cycle launch loop driven by the two persistent Character19 counters.
+void Character19::Slot06UpdateComboAerialBounce(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    EffectSpawn *spawn)
+{
+    if ((field000a == 0) && (field000c == 0)) {
+        StartTrail(1);
+        if (field313c == 0) {
+            ResetFrame();
+            if (field0120 == 0) {
+                field0118 = field0118 - 500.0;
+            } else {
+                field0118 = field0118 - 250.0;
+            }
+
+            spawn->type = 0x21;
+            spawn->x = (double)(int)positionX;
+            spawn->y = (double)((int)positionY - 0x32);
+            spawn->group = 2;
+            spawn->layer = 1;
+            spawn->palette = 0xb;
+            contextOwner->EmitEffect(spawn);
+            field313c = field313c + 1;
+        }
+        remainingHitCount = 1;
+    }
+
+    if ((field000a == 1) && (field000c == 0)) {
+        spawn->owner = 1;
+        spawn->type = 0x1b9;
+        spawn->x = positionX;
+        spawn->y = positionY;
+        spawn->flag0018 = (unsigned char)facing;
+        spawn->group = 2;
+        spawn->layer = 1;
+        EmitLocalEffect(spawn);
+    }
+
+    if (positionY < 0.0) {
+        velocityY = velocityY + gravity;
+    }
+
+    if ((positionY >= 0.0) || ((positionY + velocityY) < 0.0)) {
+        field000c = field000c + 1;
+        if (frameDuration <= field000c) {
+            field000c = 0;
+            field000a = field000a + 1;
+            attackCollisionResult = 0;
+
+            if ((field000a == 3) && (field313c == 1)) {
+                velocityY = -3.5;
+                gravity = 0.015;
+                field313c = field313c + 1;
+            }
+
+            if ((field000a == 8) && (field3138 < 5)) {
+                field000a = 0;
+                field3138 = field3138 + 1;
+            }
+
+            if (field000a == 9) {
+                remainingHitCount = 1;
+            }
+
+            if (frameCount <= field000a) {
+                ResetPose();
+                field0008 = 9;
+            }
+        }
+    } else {
+        positionY = 0.0;
+        ResetPose();
+        ResetFrame();
+        field0008 = 0x103;
+    }
+}
+
+// Short face/pose transition: no extra setup, just the native animation timer.
+void Character19::Slot06UpdateFinalFaceTransition(
+    unsigned short frameDuration,
+    unsigned short frameCount)
+{
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        attackCollisionResult = 0;
+        if (frameCount <= field000a) {
+            field0008 = 3;
+            FaceOpponent();
+            ResetPose();
+        }
+    }
+}
+
+// Three finishers share the same local-effect setup and timer. Their only
+// native difference is the effect resource: 0x190, 0x191 or 0x192.
+void Character19::Slot06UpdateLocalEffectFinish(
+    unsigned short frameDuration,
+    unsigned short frameCount,
+    unsigned short effectType)
+{
+    if ((field000a == 0) && (field000c == 0)) {
+        ResetFrame();
+
+        EffectSpawn effect;
+        effect.owner = 1;
+        effect.type = effectType;
+        effect.x = (double)((int)positionX + (int)facing * 0x1e);
+        effect.y = (double)((int)positionY - 0x28);
+        effect.group = 0;
+        effect.layer = 1;
+        effect.facing = (facing != 1);
+        effect.flag0018 = (unsigned char)facing;
+        effect.field0028 = 1;
+        EmitLocalEffect(&effect);
+
+        meter = meter + 45;
+        pendingCharacterSoundSlot = 2;
+    }
+
+    field000c = field000c + 1;
+    if (frameDuration <= field000c) {
+        field000c = 0;
+        field000a = field000a + 1;
+        if (field000a > 9) {
+            attackCollisionResult = 0;
+        }
+        if (frameCount <= field000a) {
+            field0008 = 0;
             ResetPose();
         }
     }

@@ -193,6 +193,27 @@ for key, (name, expressions) in helpers.items():
     for expression in expressions:
         assert expression in helper, (key, expression)
 
+# The native stack EffectSpawn is zeroed once by FUN_00405490. Thus context
+# effects that do not overwrite owner stay owner 0; only local effects explicitly
+# set owner 1 before calling EmitLocalEffect.
+native_spawn_init = (ROOT / ".analysis/kanna-slot06/helpers/405490.c").read_text()
+assert "_memset(param_1,0,0x48);" in native_spawn_init
+cpp_spawn_init = (ROOT / "src/EffectPool.cpp").read_text()
+assert "std::memset(this, 0, sizeof(*this));" in cpp_spawn_init
+stun_start = source.index("void Character19::Slot06UpdateStunEffectRecovery")
+stun_end = source.index("\n}\n", stun_start) + 3
+assert "spawn->owner = 1;" not in source[stun_start:stun_end]
+pair_start = source.index("void Character19::Slot06UpdateImpactEffectPair")
+pair_end = source.index("\n}\n", pair_start) + 3
+pair_helper = source[pair_start:pair_end]
+assert pair_helper.count("spawn->owner = 1;") == 1
+assert pair_helper.index("contextOwner->EmitEffect(spawn);") < pair_helper.index("spawn->owner = 1;")
+combo_start = source.index("void Character19::Slot06UpdateComboImpactBurst")
+combo_end = source.index("\n}\n", combo_start) + 3
+combo_helper = source[combo_start:combo_end]
+assert combo_helper.count("spawn->owner = 1;") == 2
+assert combo_helper.count("contextOwner->EmitEffect(spawn);") == 2
+
 # Confirm the shared C++ leaf functions that replace the native helpers.
 reset = (ROOT / "src/SecondaryState.cpp").read_text()
 for expression in (

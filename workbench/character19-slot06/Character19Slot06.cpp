@@ -615,6 +615,36 @@ void Character19::Slot06()
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
+    case 256:
+        Slot06UpdateLoopingAerialBounce(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
+    case 257:
+        Slot06UpdateComboAerialBounce(
+            timing.frameDuration, timing.animationFrameCount, &spawn);
+        break;
+
+    case 259:
+        Slot06UpdateFinalFaceTransition(
+            timing.frameDuration, timing.animationFrameCount);
+        break;
+
+    case 263:
+        Slot06UpdateLocalEffectFinish(
+            timing.frameDuration, timing.animationFrameCount, 400);
+        break;
+
+    case 264:
+        Slot06UpdateLocalEffectFinish(
+            timing.frameDuration, timing.animationFrameCount, 401);
+        break;
+
+    case 265:
+        Slot06UpdateLocalEffectFinish(
+            timing.frameDuration, timing.animationFrameCount, 402);
+        break;
+
     case 59:
         Slot06UpdateKnockbackFall(
             timing.frameDuration, timing.animationFrameCount,
@@ -994,12 +1024,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 256:
-    case 257:
-    case 259:
-    case 263:
-    case 264:
-    case 265:
     case 266:
     case 267:
         // This valid state belongs to an untranslated native case group.
