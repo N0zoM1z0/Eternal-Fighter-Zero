@@ -116,77 +116,7 @@ int Character19::Slot06OpponentWithinKnockbackRange()
     return 1;
 }
 
-void Character19::Slot06UpdateKnockbackFall(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    double minimumVerticalVelocity,
-    int clampVerticalVelocity,
-    double velocityBlend,
-    double gravityValue,
-    int interruptOutsideRange)
-{
-    if (field0120 != 0) {
-        field0118 = field0118 - 0.8;
-    }
 
-    if (interruptOutsideRange && (field000a != 0) &&
-        !Slot06OpponentWithinKnockbackRange()) {
-        field0008 = 0x46;
-        ResetPose();
-        return;
-    }
-
-    if ((field000a == 0) && (field000c == 0)) {
-        meter = meter + 30;
-        velocityX = knockbackVelocityX;
-        if (velocityBlend == 0.0) {
-            velocityY = knockbackVelocityY;
-        } else {
-            velocityY = velocityY * velocityBlend + knockbackVelocityY;
-        }
-        if (clampVerticalVelocity) {
-            if (minimumVerticalVelocity <= velocityY) {
-                if (-0.5 < velocityY) {
-                    velocityY = -0.5;
-                }
-            } else {
-                velocityY = minimumVerticalVelocity;
-            }
-        }
-        gravity = gravityValue;
-    }
-
-    if (((velocityY < 0.0) != (velocityY == 0.0)) &&
-        (field000a < 2)) {
-        field000a = 1;
-        field000c = 0;
-    }
-
-    if ((0.0 <= velocityY) && (field000a < 2)) {
-        field000a = 2;
-        field000c = 0;
-    }
-
-    velocityY = velocityY + gravity;
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (frameCount <= field000a) {
-            field000a = field000a - 2;
-        }
-    }
-
-    if (((positionY + velocityY) >= 0.0) && (field000a > 1)) {
-        positionY = 0.0;
-        if (knockdownOnLanding == 0) {
-            field0008 = 0x62;
-        } else {
-            field0008 = 0x61;
-        }
-        ResetPose();
-    }
-}
 
 
 // Follow-up knockback landing path for native selector cases 0x25 and 0x26.

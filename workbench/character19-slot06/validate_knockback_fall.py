@@ -42,7 +42,6 @@ expected = {
     0x24: (0.0,0,0.0,0.032,1,477,67),
     0x28: (0.0,0,0.0,0.072,0,427,71),
 }
-renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
 for case, (lower, clamp, blend, gravity, interrupt, native_size, state) in expected.items():
     block = "\n".join(blocks[case])
     expected_lines = 50 if case <= 0x1E else (
@@ -52,8 +51,6 @@ for case, (lower, clamp, blend, gravity, interrupt, native_size, state) in expec
         48 if case == 0x23 else 47
     )
     assert len(blocks[case]) == expected_lines, (hex(case),len(blocks[case]),expected_lines)
-    config = f"0x{case:02x}, ({lower}, {clamp}, {blend}, {gravity}, {interrupt})"
-    assert config in renderer, (hex(case),config)
     assert "*(short *)(param_1 + 0x52) = (short)param_1[0x52] + 0x1e;" in block
     assert "*(undefined2 *)(param_1 + 2) = 0x62;" in block
     assert "*(undefined2 *)(param_1 + 2) = 0x61;" in block
@@ -88,18 +85,50 @@ for address, expected_value in constants.items():
     assert actual == expected_value, (hex(address),actual,expected_value)
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
-    "field0118 = field0118 - 0.8",
-    "meter = meter + 30",
-    "velocityX = knockbackVelocityX",
-    "if (velocityBlend == 0.0)",
-    "velocityY = velocityY * velocityBlend + knockbackVelocityY",
-    "if (clampVerticalVelocity)",
-    "gravity = gravityValue",
-    "if (interruptOutsideRange && (field000a != 0)",
-    "!Slot06OpponentWithinKnockbackRange()",
-):
-    assert expression in source, expression
+assert "Slot06UpdateKnockbackFall(" not in source
+assert "int Character19::Slot06OpponentWithinKnockbackRange()" in source
+dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+for case, (lower, clamp, blend, gravity, interrupt, native_size, state) in expected.items():
+    fragment = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        "field0118 = field0118 - 0.8",
+        "meter = meter + 30;",
+        "velocityX = knockbackVelocityX;",
+        "if ((field000a == 0) && (field000c == 0))",
+        "field000a < 2",
+        "velocityY = velocityY + gravity;",
+        "field000c = field000c + 1;",
+        "timing.frameDuration",
+        "timing.animationFrameCount",
+        "(positionY + velocityY) >= 0.0",
+        "positionY = 0.0;",
+        "if (knockdownOnLanding == 0)",
+        "field0008 = 0x62;",
+        "field0008 = 0x61;",
+        "ResetPose();",
+    ):
+        assert expression in fragment, (hex(case), expression)
+    if blend == 0.0:
+        assert "velocityY = knockbackVelocityY;" in fragment
+        assert "velocityBlend" not in fragment
+    else:
+        assert f"velocityY = velocityY * {blend} + knockbackVelocityY;" in fragment
+    if clamp:
+        assert f"if ({lower} <= velocityY)" in fragment
+        assert "if (-0.5 < velocityY)" in fragment
+        assert "velocityY = -0.5;" in fragment
+        assert f"velocityY = {lower};" in fragment
+    else:
+        assert "velocityY = -0.5;" not in fragment
+    if interrupt:
+        assert "(field000a != 0)" in fragment
+        assert "!Slot06OpponentWithinKnockbackRange()" in fragment
+        assert "field0008 = 0x46;" in fragment
+        assert "return;" in fragment
+    else:
+        assert "Slot06OpponentWithinKnockbackRange" not in fragment
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
+assert "Slot06UpdateKnockbackFall(" not in dispatcher
 
 # Boundary probes for the translated FUN_0040ff70 zero/nonzero predicate.
 def within(self_x, opponent_x):

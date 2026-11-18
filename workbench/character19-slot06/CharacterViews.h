@@ -449,7 +449,6 @@ public:
     void Slot06UpdateFinalEffectPair(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateTrailEffectFinish(unsigned short, unsigned short, EffectSpawn *);
 
-    void Slot06UpdateKnockbackFall(unsigned short, unsigned short, double, int, double, double, int);
 };
 class Character20 : public Secondary {
     int field3138, field313c, field3140, field3144, field3148;

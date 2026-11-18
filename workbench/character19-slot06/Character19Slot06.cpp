@@ -672,73 +672,63 @@ void Character19::Slot06()
         break;
 
     case 28:
-        Slot06UpdateKnockbackFall(
-            timing.frameDuration, timing.animationFrameCount,
-            -2.0, 1,
-            0.75, 0.032, 0);
+        {
+#include "Character19Slot06Case1C.inc"
+        }
         break;
 
     case 29:
-        Slot06UpdateKnockbackFall(
-            timing.frameDuration, timing.animationFrameCount,
-            -4.0, 1,
-            0.75, 0.032, 0);
+        {
+#include "Character19Slot06Case1D.inc"
+        }
         break;
 
     case 30:
-        Slot06UpdateKnockbackFall(
-            timing.frameDuration, timing.animationFrameCount,
-            -6.0, 1,
-            0.75, 0.032, 0);
+        {
+#include "Character19Slot06Case1E.inc"
+        }
         break;
 
     case 31:
-        Slot06UpdateKnockbackFall(
-            timing.frameDuration, timing.animationFrameCount,
-            0.0, 0,
-            0.75, 0.032, 0);
+        {
+#include "Character19Slot06Case1F.inc"
+        }
         break;
 
     case 32:
-        Slot06UpdateKnockbackFall(
-            timing.frameDuration, timing.animationFrameCount,
-            0.0, 0,
-            0.0, 0.032, 0);
+        {
+#include "Character19Slot06Case20.inc"
+        }
         break;
 
     case 33:
-        Slot06UpdateKnockbackFall(
-            timing.frameDuration, timing.animationFrameCount,
-            -2.0, 1,
-            0.75, 0.032, 1);
+        {
+#include "Character19Slot06Case21.inc"
+        }
         break;
 
     case 34:
-        Slot06UpdateKnockbackFall(
-            timing.frameDuration, timing.animationFrameCount,
-            -4.0, 1,
-            0.75, 0.032, 1);
+        {
+#include "Character19Slot06Case22.inc"
+        }
         break;
 
     case 35:
-        Slot06UpdateKnockbackFall(
-            timing.frameDuration, timing.animationFrameCount,
-            0.0, 0,
-            0.75, 0.032, 1);
+        {
+#include "Character19Slot06Case23.inc"
+        }
         break;
 
     case 36:
-        Slot06UpdateKnockbackFall(
-            timing.frameDuration, timing.animationFrameCount,
-            0.0, 0,
-            0.0, 0.032, 1);
+        {
+#include "Character19Slot06Case24.inc"
+        }
         break;
 
     case 40:
-        Slot06UpdateKnockbackFall(
-            timing.frameDuration, timing.animationFrameCount,
-            0.0, 0,
-            0.0, 0.072, 0);
+        {
+#include "Character19Slot06Case28.inc"
+        }
         break;
 
     case 19:

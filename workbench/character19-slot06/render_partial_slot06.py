@@ -676,25 +676,12 @@ lines += [
     "",
 ]
 
-for case, config in [
-    (0x1c, (-2.0, 1, 0.75, 0.032, 0)),
-    (0x1d, (-4.0, 1, 0.75, 0.032, 0)),
-    (0x1e, (-6.0, 1, 0.75, 0.032, 0)),
-    (0x1f, (0.0, 0, 0.75, 0.032, 0)),
-    (0x20, (0.0, 0, 0.0, 0.032, 0)),
-    (0x21, (-2.0, 1, 0.75, 0.032, 1)),
-    (0x22, (-4.0, 1, 0.75, 0.032, 1)),
-    (0x23, (0.0, 0, 0.75, 0.032, 1)),
-    (0x24, (0.0, 0, 0.0, 0.032, 1)),
-    (0x28, (0.0, 0, 0.0, 0.072, 0)),
-]:
-    lower_velocity, clamp_velocity, velocity_blend, gravity_value, interrupt = config
+for case in (0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28):
     lines += labels(case)
     lines += [
-        "        Slot06UpdateKnockbackFall(",
-        "            timing.frameDuration, timing.animationFrameCount,",
-        f"            {lower_velocity}, {clamp_velocity},",
-        f"            {velocity_blend}, {gravity_value}, {interrupt});",
+        "        {",
+        f'#include "Character19Slot06Case{case:02X}.inc"',
+        "        }",
         "        break;",
         "",
     ]

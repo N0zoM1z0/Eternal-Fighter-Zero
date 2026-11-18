@@ -31,113 +31,33 @@
     ]
   },
   "candidate": {
-    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-    "source_sha256": "5cc022c0ea12596a8543f7448e7bb1be38295a7461b4569c18451186c3a1c280",
-    "object": "build/character19-slot06/Character19Slot06Cases.obj",
-    "object_sha256": "d8492e077dcbd916c28f687462acbce5e3210d51f521753b7008cfb0660aed2e",
-    "symbol": "?Slot06UpdateKnockbackFall@Character19@@QAEXGGNHNNH@Z",
-    "symbol_size": 664,
-    "relocations": 10,
-    "clamp_modes": {
-      "0x1C": [
-        -2.0,
-        -0.5
-      ],
-      "0x1D": [
-        -4.0,
-        -0.5
-      ],
-      "0x1E": [
-        -6.0,
-        -0.5
-      ],
-      "0x1F": null
-    },
-    "status": "semantic-workbench-only-not-exact",
-    "parameters": {
-      "0x1C": [
-        -2.0,
-        1,
-        0.75,
-        0.032,
-        0
-      ],
-      "0x1D": [
-        -4.0,
-        1,
-        0.75,
-        0.032,
-        0
-      ],
-      "0x1E": [
-        -6.0,
-        1,
-        0.75,
-        0.032,
-        0
-      ],
-      "0x1F": [
-        0.0,
-        0,
-        0.75,
-        0.032,
-        0
-      ],
-      "0x20": [
-        0.0,
-        0,
-        0.0,
-        0.032,
-        0
-      ],
-      "0x21": [
-        -2.0,
-        1,
-        0.75,
-        0.032,
-        1
-      ],
-      "0x22": [
-        -4.0,
-        1,
-        0.75,
-        0.032,
-        1
-      ],
-      "0x23": [
-        0.0,
-        0,
-        0.75,
-        0.032,
-        1
-      ],
-      "0x24": [
-        0.0,
-        0,
-        0.0,
-        0.032,
-        1
-      ],
-      "0x28": [
-        0.0,
-        0,
-        0.0,
-        0.072,
-        0
-      ]
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "a2ef1cd8b1e1639d76654cb0da2625fbdcda54bb818e5e72fd6ec1ff65cc0d11",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "6155ccecd77c13a138bc2170984d90f55657a2f6008d8a028583cd2511c6b984",
+    "inlined_case_sources": {
+      "workbench/character19-slot06/Character19Slot06Case1C.inc": "64a01a8f7474d01167998943a7483c7f3b2c50165e836bdbc8371cf1159c24b4",
+      "workbench/character19-slot06/Character19Slot06Case1D.inc": "65167d34fe924c1c022f2fa5445748f162ba8828a3b6599d401e4868274fcbf1",
+      "workbench/character19-slot06/Character19Slot06Case1E.inc": "8f32f599698005b6f9f6bb30989034e6d71d6dc1d081c348955f6619df5399f9",
+      "workbench/character19-slot06/Character19Slot06Case1F.inc": "ef4cbf55c7ac38b24ab6815f2fadf48aa542fcdb7a50f7c2790eea18f0d6bc48",
+      "workbench/character19-slot06/Character19Slot06Case20.inc": "8dd8d8f2e7bc505797209e6d03aab34bb9ef89ee090925b714b4bab2dc1265c8",
+      "workbench/character19-slot06/Character19Slot06Case21.inc": "96d2adcfa6c23afd61fc4b68c1eb9d46e765b194c8a3202fccc425085365d893",
+      "workbench/character19-slot06/Character19Slot06Case22.inc": "c0b4ddfb69e4aaab36e1a86b18d4862598730f7b10b1bd5abc4724297623abc0",
+      "workbench/character19-slot06/Character19Slot06Case23.inc": "7b20740c4fe931031e75752326e52692d698ba2c3f1d0f3e93fe1e1aa8a55d10",
+      "workbench/character19-slot06/Character19Slot06Case24.inc": "0550dd1be29c47f025c838c84063cd7973a533bd0a294cb73a105cc4eff4dbea",
+      "workbench/character19-slot06/Character19Slot06Case28.inc": "d81ce1bd9921bd3204e0d346ce4c0a8069fbbfafcdef848cd612d0f97f0ada0d"
     },
     "range_helper": {
       "symbol": "?Slot06OpponentWithinKnockbackRange@Character19@@QAEHXZ",
-      "symbol_size": 226,
-      "relocations": 11,
-      "meaning": "returns true only when opponent is within 280 units and both characters satisfy native 20-unit stage-edge clearance"
-    }
+      "status": "shared-natural-cpp-leaf-retained-for-selector-0x25-0x26"
+    },
+    "status": "semantic-workbench-only-not-exact"
   },
   "dispatcher": {
-    "source_sha256": "1844954867cc072fb0b5bab63184a0369c9a3ccc441359d073673022a84727a0",
-    "object_sha256": "83f5402f7147a3c02a385832de74b7e46a2ea0d7b13ffe82ab9aa15102fe759d",
-    "symbol_size": 30636,
-    "relocations": 598,
+    "source_sha256": "a2ef1cd8b1e1639d76654cb0da2625fbdcda54bb818e5e72fd6ec1ff65cc0d11",
+    "object_sha256": "6155ccecd77c13a138bc2170984d90f55657a2f6008d8a028583cd2511c6b984",
+    "symbol_size": 35698,
+    "relocations": 659,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0
   },
