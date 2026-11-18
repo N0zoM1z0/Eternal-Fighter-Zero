@@ -1664,3 +1664,17 @@ the later state checks, as in the native control flow. The candidate remains **n
 has not been promoted into `src/` or the match ledger. Rebuild only this owner
 with `scripts/repo-python workbench/character19-cpu/check-decomp.py`; no full
 cold replay is needed.
+
+## Kanna (Character19) CPU state-0x1f exits restored — 2026-11-18
+
+In `workbench/character19-cpu/Character19Cpu-decomp.cpp`, both outcomes of
+the `field3114 == 0x1f` branch now return immediately: the `0xc9`/`0xca`
+transition writes state `0x20`, and the fallback sets `buttonPulse[1]`. The
+native instructions at `0x0067AB57` and `0x0067AB69` each jump directly to
+the owner epilogue at `0x0067CF44`; the old candidate factored the first path
+through a short local jump and was three bytes too short. The scoped VC7.1
+rebuild now produces 17,176 bytes (native extent 17,176), retains all 298
+COFF relocations and the original stack frame. A first focused raw-byte pass
+finds 11 non-relocation branch-displacement bytes still differing; this
+function is not Exact yet. Continue with the state-0x0f return edge and the
+state-0x11 early exits, then bind all 298 relocations before any promotion.

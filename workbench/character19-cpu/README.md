@@ -6,9 +6,13 @@ reconstruction of the full decision owner, including the large state/command
 branches and the neutral-input fallback. It contains no inline assembly,
 synthetic padding, or placeholder function bodies.
 
-The current VC7.1 `/Od /G6 /MT /Gy` candidate is 17,173 bytes (3 bytes
-shorter than native) with the original `0xCC` stack frame and matching entry
-prologue. It is a strong work-in-progress, **not Exact**. The large guard/AI
+The current VC7.1 `/Od /G6 /MT /Gy` candidate is 17,176 bytes, matching the
+native extent, with the original `0xCC` stack frame and matching entry
+prologue. The state-0x1f transition now returns immediately after selecting
+state `0x20`, and its fallback returns immediately after setting
+`buttonPulse[1]`; both exits match the native branches at `0x0067AB57` and
+`0x0067AB69` to the owner epilogue at `0x0067CF44`. This restores the three
+bytes previously lost to a shared local return jump. It is a strong work-in-progress, **not Exact**. The large guard/AI
 gate is expressed as a natural early command return, with signed-byte tests,
 exact opponent-state boundaries, unsigned RNG promotions, and signed
 air-action lock tests normalized to native `TEST/JG` boundaries, and
@@ -25,9 +29,12 @@ fallthroughs; their byte-to-command conversions are emitted at the native
 branch sites instead of a synthesized tail block. The state-0x11 aerial decision tree now has explicit native-order short-circuit
 branches and early exits, with unordered-aware x87 relational expressions and
 exact signed/unsigned byte/word bounds. All 4,447 candidate instructions now align in native order and semantics after
-branch-target normalization. The only remaining byte-size discrepancy is one
-three-byte near-versus-short return jump in the state-0x20 handler; all 298
-COFF relocations and the original stack frame remain intact. The large AI gate now preserves native unsigned
+branch-target normalization. The function extent now matches exactly and all 298 COFF relocation entries
+remain present. This is not yet a complete byte-exact result: after excluding
+relocation fields, a focused instruction-byte comparison still finds 11
+branch-displacement bytes to reconcile. The native target and candidate must
+be compared after every relocation is explicitly bound; matching size alone
+is not Exact. The large AI gate now preserves native unsigned
 state-code bounds and unordered-aware floating-point range predicates, including the two AI
 probability-gate comparisons against RNG values. The early CPU-state gates
 now use the native `0x31`/`0x96` comparison boundaries directly.

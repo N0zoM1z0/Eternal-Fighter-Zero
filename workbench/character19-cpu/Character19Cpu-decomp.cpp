@@ -622,9 +622,11 @@ kanna_state11_deeper:
             }
             if ((field0008 == 0xc9) || (field0008 == 0xca)) {
               field3114 = 0x20;
+              return;
             }
             else {
               buttonPulse[1] = 1;
+              return;
             }
           }
           else if (field3114 == 0x20) {
