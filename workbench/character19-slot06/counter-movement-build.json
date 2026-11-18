@@ -3,7 +3,7 @@
   "native_cases": {
     "selector_range": [
       "0x13",
-      "0x17"
+      "0x1B"
     ],
     "case_bytes_each": 497,
     "state_ids": [
@@ -11,27 +11,98 @@
       51,
       52,
       53,
-      54
+      54,
+      55,
+      56,
+      57,
+      58
     ],
-    "normalized_body_identical": true
+    "normalized_body_identical": true,
+    "case_bytes_by_selector": {
+      "0x13": 497,
+      "0x14": 497,
+      "0x15": 497,
+      "0x16": 497,
+      "0x17": 497,
+      "0x18": 497,
+      "0x19": 473,
+      "0x1A": 473,
+      "0x1B": 473
+    }
   },
   "candidate": {
     "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-    "source_sha256": "50ab468b5e754f2c637efb634c2fa83ae30820087463ee9636d8092501ecbf22",
+    "source_sha256": "34cfe35d1e38c6dd5bb4152762d29b2f4d98d5028178fc5e1645468cf3867f3a",
     "object": "build/character19-slot06/Character19Slot06Cases.obj",
-    "object_sha256": "76869e7e827e52a690bbd232e96b1989b3d18fc7d67590a1e412e0f354ed3fec",
-    "symbol": "?Slot06UpdateCounterMove@Character19@@QAEXGGFNN@Z",
-    "symbol_size": 502,
+    "object_sha256": "468530bb5f07ef57ad4d1f4e744dc2a89bddae1a6f6fd9f237964207651442b4",
+    "symbol": "?Slot06UpdateCounterMove@Character19@@QAEXGGFNNH@Z",
+    "symbol_size": 519,
     "relocations": 16,
-    "status": "semantic-workbench-only-not-exact"
+    "status": "semantic-workbench-only-not-exact",
+    "parameters": {
+      "0x13": [
+        10,
+        -1.1,
+        10,
+        0
+      ],
+      "0x14": [
+        15,
+        -1.5,
+        20,
+        0
+      ],
+      "0x15": [
+        20,
+        -1.8,
+        30,
+        0
+      ],
+      "0x16": [
+        10,
+        -1.1,
+        10,
+        0
+      ],
+      "0x17": [
+        15,
+        -1.5,
+        20,
+        0
+      ],
+      "0x18": [
+        20,
+        -1.8,
+        30,
+        0
+      ],
+      "0x19": [
+        10,
+        -1.1,
+        10,
+        1
+      ],
+      "0x1A": [
+        15,
+        -1.5,
+        20,
+        1
+      ],
+      "0x1B": [
+        20,
+        -1.8,
+        30,
+        1
+      ]
+    }
   },
   "dispatcher": {
-    "source_sha256": "da3772584b86f58da1726bbd036b59d4338620a381357d58b87da4cd4fff1f76",
-    "object_sha256": "b800ea57347d6bfa2ac02e3d379466658739ba460a2fee14e83708fc3eab975d",
-    "symbol_size": 2738,
-    "relocations": 108,
-    "implemented_state_ids": 222,
-    "unimplemented_state_ids": 88
+    "source_sha256": "9765601f8e5a5faa1415fa717c2e62499804a0b8e475437b420ac23b3fe6bd5c",
+    "object_sha256": "6745f57abccddc48a744cccdbde1f12f295c820cb2bac675b1cd450e7ee3610e",
+    "symbol_size": 2968,
+    "relocations": 124,
+    "implemented_state_ids": 226,
+    "unimplemented_state_ids": 84
   },
   "compiler_flags": [
     "/Od",

@@ -16,7 +16,7 @@ Currently implemented state coverage:
 - selector cases 0-10: state IDs 1-11 except 12, plus state 13
 - selector cases 0x70-0x74: state IDs 300, 303, 306, 309, 310, dispatched to isolated C++ handlers
 - selector case 0x75: all 193 native fallback state IDs
-- remaining 88 valid state IDs: explicitly marked TODO, not silently routed to the fallback
+- remaining 84 valid state IDs: explicitly marked TODO, not silently routed to the fallback
 
 Character19Slot06Cases.cpp contains ten isolated natural-C++ handlers plus two shared airborne-state helpers for selector cases 0x70-0x74. The native intervals and candidate member sizes are:
 
@@ -63,9 +63,9 @@ Next: translate the remaining selector cases, replace the temporary helper calls
 
 State ID 47 is a standalone 304-byte native branch. The C++ dispatcher now preserves its 0.035 gravity, strict predicted-ground-crossing test, frame-2 clamp, native marker-byte write (Secondary offset 0x2c9 = 7), and the unusual frame-index wrap/decrement sequence. The target-backed validator checks the constant and all of these control-flow operations. This case is compiled as part of the partial Slot06 dispatcher; it is not an Exact owner claim.
 
-## Counter-movement family: selector cases 0x13-0x17
+## Counter-movement family: selector cases 0x13-0x1b
 
-The five 497-byte native branches (state IDs 50-54) share one 43-line body after normalizing only local temporary names and three per-case constants. The target-backed validator checks that equivalence and verifies all 13 numeric constants used by the source.
+The nine native branches (state IDs 50-58) share one 43-line body after normalizing only local temporary names and three per-case constants. The target-backed validator checks that equivalence and verifies all 13 numeric constants used by the source.
 
 Slot06UpdateCounterMove is a 502-byte VC7.1 member. It preserves the per-frame field0118 decay, per-case meter gain, opponent combo-scale-dependent horizontal launch, horizontal velocity damping/clamp, stage-edge outgoing pushback calculation, frame progression, and the inputY==1 return to the standing state.
 
@@ -75,5 +75,9 @@ Per-case parameters:
 - 0x15: meter +20, launch scale -1.8, decay 30
 - 0x16: meter +10, launch scale -1.1, decay 10
 - 0x17: meter +15, launch scale -1.5, decay 20
+- 0x18: meter +20, launch scale -1.8, decay 30
+- 0x19: meter +10, launch scale -1.1, decay 10; always finish in state 3
+- 0x1a: meter +15, launch scale -1.5, decay 20; always finish in state 3
+- 0x1b: meter +20, launch scale -1.8, decay 30; always finish in state 3
 
-The boundary test is expressed as positionX <= 20 or positionX >= 619, equivalent to the original pair of floating-point comparisons. The source retains the positionY-dependent 0.2 factor when writing outgoingPushbackVelocityX; positionY is reset to zero earlier in the same handler, as in the native sequence. This family is compiled and semantically mapped, not Exact.
+The first six branches (0x13-0x18) choose state 0 or 3 on completion based on inputY; the last three (0x19-0x1b) always choose state 3. The boundary test is expressed as positionX <= 20 or positionX >= 619, equivalent to the original pair of floating-point comparisons. The source retains the positionY-dependent 0.2 factor when writing outgoingPushbackVelocityX; positionY is reset to zero earlier in the same handler, as in the native sequence. This family is compiled and semantically mapped, not Exact.

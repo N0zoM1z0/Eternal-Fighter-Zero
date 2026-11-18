@@ -1,6 +1,6 @@
 // Partial natural-C++ reconstruction of Character19::Slot06.
 // State IDs are grouped using the native 310-byte selector table.
-// Cases 0-0x17, 0x70-0x74, and the shared 0x75 fallback are restored.
+// Cases 0-0x17, 0x18, 0x19, 0x1a, 0x1b, 0x70-0x74, and the shared 0x75 fallback are restored.
 // are implemented; remaining native handlers are explicitly TODO.
 #include "CharacterViews.h"
 
@@ -198,31 +198,64 @@ void Character19::Slot06()
     case 50:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
-            10, -1.1, 10.0);
+            10, -1.1, 10.0,
+            0);
         break;
 
     case 51:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
-            15, -1.5, 20.0);
+            15, -1.5, 20.0,
+            0);
         break;
 
     case 52:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
-            20, -1.8, 30.0);
+            20, -1.8, 30.0,
+            0);
         break;
 
     case 53:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
-            10, -1.1, 10.0);
+            10, -1.1, 10.0,
+            0);
         break;
 
     case 54:
         Slot06UpdateCounterMove(
             timing.frameDuration, timing.animationFrameCount,
-            15, -1.5, 20.0);
+            15, -1.5, 20.0,
+            0);
+        break;
+
+    case 55:
+        Slot06UpdateCounterMove(
+            timing.frameDuration, timing.animationFrameCount,
+            20, -1.8, 30.0,
+            0);
+        break;
+
+    case 56:
+        Slot06UpdateCounterMove(
+            timing.frameDuration, timing.animationFrameCount,
+            10, -1.1, 10.0,
+            1);
+        break;
+
+    case 57:
+        Slot06UpdateCounterMove(
+            timing.frameDuration, timing.animationFrameCount,
+            15, -1.5, 20.0,
+            1);
+        break;
+
+    case 58:
+        Slot06UpdateCounterMove(
+            timing.frameDuration, timing.animationFrameCount,
+            20, -1.8, 30.0,
+            1);
         break;
 
     case 4:
@@ -471,10 +504,6 @@ void Character19::Slot06()
         }
         break;
 
-    case 55:
-    case 56:
-    case 57:
-    case 58:
     case 59:
     case 60:
     case 61:

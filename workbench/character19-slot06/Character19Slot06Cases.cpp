@@ -1126,7 +1126,8 @@ void Character19::Slot06UpdateCounterMove(
     unsigned short frameCount,
     short meterGain,
     double launchScale,
-    double fieldDecay)
+    double fieldDecay,
+    int forceStandingState)
 {
     if (field0120 != 0) {
         field0118 = field0118 - 0.6;
@@ -1161,9 +1162,13 @@ void Character19::Slot06UpdateCounterMove(
         field000c = 0;
         field000a = field000a + 1;
         if (frameCount <= field000a) {
-            field0008 = 0;
-            if (inputY == 1) {
+            if (forceStandingState) {
                 field0008 = 3;
+            } else {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
             }
             ResetPose();
         }

@@ -9,7 +9,7 @@ states_by_case = {
     ]
     for row in rows
 }
-implemented = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
+implemented = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1a, 0x1b, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75}
 mapped = {
     state
     for case, states in states_by_case.items()
@@ -21,7 +21,7 @@ unimplemented = sorted(set(range(1, 0x137)) - mapped)
 lines = [
     "// Partial natural-C++ reconstruction of Character19::Slot06.",
     "// State IDs are grouped using the native 310-byte selector table.",
-    "// Cases 0-0x17, 0x70-0x74, and the shared 0x75 fallback are restored.",
+    "// Cases 0-0x17, 0x18, 0x19, 0x1a, 0x1b, 0x70-0x74, and the shared 0x75 fallback are restored.",
     "// are implemented; remaining native handlers are explicitly TODO.",
     '#include "CharacterViews.h"',
     "",
@@ -203,18 +203,23 @@ lines += [
 ]
 
 for case, config in [
-    (0x13, (10, -1.1, 10.0)),
-    (0x14, (15, -1.5, 20.0)),
-    (0x15, (20, -1.8, 30.0)),
-    (0x16, (10, -1.1, 10.0)),
-    (0x17, (15, -1.5, 20.0)),
+    (0x13, (10, -1.1, 10.0, 0)),
+    (0x14, (15, -1.5, 20.0, 0)),
+    (0x15, (20, -1.8, 30.0, 0)),
+    (0x16, (10, -1.1, 10.0, 0)),
+    (0x17, (15, -1.5, 20.0, 0)),
+    (0x18, (20, -1.8, 30.0, 0)),
+    (0x19, (10, -1.1, 10.0, 1)),
+    (0x1a, (15, -1.5, 20.0, 1)),
+    (0x1b, (20, -1.8, 30.0, 1)),
 ]:
-    meter_gain, launch_scale, field_decay = config
+    meter_gain, launch_scale, field_decay, force_standing = config
     lines += labels(case)
     lines += [
         "        Slot06UpdateCounterMove(",
         "            timing.frameDuration, timing.animationFrameCount,",
-        f"            {meter_gain}, {launch_scale}, {field_decay});",
+        f"            {meter_gain}, {launch_scale}, {field_decay},",
+        f"            {force_standing});",
         "        break;",
         "",
     ]

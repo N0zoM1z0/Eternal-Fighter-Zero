@@ -1,4 +1,4 @@
-"""Validate the five native counter-movement variants and their parameters."""
+"""Validate native counter-movement variants 0x13-0x1b."""
 import re
 import struct
 import sys
@@ -22,10 +22,10 @@ for index, line in enumerate(lines):
 
 blocks = {}
 for position, (start, value) in enumerate(starts):
-    if 0x13 <= value <= 0x17:
+    if 0x13 <= value <= 0x1B:
         end = starts[position + 1][0] if position + 1 < len(starts) else len(lines)
         blocks[value] = lines[start:end]
-assert set(blocks) == set(range(0x13, 0x18))
+assert set(blocks) == set(range(0x13, 0x1C))
 
 def normalize(block):
     text = "\n".join(block)
@@ -36,25 +36,47 @@ def normalize(block):
     for name in ("_DAT_00787c28", "_DAT_00787c10", "_DAT_00787d88"):
         text = text.replace(name, "_FIELD_DECAY_")
     text = re.sub(r"\+ (?:10|0xf|0x14);", "+ METER_GAIN;", text)
+    text = text.replace(
+        """*(undefined2 *)(param_1 + 2) = 0;
+          if (*(char *)((int)param_1 + 0x189) == '\\x01') {
+            *(undefined2 *)(param_1 + 2) = 3;
+          }
+          (**(code **)*param_1)();""",
+        "FINISH_STATE();",
+    )
+    text = text.replace(
+        """*(undefined2 *)(param_1 + 2) = 3;
+          (**(code **)*param_1)();""",
+        "FINISH_STATE();",
+    )
     return text
 
 normalized = [normalize(block) for block in blocks.values()]
 assert all(item == normalized[0] for item in normalized[1:])
 
 expected = {
-    0x13: (10, -1.1, 10.0),
-    0x14: (15, -1.5, 20.0),
-    0x15: (20, -1.8, 30.0),
-    0x16: (10, -1.1, 10.0),
-    0x17: (15, -1.5, 20.0),
+    0x13: (10, -1.1, 10.0, 0),
+    0x14: (15, -1.5, 20.0, 0),
+    0x15: (20, -1.8, 30.0, 0),
+    0x16: (10, -1.1, 10.0, 0),
+    0x17: (15, -1.5, 20.0, 0),
+    0x18: (20, -1.8, 30.0, 0),
+    0x19: (10, -1.1, 10.0, 1),
+    0x1A: (15, -1.5, 20.0, 1),
+    0x1B: (20, -1.8, 30.0, 1),
 }
 config_source = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
-for case, (meter_gain, launch_scale, decay) in expected.items():
-    assert len(blocks[case]) == 43
-    assert f"0x{case:02x}, ({meter_gain}, {launch_scale}, {decay})" in config_source
-    print(f"case 0x{case:02x}: meter +{meter_gain}, launch scale {launch_scale}, field0118 decay {decay}")
+for case, (meter_gain, launch_scale, decay, force_standing) in expected.items():
+    assert len(blocks[case]) == (43 if case <= 0x18 else 40)
+    config = f"0x{case:02x}, ({meter_gain}, {launch_scale}, {decay}, {force_standing})"
+    assert config in config_source, (hex(case), config)
+    if force_standing:
+        assert "*(undefined2 *)(param_1 + 2) = 3;" in "\n".join(blocks[case])
+        assert "*(char *)((int)param_1 + 0x189) == '\\x01'" not in "\n".join(blocks[case])
+    else:
+        assert "*(char *)((int)param_1 + 0x189) == '\\x01'" in "\n".join(blocks[case])
+    print(f"case 0x{case:02x}: meter +{meter_gain}, launch {launch_scale}, decay {decay}, force-standing={force_standing}")
 
-# Verify every native constant used by the parameterized source.
 sys.path.insert(0, str(ROOT / "scripts"))
 from common import verify_target, target_bytes
 pe = verify_target()
@@ -85,15 +107,13 @@ for expression in (
     "positionX - 20.0 <= 0.0",
     "639.0 <= positionX + 20.0",
     "outgoingPushbackVelocityX",
-    "field0008 = 0",
-    "if (inputY == 1)",
+    "if (forceStandingState)",
 ):
     assert expression in source, expression
 
 print({
     "native_variants": len(blocks),
-    "native_lines_per_variant": len(blocks[0x13]),
-    "normalized_body_identical": True,
+    "native_body_normalized_identical": True,
     "verified_constants": len(constants),
-    "state_ids": [50, 51, 52, 53, 54],
+    "state_ids": list(range(50, 59)),
 })
