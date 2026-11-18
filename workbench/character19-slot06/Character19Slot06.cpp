@@ -519,24 +519,21 @@ void Character19::Slot06()
         break;
 
     case 84:
-        Slot06UpdateAirborneDashFollowup(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            2, 5, 21,
-            0, 0, 3);
+        {
+#include "Character19Slot06Case54.inc"
+        }
         break;
 
     case 85:
-        Slot06UpdateAirborneDashFollowup(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            2, 13, 20,
-            3, 423, 4);
+        {
+#include "Character19Slot06Case55.inc"
+        }
         break;
 
     case 86:
-        Slot06UpdateAirborneDashFollowup(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            1, 30, 20,
-            1, 425, 3);
+        {
+#include "Character19Slot06Case56.inc"
+        }
         break;
 
     case 87:

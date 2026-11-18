@@ -494,18 +494,12 @@ lines += [
     "        break;",
     "",
 ]
-for case, config in [
-    (0x54, (2, 5, 0x15, 0, 0, 3)),
-    (0x55, (2, 13, 0x14, 3, 0x1a7, 4)),
-    (0x56, (1, 30, 0x14, 1, 0x1a9, 3)),
-]:
-    meter_frame, meter_gain, sound_slot, effect_frame, effect_type, collision_clear_frame = config
+for case in (0x54, 0x55, 0x56):
     lines += labels(case)
     lines += [
-        "        Slot06UpdateAirborneDashFollowup(",
-        "            timing.frameDuration, timing.animationFrameCount, &spawn,",
-        f"            {meter_frame}, {meter_gain}, {sound_slot},",
-        f"            {effect_frame}, {effect_type}, {collision_clear_frame});",
+        "        {",
+        f'#include "Character19Slot06Case{case:02X}.inc"',
+        "        }",
         "        break;",
         "",
     ]

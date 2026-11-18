@@ -62,7 +62,6 @@ assert any(symbol.startswith("?Slot06UpdateKnockbackImpactFinish@Character19@@")
 assert any(symbol.startswith("?Slot06UpdateAirborneHitstunRestore@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDefeatImpactVelocityRestore@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashRecovery@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateAirborneDashFollowup@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAerialLaunchLanding@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashFollowupCancel@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAerialGroundSlam@Character19@@") for symbol in helper_members)
@@ -140,7 +139,7 @@ dispatcher_record = {
         f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
             (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
         ).hexdigest()
-        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x66, 0x70, 0x71, 0x72, 0x73, 0x74)
+        for case in (3, 4, 5, 8, 9, 0x45, 0x46, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x54, 0x55, 0x56, 0x66, 0x70, 0x71, 0x72, 0x73, 0x74)
     },
     "status": "partial-semantic-workbench-not-exact",
 }
@@ -727,30 +726,29 @@ dash_recovery_helper = next(
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-airborne_dash_followup_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateAirborneDashFollowup@")
-)
 (workbench / "airborne-dash-followup-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": {
-        "0x54": {"entry": "0x00671641", "bytes": 675, "state_id": 207, "meter_frame": 2, "meter_gain": 5, "sound": 0x15, "effect_type": 0, "collision_clear_frame": 3},
-        "0x55": {"entry": "0x006718E4", "bytes": 797, "state_id": 208, "meter_frame": 2, "meter_gain": 13, "sound": 0x14, "effect_frame": 3, "effect_type": 0x1A7, "collision_clear_frame": 4},
-        "0x56": {"entry": "0x00671C01", "bytes": 797, "state_id": 209, "meter_frame": 1, "meter_gain": 30, "sound": 0x14, "effect_frame": 1, "effect_type": 0x1A9, "collision_clear_frame": 3},
+        "0x54": {"entry": "0x00671641", "bytes": 675, "state_id": 207, "meter_frame": 2, "meter_gain": 5, "sound": 0x15, "effect": None, "collision_clear_frame": 3},
+        "0x55": {"entry": "0x006718E4", "bytes": 797, "state_id": 208, "meter_frame": 2, "meter_gain": 13, "sound": 0x14, "effect_frame": 3, "effect_type": 0x1a7, "collision_clear_frame": 4},
+        "0x56": {"entry": "0x00671C01", "bytes": 797, "state_id": 209, "meter_frame": 1, "meter_gain": 30, "sound": 0x14, "effect_frame": 1, "effect_type": 0x1a9, "collision_clear_frame": 3},
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": airborne_dash_followup_helper,
-        **helper_members[airborne_dash_followup_helper],
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "inlined_case_sources": {
+            f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
+                (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
+            ).hexdigest()
+            for case in (0x54, 0x55, 0x56)
+        },
         "status": "semantic-workbench-only-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
 }, indent=2) + "\n")
-
 
 aerial_launch_helper = next(
     symbol for symbol in helper_members

@@ -107,56 +107,58 @@ for case, (start, end, effect_type) in {
     ):
         assert expression in text, (hex(case), expression)
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-start = source.index("void Character19::Slot06UpdateAirborneDashFollowup")
-end = source.index("\n}\n", start) + 3
-helper = source[start:end]
-for expression in (
-    "velocityY = velocityY + gravity;",
-    "inputY == -1",
-    "field000a > 0",
-    "field015c < 3",
-    "attackCollisionResult > 1",
-    "airActionCount < 2",
-    "airActionCount = airActionCount + 1;",
-    "field0008 = 14;",
-    "field0008 = 15;",
-    "field0008 = 16;",
-    "inputY == 0",
-    "inputX != 0",
-    "field0008 = 0xa5;",
-    "field0008 = 0xa6;",
-    "attackCollisionResult = 0;",
-    "meter = meter + meterGain;",
-    "pendingContextSoundSlot = (char)soundSlot;",
-    "remainingHitCount = 1;",
-    "spawn->owner = 1;",
-    "spawn->type = effectType;",
-    "spawn->x = (double)(int)positionX;",
-    "spawn->y = (double)(int)positionY;",
-    "spawn->flag0018 = (unsigned char)facing;",
-    "spawn->group = 2;",
-    "spawn->layer = 1;",
-    "EmitLocalEffect(spawn);",
-    "(positionY + velocityY) >= 0.0",
-    "field0008 = 13;",
-    "field000a < attackCollisionClearFrame",
-    "field0008 = 9;",
-    "ResetPose();",
-):
-    assert expression in helper, expression
-assert "repeatFrame" not in helper
-assert "repeatBack" not in helper
-assert "repeatLimit" not in helper
-assert "field3138" not in helper
-
-renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
-assert "(0x54, (2, 5, 0x15, 0, 0, 3))" in renderer
-assert "(0x55, (2, 13, 0x14, 3, 0x1a7, 4))" in renderer
-assert "(0x56, (1, 30, 0x14, 1, 0x1a9, 3))" in renderer
-
+helper_source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
+assert "Slot06UpdateAirborneDashFollowup" not in helper_source
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+for case, values in expected.items():
+    native_size, state, entry, meter_frame, meter_gain, sound, effect_frame, effect_type, clear_frame = values
+    fragment = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        "velocityY = velocityY + gravity;",
+        "inputY == -1",
+        "field000a > 0",
+        "field015c < 3",
+        "attackCollisionResult > 1",
+        "airActionCount < 2",
+        "airActionCount = airActionCount + 1;",
+        "field0008 = 14;",
+        "field0008 = 15;",
+        "field0008 = 16;",
+        "inputY == 0",
+        "inputX != 0",
+        "field0008 = 0xa5;",
+        "field0008 = 0xa6;",
+        "attackCollisionResult = 0;",
+        f"field000a == {meter_frame}",
+        f"meter = meter + {meter_gain};",
+        f"pendingContextSoundSlot = (char){hex(sound)};",
+        "remainingHitCount = 1;",
+        "(positionY + velocityY) >= 0.0",
+        "positionY = 0.0;",
+        "field0008 = 13;",
+        f"field000a < {clear_frame}",
+        "field0008 = 9;",
+        "timing.frameDuration",
+        "timing.animationFrameCount",
+    ):
+        assert expression in fragment, (hex(case), expression)
+    assert "field3138" not in fragment
+    if effect_type:
+        assert f"if ((field000a == {effect_frame}) && (field000c == 0))" in fragment
+        assert f"spawn.type = {hex(effect_type)};" in fragment
+        assert "spawn.owner = 1;" in fragment
+        assert "spawn.x = (double)(int)positionX;" in fragment
+        assert "spawn.y = (double)(int)positionY;" in fragment
+        assert "spawn.flag0018 = (unsigned char)facing;" in fragment
+        assert "spawn.group = 2;" in fragment
+        assert "spawn.layer = 1;" in fragment
+        assert "EmitLocalEffect(&spawn);" in fragment
+    else:
+        assert "spawn.type" not in fragment
+        assert "EmitLocalEffect(&spawn);" not in fragment
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
+
+assert "Slot06UpdateAirborneDashFollowup(" not in dispatcher
 for state in (207, 208, 209):
     assert_selector_case(dispatcher, state)
-assert dispatcher.count("Slot06UpdateAirborneDashFollowup(") == 3
 print({"variants": 3, "state_ids": [207,208,209], "effect_types": [0x1A7,0x1A9]})

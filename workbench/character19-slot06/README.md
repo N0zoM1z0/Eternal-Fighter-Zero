@@ -41,6 +41,7 @@ The paired 0x45/0x46 airborne follow-up states (native 932/931 bytes) are now in
 The six dash-attack variants 0x4D-0x52 are also inlined. Their native bodies total 3,177 bytes and preserve per-case deceleration, cancel gates, meter/sound events, effect-before/after-cancel ordering, and finish-standing transitions. The shared 875-byte Slot06UpdateDashAttack helper is removed; effect-bearing cases use the dispatcher's shared EffectSpawn.
 The sustained dash state 0x53 (435 native bytes) is now inlined as well. Its momentum cutoff, 0.03 deceleration, one-shot frame-3 meter/sound event, and neutral/standing completion remain in the owning case; no dash-attack helper remains out of line.
 The 0x66 combo-impact burst (708 native bytes) is now inlined as well. Its opening context flash, frame-2 local marker, and frame-4 context/local pair preserve their distinct owner values and exact emission order; the shared spawn record remains dispatcher-owned.
+The three 0x54-0x56 airborne dash follow-up states (2,269 native bytes) are now inlined too. Their two cancel routes, per-case meter/sound/effect frames, collision-clear cutoffs, and ground-crossing exits remain specialized in each owning branch; the former 840-byte shared helper is removed.
 
 ## Airborne movement family: selector cases 0x0b-0x11
 
