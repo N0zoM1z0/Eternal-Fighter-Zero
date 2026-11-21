@@ -1217,14 +1217,14 @@ void Character19::Slot07()
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            spawn.x = (double)((int)positionX + (char)facing * -4);
+            spawn.x = (double)((int)positionX - (char)facing * 4);
             spawn.y = (double)((int)positionY + -6);
             spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            spawn.x = (double)((int)positionX + (char)facing * -0xe);
+            spawn.x = (double)((int)positionX - (char)facing * 0xe);
             spawn.y = (double)((int)positionY + -0x1a);
             spawn.group = 0;
             spawn.layer = 1;
@@ -1245,21 +1245,21 @@ void Character19::Slot07()
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f1;
-            spawn.x = (double)((int)positionX + (char)facing * -0x19);
+            spawn.x = (double)((int)positionX - (char)facing * 0x19);
             spawn.y = (double)((int)positionY + -0x50);
             spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f2;
-            spawn.x = (double)((int)positionX + (char)facing * -0x23);
+            spawn.x = (double)((int)positionX - (char)facing * 0x23);
             spawn.y = (double)((int)positionY + -0x2a);
             spawn.group = 0;
             spawn.layer = 1;
             spawn.flag0018 = facing;
             EmitLocalEffect(&spawn);
             spawn.type = 0x1f2;
-            spawn.x = (double)((int)positionX + (char)facing * -0x12);
+            spawn.x = (double)((int)positionX - (char)facing * 0x12);
             spawn.y = (double)((int)positionY + -0x14);
             spawn.group = 0;
             spawn.layer = 1;
@@ -1393,7 +1393,7 @@ void Character19::Slot07()
         }
       }
       ++i;
-      if (0x3f < i) {
+      if (i >= 0x40) {
         i = 0;
       }
     }
