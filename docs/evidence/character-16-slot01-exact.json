@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "complete-function-codegen; selected pinned VC7.1 cold replay against original EFZ.exe",
-  "owner": "Akiko Character16::Slot01 seven-layer gauge, charge and timed-overlay renderer",
+  "owner": "Akiko Character16::Slot01 multi-layer gauge and timer renderer",
   "vtable": {
     "address": "0x00788F58",
     "slot_index": 1,
@@ -16,19 +16,36 @@
     "next_owner": "0x007256B0"
   },
   "source": "src/Character16Render.cpp",
-  "render_layers": [
-    "Pattern 43 full meter background while field3148 > 0",
-    "Pattern 44 meter fill clipped by field3148 / 1000",
-    "Pattern 40 frames field3154, field3158 and field315c, each overridden to frame 10 while field3160 > 0",
-    "Pattern 41 frame 0, overridden to frame 1 while field3160 > 0",
-    "Pattern 42 frame 0 while field3160 > 0, horizontally offset by the x87 conversion of field3160 * 0.001"
-  ],
-  "native_operands": {
-    "MakeSurfaceRect": "0x0040C590",
-    "Video::DrawSurface": "0x00409A90",
-    "x87_integer_conversion": "0x007783B8",
-    "x87_scale_constant": "0x00787FB0 (0.001)",
-    "coff_relocations": 32
+  "behavior": {
+    "charge_gauge": {
+      "condition": "field3148 > 0",
+      "patterns": [
+        43,
+        44
+      ],
+      "fill_width": "field3148 * frame.width / 1000",
+      "player_zero_origin": "x=0x31-frame.u",
+      "other_player_origin": "x=frame.u+0x10f-frame.width",
+      "y": "0x1f-frame.v"
+    },
+    "timed_overlay": {
+      "condition": "field0160 > 0",
+      "patterns": [
+        40,
+        41,
+        42
+      ],
+      "digits": [
+        "field3154",
+        "field3158",
+        "field315c"
+      ],
+      "active_digit_frame": "frame 10 when field3160 > 0",
+      "pattern41_frame": "frame 0 normally, frame 1 while timer > 0",
+      "timer_indicator": "int(field3160 * 0.001) with original x87 conversion path"
+    },
+    "draw_order": "Two gauge layers, then three digit layers, then the pattern41 marker, and finally the timer indicator only while field3160 > 0.",
+    "draw_api": "All seven calls use Video::DrawSurface with MakeSurfaceRect-generated source/destination rectangles, original surface texture indices and colorKey."
   },
   "natural_cpp_without_assembly_or_padding": true,
   "replay": {
