@@ -433,16 +433,15 @@ void Character16::Slot04()
   if (((*(char *)((int)param_1 + 0x18a) == '\x01') || ((*(byte *)(param_1 + 0x6a) & 0x10) != 0)) ||
      ((*(byte *)((int)param_1 + 0x1a9) & 0x10) != 0)) {
     if (*(double *)(param_1 + 10) < _DAT_007872f8) {
-      if ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 >
-           *(short *)(param_1[0x59] + 0x678)) ||
-          ((int)(((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) <= 0) ||
-          ((*(ushort *)(param_1 + 2) >= 200) &&
-           (((int)param_1[0x5a] < 2) || (param_1[0x5a] == 6)))) {
-        return;
+      if (((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 <=
+              *(short *)(param_1[0x59] + 0x678) &&
+          ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) > 0) &&
+          ((((*(ushort *)(param_1 + 2) >= 200 && ((int)param_1[0x5a] >= 2)) &&
+             (param_1[0x5a] != 6)) || (*(ushort *)(param_1 + 2) < 200)))) {
+        ResetPose();
+        ClearBufferedButtons();
+        *(undefined2 *)(param_1 + 2) = 0xcf;
       }
-      ResetPose();
-      ClearBufferedButtons();
-      *(undefined2 *)(param_1 + 2) = 0xcf;
       return;
     }
     if ((((*(char *)((int)param_1 + 0x189) == '\x01') || ((*(byte *)(param_1 + 0x6a) & 4) != 0)) ||
@@ -473,16 +472,15 @@ void Character16::Slot04()
   if (((*(char *)((int)param_1 + 0x18b) == '\x01') || ((*(byte *)(param_1 + 0x6a) & 0x20) != 0)) ||
      ((*(byte *)((int)param_1 + 0x1a9) & 0x20) != 0)) {
     if (*(double *)(param_1 + 10) < _DAT_007872f8) {
-      if ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 >
-           *(short *)(param_1[0x59] + 0x680)) ||
-          ((int)(((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) <= 0) ||
-          ((*(ushort *)(param_1 + 2) >= 200) &&
-           (((int)param_1[0x5a] < 2) || (param_1[0x5a] == 6)))) {
-        return;
+      if (((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 <=
+              *(short *)(param_1[0x59] + 0x680) &&
+          ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) > 0) &&
+          ((((*(ushort *)(param_1 + 2) >= 200 && ((int)param_1[0x5a] >= 2)) &&
+             (param_1[0x5a] != 6)) || (*(ushort *)(param_1 + 2) < 200)))) {
+        ResetPose();
+        ClearBufferedButtons();
+        *(undefined2 *)(param_1 + 2) = 0xd0;
       }
-      ResetPose();
-      ClearBufferedButtons();
-      *(undefined2 *)(param_1 + 2) = 0xd0;
       return;
     }
     if (((((*(char *)((int)param_1 + 0x189) == '\x01') || ((*(byte *)(param_1 + 0x6a) & 4) != 0)) ||
@@ -525,7 +523,38 @@ void Character16::Slot04()
   }
   if (((*(char *)(param_1 + 99) == '\x01') || ((*(byte *)(param_1 + 0x6a) & 0x40) != 0)) ||
      ((*(byte *)((int)param_1 + 0x1a9) & 0x40) != 0)) {
-    if (*(double *)(param_1 + 10) >= _DAT_007872f8) {
+    if (*(double *)(param_1 + 10) < _DAT_007872f8) {
+      if (
+          (*(char *)(param_1 + 0x62) == *(char *)(param_1 + 0x14)) &&
+          (*(char *)((int)param_1 + 0x189) == '\0') &&
+          (*(double *)(param_1 + 8) - *(double *)(*(int *)param_1[0x1e] + 0x20) >
+           _DAT_007875c8) &&
+          (*(double *)(param_1 + 8) - *(double *)(*(int *)param_1[0x1e] + 0x20) <
+           _DAT_007875d0) &&
+          (*(double *)(*(int *)param_1[0x1e] + 0x28) < _DAT_007872f8) &&
+          (((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 <=
+           *(short *)(param_1[0x59] + 0x780)) &&
+          ((*(ushort *)(*(int *)param_1[0x1e] + 8) < 0x32) ||
+           (*(ushort *)(*(int *)param_1[0x1e] + 8) > 0x9c)) &&
+          ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) > 0) &&
+          (((*(ushort *)(param_1 + 2) >= 200 && ((int)param_1[0x5a] >= 2)) &&
+            (param_1[0x5a] != 6)) || (*(ushort *)(param_1 + 2) < 200))) {
+        ResetPose();
+        ClearBufferedButtons();
+        *(undefined2 *)(param_1 + 2) = 0xf0;
+      }
+      else if (((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 <=
+                 *(short *)(param_1[0x59] + 0x688)) &&
+                ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) > 0)) &&
+               (((*(ushort *)(param_1 + 2) >= 200 &&
+                  (((int)param_1[0x5a] >= 2 && (param_1[0x5a] != 6)))) ||
+                 (*(ushort *)(param_1 + 2) < 200)))) {
+        ResetPose();
+        ClearBufferedButtons();
+        *(undefined2 *)(param_1 + 2) = 0xd1;
+      }
+    }
+    else {
       if (((((*(char *)((int)param_1 + 0x189) == '\x01') || ((*(byte *)(param_1 + 0x6a) & 4) != 0))
            || ((*(byte *)((int)param_1 + 0x1a9) & 4) != 0)) &&
           ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 <=
@@ -568,35 +597,7 @@ void Character16::Slot04()
           *(undefined2 *)(param_1 + 2) = 0xdc;
         }
       }
-    }
-    else if (((((((*(char *)(param_1 + 0x62) != *(char *)(param_1 + 0x14)) ||
-                 (*(char *)((int)param_1 + 0x189) != '\0')) ||
-                (*(double *)(param_1 + 8) - *(double *)(*(int *)param_1[0x1e] + 0x20) <=
-                 _DAT_007875c8)) ||
-               ((_DAT_007875d0 <=
-                 *(double *)(param_1 + 8) - *(double *)(*(int *)param_1[0x1e] + 0x20) ||
-                (_DAT_007872f8 <= *(double *)(*(int *)param_1[0x1e] + 0x28))))) ||
-              ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 >
-                *(short *)(param_1[0x59] + 0x780) ||
-               ((0x31 < *(ushort *)(*(int *)param_1[0x1e] + 8) &&
-                (*(ushort *)(*(int *)param_1[0x1e] + 8) < 0x9d)))))) ||
-             ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) == 0)) ||
-            ((((*(ushort *)(param_1 + 2) < 200 || ((int)param_1[0x5a] < 2)) || (param_1[0x5a] == 6))
-             && (*(ushort *)(param_1 + 2) >= 200)))) {
-      if (((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 <=
-            *(short *)(param_1[0x59] + 0x688)) &&
-          ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) > 0)) &&
-         (((*(ushort *)(param_1 + 2) >= 200 && (((int)param_1[0x5a] >= 2 && (param_1[0x5a] != 6)))) ||
-          (*(ushort *)(param_1 + 2) < 200)))) {
-        ResetPose();
-        ClearBufferedButtons();
-        *(undefined2 *)(param_1 + 2) = 0xd1;
-      }
-    }
-    else {
-      ResetPose();
-      ClearBufferedButtons();
-      *(undefined2 *)(param_1 + 2) = 0xf0;
+    
     }
   }
   return;
