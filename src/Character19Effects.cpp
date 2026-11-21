@@ -49,8 +49,8 @@ void Character19::Slot07()
             spawn.type = 0x193;
             spawn.x = (double)((int)effects[i].x + (char)facing * 0x32);
             spawn.y = 0.0;
-            spawn.field0030 = 0;
-            spawn.group = 1;
+            spawn.group = 0;
+            spawn.field0028 = 1;
             spawn.owner = 1;
             spawn.layer = 1;
             spawn.flag0018 = facing;
@@ -104,8 +104,8 @@ void Character19::Slot07()
             spawn.type = 0x193;
             spawn.x = (double)((int)effects[i].x + (char)facing * 0x7d);
             spawn.y = 0.0;
-            spawn.field0030 = 0;
-            spawn.group = 1;
+            spawn.group = 0;
+            spawn.field0028 = 1;
             spawn.owner = 1;
             spawn.layer = 1;
             spawn.flag0018 = facing;
@@ -159,8 +159,8 @@ void Character19::Slot07()
             spawn.type = 0x193;
             spawn.x = (double)((int)effects[i].x + (char)facing * 200);
             spawn.y = 0.0;
-            spawn.field0030 = 0;
-            spawn.group = 1;
+            spawn.group = 0;
+            spawn.field0028 = 1;
             spawn.owner = 1;
             spawn.layer = 1;
             spawn.flag0018 = facing;

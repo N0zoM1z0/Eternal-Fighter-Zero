@@ -2,9 +2,9 @@
   "status": "code-extent-exact-relocation-map-ready",
   "owner": "Character19::Slot07",
   "source": "src/Character19Effects.cpp",
-  "source_sha256": "4c61cc8d38e65bd01f94679af77d11ad87787c2bbf71b82839b43812aa4786f0",
+  "source_sha256": "d121763e80ab146011db595c955fba938b9fd037bfe108c118aa4c7a0fcd16bf",
   "object": "build/match-units/character-19-slot07/Character19Effects.obj",
-  "object_sha256": "e91e72cf017f92b62898463fc1b536b41a6813a53f17e3d43a76ed9ea11a0ec1",
+  "object_sha256": "201153fea13995ace087b4fd74a4baf54aa72f54d9b59f68a56a48137a32a925",
   "target_address": "0x0067CF50",
   "target_code_extent_bytes": 25787,
   "candidate_symbol_bytes": 26107,
@@ -46,9 +46,9 @@
     "900_x_bound": 1
   },
   "instruction_diagnostic": {
-    "mean_case_signature_similarity": 0.996,
+    "mean_case_signature_similarity": 0.9965,
     "median_case_signature_similarity": 1.0,
-    "perfect_case_signature_count": 50,
+    "perfect_case_signature_count": 53,
     "perfect_cases": [
       "0x193",
       "0x194",
@@ -103,7 +103,10 @@
     ],
     "worst_case": "default",
     "worst_case_signature_similarity": 0.8333,
-    "note": "Diagnostic only: register-independent Capstone instruction signatures; absolute operands and branch destinations normalized. Not an exact replay acceptance metric."
+    "note": "Diagnostic only: register-independent objdump instruction signatures; absolute operands and branch destinations normalized. Not an exact replay acceptance metric.",
+    "next_cases": [
+      "0x1f0"
+    ]
   },
   "case_intervals": [
     {
@@ -661,5 +664,15 @@
   ],
   "case_intervals_different": [],
   "exact_replay": "not yet accepted; code prefix, all 55 case boundaries, all 55 jump targets, 100-byte selector table, and all 210 code relocation field offsets match native. Original destinations for all 265 relocations have been reconstructed with 110 consistent symbol bindings; the match-unit manifest still needs explicit bindings and selected exact replay.",
-  "whole_game_cold_replay": "not run; selected unit only"
+  "whole_game_cold_replay": "not run; selected unit only",
+  "native_spawn_payload_repairs": {
+    "cases": [
+      "0x190",
+      "0x191",
+      "0x192"
+    ],
+    "group": 0,
+    "field0028": 1,
+    "note": "Corrected payload fields and native assignment order; all 3 case instruction signatures now match 100%."
+  }
 }
