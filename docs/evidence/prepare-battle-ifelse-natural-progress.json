@@ -14,7 +14,7 @@
     "source": "workbench/prepare-battle/SceneLoading-ifelse.cpp",
     "source_sha256": "0c3fc197de257b15f8c25309459cb895228efbae28ad1b60f8d676703e3f2a02",
     "object": "build/scene-loading/PrepareBattle.ifelse-natural.obj",
-    "object_sha256": "8776186ae983cb75d4b4589c03f601c4cbec5f196e754691eed166d0db5e1870",
+    "object_sha256": "87a49da3dc4666fb50fecbc31e6571143e6ac3fb3925e56f1c330209e49a2a49",
     "owner_bytes": 4031,
     "code_bytes": 3895,
     "owner_size_delta": 2,

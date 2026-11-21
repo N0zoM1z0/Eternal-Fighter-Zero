@@ -120,3 +120,39 @@ yielded 4,090. None met the complete 4,029-byte original owner boundary.
 The current 4,029-byte default-first candidate is unchanged and still differs
 in 87 code bytes / 37 runs; do not grant Exact credit for these variants.
 Experiment receipt: ignored `.analysis/prepare-scale-hypotheses.json`.
+
+## Focused compiler-register experiments, 2026-11-21
+
+The strict-extent default-first source and the condition-first if/else source
+were both rebuilt again from the current pinned compiler. The default-first
+receipt remains 4,029/4,029 bytes with 87 code mismatches in 37 runs. The
+if/else alternative remains 4,031 bytes (+2); its diagnostic-only deletion of
+the candidate `mov ecx, edx` at 0x0076D883 and local-target rebasing still
+leaves 48 code mismatches in 48 runs. The 48-byte figure is not a strict
+comparison or Exact certificate.
+
+The native constructor argument register pairs for the four cases are
+(ECX,EDX), (EAX,ECX), (EDX,EAX), (ECX,EDX); the selected default-first
+candidate emits (EDX,EAX), (ECX,EDX), (EAX,ECX), (EDX,EAX). The allocation
+pointers, constructor call destinations, null paths, result temporaries and
+Context137C stores otherwise line up. The first LoadResources call also
+retains a register shuffle; the second call sequence is exact. This narrows the
+remaining constructor work to the `videoOwner` argument's scratch-register
+selection rather than missing behavior or object layout.
+
+Additional complete-owner experiments were rejected:
+
+- Typing Context::blob as `BattleBackground *` or `void *` and assigning the
+  derived `new` expressions directly retained the 4,029-byte / 87-run result.
+- Explicit `this->videoOwner` retained the same result.
+- A per-case `Video *backgroundVideo` local expanded the owner to 4,094 bytes.
+- On the if/else candidate, `secondarySlotA[0]->LoadResources()` retained the
+  same 4,031-byte extent and the same extra receiver instruction.
+- A ternary scale assignment expanded the owner to 4,036 bytes; inverted
+  predicate and explicit goto scale forms expanded it to 4,031 and 4,033 bytes.
+
+All variants were compiled as isolated normal COFF owners with the same locked
+VC7.1 profile; no variant changed the selected tracked source. The updated
+relocation-bound receipts are in
+`docs/evidence/prepare-battle-natural-cpp-progress-v2.json` and
+`docs/evidence/prepare-battle-ifelse-natural-progress.json`.

@@ -6408,6 +6408,33 @@ confirmed background scale for stage 16 is 0.125, otherwise 1.0; CPU division
 is by 1.5f. Reproduce the current comparison with
 scripts/repo-python workbench/prepare-battle/compare_prepare_battle.py.
 
+### PrepareBattle follow-up compiler experiments (2026-11-21)
+
+A fresh selected rebuild reproduced the 4,029-byte default-first candidate at
+87 code-byte differences / 37 runs with all 115 relocations and both tables
+materialized. The alternate condition-first candidate remains 4,031 bytes; only
+a diagnostic deletion of its two-byte candidate-only `mov ecx, edx` at
+0x76D883, with local target rebasing, yields 48 differences / 48 runs. Neither
+candidate is strict Exact.
+
+The remaining constructor differences are now localized to scratch-register
+selection for the four `videoOwner` constructor arguments. Native pairs are
+(ECX,EDX), (EAX,ECX), (EDX,EAX), (ECX,EDX); default-first candidate pairs are
+(EDX,EAX), (ECX,EDX), (EAX,ECX), (EDX,EAX). Allocation pointers, constructor
+targets, null paths, result temporaries, Context137C stores and both switch
+tables already agree. The first LoadResources call retains a separate receiver
+shuffle; the second call sequence agrees.
+
+A fresh focused sweep also rejected `BattleBackground *` and `void *` Context
+views with direct derived `new` assignment (same 4,029-byte / 87-run result),
+explicit `this->videoOwner` (same), per-case Video* locals (4,094-byte owner),
+slot-index call spelling (same if/else +2-byte result), ternary scale (4,036
+bytes), inverted scale predicate (4,031 bytes), and explicit goto scale (4,033
+bytes). These experiments are recorded in
+`workbench/prepare-battle/README.md`; none changed the tracked candidate.
+Updated scoped comparison receipts are `docs/evidence/prepare-battle-natural-cpp-progress-v2.json`
+and `docs/evidence/prepare-battle-ifelse-natural-progress.json`.
+
 ## Animated background owners
 
 The four animated background owners used by stages 1, 10, 12 and 16 now have
