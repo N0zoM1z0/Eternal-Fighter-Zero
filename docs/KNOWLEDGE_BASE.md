@@ -2934,21 +2934,14 @@ resulting action state. The natural C++ reconstruction is
 src/Character16Action.cpp; SecondarySequence and SecondaryFrame accesses
 use the recovered native structures rather than assembly or padding.
 
-Codegen is still in progress. The current selected VC7.1 COFF build emits
-exactly 10,684 bytes, matching the native owner length. The strict scoped
-comparison still rejects the function: 81 of 92 relocation fields match
-exactly, while 11 tail relocation offsets differ. After relocating the
-candidate against the independently reviewed original targets, the first raw
-byte difference is at function offset 0x247C; 1,204 bytes differ in the tail.
-The unit recipe and all 92 original absolute/relative relocation bindings are
-registered in config/match-units.toml under character-16-slot04, each grounded
-in the original instruction stream. Current source/object hashes and scoped
-comparison status are recorded in docs/evidence/character-16-slot04-progress.json.
-Do not record this function as complete in implemented.csv until the full code
-extent and relocation inventory pass Exact. The reviewed boundary and authored
-source origin are separate facts from strict byte/relocation parity. Continue
-with selected-unit replay only; no whole-game cold replay is needed for this
-owner.
+The pinned VC7.1 /Od /G6 /MT /Gy /W3 selected-unit build passes strict
+COFF comparison: 10,684 / 10,684 bytes, zero differences, and all 92 original
+relocation bindings exact. The full replay receipt and relocation inventory are
+recorded in docs/evidence/character-16-slot04-exact.json; the build recipe and
+original relocation declarations are in config/match-units.toml under
+character-16-slot04. The source is ordinary authored C++ with native x87
+comparisons, state transitions and early returns; it uses neither assembly nor
+padding. Only this selected unit was replayed; no whole-game cold replay was run.
 
 ### Akiko Character16 Slot08: complete 1,310-byte Exact opponent/timer special
 

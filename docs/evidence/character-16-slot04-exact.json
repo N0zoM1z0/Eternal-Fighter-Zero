@@ -1,0 +1,884 @@
+{
+  "schema_version": 1,
+  "authority": "complete-function-codegen; selected pinned VC7.1 COFF replay against original EFZ.exe",
+  "owner": "Akiko Character16::Slot04 10,684-byte action-state and buffered-input dispatcher",
+  "vtable": {
+    "address": "0x00788F58",
+    "slot_index": 4,
+    "entry_address": "0x00788F68",
+    "target": "0x00721DC0"
+  },
+  "native_extent": {
+    "start": "0x00721DC0",
+    "exclusive_end": "0x0072477C",
+    "bytes": 10684,
+    "following_alignment": "0x0072477C:0x0072477F = CC CC CC CC",
+    "next_owner": "Character16::Slot01 at 0x00724780"
+  },
+  "source": "src/Character16Action.cpp",
+  "behavior": {
+    "per_frame_dispatch": "updates buffered-input counters and dispatches action-state transitions from the active secondary sequence and frame",
+    "sequence_gating": "checks sequence durations, frame flags, current state and special-state eligibility",
+    "directional_commands": "reconstructs original x87 directional and opponent-position comparisons as ordinary C++ floating-point expressions",
+    "transitions": "covers the native 0xA5/0xA6, 0xC8-0xD1, 0xDC and 0xF0 action transitions, including pose reset and buffered-button cleanup",
+    "calls": "retains the original ResetPose, FaceOpponent and ClearBufferedButtons call behavior"
+  },
+  "natural_cpp_without_assembly_or_padding": true,
+  "replay": {
+    "result": "exact",
+    "size": 10684,
+    "matched_bytes": 10684,
+    "difference_count": 0,
+    "first_differences": [],
+    "relocations": [
+      {
+        "offset": 135,
+        "target": 7896112,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_00787c30",
+        "evidence": "Original EFZ.exe absolute operand at 0x00721E47 resolves to 0x00787C30.",
+        "addend": 0
+      },
+      {
+        "offset": 305,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00721EF0 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 326,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00721F06 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 432,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00721F70 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 565,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00721FF4 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 645,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722045 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 820,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x007220F3 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 914,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722152 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 1088,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x007221FF resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 1198,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x0072226E resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 1372,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x0072231B resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 1436,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x0072235C resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 1611,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x0072240A resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 1689,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722459 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 1863,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00722506 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 1957,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722565 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 2132,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00722613 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 2196,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722654 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 2370,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00722701 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 2449,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722751 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 2623,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x007227FE resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 2716,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x0072285C resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 2890,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00722909 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 2938,
+        "target": 7896112,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_00787c30",
+        "evidence": "Original EFZ.exe absolute operand at 0x0072293A resolves to 0x00787C30.",
+        "addend": 0
+      },
+      {
+        "offset": 2972,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x0072295C resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 3147,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00722A0A resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 3204,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722A44 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 3378,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00722AF1 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 3420,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722B1C resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 3594,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00722BC9 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 3636,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722BF4 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 3667,
+        "target": 7896112,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_00787c30",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722C13 resolves to 0x00787C30.",
+        "addend": 0
+      },
+      {
+        "offset": 3851,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00722CCA resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 3908,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722D04 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 4082,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00722DB1 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 4124,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722DDC resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 4298,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00722E89 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 4346,
+        "target": 7896112,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_00787c30",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722EBA resolves to 0x00787C30.",
+        "addend": 0
+      },
+      {
+        "offset": 4380,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722EDC resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 4555,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00722F8A resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 4612,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00722FC4 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 4786,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00723071 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 4828,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x0072309C resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 5002,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00723149 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 5050,
+        "target": 7896112,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_00787c30",
+        "evidence": "Original EFZ.exe absolute operand at 0x0072317A resolves to 0x00787C30.",
+        "addend": 0
+      },
+      {
+        "offset": 5134,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x007231CE resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 5259,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x0072324A resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 5366,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x007232B6 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 5490,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00723331 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 5582,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x0072338E resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 5706,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00723409 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 5817,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00723479 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 5961,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00723508 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 6119,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x007235A7 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 6199,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x007235F7 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 6229,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00723615 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 6355,
+        "target": 7896648,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_00787e48",
+        "evidence": "Original EFZ.exe absolute operand at 0x00723693 resolves to 0x00787E48.",
+        "addend": 0
+      },
+      {
+        "offset": 6510,
+        "target": 4253232,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+        "evidence": "Original EFZ.exe CALL at 0x0072372D resolves to ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630.",
+        "addend": 0
+      },
+      {
+        "offset": 6617,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00723799 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 6647,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x007237B7 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 6902,
+        "target": 4253232,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+        "evidence": "Original EFZ.exe CALL at 0x007238B5 resolves to ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630.",
+        "addend": 0
+      },
+      {
+        "offset": 6968,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x007238F8 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 7084,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x0072396C resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 7114,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x0072398A resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 7304,
+        "target": 4253232,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00723A47 resolves to ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630.",
+        "addend": 0
+      },
+      {
+        "offset": 7390,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00723A9E resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 7420,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00723ABC resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 7607,
+        "target": 4253232,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00723B76 resolves to ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630.",
+        "addend": 0
+      },
+      {
+        "offset": 7704,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00723BD8 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 7873,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00723C80 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 8098,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00723D61 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 8323,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00723E42 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 8398,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00723E8E resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 8567,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00723F36 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 8793,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00724018 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 8973,
+        "target": 7896640,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_00787e40",
+        "evidence": "Original EFZ.exe absolute operand at 0x007240CD resolves to 0x00787E40.",
+        "addend": 0
+      },
+      {
+        "offset": 9003,
+        "target": 7896632,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_00787e38",
+        "evidence": "Original EFZ.exe absolute operand at 0x007240EB resolves to 0x00787E38.",
+        "addend": 0
+      },
+      {
+        "offset": 9081,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00724138 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 9257,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x007241E8 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 9332,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00724234 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 9409,
+        "target": 7894472,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007875c8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00724281 resolves to 0x007875C8.",
+        "addend": 0
+      },
+      {
+        "offset": 9443,
+        "target": 7894480,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007875d0",
+        "evidence": "Original EFZ.exe absolute operand at 0x007242A3 resolves to 0x007875D0.",
+        "addend": 0
+      },
+      {
+        "offset": 9471,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x007242BF resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 9685,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00724394 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 9857,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00724440 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 10083,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x00724522 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 10177,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00724581 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 10216,
+        "target": 7896624,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_00787e30",
+        "evidence": "Original EFZ.exe absolute operand at 0x007245A8 resolves to 0x00787E30.",
+        "addend": 0
+      },
+      {
+        "offset": 10250,
+        "target": 7896456,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_00787d88",
+        "evidence": "Original EFZ.exe absolute operand at 0x007245CA resolves to 0x00787D88.",
+        "addend": 0
+      },
+      {
+        "offset": 10320,
+        "target": 7893752,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__DAT_007872f8",
+        "evidence": "Original EFZ.exe absolute operand at 0x00724610 resolves to 0x007872F8.",
+        "addend": 0
+      },
+      {
+        "offset": 10494,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x007246BD resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      },
+      {
+        "offset": 10667,
+        "target": 4256112,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+        "evidence": "Original EFZ.exe CALL at 0x0072476A resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170.",
+        "addend": 0
+      }
+    ],
+    "relocated_sha256": "ef542db26a493d898ff29a43faf78f1b6eceb300073f2f24a9701e052c0724db",
+    "target_extent_sha256": "ef542db26a493d898ff29a43faf78f1b6eceb300073f2f24a9701e052c0724db",
+    "unit": "character-16-slot04",
+    "symbol": "?Slot04@Character16@@UAEXXZ",
+    "target_address": "0x00721DC0",
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "boundary_ledger_sha256": "a0680ce6f09344ea1f4fba3258a197d1a6e0a9f998dfc94a8863f21909a09339",
+    "object_sha256": "15349ee5d6204c1cfbee1913e47216aaacfaa346fb79b6ac74e3d11d9127af05",
+    "source_sha256": "e317ae41d2d3a7e705dac33a38b1b7a9d8b9535d755e250416c87339b97a9ef1",
+    "dependencies": {
+      "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+      "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+      "src/CharacterViews.h": "67719139719eff631f507727d91d308e8d760f955719822297eb9ad87db1fa4b"
+    },
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+    "units_manifest_sha256": "4ad7d5b2c92db4b7a8422bf740ed694a1514356034e65d5530cfe6930f0a75d1",
+    "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+    "unit_sha256": "4c26b10784f881cc0c3ba6d030a6dae3c10b240bbe40a448ec677c902dbe0d3a",
+    "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+    "acceptance_authority": "complete-function-codegen"
+  }
+}
