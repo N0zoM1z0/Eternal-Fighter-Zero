@@ -166259,6 +166259,16 @@ symbol = "?IntegerPower@@YAHHH@Z"
 target = 0x00775830
 evidence = "Original PE 0x0077581C direct call from the 30-byte double-conversion wrapper to IntegerPower at 0x00775830"
 
+[units.character-12-slot02]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character12Commands.cpp"
+dependencies = ["src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-12-slot02/Character12Commands.obj"
+symbol = "?Slot02@Character12@@UAEXXZ"
+target_address = 0x006D2770
+size = 4460
+
 [units.scene10-constructor]
 artifact_kind = "coff"
 profile = "vc71-od-static"

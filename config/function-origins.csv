@@ -464,7 +464,7 @@ address,origin,status,evidence
 0x006D2410,unknown,unreviewed,
 0x006D2420,authored,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-slot08-exact
 0x006D2740,authored,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
-0x006D2770,unknown,unreviewed,
+0x006D2770,authored,reviewed,docs/evidence/character-12-slot02-exact.json
 0x006D38E0,unknown,unreviewed,
 0x006D6E40,unknown,unreviewed,
 0x006D93F0,unknown,unreviewed,

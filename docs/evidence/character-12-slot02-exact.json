@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "authority": "complete-function-codegen; selected pinned VC7.1 cold replay against original EFZ.exe",
+  "owner": "EX Nanase Character12::Slot02 ordered 180-frame input-ring command recognizer",
+  "vtable": {
+    "address": "0x00788DE4",
+    "slot_index": 2,
+    "entry_address": "0x00788DEC",
+    "target": "0x006D2770"
+  },
+  "native_extent": {
+    "start": "0x006D2770",
+    "exclusive_end": "0x006D38DC",
+    "bytes": 4460,
+    "following_alignment": "0x006D38DC..0x006D38DF (four CC bytes)",
+    "next_owner": "0x006D38E0"
+  },
+  "source": "src/Character12Commands.cpp",
+  "behavior": {
+    "default_command": 99,
+    "history_ring_bytes": 180,
+    "ordered_scan_offsets": [
+      90,
+      90,
+      105,
+      120,
+      135,
+      135,
+      135,
+      175,
+      90,
+      90,
+      135,
+      135,
+      135,
+      135
+    ],
+    "recognized_command_bases": [
+      "0x6E",
+      "100",
+      "0x46",
+      "0x14",
+      "10",
+      "0x28",
+      "0x1E",
+      "6",
+      "0x35",
+      "0x34",
+      "0x33",
+      "0x32",
+      "1",
+      "0"
+    ],
+    "notes": "Two meter-gated six-stage directions, five additional directional/special-button patterns, a release-then-press detector, four button-specific down-neutral sequences, and two short direction sequences. The release detector reuses the stage byte, matching native local lifetime and code generation."
+  },
+  "natural_cpp_without_assembly_or_padding": true,
+  "replay": {
+    "result": "exact",
+    "size": 4460,
+    "matched_bytes": 4460,
+    "difference_count": 0,
+    "first_differences": [],
+    "relocations": [],
+    "relocated_sha256": "eabbd6e2d1e45a598329d352842d415149e075f537f92e9be9d0a9b93a088bb9",
+    "target_extent_sha256": "eabbd6e2d1e45a598329d352842d415149e075f537f92e9be9d0a9b93a088bb9",
+    "unit": "character-12-slot02",
+    "symbol": "?Slot02@Character12@@UAEXXZ",
+    "target_address": "0x006D2770",
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "boundary_ledger_sha256": "df7096f732ba3bf3b98dd2dcb74acc157504eb640fa5ac3dd9b28cfe9ce5dad5",
+    "object_sha256": "aecc7996f3e12b0eed73d36860787a5653c85664758d5c23a61c4c3e40d8c912",
+    "source_sha256": "85996a705e85191f7f377e03fa669634aa465938f8445a15fb7ca97a3a520937",
+    "dependencies": {
+      "src/CharacterViews.h": "67719139719eff631f507727d91d308e8d760f955719822297eb9ad87db1fa4b",
+      "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+      "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e"
+    },
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+    "units_manifest_sha256": "99f326e7d5a7a4281266efac14d889670f6e6e17024742e91a45eadae9bff363",
+    "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+    "unit_sha256": "149dcf779644532d6a3a9a1a4dee0e6a9348376b4ea0b74b1544ec164bfee904",
+    "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+    "acceptance_authority": "complete-function-codegen"
+  }
+}

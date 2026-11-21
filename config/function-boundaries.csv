@@ -475,6 +475,7 @@ address,end,size,status,evidence
 0x006CFF60,0x006CFF73,19,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
 0x006D2400,0x006D240B,11,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
 0x006D2740,0x006D276F,47,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-lifecycle-exact
+0x006D2770,0x006D38DC,4460,reviewed,docs/evidence/character-12-slot02-exact.json
 0x006D2420,0x006D2735,789,reviewed,docs/KNOWLEDGE_BASE.md#ex-nanase-character12-slot08-exact
 0x0058D6E0,0x0058DAAF,975,reviewed,docs/KNOWLEDGE_BASE.md#mio-character11-slot01-exact
 0x00657B70,0x00657E6D,765,reviewed,docs/KNOWLEDGE_BASE.md#kano-character20-slot08-exact
