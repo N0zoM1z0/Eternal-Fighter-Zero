@@ -615,8 +615,8 @@ address,origin,status,evidence
 0x00774A10,authored,reviewed,docs/evidence/scene9-result-number-exact.json
 0x00774B00,authored,reviewed,docs/evidence/scene9-prepare-results-exact.json
 0x00775750,authored,reviewed,docs/evidence/scene9-keyboard-exact.json
-0x00775810,unknown,unreviewed,
-0x00775830,unknown,unreviewed,
+0x00775810,authored,reviewed,docs/evidence/scene9-integer-power-exact.json
+0x00775830,authored,reviewed,docs/evidence/scene9-integer-power-exact.json
 0x007758B0,authored,reviewed,docs/evidence/scene10-constructor-exact.json
 0x007759A0,authored,reviewed,docs/evidence/scene10-destructor-exact.json
 0x007759F0,authored,reviewed,docs/evidence/scene10-step-exact.json

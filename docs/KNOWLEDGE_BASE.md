@@ -6024,6 +6024,31 @@ inputs/logs are retained; pinned toolchain --execute smoke checks passed before
 subsequent final comparisons. All native builds are bounded, serial, CPU1/nice10
 and use EFZ's own Wine state. Work records contain only used real values.
 
+### Scene9 decimal digit power helper
+
+The results renderer's decimal place calculation calls two complete natural-C++
+owners in `src/IntegerPower.cpp`:
+
+| Function | Entry | Bytes | Result |
+| --- | --- | ---: | --- |
+| IntegerPowerAsDouble | 0x00775810 | 30 | Exact |
+| IntegerPower | 0x00775830 | 116 | Exact |
+
+`IntegerPower` forms the unsigned magnitude of its signed exponent, then uses
+binary exponentiation: the first bit multiplies by the original base, and each
+subsequent bit squares the base before testing the next bit. The final negative-
+exponent path deliberately uses integer `1 / result`, not a floating reciprocal.
+The 30-byte wrapper calls this helper and converts its integer result to double;
+its single REL32 relocation at wrapper offset 13 binds to 0x00775830. Scene9 uses
+the wrapper for powers of ten when deciding where to draw leading zero glyphs.
+
+Both complete extents were rebuilt independently with pinned VC7.1 `/Od /G6 /MT
+/Gy /W3` and compared against the original PE. The 116-byte leaf matches all 116
+bytes with no relocations; the 30-byte wrapper matches all 30 bytes after the
+single call relocation is materialized. Public proof:
+`docs/evidence/scene9-integer-power-exact.json`. The two extents are independently
+reviewed in the function and boundary ledgers; adjacent CC alignment is excluded.
+
 ## Battle health, HUD and combo display
 
 Canonical target: resources/EFZ.exe, SHA-256

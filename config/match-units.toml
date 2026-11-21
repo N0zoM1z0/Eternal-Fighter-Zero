@@ -166232,6 +166232,33 @@ symbol = "@__security_check_cookie@4"
 target = 0x007781dc
 evidence = "Original PE 0x00775803 Scene9 guard cookie validator call, 187-byte function"
 
+[units.scene9-integer-power]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/IntegerPower.cpp"
+dependencies = []
+object = "build/match-units/scene9-integer-power/IntegerPower.obj"
+symbol = "?IntegerPower@@YAHHH@Z"
+target_address = 0x00775830
+size = 116
+
+[units.scene9-integer-power-double]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/IntegerPower.cpp"
+dependencies = []
+object = "build/match-units/scene9-integer-power-double/IntegerPower.obj"
+symbol = "?IntegerPowerAsDouble@@YANHH@Z"
+target_address = 0x00775810
+size = 30
+
+[[units.scene9-integer-power-double.relocations]]
+offset = 13
+type = "REL32"
+symbol = "?IntegerPower@@YAHHH@Z"
+target = 0x00775830
+evidence = "Original PE 0x0077581C direct call from the 30-byte double-conversion wrapper to IntegerPower at 0x00775830"
+
 [units.scene10-constructor]
 artifact_kind = "coff"
 profile = "vc71-od-static"

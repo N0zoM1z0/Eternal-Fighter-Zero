@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "authority": "complete original-PE byte identity after pinned VC7.1 natural-C++ compilation and explicit wrapper REL32 materialization",
+  "method": "Two selected normal-COFF match units; pinned VC7.1 /Od /G6 /MT /Gy /W3; strict full-extent comparison; no full-project cold replay",
+  "source": "src/IntegerPower.cpp",
+  "owner": "Scene9 results-screen integer exponentiation and integer-to-double wrapper",
+  "native_extents": [
+    {
+      "name": "IntegerPower",
+      "address": "0x00775830",
+      "exclusive_end": "0x007758A4",
+      "bytes": 116
+    },
+    {
+      "name": "IntegerPowerAsDouble",
+      "address": "0x00775810",
+      "exclusive_end": "0x0077582E",
+      "bytes": 30
+    }
+  ],
+  "behavior": "IntegerPower uses unsigned exponent magnitude and exponentiation by squaring, then applies the original integer reciprocal for negative exponents. IntegerPowerAsDouble calls it and converts the integer result to double for Scene9 decimal digit placement.",
+  "natural_cpp_without_asm_or_padding": true,
+  "reports": [
+    {
+      "result": "exact",
+      "size": 116,
+      "matched_bytes": 116,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "6b41233e8f24169b6b72d1169297f00e2c65e2bd323ffe1cc993ab65bb02c48d",
+      "target_extent_sha256": "6b41233e8f24169b6b72d1169297f00e2c65e2bd323ffe1cc993ab65bb02c48d",
+      "unit": "scene9-integer-power",
+      "symbol": "?IntegerPower@@YAHHH@Z",
+      "target_address": "0x00775830",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "46cfbbc0abd55fb18b3122c140c31afa9aa7e57d8700f9be0e467a33b30ce4e6",
+      "object_sha256": "d322d113f57cf72151c6081d0d073ff6562770397c2fbb45001cea8c88336acb",
+      "source_sha256": "a510f350f72428be5b6e9c4eca45ea9be93232b490e58c191559464acfce0eb1",
+      "dependencies": {},
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "0a11850498bd5dafac590df73f21f92ae585e7a96bb537477d07df07b307d914",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "6c4da655e413af03baa29ae8c4d707d45750f22977a34c4f887848bee7e4445a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 30,
+      "matched_bytes": 30,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 7821360,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IntegerPower@@YAHHH@Z",
+          "evidence": "Original PE 0x0077581C direct call from the 30-byte double-conversion wrapper to IntegerPower at 0x00775830",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "6fe429866625643a882b22bbd2a55f48c0cea477833abc7c957e123fe3f23f05",
+      "target_extent_sha256": "6fe429866625643a882b22bbd2a55f48c0cea477833abc7c957e123fe3f23f05",
+      "unit": "scene9-integer-power-double",
+      "symbol": "?IntegerPowerAsDouble@@YANHH@Z",
+      "target_address": "0x00775810",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "46cfbbc0abd55fb18b3122c140c31afa9aa7e57d8700f9be0e467a33b30ce4e6",
+      "object_sha256": "92bbbe5424833096dcadfff35c11038b4b01cc547af2d3fb50f77e15c99076f0",
+      "source_sha256": "a510f350f72428be5b6e9c4eca45ea9be93232b490e58c191559464acfce0eb1",
+      "dependencies": {},
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "0a11850498bd5dafac590df73f21f92ae585e7a96bb537477d07df07b307d914",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "39fde8ba61cd7064737acf063b3b53ec6ad9ef9c1018213f6317d97652ce782a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
