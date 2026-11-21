@@ -1,30 +1,36 @@
 {
-  "status": "in-progress-not-exact",
+  "status": "code-extent-exact-relocations-pending",
   "owner": "Character19::Slot07",
   "source": "src/Character19Effects.cpp",
-  "source_sha256": "bd8c1376bb083328f3545f28055bf73bbe226549f8d74f2d2c9394b1c6185f04",
+  "source_sha256": "4daacde39278eee99712267a8089ef17ccfd019674b90c582213f52cb66d8ba7",
   "object": "build/match-units/character-19-slot07/Character19Effects.obj",
-  "object_sha256": "4bbd28d77e38829d20a05316dc04878c01f8dd811b614df85cfaec760586712f",
+  "object_sha256": "f2e98a95c1591169dca7e086c4d2c7e9ea3ab64bdd75fb7dfb056eee1b5121f3",
   "target_address": "0x0067CF50",
   "target_code_extent_bytes": 25787,
-  "candidate_symbol_bytes": 26105,
-  "candidate_code_prefix_bytes": 25785,
-  "candidate_code_delta_bytes": -2,
+  "candidate_symbol_bytes": 26107,
+  "candidate_code_prefix_bytes": 25787,
+  "candidate_code_delta_bytes": 0,
   "switch_data_bytes": 320,
   "switch_jump_entries": 55,
   "selector_table_bytes": 100,
   "selector_table_matches_original": true,
+  "jump_entry_targets_match_native_case_boundaries": true,
   "coff_relocations": 265,
-  "source_repairs": [
-    "42 tick and 21 frame unsigned-short increments use natural postfix operators",
-    "10 unsigned-short tick decrements use natural postfix decrement",
-    "33 signed casts removed from unsigned-short field0008 comparisons",
-    "all nine native group=2 spawn stores use the byte group field",
-    "six case 0x1b7 spawn payload writes use field0030 rather than palette",
-    "case 0x196 and 0x197 branch order restored",
-    "cases 0x19b through 0x19e lifetime branch order restored",
-    "case 0x1b1 boundary and arm order restored"
-  ],
+  "relocations_by_type": {
+    "REL32": 69,
+    "DIR32": 196
+  },
+  "native_operand_order_repairs": {
+    "tick_vs_frame_duration": 52,
+    "frame_vs_frame_count": 52
+  },
+  "instruction_diagnostic": {
+    "mean_case_signature_similarity": 0.9753,
+    "median_case_signature_similarity": 1.0,
+    "worst_case": "0x1ae",
+    "worst_case_signature_similarity": 0.7818,
+    "note": "Diagnostic only: register-aware Capstone instruction signatures; branch targets normalized. Not an exact replay acceptance metric."
+  },
   "case_intervals": [
     {
       "index": 0,
@@ -356,14 +362,14 @@
       "native_start": 17800,
       "candidate_start": 17800,
       "native_bytes": 286,
-      "candidate_bytes": 285,
-      "delta": -1
+      "candidate_bytes": 286,
+      "delta": 0
     },
     {
       "index": 37,
       "case": "0x1b5",
       "native_start": 18086,
-      "candidate_start": 18085,
+      "candidate_start": 18086,
       "native_bytes": 286,
       "candidate_bytes": 286,
       "delta": 0
@@ -372,7 +378,7 @@
       "index": 38,
       "case": "0x1b6",
       "native_start": 18372,
-      "candidate_start": 18371,
+      "candidate_start": 18372,
       "native_bytes": 286,
       "candidate_bytes": 286,
       "delta": 0
@@ -381,16 +387,16 @@
       "index": 39,
       "case": "0x1b7",
       "native_start": 18658,
-      "candidate_start": 18657,
+      "candidate_start": 18658,
       "native_bytes": 952,
-      "candidate_bytes": 951,
-      "delta": -1
+      "candidate_bytes": 952,
+      "delta": 0
     },
     {
       "index": 40,
       "case": "0x1b8",
       "native_start": 19610,
-      "candidate_start": 19608,
+      "candidate_start": 19610,
       "native_bytes": 214,
       "candidate_bytes": 214,
       "delta": 0
@@ -399,7 +405,7 @@
       "index": 41,
       "case": "0x1b9",
       "native_start": 19824,
-      "candidate_start": 19822,
+      "candidate_start": 19824,
       "native_bytes": 214,
       "candidate_bytes": 214,
       "delta": 0
@@ -408,7 +414,7 @@
       "index": 42,
       "case": "0x1ba",
       "native_start": 20038,
-      "candidate_start": 20036,
+      "candidate_start": 20038,
       "native_bytes": 284,
       "candidate_bytes": 284,
       "delta": 0
@@ -417,7 +423,7 @@
       "index": 43,
       "case": "0x1bb",
       "native_start": 20322,
-      "candidate_start": 20320,
+      "candidate_start": 20322,
       "native_bytes": 284,
       "candidate_bytes": 284,
       "delta": 0
@@ -426,7 +432,7 @@
       "index": 44,
       "case": "0x1bc",
       "native_start": 20606,
-      "candidate_start": 20604,
+      "candidate_start": 20606,
       "native_bytes": 284,
       "candidate_bytes": 284,
       "delta": 0
@@ -435,7 +441,7 @@
       "index": 45,
       "case": "0x1bd",
       "native_start": 20890,
-      "candidate_start": 20888,
+      "candidate_start": 20890,
       "native_bytes": 284,
       "candidate_bytes": 284,
       "delta": 0
@@ -444,7 +450,7 @@
       "index": 46,
       "case": "0x1be",
       "native_start": 21174,
-      "candidate_start": 21172,
+      "candidate_start": 21174,
       "native_bytes": 284,
       "candidate_bytes": 284,
       "delta": 0
@@ -453,7 +459,7 @@
       "index": 47,
       "case": "0x1bf",
       "native_start": 21458,
-      "candidate_start": 21456,
+      "candidate_start": 21458,
       "native_bytes": 284,
       "candidate_bytes": 284,
       "delta": 0
@@ -462,7 +468,7 @@
       "index": 48,
       "case": "0x1c0",
       "native_start": 21742,
-      "candidate_start": 21740,
+      "candidate_start": 21742,
       "native_bytes": 214,
       "candidate_bytes": 214,
       "delta": 0
@@ -471,7 +477,7 @@
       "index": 49,
       "case": "0x1ef",
       "native_start": 21956,
-      "candidate_start": 21954,
+      "candidate_start": 21956,
       "native_bytes": 296,
       "candidate_bytes": 296,
       "delta": 0
@@ -480,7 +486,7 @@
       "index": 50,
       "case": "0x1f0",
       "native_start": 22252,
-      "candidate_start": 22250,
+      "candidate_start": 22252,
       "native_bytes": 1401,
       "candidate_bytes": 1401,
       "delta": 0
@@ -489,7 +495,7 @@
       "index": 51,
       "case": "0x1f1",
       "native_start": 23653,
-      "candidate_start": 23651,
+      "candidate_start": 23653,
       "native_bytes": 924,
       "candidate_bytes": 924,
       "delta": 0
@@ -498,7 +504,7 @@
       "index": 52,
       "case": "0x1f2",
       "native_start": 24577,
-      "candidate_start": 24575,
+      "candidate_start": 24577,
       "native_bytes": 918,
       "candidate_bytes": 918,
       "delta": 0
@@ -507,7 +513,7 @@
       "index": 53,
       "case": "499",
       "native_start": 25495,
-      "candidate_start": 25493,
+      "candidate_start": 25495,
       "native_bytes": 259,
       "candidate_bytes": 259,
       "delta": 0
@@ -516,7 +522,7 @@
       "index": 54,
       "case": "default",
       "native_start": 25754,
-      "candidate_start": 25752,
+      "candidate_start": 25754,
       "native_bytes": 33,
       "candidate_bytes": 33,
       "delta": 0
@@ -559,8 +565,10 @@
     "0x1b1",
     "0x1b2",
     "0x1b3",
+    "0x1b4",
     "0x1b5",
     "0x1b6",
+    "0x1b7",
     "0x1b8",
     "0x1b9",
     "0x1ba",
@@ -577,16 +585,7 @@
     "499",
     "default"
   ],
-  "case_intervals_different": [
-    [
-      "0x1b4",
-      -1
-    ],
-    [
-      "0x1b7",
-      -1
-    ]
-  ],
-  "exact_replay": "not yet accepted; 53 case intervals match length but 0x1b4 and 0x1b7 each remain one byte short; code prefix is 2 bytes shorter and 265 relocations remain unbound",
+  "case_intervals_different": [],
+  "exact_replay": "not yet accepted; code prefix, all 55 case boundaries, 55 jump targets and 100-byte selector table now match native. All 265 original COFF relocation destinations still require explicit binding and complete replay.",
   "whole_game_cold_replay": "not run; selected unit only"
 }

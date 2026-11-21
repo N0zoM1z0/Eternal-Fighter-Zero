@@ -6,7 +6,7 @@ The production source in src/Character19Effects.cpp is a complete natural-C++ po
 
 ## Current reconstruction state
 
-The selected VC7.1 /Od /G6 /MT /Gy /W3 compile succeeds. The current COFF symbol is 26,105 bytes, including 320 bytes of compiler-emitted switch data (55 four-byte jump entries plus a 100-byte selector table) after the native code owner. The natural-C++ code prefix is 25,785 bytes versus 25,787 native bytes: 2 bytes shorter, not Exact. The 100-byte selector table matches the native table byte-for-byte; all 265 COFF relocations still require original-target binding and verification. The appended switch data must not be mistaken for part of the native function extent.
+The selected VC7.1 /Od /G6 /MT /Gy /W3 compile succeeds. The COFF symbol is now exactly 26,107 bytes: 25,787 bytes of native code followed by 320 bytes of compiler-emitted switch data (55 four-byte jump entries plus a 100-byte selector table). All 55 candidate switch entries now resolve to the corresponding native case boundaries, and the 100-byte selector table matches byte-for-byte. The source code prefix and every case interval have the exact native length. The 265 COFF relocations (69 REL32, 196 DIR32) still require original-target binding and full replay; do not call this Exact until that replay passes.
 
 The source-level progress includes:
 
@@ -14,12 +14,13 @@ The source-level progress includes:
 - Corrected all ten case-0x1f0 spawn pairs to use the character's positionX/positionY, not the active effect slot's x/y.
 - Corrected the case-0x1f0 group writes and all nine other native group=2 stores to the byte group field.
 - Corrected six case-0x1b7 spawn payload writes from palette to field0030.
-- Removed 33 incorrect signed casts from the unsigned-short field0008 comparisons.
-- Rewrote 42 tick and 21 frame increments and 10 tick decrements as natural 16-bit postfix operators. VC7.1 now emits the native-width MOV/ADD/SUB forms.
-- Reordered case 0x196 and 0x197 to match native branch-arm order and thresholds.
+- Removed 33 incorrect signed casts from unsigned-short field0008 comparisons.
+- Rewrote 42 tick and 21 frame increments plus 10 tick decrements as natural 16-bit postfix operators.
+- Reordered case 0x196 and 0x197 to match native branch order and thresholds.
 - Recovered the outer lifetime branch order for cases 0x19b through 0x19e while preserving floating-point unordered-value behavior.
 - Reordered case 0x1b1's boundary and removal arm to match the native path.
+- Rewrote all 52 tick/frame-duration and 52 frame/frame-count comparisons with the native operand order (tick >= frameDuration, frame >= frameCount). This is semantically equivalent C++, but VC7.1 now emits the native branch polarity and register assignment.
 
-The current candidate has 53 of 55 switch intervals at their exact native lengths. Only case 0x1b4 and 0x1b7 remain one byte short each, leaving the code prefix two bytes shorter overall. The complete per-case boundary table, source/object hashes and current status are recorded in progress.json. The 320-byte appended compiler switch data consists of 55 relocatable jump entries and a 100-byte selector table; the selector table is already byte-exact. This is still not Exact: original code bytes and all 265 relocations must be independently bound and verified. No ASM, padding, or byte patching is being used.
+The current code prefix is 25,787/25,787 bytes. All 55 switch intervals and all 55 jump-table destinations match the native case boundaries; the selector table is 100/100 exact. A register-aware instruction-signature diagnostic reports 97.53% mean similarity and 100% median similarity across the 55 intervals; the largest remaining divergence is case 0x1ae. This diagnostic is not an acceptance metric. Per-case boundaries, source/object hashes and the current state are recorded in progress.json. The next gate is explicit binding of all 265 original relocations and the selected exact replay. No ASM, padding, or byte patching is used.
 
 Character15::Slot07 and Character23::Slot07 are structural references only; their case behavior is not copied as Kanna behavior.
