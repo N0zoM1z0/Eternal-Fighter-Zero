@@ -1,0 +1,65 @@
+{
+  "status": "reviewed-function-boundary-only-not-exact-codegen",
+  "owner": "Akiko Character16::Slot04",
+  "vtable": {
+    "address": "0x00788F58",
+    "slot_index": 4,
+    "entry_address": "0x00788F68",
+    "target": "0x00721DC0"
+  },
+  "native_extent": {
+    "start": "0x00721DC0",
+    "end_exclusive": "0x0072477C",
+    "end_inclusive": "0x0072477B",
+    "size": 10684,
+    "last_instructions": [
+      {
+        "address": "0x00724767",
+        "bytes": "8b4dfc",
+        "instruction": "mov ecx,[ebp-4]"
+      },
+      {
+        "address": "0x0072476A",
+        "bytes": "e801aaceff",
+        "instruction": "call 0x0040F170"
+      },
+      {
+        "address": "0x0072476F",
+        "bytes": "8b45fc",
+        "instruction": "mov eax,[ebp-4]"
+      },
+      {
+        "address": "0x00724772",
+        "bytes": "66c74008cb00",
+        "instruction": "mov word ptr [eax+8],0xcb"
+      },
+      {
+        "address": "0x00724778",
+        "bytes": "8be5",
+        "instruction": "mov esp,ebp"
+      },
+      {
+        "address": "0x0072477A",
+        "bytes": "5d",
+        "instruction": "pop ebp"
+      },
+      {
+        "address": "0x0072477B",
+        "bytes": "c3",
+        "instruction": "ret"
+      }
+    ],
+    "sha256": "ef542db26a493d898ff29a43faf78f1b6eceb300073f2f24a9701e052c0724db"
+  },
+  "adjacent_layout": {
+    "alignment_start": "0x0072477C",
+    "alignment_end_exclusive": "0x00724780",
+    "alignment_bytes": "cccccccc",
+    "next_owner": "Character16::Slot01",
+    "next_owner_start": "0x00724780"
+  },
+  "original_image_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "source": "src/Character16Action.cpp",
+  "source_status": "natural C++ reconstruction; strict whole-function codegen is still in progress",
+  "not_an_exact_codegen_certificate": true
+}

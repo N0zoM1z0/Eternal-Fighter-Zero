@@ -2916,6 +2916,30 @@ relocation target were independently recorded. Proof:
 `docs/evidence/character-16-slot01-exact.json`. This is complete-function
 codegen Exact, not whole-game linkage or runtime parity.
 
+### Akiko Character16::Slot04: 10,684-byte action-state dispatcher
+
+The Akiko Character16 vtable at 0x00788F58, slot 4 entry
+0x00788F68, selects Character16::Slot04 at 0x00721DC0. Its reviewed
+native extent is [0x00721DC0,0x0072477C), 10,684 bytes. The final
+instruction is the RET at 0x0072477B; four CC alignment bytes follow,
+and Character16::Slot01 begins at 0x00724780. Boundary evidence:
+docs/evidence/character-16-slot04-boundary-review.json.
+
+The function is the large per-frame action-state dispatcher. It updates
+buffered-input counters, checks the active sequence/frame flags and sequence
+durations, evaluates state-specific action transitions, handles directional
+command branches using the original x87 floating-point comparisons, calls
+ClearBufferedButtons and FaceOpponent at transition points, and selects the
+resulting action state. The natural C++ reconstruction is
+src/Character16Action.cpp; SecondarySequence and SecondaryFrame accesses
+use the recovered native structures rather than assembly or padding.
+
+Codegen is still in progress. The current VC7.1 experiment is not an Exact
+match and must not be recorded in implemented.csv as complete. The reviewed
+boundary and authored source origin are separate facts from strict byte/relocation
+parity. Continue with selected-unit replay only; no whole-game cold replay is
+needed for this owner.
+
 ### Akiko Character16 Slot08: complete 1,310-byte Exact opponent/timer special
 
 Original Akiko vtable `0x00788F78` points to the complete
