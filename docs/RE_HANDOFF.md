@@ -1638,6 +1638,18 @@ Ghidra body size 25,787 bytes, selected by vtable offset `+0x1c`). The adjacent
 `Character19::Slot06` at `0x00667570` is a smaller follow-up candidate; review
 its boundary and code before treating the name/extent as final.
 
+The Slot06 workbench now covers all 310 native state IDs through 118 selector
+cases. The latest pass inlined the six horizontal-recovery variants (selectors
+0x3a-0x3f) into independent natural-C++ case bodies, removed their shared
+out-of-line helper, and restored 16-bit counter increments and native comparison
+operand order. A targeted instruction-shape comparison matches all six native
+case sequences (105/105 instructions for 0x3a-0x3c; 99/99 for 0x3d-0x3f).
+The partial dispatcher currently builds as a 64,421-byte COFF symbol against
+the 58,363-byte native code extent; it is not Exact. The remaining 90-100 bytes
+per horizontal case are primarily explained by the candidate's [ebp-0x84]
+this-pointer spill versus the native [ebp-0x54], so the next Slot06 codegen
+target is recovering the native stack frame before promoting this owner.
+
 ## Kanna (Character19) CPU Slot07 — natural C++ port started — 2026-11-18
 
 Character19::Slot07 at 0x0067CF50 is now a complete natural C++ source port in src/Character19Effects.cpp. The native code extent is [0x0067CF50, 0x0068340B), 25,787 bytes, followed by 320 bytes of compiler-emitted switch data [0x0068340B, 0x0068354B). The complete reviewed COFF contribution is [0x0067CF50, 0x0068354B), 26,107 bytes, selected by the Character19 vtable entry at 0x00788CE0 + 0x1c. The source covers all 54 native effect-type cases, the 64-entry local-effect ring, frame/lifetime progression, local effect emission/removal, random motion, camera-bound spawning, and the Kanna state/sound branches.

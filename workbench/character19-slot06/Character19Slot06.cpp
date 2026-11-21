@@ -327,39 +327,204 @@ void Character19::Slot06()
         break;
 
     case 58:
-        Slot06UpdateHorizontalRecovery(
-            timing.frameDuration, timing.animationFrameCount,
-            10, -1.5, 0);
+        if ((field000a == 0) && (field000c == 0)) {
+            dashMomentumFlag = 0;
+            meter = meter + 10;
+            velocityX = -1.5;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX = velocityX + 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
         break;
 
     case 59:
-        Slot06UpdateHorizontalRecovery(
-            timing.frameDuration, timing.animationFrameCount,
-            15, -1.8, 0);
+        if ((field000a == 0) && (field000c == 0)) {
+            dashMomentumFlag = 0;
+            meter = meter + 15;
+            velocityX = -1.8;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX = velocityX + 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
         break;
 
     case 60:
-        Slot06UpdateHorizontalRecovery(
-            timing.frameDuration, timing.animationFrameCount,
-            20, -2.3, 0);
+        if ((field000a == 0) && (field000c == 0)) {
+            dashMomentumFlag = 0;
+            meter = meter + 20;
+            velocityX = -2.3;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX = velocityX + 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
         break;
 
     case 61:
-        Slot06UpdateHorizontalRecovery(
-            timing.frameDuration, timing.animationFrameCount,
-            10, -1.5, 1);
+        if ((field000a == 0) && (field000c == 0)) {
+            dashMomentumFlag = 0;
+            meter = meter + 10;
+            velocityX = -1.5;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX = velocityX + 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
         break;
 
     case 62:
-        Slot06UpdateHorizontalRecovery(
-            timing.frameDuration, timing.animationFrameCount,
-            15, -1.8, 1);
+        if ((field000a == 0) && (field000c == 0)) {
+            dashMomentumFlag = 0;
+            meter = meter + 15;
+            velocityX = -1.8;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX = velocityX + 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
         break;
 
     case 63:
-        Slot06UpdateHorizontalRecovery(
-            timing.frameDuration, timing.animationFrameCount,
-            20, -2.3, 1);
+        if ((field000a == 0) && (field000c == 0)) {
+            dashMomentumFlag = 0;
+            meter = meter + 20;
+            velocityX = -2.3;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX = velocityX + 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
         break;
 
     case 39:

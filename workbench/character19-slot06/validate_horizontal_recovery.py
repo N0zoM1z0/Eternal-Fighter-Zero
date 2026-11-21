@@ -76,29 +76,37 @@ for address,expected_value in constants.items():
     actual=struct.unpack("<d",target_bytes(pe,address,8))[0]
     assert actual==expected_value,(hex(address),actual,expected_value)
 
-source=(ROOT/"workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
-    "void Character19::Slot06UpdateHorizontalRecovery",
-    "short meterGain",
-    "double initialVelocityX",
-    "int forceStandingState",
-    "dashMomentumFlag = 0;",
-    "meter = meter + meterGain;",
-    "velocityX = initialVelocityX;",
-    "velocityY = 0.0;",
-    "positionY = 0.0;",
-    "velocityX = velocityX + 0.06;",
-    "if (velocityX > 0.0)",
-    "positionX - 20.0 <= 0.0",
-    "639.0 <= positionX + 20.0",
-    "outgoingPushbackVelocityX = velocityX;",
-    "if (field000a == frameCount)",
-    "if (forceStandingState || (inputY == 1))",
-    "field0008 = 3;",
-    "if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0))",
-    "if (inputY == 1)",
-):
-    assert expression in source,expression
+source=(ROOT/"workbench/character19-slot06/Character19Slot06.cpp").read_text()
+assert "Slot06UpdateHorizontalRecovery(" not in source
+case_blocks={}
+case_matches=list(re.finditer(r"^\s*case\s+(\d+)\s*:",source,re.M))
+for index,match in enumerate(case_matches):
+    case=int(match.group(1))
+    end=case_matches[index+1].start() if index+1<len(case_matches) else len(source)
+    case_blocks[case]=source[match.start():end]
+for case,(native_size,state,meter_gain,initial_velocity,force_standing) in expected.items():
+    block=case_blocks[case]
+    assert "if ((field000a == 0) && (field000c == 0))" in block
+    assert "dashMomentumFlag = 0;" in block
+    assert f"meter = meter + {meter_gain};" in block
+    assert f"velocityX = {initial_velocity};" in block
+    assert "velocityY = 0.0;" in block
+    assert "positionY = 0.0;" in block
+    assert "velocityX = velocityX + 0.06;" in block
+    assert "if (velocityX > 0.0)" in block
+    assert "positionX - 20.0 <= 0.0" in block
+    assert "639.0 <= positionX + 20.0" in block
+    assert "outgoingPushbackVelocityX = velocityX;" in block
+    assert "++field000c;" in block and "++field000a;" in block
+    assert "field000c >= timing.frameDuration" in block
+    assert "field000a >= timing.animationFrameCount" in block
+    assert "FaceOpponent();" in block and "ResetPose();" in block
+    if force_standing:
+        assert "field0008 = 3;" in block
+        assert "field0008 = 0;" not in block
+    else:
+        assert "field0008 = 0;" in block
+        assert "if (inputY == 1)" in block
 
 analog=(ROOT/"src/Character23State.cpp").read_text()
 for expression in (

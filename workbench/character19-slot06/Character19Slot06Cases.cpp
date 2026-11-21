@@ -273,51 +273,6 @@ void Character19::Slot06UpdateDefeatWait(
 
 
 // Shared horizontal recovery/braking for native selectors 0x3a-0x3d.
-void Character19::Slot06UpdateHorizontalRecovery(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    short meterGain,
-    double initialVelocityX,
-    int forceStandingState)
-{
-    if ((field000a == 0) && (field000c == 0)) {
-        dashMomentumFlag = 0;
-        meter = meter + meterGain;
-        velocityX = initialVelocityX;
-        velocityY = 0.0;
-        positionY = 0.0;
-    }
-
-    velocityY = 0.0;
-    velocityX = velocityX + 0.06;
-    if (velocityX > 0.0) {
-        velocityX = 0.0;
-    }
-
-    if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
-        outgoingPushbackVelocityX = velocityX;
-    } else {
-        outgoingPushbackVelocityX = 0.0;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (field000a == frameCount) {
-            FaceOpponent();
-        }
-        if (frameCount <= field000a) {
-            field0008 = 0;
-            if (forceStandingState || (inputY == 1)) {
-                field0008 = 3;
-            }
-            ResetPose();
-        }
-    }
-}
-
-
 // Airborne knockback/impact variants for native selectors 0x40-0x42.
 void Character19::Slot06UpdateAirborneKnockdown(
     unsigned short frameDuration,
