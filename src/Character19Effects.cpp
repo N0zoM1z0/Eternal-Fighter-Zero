@@ -233,7 +233,13 @@ void Character19::Slot07()
             effects[i].vy = 0.0;
             field3154[i] = field3154[i] + 1;
           }
-          if (effects[i].field0080 < 2) {
+          if (effects[i].field0080 >= 2) {
+            effects[i].type = 0x199;
+            effects[i].field0084 = 0;
+            effects[i].frame = 0;
+            effects[i].tick = 0;
+          }
+          else {
             if ((effects[i].x < -100.0) ||
                (0x2e4 < effects[i].frame)) {
               RemoveLocalEffect((short)i);
@@ -252,12 +258,6 @@ void Character19::Slot07()
               }
             }
           }
-          else {
-            effects[i].type = 0x199;
-            effects[i].field0084 = 0;
-            effects[i].frame = 0;
-            effects[i].tick = 0;
-          }
           break;
         case 0x197:
           if (((effects[i].frame == 0) &&
@@ -266,8 +266,12 @@ void Character19::Slot07()
             effects[i].vx = 3.0;
             effects[i].vy = 0.0;
           }
-          if ((effects[i].field0080 < 2) &&
-             ((field0008 < 0x32 || (0x95 < field0008)))) {
+          if ((effects[i].field0080 >= 2) ||
+             ((0x31 < field0008) && (field0008 < 0x96))) {
+            effects[i].type = 0x19a;
+            effects[i].field0084 = 0;
+          }
+          else {
             effects[i].vx =
                  effects[i].vx - 0.015;
             if (effects[i].vx < 0.4) {
@@ -281,10 +285,6 @@ void Character19::Slot07()
                 RemoveLocalEffect((short)i);
               }
             }
-          }
-          else {
-            effects[i].type = 0x19a;
-            effects[i].field0084 = 0;
           }
           break;
         case 0x198:
@@ -332,9 +332,14 @@ void Character19::Slot07()
           }
           effects[i].vy =
                effects[i].vy + 0.05;
-          if (((effects[i].y < 0.0) ||
+          if (!(((effects[i].y < 0.0) ||
               (effects[i].vy <= 0.0)) ||
-             (effects[i].frame != 1)) {
+             (effects[i].frame != 1))) {
+
+            RemoveLocalEffect((short)i);
+                    }
+          else {
+
             if (((0.0 <= effects[i].y) ||
                 (1 < effects[i].field0080)) &&
                (effects[i].frame == 0)) {
@@ -360,10 +365,7 @@ void Character19::Slot07()
                 RemoveLocalEffect((short)i);
               }
             }
-          }
-          else {
-            RemoveLocalEffect((short)i);
-          }
+                    }
           break;
         case 0x19c:
           if ((effects[i].frame == 0) &&
@@ -398,9 +400,14 @@ void Character19::Slot07()
           }
           effects[i].vy =
                effects[i].vy + 0.05;
-          if (((effects[i].y < 0.0) ||
+          if (!(((effects[i].y < 0.0) ||
               (effects[i].vy <= 0.0)) ||
-             (effects[i].frame != 1)) {
+             (effects[i].frame != 1))) {
+
+            RemoveLocalEffect((short)i);
+                    }
+          else {
+
             if (((0.0 <= effects[i].y) ||
                 (1 < effects[i].field0080)) &&
                (effects[i].frame == 0)) {
@@ -426,10 +433,7 @@ void Character19::Slot07()
                 RemoveLocalEffect((short)i);
               }
             }
-          }
-          else {
-            RemoveLocalEffect((short)i);
-          }
+                    }
           break;
         case 0x19e:
           if ((effects[i].frame == 0) &&

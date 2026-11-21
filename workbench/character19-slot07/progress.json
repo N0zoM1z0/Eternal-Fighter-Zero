@@ -1,0 +1,648 @@
+{
+  "status": "in-progress-not-exact",
+  "owner": "Character19::Slot07",
+  "source": "src/Character19Effects.cpp",
+  "source_sha256": "dda9b3c9c2a7058a26244ad1d1a7de22eff338992ed722203257b4b2f7c6d8c9",
+  "object": "build/match-units/character-19-slot07/Character19Effects.obj",
+  "object_sha256": "ff94a08c7fdd82fe462bd44a1e7c657ecc8f8b258acf9887aa946acc784d6bfb",
+  "target_address": "0x0067CF50",
+  "target_code_extent_bytes": 25787,
+  "candidate_symbol_bytes": 26113,
+  "candidate_code_prefix_bytes": 25793,
+  "candidate_code_delta_bytes": 6,
+  "switch_data_bytes": 320,
+  "switch_jump_entries": 55,
+  "selector_table_bytes": 100,
+  "selector_table_matches_original": true,
+  "coff_relocations": 265,
+  "native_width_increment_rewrites": {
+    "tick_postincrements": 42,
+    "frame_postincrements": 21,
+    "total": 63,
+    "code_growth_bytes": 63
+  },
+  "branch_layout_repairs": {
+    "case_0x196": "inverted state>=2 arm before the movement path; interval now exact",
+    "case_0x197": "restored <=0x31 and >=0x96 bounds and native arm order; interval now exact",
+    "case_0x19b": "inverted outer effect branch using logical negation; interval reduced by one byte",
+    "case_0x19d": "inverted outer effect branch using logical negation; interval reduced by one byte"
+  },
+  "case_intervals": [
+    {
+      "index": 0,
+      "case": "400",
+      "native_start": 354,
+      "candidate_start": 354,
+      "native_bytes": 989,
+      "candidate_bytes": 989,
+      "delta": 0
+    },
+    {
+      "index": 1,
+      "case": "0x191",
+      "native_start": 1343,
+      "candidate_start": 1343,
+      "native_bytes": 990,
+      "candidate_bytes": 990,
+      "delta": 0
+    },
+    {
+      "index": 2,
+      "case": "0x192",
+      "native_start": 2333,
+      "candidate_start": 2333,
+      "native_bytes": 993,
+      "candidate_bytes": 993,
+      "delta": 0
+    },
+    {
+      "index": 3,
+      "case": "0x193",
+      "native_start": 3326,
+      "candidate_start": 3326,
+      "native_bytes": 306,
+      "candidate_bytes": 306,
+      "delta": 0
+    },
+    {
+      "index": 4,
+      "case": "0x194",
+      "native_start": 3632,
+      "candidate_start": 3632,
+      "native_bytes": 214,
+      "candidate_bytes": 214,
+      "delta": 0
+    },
+    {
+      "index": 5,
+      "case": "0x195",
+      "native_start": 3846,
+      "candidate_start": 3846,
+      "native_bytes": 214,
+      "candidate_bytes": 214,
+      "delta": 0
+    },
+    {
+      "index": 6,
+      "case": "0x196",
+      "native_start": 4060,
+      "candidate_start": 4060,
+      "native_bytes": 653,
+      "candidate_bytes": 653,
+      "delta": 0
+    },
+    {
+      "index": 7,
+      "case": "0x197",
+      "native_start": 4713,
+      "candidate_start": 4713,
+      "native_bytes": 522,
+      "candidate_bytes": 522,
+      "delta": 0
+    },
+    {
+      "index": 8,
+      "case": "0x198",
+      "native_start": 5235,
+      "candidate_start": 5235,
+      "native_bytes": 257,
+      "candidate_bytes": 257,
+      "delta": 0
+    },
+    {
+      "index": 9,
+      "case": "0x199",
+      "native_start": 5492,
+      "candidate_start": 5492,
+      "native_bytes": 214,
+      "candidate_bytes": 214,
+      "delta": 0
+    },
+    {
+      "index": 10,
+      "case": "0x19a",
+      "native_start": 5706,
+      "candidate_start": 5706,
+      "native_bytes": 214,
+      "candidate_bytes": 214,
+      "delta": 0
+    },
+    {
+      "index": 11,
+      "case": "0x19b",
+      "native_start": 5920,
+      "candidate_start": 5920,
+      "native_bytes": 837,
+      "candidate_bytes": 840,
+      "delta": 3
+    },
+    {
+      "index": 12,
+      "case": "0x19c",
+      "native_start": 6757,
+      "candidate_start": 6760,
+      "native_bytes": 468,
+      "candidate_bytes": 469,
+      "delta": 1
+    },
+    {
+      "index": 13,
+      "case": "0x19d",
+      "native_start": 7225,
+      "candidate_start": 7229,
+      "native_bytes": 865,
+      "candidate_bytes": 868,
+      "delta": 3
+    },
+    {
+      "index": 14,
+      "case": "0x19e",
+      "native_start": 8090,
+      "candidate_start": 8097,
+      "native_bytes": 474,
+      "candidate_bytes": 475,
+      "delta": 1
+    },
+    {
+      "index": 15,
+      "case": "0x19f",
+      "native_start": 8564,
+      "candidate_start": 8572,
+      "native_bytes": 561,
+      "candidate_bytes": 561,
+      "delta": 0
+    },
+    {
+      "index": 16,
+      "case": "0x1a0",
+      "native_start": 9125,
+      "candidate_start": 9133,
+      "native_bytes": 682,
+      "candidate_bytes": 682,
+      "delta": 0
+    },
+    {
+      "index": 17,
+      "case": "0x1a1",
+      "native_start": 9807,
+      "candidate_start": 9815,
+      "native_bytes": 682,
+      "candidate_bytes": 682,
+      "delta": 0
+    },
+    {
+      "index": 18,
+      "case": "0x1a2",
+      "native_start": 10489,
+      "candidate_start": 10497,
+      "native_bytes": 389,
+      "candidate_bytes": 389,
+      "delta": 0
+    },
+    {
+      "index": 19,
+      "case": "0x1a3",
+      "native_start": 10878,
+      "candidate_start": 10886,
+      "native_bytes": 286,
+      "candidate_bytes": 285,
+      "delta": -1
+    },
+    {
+      "index": 20,
+      "case": "0x1a4",
+      "native_start": 11164,
+      "candidate_start": 11171,
+      "native_bytes": 367,
+      "candidate_bytes": 366,
+      "delta": -1
+    },
+    {
+      "index": 21,
+      "case": "0x1a5",
+      "native_start": 11531,
+      "candidate_start": 11537,
+      "native_bytes": 367,
+      "candidate_bytes": 366,
+      "delta": -1
+    },
+    {
+      "index": 22,
+      "case": "0x1a6",
+      "native_start": 11898,
+      "candidate_start": 11903,
+      "native_bytes": 367,
+      "candidate_bytes": 366,
+      "delta": -1
+    },
+    {
+      "index": 23,
+      "case": "0x1a7",
+      "native_start": 12265,
+      "candidate_start": 12269,
+      "native_bytes": 367,
+      "candidate_bytes": 366,
+      "delta": -1
+    },
+    {
+      "index": 24,
+      "case": "0x1a8",
+      "native_start": 12632,
+      "candidate_start": 12635,
+      "native_bytes": 367,
+      "candidate_bytes": 366,
+      "delta": -1
+    },
+    {
+      "index": 25,
+      "case": "0x1a9",
+      "native_start": 12999,
+      "candidate_start": 13001,
+      "native_bytes": 367,
+      "candidate_bytes": 366,
+      "delta": -1
+    },
+    {
+      "index": 26,
+      "case": "0x1aa",
+      "native_start": 13366,
+      "candidate_start": 13367,
+      "native_bytes": 310,
+      "candidate_bytes": 310,
+      "delta": 0
+    },
+    {
+      "index": 27,
+      "case": "0x1ab",
+      "native_start": 13676,
+      "candidate_start": 13677,
+      "native_bytes": 329,
+      "candidate_bytes": 332,
+      "delta": 3
+    },
+    {
+      "index": 28,
+      "case": "0x1ac",
+      "native_start": 14005,
+      "candidate_start": 14009,
+      "native_bytes": 245,
+      "candidate_bytes": 245,
+      "delta": 0
+    },
+    {
+      "index": 29,
+      "case": "0x1ad",
+      "native_start": 14250,
+      "candidate_start": 14254,
+      "native_bytes": 454,
+      "candidate_bytes": 457,
+      "delta": 3
+    },
+    {
+      "index": 30,
+      "case": "0x1ae",
+      "native_start": 14704,
+      "candidate_start": 14711,
+      "native_bytes": 1229,
+      "candidate_bytes": 1232,
+      "delta": 3
+    },
+    {
+      "index": 31,
+      "case": "0x1af",
+      "native_start": 15933,
+      "candidate_start": 15943,
+      "native_bytes": 264,
+      "candidate_bytes": 264,
+      "delta": 0
+    },
+    {
+      "index": 32,
+      "case": "0x1b0",
+      "native_start": 16197,
+      "candidate_start": 16207,
+      "native_bytes": 367,
+      "candidate_bytes": 366,
+      "delta": -1
+    },
+    {
+      "index": 33,
+      "case": "0x1b1",
+      "native_start": 16564,
+      "candidate_start": 16573,
+      "native_bytes": 502,
+      "candidate_bytes": 503,
+      "delta": 1
+    },
+    {
+      "index": 34,
+      "case": "0x1b2",
+      "native_start": 17066,
+      "candidate_start": 17076,
+      "native_bytes": 367,
+      "candidate_bytes": 366,
+      "delta": -1
+    },
+    {
+      "index": 35,
+      "case": "0x1b3",
+      "native_start": 17433,
+      "candidate_start": 17442,
+      "native_bytes": 367,
+      "candidate_bytes": 366,
+      "delta": -1
+    },
+    {
+      "index": 36,
+      "case": "0x1b4",
+      "native_start": 17800,
+      "candidate_start": 17808,
+      "native_bytes": 286,
+      "candidate_bytes": 285,
+      "delta": -1
+    },
+    {
+      "index": 37,
+      "case": "0x1b5",
+      "native_start": 18086,
+      "candidate_start": 18093,
+      "native_bytes": 286,
+      "candidate_bytes": 286,
+      "delta": 0
+    },
+    {
+      "index": 38,
+      "case": "0x1b6",
+      "native_start": 18372,
+      "candidate_start": 18379,
+      "native_bytes": 286,
+      "candidate_bytes": 286,
+      "delta": 0
+    },
+    {
+      "index": 39,
+      "case": "0x1b7",
+      "native_start": 18658,
+      "candidate_start": 18665,
+      "native_bytes": 952,
+      "candidate_bytes": 951,
+      "delta": -1
+    },
+    {
+      "index": 40,
+      "case": "0x1b8",
+      "native_start": 19610,
+      "candidate_start": 19616,
+      "native_bytes": 214,
+      "candidate_bytes": 214,
+      "delta": 0
+    },
+    {
+      "index": 41,
+      "case": "0x1b9",
+      "native_start": 19824,
+      "candidate_start": 19830,
+      "native_bytes": 214,
+      "candidate_bytes": 214,
+      "delta": 0
+    },
+    {
+      "index": 42,
+      "case": "0x1ba",
+      "native_start": 20038,
+      "candidate_start": 20044,
+      "native_bytes": 284,
+      "candidate_bytes": 284,
+      "delta": 0
+    },
+    {
+      "index": 43,
+      "case": "0x1bb",
+      "native_start": 20322,
+      "candidate_start": 20328,
+      "native_bytes": 284,
+      "candidate_bytes": 284,
+      "delta": 0
+    },
+    {
+      "index": 44,
+      "case": "0x1bc",
+      "native_start": 20606,
+      "candidate_start": 20612,
+      "native_bytes": 284,
+      "candidate_bytes": 284,
+      "delta": 0
+    },
+    {
+      "index": 45,
+      "case": "0x1bd",
+      "native_start": 20890,
+      "candidate_start": 20896,
+      "native_bytes": 284,
+      "candidate_bytes": 284,
+      "delta": 0
+    },
+    {
+      "index": 46,
+      "case": "0x1be",
+      "native_start": 21174,
+      "candidate_start": 21180,
+      "native_bytes": 284,
+      "candidate_bytes": 284,
+      "delta": 0
+    },
+    {
+      "index": 47,
+      "case": "0x1bf",
+      "native_start": 21458,
+      "candidate_start": 21464,
+      "native_bytes": 284,
+      "candidate_bytes": 284,
+      "delta": 0
+    },
+    {
+      "index": 48,
+      "case": "0x1c0",
+      "native_start": 21742,
+      "candidate_start": 21748,
+      "native_bytes": 214,
+      "candidate_bytes": 214,
+      "delta": 0
+    },
+    {
+      "index": 49,
+      "case": "0x1ef",
+      "native_start": 21956,
+      "candidate_start": 21962,
+      "native_bytes": 296,
+      "candidate_bytes": 296,
+      "delta": 0
+    },
+    {
+      "index": 50,
+      "case": "0x1f0",
+      "native_start": 22252,
+      "candidate_start": 22258,
+      "native_bytes": 1401,
+      "candidate_bytes": 1401,
+      "delta": 0
+    },
+    {
+      "index": 51,
+      "case": "0x1f1",
+      "native_start": 23653,
+      "candidate_start": 23659,
+      "native_bytes": 924,
+      "candidate_bytes": 924,
+      "delta": 0
+    },
+    {
+      "index": 52,
+      "case": "0x1f2",
+      "native_start": 24577,
+      "candidate_start": 24583,
+      "native_bytes": 918,
+      "candidate_bytes": 918,
+      "delta": 0
+    },
+    {
+      "index": 53,
+      "case": "499",
+      "native_start": 25495,
+      "candidate_start": 25501,
+      "native_bytes": 259,
+      "candidate_bytes": 259,
+      "delta": 0
+    },
+    {
+      "index": 54,
+      "case": "default",
+      "native_start": 25754,
+      "candidate_start": 25760,
+      "native_bytes": 33,
+      "candidate_bytes": 33,
+      "delta": 0
+    }
+  ],
+  "case_intervals_exact": [
+    "400",
+    "0x191",
+    "0x192",
+    "0x193",
+    "0x194",
+    "0x195",
+    "0x196",
+    "0x197",
+    "0x198",
+    "0x199",
+    "0x19a",
+    "0x19f",
+    "0x1a0",
+    "0x1a1",
+    "0x1a2",
+    "0x1aa",
+    "0x1ac",
+    "0x1af",
+    "0x1b5",
+    "0x1b6",
+    "0x1b8",
+    "0x1b9",
+    "0x1ba",
+    "0x1bb",
+    "0x1bc",
+    "0x1bd",
+    "0x1be",
+    "0x1bf",
+    "0x1c0",
+    "0x1ef",
+    "0x1f0",
+    "0x1f1",
+    "0x1f2",
+    "499",
+    "default"
+  ],
+  "case_intervals_different": [
+    [
+      "0x19b",
+      3
+    ],
+    [
+      "0x19c",
+      1
+    ],
+    [
+      "0x19d",
+      3
+    ],
+    [
+      "0x19e",
+      1
+    ],
+    [
+      "0x1a3",
+      -1
+    ],
+    [
+      "0x1a4",
+      -1
+    ],
+    [
+      "0x1a5",
+      -1
+    ],
+    [
+      "0x1a6",
+      -1
+    ],
+    [
+      "0x1a7",
+      -1
+    ],
+    [
+      "0x1a8",
+      -1
+    ],
+    [
+      "0x1a9",
+      -1
+    ],
+    [
+      "0x1ab",
+      3
+    ],
+    [
+      "0x1ad",
+      3
+    ],
+    [
+      "0x1ae",
+      3
+    ],
+    [
+      "0x1b0",
+      -1
+    ],
+    [
+      "0x1b1",
+      1
+    ],
+    [
+      "0x1b2",
+      -1
+    ],
+    [
+      "0x1b3",
+      -1
+    ],
+    [
+      "0x1b4",
+      -1
+    ],
+    [
+      "0x1b7",
+      -1
+    ]
+  ],
+  "exact_replay": "not yet accepted; candidate code prefix remains 6 bytes larger than the native owner and original relocations are not yet bound",
+  "whole_game_cold_replay": "not run; selected unit only"
+}

@@ -6,15 +6,19 @@ The production source in src/Character19Effects.cpp is a complete natural-C++ po
 
 ## Current reconstruction state
 
-The selected VC7.1 /Od /G6 /MT /Gy /W3 compile succeeds. The current COFF symbol is 26,122 bytes, including 320 bytes of switch data (55 four-byte jump entries plus a 100-byte selector table) after the native code owner. The candidate code prefix is now 25,802 bytes versus 25,787 native bytes: 15 bytes longer, not Exact. The 100-byte selector table matches the native table byte-for-byte; 265 COFF relocations remain to be bound and verified.
+The selected VC7.1 /Od /G6 /MT /Gy /W3 compile succeeds. The current COFF symbol is 26,113 bytes, including 320 bytes of compiler-emitted switch data (55 four-byte jump entries plus a 100-byte selector table) after the native code owner. The natural-C++ code prefix is 25,793 bytes versus 25,787 native bytes: 6 bytes longer, not Exact. The 100-byte selector table matches the native table byte-for-byte; the 265 COFF relocations still require original-target binding and verification. The appended switch data must not be mistaken for part of the native function extent.
 
-The current pass made these source-level corrections:
+The source-level progress includes:
 
-- Moved case 0x1c0 to the native switch-arm order.
+- Moved case 0x1c0 to native switch-arm order.
 - Corrected all ten case-0x1f0 spawn pairs to use the character's positionX/positionY, not the active effect slot's x/y.
 - Corrected all ten case-0x1f0 spawn group writes from field0030 to the actual group field, matching the native byte stores.
 - Matched the unsigned-short field tests and <= 1 threshold, then inverted the equivalent if/else so the spawn path precedes the frame-update path as in the native layout.
+- Rewrote 42 tick and 21 frame assignments from promoted-int x = x + 1 expressions to natural 16-bit postfix increments. VC7.1 now emits the native-width MOV/ADD forms, adding 63 bytes to the code prefix.
+- Reordered case 0x196 so the field0080 >= 2 transition arm precedes its movement path; its native interval now matches exactly.
+- Rewrote case 0x197 with the native <= 0x31 and >= 0x96 thresholds and matching branch-arm order; its native interval now matches exactly.
+- Inverted the outer case 0x19b and 0x19d effect predicates with logical negation, preserving the original floating-point truth behavior while moving the removal arm into the native branch layout.
 
-Those changes reduced the candidate code prefix by 294 bytes (26,033 to 25,739). A follow-up codegen probe showed the native counter updates use 16-bit register increments rather than promoted 32-bit arithmetic. Rewriting 63 tick/frame arithmetic assignments as natural postfix increments now reproduces all 108 native 16-bit counter-increment instruction pairs exactly. This added 63 bytes and moved the code prefix to 25,802 bytes. The case-0x1f0 interval is now 1,401 bytes, matching native exactly. Remaining per-arm size deltas are localized to cases 0x196, 0x197, 0x19b-0x19e, 0x1ab, 0x1ad, 0x1ae, 0x1b1, and several one-byte-short arms around 0x1a3-0x1a9 and 0x1b0-0x1b7. Continue resolving these from the original instruction stream; do not promote this source as Exact until the selected replay reaches zero differences and all original relocations are explicitly bound.
+The code prefix moved from 25,739 bytes (48 shorter) to 25,802 bytes (15 longer) after the 63 native-width increment rewrites, then to 25,793 bytes (6 longer) after the branch-layout repairs. Current case-by-case boundaries and source/object hashes are recorded in progress.json. Remaining per-arm differences still require instruction-level resolution. Do not promote this source as Exact until the selected replay reaches zero differences and all original relocations are explicitly bound.
 
 Character15::Slot07 and Character23::Slot07 are structural references only; their case behavior is not copied as Kanna behavior.
