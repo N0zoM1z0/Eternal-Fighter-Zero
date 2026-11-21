@@ -1,0 +1,16 @@
+{
+  "status": "work-in-progress; not accepted as exact",
+  "candidate": {
+    "object": "build/scene-loading/Character16Action.checkpoint.obj",
+    "source_sha256": "d28750d024b2d5f627d074d7afd55b525b0e1b8a055c80cd44f1d818186ed304",
+    "object_sha256": "5bdfc60a535acf40948fe853dc693840cdc9e397c25d10d61c6872303b2d5b49",
+    "code_bytes": 10665,
+    "relocations": 92,
+    "target_bytes": 10684,
+    "size_delta": -19,
+    "resolved_leading_exact_bytes": 347,
+    "first_raw_mismatch_offset": "0x15b",
+    "byte_sequence_similarity": 0.8717972738769966,
+    "target_extent_sha256": "ef542db26a493d898ff29a43faf78f1b6eceb300073f2f24a9701e052c0724db"
+  }
+}
