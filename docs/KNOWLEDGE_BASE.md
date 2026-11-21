@@ -2934,11 +2934,16 @@ resulting action state. The natural C++ reconstruction is
 src/Character16Action.cpp; SecondarySequence and SecondaryFrame accesses
 use the recovered native structures rather than assembly or padding.
 
-Codegen is still in progress. The current VC7.1 experiment is not an Exact
-match and must not be recorded in implemented.csv as complete. The reviewed
-boundary and authored source origin are separate facts from strict byte/relocation
-parity. Continue with selected-unit replay only; no whole-game cold replay is
-needed for this owner.
+Codegen is still in progress. The selected VC7.1 COFF build currently emits
+10,665 bytes (19 bytes shorter than the 10,684-byte native owner); the strict
+scoped comparison correctly rejects the size mismatch. The unit recipe and all
+92 original absolute/relative relocation bindings are registered in
+config/match-units.toml under character-16-slot04, with each binding grounded
+in the original instruction stream. Do not record this function as complete in
+implemented.csv until its full code extent and relocation inventory pass Exact.
+The reviewed boundary and authored source origin are separate facts from strict
+byte/relocation parity. Continue with selected-unit replay only; no whole-game
+cold replay is needed for this owner.
 
 ### Akiko Character16 Slot08: complete 1,310-byte Exact opponent/timer special
 

@@ -161677,6 +161677,660 @@ symbol = "__ftol2"
 target = 0x007783B8
 evidence = "Original x87 integer-conversion call resolves to the compiler helper at 0x007783B8."
 
+[units.character-16-slot04]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character16Action.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-16-slot04/Character16Action.obj"
+symbol = "?Slot04@Character16@@UAEXXZ"
+target_address = 0x00721DC0
+size = 10684
+
+[[units.character-16-slot04.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__DAT_00787c30"
+target = 0x00787C30
+evidence = "Original EFZ.exe absolute operand at 0x00721E47 resolves to 0x00787C30."
+
+[[units.character-16-slot04.relocations]]
+offset = 305
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00721EF0 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 326
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00721F06 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 432
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00721F70 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 565
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00721FF4 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 645
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722045 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 820
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x007220F3 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 914
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722152 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 1088
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x007221FF resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 1198
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x0072226E resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 1372
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x0072231B resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 1436
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x0072235C resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 1611
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x0072240A resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 1689
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722459 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 1863
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00722506 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 1957
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722565 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 2132
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00722613 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 2196
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722654 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 2370
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00722701 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 2449
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722751 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 2623
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x007227FE resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 2716
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x0072285C resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 2890
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00722909 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 2938
+type = "DIR32"
+symbol = "__DAT_00787c30"
+target = 0x00787C30
+evidence = "Original EFZ.exe absolute operand at 0x0072293A resolves to 0x00787C30."
+
+[[units.character-16-slot04.relocations]]
+offset = 2972
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x0072295C resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 3147
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00722A0A resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 3204
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722A44 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 3378
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00722AF1 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 3420
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722B1C resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 3594
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00722BC9 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 3636
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722BF4 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 3667
+type = "DIR32"
+symbol = "__DAT_00787c30"
+target = 0x00787C30
+evidence = "Original EFZ.exe absolute operand at 0x00722C13 resolves to 0x00787C30."
+
+[[units.character-16-slot04.relocations]]
+offset = 3851
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00722CCA resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 3908
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722D04 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 4082
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00722DB1 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 4124
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722DDC resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 4298
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00722E89 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 4346
+type = "DIR32"
+symbol = "__DAT_00787c30"
+target = 0x00787C30
+evidence = "Original EFZ.exe absolute operand at 0x00722EBA resolves to 0x00787C30."
+
+[[units.character-16-slot04.relocations]]
+offset = 4380
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722EDC resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 4555
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00722F8A resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 4612
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00722FC4 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 4786
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00723071 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 4828
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x0072309C resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 5002
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00723149 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 5050
+type = "DIR32"
+symbol = "__DAT_00787c30"
+target = 0x00787C30
+evidence = "Original EFZ.exe absolute operand at 0x0072317A resolves to 0x00787C30."
+
+[[units.character-16-slot04.relocations]]
+offset = 5134
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x007231CE resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 5259
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x0072324A resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 5366
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x007232B6 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 5490
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00723331 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 5582
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x0072338E resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 5706
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00723409 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 5817
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00723479 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 5961
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00723508 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 6119
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x007235A7 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 6199
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x007235F7 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 6229
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00723615 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 6355
+type = "DIR32"
+symbol = "__DAT_00787e48"
+target = 0x00787E48
+evidence = "Original EFZ.exe absolute operand at 0x00723693 resolves to 0x00787E48."
+
+[[units.character-16-slot04.relocations]]
+offset = 6510
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original EFZ.exe CALL at 0x0072372D resolves to ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630."
+
+[[units.character-16-slot04.relocations]]
+offset = 6617
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00723799 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 6647
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x007237B7 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 6902
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original EFZ.exe CALL at 0x007238B5 resolves to ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630."
+
+[[units.character-16-slot04.relocations]]
+offset = 6968
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x007238F8 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 7084
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x0072396C resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 7114
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x0072398A resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 7304
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original EFZ.exe CALL at 0x00723A47 resolves to ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630."
+
+[[units.character-16-slot04.relocations]]
+offset = 7390
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00723A9E resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 7420
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00723ABC resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 7607
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original EFZ.exe CALL at 0x00723B76 resolves to ?FaceOpponent@Secondary@@QAEHXZ at 0x0040E630."
+
+[[units.character-16-slot04.relocations]]
+offset = 7704
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00723BD8 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 7873
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00723C80 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 8098
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00723D61 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 8323
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00723E42 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 8398
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00723E8E resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 8567
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00723F36 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 8793
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00724018 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 8973
+type = "DIR32"
+symbol = "__DAT_00787e40"
+target = 0x00787E40
+evidence = "Original EFZ.exe absolute operand at 0x007240CD resolves to 0x00787E40."
+
+[[units.character-16-slot04.relocations]]
+offset = 9003
+type = "DIR32"
+symbol = "__DAT_00787e38"
+target = 0x00787E38
+evidence = "Original EFZ.exe absolute operand at 0x007240EB resolves to 0x00787E38."
+
+[[units.character-16-slot04.relocations]]
+offset = 9081
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00724138 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 9257
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x007241E8 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 9332
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00724234 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 9409
+type = "DIR32"
+symbol = "__DAT_007875c8"
+target = 0x007875C8
+evidence = "Original EFZ.exe absolute operand at 0x00724281 resolves to 0x007875C8."
+
+[[units.character-16-slot04.relocations]]
+offset = 9443
+type = "DIR32"
+symbol = "__DAT_007875d0"
+target = 0x007875D0
+evidence = "Original EFZ.exe absolute operand at 0x007242A3 resolves to 0x007875D0."
+
+[[units.character-16-slot04.relocations]]
+offset = 9471
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x007242BF resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 9685
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00724394 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 9857
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00724440 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 10083
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x00724522 resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 10177
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00724581 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 10216
+type = "DIR32"
+symbol = "__DAT_00787e30"
+target = 0x00787E30
+evidence = "Original EFZ.exe absolute operand at 0x007245A8 resolves to 0x00787E30."
+
+[[units.character-16-slot04.relocations]]
+offset = 10250
+type = "DIR32"
+symbol = "__DAT_00787d88"
+target = 0x00787D88
+evidence = "Original EFZ.exe absolute operand at 0x007245CA resolves to 0x00787D88."
+
+[[units.character-16-slot04.relocations]]
+offset = 10320
+type = "DIR32"
+symbol = "__DAT_007872f8"
+target = 0x007872F8
+evidence = "Original EFZ.exe absolute operand at 0x00724610 resolves to 0x007872F8."
+
+[[units.character-16-slot04.relocations]]
+offset = 10494
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x007246BD resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
+[[units.character-16-slot04.relocations]]
+offset = 10667
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe CALL at 0x0072476A resolves to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x0040F170."
+
 [units.character-16-slot08]
 artifact_kind = "coff"
 profile = "vc71-od-static"

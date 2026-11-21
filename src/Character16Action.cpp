@@ -406,7 +406,7 @@ void Character16::Slot04()
         }
         *(undefined2 *)(param_1 + 2) = 0xa3;
         FaceOpponent();
-        ++(*(unsigned char *)(param_1 + 0x56));
+        (*(char *)(param_1 + 0x56))++;
         *(undefined1 *)(param_1 + 0x6a) = 0;
         return;
       }
@@ -424,7 +424,7 @@ void Character16::Slot04()
         }
         *(undefined2 *)(param_1 + 2) = 0xa4;
         FaceOpponent();
-        ++(*(unsigned char *)(param_1 + 0x56));
+        (*(char *)(param_1 + 0x56))++;
         *(undefined1 *)(param_1 + 0x6a) = 0;
         return;
       }
@@ -433,15 +433,11 @@ void Character16::Slot04()
   if (((*(char *)((int)param_1 + 0x18a) == '\x01') || ((*(byte *)(param_1 + 0x6a) & 0x10) != 0)) ||
      ((*(byte *)((int)param_1 + 0x1a9) & 0x10) != 0)) {
     if (*(double *)(param_1 + 10) < _DAT_007872f8) {
-      if (*(short *)(param_1[0x59] + 0x678) <
-          ((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002) {
-        return;
-      }
-      if ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) == 0) {
-        return;
-      }
-      if ((((*(ushort *)(param_1 + 2) < 200) || ((int)param_1[0x5a] < 2)) || (param_1[0x5a] == 6))
-         && (*(ushort *)(param_1 + 2) >= 200)) {
+      if ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 >
+           *(short *)(param_1[0x59] + 0x678)) ||
+          ((int)(((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) <= 0) ||
+          ((*(ushort *)(param_1 + 2) >= 200) &&
+           (((int)param_1[0x5a] < 2) || (param_1[0x5a] == 6)))) {
         return;
       }
       ResetPose();
@@ -477,15 +473,11 @@ void Character16::Slot04()
   if (((*(char *)((int)param_1 + 0x18b) == '\x01') || ((*(byte *)(param_1 + 0x6a) & 0x20) != 0)) ||
      ((*(byte *)((int)param_1 + 0x1a9) & 0x20) != 0)) {
     if (*(double *)(param_1 + 10) < _DAT_007872f8) {
-      if (*(short *)(param_1[0x59] + 0x680) <
-          ((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002) {
-        return;
-      }
-      if ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) == 0) {
-        return;
-      }
-      if ((((*(ushort *)(param_1 + 2) < 200) || ((int)param_1[0x5a] < 2)) || (param_1[0x5a] == 6))
-         && (*(ushort *)(param_1 + 2) >= 200)) {
+      if ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 >
+           *(short *)(param_1[0x59] + 0x680)) ||
+          ((int)(((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) <= 0) ||
+          ((*(ushort *)(param_1 + 2) >= 200) &&
+           (((int)param_1[0x5a] < 2) || (param_1[0x5a] == 6)))) {
         return;
       }
       ResetPose();
@@ -552,8 +544,8 @@ void Character16::Slot04()
             ((*(double *)(param_1 + 8) - *(double *)(*(int *)param_1[0x1e] + 0x20) <= _DAT_00787e30
              || ((_DAT_00787d88 <=
                   *(double *)(param_1 + 8) - *(double *)(*(int *)param_1[0x1e] + 0x20) ||
-                 (*(short *)(param_1[0x59] + 0x6e0) <
-                  ((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002)))))) ||
+                 (((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 >
+                  *(short *)(param_1[0x59] + 0x6e0))))))) ||
            (((*(double *)(*(int *)param_1[0x1e] + 0x28) != _DAT_007872f8 ||
              (((0x31 < *(ushort *)(*(int *)param_1[0x1e] + 8) &&
                (*(ushort *)(*(int *)param_1[0x1e] + 8) < 0x9d)) ||
@@ -584,8 +576,8 @@ void Character16::Slot04()
                ((_DAT_007875d0 <=
                  *(double *)(param_1 + 8) - *(double *)(*(int *)param_1[0x1e] + 0x20) ||
                 (_DAT_007872f8 <= *(double *)(*(int *)param_1[0x1e] + 0x28))))) ||
-              ((*(short *)(param_1[0x59] + 0x780) <
-                ((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 ||
+              ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].field0002 >
+                *(short *)(param_1[0x59] + 0x780) ||
                ((0x31 < *(ushort *)(*(int *)param_1[0x1e] + 8) &&
                 (*(ushort *)(*(int *)param_1[0x1e] + 8) < 0x9d)))))) ||
              ((((SecondarySequence *)param_1[0x59])[*(ushort *)(param_1 + 2)].data[*(ushort *)((int)param_1 + 10)].frameFlags & 8) == 0)) ||
