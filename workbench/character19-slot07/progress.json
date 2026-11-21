@@ -1,10 +1,10 @@
 {
-  "status": "code-extent-exact-relocations-pending",
+  "status": "code-extent-exact-relocation-map-ready",
   "owner": "Character19::Slot07",
   "source": "src/Character19Effects.cpp",
-  "source_sha256": "c2b036a88a321b45e9471686d1321f4e8bebd4b846206e05c29bf87c0e4a2d6c",
+  "source_sha256": "4c61cc8d38e65bd01f94679af77d11ad87787c2bbf71b82839b43812aa4786f0",
   "object": "build/match-units/character-19-slot07/Character19Effects.obj",
-  "object_sha256": "f72bf07efe21d6358b901ad5d711d161a79d58f914fa80bd435a7b7b3babd2c6",
+  "object_sha256": "e91e72cf017f92b62898463fc1b536b41a6813a53f17e3d43a76ed9ea11a0ec1",
   "target_address": "0x0067CF50",
   "target_code_extent_bytes": 25787,
   "candidate_symbol_bytes": 26107,
@@ -20,6 +20,9 @@
     "REL32": 69,
     "DIR32": 196
   },
+  "code_relocation_field_offsets_match_native": true,
+  "relocation_targets_reconstructed": 110,
+  "relocation_binding_conflicts": 0,
   "native_operand_order_repairs": {
     "tick_vs_frame_duration": 52,
     "frame_vs_frame_count": 52
@@ -35,22 +38,71 @@
       "!(effects[i].y >= 0.0)",
       "!(effects[i].vy > 0.0)",
       "effects[i].y >= 0.0"
-    ],
-    "note": "Matches the native x87 status-word tests for unordered comparisons while preserving the corresponding finite-value behavior."
+    ]
+  },
+  "floating_operand_order_repairs": {
+    "680_x_bounds": 3,
+    "opponent_height_comparison": 1,
+    "900_x_bound": 1
   },
   "instruction_diagnostic": {
-    "mean_case_signature_similarity": 0.9941,
+    "mean_case_signature_similarity": 0.996,
     "median_case_signature_similarity": 1.0,
-    "perfect_case_signature_count": 46,
-    "worst_case": "default",
-    "worst_case_signature_similarity": 0.8333,
-    "next_cases": [
+    "perfect_case_signature_count": 50,
+    "perfect_cases": [
+      "0x193",
+      "0x194",
+      "0x195",
+      "0x196",
+      "0x197",
+      "0x198",
+      "0x199",
+      "0x19a",
+      "0x19b",
+      "0x19c",
+      "0x19d",
+      "0x19e",
       "0x19f",
-      "0x1f0",
       "0x1a0",
       "0x1a1",
-      "0x1ae"
+      "0x1a2",
+      "0x1a3",
+      "0x1a4",
+      "0x1a5",
+      "0x1a6",
+      "0x1a7",
+      "0x1a8",
+      "0x1a9",
+      "0x1aa",
+      "0x1ab",
+      "0x1ac",
+      "0x1ad",
+      "0x1ae",
+      "0x1af",
+      "0x1b0",
+      "0x1b1",
+      "0x1b2",
+      "0x1b3",
+      "0x1b4",
+      "0x1b5",
+      "0x1b6",
+      "0x1b7",
+      "0x1b8",
+      "0x1b9",
+      "0x1ba",
+      "0x1bb",
+      "0x1bc",
+      "0x1bd",
+      "0x1be",
+      "0x1bf",
+      "0x1c0",
+      "0x1ef",
+      "0x1f1",
+      "0x1f2",
+      "499"
     ],
+    "worst_case": "default",
+    "worst_case_signature_similarity": 0.8333,
     "note": "Diagnostic only: register-independent Capstone instruction signatures; absolute operands and branch destinations normalized. Not an exact replay acceptance metric."
   },
   "case_intervals": [
@@ -608,6 +660,6 @@
     "default"
   ],
   "case_intervals_different": [],
-  "exact_replay": "not yet accepted; code prefix, all 55 case boundaries, 55 jump targets and 100-byte selector table match native. All 265 original COFF relocation destinations still require explicit binding and complete replay.",
+  "exact_replay": "not yet accepted; code prefix, all 55 case boundaries, all 55 jump targets, 100-byte selector table, and all 210 code relocation field offsets match native. Original destinations for all 265 relocations have been reconstructed with 110 consistent symbol bindings; the match-unit manifest still needs explicit bindings and selected exact replay.",
   "whole_game_cold_replay": "not run; selected unit only"
 }

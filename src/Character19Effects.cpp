@@ -474,7 +474,7 @@ void Character19::Slot07()
                effects[i].vy -
                effects[i].ay;
           effects[i].tick++ ;
-          if ((((680.0 < effects[i].x) &&
+          if ((((effects[i].x > 680.0) &&
                ((char)effects[i].flag0048 == '\x01')) ||
               ((effects[i].x < -60.0 &&
                ((char)effects[i].flag0048 == -1)))) ||
@@ -503,7 +503,7 @@ void Character19::Slot07()
                effects[i].vy -
                effects[i].ay;
           ++effects[i].tick;
-          if ((((680.0 < effects[i].x) &&
+          if ((((effects[i].x > 680.0) &&
                ((char)effects[i].flag0048 == '\x01')) ||
               ((effects[i].x < -60.0 &&
                ((char)effects[i].flag0048 == -1)))) ||
@@ -532,7 +532,7 @@ void Character19::Slot07()
                effects[i].vy -
                effects[i].ay;
           ++effects[i].tick;
-          if ((((680.0 < effects[i].x) &&
+          if ((((effects[i].x > 680.0) &&
                ((char)effects[i].flag0048 == '\x01')) ||
               ((effects[i].x < -60.0 &&
                ((char)effects[i].flag0048 == -1)))) ||
@@ -800,8 +800,8 @@ void Character19::Slot07()
           }
           effects[i].vx =
                effects[i].vx + 0.025;
-          if ((*opponentSlot)->positionY - 45.0 <
-              effects[i].y) {
+          if (effects[i].y >
+              (*opponentSlot)->positionY - 45.0) {
             effects[i].vy =
                  effects[i].vy - 0.015;
           }
@@ -819,7 +819,7 @@ void Character19::Slot07()
             spawn.flag0018 = effects[i].flag0048;
             EmitLocalEffect(&spawn);
           }
-          if (((900.0 < effects[i].x) ||
+          if (((effects[i].x > 900.0) ||
               (effects[i].x < -360.0)) ||
              (0 < effects[i].field0080)) {
             effects[i].type = 0x1af;
