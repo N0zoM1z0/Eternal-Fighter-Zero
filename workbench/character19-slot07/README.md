@@ -6,19 +6,20 @@ The production source in src/Character19Effects.cpp is a complete natural-C++ po
 
 ## Current reconstruction state
 
-The selected VC7.1 /Od /G6 /MT /Gy /W3 compile succeeds. The current COFF symbol is 26,113 bytes, including 320 bytes of compiler-emitted switch data (55 four-byte jump entries plus a 100-byte selector table) after the native code owner. The natural-C++ code prefix is 25,793 bytes versus 25,787 native bytes: 6 bytes longer, not Exact. The 100-byte selector table matches the native table byte-for-byte; the 265 COFF relocations still require original-target binding and verification. The appended switch data must not be mistaken for part of the native function extent.
+The selected VC7.1 /Od /G6 /MT /Gy /W3 compile succeeds. The current COFF symbol is 26,105 bytes, including 320 bytes of compiler-emitted switch data (55 four-byte jump entries plus a 100-byte selector table) after the native code owner. The natural-C++ code prefix is 25,785 bytes versus 25,787 native bytes: 2 bytes shorter, not Exact. The 100-byte selector table matches the native table byte-for-byte; all 265 COFF relocations still require original-target binding and verification. The appended switch data must not be mistaken for part of the native function extent.
 
 The source-level progress includes:
 
 - Moved case 0x1c0 to native switch-arm order.
 - Corrected all ten case-0x1f0 spawn pairs to use the character's positionX/positionY, not the active effect slot's x/y.
-- Corrected all ten case-0x1f0 spawn group writes from field0030 to the actual group field, matching the native byte stores.
-- Matched the unsigned-short field tests and <= 1 threshold, then inverted the equivalent if/else so the spawn path precedes the frame-update path as in the native layout.
-- Rewrote 42 tick and 21 frame assignments from promoted-int x = x + 1 expressions to natural 16-bit postfix increments. VC7.1 now emits the native-width MOV/ADD forms, adding 63 bytes to the code prefix.
-- Reordered case 0x196 so the field0080 >= 2 transition arm precedes its movement path; its native interval now matches exactly.
-- Rewrote case 0x197 with the native <= 0x31 and >= 0x96 thresholds and matching branch-arm order; its native interval now matches exactly.
-- Inverted the outer case 0x19b and 0x19d effect predicates with logical negation, preserving the original floating-point truth behavior while moving the removal arm into the native branch layout.
+- Corrected the case-0x1f0 group writes and all nine other native group=2 stores to the byte group field.
+- Corrected six case-0x1b7 spawn payload writes from palette to field0030.
+- Removed 33 incorrect signed casts from the unsigned-short field0008 comparisons.
+- Rewrote 42 tick and 21 frame increments and 10 tick decrements as natural 16-bit postfix operators. VC7.1 now emits the native-width MOV/ADD/SUB forms.
+- Reordered case 0x196 and 0x197 to match native branch-arm order and thresholds.
+- Recovered the outer lifetime branch order for cases 0x19b through 0x19e while preserving floating-point unordered-value behavior.
+- Reordered case 0x1b1's boundary and removal arm to match the native path.
 
-The code prefix moved from 25,739 bytes (48 shorter) to 25,802 bytes (15 longer) after the 63 native-width increment rewrites, then to 25,793 bytes (6 longer) after the branch-layout repairs. Current case-by-case boundaries and source/object hashes are recorded in progress.json. Remaining per-arm differences still require instruction-level resolution. Do not promote this source as Exact until the selected replay reaches zero differences and all original relocations are explicitly bound.
+The current candidate has 53 of 55 switch intervals at their exact native lengths. Only case 0x1b4 and 0x1b7 remain one byte short each, leaving the code prefix two bytes shorter overall. The complete per-case boundary table, source/object hashes and current status are recorded in progress.json. The 320-byte appended compiler switch data consists of 55 relocatable jump entries and a 100-byte selector table; the selector table is already byte-exact. This is still not Exact: original code bytes and all 265 relocations must be independently bound and verified. No ASM, padding, or byte patching is being used.
 
 Character15::Slot07 and Character23::Slot07 are structural references only; their case behavior is not copied as Kanna behavior.
