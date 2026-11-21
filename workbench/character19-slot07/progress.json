@@ -1,10 +1,10 @@
 {
-  "status": "code-extent-exact-relocation-map-ready",
+  "status": "exact",
   "owner": "Character19::Slot07",
   "source": "src/Character19Effects.cpp",
-  "source_sha256": "6bd075728ee54e03759199a1bb85ec5de1a7eedcc0104496864ffa4aa2b863a8",
+  "source_sha256": "e601e0f1e9c9a16108aa79631713b4bf92000484ec66a1efda4cd36cac59cbc2",
   "object": "build/match-units/character-19-slot07/Character19Effects.obj",
-  "object_sha256": "07f056cd9877b7a295c04df0dff60f14a1e3c3e72914e8d31a587cd8ff4b9e61",
+  "object_sha256": "faed006881faff16b1dc85f06717b0d6b84cd809e1ed6ba7bdbe8a0b7c21d696",
   "target_address": "0x0067CF50",
   "target_code_extent_bytes": 25787,
   "candidate_symbol_bytes": 26107,
@@ -609,7 +609,15 @@
     "default"
   ],
   "case_intervals_different": [],
-  "exact_replay": "not yet accepted; all 55 case instruction signatures, code extent, jump table targets and selector table now match. All 265 original COFF relocation destinations still require explicit binding in the manifest and complete selected replay.",
+  "exact_replay": {
+    "result": "exact",
+    "size": 26107,
+    "matched_bytes": 26107,
+    "difference_count": 0,
+    "relocations": 265,
+    "local_replay": "official scripts/replay-exact-units.py --unit character-19-slot07",
+    "evidence_file": ".analysis/exact/character-19-slot07-final-replay.json"
+  },
   "whole_game_cold_replay": "not run; selected unit only",
   "native_spawn_payload_repairs": {
     "cases": [
@@ -621,5 +629,35 @@
     "field0028": 1,
     "note": "Corrected payload fields and native assignment order; all 3 case instruction signatures now match 100%."
   },
-  "native_loop_wrap_repair": "i >= 0x40, matching the native CMP 0x40 / JL sequence"
+  "native_loop_wrap_repair": "i >= 0x40, matching the native CMP 0x40 / JL sequence",
+  "target_contribution_extent_bytes": 26107,
+  "target_contribution_end": "0x0068354B",
+  "local_data_tables": [
+    {
+      "offset": 25787,
+      "size": 220,
+      "kind": "switch-address-table",
+      "entries": 55
+    },
+    {
+      "offset": 26007,
+      "size": 100,
+      "kind": "switch-index-table",
+      "entries": 100
+    }
+  ],
+  "relocation_manifest": {
+    "bindings": 265,
+    "unique_symbols": 110,
+    "conflicts": 0,
+    "types": {
+      "REL32": 69,
+      "DIR32": 196
+    },
+    "local_data_bindings": 55,
+    "local_code_reference_bindings": 2,
+    "external_bindings": 208,
+    "all_fields_reconstruct_native_bytes": true,
+    "exact_replay": "pending"
+  }
 }

@@ -1,12 +1,12 @@
 # Character19::Slot07 workbench
 
-Target: 0x0067CF50, reviewed native code extent [0x0067CF50, 0x0068340B) (25,787 bytes). The vtable at 0x00788CE0 + 0x1c selects this owner.
+Target: 0x0067CF50, native code extent [0x0067CF50, 0x0068340B) (25,787 bytes) plus 320 bytes of compiler-emitted switch data [0x0068340B, 0x0068354B). The complete reviewed COFF contribution is [0x0067CF50, 0x0068354B) (26,107 bytes). The vtable at 0x00788CE0 + 0x1c selects this owner.
 
 The production source in src/Character19Effects.cpp is a complete natural-C++ port of the 54-case local-effect update/lifetime dispatcher. It preserves the native 64-entry effect ring, per-type frame progression, local effect emission/removal, Kanna-specific random motion, and state-sensitive sound/effect paths.
 
 ## Current reconstruction state
 
-The selected VC7.1 /Od /G6 /MT /Gy /W3 compile succeeds. The COFF symbol is now exactly 26,107 bytes: 25,787 bytes of native code followed by 320 bytes of compiler-emitted switch data (55 four-byte jump entries plus a 100-byte selector table). All 55 candidate switch entries now resolve to the corresponding native case boundaries, and the 100-byte selector table matches byte-for-byte. The source code prefix and every case interval have the exact native length. The 265 COFF relocations (69 REL32, 196 DIR32) still require original-target binding and full replay; do not call this Exact until that replay passes.
+The selected VC7.1 /Od /G6 /MT /Gy /W3 compile succeeds. The COFF symbol is exactly 26,107 bytes: 25,787 bytes of native code followed by 320 bytes of compiler-emitted switch data (55 four-byte jump entries plus a 100-byte selector table). All 55 switch entries resolve to their native case boundaries, and the 100-byte selector table matches byte-for-byte. All 265 COFF relocations (69 REL32, 196 DIR32) are explicitly bound to 110 consistent symbols with zero conflicts. The official selected-unit replay returns exact: 26,107/26,107 bytes matched, zero differences, and all 265 relocations accepted.
 
 The source-level progress includes:
 
@@ -25,7 +25,8 @@ The source-level progress includes:
 - Corrected the spawn payloads in cases 0x190-0x192 to use group = 0 and field0028 = 1 in native store order, rather than group = 1 and field0030 = 0. All three case instruction signatures now match 100%.
 - Rewrote five negative facing multipliers in case 0x1f0 as positive magnitudes followed by subtraction, matching the native SHL/IMUL plus SUB instruction sequences.
 - Rewrote the ring-wrap condition as i >= 0x40, matching the native CMP 0x40 / JL sequence.
+- Added explicit switch breaks to 21 native early-advance paths so they leave the type switch and resume at the shared effect-ring increment, rather than falling through into the next effect-type arm.
 
-The current code prefix is 25,787/25,787 bytes. All 55 switch intervals and all 55 jump-table destinations match the native case boundaries; the selector table is 100/100 exact. All 210 code relocation field offsets now match the original instructions exactly. A reconstruction pass resolves all 265 relocation destinations to 110 consistent symbols with zero conflicts. A register-independent instruction-signature diagnostic reports 100% mean and median similarity across all 55 intervals; all 55 intervals now have 100% signature similarity. This diagnostic is not an acceptance metric, and the relocation replay remains the acceptance gate. This diagnostic is not an acceptance metric. Per-case boundaries, source/object hashes and the current state are recorded in progress.json. The next gate is adding the 265 explicit relocation bindings to the match-unit manifest and passing the selected exact replay. No ASM, padding, or byte patching is used.
+The complete contribution is now Exact. The native code prefix is 25,787/25,787 bytes; all 55 switch intervals and all 55 jump-table destinations match the native case boundaries; the 100-byte selector table is exact. All 210 code relocation field offsets align with native operands. The manifest binds all 265 relocations (69 REL32, 196 DIR32) to 110 consistent symbols with zero conflicts. The official targeted replay reports 26,107/26,107 bytes matched, difference_count = 0, and 265 accepted relocations. A register-independent diagnostic also reports 100% mean and median instruction-signature similarity across all 55 intervals. Per-case boundaries, source/object hashes, and the accepted replay state are recorded in progress.json. No ASM, padding, or byte patching is used.
 
 Character15::Slot07 and Character23::Slot07 are structural references only; their case behavior is not copied as Kanna behavior.

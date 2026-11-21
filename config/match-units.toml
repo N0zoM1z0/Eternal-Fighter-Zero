@@ -174574,4 +174574,1872 @@ dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
 object = "build/match-units/character-19-slot07/Character19Effects.obj"
 symbol = "?Slot07@Character19@@UAEXXZ"
 target_address = 0x0067CF50
-size = 25787
+size = 26107
+code_size = 25787
+
+[[units.character-19-slot07.local_data]]
+offset = 25787
+size = 220
+kind = "switch-address-table"
+evidence = "Canonical EFZ.exe switch-address table at 0x0068340B..0x006834E7 contains 55 absolute 32-bit case-entry addresses; all 55 compiled entries match byte-for-byte."
+
+[[units.character-19-slot07.local_data]]
+offset = 26007
+size = 100
+kind = "switch-index-table"
+evidence = "Canonical EFZ.exe switch-index table at 0x006834E7..0x0068354B contains 100 selector bytes; the compiled selector table matches byte-for-byte."
+
+[[units.character-19-slot07.relocations]]
+offset = 55
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067CF87 stores displacement -2587387 (0xFFD88505); applying the instruction end and COFF addend 0x00000000 binds ??0EffectSpawn@@QAE@XZ to 0x00405490."
+
+[[units.character-19-slot07.relocations]]
+offset = 288
+type = "REL32"
+symbol = "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00413090
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067D070 stores displacement -2531300 (0xFFD9601C); applying the instruction end and COFF addend 0x00000000 binds ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z to 0x00413090."
+
+[[units.character-19-slot07.relocations]]
+offset = 343
+type = "DIR32"
+symbol = "$L63055"
+target = 0x006834E7
+evidence = "Canonical EFZ.exe local code reference field at 0x0067D0A7 stores 0x006834E7, resolving to 0x006834E7; compiled local target offset 0x00006597 matches the native reference."
+
+[[units.character-19-slot07.relocations]]
+offset = 350
+type = "DIR32"
+symbol = "$L63149"
+target = 0x0068340B
+evidence = "Canonical EFZ.exe local code reference field at 0x0067D0AE stores 0x0068340B, resolving to 0x0068340B; compiled local target offset 0x000064BB matches the native reference."
+
+[[units.character-19-slot07.relocations]]
+offset = 413
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787F58
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D0ED stores 0x00787F58; subtracting COFF addend 0x00000000 binds __real@c008000000000000 to 0x00787F58."
+
+[[units.character-19-slot07.relocations]]
+offset = 445
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D10D stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 502
+type = "DIR32"
+symbol = "__real@3fbae147ae147ae1"
+target = 0x00788D40
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D146 stores 0x00788D40; subtracting COFF addend 0x00000000 binds __real@3fbae147ae147ae1 to 0x00788D40."
+
+[[units.character-19-slot07.relocations]]
+offset = 546
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D172 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 571
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D18B stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 704
+type = "DIR32"
+symbol = "__real@3fac28f5c28f5c29"
+target = 0x00787F88
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D210 stores 0x00787F88; subtracting COFF addend 0x00000000 binds __real@3fac28f5c28f5c29 to 0x00787F88."
+
+[[units.character-19-slot07.relocations]]
+offset = 767
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D24F stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 796
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D26C stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 821
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D285 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 902
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067D2D6 stores displacement 1028318 (0x000FB0DE); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 929
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D2F1 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 1283
+type = "DIR32"
+symbol = "__real@401c000000000000"
+target = 0x00788B50
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D453 stores 0x00788B50; subtracting COFF addend 0x00000000 binds __real@401c000000000000 to 0x00788B50."
+
+[[units.character-19-slot07.relocations]]
+offset = 1402
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787F58
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D4CA stores 0x00787F58; subtracting COFF addend 0x00000000 binds __real@c008000000000000 to 0x00787F58."
+
+[[units.character-19-slot07.relocations]]
+offset = 1434
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D4EA stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 1491
+type = "DIR32"
+symbol = "__real@3fbae147ae147ae1"
+target = 0x00788D40
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D523 stores 0x00788D40; subtracting COFF addend 0x00000000 binds __real@3fbae147ae147ae1 to 0x00788D40."
+
+[[units.character-19-slot07.relocations]]
+offset = 1535
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D54F stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 1560
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D568 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 1694
+type = "DIR32"
+symbol = "__real@3fac28f5c28f5c29"
+target = 0x00787F88
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D5EE stores 0x00787F88; subtracting COFF addend 0x00000000 binds __real@3fac28f5c28f5c29 to 0x00787F88."
+
+[[units.character-19-slot07.relocations]]
+offset = 1757
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D62D stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 1786
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D64A stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 1811
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D663 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 1892
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067D6B4 stores displacement 1027328 (0x000FAD00); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 1919
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D6CF stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 2273
+type = "DIR32"
+symbol = "__real@401c000000000000"
+target = 0x00788B50
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D831 stores 0x00788B50; subtracting COFF addend 0x00000000 binds __real@401c000000000000 to 0x00788B50."
+
+[[units.character-19-slot07.relocations]]
+offset = 2392
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787F58
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D8A8 stores 0x00787F58; subtracting COFF addend 0x00000000 binds __real@c008000000000000 to 0x00787F58."
+
+[[units.character-19-slot07.relocations]]
+offset = 2424
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D8C8 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 2481
+type = "DIR32"
+symbol = "__real@3fbae147ae147ae1"
+target = 0x00788D40
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D901 stores 0x00788D40; subtracting COFF addend 0x00000000 binds __real@3fbae147ae147ae1 to 0x00788D40."
+
+[[units.character-19-slot07.relocations]]
+offset = 2525
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D92D stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 2550
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D946 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 2684
+type = "DIR32"
+symbol = "__real@3fac28f5c28f5c29"
+target = 0x00787F88
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067D9CC stores 0x00787F88; subtracting COFF addend 0x00000000 binds __real@3fac28f5c28f5c29 to 0x00787F88."
+
+[[units.character-19-slot07.relocations]]
+offset = 2747
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067DA0B stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 2776
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067DA28 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 2801
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067DA41 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 2882
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067DA92 stores displacement 1026338 (0x000FA922); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 2912
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067DAB0 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 3266
+type = "DIR32"
+symbol = "__real@401c000000000000"
+target = 0x00788B50
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067DC12 stores 0x00788B50; subtracting COFF addend 0x00000000 binds __real@401c000000000000 to 0x00788B50."
+
+[[units.character-19-slot07.relocations]]
+offset = 3404
+type = "REL32"
+symbol = "?SetVerticalShake@Secondary@@QAEXHH@Z"
+target = 0x00410A10
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067DC9C stores displacement -2544272 (0xFFD92D70); applying the instruction end and COFF addend 0x00000000 binds ?SetVerticalShake@Secondary@@QAEXHH@Z to 0x00410A10."
+
+[[units.character-19-slot07.relocations]]
+offset = 4164
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067DF94 stores 0x00787338; subtracting COFF addend 0x00000000 binds __real@4008000000000000 to 0x00787338."
+
+[[units.character-19-slot07.relocations]]
+offset = 4189
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067DFAD stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 4365
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875C8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E05D stores 0x007875C8; subtracting COFF addend 0x00000000 binds __real@c059000000000000 to 0x007875C8."
+
+[[units.character-19-slot07.relocations]]
+offset = 4440
+type = "DIR32"
+symbol = "__real@3f9999999999999a"
+target = 0x00787D38
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E0A8 stores 0x00787D38; subtracting COFF addend 0x00000000 binds __real@3f9999999999999a to 0x00787D38."
+
+[[units.character-19-slot07.relocations]]
+offset = 4484
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787FD0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E0D4 stores 0x00787FD0; subtracting COFF addend 0x00000000 binds __real@3ff3333333333333 to 0x00787FD0."
+
+[[units.character-19-slot07.relocations]]
+offset = 4509
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787FD0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E0ED stores 0x00787FD0; subtracting COFF addend 0x00000000 binds __real@3ff3333333333333 to 0x00787FD0."
+
+[[units.character-19-slot07.relocations]]
+offset = 4813
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E21D stores 0x00787338; subtracting COFF addend 0x00000000 binds __real@4008000000000000 to 0x00787338."
+
+[[units.character-19-slot07.relocations]]
+offset = 4838
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E236 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 4968
+type = "DIR32"
+symbol = "__real@3f8eb851eb851eb8"
+target = 0x00788250
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E2B8 stores 0x00788250; subtracting COFF addend 0x00000000 binds __real@3f8eb851eb851eb8 to 0x00788250."
+
+[[units.character-19-slot07.relocations]]
+offset = 5012
+type = "DIR32"
+symbol = "__real@3fd999999999999a"
+target = 0x00787DC0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E2E4 stores 0x00787DC0; subtracting COFF addend 0x00000000 binds __real@3fd999999999999a to 0x00787DC0."
+
+[[units.character-19-slot07.relocations]]
+offset = 5037
+type = "DIR32"
+symbol = "__real@3fd999999999999a"
+target = 0x00787DC0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E2FD stores 0x00787DC0; subtracting COFF addend 0x00000000 binds __real@3fd999999999999a to 0x00787DC0."
+
+[[units.character-19-slot07.relocations]]
+offset = 6002
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067E6C2 stores displacement -2547238 (0xFFD921DA); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 6017
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787FB0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E6D1 stores 0x00787FB0; subtracting COFF addend 0x00000000 binds __real@3fb999999999999a to 0x00787FB0."
+
+[[units.character-19-slot07.relocations]]
+offset = 6023
+type = "DIR32"
+symbol = "__real@4004000000000000"
+target = 0x00788070
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E6D7 stores 0x00788070; subtracting COFF addend 0x00000000 binds __real@4004000000000000 to 0x00788070."
+
+[[units.character-19-slot07.relocations]]
+offset = 6054
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067E6F6 stores displacement -2547290 (0xFFD921A6); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 6069
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787FB0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E705 stores 0x00787FB0; subtracting COFF addend 0x00000000 binds __real@3fb999999999999a to 0x00787FB0."
+
+[[units.character-19-slot07.relocations]]
+offset = 6075
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787CC8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E70B stores 0x00787CC8; subtracting COFF addend 0x00000000 binds __real@bff3333333333333 to 0x00787CC8."
+
+[[units.character-19-slot07.relocations]]
+offset = 6119
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787FD8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E737 stores 0x00787FD8; subtracting COFF addend 0x00000000 binds __real@3fa999999999999a to 0x00787FD8."
+
+[[units.character-19-slot07.relocations]]
+offset = 6163
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E763 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 6195
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E783 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 6273
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E7D1 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 6359
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875C0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E827 stores 0x007875C0; subtracting COFF addend 0x00000000 binds __real@3ff0000000000000 to 0x007875C0."
+
+[[units.character-19-slot07.relocations]]
+offset = 6418
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E862 stores 0x00787D98; subtracting COFF addend 0x00000000 binds __real@bff8000000000000 to 0x00787D98."
+
+[[units.character-19-slot07.relocations]]
+offset = 6455
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067E887 stores displacement 1022765 (0x000F9B2D); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 6488
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067E8A8 stores displacement 1022732 (0x000F9B0C); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 6813
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067E9ED stores displacement -2548049 (0xFFD91EAF); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 6828
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787FB0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067E9FC stores 0x00787FB0; subtracting COFF addend 0x00000000 binds __real@3fb999999999999a to 0x00787FB0."
+
+[[units.character-19-slot07.relocations]]
+offset = 6834
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787D48
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EA02 stores 0x00787D48; subtracting COFF addend 0x00000000 binds __real@3ff8000000000000 to 0x00787D48."
+
+[[units.character-19-slot07.relocations]]
+offset = 6871
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EA27 stores 0x00787D98; subtracting COFF addend 0x00000000 binds __real@bff8000000000000 to 0x00787D98."
+
+[[units.character-19-slot07.relocations]]
+offset = 6903
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787FD8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EA47 stores 0x00787FD8; subtracting COFF addend 0x00000000 binds __real@3fa999999999999a to 0x00787FD8."
+
+[[units.character-19-slot07.relocations]]
+offset = 6947
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EA73 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 6979
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EA93 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 7311
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067EBDF stores displacement -2548547 (0xFFD91CBD); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 7332
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787FB0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EBF4 stores 0x00787FB0; subtracting COFF addend 0x00000000 binds __real@3fb999999999999a to 0x00787FB0."
+
+[[units.character-19-slot07.relocations]]
+offset = 7338
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787FC8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EBFA stores 0x00787FC8; subtracting COFF addend 0x00000000 binds __real@3ffb333333333333 to 0x00787FC8."
+
+[[units.character-19-slot07.relocations]]
+offset = 7369
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067EC19 stores displacement -2548605 (0xFFD91C83); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 7390
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787FB0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EC2E stores 0x00787FB0; subtracting COFF addend 0x00000000 binds __real@3fb999999999999a to 0x00787FB0."
+
+[[units.character-19-slot07.relocations]]
+offset = 7396
+type = "DIR32"
+symbol = "__real@bfe0000000000000"
+target = 0x00787D68
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EC34 stores 0x00787D68; subtracting COFF addend 0x00000000 binds __real@bfe0000000000000 to 0x00787D68."
+
+[[units.character-19-slot07.relocations]]
+offset = 7440
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787FD8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EC60 stores 0x00787FD8; subtracting COFF addend 0x00000000 binds __real@3fa999999999999a to 0x00787FD8."
+
+[[units.character-19-slot07.relocations]]
+offset = 7484
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EC8C stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 7516
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067ECAC stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 7594
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067ECFA stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 7680
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875C0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067ED50 stores 0x007875C0; subtracting COFF addend 0x00000000 binds __real@3ff0000000000000 to 0x007875C0."
+
+[[units.character-19-slot07.relocations]]
+offset = 7739
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067ED8B stores 0x00787D98; subtracting COFF addend 0x00000000 binds __real@bff8000000000000 to 0x00787D98."
+
+[[units.character-19-slot07.relocations]]
+offset = 7776
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067EDB0 stores displacement 1021444 (0x000F9604); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 7815
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067EDD7 stores displacement 1021405 (0x000F95DD); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 8146
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067EF22 stores displacement -2549382 (0xFFD9197A); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 8167
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787FB0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EF37 stores 0x00787FB0; subtracting COFF addend 0x00000000 binds __real@3fb999999999999a to 0x00787FB0."
+
+[[units.character-19-slot07.relocations]]
+offset = 8173
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787D48
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EF3D stores 0x00787D48; subtracting COFF addend 0x00000000 binds __real@3ff8000000000000 to 0x00787D48."
+
+[[units.character-19-slot07.relocations]]
+offset = 8210
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EF62 stores 0x00787D98; subtracting COFF addend 0x00000000 binds __real@bff8000000000000 to 0x00787D98."
+
+[[units.character-19-slot07.relocations]]
+offset = 8242
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787FD8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EF82 stores 0x00787FD8; subtracting COFF addend 0x00000000 binds __real@3fa999999999999a to 0x00787FD8."
+
+[[units.character-19-slot07.relocations]]
+offset = 8286
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EFAE stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 8318
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067EFCE stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 8645
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787F58
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F115 stores 0x00787F58; subtracting COFF addend 0x00000000 binds __real@c008000000000000 to 0x00787F58."
+
+[[units.character-19-slot07.relocations]]
+offset = 8670
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F12E stores 0x00787C50; subtracting COFF addend 0x00000000 binds __real@3fe0000000000000 to 0x00787C50."
+
+[[units.character-19-slot07.relocations]]
+offset = 8803
+type = "DIR32"
+symbol = "__real@4085400000000000"
+target = 0x00788460
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F1B3 stores 0x00788460; subtracting COFF addend 0x00000000 binds __real@4085400000000000 to 0x00788460."
+
+[[units.character-19-slot07.relocations]]
+offset = 8860
+type = "DIR32"
+symbol = "__real@c04e000000000000"
+target = 0x007882B8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F1EC stores 0x007882B8; subtracting COFF addend 0x00000000 binds __real@c04e000000000000 to 0x007882B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 8917
+type = "DIR32"
+symbol = "__real@c074000000000000"
+target = 0x00788688
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F225 stores 0x00788688; subtracting COFF addend 0x00000000 binds __real@c074000000000000 to 0x00788688."
+
+[[units.character-19-slot07.relocations]]
+offset = 9204
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067F344 stores displacement -2550440 (0xFFD91558); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 9225
+type = "DIR32"
+symbol = "__real@3f847ae147ae147b"
+target = 0x00787CF0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F359 stores 0x00787CF0; subtracting COFF addend 0x00000000 binds __real@3f847ae147ae147b to 0x00787CF0."
+
+[[units.character-19-slot07.relocations]]
+offset = 9231
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875C0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F35F stores 0x007875C0; subtracting COFF addend 0x00000000 binds __real@3ff0000000000000 to 0x007875C0."
+
+[[units.character-19-slot07.relocations]]
+offset = 9262
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067F37E stores displacement -2550498 (0xFFD9151E); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 9283
+type = "DIR32"
+symbol = "__real@3f2a36e2eb1c432d"
+target = 0x00788D38
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F393 stores 0x00788D38; subtracting COFF addend 0x00000000 binds __real@3f2a36e2eb1c432d to 0x00788D38."
+
+[[units.character-19-slot07.relocations]]
+offset = 9320
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F3B8 stores 0x00787C50; subtracting COFF addend 0x00000000 binds __real@3fe0000000000000 to 0x00787C50."
+
+[[units.character-19-slot07.relocations]]
+offset = 9339
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067F3CB stores displacement -2550575 (0xFFD914D1); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 9485
+type = "DIR32"
+symbol = "__real@4085400000000000"
+target = 0x00788460
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F45D stores 0x00788460; subtracting COFF addend 0x00000000 binds __real@4085400000000000 to 0x00788460."
+
+[[units.character-19-slot07.relocations]]
+offset = 9542
+type = "DIR32"
+symbol = "__real@c04e000000000000"
+target = 0x007882B8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F496 stores 0x007882B8; subtracting COFF addend 0x00000000 binds __real@c04e000000000000 to 0x007882B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 9599
+type = "DIR32"
+symbol = "__real@c074000000000000"
+target = 0x00788688
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F4CF stores 0x00788688; subtracting COFF addend 0x00000000 binds __real@c074000000000000 to 0x00788688."
+
+[[units.character-19-slot07.relocations]]
+offset = 9886
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067F5EE stores displacement -2551122 (0xFFD912AE); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 9907
+type = "DIR32"
+symbol = "__real@3f847ae147ae147b"
+target = 0x00787CF0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F603 stores 0x00787CF0; subtracting COFF addend 0x00000000 binds __real@3f847ae147ae147b to 0x00787CF0."
+
+[[units.character-19-slot07.relocations]]
+offset = 9913
+type = "DIR32"
+symbol = "__real@400c000000000000"
+target = 0x00788058
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F609 stores 0x00788058; subtracting COFF addend 0x00000000 binds __real@400c000000000000 to 0x00788058."
+
+[[units.character-19-slot07.relocations]]
+offset = 9944
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067F628 stores displacement -2551180 (0xFFD91274); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 9965
+type = "DIR32"
+symbol = "__real@3f23a92a30553261"
+target = 0x00788D30
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F63D stores 0x00788D30; subtracting COFF addend 0x00000000 binds __real@3f23a92a30553261 to 0x00788D30."
+
+[[units.character-19-slot07.relocations]]
+offset = 10002
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F662 stores 0x00787C50; subtracting COFF addend 0x00000000 binds __real@3fe0000000000000 to 0x00787C50."
+
+[[units.character-19-slot07.relocations]]
+offset = 10021
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0067F675 stores displacement -2551257 (0xFFD91227); applying the instruction end and COFF addend 0x00000000 binds ?RandomRange@Secondary@@QAEFFF@Z to 0x004108A0."
+
+[[units.character-19-slot07.relocations]]
+offset = 10167
+type = "DIR32"
+symbol = "__real@4085400000000000"
+target = 0x00788460
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F707 stores 0x00788460; subtracting COFF addend 0x00000000 binds __real@4085400000000000 to 0x00788460."
+
+[[units.character-19-slot07.relocations]]
+offset = 10224
+type = "DIR32"
+symbol = "__real@c04e000000000000"
+target = 0x007882B8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F740 stores 0x007882B8; subtracting COFF addend 0x00000000 binds __real@c04e000000000000 to 0x007882B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 10281
+type = "DIR32"
+symbol = "__real@c074000000000000"
+target = 0x00788688
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F779 stores 0x00788688; subtracting COFF addend 0x00000000 binds __real@c074000000000000 to 0x00788688."
+
+[[units.character-19-slot07.relocations]]
+offset = 10546
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0067F882 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 13884
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0068058C stores displacement 1015336 (0x000F7E28); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 14447
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006807BF stores displacement 1014773 (0x000F7BF5); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 14486
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006807E6 stores displacement 1014734 (0x000F7BCE); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 14789
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680915 stores 0x00787338; subtracting COFF addend 0x00000000 binds __real@4008000000000000 to 0x00787338."
+
+[[units.character-19-slot07.relocations]]
+offset = 14801
+type = "DIR32"
+symbol = "__real@c061800000000000"
+target = 0x007889B8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680921 stores 0x007889B8; subtracting COFF addend 0x00000000 binds __real@c061800000000000 to 0x007889B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 14831
+type = "REL32"
+symbol = "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z"
+target = 0x00434010
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0068093F stores displacement -2410803 (0xFFDB36CD); applying the instruction end and COFF addend 0x00000000 binds ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z to 0x00434010."
+
+[[units.character-19-slot07.relocations]]
+offset = 14849
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680951 stores 0x00787338; subtracting COFF addend 0x00000000 binds __real@4008000000000000 to 0x00787338."
+
+[[units.character-19-slot07.relocations]]
+offset = 14861
+type = "DIR32"
+symbol = "__real@c064a00000000000"
+target = 0x00788D28
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0068095D stores 0x00788D28; subtracting COFF addend 0x00000000 binds __real@c064a00000000000 to 0x00788D28."
+
+[[units.character-19-slot07.relocations]]
+offset = 14891
+type = "REL32"
+symbol = "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z"
+target = 0x00434010
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0068097B stores displacement -2410863 (0xFFDB3691); applying the instruction end and COFF addend 0x00000000 binds ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z to 0x00434010."
+
+[[units.character-19-slot07.relocations]]
+offset = 14909
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0068098D stores 0x00787338; subtracting COFF addend 0x00000000 binds __real@4008000000000000 to 0x00787338."
+
+[[units.character-19-slot07.relocations]]
+offset = 14921
+type = "DIR32"
+symbol = "__real@c065400000000000"
+target = 0x00788D20
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680999 stores 0x00788D20; subtracting COFF addend 0x00000000 binds __real@c065400000000000 to 0x00788D20."
+
+[[units.character-19-slot07.relocations]]
+offset = 14951
+type = "REL32"
+symbol = "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z"
+target = 0x00434010
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006809B7 stores displacement -2410923 (0xFFDB3655); applying the instruction end and COFF addend 0x00000000 binds ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z to 0x00434010."
+
+[[units.character-19-slot07.relocations]]
+offset = 14969
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x006809C9 stores 0x00787338; subtracting COFF addend 0x00000000 binds __real@4008000000000000 to 0x00787338."
+
+[[units.character-19-slot07.relocations]]
+offset = 14981
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787E78
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x006809D5 stores 0x00787E78; subtracting COFF addend 0x00000000 binds __real@4061800000000000 to 0x00787E78."
+
+[[units.character-19-slot07.relocations]]
+offset = 15011
+type = "REL32"
+symbol = "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z"
+target = 0x00434010
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006809F3 stores displacement -2410983 (0xFFDB3619); applying the instruction end and COFF addend 0x00000000 binds ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z to 0x00434010."
+
+[[units.character-19-slot07.relocations]]
+offset = 15029
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680A05 stores 0x00787338; subtracting COFF addend 0x00000000 binds __real@4008000000000000 to 0x00787338."
+
+[[units.character-19-slot07.relocations]]
+offset = 15041
+type = "DIR32"
+symbol = "__real@4064a00000000000"
+target = 0x00788CC8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680A11 stores 0x00788CC8; subtracting COFF addend 0x00000000 binds __real@4064a00000000000 to 0x00788CC8."
+
+[[units.character-19-slot07.relocations]]
+offset = 15071
+type = "REL32"
+symbol = "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z"
+target = 0x00434010
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00680A2F stores displacement -2411043 (0xFFDB35DD); applying the instruction end and COFF addend 0x00000000 binds ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z to 0x00434010."
+
+[[units.character-19-slot07.relocations]]
+offset = 15089
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680A41 stores 0x00787338; subtracting COFF addend 0x00000000 binds __real@4008000000000000 to 0x00787338."
+
+[[units.character-19-slot07.relocations]]
+offset = 15101
+type = "DIR32"
+symbol = "__real@4065400000000000"
+target = 0x00787E50
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680A4D stores 0x00787E50; subtracting COFF addend 0x00000000 binds __real@4065400000000000 to 0x00787E50."
+
+[[units.character-19-slot07.relocations]]
+offset = 15131
+type = "REL32"
+symbol = "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z"
+target = 0x00434010
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00680A6B stores displacement -2411103 (0xFFDB35A1); applying the instruction end and COFF addend 0x00000000 binds ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z to 0x00434010."
+
+[[units.character-19-slot07.relocations]]
+offset = 15202
+type = "DIR32"
+symbol = "__real@3f9999999999999a"
+target = 0x00787D38
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680AB2 stores 0x00787D38; subtracting COFF addend 0x00000000 binds __real@3f9999999999999a to 0x00787D38."
+
+[[units.character-19-slot07.relocations]]
+offset = 15247
+type = "DIR32"
+symbol = "__real@4046800000000000"
+target = 0x00788170
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680ADF stores 0x00788170; subtracting COFF addend 0x00000000 binds __real@4046800000000000 to 0x00788170."
+
+[[units.character-19-slot07.relocations]]
+offset = 15289
+type = "DIR32"
+symbol = "__real@3f8eb851eb851eb8"
+target = 0x00788250
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680B09 stores 0x00788250; subtracting COFF addend 0x00000000 binds __real@3f8eb851eb851eb8 to 0x00788250."
+
+[[units.character-19-slot07.relocations]]
+offset = 15334
+type = "DIR32"
+symbol = "__real@4046800000000000"
+target = 0x00788170
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680B36 stores 0x00788170; subtracting COFF addend 0x00000000 binds __real@4046800000000000 to 0x00788170."
+
+[[units.character-19-slot07.relocations]]
+offset = 15376
+type = "DIR32"
+symbol = "__real@3f8eb851eb851eb8"
+target = 0x00788250
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680B60 stores 0x00788250; subtracting COFF addend 0x00000000 binds __real@3f8eb851eb851eb8 to 0x00788250."
+
+[[units.character-19-slot07.relocations]]
+offset = 15453
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00680BAD stores displacement 1013767 (0x000F7807); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 15492
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00680BD4 stores displacement 1013728 (0x000F77E0); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 15577
+type = "DIR32"
+symbol = "__real@408c200000000000"
+target = 0x007880B8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680C29 stores 0x007880B8; subtracting COFF addend 0x00000000 binds __real@408c200000000000 to 0x007880B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 15609
+type = "DIR32"
+symbol = "__real@c076800000000000"
+target = 0x007884E0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680C49 stores 0x007884E0; subtracting COFF addend 0x00000000 binds __real@c076800000000000 to 0x007884E0."
+
+[[units.character-19-slot07.relocations]]
+offset = 15947
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680D9B stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 15972
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00680DB4 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 21970
+type = "DIR32"
+symbol = "__real@bf947ae147ae147b"
+target = 0x00787F20
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682522 stores 0x00787F20; subtracting COFF addend 0x00000000 binds __real@bf947ae147ae147b to 0x00787F20."
+
+[[units.character-19-slot07.relocations]]
+offset = 22369
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006826B1 stores displacement 1006851 (0x000F5D03); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22407
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006826D7 stores displacement 1006813 (0x000F5CDD); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22474
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0068271A stores displacement 1006746 (0x000F5C9A); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22512
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682740 stores displacement 1006708 (0x000F5C74); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22579
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682783 stores displacement 1006641 (0x000F5C31); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22617
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006827A9 stores displacement 1006603 (0x000F5C0B); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22684
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006827EC stores displacement 1006536 (0x000F5BC8); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22710
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682806 stores displacement 1006510 (0x000F5BAE); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22774
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682846 stores displacement 1006446 (0x000F5B6E); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22812
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0068286C stores displacement 1006408 (0x000F5B48); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22879
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006828AF stores displacement 1006341 (0x000F5B05); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22917
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006828D5 stores displacement 1006303 (0x000F5ADF); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 22984
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682918 stores displacement 1006236 (0x000F5A9C); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 23022
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0068293E stores displacement 1006198 (0x000F5A76); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 23089
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682981 stores displacement 1006131 (0x000F5A33); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 23127
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006829A7 stores displacement 1006093 (0x000F5A0D); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 23194
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006829EA stores displacement 1006026 (0x000F59CA); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 23230
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682A0E stores displacement 1005990 (0x000F59A6); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 23297
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682A51 stores displacement 1005923 (0x000F5963); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 23335
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682A77 stores displacement 1005885 (0x000F593D); applying the instruction end and COFF addend 0x00000000 binds __ftol2 to 0x007783B8."
+
+[[units.character-19-slot07.relocations]]
+offset = 23730
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682C02 stores displacement 1003867 (0x000F515B); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 23748
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682C14 stores displacement 1003849 (0x000F5149); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 23812
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682C54 stores displacement 1003785 (0x000F5109); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 23840
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787FD0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682C70 stores 0x00787FD0; subtracting COFF addend 0x00000000 binds __real@3ff3333333333333 to 0x00787FD0."
+
+[[units.character-19-slot07.relocations]]
+offset = 23851
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682C7B stores displacement 1003746 (0x000F50E2); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 23879
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787DE8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682C97 stores 0x00787DE8; subtracting COFF addend 0x00000000 binds __real@3fe6666666666666 to 0x00787DE8."
+
+[[units.character-19-slot07.relocations]]
+offset = 23896
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682CA8 stores displacement 1003701 (0x000F50B5); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 23924
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787FC8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682CC4 stores 0x00787FC8; subtracting COFF addend 0x00000000 binds __real@3ffb333333333333 to 0x00787FC8."
+
+[[units.character-19-slot07.relocations]]
+offset = 23936
+type = "DIR32"
+symbol = "__real@bffccccccccccccd"
+target = 0x00787D90
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682CD0 stores 0x00787D90; subtracting COFF addend 0x00000000 binds __real@bffccccccccccccd to 0x00787D90."
+
+[[units.character-19-slot07.relocations]]
+offset = 23960
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682CE8 stores displacement 1003637 (0x000F5075); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 23988
+type = "DIR32"
+symbol = "__real@3fe3333333333333"
+target = 0x00787DB8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682D04 stores 0x00787DB8; subtracting COFF addend 0x00000000 binds __real@3fe3333333333333 to 0x00787DB8."
+
+[[units.character-19-slot07.relocations]]
+offset = 23999
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682D0F stores displacement 1003598 (0x000F504E); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 24027
+type = "DIR32"
+symbol = "__real@3feccccccccccccd"
+target = 0x007872E8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682D2B stores 0x007872E8; subtracting COFF addend 0x00000000 binds __real@3feccccccccccccd to 0x007872E8."
+
+[[units.character-19-slot07.relocations]]
+offset = 24044
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682D3C stores displacement 1003553 (0x000F5021); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 24072
+type = "DIR32"
+symbol = "__real@3ff6666666666666"
+target = 0x00787F18
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682D58 stores 0x00787F18; subtracting COFF addend 0x00000000 binds __real@3ff6666666666666 to 0x00787F18."
+
+[[units.character-19-slot07.relocations]]
+offset = 24084
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787CC8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682D64 stores 0x00787CC8; subtracting COFF addend 0x00000000 binds __real@bff3333333333333 to 0x00787CC8."
+
+[[units.character-19-slot07.relocations]]
+offset = 24128
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787FD8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682D90 stores 0x00787FD8; subtracting COFF addend 0x00000000 binds __real@3fa999999999999a to 0x00787FD8."
+
+[[units.character-19-slot07.relocations]]
+offset = 24172
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682DBC stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 24204
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00682DDC stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 24654
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682F9E stores displacement 1002943 (0x000F4DBF); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 24672
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682FB0 stores displacement 1002925 (0x000F4DAD); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 24736
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00682FF0 stores displacement 1002861 (0x000F4D6D); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 24769
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x00683011 stores displacement 1002828 (0x000F4D4C); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 24797
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0068302D stores 0x00787C50; subtracting COFF addend 0x00000000 binds __real@3fe0000000000000 to 0x00787C50."
+
+[[units.character-19-slot07.relocations]]
+offset = 24814
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0068303E stores displacement 1002783 (0x000F4D1F); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 24842
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787D48
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0068305A stores 0x00787D48; subtracting COFF addend 0x00000000 binds __real@3ff8000000000000 to 0x00787D48."
+
+[[units.character-19-slot07.relocations]]
+offset = 24854
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00683066 stores 0x00787D98; subtracting COFF addend 0x00000000 binds __real@bff8000000000000 to 0x00787D98."
+
+[[units.character-19-slot07.relocations]]
+offset = 24878
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x0068307E stores displacement 1002719 (0x000F4CDF); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 24906
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x0068309A stores 0x00787C50; subtracting COFF addend 0x00000000 binds __real@3fe0000000000000 to 0x00787C50."
+
+[[units.character-19-slot07.relocations]]
+offset = 24917
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006830A5 stores displacement 1002680 (0x000F4CB8); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 24945
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787D80
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x006830C1 stores 0x00787D80; subtracting COFF addend 0x00000000 binds __real@3fe999999999999a to 0x00787D80."
+
+[[units.character-19-slot07.relocations]]
+offset = 24962
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe REL32 operand field at 0x006830D2 stores displacement 1002635 (0x000F4C8B); applying the instruction end and COFF addend 0x00000000 binds _rand to 0x00777D61."
+
+[[units.character-19-slot07.relocations]]
+offset = 24990
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787FD0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x006830EE stores 0x00787FD0; subtracting COFF addend 0x00000000 binds __real@3ff3333333333333 to 0x00787FD0."
+
+[[units.character-19-slot07.relocations]]
+offset = 25002
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787CB8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x006830FA stores 0x00787CB8; subtracting COFF addend 0x00000000 binds __real@bff0000000000000 to 0x00787CB8."
+
+[[units.character-19-slot07.relocations]]
+offset = 25046
+type = "DIR32"
+symbol = "__real@3f9eb851eb851eb8"
+target = 0x00787CA0
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00683126 stores 0x00787CA0; subtracting COFF addend 0x00000000 binds __real@3f9eb851eb851eb8 to 0x00787CA0."
+
+[[units.character-19-slot07.relocations]]
+offset = 25090
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00683152 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 25122
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe DIR32 operand field at 0x00683172 stores 0x007872F8; subtracting COFF addend 0x00000000 binds __real@0000000000000000 to 0x007872F8."
+
+[[units.character-19-slot07.relocations]]
+offset = 25787
+type = "DIR32"
+symbol = "$L62530"
+target = 0x0067D0B2
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068340B stores 0x0067D0B2, matching native case entry 0x0067D0B2 and compiled local target offset 0x00000162."
+
+[[units.character-19-slot07.relocations]]
+offset = 25791
+type = "DIR32"
+symbol = "$L62546"
+target = 0x0067D48F
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068340F stores 0x0067D48F, matching native case entry 0x0067D48F and compiled local target offset 0x0000053F."
+
+[[units.character-19-slot07.relocations]]
+offset = 25795
+type = "DIR32"
+symbol = "$L62562"
+target = 0x0067D86D
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683413 stores 0x0067D86D, matching native case entry 0x0067D86D and compiled local target offset 0x0000091D."
+
+[[units.character-19-slot07.relocations]]
+offset = 25799
+type = "DIR32"
+symbol = "$L62578"
+target = 0x0067DC4E
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683417 stores 0x0067DC4E, matching native case entry 0x0067DC4E and compiled local target offset 0x00000CFE."
+
+[[units.character-19-slot07.relocations]]
+offset = 25803
+type = "DIR32"
+symbol = "$L62583"
+target = 0x0067DD80
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068341B stores 0x0067DD80, matching native case entry 0x0067DD80 and compiled local target offset 0x00000E30."
+
+[[units.character-19-slot07.relocations]]
+offset = 25807
+type = "DIR32"
+symbol = "$L62587"
+target = 0x0067DE56
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068341F stores 0x0067DE56, matching native case entry 0x0067DE56 and compiled local target offset 0x00000F06."
+
+[[units.character-19-slot07.relocations]]
+offset = 25811
+type = "DIR32"
+symbol = "$L62591"
+target = 0x0067DF2C
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683423 stores 0x0067DF2C, matching native case entry 0x0067DF2C and compiled local target offset 0x00000FDC."
+
+[[units.character-19-slot07.relocations]]
+offset = 25815
+type = "DIR32"
+symbol = "$L62601"
+target = 0x0067E1B9
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683427 stores 0x0067E1B9, matching native case entry 0x0067E1B9 and compiled local target offset 0x00001269."
+
+[[units.character-19-slot07.relocations]]
+offset = 25819
+type = "DIR32"
+symbol = "$L62610"
+target = 0x0067E3C3
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068342B stores 0x0067E3C3, matching native case entry 0x0067E3C3 and compiled local target offset 0x00001473."
+
+[[units.character-19-slot07.relocations]]
+offset = 25823
+type = "DIR32"
+symbol = "$L62615"
+target = 0x0067E4C4
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068342F stores 0x0067E4C4, matching native case entry 0x0067E4C4 and compiled local target offset 0x00001574."
+
+[[units.character-19-slot07.relocations]]
+offset = 25827
+type = "DIR32"
+symbol = "$L62619"
+target = 0x0067E59A
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683433 stores 0x0067E59A, matching native case entry 0x0067E59A and compiled local target offset 0x0000164A."
+
+[[units.character-19-slot07.relocations]]
+offset = 25831
+type = "DIR32"
+symbol = "$L62623"
+target = 0x0067E670
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683437 stores 0x0067E670, matching native case entry 0x0067E670 and compiled local target offset 0x00001720."
+
+[[units.character-19-slot07.relocations]]
+offset = 25835
+type = "DIR32"
+symbol = "$L62641"
+target = 0x0067E9B5
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068343B stores 0x0067E9B5, matching native case entry 0x0067E9B5 and compiled local target offset 0x00001A65."
+
+[[units.character-19-slot07.relocations]]
+offset = 25839
+type = "DIR32"
+symbol = "$L62651"
+target = 0x0067EB89
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068343F stores 0x0067EB89, matching native case entry 0x0067EB89 and compiled local target offset 0x00001C39."
+
+[[units.character-19-slot07.relocations]]
+offset = 25843
+type = "DIR32"
+symbol = "$L62669"
+target = 0x0067EEEA
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683443 stores 0x0067EEEA, matching native case entry 0x0067EEEA and compiled local target offset 0x00001F9A."
+
+[[units.character-19-slot07.relocations]]
+offset = 25847
+type = "DIR32"
+symbol = "$L62679"
+target = 0x0067F0C4
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683447 stores 0x0067F0C4, matching native case entry 0x0067F0C4 and compiled local target offset 0x00002174."
+
+[[units.character-19-slot07.relocations]]
+offset = 25851
+type = "DIR32"
+symbol = "$L62691"
+target = 0x0067F2F5
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068344B stores 0x0067F2F5, matching native case entry 0x0067F2F5 and compiled local target offset 0x000023A5."
+
+[[units.character-19-slot07.relocations]]
+offset = 25855
+type = "DIR32"
+symbol = "$L62708"
+target = 0x0067F59F
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068344F stores 0x0067F59F, matching native case entry 0x0067F59F and compiled local target offset 0x0000264F."
+
+[[units.character-19-slot07.relocations]]
+offset = 25859
+type = "DIR32"
+symbol = "$L62725"
+target = 0x0067F849
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683453 stores 0x0067F849, matching native case entry 0x0067F849 and compiled local target offset 0x000028F9."
+
+[[units.character-19-slot07.relocations]]
+offset = 25863
+type = "DIR32"
+symbol = "$L62733"
+target = 0x0067F9CE
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683457 stores 0x0067F9CE, matching native case entry 0x0067F9CE and compiled local target offset 0x00002A7E."
+
+[[units.character-19-slot07.relocations]]
+offset = 25867
+type = "DIR32"
+symbol = "$L62738"
+target = 0x0067FAEC
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068345B stores 0x0067FAEC, matching native case entry 0x0067FAEC and compiled local target offset 0x00002B9C."
+
+[[units.character-19-slot07.relocations]]
+offset = 25871
+type = "DIR32"
+symbol = "$L62745"
+target = 0x0067FC5B
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068345F stores 0x0067FC5B, matching native case entry 0x0067FC5B and compiled local target offset 0x00002D0B."
+
+[[units.character-19-slot07.relocations]]
+offset = 25875
+type = "DIR32"
+symbol = "$L62752"
+target = 0x0067FDCA
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683463 stores 0x0067FDCA, matching native case entry 0x0067FDCA and compiled local target offset 0x00002E7A."
+
+[[units.character-19-slot07.relocations]]
+offset = 25879
+type = "DIR32"
+symbol = "$L62759"
+target = 0x0067FF39
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683467 stores 0x0067FF39, matching native case entry 0x0067FF39 and compiled local target offset 0x00002FE9."
+
+[[units.character-19-slot07.relocations]]
+offset = 25883
+type = "DIR32"
+symbol = "$L62766"
+target = 0x006800A8
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068346B stores 0x006800A8, matching native case entry 0x006800A8 and compiled local target offset 0x00003158."
+
+[[units.character-19-slot07.relocations]]
+offset = 25887
+type = "DIR32"
+symbol = "$L62773"
+target = 0x00680217
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068346F stores 0x00680217, matching native case entry 0x00680217 and compiled local target offset 0x000032C7."
+
+[[units.character-19-slot07.relocations]]
+offset = 25891
+type = "DIR32"
+symbol = "$L62780"
+target = 0x00680386
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683473 stores 0x00680386, matching native case entry 0x00680386 and compiled local target offset 0x00003436."
+
+[[units.character-19-slot07.relocations]]
+offset = 25895
+type = "DIR32"
+symbol = "$L62785"
+target = 0x006804BC
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683477 stores 0x006804BC, matching native case entry 0x006804BC and compiled local target offset 0x0000356C."
+
+[[units.character-19-slot07.relocations]]
+offset = 25899
+type = "DIR32"
+symbol = "$L62793"
+target = 0x00680605
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068347B stores 0x00680605, matching native case entry 0x00680605 and compiled local target offset 0x000036B5."
+
+[[units.character-19-slot07.relocations]]
+offset = 25903
+type = "DIR32"
+symbol = "$L62798"
+target = 0x006806FA
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068347F stores 0x006806FA, matching native case entry 0x006806FA and compiled local target offset 0x000037AA."
+
+[[units.character-19-slot07.relocations]]
+offset = 25907
+type = "DIR32"
+symbol = "$L62807"
+target = 0x006808C0
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683483 stores 0x006808C0, matching native case entry 0x006808C0 and compiled local target offset 0x00003970."
+
+[[units.character-19-slot07.relocations]]
+offset = 25911
+type = "DIR32"
+symbol = "$L62828"
+target = 0x00680D8D
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683487 stores 0x00680D8D, matching native case entry 0x00680D8D and compiled local target offset 0x00003E3D."
+
+[[units.character-19-slot07.relocations]]
+offset = 25915
+type = "DIR32"
+symbol = "$L62832"
+target = 0x00680E95
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068348B stores 0x00680E95, matching native case entry 0x00680E95 and compiled local target offset 0x00003F45."
+
+[[units.character-19-slot07.relocations]]
+offset = 25919
+type = "DIR32"
+symbol = "$L62839"
+target = 0x00681004
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068348F stores 0x00681004, matching native case entry 0x00681004 and compiled local target offset 0x000040B4."
+
+[[units.character-19-slot07.relocations]]
+offset = 25923
+type = "DIR32"
+symbol = "$L62850"
+target = 0x006811FA
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683493 stores 0x006811FA, matching native case entry 0x006811FA and compiled local target offset 0x000042AA."
+
+[[units.character-19-slot07.relocations]]
+offset = 25927
+type = "DIR32"
+symbol = "$L62857"
+target = 0x00681369
+evidence = "Canonical EFZ.exe switch-address-table word at 0x00683497 stores 0x00681369, matching native case entry 0x00681369 and compiled local target offset 0x00004419."
+
+[[units.character-19-slot07.relocations]]
+offset = 25931
+type = "DIR32"
+symbol = "$L62864"
+target = 0x006814D8
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068349B stores 0x006814D8, matching native case entry 0x006814D8 and compiled local target offset 0x00004588."
+
+[[units.character-19-slot07.relocations]]
+offset = 25935
+type = "DIR32"
+symbol = "$L62870"
+target = 0x006815F6
+evidence = "Canonical EFZ.exe switch-address-table word at 0x0068349F stores 0x006815F6, matching native case entry 0x006815F6 and compiled local target offset 0x000046A6."
+
+[[units.character-19-slot07.relocations]]
+offset = 25939
+type = "DIR32"
+symbol = "$L62876"
+target = 0x00681714
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834A3 stores 0x00681714, matching native case entry 0x00681714 and compiled local target offset 0x000047C4."
+
+[[units.character-19-slot07.relocations]]
+offset = 25943
+type = "DIR32"
+symbol = "$L62882"
+target = 0x00681832
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834A7 stores 0x00681832, matching native case entry 0x00681832 and compiled local target offset 0x000048E2."
+
+[[units.character-19-slot07.relocations]]
+offset = 25947
+type = "DIR32"
+symbol = "$L62894"
+target = 0x00681BEA
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834AB stores 0x00681BEA, matching native case entry 0x00681BEA and compiled local target offset 0x00004C9A."
+
+[[units.character-19-slot07.relocations]]
+offset = 25951
+type = "DIR32"
+symbol = "$L62898"
+target = 0x00681CC0
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834AF stores 0x00681CC0, matching native case entry 0x00681CC0 and compiled local target offset 0x00004D70."
+
+[[units.character-19-slot07.relocations]]
+offset = 25955
+type = "DIR32"
+symbol = "$L62902"
+target = 0x00681D96
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834B3 stores 0x00681D96, matching native case entry 0x00681D96 and compiled local target offset 0x00004E46."
+
+[[units.character-19-slot07.relocations]]
+offset = 25959
+type = "DIR32"
+symbol = "$L62908"
+target = 0x00681EB2
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834B7 stores 0x00681EB2, matching native case entry 0x00681EB2 and compiled local target offset 0x00004F62."
+
+[[units.character-19-slot07.relocations]]
+offset = 25963
+type = "DIR32"
+symbol = "$L62914"
+target = 0x00681FCE
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834BB stores 0x00681FCE, matching native case entry 0x00681FCE and compiled local target offset 0x0000507E."
+
+[[units.character-19-slot07.relocations]]
+offset = 25967
+type = "DIR32"
+symbol = "$L62920"
+target = 0x006820EA
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834BF stores 0x006820EA, matching native case entry 0x006820EA and compiled local target offset 0x0000519A."
+
+[[units.character-19-slot07.relocations]]
+offset = 25971
+type = "DIR32"
+symbol = "$L62926"
+target = 0x00682206
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834C3 stores 0x00682206, matching native case entry 0x00682206 and compiled local target offset 0x000052B6."
+
+[[units.character-19-slot07.relocations]]
+offset = 25975
+type = "DIR32"
+symbol = "$L62932"
+target = 0x00682322
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834C7 stores 0x00682322, matching native case entry 0x00682322 and compiled local target offset 0x000053D2."
+
+[[units.character-19-slot07.relocations]]
+offset = 25979
+type = "DIR32"
+symbol = "$L62938"
+target = 0x0068243E
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834CB stores 0x0068243E, matching native case entry 0x0068243E and compiled local target offset 0x000054EE."
+
+[[units.character-19-slot07.relocations]]
+offset = 25983
+type = "DIR32"
+symbol = "$L62942"
+target = 0x00682514
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834CF stores 0x00682514, matching native case entry 0x00682514 and compiled local target offset 0x000055C4."
+
+[[units.character-19-slot07.relocations]]
+offset = 25987
+type = "DIR32"
+symbol = "$L62947"
+target = 0x0068263C
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834D3 stores 0x0068263C, matching native case entry 0x0068263C and compiled local target offset 0x000056EC."
+
+[[units.character-19-slot07.relocations]]
+offset = 25991
+type = "DIR32"
+symbol = "$L63005"
+target = 0x00682BB5
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834D7 stores 0x00682BB5, matching native case entry 0x00682BB5 and compiled local target offset 0x00005C65."
+
+[[units.character-19-slot07.relocations]]
+offset = 25995
+type = "DIR32"
+symbol = "$L63022"
+target = 0x00682F51
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834DB stores 0x00682F51, matching native case entry 0x00682F51 and compiled local target offset 0x00006001."
+
+[[units.character-19-slot07.relocations]]
+offset = 25999
+type = "DIR32"
+symbol = "$L63039"
+target = 0x006832E7
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834DF stores 0x006832E7, matching native case entry 0x006832E7 and compiled local target offset 0x00006397."
+
+[[units.character-19-slot07.relocations]]
+offset = 26003
+type = "DIR32"
+symbol = "$L62522"
+target = 0x006833EA
+evidence = "Canonical EFZ.exe switch-address-table word at 0x006834E3 stores 0x006833EA, matching native case entry 0x006833EA and compiled local target offset 0x0000649A."
