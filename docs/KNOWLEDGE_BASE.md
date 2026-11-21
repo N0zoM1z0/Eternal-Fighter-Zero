@@ -2886,6 +2886,36 @@ caller bytes were compared independently. Public evidence:
 `docs/evidence/nagamori-affected-consumers-exact.json`. Unrelated
 stale-header certificates and whole-image/runtime checks remain open.
 
+### Akiko Character16::Slot01: complete 3,887-byte Exact gauge renderer
+
+The canonical Akiko vtable `0x00788F58`, slot 1 at `0x00788F5C`, selects
+`Character16::Slot01` at `0x00724780`. Its complete native extent is
+`[0x00724780,0x007256AF)`, **3,887 code bytes**, followed by one `CC`
+alignment byte and `Character16::Slot08` at `0x007256B0`. Natural C++ is
+implemented in `src/Character16Render.cpp`.
+
+The renderer draws seven layers in the original order: pattern 43's meter
+background; pattern 44's fill clipped by `field3148 / 1000`; three pattern 40
+frames selected by `field3154`, `field3158` and `field315c`; pattern 41's
+frame 0/1; and, while `field3160` is active, pattern 42's timed overlay.
+During the timed state, each pattern-40 selection is overridden by frame 10
+and pattern 41 switches to frame 1. The last overlay uses the original x87
+`field3160 * 0.001` conversion and mirrored player-dependent placement.
+Each layer uses its own source rectangle and player-dependent destination
+rectangle before calling `Video::DrawSurface`.
+
+A selected-only pinned VC7.1 `/Od /G6 /MT /Gy /W3` cold replay proves
+**3,887/3,887 bytes, zero differences, and all 32 original relocations**:
+21 calls to `MakeSurfaceRect` at `0x0040C590`, seven `Video::DrawSurface`
+calls at `0x00409A90`, two `__ftol2` calls at `0x007783B8`, and two absolute
+references to the original `0.001` constant at `0x00787FB0`. The relocated
+candidate and original PE extent share SHA-256
+`1b06e073da69094d3a03575824ae150d755f2447fa6dcc1cad378549d0b57afe`.
+The vtable selection, full owner boundary, following alignment and every
+relocation target were independently recorded. Proof:
+`docs/evidence/character-16-slot01-exact.json`. This is complete-function
+codegen Exact, not whole-game linkage or runtime parity.
+
 ### Akiko Character16 Slot08: complete 1,310-byte Exact opponent/timer special
 
 Original Akiko vtable `0x00788F78` points to the complete

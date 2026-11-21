@@ -1,0 +1,351 @@
+{
+  "schema_version": 1,
+  "authority": "complete-function-codegen; selected pinned VC7.1 cold replay against original EFZ.exe",
+  "owner": "Akiko Character16::Slot01 seven-layer gauge, charge and timed-overlay renderer",
+  "vtable": {
+    "address": "0x00788F58",
+    "slot_index": 1,
+    "entry_address": "0x00788F5C",
+    "target": "0x00724780"
+  },
+  "native_extent": {
+    "start": "0x00724780",
+    "exclusive_end": "0x007256AF",
+    "bytes": 3887,
+    "following_alignment": "0x007256AF (one CC byte)",
+    "next_owner": "0x007256B0"
+  },
+  "source": "src/Character16Render.cpp",
+  "render_layers": [
+    "Pattern 43 full meter background while field3148 > 0",
+    "Pattern 44 meter fill clipped by field3148 / 1000",
+    "Pattern 40 frames field3154, field3158 and field315c, each overridden to frame 10 while field3160 > 0",
+    "Pattern 41 frame 0, overridden to frame 1 while field3160 > 0",
+    "Pattern 42 frame 0 while field3160 > 0, horizontally offset by the x87 conversion of field3160 * 0.001"
+  ],
+  "native_operands": {
+    "MakeSurfaceRect": "0x0040C590",
+    "Video::DrawSurface": "0x00409A90",
+    "x87_integer_conversion": "0x007783B8",
+    "x87_scale_constant": "0x00787FB0 (0.001)",
+    "coff_relocations": 32
+  },
+  "natural_cpp_without_assembly_or_padding": true,
+  "replay": {
+    "result": "exact",
+    "size": 3887,
+    "matched_bytes": 3887,
+    "difference_count": 0,
+    "first_differences": [],
+    "relocations": [
+      {
+        "offset": 86,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 196,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 299,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 553,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 717,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 895,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 1215,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 1352,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 1474,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 1775,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 1912,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 2034,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 2335,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 2472,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 2594,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 2878,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 3015,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 3137,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 3390,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 3552,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 3702,
+        "target": 4244880,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to MakeSurfaceRect at 0x0040C590.",
+        "addend": 0
+      },
+      {
+        "offset": 451,
+        "target": 4233872,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to Video::DrawSurface at 0x00409A90.",
+        "addend": 0
+      },
+      {
+        "offset": 1071,
+        "target": 4233872,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to Video::DrawSurface at 0x00409A90.",
+        "addend": 0
+      },
+      {
+        "offset": 1650,
+        "target": 4233872,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to Video::DrawSurface at 0x00409A90.",
+        "addend": 0
+      },
+      {
+        "offset": 2210,
+        "target": 4233872,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to Video::DrawSurface at 0x00409A90.",
+        "addend": 0
+      },
+      {
+        "offset": 2770,
+        "target": 4233872,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to Video::DrawSurface at 0x00409A90.",
+        "addend": 0
+      },
+      {
+        "offset": 3313,
+        "target": 4233872,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to Video::DrawSurface at 0x00409A90.",
+        "addend": 0
+      },
+      {
+        "offset": 3878,
+        "target": 4233872,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+        "evidence": "Original EFZ.exe REL32 operand resolves to Video::DrawSurface at 0x00409A90.",
+        "addend": 0
+      },
+      {
+        "offset": 3525,
+        "target": 7897008,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__real@3f50624dd2f1a9fc",
+        "evidence": "Original x87 FMUL absolute operand resolves to the 0.001 double constant at 0x00787FB0.",
+        "addend": 0
+      },
+      {
+        "offset": 3671,
+        "target": 7897008,
+        "type": "DIR32",
+        "type_id": 6,
+        "symbol": "__real@3f50624dd2f1a9fc",
+        "evidence": "Original x87 FMUL absolute operand resolves to the 0.001 double constant at 0x00787FB0.",
+        "addend": 0
+      },
+      {
+        "offset": 3530,
+        "target": 7832504,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "__ftol2",
+        "evidence": "Original x87 integer-conversion call resolves to the compiler helper at 0x007783B8.",
+        "addend": 0
+      },
+      {
+        "offset": 3676,
+        "target": 7832504,
+        "type": "REL32",
+        "type_id": 20,
+        "symbol": "__ftol2",
+        "evidence": "Original x87 integer-conversion call resolves to the compiler helper at 0x007783B8.",
+        "addend": 0
+      }
+    ],
+    "relocated_sha256": "1b06e073da69094d3a03575824ae150d755f2447fa6dcc1cad378549d0b57afe",
+    "target_extent_sha256": "1b06e073da69094d3a03575824ae150d755f2447fa6dcc1cad378549d0b57afe",
+    "unit": "character-16-slot01",
+    "symbol": "?Slot01@Character16@@UAEXXZ",
+    "target_address": "0x00724780",
+    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+    "boundary_ledger_sha256": "a6dc8c4817d6f57140476792690844e1698adc20870e8625239a8e15f4b8bb3e",
+    "object_sha256": "60191a7b366b92527376de3c2e1c674acf08220b51b31a7d4b490bdd8fb678ff",
+    "source_sha256": "6f0b938f39a667c0b12b0434df12ef01b9c67138033d464ea0de6390bfdde0e4",
+    "dependencies": {
+      "src/Engine.h": "9860dbc52924c21239a092f46f703524d78a572f80020e7f0d7318444fbd4466",
+      "src/Input.h": "7e1b92c1a534d672ee17dc33d9e2b2db1983a24617b1f41d140064757204a47e",
+      "src/CharacterViews.h": "67719139719eff631f507727d91d308e8d760f955719822297eb9ad87db1fa4b"
+    },
+    "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+    "units_manifest_sha256": "d74447bc6cf0449c1f48a67b6de5e744ac94773e3e85f21ba52f56f90e62d68c",
+    "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+    "unit_sha256": "51675acc1b09b1e8512f7127c502d4a33fc90ac32cb3d7add174d4cb88116529",
+    "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+    "acceptance_authority": "complete-function-codegen"
+  }
+}
