@@ -332,15 +332,15 @@ void Character19::Slot07()
           }
           effects[i].vy =
                effects[i].vy + 0.05;
-          if (!(((effects[i].y < 0.0) ||
-              (effects[i].vy <= 0.0)) ||
+          if (!(((!(effects[i].y >= 0.0)) ||
+              (!(effects[i].vy > 0.0))) ||
              (effects[i].frame != 1))) {
 
             RemoveLocalEffect((short)i);
                     }
           else {
 
-            if (((0.0 <= effects[i].y) ||
+            if (((effects[i].y >= 0.0) ||
                 (1 < effects[i].field0080)) &&
                (effects[i].frame == 0)) {
               effects[i].y =
@@ -375,8 +375,8 @@ void Character19::Slot07()
           }
           effects[i].vy =
                effects[i].vy + 0.05;
-          if (!((effects[i].y < 0.0) ||
-             (effects[i].vy <= 0.0))) {
+          if (!((!(effects[i].y >= 0.0)) ||
+             (!(effects[i].vy > 0.0)))) {
 
             RemoveLocalEffect((short)i);
                     }
@@ -402,15 +402,15 @@ void Character19::Slot07()
           }
           effects[i].vy =
                effects[i].vy + 0.05;
-          if (!(((effects[i].y < 0.0) ||
-              (effects[i].vy <= 0.0)) ||
+          if (!(((!(effects[i].y >= 0.0)) ||
+              (!(effects[i].vy > 0.0))) ||
              (effects[i].frame != 1))) {
 
             RemoveLocalEffect((short)i);
                     }
           else {
 
-            if (((0.0 <= effects[i].y) ||
+            if (((effects[i].y >= 0.0) ||
                 (1 < effects[i].field0080)) &&
                (effects[i].frame == 0)) {
               effects[i].y =
@@ -445,8 +445,8 @@ void Character19::Slot07()
           }
           effects[i].vy =
                effects[i].vy + 0.05;
-          if (!((effects[i].y < 0.0) ||
-             (effects[i].vy <= 0.0))) {
+          if (!((!(effects[i].y >= 0.0)) ||
+             (!(effects[i].vy > 0.0)))) {
 
             RemoveLocalEffect((short)i);
                     }

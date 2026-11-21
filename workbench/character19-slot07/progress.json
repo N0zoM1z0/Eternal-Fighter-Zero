@@ -2,9 +2,9 @@
   "status": "code-extent-exact-relocations-pending",
   "owner": "Character19::Slot07",
   "source": "src/Character19Effects.cpp",
-  "source_sha256": "4daacde39278eee99712267a8089ef17ccfd019674b90c582213f52cb66d8ba7",
+  "source_sha256": "c2b036a88a321b45e9471686d1321f4e8bebd4b846206e05c29bf87c0e4a2d6c",
   "object": "build/match-units/character-19-slot07/Character19Effects.obj",
-  "object_sha256": "f2e98a95c1591169dca7e086c4d2c7e9ea3ab64bdd75fb7dfb056eee1b5121f3",
+  "object_sha256": "f72bf07efe21d6358b901ad5d711d161a79d58f914fa80bd435a7b7b3babd2c6",
   "target_address": "0x0067CF50",
   "target_code_extent_bytes": 25787,
   "candidate_symbol_bytes": 26107,
@@ -24,12 +24,34 @@
     "tick_vs_frame_duration": 52,
     "frame_vs_frame_count": 52
   },
+  "x87_unordered_semantics_repairs": {
+    "cases": [
+      "0x19b",
+      "0x19c",
+      "0x19d",
+      "0x19e"
+    ],
+    "expressions": [
+      "!(effects[i].y >= 0.0)",
+      "!(effects[i].vy > 0.0)",
+      "effects[i].y >= 0.0"
+    ],
+    "note": "Matches the native x87 status-word tests for unordered comparisons while preserving the corresponding finite-value behavior."
+  },
   "instruction_diagnostic": {
-    "mean_case_signature_similarity": 0.9753,
+    "mean_case_signature_similarity": 0.9941,
     "median_case_signature_similarity": 1.0,
-    "worst_case": "0x1ae",
-    "worst_case_signature_similarity": 0.7818,
-    "note": "Diagnostic only: register-aware Capstone instruction signatures; branch targets normalized. Not an exact replay acceptance metric."
+    "perfect_case_signature_count": 46,
+    "worst_case": "default",
+    "worst_case_signature_similarity": 0.8333,
+    "next_cases": [
+      "0x19f",
+      "0x1f0",
+      "0x1a0",
+      "0x1a1",
+      "0x1ae"
+    ],
+    "note": "Diagnostic only: register-independent Capstone instruction signatures; absolute operands and branch destinations normalized. Not an exact replay acceptance metric."
   },
   "case_intervals": [
     {
@@ -586,6 +608,6 @@
     "default"
   ],
   "case_intervals_different": [],
-  "exact_replay": "not yet accepted; code prefix, all 55 case boundaries, 55 jump targets and 100-byte selector table now match native. All 265 original COFF relocation destinations still require explicit binding and complete replay.",
+  "exact_replay": "not yet accepted; code prefix, all 55 case boundaries, 55 jump targets and 100-byte selector table match native. All 265 original COFF relocation destinations still require explicit binding and complete replay.",
   "whole_game_cold_replay": "not run; selected unit only"
 }
