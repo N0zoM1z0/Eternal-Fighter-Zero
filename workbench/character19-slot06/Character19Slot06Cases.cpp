@@ -478,40 +478,7 @@ void Character19::Slot06UpdateDashTrailCharge(
 
 // Stun/effect recovery: configure the short invulnerability and guard windows,
 // then emit the native palette-0x13 context effect on the opening frame.
-void Character19::Slot06UpdateStunEffectRecovery(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    EffectSpawn *spawn)
-{
-    if ((field000a == 0) && (field000c == 0)) {
-        field00dc = 4;
-        field00de = 0xec;
-        velocityX = 0.0;
-        remainingHitCount = 1;
-        guardInputFrames = 0;
-        hitstunFrames = 60;
 
-        spawn->type = 0x28;
-        spawn->x = (double)((int)positionX + (int)facing * 10);
-        spawn->y = (double)((int)positionY - 0x28);
-        spawn->group = 2;
-        spawn->layer = 1;
-        spawn->palette = 0x13;
-        contextOwner->EmitEffect(spawn);
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        attackCollisionResult = 0;
-        if (frameCount <= field000a) {
-            field0008 = 0;
-            FaceOpponent();
-            ResetPose();
-        }
-    }
-}
 
 // Frame-4 impact pair: a context-owned flash followed by the character-local
 // 0x194 strike effect, with the meter and character-sound request in between.

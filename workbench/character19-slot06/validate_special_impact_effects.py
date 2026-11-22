@@ -156,14 +156,6 @@ for address, expected_value in (
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
 helpers = {
-    "stun": ("Slot06UpdateStunEffectRecovery", (
-        "field00dc = 4;", "field00de = 0xec;", "velocityX = 0.0;",
-        "remainingHitCount = 1;", "guardInputFrames = 0;", "hitstunFrames = 60;",
-        "spawn->type = 0x28;", "spawn->x = (double)((int)positionX + (int)facing * 10);",
-        "spawn->y = (double)((int)positionY - 0x28);", "spawn->group = 2;",
-        "spawn->layer = 1;", "spawn->palette = 0x13;", "contextOwner->EmitEffect(spawn);",
-        "attackCollisionResult = 0;", "FaceOpponent();", "ResetPose();",
-    )),
 }
 for key, (name, expressions) in helpers.items():
     start = source.index(f"void Character19::{name}")
@@ -219,9 +211,18 @@ native_spawn_init = (ROOT / ".analysis/kanna-slot06/helpers/405490.c").read_text
 assert "_memset(param_1,0,0x48);" in native_spawn_init
 cpp_spawn_init = (ROOT / "src/EffectPool.cpp").read_text()
 assert "std::memset(this, 0, sizeof(*this));" in cpp_spawn_init
-stun_start = source.index("void Character19::Slot06UpdateStunEffectRecovery")
-stun_end = source.index("\n}\n", stun_start) + 3
-assert "spawn->owner = 1;" not in source[stun_start:stun_end]
+stun = (ROOT / "workbench/character19-slot06/Character19Slot06Case64.inc").read_text()
+for expression in (
+    "field00dc = 4;", "field00de = 0xec;", "velocityX = 0.0;",
+    "remainingHitCount = 1;", "guardInputFrames = 0;", "hitstunFrames = 60;",
+    "spawn.type = 0x28;", "spawn.x = (double)((int)positionX + (int)facing * 10);",
+    "spawn.y = (double)((int)positionY - 0x28);", "spawn.group = 2;",
+    "spawn.layer = 1;", "spawn.palette = 0x13;", "contextOwner->EmitEffect(&spawn);",
+    "attackCollisionResult = 0;", "FaceOpponent();", "ResetPose();",
+    "++field000c;", "++field000a;",
+):
+    assert expression in stun, expression
+assert "spawn.owner = 1;" not in stun
 assert "Slot06UpdateImpactEffectPair" not in source
 combo_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case66.inc").read_text()
 for expression in (
@@ -304,7 +305,7 @@ for expression in (
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 for state, name in (
-    (249, "Slot06UpdateStunEffectRecovery"),
+    (249, "Character19Slot06Case64.inc"),
     (250, "Character19Slot06Case65.inc"),
     (251, "Character19Slot06Case66.inc"),
     (253, "Character19Slot06Case67.inc"),

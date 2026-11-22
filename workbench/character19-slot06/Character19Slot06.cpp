@@ -868,8 +868,9 @@ void Character19::Slot06()
         break;
 
     case 100:
-        self->Slot06UpdateStunEffectRecovery(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case64.inc"
+        }
         break;
 
     case 101:
