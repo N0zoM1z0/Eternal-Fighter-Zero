@@ -908,18 +908,21 @@ void Character19::Slot06()
         break;
 
     case 107:
-        self->Slot06UpdateLocalEffectFinish(
-            timing.frameDuration, timing.animationFrameCount, 400);
+        {
+#include "Character19Slot06Case6B.inc"
+        }
         break;
 
     case 108:
-        self->Slot06UpdateLocalEffectFinish(
-            timing.frameDuration, timing.animationFrameCount, 401);
+        {
+#include "Character19Slot06Case6C.inc"
+        }
         break;
 
     case 109:
-        self->Slot06UpdateLocalEffectFinish(
-            timing.frameDuration, timing.animationFrameCount, 402);
+        {
+#include "Character19Slot06Case6D.inc"
+        }
         break;
 
     case 110:

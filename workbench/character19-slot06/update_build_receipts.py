@@ -55,7 +55,6 @@ assert any(symbol.startswith("?Slot06UpdateGroundImpactRecovery@Character19@@") 
 assert any(symbol.startswith("?Slot06UpdateDashTrailCharge@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateStunEffectRecovery@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateFinalFaceTransition@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateLocalEffectFinish@Character19@@") for symbol in helper_members)
 
 
 main_source = workbench / "Character19Slot06.cpp"
@@ -1249,10 +1248,6 @@ face_transition_helper = next(
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-local_finish_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateLocalEffectFinish@")
-)
 (workbench / "local-effect-finishes-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": {
@@ -1269,13 +1264,19 @@ local_finish_helper = next(
         "completion_state": 0,
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": local_finish_helper,
-        **helper_members[local_finish_helper],
-        "status": "semantic-workbench-only-not-exact",
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "symbol": "?Slot06@Character19@@UAEXXZ",
+        "symbol_size": len(main_body),
+        "inlined_case_sources": {
+            f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
+                (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
+            ).hexdigest()
+            for case in (0x6B, 0x6C, 0x6D)
+        },
+        "status": "inlined-natural-cpp-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,

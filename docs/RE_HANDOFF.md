@@ -1649,8 +1649,8 @@ access throughout the dispatcher and all case fragments. This places the
 frequently used self pointer at [ebp-0x54], matching the native this-pointer
 operand, and the local EffectSpawn at [ebp-0x50]. The compiler still stores the
 incoming this pointer separately at [ebp-0x88], so the candidate stack
-allocation is 0x284 versus native 0x244. The COFF symbol is 55,671 bytes
-(54,889 code + 782 switch data), while the native owner is 58,363 code + 782
+allocation is 0x29c versus native 0x244. The COFF symbol is 56,652 bytes
+(55,870 code + 782 switch data), while the native owner is 58,363 code + 782
 switch data. The large selector 0x73 body is 2,302 bytes versus 2,400 native
 bytes; its normalized instruction-shape diagnostic is 624/643 instructions
 with 0.93923 similarity. The six horizontal-recovery cases remain inline and
@@ -1686,10 +1686,18 @@ and 88/88 instructions for 0x29, 341/341 and 88/88 for 0x2a, and 317/317 and
 82/82 for 0x2b. Cases 0x29/0x2a retain the inputY==1 standing transition;
 0x2b directly selects state 3. The x87 screen-edge predicate, opponent-height
 pushback scale, dash-flag clear and 16-bit frame progression are preserved.
-All 38 targeted Slot06 validators pass after normalizing the explicit self
-alias in source-text assertions. This remains a partial natural-C++
-reconstruction, not Exact; the remaining code-size and stack-frame
-differences need further source-level reconstruction.
+
+The three local-effect finisher selectors 0x6B-0x6D (states 263-265) are now
+inline C++ cases using Slot06's dispatcher-owned EffectSpawn local, with the
+resource fixed per arm (0x190/0x191/0x192). They preserve rounded coordinates,
+the native spawn-field store order, owner/group/layer/facing payload,
+meter/sound event and frame-9 collision-clear path. Each case matches its
+native 355-byte interval and 98/98 normalized instruction sequence. Their
+shared 339-byte helper and class declaration were removed. All 38 targeted
+Slot06 validators pass after normalizing the explicit self alias in
+source-text assertions. This remains a partial natural-C++ reconstruction,
+not Exact; the remaining code-size and stack-frame differences need further
+source-level reconstruction.
 
 ## Kanna (Character19) CPU Slot07 — natural C++ port started — 2026-11-18
 

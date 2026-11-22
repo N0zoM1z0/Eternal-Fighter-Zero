@@ -6,11 +6,11 @@
     "size": 58363
   },
   "partial_candidate": {
-    "source_sha256": "5d9d4aa7dcbb3000956c76348e6c2c6e11b718f4bb629ae6d6e4e1e3cdc04331",
-    "object_sha256": "ac847e6d6f21bbaa8e3e2eb65806863c1caf1a387767c406bbd7493eb3f44fa4",
+    "source_sha256": "50150b3fd51bb3dd6a4b31ce5a82c3f2312ff1147bf9bbfc0724ccad877fac1c",
+    "object_sha256": "46201dd6b5aefe0839ce31b6adc0c2f0460ee6c6626b5c275636ee05f3efb615",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 55671,
-    "relocation_count": 1154,
+    "symbol_size": 56652,
+    "relocation_count": 1160,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0,
     "status": "partial-semantic-workbench-not-exact",

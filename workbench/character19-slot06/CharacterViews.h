@@ -422,7 +422,6 @@ public:
     void Slot06UpdateDashTrailCharge(unsigned short, unsigned short);
     void Slot06UpdateStunEffectRecovery(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateFinalFaceTransition(unsigned short, unsigned short);
-    void Slot06UpdateLocalEffectFinish(unsigned short, unsigned short, unsigned short);
 
 };
 class Character20 : public Secondary {

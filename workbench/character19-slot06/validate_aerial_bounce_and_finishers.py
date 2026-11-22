@@ -162,16 +162,6 @@ helpers = {
         "attackCollisionResult = 0;", "field0008 = 3;",
         "FaceOpponent();", "ResetPose();",
     )),
-    "local": ("Slot06UpdateLocalEffectFinish", (
-        "ResetFrame();", "EffectSpawn effect;", "effect.owner = 1;",
-        "effect.type = effectType;", "effect.x = (double)((int)positionX + (int)facing * 0x1e);",
-        "effect.y = (double)((int)positionY - 0x28);", "effect.group = 0;",
-        "effect.layer = 1;", "effect.facing = (facing != 1);",
-        "effect.flag0018 = (unsigned char)facing;", "effect.field0028 = 1;",
-        "EmitLocalEffect(&effect);", "meter = meter + 45;",
-        "pendingCharacterSoundSlot = 2;", "field000a > 9",
-        "attackCollisionResult = 0;", "field0008 = 0;", "ResetPose();",
-    )),
 }
 for key, (name, expressions) in helpers.items():
     start = source.index(f"void Character19::{name}")
@@ -179,6 +169,27 @@ for key, (name, expressions) in helpers.items():
     helper = source[start:end]
     for expression in expressions:
         assert expression in helper, (key, expression)
+
+for case, effect_type in ((0x6B, 0x190), (0x6C, 0x191), (0x6D, 0x192)):
+    local = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        "ResetFrame();", "spawn.owner = 1;", f"spawn.type = 0x{effect_type:X};",
+        "spawn.x = (double)((int)positionX + (int)facing * 0x1e);",
+        "spawn.y = (double)((int)positionY - 0x28);", "spawn.group = 0;",
+        "spawn.layer = 1;", "spawn.facing = (facing != 1);",
+        "spawn.flag0018 = (unsigned char)facing;", "spawn.field0028 = 1;",
+        "EmitLocalEffect(&spawn);", "meter = meter + 45;",
+        "pendingCharacterSoundSlot = 2;", "field000a > 9",
+        "attackCollisionResult = 0;", "field0008 = 0;", "ResetPose();",
+        "++field000c;", "++field000a;",
+    ):
+        assert expression in local, (hex(case), expression)
+    assert local.count("if ((field000a == 0) && (field000c == 0))") == 2
+    assert local.index("ResetFrame();") < local.index("spawn.type = ")
+    assert local.index("spawn.type = ") < local.index("spawn.x = ")
+    assert local.index("spawn.x = ") < local.index("spawn.y = ")
+    assert local.index("spawn.field0028 = 1;") < local.index("spawn.owner = 1;")
+    assert local.index("spawn.owner = 1;") < local.index("EmitLocalEffect(&spawn);")
 
 bounce = (ROOT / "workbench/character19-slot06/Character19Slot06Case68.inc").read_text()
 for expression in (
@@ -247,9 +258,9 @@ for state, name in (
     (256, "Character19Slot06Case68.inc"),
     (257, "Character19Slot06Case69.inc"),
     (259, "Slot06UpdateFinalFaceTransition"),
-    (263, "Slot06UpdateLocalEffectFinish"),
-    (264, "Slot06UpdateLocalEffectFinish"),
-    (265, "Slot06UpdateLocalEffectFinish"),
+    (263, "Character19Slot06Case6B.inc"),
+    (264, "Character19Slot06Case6C.inc"),
+    (265, "Character19Slot06Case6D.inc"),
 ):
     assert_selector_case(dispatcher, state)
     if name.endswith(".inc"):

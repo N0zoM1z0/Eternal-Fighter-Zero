@@ -38,23 +38,27 @@
     "completion_state": 0
   },
   "candidate": {
-    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-    "source_sha256": "bc424be003aa8371c49ce32d25c78d5c94b5aa6b604e2a7edcc156a24e3928d0",
-    "object": "build/character19-slot06/Character19Slot06Cases.obj",
-    "object_sha256": "4bdfdf98175e81f4cbf85e35e9f187c2bf1e6e0102ee910965732bf38c8bb9cd",
-    "symbol": "?Slot06UpdateLocalEffectFinish@Character19@@QAEXGGG@Z",
-    "candidate_size": 339,
-    "relocations": 4,
-    "status": "semantic-workbench-only-not-exact"
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "50150b3fd51bb3dd6a4b31ce5a82c3f2312ff1147bf9bbfc0724ccad877fac1c",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "46201dd6b5aefe0839ce31b6adc0c2f0460ee6c6626b5c275636ee05f3efb615",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 56652,
+    "inlined_case_sources": {
+      "workbench/character19-slot06/Character19Slot06Case6B.inc": "509910ecc51af042a5983ba3579b8060dd4335b8daa3bd7afd9aea684f0501d2",
+      "workbench/character19-slot06/Character19Slot06Case6C.inc": "d2d598bb8db36a9ac0129a4a5bb686f9a4342fb7319a8969470d89dd812178ed",
+      "workbench/character19-slot06/Character19Slot06Case6D.inc": "f44d5251780ae81c17cc569976baf6701ae44202a65e45c4821e267887f88c53"
+    },
+    "status": "inlined-natural-cpp-not-exact"
   },
   "dispatcher": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "5d9d4aa7dcbb3000956c76348e6c2c6e11b718f4bb629ae6d6e4e1e3cdc04331",
+    "source_sha256": "50150b3fd51bb3dd6a4b31ce5a82c3f2312ff1147bf9bbfc0724ccad877fac1c",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "ac847e6d6f21bbaa8e3e2eb65806863c1caf1a387767c406bbd7493eb3f44fa4",
+    "object_sha256": "46201dd6b5aefe0839ce31b6adc0c2f0460ee6c6626b5c275636ee05f3efb615",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 55671,
-    "relocation_count": 1154,
+    "symbol_size": 56652,
+    "relocation_count": 1160,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0,
     "included_sources": {

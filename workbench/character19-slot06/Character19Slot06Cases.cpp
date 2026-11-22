@@ -554,43 +554,7 @@ void Character19::Slot06UpdateFinalFaceTransition(
 
 // Three finishers share the same local-effect setup and timer. Their only
 // native difference is the effect resource: 0x190, 0x191 or 0x192.
-void Character19::Slot06UpdateLocalEffectFinish(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    unsigned short effectType)
-{
-    if ((field000a == 0) && (field000c == 0)) {
-        ResetFrame();
 
-        EffectSpawn effect;
-        effect.owner = 1;
-        effect.type = effectType;
-        effect.x = (double)((int)positionX + (int)facing * 0x1e);
-        effect.y = (double)((int)positionY - 0x28);
-        effect.group = 0;
-        effect.layer = 1;
-        effect.facing = (facing != 1);
-        effect.flag0018 = (unsigned char)facing;
-        effect.field0028 = 1;
-        EmitLocalEffect(&effect);
-
-        meter = meter + 45;
-        pendingCharacterSoundSlot = 2;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (field000a > 9) {
-            attackCollisionResult = 0;
-        }
-        if (frameCount <= field000a) {
-            field0008 = 0;
-            ResetPose();
-        }
-    }
-}
 
 
 // Two-stage local-effect finisher: distinct frame-7 and frame-8 resources,
