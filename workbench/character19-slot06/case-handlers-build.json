@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "4fcf06758ea814fcefca81db899e4df74d8c0f42fcbfeb17199d389900b11240",
+  "source_sha256": "b7bd7cdb03974b97d5d6631f61199069df7345865c44d91f2c81d5feaa99a725",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "a9dac6a08635b223bf324968eec30f92f020e28bc46b84c9ea089d7daa17f586",
+  "object_sha256": "76ca5ef51ec4ab4901a0c58e777e5df34569e36dcfb5195e4b281fa06a6d8959",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -41,10 +41,6 @@
     "?Slot06UpdateFinalFaceTransition@Character19@@QAEXGG@Z": {
       "candidate_size": 126,
       "relocations": 1
-    },
-    "?Slot06UpdateGroundImpactRecovery@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
-      "candidate_size": 301,
-      "relocations": 7
     },
     "?Slot06UpdateKnockbackImpactFinish@Character19@@QAEXGGPAUEffectSpawn@@G@Z": {
       "candidate_size": 284,

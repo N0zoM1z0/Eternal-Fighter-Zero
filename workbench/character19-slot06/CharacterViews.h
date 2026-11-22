@@ -418,7 +418,6 @@ public:
     void Slot06UpdateKnockbackImpactFinish(unsigned short, unsigned short, EffectSpawn *, unsigned short);
     void Slot06UpdateDashRecovery(unsigned short, unsigned short);
     void Slot06UpdateAerialKickback(unsigned short, unsigned short);
-    void Slot06UpdateGroundImpactRecovery(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateFinalFaceTransition(unsigned short, unsigned short);
 
 };

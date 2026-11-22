@@ -379,41 +379,7 @@ void Character19::Slot06UpdateAerialKickback(
 }
 
 // Stationary ground impact with camera shake and a one-shot context effect.
-void Character19::Slot06UpdateGroundImpactRecovery(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    EffectSpawn *spawn)
-{
-    velocityX = 0.0;
-    velocityY = 0.0;
 
-    if ((field000a == 0) && (field000c == 0)) {
-        SetVerticalShake(3, 0);
-
-        spawn->type = 3;
-        spawn->x = (double)(int)positionX;
-        spawn->y = (double)(int)positionY;
-        spawn->group = 2;
-        spawn->layer = 0;
-        spawn->palette = 7;
-        contextOwner->EmitEffect(spawn);
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        attackCollisionResult = 0;
-        if (frameCount <= field000a) {
-            field0008 = 7;
-            if (inputY == 1) {
-                field0008 = 3;
-            }
-            FaceOpponent();
-            ResetPose();
-        }
-    }
-}
 
 
 // Opponent capture impact: on the confirmed hit, reset both fighters, lock the

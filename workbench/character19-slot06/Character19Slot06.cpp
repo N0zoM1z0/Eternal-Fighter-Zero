@@ -816,8 +816,9 @@ void Character19::Slot06()
         break;
 
     case 91:
-        self->Slot06UpdateGroundImpactRecovery(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case5B.inc"
+        }
         break;
 
     case 92:

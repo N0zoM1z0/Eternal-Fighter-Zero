@@ -616,8 +616,9 @@ lines += [
 
 lines += labels(0x5b)
 lines += [
-    "        Slot06UpdateGroundImpactRecovery(",
-    "            timing.frameDuration, timing.animationFrameCount, &spawn);",
+    "        {",
+    '#include "Character19Slot06Case5B.inc"',
+    "        }",
     "        break;",
     "",
 ]
@@ -840,7 +841,7 @@ field0008 field000a field000c patterns positionX positionY velocityX velocityY h
 opponentSlot contextOwner videoOwner inputOwner audioOwner player characterId paletteIndex resourceName cpuControlled field00a8 field00ac velocityXCorrection outgoingPushbackVelocityX knockbackVelocityX knockbackVelocityY outgoingPushbackActive field00dc field00de comboDisplayHitCount comboDamageScaleDisplay comboDamage comboDisplayTimer health damageTrailHealth animatedHealth field0118 field0120 airActionLockFrames airActionDisabled knockdownOnLanding throwInvulnerabilityFrames airActionGauge field0138 field013a hitInvulnerabilityFrames field013e koDelayFrames field0144 meter hitstopFrames hitstunFrames guardInputFrames guardInputLatched field0154 dashMomentumFlag airDashCount airActionCount field015c field0160 sequences attackCollisionResult remainingHitCount attackWasGuarded comboHitCount comboDamageScale field0180 inputX inputY buttonPulse buttonHeld cpuMoveRightFrames cpuMoveLeftFrames actionBufferedInput stateGroupCBufferedInput stateGroupCBufferFrames history inputHistoryWriteIndex recognizedCommand soundSlots pendingCharacterSoundSlot pendingContextSoundSlot effectWrite effectRead effectOwner effectActive effects field2ad0 field2af8 trail tint30b8 field30bc field30c0 field30c4 field30c8 field30cc field30d0 field30d4 field30d8 field30dc field30e0 field30e4 field30e8 field30ec field30ee field30f0 commandCount commands field3110 field3114 statistics
 field3138 field313c field3140 field3144 field3148 field314c field3150 field3154 field3254 field3354 unknown_3454
 EmitLocalEffect RemoveLocalEffect InitializeState UpdateLocomotionState
-Slot06OpponentWithinKnockbackRange Slot06UpdateKnockbackLanding Slot06UpdateLocalEffectRecovery Slot06UpdateFaceRecovery Slot06UpdateDefeatImpact Slot06UpdateDefeatWait Slot06UpdateKnockbackImpactFinish Slot06UpdateDashRecovery Slot06UpdateAerialKickback Slot06UpdateGroundImpactRecovery Slot06UpdateFinalFaceTransition
+Slot06OpponentWithinKnockbackRange Slot06UpdateKnockbackLanding Slot06UpdateLocalEffectRecovery Slot06UpdateFaceRecovery Slot06UpdateDefeatImpact Slot06UpdateDefeatWait Slot06UpdateKnockbackImpactFinish Slot06UpdateDashRecovery Slot06UpdateAerialKickback Slot06UpdateFinalFaceTransition
 ResetPose ResetFrame ResetLocalEffectSpawn RandomRange SetTint SetCharacterTint SetVerticalShake SetHorizontalShake SetHorizontalOffset FaceOpponent FacePosition StartTrail
 """.split()
 self_member_pattern = re.compile(

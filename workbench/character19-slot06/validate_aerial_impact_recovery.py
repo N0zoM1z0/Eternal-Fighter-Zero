@@ -123,7 +123,6 @@ source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read
 assert "Slot06UpdateAerialGroundSlam" not in source
 helpers = {
     "kickback": "Slot06UpdateAerialKickback",
-    "ground": "Slot06UpdateGroundImpactRecovery",
 }
 helper_text = {}
 for key, name in helpers.items():
@@ -174,29 +173,18 @@ for expression in (
 ):
     assert expression in helper_text["kickback"], expression
 
-ground_start = source.index("void Character19::Slot06UpdateGroundImpactRecovery")
-ground_end = source.index("\n}\n", ground_start) + 3
-assert "spawn->owner = 1;" not in source[ground_start:ground_end]
-
+ground = (ROOT / "workbench/character19-slot06/Character19Slot06Case5B.inc").read_text()
 for expression in (
-    "velocityX = 0.0;",
-    "velocityY = 0.0;",
-    "SetVerticalShake(3, 0);",
-    "spawn->type = 3;",
-    "spawn->x = (double)(int)positionX;",
-    "spawn->y = (double)(int)positionY;",
-    "spawn->group = 2;",
-    "spawn->layer = 0;",
-    "spawn->palette = 7;",
-    "contextOwner->EmitEffect(spawn);",
-    "attackCollisionResult = 0;",
-    "field0008 = 7;",
-    "if (inputY == 1)",
-    "field0008 = 3;",
-    "FaceOpponent();",
-    "ResetPose();",
+    "velocityX = 0.0;", "velocityY = 0.0;", "SetVerticalShake(3, 0);",
+    "spawn.type = 3;", "spawn.x = (double)(int)positionX;",
+    "spawn.y = (double)(int)positionY;", "spawn.group = 2;",
+    "spawn.layer = 0;", "spawn.palette = 7;", "contextOwner->EmitEffect(&spawn);",
+    "attackCollisionResult = 0;", "field0008 = 7;", "if (inputY == 1)",
+    "field0008 = 3;", "FaceOpponent();", "ResetPose();",
+    "++field000c;", "++field000a;",
 ):
-    assert expression in helper_text["ground"], expression
+    assert expression in ground, expression
+assert "spawn.owner = 1;" not in ground
 
 # Shared leaf implementations are the direct C++ mappings of the native helpers.
 shake = (ROOT / "src/SecondaryEffectControls.cpp").read_text()
@@ -241,7 +229,7 @@ assert '#include "Character19Slot06Case59.inc"' in dispatcher
 assert "Slot06UpdateAerialGroundSlam(" not in dispatcher
 for state, helper in (
     (213, "Slot06UpdateAerialKickback"),
-    (214, "Slot06UpdateGroundImpactRecovery"),
+    (214, "Character19Slot06Case5B.inc"),
 ):
     assert_selector_case(dispatcher, state)
     assert helper in dispatcher
