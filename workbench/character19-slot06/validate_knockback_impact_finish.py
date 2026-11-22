@@ -47,12 +47,12 @@ case_rows = {
     int(row["case_index"], 16): row
     for row in csv.DictReader((ROOT / "workbench/character19-slot06/case-map.csv").open())
 }
-renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
+renderer = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 for case, state, size, completion in ((0x48,168,330,0),(0x49,169,330,3)):
     row = case_rows[case]
     assert int(row["native_code_bytes"]) == size
     assert [int(x) for x in row["state_ids"].split(";") if x] == [state]
-    assert f"({hex(case)}, {completion})" in renderer
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in renderer
     block = "\n".join(blocks[case])
     for expression in (
         "*(undefined1 *)(param_1 + 0x56) = 0;",
@@ -78,25 +78,34 @@ for case, state, size, completion in ((0x48,168,330,0),(0x49,169,330,3)):
         assert "*(undefined2 *)(param_1 + 2) = 3;" in block
     print(f"case 0x{case:02x}: native={size}, state={state}, effect=8, group=2, layer=1, completion={completion}")
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
-    "void Character19::Slot06UpdateKnockbackImpactFinish",
-    "dashMomentumFlag = 0;",
-    "ResetFrame();",
-    "positionY = 0.0;",
-    "guardInputFrames = 0;",
-    "spawn->type = 8;",
-    "spawn->x = (double)(int)positionX;",
-    "spawn->y = (double)(int)positionY;",
-    "spawn->group = 2;",
-    "spawn->layer = 1;",
-    "contextOwner->EmitEffect(spawn);",
-    "if (field000a == frameCount)",
-    "FaceOpponent();",
-    "field0008 = completionState;",
-    "ResetPose();",
-):
-    assert expression in source, expression
+for case, completion in ((0x48, 0), (0x49, 3)):
+    body = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    ordered = (
+        "dashMomentumFlag = 0;",
+        "velocityX = 0.0;",
+        "velocityY = 0.0;",
+        "positionY = 0.0;",
+        "gravity = 0.0;",
+        "guardInputFrames = 0;",
+        "outgoingPushbackVelocityX = 0.0;",
+        "horizontalDeceleration = 0.0;",
+        "spawn.type = 8;",
+        "spawn.x = (double)(int)positionX;",
+        "spawn.y = (double)(int)positionY;",
+        "spawn.group = 2;",
+        "spawn.layer = 1;",
+        "contextOwner->EmitEffect(&spawn);",
+    )
+    positions = [body.index(expression) for expression in ordered]
+    assert positions == sorted(positions), (hex(case), positions)
+    assert "positionX = 0.0;" not in body
+    assert body.count("guardInputFrames = 0;") == 1
+    for expression in (
+        "++field000c;", "++field000a;",
+        "field000a == timing.animationFrameCount", "FaceOpponent();",
+        f"field0008 = {completion};", "ResetPose();",
+    ):
+        assert expression in body, (hex(case), expression)
 
 reset = (ROOT / "src/SecondaryState.cpp").read_text()
 for expression in (
@@ -130,6 +139,8 @@ for expression in (
     assert expression in analog, expression
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert_selector_case(dispatcher, 168)
-assert_selector_case(dispatcher, 169)
+for state, include in ((168,"Character19Slot06Case48.inc"),(169,"Character19Slot06Case49.inc")):
+    assert_selector_case(dispatcher, state)
+    assert f'#include "{include}"' in dispatcher
+assert "Slot06UpdateKnockbackImpactFinish(" not in dispatcher
 print({"variants":2,"normalized_native_bodies_equal":True,"state_ids":[168,169]})

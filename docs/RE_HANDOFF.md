@@ -1649,8 +1649,8 @@ access throughout the dispatcher and all case fragments. This places the
 frequently used self pointer at [ebp-0x54], matching the native this-pointer
 operand, and the local EffectSpawn at [ebp-0x50]. The compiler still stores the
 incoming this pointer separately at [ebp-0x88], so the candidate stack
-allocation is 0x2b0 versus native 0x244. The COFF symbol is 58,171 bytes
-(57,389 code + 782 switch data), while the native owner is 58,363 code + 782
+allocation is 0x2c0 versus native 0x244. The COFF symbol is 58,773 bytes
+(57,991 code + 782 switch data), while the native owner is 58,363 code + 782
 switch data. The large selector 0x73 body is 2,302 bytes versus 2,400 native
 bytes; its normalized instruction-shape diagnostic is 624/643 instructions
 with 0.93923 similarity. The six horizontal-recovery cases remain inline and
@@ -1694,6 +1694,14 @@ the native spawn-field store order, owner/group/layer/facing payload,
 meter/sound event and frame-9 collision-clear path. Each case matches its
 native 355-byte interval and 98/98 normalized instruction sequence. Their
 shared 339-byte helper and class declaration were removed.
+
+The paired knockback finishers 0x48/0x49 (states 168/169) are now independent
+inline natural-C++ switch arms. Their initialization order matches the native
+stores: velocityX, velocityY, positionY, gravity, guardInputFrames,
+outgoingPushbackVelocityX and horizontalDeceleration are cleared, while
+positionX remains intact for the type-8 effect coordinates. Each arm matches
+its 330-byte native interval and all 86/86 normalized instructions. The
+284-byte parameterized helper and its class declaration were removed.
 
 Selector 0x64 (state 249, stun/effect recovery) is now inline natural C++ too.
 It uses Slot06's zero-initialized dispatcher EffectSpawn for the owner-0

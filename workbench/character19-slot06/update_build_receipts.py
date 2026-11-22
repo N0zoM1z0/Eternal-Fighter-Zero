@@ -48,7 +48,6 @@ assert any(symbol.startswith("?Slot06UpdateLocalEffectRecovery@Character19@@") f
 assert "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateDefeatImpact@Character19@@") for symbol in helper_members)
 assert "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z" in helper_members
-assert any(symbol.startswith("?Slot06UpdateKnockbackImpactFinish@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashRecovery@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateFinalFaceTransition@Character19@@") for symbol in helper_members)
@@ -566,10 +565,6 @@ defeat_wait_helper = "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z"
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-impact_finish_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateKnockbackImpactFinish@")
-)
 (workbench / "knockback-impact-finish-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": {
@@ -577,13 +572,19 @@ impact_finish_helper = next(
         "0x49": {"entry": "0x00670192", "bytes": 330, "state_id": 169, "effect_type": 8, "group": 2, "layer": 1, "completion_state": 3},
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": impact_finish_helper,
-        **helper_members[impact_finish_helper],
-        "status": "semantic-workbench-only-not-exact",
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "symbol": "?Slot06@Character19@@UAEXXZ",
+        "symbol_size": len(main_body),
+        "inlined_case_sources": {
+            f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
+                (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
+            ).hexdigest()
+            for case in (0x48, 0x49)
+        },
+        "status": "inlined-natural-cpp-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,

@@ -704,15 +704,15 @@ void Character19::Slot06()
         break;
 
     case 72:
-        self->Slot06UpdateKnockbackImpactFinish(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            0);
+        {
+#include "Character19Slot06Case48.inc"
+        }
         break;
 
     case 73:
-        self->Slot06UpdateKnockbackImpactFinish(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            3);
+        {
+#include "Character19Slot06Case49.inc"
+        }
         break;
 
     case 74:
