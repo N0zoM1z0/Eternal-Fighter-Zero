@@ -29,10 +29,11 @@ static const unsigned char Character19Slot06SelectorCases[0x136] = {
 
 void Character19::Slot06()
 {
-    if (hitstopFrames > 0) {
+    Character19 *self = this;
+    if (self->hitstopFrames > 0) {
         return;
     }
-    if ((*opponentSlot)->hitstunFrames > 0) {
+    if ((*self->opponentSlot)->hitstunFrames > 0) {
         return;
     }
 
@@ -44,11 +45,11 @@ void Character19::Slot06()
         __declspec(align(4)) unsigned short frameDuration;
     } timing;
 
-    timing.frameDuration = patterns[field0008].frames[field000a].duration;
-    timing.animationFrameCount = patterns[field0008].count;
-    ResetLocalEffectSpawn(&spawn);
+    timing.frameDuration = self->patterns[self->field0008].frames[self->field000a].duration;
+    timing.animationFrameCount = self->patterns[self->field0008].count;
+    self->ResetLocalEffectSpawn(&spawn);
     selectorCase = 0x75;
-    stateIndex = field0008;
+    stateIndex = self->field0008;
     if (stateIndex != 0) {
         --stateIndex;
         if (stateIndex <= 0x135) {
@@ -58,95 +59,95 @@ void Character19::Slot06()
 
     switch (selectorCase) {
     case 0:
-        dashMomentumFlag = 0;
-        velocityX = 0.8;
-        velocityY = 0.0;
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a >= timing.animationFrameCount) {
-                field000a = 0;
+        self->dashMomentumFlag = 0;
+        self->velocityX = 0.8;
+        self->velocityY = 0.0;
+        ++self->field000c;
+        if (self->field000c >= timing.frameDuration) {
+            self->field000c = 0;
+            ++self->field000a;
+            if (self->field000a >= timing.animationFrameCount) {
+                self->field000a = 0;
             }
         }
         break;
     case 1:
-        dashMomentumFlag = 0;
-        velocityX = -0.8;
-        velocityY = 0.0;
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a >= timing.animationFrameCount) {
-                field000a = 0;
+        self->dashMomentumFlag = 0;
+        self->velocityX = -0.8;
+        self->velocityY = 0.0;
+        ++self->field000c;
+        if (self->field000c >= timing.frameDuration) {
+            self->field000c = 0;
+            ++self->field000a;
+            if (self->field000a >= timing.animationFrameCount) {
+                self->field000a = 0;
             }
         }
         break;
     case 2:
-        velocityX = 0.0;
-        velocityY = 0.0;
-        dashMomentumFlag = 0;
-        FaceOpponent();
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a >= timing.animationFrameCount) {
-                field000a = 0;
+        self->velocityX = 0.0;
+        self->velocityY = 0.0;
+        self->dashMomentumFlag = 0;
+        self->FaceOpponent();
+        ++self->field000c;
+        if (self->field000c >= timing.frameDuration) {
+            self->field000c = 0;
+            ++self->field000a;
+            if (self->field000a >= timing.animationFrameCount) {
+                self->field000a = 0;
             }
         }
         break;
     case 6:
-        velocityX = 0.0;
-        velocityY = 0.0;
-        dashMomentumFlag = 0;
-        FaceOpponent();
-        field000c = field000c + 1;
-        if (timing.frameDuration <= field000c) {
-            field000c = 0;
-            field000a = field000a + 1;
-            if (timing.animationFrameCount <= field000a) {
-                field000a = 0;
-                field0008 = 0;
-                ResetPose();
+        self->velocityX = 0.0;
+        self->velocityY = 0.0;
+        self->dashMomentumFlag = 0;
+        self->FaceOpponent();
+        self->field000c = self->field000c + 1;
+        if (timing.frameDuration <= self->field000c) {
+            self->field000c = 0;
+            self->field000a = self->field000a + 1;
+            if (timing.animationFrameCount <= self->field000a) {
+                self->field000a = 0;
+                self->field0008 = 0;
+                self->ResetPose();
             }
         }
         break;
 
     case 7:
-        velocityX = 0.0;
-        velocityY = 0.0;
-        dashMomentumFlag = 0;
-        FaceOpponent();
-        field000c = field000c + 1;
-        if (timing.frameDuration <= field000c) {
-            field000c = 0;
-            field000a = field000a + 1;
-            if (timing.animationFrameCount <= field000a) {
-                field000a = 0;
-                field0008 = 3;
-                ResetPose();
+        self->velocityX = 0.0;
+        self->velocityY = 0.0;
+        self->dashMomentumFlag = 0;
+        self->FaceOpponent();
+        self->field000c = self->field000c + 1;
+        if (timing.frameDuration <= self->field000c) {
+            self->field000c = 0;
+            self->field000a = self->field000a + 1;
+            if (timing.animationFrameCount <= self->field000a) {
+                self->field000a = 0;
+                self->field0008 = 3;
+                self->ResetPose();
             }
         }
         break;
 
     case 10:
-        velocityX = 0.0;
-        velocityY = 0.0;
-        dashMomentumFlag = 0;
-        FaceOpponent();
-        field000c = field000c + 1;
-        if (timing.frameDuration <= field000c) {
-            field000c = 0;
-            field000a = field000a + 1;
-            if (timing.animationFrameCount <= field000a) {
-                field000a = 0;
-                field0008 = 7;
-                if (inputY == 1) {
-                    field0008 = 3;
+        self->velocityX = 0.0;
+        self->velocityY = 0.0;
+        self->dashMomentumFlag = 0;
+        self->FaceOpponent();
+        self->field000c = self->field000c + 1;
+        if (timing.frameDuration <= self->field000c) {
+            self->field000c = 0;
+            self->field000a = self->field000a + 1;
+            if (timing.animationFrameCount <= self->field000a) {
+                self->field000a = 0;
+                self->field0008 = 7;
+                if (self->inputY == 1) {
+                    self->field0008 = 3;
                 }
-                ResetPose();
+                self->ResetPose();
             }
         }
         break;
@@ -194,59 +195,59 @@ void Character19::Slot06()
         break;
 
     case 18:
-        if ((field000a == 0) && (field000c == 0)) {
-            velocityX = 0.0;
-            gravity = 0.035;
+        if ((self->field000a == 0) && (self->field000c == 0)) {
+            self->velocityX = 0.0;
+            self->gravity = 0.035;
         }
-        velocityY = velocityY + gravity;
-        if (((positionY + velocityY) > 0.0) && (field000a < 2)) {
-            field000c = 0;
-            field000a = 2;
-            reinterpret_cast<unsigned char *>(&soundSlots[49])[1] = 7;
-            positionY = 0.0;
-            velocityY = 0.0;
-            gravity = 0.0;
-            velocityX = 0.0;
+        self->velocityY = self->velocityY + self->gravity;
+        if (((self->positionY + self->velocityY) > 0.0) && (self->field000a < 2)) {
+            self->field000c = 0;
+            self->field000a = 2;
+            reinterpret_cast<unsigned char *>(&self->soundSlots[49])[1] = 7;
+            self->positionY = 0.0;
+            self->velocityY = 0.0;
+            self->gravity = 0.0;
+            self->velocityX = 0.0;
         }
-        field000c = field000c + 1;
-        if (timing.frameDuration <= field000c) {
-            field000c = 0;
-            field000a = field000a + 1;
-            if (field000a == 2) {
-                field000a = field000a - 2;
+        self->field000c = self->field000c + 1;
+        if (timing.frameDuration <= self->field000c) {
+            self->field000c = 0;
+            self->field000a = self->field000a + 1;
+            if (self->field000a == 2) {
+                self->field000a = self->field000a - 2;
             }
-            if (timing.animationFrameCount <= field000a) {
-                field000a = field000a - 1;
+            if (timing.animationFrameCount <= self->field000a) {
+                self->field000a = self->field000a - 1;
             }
         }
         break;
 
     case 37:
-        Slot06UpdateKnockbackLanding(
+        self->Slot06UpdateKnockbackLanding(
             timing.frameDuration, timing.animationFrameCount,
             1);
         break;
 
     case 38:
-        Slot06UpdateKnockbackLanding(
+        self->Slot06UpdateKnockbackLanding(
             timing.frameDuration, timing.animationFrameCount,
             0);
         break;
 
     case 41:
-        Slot06UpdateGroundRecovery(
+        self->Slot06UpdateGroundRecovery(
             timing.frameDuration, timing.animationFrameCount,
             0);
         break;
 
     case 42:
-        Slot06UpdateGroundRecovery(
+        self->Slot06UpdateGroundRecovery(
             timing.frameDuration, timing.animationFrameCount,
             0);
         break;
 
     case 43:
-        Slot06UpdateGroundRecovery(
+        self->Slot06UpdateGroundRecovery(
             timing.frameDuration, timing.animationFrameCount,
             1);
         break;
@@ -306,286 +307,286 @@ void Character19::Slot06()
         break;
 
     case 53:
-        Slot06UpdateLocalEffectRecovery(
+        self->Slot06UpdateLocalEffectRecovery(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
     case 54:
-        Slot06UpdateFaceRecovery(
+        self->Slot06UpdateFaceRecovery(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
     case 55:
-        Slot06UpdateDefeatImpact(
+        self->Slot06UpdateDefeatImpact(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
     case 56:
-        Slot06UpdateDefeatImpact(
+        self->Slot06UpdateDefeatImpact(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
     case 57:
-        Slot06UpdateDefeatWait(
+        self->Slot06UpdateDefeatWait(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
     case 58:
-        if ((field000a == 0) && (field000c == 0)) {
-            dashMomentumFlag = 0;
-            meter = meter + 10;
-            velocityX = -1.5;
-            velocityY = 0.0;
-            positionY = 0.0;
+        if ((self->field000a == 0) && (self->field000c == 0)) {
+            self->dashMomentumFlag = 0;
+            self->meter = self->meter + 10;
+            self->velocityX = -1.5;
+            self->velocityY = 0.0;
+            self->positionY = 0.0;
         }
-        velocityY = 0.0;
-        velocityX = velocityX + 0.06;
-        if (velocityX > 0.0) {
-            velocityX = 0.0;
+        self->velocityY = 0.0;
+        self->velocityX = self->velocityX + 0.06;
+        if (self->velocityX > 0.0) {
+            self->velocityX = 0.0;
         }
-        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
-            outgoingPushbackVelocityX = velocityX;
+        if ((self->positionX - 20.0 <= 0.0) || (639.0 <= self->positionX + 20.0)) {
+            self->outgoingPushbackVelocityX = self->velocityX;
         } else {
-            outgoingPushbackVelocityX = 0.0;
+            self->outgoingPushbackVelocityX = 0.0;
         }
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a == timing.animationFrameCount) {
-                FaceOpponent();
+        ++self->field000c;
+        if (self->field000c >= timing.frameDuration) {
+            self->field000c = 0;
+            ++self->field000a;
+            if (self->field000a == timing.animationFrameCount) {
+                self->FaceOpponent();
             }
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
-                if (inputY == 1) {
-                    field0008 = 3;
+            if (self->field000a >= timing.animationFrameCount) {
+                self->field0008 = 0;
+                if (self->inputY == 1) {
+                    self->field0008 = 3;
                 }
-                ResetPose();
+                self->ResetPose();
             }
         }
         break;
 
     case 59:
-        if ((field000a == 0) && (field000c == 0)) {
-            dashMomentumFlag = 0;
-            meter = meter + 15;
-            velocityX = -1.8;
-            velocityY = 0.0;
-            positionY = 0.0;
+        if ((self->field000a == 0) && (self->field000c == 0)) {
+            self->dashMomentumFlag = 0;
+            self->meter = self->meter + 15;
+            self->velocityX = -1.8;
+            self->velocityY = 0.0;
+            self->positionY = 0.0;
         }
-        velocityY = 0.0;
-        velocityX = velocityX + 0.06;
-        if (velocityX > 0.0) {
-            velocityX = 0.0;
+        self->velocityY = 0.0;
+        self->velocityX = self->velocityX + 0.06;
+        if (self->velocityX > 0.0) {
+            self->velocityX = 0.0;
         }
-        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
-            outgoingPushbackVelocityX = velocityX;
+        if ((self->positionX - 20.0 <= 0.0) || (639.0 <= self->positionX + 20.0)) {
+            self->outgoingPushbackVelocityX = self->velocityX;
         } else {
-            outgoingPushbackVelocityX = 0.0;
+            self->outgoingPushbackVelocityX = 0.0;
         }
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a == timing.animationFrameCount) {
-                FaceOpponent();
+        ++self->field000c;
+        if (self->field000c >= timing.frameDuration) {
+            self->field000c = 0;
+            ++self->field000a;
+            if (self->field000a == timing.animationFrameCount) {
+                self->FaceOpponent();
             }
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
-                if (inputY == 1) {
-                    field0008 = 3;
+            if (self->field000a >= timing.animationFrameCount) {
+                self->field0008 = 0;
+                if (self->inputY == 1) {
+                    self->field0008 = 3;
                 }
-                ResetPose();
+                self->ResetPose();
             }
         }
         break;
 
     case 60:
-        if ((field000a == 0) && (field000c == 0)) {
-            dashMomentumFlag = 0;
-            meter = meter + 20;
-            velocityX = -2.3;
-            velocityY = 0.0;
-            positionY = 0.0;
+        if ((self->field000a == 0) && (self->field000c == 0)) {
+            self->dashMomentumFlag = 0;
+            self->meter = self->meter + 20;
+            self->velocityX = -2.3;
+            self->velocityY = 0.0;
+            self->positionY = 0.0;
         }
-        velocityY = 0.0;
-        velocityX = velocityX + 0.06;
-        if (velocityX > 0.0) {
-            velocityX = 0.0;
+        self->velocityY = 0.0;
+        self->velocityX = self->velocityX + 0.06;
+        if (self->velocityX > 0.0) {
+            self->velocityX = 0.0;
         }
-        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
-            outgoingPushbackVelocityX = velocityX;
+        if ((self->positionX - 20.0 <= 0.0) || (639.0 <= self->positionX + 20.0)) {
+            self->outgoingPushbackVelocityX = self->velocityX;
         } else {
-            outgoingPushbackVelocityX = 0.0;
+            self->outgoingPushbackVelocityX = 0.0;
         }
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a == timing.animationFrameCount) {
-                FaceOpponent();
+        ++self->field000c;
+        if (self->field000c >= timing.frameDuration) {
+            self->field000c = 0;
+            ++self->field000a;
+            if (self->field000a == timing.animationFrameCount) {
+                self->FaceOpponent();
             }
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
-                if (inputY == 1) {
-                    field0008 = 3;
+            if (self->field000a >= timing.animationFrameCount) {
+                self->field0008 = 0;
+                if (self->inputY == 1) {
+                    self->field0008 = 3;
                 }
-                ResetPose();
+                self->ResetPose();
             }
         }
         break;
 
     case 61:
-        if ((field000a == 0) && (field000c == 0)) {
-            dashMomentumFlag = 0;
-            meter = meter + 10;
-            velocityX = -1.5;
-            velocityY = 0.0;
-            positionY = 0.0;
+        if ((self->field000a == 0) && (self->field000c == 0)) {
+            self->dashMomentumFlag = 0;
+            self->meter = self->meter + 10;
+            self->velocityX = -1.5;
+            self->velocityY = 0.0;
+            self->positionY = 0.0;
         }
-        velocityY = 0.0;
-        velocityX = velocityX + 0.06;
-        if (velocityX > 0.0) {
-            velocityX = 0.0;
+        self->velocityY = 0.0;
+        self->velocityX = self->velocityX + 0.06;
+        if (self->velocityX > 0.0) {
+            self->velocityX = 0.0;
         }
-        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
-            outgoingPushbackVelocityX = velocityX;
+        if ((self->positionX - 20.0 <= 0.0) || (639.0 <= self->positionX + 20.0)) {
+            self->outgoingPushbackVelocityX = self->velocityX;
         } else {
-            outgoingPushbackVelocityX = 0.0;
+            self->outgoingPushbackVelocityX = 0.0;
         }
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a == timing.animationFrameCount) {
-                FaceOpponent();
+        ++self->field000c;
+        if (self->field000c >= timing.frameDuration) {
+            self->field000c = 0;
+            ++self->field000a;
+            if (self->field000a == timing.animationFrameCount) {
+                self->FaceOpponent();
             }
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 3;
-                ResetPose();
+            if (self->field000a >= timing.animationFrameCount) {
+                self->field0008 = 3;
+                self->ResetPose();
             }
         }
         break;
 
     case 62:
-        if ((field000a == 0) && (field000c == 0)) {
-            dashMomentumFlag = 0;
-            meter = meter + 15;
-            velocityX = -1.8;
-            velocityY = 0.0;
-            positionY = 0.0;
+        if ((self->field000a == 0) && (self->field000c == 0)) {
+            self->dashMomentumFlag = 0;
+            self->meter = self->meter + 15;
+            self->velocityX = -1.8;
+            self->velocityY = 0.0;
+            self->positionY = 0.0;
         }
-        velocityY = 0.0;
-        velocityX = velocityX + 0.06;
-        if (velocityX > 0.0) {
-            velocityX = 0.0;
+        self->velocityY = 0.0;
+        self->velocityX = self->velocityX + 0.06;
+        if (self->velocityX > 0.0) {
+            self->velocityX = 0.0;
         }
-        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
-            outgoingPushbackVelocityX = velocityX;
+        if ((self->positionX - 20.0 <= 0.0) || (639.0 <= self->positionX + 20.0)) {
+            self->outgoingPushbackVelocityX = self->velocityX;
         } else {
-            outgoingPushbackVelocityX = 0.0;
+            self->outgoingPushbackVelocityX = 0.0;
         }
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a == timing.animationFrameCount) {
-                FaceOpponent();
+        ++self->field000c;
+        if (self->field000c >= timing.frameDuration) {
+            self->field000c = 0;
+            ++self->field000a;
+            if (self->field000a == timing.animationFrameCount) {
+                self->FaceOpponent();
             }
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 3;
-                ResetPose();
+            if (self->field000a >= timing.animationFrameCount) {
+                self->field0008 = 3;
+                self->ResetPose();
             }
         }
         break;
 
     case 63:
-        if ((field000a == 0) && (field000c == 0)) {
-            dashMomentumFlag = 0;
-            meter = meter + 20;
-            velocityX = -2.3;
-            velocityY = 0.0;
-            positionY = 0.0;
+        if ((self->field000a == 0) && (self->field000c == 0)) {
+            self->dashMomentumFlag = 0;
+            self->meter = self->meter + 20;
+            self->velocityX = -2.3;
+            self->velocityY = 0.0;
+            self->positionY = 0.0;
         }
-        velocityY = 0.0;
-        velocityX = velocityX + 0.06;
-        if (velocityX > 0.0) {
-            velocityX = 0.0;
+        self->velocityY = 0.0;
+        self->velocityX = self->velocityX + 0.06;
+        if (self->velocityX > 0.0) {
+            self->velocityX = 0.0;
         }
-        if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
-            outgoingPushbackVelocityX = velocityX;
+        if ((self->positionX - 20.0 <= 0.0) || (639.0 <= self->positionX + 20.0)) {
+            self->outgoingPushbackVelocityX = self->velocityX;
         } else {
-            outgoingPushbackVelocityX = 0.0;
+            self->outgoingPushbackVelocityX = 0.0;
         }
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a == timing.animationFrameCount) {
-                FaceOpponent();
+        ++self->field000c;
+        if (self->field000c >= timing.frameDuration) {
+            self->field000c = 0;
+            ++self->field000a;
+            if (self->field000a == timing.animationFrameCount) {
+                self->FaceOpponent();
             }
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 3;
-                ResetPose();
+            if (self->field000a >= timing.animationFrameCount) {
+                self->field0008 = 3;
+                self->ResetPose();
             }
         }
         break;
 
     case 39:
-        if (field0120 != 0) {
-            field0118 = field0118 - 0.8;
+        if (self->field0120 != 0) {
+            self->field0118 = self->field0118 - 0.8;
         }
-        if ((field000a == 0) && (field000c == 0) && (field3138 == 0)) {
-            meter = meter + 30;
-            field3138 = field3138 + 1;
-            airActionLockFrames = airActionLockFrames + 0x78;
-            velocityX = 0.5;
-            velocityY = -2.5;
-            gravity = 0.025;
-            pendingContextSoundSlot = 0x1f;
+        if ((self->field000a == 0) && (self->field000c == 0) && (self->field3138 == 0)) {
+            self->meter = self->meter + 30;
+            self->field3138 = self->field3138 + 1;
+            self->airActionLockFrames = self->airActionLockFrames + 0x78;
+            self->velocityX = 0.5;
+            self->velocityY = -2.5;
+            self->gravity = 0.025;
+            self->pendingContextSoundSlot = 0x1f;
             spawn.type = 0;
-            spawn.x = (double)(int)positionX;
-            spawn.y = (double)(int)positionY;
+            spawn.x = (double)(int)self->positionX;
+            spawn.y = (double)(int)self->positionY;
             spawn.group = 2;
             spawn.layer = 1;
-            contextOwner->EmitEffect(&spawn);
+            self->contextOwner->EmitEffect(&spawn);
         }
-        velocityY = velocityY + gravity;
-        field000c = field000c + 1;
-        if (timing.frameDuration <= field000c) {
-            field000c = 0;
-            field000a = field000a + 1;
-            if (timing.animationFrameCount <= field000a) {
-                field000a = 0;
+        self->velocityY = self->velocityY + self->gravity;
+        self->field000c = self->field000c + 1;
+        if (timing.frameDuration <= self->field000c) {
+            self->field000c = 0;
+            self->field000a = self->field000a + 1;
+            if (timing.animationFrameCount <= self->field000a) {
+                self->field000a = 0;
             }
         }
-        if (((positionY + velocityY) >= 0.0) && (field000a > 1)) {
-            positionY = 0.0;
-            if (knockdownOnLanding == 0) {
-                field0008 = 0x62;
+        if (((self->positionY + self->velocityY) >= 0.0) && (self->field000a > 1)) {
+            self->positionY = 0.0;
+            if (self->knockdownOnLanding == 0) {
+                self->field0008 = 0x62;
             } else {
-                field0008 = 0x61;
+                self->field0008 = 0x61;
             }
-            ResetPose();
+            self->ResetPose();
         }
         break;
 
     case 64:
-        Slot06UpdateAirborneKnockdown(
+        self->Slot06UpdateAirborneKnockdown(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             -1.2, -2.6, 0.06,
             15, 0, 0, 0, 0);
         break;
 
     case 65:
-        Slot06UpdateAirborneKnockdown(
+        self->Slot06UpdateAirborneKnockdown(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             1.0, -2.3, 0.045,
             0, 8, 1, 1, 1);
         break;
 
     case 66:
-        Slot06UpdateAirborneKnockdown(
+        self->Slot06UpdateAirborneKnockdown(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             -1.0, -2.3, 0.045,
             0, 8, 1, 1, 1);
@@ -622,19 +623,19 @@ void Character19::Slot06()
         break;
 
     case 72:
-        Slot06UpdateKnockbackImpactFinish(
+        self->Slot06UpdateKnockbackImpactFinish(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             0);
         break;
 
     case 73:
-        Slot06UpdateKnockbackImpactFinish(
+        self->Slot06UpdateKnockbackImpactFinish(
             timing.frameDuration, timing.animationFrameCount, &spawn,
             3);
         break;
 
     case 74:
-        Slot06UpdateAirborneHitstunRestore(
+        self->Slot06UpdateAirborneHitstunRestore(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
@@ -645,7 +646,7 @@ void Character19::Slot06()
         break;
 
     case 76:
-        Slot06UpdateDashRecovery(
+        self->Slot06UpdateDashRecovery(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
@@ -710,12 +711,12 @@ void Character19::Slot06()
         break;
 
     case 87:
-        Slot06UpdateAerialLaunchLanding(
+        self->Slot06UpdateAerialLaunchLanding(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
     case 88:
-        Slot06UpdateDashFollowupCancel(
+        self->Slot06UpdateDashFollowupCancel(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
@@ -726,12 +727,12 @@ void Character19::Slot06()
         break;
 
     case 90:
-        Slot06UpdateAerialKickback(
+        self->Slot06UpdateAerialKickback(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
     case 91:
-        Slot06UpdateGroundImpactRecovery(
+        self->Slot06UpdateGroundImpactRecovery(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
@@ -772,17 +773,17 @@ void Character19::Slot06()
         break;
 
     case 96:
-        Slot06UpdateDashTrailCharge(
+        self->Slot06UpdateDashTrailCharge(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
     case 99:
-        Slot06UpdateAirborneTrailDash(
+        self->Slot06UpdateAirborneTrailDash(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
     case 100:
-        Slot06UpdateStunEffectRecovery(
+        self->Slot06UpdateStunEffectRecovery(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
@@ -799,12 +800,12 @@ void Character19::Slot06()
         break;
 
     case 103:
-        Slot06UpdateDampedImpactFinish(
+        self->Slot06UpdateDampedImpactFinish(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
     case 104:
-        Slot06UpdateLoopingAerialBounce(
+        self->Slot06UpdateLoopingAerialBounce(
             timing.frameDuration, timing.animationFrameCount, &spawn);
         break;
 
@@ -815,22 +816,22 @@ void Character19::Slot06()
         break;
 
     case 106:
-        Slot06UpdateFinalFaceTransition(
+        self->Slot06UpdateFinalFaceTransition(
             timing.frameDuration, timing.animationFrameCount);
         break;
 
     case 107:
-        Slot06UpdateLocalEffectFinish(
+        self->Slot06UpdateLocalEffectFinish(
             timing.frameDuration, timing.animationFrameCount, 400);
         break;
 
     case 108:
-        Slot06UpdateLocalEffectFinish(
+        self->Slot06UpdateLocalEffectFinish(
             timing.frameDuration, timing.animationFrameCount, 401);
         break;
 
     case 109:
-        Slot06UpdateLocalEffectFinish(
+        self->Slot06UpdateLocalEffectFinish(
             timing.frameDuration, timing.animationFrameCount, 402);
         break;
 
@@ -1022,30 +1023,30 @@ void Character19::Slot06()
         break;
 
     case 117:
-        dashMomentumFlag = 0;
-        velocityX = 0.0;
-        velocityY = 0.0;
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a >= timing.animationFrameCount) {
-                field000a = 0;
+        self->dashMomentumFlag = 0;
+        self->velocityX = 0.0;
+        self->velocityY = 0.0;
+        ++self->field000c;
+        if (self->field000c >= timing.frameDuration) {
+            self->field000c = 0;
+            ++self->field000a;
+            if (self->field000a >= timing.animationFrameCount) {
+                self->field000a = 0;
             }
         }
         break;
 
     default:
         // Native out-of-range states use the same 0x75 fallback.
-        dashMomentumFlag = 0;
-        velocityX = 0.0;
-        velocityY = 0.0;
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a >= timing.animationFrameCount) {
-                field000a = 0;
+        self->dashMomentumFlag = 0;
+        self->velocityX = 0.0;
+        self->velocityY = 0.0;
+        ++self->field000c;
+        if (self->field000c >= timing.frameDuration) {
+            self->field000c = 0;
+            ++self->field000a;
+            if (self->field000a >= timing.animationFrameCount) {
+                self->field000a = 0;
             }
         }
         break;

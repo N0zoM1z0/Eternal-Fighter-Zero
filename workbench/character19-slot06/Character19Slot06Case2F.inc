@@ -1,42 +1,42 @@
-if (field0120 != 0) {
-    field0118 = field0118 - 0.8;
+if (self->field0120 != 0) {
+    self->field0118 = self->field0118 - 0.8;
 }
 
-if ((field000a == 0) && (field000c == 0)) {
+if ((self->field000a == 0) && (self->field000c == 0)) {
     spawn.type = 499;
-    spawn.x = (double)(int)positionX;
-    spawn.y = (double)(int)positionY;
-    spawn.flag0018 = (unsigned char)facing;
+    spawn.x = (double)(int)self->positionX;
+    spawn.y = (double)(int)self->positionY;
+    spawn.flag0018 = (unsigned char)self->facing;
     spawn.layer = 1;
-    EmitLocalEffect(&spawn);
+    self->EmitLocalEffect(&spawn);
 
-    meter = meter + 30;
-    velocityX = knockbackVelocityX;
-    velocityY = knockbackVelocityY;
-    gravity = 0.032;
+    self->meter = self->meter + 30;
+    self->velocityX = self->knockbackVelocityX;
+    self->velocityY = self->knockbackVelocityY;
+    self->gravity = 0.032;
 }
 
-velocityX = velocityX + 0.02;
-velocityY = velocityY + gravity;
-if (velocityX > 0.0) {
-    velocityX = 0.0;
+self->velocityX = self->velocityX + 0.02;
+self->velocityY = self->velocityY + self->gravity;
+if (self->velocityX > 0.0) {
+    self->velocityX = 0.0;
 }
 
-field000c = field000c + 1;
-if (timing.frameDuration <= field000c) {
-    field000c = 0;
-    field000a = field000a + 1;
-    if (timing.animationFrameCount <= field000a) {
-        field000a = field000a - 1;
+self->field000c = self->field000c + 1;
+if (timing.frameDuration <= self->field000c) {
+    self->field000c = 0;
+    self->field000a = self->field000a + 1;
+    if (timing.animationFrameCount <= self->field000a) {
+        self->field000a = self->field000a - 1;
     }
 }
 
-if (((positionY + velocityY) >= 0.0) && (field000a == 1)) {
-    positionY = 0.0;
-    if (knockdownOnLanding != 0) {
-        field0008 = 0x61;
+if (((self->positionY + self->velocityY) >= 0.0) && (self->field000a == 1)) {
+    self->positionY = 0.0;
+    if (self->knockdownOnLanding != 0) {
+        self->field0008 = 0x61;
     } else {
-        field0008 = 0x62;
+        self->field0008 = 0x62;
     }
-    ResetPose();
+    self->ResetPose();
 }

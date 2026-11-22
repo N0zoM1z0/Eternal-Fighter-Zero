@@ -1,70 +1,70 @@
-if ((field000a == 0) && (field000c == 0)) {
-    StartTrail(1);
-    if (field313c == 0) {
-        ResetFrame();
-        if (field0120 == 0) {
-            field0118 = field0118 - 500.0;
+if ((self->field000a == 0) && (self->field000c == 0)) {
+    self->StartTrail(1);
+    if (self->field313c == 0) {
+        self->ResetFrame();
+        if (self->field0120 == 0) {
+            self->field0118 = self->field0118 - 500.0;
         } else {
-            field0118 = field0118 - 250.0;
+            self->field0118 = self->field0118 - 250.0;
         }
 
         spawn.type = 0x21;
-        spawn.x = (double)(int)positionX;
-        spawn.y = (double)((int)positionY - 0x32);
+        spawn.x = (double)(int)self->positionX;
+        spawn.y = (double)((int)self->positionY - 0x32);
         spawn.group = 2;
         spawn.layer = 1;
         spawn.palette = 0xb;
-        contextOwner->EmitEffect(&spawn);
-        field313c = field313c + 1;
+        self->contextOwner->EmitEffect(&spawn);
+        self->field313c = self->field313c + 1;
     }
-    remainingHitCount = 1;
+    self->remainingHitCount = 1;
 }
 
-if ((field000a == 1) && (field000c == 0)) {
+if ((self->field000a == 1) && (self->field000c == 0)) {
     spawn.owner = 1;
     spawn.type = 0x1b9;
-    spawn.x = positionX;
-    spawn.y = positionY;
-    spawn.flag0018 = (unsigned char)facing;
+    spawn.x = self->positionX;
+    spawn.y = self->positionY;
+    spawn.flag0018 = (unsigned char)self->facing;
     spawn.group = 2;
     spawn.layer = 1;
-    EmitLocalEffect(&spawn);
+    self->EmitLocalEffect(&spawn);
 }
 
-if (positionY < 0.0) {
-    velocityY = velocityY + gravity;
+if (self->positionY < 0.0) {
+    self->velocityY = self->velocityY + self->gravity;
 }
 
-if ((positionY >= 0.0) || ((positionY + velocityY) < 0.0)) {
-    field000c = field000c + 1;
-    if (timing.frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        attackCollisionResult = 0;
+if ((self->positionY >= 0.0) || ((self->positionY + self->velocityY) < 0.0)) {
+    self->field000c = self->field000c + 1;
+    if (timing.frameDuration <= self->field000c) {
+        self->field000c = 0;
+        self->field000a = self->field000a + 1;
+        self->attackCollisionResult = 0;
 
-        if ((field000a == 3) && (field313c == 1)) {
-            velocityY = -3.5;
-            gravity = 0.015;
-            field313c = field313c + 1;
+        if ((self->field000a == 3) && (self->field313c == 1)) {
+            self->velocityY = -3.5;
+            self->gravity = 0.015;
+            self->field313c = self->field313c + 1;
         }
 
-        if ((field000a == 8) && (field3138 < 5)) {
-            field000a = 0;
-            field3138 = field3138 + 1;
+        if ((self->field000a == 8) && (self->field3138 < 5)) {
+            self->field000a = 0;
+            self->field3138 = self->field3138 + 1;
         }
 
-        if (field000a == 9) {
-            remainingHitCount = 1;
+        if (self->field000a == 9) {
+            self->remainingHitCount = 1;
         }
 
-        if (timing.animationFrameCount <= field000a) {
-            ResetPose();
-            field0008 = 9;
+        if (timing.animationFrameCount <= self->field000a) {
+            self->ResetPose();
+            self->field0008 = 9;
         }
     }
 } else {
-    positionY = 0.0;
-    ResetPose();
-    ResetFrame();
-    field0008 = 0x103;
+    self->positionY = 0.0;
+    self->ResetPose();
+    self->ResetFrame();
+    self->field0008 = 0x103;
 }

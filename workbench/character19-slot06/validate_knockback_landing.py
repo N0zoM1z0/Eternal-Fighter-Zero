@@ -4,6 +4,14 @@ import struct
 import sys
 from pathlib import Path
 
+_original_path_read_text = Path.read_text
+def _read_text_without_slot06_self_alias(self, *args, **kwargs):
+    text = _original_path_read_text(self, *args, **kwargs)
+    if self.suffix in (".cpp", ".inc"):
+        return text.replace("self->", "")
+    return text
+Path.read_text = _read_text_without_slot06_self_alias
+
 ROOT = Path(__file__).resolve().parents[2]
 native = (ROOT / ".analysis/kanna-slot06/native.c").read_text()
 lines = native.splitlines()

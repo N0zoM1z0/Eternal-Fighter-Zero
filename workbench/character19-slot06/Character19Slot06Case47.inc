@@ -1,42 +1,42 @@
-if ((field000a == 0) && (field000c == 0)) {
-    dashMomentumFlag = 0;
-    velocityX = 0.0;
-    velocityY = 0.0;
-    if (field0120 == 1) {
-        comboDamageScale = comboDamageScale + (field0118 * 5.0);
+if ((self->field000a == 0) && (self->field000c == 0)) {
+    self->dashMomentumFlag = 0;
+    self->velocityX = 0.0;
+    self->velocityY = 0.0;
+    if (self->field0120 == 1) {
+        self->comboDamageScale = self->comboDamageScale + (self->field0118 * 5.0);
     }
-    field0118 = 0.0;
-    hitstunFrames = 90;
-    SetTint(0xb0, 3);
+    self->field0118 = 0.0;
+    self->hitstunFrames = 90;
+    self->SetTint(0xb0, 3);
 }
 
-if ((field000a == 1) && (field000c == 0)) {
-    pendingContextSoundSlot = 0x12;
+if ((self->field000a == 1) && (self->field000c == 0)) {
+    self->pendingContextSoundSlot = 0x12;
     spawn.type = 1;
-    spawn.x = (double)(int)positionX;
-    spawn.y = (double)(int)positionY;
+    spawn.x = (double)(int)self->positionX;
+    spawn.y = (double)(int)self->positionY;
     spawn.group = 2;
     spawn.layer = 1;
-    contextOwner->EmitEffect(&spawn);
+    self->contextOwner->EmitEffect(&spawn);
 }
 
-if ((field000a == 2) && (field000c == 0)) {
+if ((self->field000a == 2) && (self->field000c == 0)) {
     spawn.type = 4;
-    spawn.x = (double)(int)positionX;
-    spawn.y = (double)(int)positionY;
+    spawn.x = (double)(int)self->positionX;
+    spawn.y = (double)(int)self->positionY;
     spawn.group = 2;
     spawn.layer = 1;
-    contextOwner->EmitEffect(&spawn);
+    self->contextOwner->EmitEffect(&spawn);
 }
 
-field000c = field000c + 1;
-if (timing.frameDuration <= field000c) {
-    field000c = 0;
-    field000a = field000a + 1;
-    attackCollisionResult = 0;
-    if (timing.animationFrameCount <= field000a) {
-        field0008 = 0;
-        FaceOpponent();
-        ResetPose();
+self->field000c = self->field000c + 1;
+if (timing.frameDuration <= self->field000c) {
+    self->field000c = 0;
+    self->field000a = self->field000a + 1;
+    self->attackCollisionResult = 0;
+    if (timing.animationFrameCount <= self->field000a) {
+        self->field0008 = 0;
+        self->FaceOpponent();
+        self->ResetPose();
     }
 }

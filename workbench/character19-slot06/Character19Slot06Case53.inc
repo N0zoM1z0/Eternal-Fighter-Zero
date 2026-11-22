@@ -1,39 +1,39 @@
-if ((dashMomentumFlag == 0) && (field000a == 0) && (field000c == 0)) {
-    velocityX = 0.0;
-    velocityY = 0.0;
+if ((self->dashMomentumFlag == 0) && (self->field000a == 0) && (self->field000c == 0)) {
+    self->velocityX = 0.0;
+    self->velocityY = 0.0;
 }
 
-if ((velocityX <= 0.0) || (dashMomentumFlag != 1) || (field000a > 2)) {
-    dashMomentumFlag = 0;
+if ((self->velocityX <= 0.0) || (self->dashMomentumFlag != 1) || (self->field000a > 2)) {
+    self->dashMomentumFlag = 0;
 } else {
-    velocityX = velocityX - 0.03;
+    self->velocityX = self->velocityX - 0.03;
 }
 
-if (velocityX < 0.0) {
-    velocityX = 0.0;
+if (self->velocityX < 0.0) {
+    self->velocityX = 0.0;
 }
 
-if ((field000a == 1) && (field000c == 0)) {
-    remainingHitCount = 1;
+if ((self->field000a == 1) && (self->field000c == 0)) {
+    self->remainingHitCount = 1;
 }
 
-if ((field000a == 3) && (field000c == 0) && (field3138 == 0)) {
-    meter = meter + 25;
-    pendingContextSoundSlot = 0x14;
-    field3138 = field3138 + 1;
+if ((self->field000a == 3) && (self->field000c == 0) && (self->field3138 == 0)) {
+    self->meter = self->meter + 25;
+    self->pendingContextSoundSlot = 0x14;
+    self->field3138 = self->field3138 + 1;
 }
 
-field000c = field000c + 1;
-if (timing.frameDuration <= field000c) {
-    field000c = 0;
-    field000a = field000a + 1;
-    attackCollisionResult = 0;
-    if (timing.animationFrameCount <= field000a) {
-        field0008 = 0;
-        if (inputY == 1) {
-            field0008 = 3;
+self->field000c = self->field000c + 1;
+if (timing.frameDuration <= self->field000c) {
+    self->field000c = 0;
+    self->field000a = self->field000a + 1;
+    self->attackCollisionResult = 0;
+    if (timing.animationFrameCount <= self->field000a) {
+        self->field0008 = 0;
+        if (self->inputY == 1) {
+            self->field0008 = 3;
         }
-        FaceOpponent();
-        ResetPose();
+        self->FaceOpponent();
+        self->ResetPose();
     }
 }

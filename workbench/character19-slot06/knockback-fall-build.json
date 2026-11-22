@@ -32,20 +32,20 @@
   },
   "candidate": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "1ae76701ba3e3564c0f6cc42d0c4a594ebdbca5f19f8102c2f8318ec3b5ff5a8",
+    "source_sha256": "2ca019f4be12664965a0bdaa7f3b5cde0b27b402efd4c176f1c7519bc61eb1c8",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "781678711fba44e0bbe981966cc78314dd16d3342e0ae27e8eade4eb6d954b52",
+    "object_sha256": "032499d8120a33b9ba40c18b1c74a68d60c9236ba2a90b97d4a99d67297790b6",
     "inlined_case_sources": {
-      "workbench/character19-slot06/Character19Slot06Case1C.inc": "64a01a8f7474d01167998943a7483c7f3b2c50165e836bdbc8371cf1159c24b4",
-      "workbench/character19-slot06/Character19Slot06Case1D.inc": "65167d34fe924c1c022f2fa5445748f162ba8828a3b6599d401e4868274fcbf1",
-      "workbench/character19-slot06/Character19Slot06Case1E.inc": "8f32f599698005b6f9f6bb30989034e6d71d6dc1d081c348955f6619df5399f9",
-      "workbench/character19-slot06/Character19Slot06Case1F.inc": "ef4cbf55c7ac38b24ab6815f2fadf48aa542fcdb7a50f7c2790eea18f0d6bc48",
-      "workbench/character19-slot06/Character19Slot06Case20.inc": "8dd8d8f2e7bc505797209e6d03aab34bb9ef89ee090925b714b4bab2dc1265c8",
-      "workbench/character19-slot06/Character19Slot06Case21.inc": "96d2adcfa6c23afd61fc4b68c1eb9d46e765b194c8a3202fccc425085365d893",
-      "workbench/character19-slot06/Character19Slot06Case22.inc": "c0b4ddfb69e4aaab36e1a86b18d4862598730f7b10b1bd5abc4724297623abc0",
-      "workbench/character19-slot06/Character19Slot06Case23.inc": "7b20740c4fe931031e75752326e52692d698ba2c3f1d0f3e93fe1e1aa8a55d10",
-      "workbench/character19-slot06/Character19Slot06Case24.inc": "0550dd1be29c47f025c838c84063cd7973a533bd0a294cb73a105cc4eff4dbea",
-      "workbench/character19-slot06/Character19Slot06Case28.inc": "d81ce1bd9921bd3204e0d346ce4c0a8069fbbfafcdef848cd612d0f97f0ada0d"
+      "workbench/character19-slot06/Character19Slot06Case1C.inc": "403b47794dcad62596253a1997d56f0ebfb7bb71d3f9ef8dec5b122f570d52bc",
+      "workbench/character19-slot06/Character19Slot06Case1D.inc": "c836d2d22dfd2657ca73e6eb61821da04721bb8e5ec3c5acccb7cc6da722725f",
+      "workbench/character19-slot06/Character19Slot06Case1E.inc": "f4511adc38ee0e4c6091c98a8c3b2d26763e7cf13d61432aa87ab0474353467e",
+      "workbench/character19-slot06/Character19Slot06Case1F.inc": "356d9e1fb1138482f0db277af6a1b0ee36e54067d8368874f733439cccbafc9a",
+      "workbench/character19-slot06/Character19Slot06Case20.inc": "5efbe48341e309380104c5a24bbb43cc8b46de83c4c8200bc612a97c2d154522",
+      "workbench/character19-slot06/Character19Slot06Case21.inc": "6123f64a379ba4909a3a3abac00f46b18347329ba6f7448859593879666b2c9f",
+      "workbench/character19-slot06/Character19Slot06Case22.inc": "fbd3f56183548c6894c80903be78c2418906f93065ba204c88c09a95a7122b99",
+      "workbench/character19-slot06/Character19Slot06Case23.inc": "7216f9aaaa5d507ecb81f499daf9b0ec1bca9d842bd477d0de7e69944208249c",
+      "workbench/character19-slot06/Character19Slot06Case24.inc": "70922c93f59ef11223bf7a3cf6881b9c5f2e671eebd46c3fea74db80f2c97bfc",
+      "workbench/character19-slot06/Character19Slot06Case28.inc": "b5c37b0e7b35288c6094e6e44048268771f47ff0929f95aa3d9c24f8bef28601"
     },
     "range_helper": {
       "symbol": "?Slot06OpponentWithinKnockbackRange@Character19@@QAEHXZ",
@@ -54,9 +54,9 @@
     "status": "semantic-workbench-only-not-exact"
   },
   "dispatcher": {
-    "source_sha256": "1ae76701ba3e3564c0f6cc42d0c4a594ebdbca5f19f8102c2f8318ec3b5ff5a8",
-    "object_sha256": "781678711fba44e0bbe981966cc78314dd16d3342e0ae27e8eade4eb6d954b52",
-    "symbol_size": 64431,
+    "source_sha256": "2ca019f4be12664965a0bdaa7f3b5cde0b27b402efd4c176f1c7519bc61eb1c8",
+    "object_sha256": "032499d8120a33b9ba40c18b1c74a68d60c9236ba2a90b97d4a99d67297790b6",
+    "symbol_size": 51608,
     "relocations": 1065,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0

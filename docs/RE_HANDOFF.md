@@ -1644,19 +1644,21 @@ native decrement and unsigned 0x135 range check before the selector-byte
 lookup. The shared fallback and large 0x73 body use 16-bit frame-counter
 increments and native comparison operand order; the randomValue temporary is
 scoped to case 0x70. The selected-unit validators pass after these changes.
-The current 64,431-byte dispatcher candidate still differs from the
-58,363-byte native owner and is not Exact. Its stack allocation is 0x26c
-versus native 0x244; the local EffectSpawn is now at -0x50, while the
-compiler-saved this pointer remains at -0x84 instead of -0x54. The latest pass inlined the six horizontal-recovery variants (selectors
-0x3a-0x3f) into independent natural-C++ case bodies, removed their shared
-out-of-line helper, and restored 16-bit counter increments and native comparison
-operand order. A targeted instruction-shape comparison matches all six native
-case sequences (105/105 instructions for 0x3a-0x3c; 99/99 for 0x3d-0x3f).
-The partial dispatcher currently builds as a 64,421-byte COFF symbol against
-the 58,363-byte native code extent; it is not Exact. The remaining 90-100 bytes
-per horizontal case are primarily explained by the candidate's [ebp-0x84]
-this-pointer spill versus the native [ebp-0x54], so the next Slot06 codegen
-target is recovering the native stack frame before promoting this owner.
+The latest pass keeps one explicit Character19 pointer alias for member
+access throughout the dispatcher and all case fragments. This places the
+frequently used self pointer at [ebp-0x54], matching the native this-pointer
+operand, and the local EffectSpawn at [ebp-0x50]. The compiler still stores the
+incoming this pointer separately at [ebp-0x88], so the candidate stack
+allocation is 0x270 versus native 0x244. The COFF symbol is 51,608 bytes
+(50,826 code + 782 switch data), while the native owner is 58,363 code + 782
+switch data. The large selector 0x73 body is now 2,302 bytes versus 2,400
+native bytes; its normalized instruction-shape diagnostic is 624/643
+instructions with 0.93923 similarity. The six horizontal-recovery cases remain
+inlined and each matches its native instruction sequence. All 38 targeted
+Slot06 validators pass after normalizing the explicit self alias in
+source-text assertions. This is still a partial natural-C++ reconstruction,
+not Exact; the remaining code-size and stack-frame differences need further
+source-level reconstruction.
 
 ## Kanna (Character19) CPU Slot07 — natural C++ port started — 2026-11-18
 

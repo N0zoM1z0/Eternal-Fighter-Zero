@@ -1,72 +1,72 @@
-if ((field000a == 0) && (field000c == 0)) {
-    ResetFrame();
-    StartTrail(3);
-    if (field0120 == 0) {
-        field0118 = field0118 - 500.0;
+if ((self->field000a == 0) && (self->field000c == 0)) {
+    self->ResetFrame();
+    self->StartTrail(3);
+    if (self->field0120 == 0) {
+        self->field0118 = self->field0118 - 500.0;
     } else {
-        field0118 = field0118 - 250.0;
+        self->field0118 = self->field0118 - 250.0;
     }
 
     spawn.type = 0x21;
-    spawn.x = (double)(int)positionX;
-    spawn.y = (double)((int)positionY - 0x32);
+    spawn.x = (double)(int)self->positionX;
+    spawn.y = (double)((int)self->positionY - 0x32);
     spawn.group = 2;
     spawn.layer = 1;
     spawn.palette = 0xb;
-    contextOwner->EmitEffect(&spawn);
+    self->contextOwner->EmitEffect(&spawn);
 
-    remainingHitCount = 1;
-    velocityX = 0.0;
-    velocityY = 0.0;
-    horizontalDeceleration = 0.0;
-    if (positionY < 0.0) {
-        field000a = 6;
+    self->remainingHitCount = 1;
+    self->velocityX = 0.0;
+    self->velocityY = 0.0;
+    self->horizontalDeceleration = 0.0;
+    if (self->positionY < 0.0) {
+        self->field000a = 6;
     }
 }
 
-if ((field000a == 4) && (field000c == 0)) {
+if ((self->field000a == 4) && (self->field000c == 0)) {
     spawn.type = 0x1f;
-    spawn.x = (double)(int)positionX;
-    spawn.y = (double)(int)positionY;
+    spawn.x = (double)(int)self->positionX;
+    spawn.y = (double)(int)self->positionY;
     spawn.group = 0;
     spawn.layer = 1;
-    spawn.facing = (facing != 1);
-    contextOwner->EmitEffect(&spawn);
+    spawn.facing = (self->facing != 1);
+    self->contextOwner->EmitEffect(&spawn);
 
-    remainingHitCount = 1;
-    meter = meter + 45;
-    pendingCharacterSoundSlot = 1;
+    self->remainingHitCount = 1;
+    self->meter = self->meter + 45;
+    self->pendingCharacterSoundSlot = 1;
 
     spawn.owner = 1;
     spawn.type = 0x194;
-    spawn.x = (double)((int)positionX - (int)facing * 0x50);
-    spawn.y = (double)((int)positionY - 0x28);
+    spawn.x = (double)((int)self->positionX - (int)self->facing * 0x50);
+    spawn.y = (double)((int)self->positionY - 0x28);
     spawn.group = 2;
     spawn.layer = 1;
-    spawn.flag0018 = (unsigned char)facing;
-    EmitLocalEffect(&spawn);
+    spawn.flag0018 = (unsigned char)self->facing;
+    self->EmitLocalEffect(&spawn);
 }
 
-if ((field000a == 2) && (field000c == 0)) {
+if ((self->field000a == 2) && (self->field000c == 0)) {
     spawn.owner = 1;
     spawn.type = 0x1ab;
-    spawn.x = (double)(int)positionX;
-    spawn.y = (double)(int)positionY;
+    spawn.x = (double)(int)self->positionX;
+    spawn.y = (double)(int)self->positionY;
     spawn.group = 2;
     spawn.layer = 1;
-    spawn.flag0018 = (unsigned char)facing;
-    EmitLocalEffect(&spawn);
+    spawn.flag0018 = (unsigned char)self->facing;
+    self->EmitLocalEffect(&spawn);
 }
 
-field000c = field000c + 1;
-if (timing.frameDuration <= field000c) {
-    field000c = 0;
-    field000a = field000a + 1;
-    if (field000a < 5) {
-        attackCollisionResult = 0;
+self->field000c = self->field000c + 1;
+if (timing.frameDuration <= self->field000c) {
+    self->field000c = 0;
+    self->field000a = self->field000a + 1;
+    if (self->field000a < 5) {
+        self->attackCollisionResult = 0;
     }
-    if (timing.animationFrameCount <= field000a) {
-        field0008 = 0;
-        ResetPose();
+    if (timing.animationFrameCount <= self->field000a) {
+        self->field0008 = 0;
+        self->ResetPose();
     }
 }

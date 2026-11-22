@@ -1,44 +1,44 @@
-if (field0120 != 0) {
-    field0118 = field0118 - 0.8;
+if (self->field0120 != 0) {
+    self->field0118 = self->field0118 - 0.8;
 }
 
 
 
-if ((field000a == 0) && (field000c == 0)) {
-    meter = meter + 30;
-    velocityX = knockbackVelocityX;
-    velocityY = knockbackVelocityY;
+if ((self->field000a == 0) && (self->field000c == 0)) {
+    self->meter = self->meter + 30;
+    self->velocityX = self->knockbackVelocityX;
+    self->velocityY = self->knockbackVelocityY;
     
-    gravity = 0.032;
+    self->gravity = 0.032;
 }
 
-if (((velocityY < 0.0) != (velocityY == 0.0)) &&
-    (field000a < 2)) {
-    field000a = 1;
-    field000c = 0;
+if (((self->velocityY < 0.0) != (self->velocityY == 0.0)) &&
+    (self->field000a < 2)) {
+    self->field000a = 1;
+    self->field000c = 0;
 }
 
-if ((0.0 <= velocityY) && (field000a < 2)) {
-    field000a = 2;
-    field000c = 0;
+if ((0.0 <= self->velocityY) && (self->field000a < 2)) {
+    self->field000a = 2;
+    self->field000c = 0;
 }
 
-velocityY = velocityY + gravity;
-field000c = field000c + 1;
-if (timing.frameDuration <= field000c) {
-    field000c = 0;
-    field000a = field000a + 1;
-    if (timing.animationFrameCount <= field000a) {
-        field000a = field000a - 2;
+self->velocityY = self->velocityY + self->gravity;
+self->field000c = self->field000c + 1;
+if (timing.frameDuration <= self->field000c) {
+    self->field000c = 0;
+    self->field000a = self->field000a + 1;
+    if (timing.animationFrameCount <= self->field000a) {
+        self->field000a = self->field000a - 2;
     }
 }
 
-if (((positionY + velocityY) >= 0.0) && (field000a > 1)) {
-    positionY = 0.0;
-    if (knockdownOnLanding == 0) {
-        field0008 = 0x62;
+if (((self->positionY + self->velocityY) >= 0.0) && (self->field000a > 1)) {
+    self->positionY = 0.0;
+    if (self->knockdownOnLanding == 0) {
+        self->field0008 = 0x62;
     } else {
-        field0008 = 0x61;
+        self->field0008 = 0x61;
     }
-    ResetPose();
+    self->ResetPose();
 }

@@ -1,73 +1,73 @@
-velocityY = velocityY + gravity;
-dashMomentumFlag = 0;
-if (field3148 == 0) {
-    velocityX = velocityX * 0.3;
-    field3148 = field3148 + 1;
+self->velocityY = self->velocityY + self->gravity;
+self->dashMomentumFlag = 0;
+if (self->field3148 == 0) {
+    self->velocityX = self->velocityX * 0.3;
+    self->field3148 = self->field3148 + 1;
 }
-if (velocityY > 0.4) {
-    velocityY = 0.4;
+if (self->velocityY > 0.4) {
+    self->velocityY = 0.4;
 }
 
-if ((inputY == -1) && (field015c < 3) && (airActionCount < 2)) {
-    airActionCount = airActionCount + 1;
-    field0008 = 0x0e;
-    if (inputX == facing) {
-        field0008 = 0x0f;
+if ((self->inputY == -1) && (self->field015c < 3) && (self->airActionCount < 2)) {
+    self->airActionCount = self->airActionCount + 1;
+    self->field0008 = 0x0e;
+    if (self->inputX == self->facing) {
+        self->field0008 = 0x0f;
     }
-    if (inputX == -facing) {
-        field0008 = 0x10;
+    if (self->inputX == -self->facing) {
+        self->field0008 = 0x10;
     }
-    attackCollisionResult = 0;
-    ResetPose();
+    self->attackCollisionResult = 0;
+    self->ResetPose();
 } else {
-    if (inputY == 1) {
-        field0008 = 9;
-        ResetPose();
-        if ((airActionCount < 2) && (inputX != 0) &&
-            (field015c < 3)) {
-            airActionCount = airActionCount + 1;
-            if (inputX == facing) {
-                field0008 = 0x12;
+    if (self->inputY == 1) {
+        self->field0008 = 9;
+        self->ResetPose();
+        if ((self->airActionCount < 2) && (self->inputX != 0) &&
+            (self->field015c < 3)) {
+            self->airActionCount = self->airActionCount + 1;
+            if (self->inputX == self->facing) {
+                self->field0008 = 0x12;
             }
-            if (inputX == -facing) {
-                field0008 = 0x14;
+            if (self->inputX == -self->facing) {
+                self->field0008 = 0x14;
             }
-            attackCollisionResult = 0;
-            ResetPose();
+            self->attackCollisionResult = 0;
+            self->ResetPose();
             return;
         }
     }
 
-    if ((airActionCount < 2) && (field015c < 3)) {
-        if (inputX == facing) {
-            field0008 = 0x11;
-            airActionCount = airActionCount + 1;
-            ResetPose();
-            attackCollisionResult = 0;
+    if ((self->airActionCount < 2) && (self->field015c < 3)) {
+        if (self->inputX == self->facing) {
+            self->field0008 = 0x11;
+            self->airActionCount = self->airActionCount + 1;
+            self->ResetPose();
+            self->attackCollisionResult = 0;
             return;
         }
-        if (inputX == -facing) {
-            field0008 = 0x13;
-            airActionCount = airActionCount + 1;
-            ResetPose();
-            attackCollisionResult = 0;
+        if (self->inputX == -self->facing) {
+            self->field0008 = 0x13;
+            self->airActionCount = self->airActionCount + 1;
+            self->ResetPose();
+            self->attackCollisionResult = 0;
             return;
         }
     }
 
-    field000c = field000c + 1;
-    if (timing.frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (timing.animationFrameCount <= field000a) {
-            field000a = 0;
+    self->field000c = self->field000c + 1;
+    if (timing.frameDuration <= self->field000c) {
+        self->field000c = 0;
+        self->field000a = self->field000a + 1;
+        if (timing.animationFrameCount <= self->field000a) {
+            self->field000a = 0;
         }
     }
 
-    if (positionY + velocityY >= 0.0) {
-        positionY = 0.0;
-        pendingContextSoundSlot = 9;
-        field0008 = 0x0d;
-        ResetPose();
+    if (self->positionY + self->velocityY >= 0.0) {
+        self->positionY = 0.0;
+        self->pendingContextSoundSlot = 9;
+        self->field0008 = 0x0d;
+        self->ResetPose();
     }
 }
