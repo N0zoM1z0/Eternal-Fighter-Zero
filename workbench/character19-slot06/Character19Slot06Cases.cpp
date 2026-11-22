@@ -104,29 +104,7 @@ signed char Character19::Slot06OpponentWithinKnockbackRange()
 
 
 // Post-impact defeat wait; transitions to the standing recovery state 0x60.
-void Character19::Slot06UpdateDefeatWait(
-    unsigned short frameDuration,
-    unsigned short frameCount)
-{
-    if ((health > 0) && (field000c > 60) && (field000a == 0)) {
-        field0008 = 0x60;
-        ResetPose();
-        dashMomentumFlag = 0;
-    }
 
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (field000a == frameCount) {
-            FaceOpponent();
-        }
-        if (frameCount <= field000a) {
-            field0008 = 0x60;
-            ResetPose();
-        }
-    }
-}
 
 
 // Shared horizontal recovery/braking for native selectors 0x3a-0x3d.

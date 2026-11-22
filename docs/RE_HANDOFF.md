@@ -1649,8 +1649,8 @@ access throughout the dispatcher and all case fragments. This places the
 frequently used self pointer at [ebp-0x54], matching the native this-pointer
 operand, and the local EffectSpawn at [ebp-0x50]. The compiler still stores the
 incoming this pointer separately at [ebp-0x88], so the candidate stack
-allocation is 0x2d0 versus native 0x244. The COFF symbol is 59,782 bytes
-(59,000 code + 782 switch data), while the native owner is 58,363 code + 782
+allocation is 0x2d0 versus native 0x244. The COFF symbol is 59,945 bytes
+(59,163 code + 782 switch data), while the native owner is 58,363 code + 782
 switch data. The large selector 0x73 body is 2,302 bytes versus 2,400 native
 bytes; its normalized instruction-shape diagnostic is 624/643 instructions
 with 0.93923 similarity. The six horizontal-recovery cases remain inline and
@@ -1762,6 +1762,15 @@ shake, emit the owner-0 type-3 context effect at integer-truncated position,
 request context sound 7, and finish in state 99. Each arm matches its 248-byte
 native interval and all 69/69 normalized instructions. The former 259-byte
 helper and class declaration were removed.
+
+Selector 0x39 (state 99, post-impact defeat wait) is now inline natural C++.
+It retains the health/60-frame transition to state 0x60, dash-momentum clear,
+frame-count face-opponent event and completion reset. The case matches its
+186-byte native interval and all 55/55 normalized instructions; its former
+192-byte helper and class declaration were removed. All 38 targeted Slot06
+validators pass. The dispatcher is still not Exact: its current code extent
+is 59,163 bytes versus the native 58,363-byte extent, with the remaining
+difference requiring further source-level/codegen work.
 
 ## Kanna (Character19) CPU Slot07 — natural C++ port started — 2026-11-18
 

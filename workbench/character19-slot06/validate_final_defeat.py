@@ -48,14 +48,17 @@ for expression in (
 
 source=(ROOT/"workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
 for expression in (
-    "void Character19::Slot06UpdateDefeatWait",
-    "(health > 0) && (field000c > 60) && (field000a == 0)",
-    "field0008 = 0x60;",
-    "dashMomentumFlag = 0;",
-    "if (field000a == frameCount)",
-    "FaceOpponent();",
 ):
     assert expression in source,expression
+
+wait=(ROOT/"workbench/character19-slot06/Character19Slot06Case39.inc").read_text()
+for expression in (
+    "(health > 0) && (field000c > 60) && (field000a == 0)",
+    "field0008 = 0x60;", "ResetPose();", "dashMomentumFlag = 0;",
+    "++field000c;", "++field000a;",
+    "field000a == timing.animationFrameCount", "FaceOpponent();",
+):
+    assert expression in wait, expression
 
 impact=(ROOT/"workbench/character19-slot06/Character19Slot06Case37.inc").read_text()
 for expression in (
@@ -72,7 +75,8 @@ assert_selector_case(dispatcher, 98)
 assert_selector_case(dispatcher, 99)
 assert dispatcher.count('#include "Character19Slot06Case37.inc"') == 2
 assert "Slot06UpdateDefeatImpact(" not in dispatcher
-assert "Slot06UpdateDefeatWait(" in dispatcher
+assert '#include "Character19Slot06Case39.inc"' in dispatcher
+assert "Slot06UpdateDefeatWait(" not in dispatcher
 
 print({
     "case_0x38":{"native_bytes":248,"state_id":98,"same_body_as":"0x37"},

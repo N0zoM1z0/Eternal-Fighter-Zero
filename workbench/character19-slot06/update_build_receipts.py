@@ -44,7 +44,6 @@ for symbol in helper_symbols:
         "candidate_size": len(body),
         "relocations": len(relocations),
     }
-assert "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateFinalFaceTransition@Character19@@") for symbol in helper_members)
 
@@ -391,7 +390,6 @@ for filename in (
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-defeat_wait_helper = "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z"
 (workbench / "final-defeat-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": {
@@ -406,15 +404,12 @@ defeat_wait_helper = "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z"
         "symbol": "?Slot06@Character19@@UAEXXZ",
         "symbol_size": len(main_body),
         "inlined_case_sources": {
-            "workbench/character19-slot06/Character19Slot06Case37.inc": hashlib.sha256(
-                (workbench / "Character19Slot06Case37.inc").read_bytes()
+            f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
+                (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
             ).hexdigest()
+            for case in (0x37, 0x39)
         },
-        "retained_leaf": {
-            "symbol": defeat_wait_helper,
-            **helper_members[defeat_wait_helper],
-        },
-        "status": "inline-natural-cpp-with-retained-defeat-wait-leaf-not-exact",
+        "status": "inlined-natural-cpp-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,

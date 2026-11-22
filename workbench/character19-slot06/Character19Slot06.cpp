@@ -331,8 +331,9 @@ void Character19::Slot06()
         break;
 
     case 57:
-        self->Slot06UpdateDefeatWait(
-            timing.frameDuration, timing.animationFrameCount);
+        {
+#include "Character19Slot06Case39.inc"
+        }
         break;
 
     case 58:

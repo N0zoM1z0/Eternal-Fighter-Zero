@@ -95,10 +95,6 @@ for address,expected_value in constants.items():
 
 source=(ROOT/"workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
 for expression in (
-    "void Character19::Slot06UpdateDefeatWait",
-    "(health > 0) && (field000c > 60) && (field000a == 0)",
-    "dashMomentumFlag = 0;",
-    "field0008 = 0x60;",
 ):
     assert expression in source,expression
 
@@ -119,6 +115,15 @@ for expression in (
 ):
     assert expression in face, expression
 
+wait = (ROOT / "workbench/character19-slot06/Character19Slot06Case39.inc").read_text()
+for expression in (
+    "(health > 0) && (field000c > 60) && (field000a == 0)",
+    "dashMomentumFlag = 0;", "field0008 = 0x60;", "ResetPose();",
+    "++field000c;", "++field000a;",
+    "field000a == timing.animationFrameCount", "FaceOpponent();",
+):
+    assert expression in wait, expression
+
 impact = (ROOT / "workbench/character19-slot06/Character19Slot06Case37.inc").read_text()
 for expression in (
     "velocityX = 0.0;", "velocityY = 0.0;",
@@ -132,6 +137,8 @@ for expression in (
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert '#include "Character19Slot06Case35.inc"' in dispatcher
 assert '#include "Character19Slot06Case36.inc"' in dispatcher
+assert '#include "Character19Slot06Case39.inc"' in dispatcher
+assert "Slot06UpdateDefeatWait(" not in dispatcher
 assert dispatcher.count('#include "Character19Slot06Case37.inc"') == 2
 assert "Slot06UpdateLocalEffectRecovery(" not in dispatcher
 assert "Slot06UpdateFaceRecovery(" not in dispatcher
