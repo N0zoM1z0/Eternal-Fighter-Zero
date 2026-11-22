@@ -1649,8 +1649,8 @@ access throughout the dispatcher and all case fragments. This places the
 frequently used self pointer at [ebp-0x54], matching the native this-pointer
 operand, and the local EffectSpawn at [ebp-0x50]. The compiler still stores the
 incoming this pointer separately at [ebp-0x88], so the candidate stack
-allocation is 0x2c0 versus native 0x244. The COFF symbol is 58,773 bytes
-(57,991 code + 782 switch data), while the native owner is 58,363 code + 782
+allocation is 0x2c0 versus native 0x244. The COFF symbol is 59,062 bytes
+(58,280 code + 782 switch data), while the native owner is 58,363 code + 782
 switch data. The large selector 0x73 body is 2,302 bytes versus 2,400 native
 bytes; its normalized instruction-shape diagnostic is 624/643 instructions
 with 0.93923 similarity. The six horizontal-recovery cases remain inline and
@@ -1702,6 +1702,15 @@ outgoingPushbackVelocityX and horizontalDeceleration are cleared, while
 positionX remains intact for the type-8 effect coordinates. Each arm matches
 its 330-byte native interval and all 86/86 normalized instructions. The
 284-byte parameterized helper and its class declaration were removed.
+
+Selector 0x4C (state 178, horizontal dash recovery) is now inline natural C++.
+The native velocity self-store, signed-positive cancel gate and three
+independent switch exits are preserved, along with the strict negative-
+velocity clamp and down-input cancel states 4/5/6. The candidate matches the
+native 312-byte interval and all 87/87 normalized instructions. The former
+298-byte helper and class declaration were removed. All 38 targeted Slot06
+validators pass; this remains a partial natural-C++ reconstruction, not an
+Exact claim.
 
 Selector 0x64 (state 249, stun/effect recovery) is now inline natural C++ too.
 It uses Slot06's zero-initialized dispatcher EffectSpawn for the owner-0

@@ -728,9 +728,9 @@ void Character19::Slot06()
         break;
 
     case 76:
-        self->Slot06UpdateDashRecovery(
-            timing.frameDuration, timing.animationFrameCount);
-        break;
+        {
+#include "Character19Slot06Case4C.inc"
+        }
 
     case 77:
         {

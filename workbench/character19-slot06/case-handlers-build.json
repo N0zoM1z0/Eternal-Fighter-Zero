@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "559e52f66487026b0e9eacaf72957f439735b597e0215c4944a210d5dc247c7b",
+  "source_sha256": "04d0a94496b5059abdc7491636b06b94f4bc29d41545d2b42400893b5559c4e5",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "d9029a5bfad834b84999a35bf5275504f49d41eaf0c2a65ac3671fedb22c32a2",
+  "object_sha256": "64d1088a84990b824fc78d18104ebb35f88bd09f814e9604ac6125f04ae17e2a",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -20,10 +20,6 @@
     },
     "?Slot06UpdateAerialKickback@Character19@@QAEXGG@Z": {
       "candidate_size": 194,
-      "relocations": 3
-    },
-    "?Slot06UpdateDashRecovery@Character19@@QAEXGG@Z": {
-      "candidate_size": 298,
       "relocations": 3
     },
     "?Slot06UpdateDefeatImpact@Character19@@QAEXGGPAUEffectSpawn@@@Z": {

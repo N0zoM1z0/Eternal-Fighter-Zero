@@ -65,24 +65,22 @@ pe = verify_target()
 actual = struct.unpack("<d", target_bytes(pe, 0x00787ca0, 8))[0]
 assert actual == 0.03, actual
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-start = source.index("void Character19::Slot06UpdateDashRecovery")
-end = source.index("\n}\n", start) + 3
-helper = source[start:end]
+helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case4C.inc").read_text()
 for expression in (
     "velocityX = velocityX - 0.03;",
+    "velocityX = velocityX;",
     "if (velocityX < 0.0)",
     "velocityX = 0.0;",
     "dashMomentumFlag = 0;",
     "inputY == -1",
-    "field000a != 0",
+    "field000a > 0",
     "field015c < 3",
     "field0008 = 4;",
     "field0008 = 5;",
     "field0008 = 6;",
     "attackCollisionResult = 0;",
     "ResetPose();",
-    "field000c = field000c + 1;",
+    "++field000c;",
     "field0008 = 0;",
 ):
     assert expression in helper, expression
@@ -94,5 +92,6 @@ assert "dashMomentumFlag = 0;" in analog
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 178)
-assert "Slot06UpdateDashRecovery(" in dispatcher
+assert '#include "Character19Slot06Case4C.inc"' in dispatcher
+assert "Slot06UpdateDashRecovery(" not in dispatcher
 print({"selector": "0x4C", "native_bytes": 312, "state_id": 178, "deceleration": actual, "cancel_states": [4,5,6]})

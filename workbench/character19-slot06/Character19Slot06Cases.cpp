@@ -227,38 +227,7 @@ void Character19::Slot06UpdateDefeatWait(
 
 
 // Horizontal dash recovery with the native down-input cancel window (selector 0x4c).
-void Character19::Slot06UpdateDashRecovery(
-    unsigned short frameDuration,
-    unsigned short frameCount)
-{
-    velocityX = velocityX - 0.03;
-    if (velocityX < 0.0) {
-        velocityX = 0.0;
-        dashMomentumFlag = 0;
-    }
 
-    if ((inputY == -1) && (field000a != 0) && (field015c < 3)) {
-        field0008 = 4;
-        if (inputX == facing) {
-            field0008 = 5;
-        }
-        if (inputX == -facing) {
-            field0008 = 6;
-        }
-        attackCollisionResult = 0;
-        ResetPose();
-    } else {
-        field000c = field000c + 1;
-        if (frameDuration <= field000c) {
-            field000c = 0;
-            field000a = field000a + 1;
-            if (frameCount <= field000a) {
-                field0008 = 0;
-                ResetPose();
-            }
-        }
-    }
-}
 
 
 // Shared dash-attack follow-through, hit-cancel and local-effect sequencing for selectors 0x4d-0x51.
