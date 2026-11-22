@@ -55,7 +55,7 @@ lines += [
     "    }",
     "",
     "    EffectSpawn spawn;",
-    "    unsigned short randomValue;",
+    "    unsigned int stateIndex;",
     "    unsigned char selectorCase;",
     "    struct FrameTiming {",
     "        __declspec(align(4)) unsigned short animationFrameCount;",
@@ -66,8 +66,12 @@ lines += [
     "    timing.animationFrameCount = patterns[field0008].count;",
     "    ResetLocalEffectSpawn(&spawn);",
     "    selectorCase = 0x75;",
-    "    if ((field0008 != 0) && (field0008 <= 0x136)) {",
-    "        selectorCase = Character19Slot06SelectorCases[field0008 - 1];",
+    "    stateIndex = field0008;",
+    "    if (stateIndex != 0) {",
+    "        --stateIndex;",
+    "        if (stateIndex <= 0x135) {",
+    "            selectorCase = Character19Slot06SelectorCases[stateIndex];",
+    "        }",
     "    }",
     "",
     "    switch (selectorCase) {",
@@ -78,11 +82,11 @@ def labels(case):
 
 def advance_frame():
     return [
-        "        field000c = field000c + 1;",
-        "        if (timing.frameDuration <= field000c) {",
+        "        ++field000c;",
+        "        if (field000c >= timing.frameDuration) {",
         "            field000c = 0;",
-        "            field000a = field000a + 1;",
-        "            if (timing.animationFrameCount <= field000a) {",
+        "            ++field000a;",
+        "            if (field000a >= timing.animationFrameCount) {",
         "                field000a = 0;",
         "            }",
         "        }",
@@ -738,8 +742,10 @@ for case, method in [
 ]:
     lines += labels(case)
     if case in (3, 4, 5, 8, 9, 0x70, 0x71, 0x72, 0x73, 0x74):
+        lines += ["        {"]
+        if case == 0x70:
+            lines += ["            unsigned short randomValue;"]
         lines += [
-            "        {",
             f'#include "Character19Slot06Case{case:02X}.inc"',
             "        }",
             "        break;",
@@ -763,11 +769,11 @@ lines += [
     "        dashMomentumFlag = 0;",
     "        velocityX = 0.0;",
     "        velocityY = 0.0;",
-    "        field000c = field000c + 1;",
-    "        if (timing.frameDuration <= field000c) {",
+    "        ++field000c;",
+    "        if (field000c >= timing.frameDuration) {",
     "            field000c = 0;",
-    "            field000a = field000a + 1;",
-    "            if (timing.animationFrameCount <= field000a) {",
+    "            ++field000a;",
+    "            if (field000a >= timing.animationFrameCount) {",
     "                field000a = 0;",
     "            }",
     "        }",

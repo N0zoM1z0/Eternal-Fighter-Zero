@@ -173,10 +173,10 @@ if ((field000a == 0x35) && (velocityY > 1.0)) {
 }
 
 if ((field000a < 0x38) || (positionY + velocityY <= 0.0)) {
-    field000c = field000c + 1;
-    if (timing.frameDuration <= field000c) {
+    ++field000c;
+    if (field000c >= timing.frameDuration) {
         field000c = 0;
-        field000a = field000a + 1;
+        ++field000a;
 
         if ((field000a < 0x12) || (field000a == 0x23) ||
             (field000a > 0x32)) {
@@ -220,7 +220,7 @@ if ((field000a < 0x38) || (positionY + velocityY <= 0.0)) {
                 field000a = field000a - 1;
             }
 
-            if (timing.animationFrameCount <= field000a) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = field000a - 2;
             }
         }

@@ -10,7 +10,7 @@ The state selector maps 310 animation-state IDs onto 118 shared case handlers. 1
 
 ## Current natural-C++ work
 
-Character19Slot06.cpp is a partial natural-C++ reconstruction of the common prologue and switch dispatch. It has the original hitstop/opponent-hitstun early exits, constructs and resets the local EffectSpawn, snapshots PatternSequence frame timing, and now reproduces the native two-level dispatch shape: a 310-byte state-to-selector array followed by a dense 118-case switch. validate_selector_dispatch.py verifies both the 310 selector bytes at 0x00675B43 and the 118 four-byte case targets at 0x0067596B byte-for-byte against the target executable and case-map.csv.
+Character19Slot06.cpp is a partial natural-C++ reconstruction of the common prologue and switch dispatch. It has the original hitstop/opponent-hitstun early exits, constructs and resets the local EffectSpawn, snapshots PatternSequence frame timing, and reproduces the native two-level dispatch shape: a 310-byte state-to-selector array followed by a dense 118-case switch. The selector lookup now uses an explicit 32-bit stateIndex local, decrements it once, performs the native unsigned 0x135 bound check, then loads the byte selector. randomValue is scoped to selector 0x70 instead of being a function-wide local. The shared frame-advance path and the large 0x73 case now use native-width 16-bit prefix increments and native comparison operand order. validate_selector_dispatch.py verifies both the 310 selector bytes at 0x00675B43 and the 118 four-byte case targets at 0x0067596B byte-for-byte against the target executable and case-map.csv.
 
 The generated dispatcher maps all **310 native state IDs** through the complete **118-entry selector table**. The 193 IDs assigned to selector 0x75 use the actual shared native fallback; the other 117 selector cases have explicit natural-C++ switch bodies or dedicated state helpers. No valid state ID is silently mapped to a TODO branch. Out-of-range states and state 0 resolve to the same 0x75 fallback, as in the native unsigned range check.
 
@@ -75,7 +75,7 @@ The seven dispatch variants preserve their distinct launch parameters:
 - 0x10: frame 2, (vx=-2, vy=-0.5), fixed 0.01 acceleration
 - 0x11: frame 2, (vx=-1.5, vy=-0.5), gravity acceleration
 
-The two one-byte native writes at Secondary offsets 0x2c8 and 0x2c9 are represented as byte accesses to the final soundSlots[49] storage. This preserves the observed layout without falsely assigning a semantic name to the bytes. This family is compiled and semantically mapped, not yet Exact; the full Slot06 owner remains incomplete. The current 64,421-byte dispatcher candidate and remaining helper object compile with the pinned VC7.1 /Od /G6 /MT /Gy /W3 profile.
+The two one-byte native writes at Secondary offsets 0x2c8 and 0x2c9 are represented as byte accesses to the final soundSlots[49] storage. This preserves the observed layout without falsely assigning a semantic name to the bytes. This family is compiled and semantically mapped, not yet Exact; the full Slot06 owner remains incomplete. The current 64,431-byte dispatcher candidate and remaining helper object compile with the pinned VC7.1 /Od /G6 /MT /Gy /W3 profile.
 
 The local CharacterViews.h copy adds only non-virtual draft helper declarations; production headers and vtable layout are unchanged. No assembly, padding, or byte patching is used.
 
@@ -278,6 +278,8 @@ Case 0x60 starts a spacing-3 trail, clears dash momentum, holds horizontal veloc
 
 
 ## Stun effect recovery: selector case 0x64
+
+The selector prologue now mirrors the native 32-bit state-index sequence (load state ID, decrement, unsigned compare against 0x135, then selector-byte lookup). Frame progression in the shared fallback and the large selector 0x73 body uses 16-bit prefix increments, preserving the native register width and comparison operand order. The randomValue temporary is scoped to selector 0x70. The current function still has a 0x26c stack allocation versus the native 0x244; the EffectSpawn local now sits at the native -0x50 frame offset, while the compiler-saved this pointer remains at -0x84 rather than -0x54. This is codegen progress, not an Exact claim.
 
 The 320-byte state 249 configures field00dc=4, field00de=0xec, clears horizontal velocity and guard-input frames, sets remainingHitCount=1 and 60 hitstun frames, then emits context effect 0x28 at integer-truncated position plus a facing-dependent 10-pixel X offset and -40 Y (group 2, layer 1, palette 0x13). Every animation-frame transition clears attackCollisionResult; completion faces the opponent and returns to state 0.
 

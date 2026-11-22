@@ -37,7 +37,7 @@ void Character19::Slot06()
     }
 
     EffectSpawn spawn;
-    unsigned short randomValue;
+    unsigned int stateIndex;
     unsigned char selectorCase;
     struct FrameTiming {
         __declspec(align(4)) unsigned short animationFrameCount;
@@ -48,8 +48,12 @@ void Character19::Slot06()
     timing.animationFrameCount = patterns[field0008].count;
     ResetLocalEffectSpawn(&spawn);
     selectorCase = 0x75;
-    if ((field0008 != 0) && (field0008 <= 0x136)) {
-        selectorCase = Character19Slot06SelectorCases[field0008 - 1];
+    stateIndex = field0008;
+    if (stateIndex != 0) {
+        --stateIndex;
+        if (stateIndex <= 0x135) {
+            selectorCase = Character19Slot06SelectorCases[stateIndex];
+        }
     }
 
     switch (selectorCase) {
@@ -57,11 +61,11 @@ void Character19::Slot06()
         dashMomentumFlag = 0;
         velocityX = 0.8;
         velocityY = 0.0;
-        field000c = field000c + 1;
-        if (timing.frameDuration <= field000c) {
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
-            field000a = field000a + 1;
-            if (timing.animationFrameCount <= field000a) {
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0;
             }
         }
@@ -70,11 +74,11 @@ void Character19::Slot06()
         dashMomentumFlag = 0;
         velocityX = -0.8;
         velocityY = 0.0;
-        field000c = field000c + 1;
-        if (timing.frameDuration <= field000c) {
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
-            field000a = field000a + 1;
-            if (timing.animationFrameCount <= field000a) {
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0;
             }
         }
@@ -84,11 +88,11 @@ void Character19::Slot06()
         velocityY = 0.0;
         dashMomentumFlag = 0;
         FaceOpponent();
-        field000c = field000c + 1;
-        if (timing.frameDuration <= field000c) {
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
-            field000a = field000a + 1;
-            if (timing.animationFrameCount <= field000a) {
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0;
             }
         }
@@ -988,6 +992,7 @@ void Character19::Slot06()
 
     case 112:
         {
+            unsigned short randomValue;
 #include "Character19Slot06Case70.inc"
         }
         break;
@@ -1020,11 +1025,11 @@ void Character19::Slot06()
         dashMomentumFlag = 0;
         velocityX = 0.0;
         velocityY = 0.0;
-        field000c = field000c + 1;
-        if (timing.frameDuration <= field000c) {
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
-            field000a = field000a + 1;
-            if (timing.animationFrameCount <= field000a) {
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0;
             }
         }
@@ -1035,11 +1040,11 @@ void Character19::Slot06()
         dashMomentumFlag = 0;
         velocityX = 0.0;
         velocityY = 0.0;
-        field000c = field000c + 1;
-        if (timing.frameDuration <= field000c) {
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
-            field000a = field000a + 1;
-            if (timing.animationFrameCount <= field000a) {
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0;
             }
         }

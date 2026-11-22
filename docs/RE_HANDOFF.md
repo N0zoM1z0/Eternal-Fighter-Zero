@@ -1639,7 +1639,15 @@ Ghidra body size 25,787 bytes, selected by vtable offset `+0x1c`). The adjacent
 its boundary and code before treating the name/extent as final.
 
 The Slot06 workbench now covers all 310 native state IDs through 118 selector
-cases. The latest pass inlined the six horizontal-recovery variants (selectors
+cases. Its common prologue now uses an explicit 32-bit state index with the
+native decrement and unsigned 0x135 range check before the selector-byte
+lookup. The shared fallback and large 0x73 body use 16-bit frame-counter
+increments and native comparison operand order; the randomValue temporary is
+scoped to case 0x70. The selected-unit validators pass after these changes.
+The current 64,431-byte dispatcher candidate still differs from the
+58,363-byte native owner and is not Exact. Its stack allocation is 0x26c
+versus native 0x244; the local EffectSpawn is now at -0x50, while the
+compiler-saved this pointer remains at -0x84 instead of -0x54. The latest pass inlined the six horizontal-recovery variants (selectors
 0x3a-0x3f) into independent natural-C++ case bodies, removed their shared
 out-of-line helper, and restored 16-bit counter increments and native comparison
 operand order. A targeted instruction-shape comparison matches all six native
