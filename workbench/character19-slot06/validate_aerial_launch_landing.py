@@ -97,10 +97,7 @@ for expression in (
 ):
     assert expression in disasm, expression
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-start = source.index("void Character19::Slot06UpdateAerialLaunchLanding")
-end = source.index("\n}\n", start) + 3
-helper = source[start:end]
+helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case57.inc").read_text()
 for expression in (
     "field000a == 0",
     "velocityX = 0.0;",
@@ -130,5 +127,6 @@ for expression in (
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 210)
-assert "Slot06UpdateAerialLaunchLanding(" in dispatcher
+assert '#include "Character19Slot06Case57.inc"' in dispatcher
+assert "Slot06UpdateAerialLaunchLanding(" not in dispatcher
 print({"selector": "0x57", "native_bytes": 454, "state_id": 210, "launch": [1.4,-1.5], "gravity": 0.08, "meter": 15})

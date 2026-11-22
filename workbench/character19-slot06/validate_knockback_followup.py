@@ -48,12 +48,6 @@ for case, values in expected.items():
     row = case_rows[case]
     assert int(row["native_code_bytes"]) == native_size, (hex(case), row)
     assert [int(x) for x in row["state_ids"].split(";") if x] == [state]
-    config = (
-        f"({hex(case)}, ({vx}, {vy}, {gravity}, {meter}, {effect}, "
-        f"{clear_dash}, {gravity_each}, {skip_first}))"
-    )
-    assert config in renderer, (hex(case), config)
-
     block = "\n".join(blocks[case])
     for expression in (
         "*(short *)(param_1 + 3) = (short)param_1[3] + 1;",
@@ -110,28 +104,51 @@ for address, expected_value in constants.items():
     actual = struct.unpack("<d", target_bytes(pe, address, 8))[0]
     assert actual == expected_value, (hex(address), actual, expected_value)
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
-    "void Character19::Slot06UpdateAirborneKnockdown",
-    "velocityX = horizontalVelocity;",
-    "if (clearDashMomentumFlag)",
-    "dashMomentumFlag = 0;",
-    "if (gravitySetEveryFrame)",
-    "velocityY = initialVerticalVelocity;",
-    "meter = meter + meterGain;",
-    "spawn->type = (unsigned short)effectType;",
-    "spawn->x = (double)(int)positionX;",
-    "spawn->y = (double)(int)positionY;",
-    "spawn->group = 2;",
-    "spawn->layer = 0;",
-    "contextOwner->EmitEffect(spawn);",
-    "velocityY = velocityY + gravity;",
-    "field0008 = 9;",
-    "pendingContextSoundSlot = 9;",
-    "FaceOpponent();",
-    "field0008 = 0x0d;",
-):
-    assert expression in source, expression
+source = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+source = source.replace("self->", "")
+case_matches = list(re.finditer(r"^\s*case\s+(\d+)\s*:", source, re.M))
+source_cases = {}
+for index, match in enumerate(case_matches):
+    case = int(match.group(1))
+    finish = case_matches[index + 1].start() if index + 1 < len(case_matches) else len(source)
+    source_cases[case] = source[match.start():finish]
+for case, values in expected.items():
+    native_size, state, vx, vy, gravity, meter, effect, clear_dash, gravity_each, skip_first = values
+    block = source_cases[case]
+    assert "++field000c;" in block and "++field000a;" in block
+    assert "field000c >= timing.frameDuration" in block
+    assert "field000a >= timing.animationFrameCount" in block
+    assert "positionY + velocityY" in block
+    assert "pendingContextSoundSlot = 9;" in block
+    assert "FaceOpponent();" in block
+    assert "field0008 = 0x0d;" in block
+    if case == 0x40:
+        for expression in (
+            "velocityX = -1.2;",
+            "velocityY = -2.6;",
+            "meter = meter + 15;",
+            "gravity = 0.06;",
+            "velocityY = velocityY + gravity;",
+        ):
+            assert expression in block, (hex(case), expression)
+    else:
+        for expression in (
+            f"velocityX = {vx};",
+            "velocityY = -2.3;",
+            "gravity = 0.045;",
+            "dashMomentumFlag = 0;",
+            "spawn.type = 8;",
+            "stateIndex = (int)positionX;",
+            "spawn.x = (double)stateIndex;",
+            "stateIndex = (int)positionY;",
+            "spawn.y = (double)stateIndex;",
+            "spawn.group = 2;",
+            "spawn.layer = 0;",
+            "contextOwner->EmitEffect(&spawn);",
+            "velocityY = velocityY + gravity;",
+        ):
+            assert expression in block, (hex(case), expression)
+assert "Slot06UpdateAirborneKnockdown(" not in source
 
 context_emit = (ROOT / "src/EffectPool.cpp").read_text()
 for expression in (

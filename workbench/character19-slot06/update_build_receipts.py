@@ -49,11 +49,8 @@ assert any(symbol.startswith("?Slot06UpdateLocalEffectRecovery@Character19@@") f
 assert "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateDefeatImpact@Character19@@") for symbol in helper_members)
 assert "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z" in helper_members
-assert any(symbol.startswith("?Slot06UpdateAirborneKnockdown@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateKnockbackImpactFinish@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateAirborneHitstunRestore@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashRecovery@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateAerialLaunchLanding@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashFollowupCancel@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateGroundImpactRecovery@Character19@@") for symbol in helper_members)
@@ -461,10 +458,6 @@ defeat_wait_helper = "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z"
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-airborne_knockdown_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateAirborneKnockdown@")
-)
 (workbench / "knockback-followup-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": {
@@ -473,13 +466,14 @@ airborne_knockdown_helper = next(
         "0x42": {"entry": "0x0066F2EA", "bytes": 342, "state_id": 158, "initial_vx": -1.0, "initial_vy": -2.3, "gravity": 0.045, "meter_gain": 0, "effect_type": 8},
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": airborne_knockdown_helper,
-        **helper_members[airborne_knockdown_helper],
-        "status": "semantic-workbench-only-not-exact",
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "symbol": "?Slot06@Character19@@UAEXXZ",
+        "symbol_size": len(main_body),
+        "status": "inlined-natural-cpp-not-exact",
+        "inline_cases": ["0x40", "0x41", "0x42"],
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
@@ -585,10 +579,6 @@ impact_finish_helper = next(
 
 
 
-hitstun_restore_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateAirborneHitstunRestore@")
-)
 (workbench / "airborne-hitstun-restore-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
@@ -603,13 +593,18 @@ hitstun_restore_helper = next(
         "landing_state": "0xA9",
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": hitstun_restore_helper,
-        **helper_members[hitstun_restore_helper],
-        "status": "semantic-workbench-only-not-exact",
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "symbol": "?Slot06@Character19@@UAEXXZ",
+        "symbol_size": len(main_body),
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case4A.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case4A.inc").read_bytes()
+            ).hexdigest()
+        },
+        "status": "inlined-natural-cpp-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
@@ -758,10 +753,6 @@ dash_recovery_helper = next(
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-aerial_launch_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateAerialLaunchLanding@")
-)
 (workbench / "aerial-launch-landing-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
@@ -779,13 +770,18 @@ aerial_launch_helper = next(
         "completion_state": 0,
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": aerial_launch_helper,
-        **helper_members[aerial_launch_helper],
-        "status": "semantic-workbench-only-not-exact",
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "symbol": "?Slot06@Character19@@UAEXXZ",
+        "symbol_size": len(main_body),
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case57.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case57.inc").read_bytes()
+            ).hexdigest()
+        },
+        "status": "inlined-natural-cpp-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,

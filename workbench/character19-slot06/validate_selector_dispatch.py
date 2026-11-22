@@ -47,9 +47,9 @@ assert match is not None
 compiled_literals = [int(value, 16) for value in re.findall(r"0x([0-9a-fA-F]{2})", match.group(1))]
 assert compiled_literals == selector
 assert "switch (selectorCase)" in source
-assert "stateIndex = field0008;" in source
+assert "stateIndex = (int)field0008;" in source
 assert "--stateIndex;" in source
-assert "stateIndex <= 0x135" in source
+assert "(unsigned int)stateIndex <= 0x135" in source
 assert "selectorCase = Character19Slot06SelectorCases[stateIndex];" in source
 assert "selectorCase = 0x75;" in source
 assert "switch (field0008)" not in source

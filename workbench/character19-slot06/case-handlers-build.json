@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "aaa75c4349e78e99545a2c9b4840254c9d940068cbe53795aeb5c5044ecccec0",
+  "source_sha256": "ab6b0c512e6fdf0445c0b984f65cdbb3de89777efa74fbf552344da68f18435f",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "10ffd8d75df5eee3bea916194e758ddd78e3b0c3c56faf2194d6dbdd90025f43",
+  "object_sha256": "235e8f9e93e6c3898d27448f907aa83cd3e8554bf57f089c5ac01354ef87eccf",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -21,18 +21,6 @@
     "?Slot06UpdateAerialKickback@Character19@@QAEXGG@Z": {
       "candidate_size": 194,
       "relocations": 3
-    },
-    "?Slot06UpdateAerialLaunchLanding@Character19@@QAEXGG@Z": {
-      "candidate_size": 459,
-      "relocations": 11
-    },
-    "?Slot06UpdateAirborneHitstunRestore@Character19@@QAEXGG@Z": {
-      "candidate_size": 452,
-      "relocations": 14
-    },
-    "?Slot06UpdateAirborneKnockdown@Character19@@QAEXGGPAUEffectSpawn@@NNNFHHHH@Z": {
-      "candidate_size": 455,
-      "relocations": 6
     },
     "?Slot06UpdateAirborneTrailDash@Character19@@QAEXGG@Z": {
       "candidate_size": 399,

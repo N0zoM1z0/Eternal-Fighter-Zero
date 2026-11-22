@@ -38,7 +38,7 @@ void Character19::Slot06()
     }
 
     EffectSpawn spawn;
-    unsigned int stateIndex;
+    int stateIndex;
     unsigned char selectorCase;
     struct FrameTiming {
         __declspec(align(4)) unsigned short animationFrameCount;
@@ -49,10 +49,10 @@ void Character19::Slot06()
     timing.animationFrameCount = self->patterns[self->field0008].count;
     self->ResetLocalEffectSpawn(&spawn);
     selectorCase = 0x75;
-    stateIndex = self->field0008;
+    stateIndex = (int)self->field0008;
     if (stateIndex != 0) {
         --stateIndex;
-        if (stateIndex <= 0x135) {
+        if ((unsigned int)stateIndex <= 0x135) {
             selectorCase = Character19Slot06SelectorCases[stateIndex];
         }
     }
@@ -572,24 +572,105 @@ void Character19::Slot06()
         break;
 
     case 64:
-        self->Slot06UpdateAirborneKnockdown(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            -1.2, -2.6, 0.06,
-            15, 0, 0, 0, 0);
+        {
+            if ((self->field000a == 0) && (self->field000c == 0)) {
+                self->velocityY = -2.6;
+                self->meter = self->meter + 15;
+                self->gravity = 0.06;
+            }
+            self->velocityX = -1.2;
+            self->velocityY = self->velocityY + self->gravity;
+            ++self->field000c;
+            if (self->field000c >= timing.frameDuration) {
+                self->field000c = 0;
+                ++self->field000a;
+                if (self->field000a >= timing.animationFrameCount) {
+                    self->field0008 = 9;
+                    self->ResetPose();
+                }
+            }
+            if ((self->positionY + self->velocityY) >= 0.0) {
+                self->positionY = 0.0;
+                self->pendingContextSoundSlot = 9;
+                self->FaceOpponent();
+                self->field0008 = 0x0d;
+                self->ResetPose();
+            }
+        }
         break;
 
     case 65:
-        self->Slot06UpdateAirborneKnockdown(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            1.0, -2.3, 0.045,
-            0, 8, 1, 1, 1);
+        {
+            self->velocityX = 1.0;
+            self->gravity = 0.045;
+            self->dashMomentumFlag = 0;
+            if ((self->field000a == 0) && (self->field000c == 0)) {
+                self->velocityY = -2.3;
+                spawn.type = 8;
+                stateIndex = (int)self->positionX;
+                spawn.x = (double)stateIndex;
+                stateIndex = (int)self->positionY;
+                spawn.y = (double)stateIndex;
+                spawn.group = 2;
+                spawn.layer = 0;
+                self->contextOwner->EmitEffect(&spawn);
+            } else {
+                self->velocityY = self->velocityY + self->gravity;
+            }
+            ++self->field000c;
+            if (self->field000c >= timing.frameDuration) {
+                self->field000c = 0;
+                ++self->field000a;
+                if (self->field000a >= timing.animationFrameCount) {
+                    self->field0008 = 9;
+                    self->ResetPose();
+                }
+            }
+            if ((self->positionY + self->velocityY) >= 0.0) {
+                self->positionY = 0.0;
+                self->pendingContextSoundSlot = 9;
+                self->FaceOpponent();
+                self->field0008 = 0x0d;
+                self->ResetPose();
+            }
+        }
         break;
 
     case 66:
-        self->Slot06UpdateAirborneKnockdown(
-            timing.frameDuration, timing.animationFrameCount, &spawn,
-            -1.0, -2.3, 0.045,
-            0, 8, 1, 1, 1);
+        {
+            self->velocityX = -1.0;
+            self->gravity = 0.045;
+            self->dashMomentumFlag = 0;
+            if ((self->field000a == 0) && (self->field000c == 0)) {
+                self->velocityY = -2.3;
+                spawn.type = 8;
+                stateIndex = (int)self->positionX;
+                spawn.x = (double)stateIndex;
+                stateIndex = (int)self->positionY;
+                spawn.y = (double)stateIndex;
+                spawn.group = 2;
+                spawn.layer = 0;
+                self->contextOwner->EmitEffect(&spawn);
+            } else {
+                self->velocityY = self->velocityY + self->gravity;
+            }
+            ++self->field000c;
+            if (self->field000c >= timing.frameDuration) {
+                self->field000c = 0;
+                ++self->field000a;
+                if (self->field000a >= timing.animationFrameCount) {
+                    self->field0008 = 9;
+                    self->ResetPose();
+                }
+            }
+            if ((self->positionY + self->velocityY) >= 0.0) {
+                self->positionY = 0.0;
+                self->pendingContextSoundSlot = 9;
+                self->FaceOpponent();
+                self->field0008 = 0x0d;
+                self->ResetPose();
+            }
+        }
         break;
 
     case 67:
@@ -635,8 +716,9 @@ void Character19::Slot06()
         break;
 
     case 74:
-        self->Slot06UpdateAirborneHitstunRestore(
-            timing.frameDuration, timing.animationFrameCount);
+        {
+#include "Character19Slot06Case4A.inc"
+        }
         break;
 
     case 75:
@@ -711,8 +793,9 @@ void Character19::Slot06()
         break;
 
     case 87:
-        self->Slot06UpdateAerialLaunchLanding(
-            timing.frameDuration, timing.animationFrameCount);
+        {
+#include "Character19Slot06Case57.inc"
+        }
         break;
 
     case 88:

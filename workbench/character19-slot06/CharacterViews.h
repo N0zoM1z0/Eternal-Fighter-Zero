@@ -416,11 +416,8 @@ public:
     void Slot06UpdateFaceRecovery(unsigned short, unsigned short);
     void Slot06UpdateDefeatImpact(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateDefeatWait(unsigned short, unsigned short);
-    void Slot06UpdateAirborneKnockdown(unsigned short, unsigned short, EffectSpawn *, double, double, double, short, int, int, int, int);
     void Slot06UpdateKnockbackImpactFinish(unsigned short, unsigned short, EffectSpawn *, unsigned short);
-    void Slot06UpdateAirborneHitstunRestore(unsigned short, unsigned short);
     void Slot06UpdateDashRecovery(unsigned short, unsigned short);
-    void Slot06UpdateAerialLaunchLanding(unsigned short, unsigned short);
     void Slot06UpdateDashFollowupCancel(unsigned short, unsigned short);
     void Slot06UpdateAerialKickback(unsigned short, unsigned short);
     void Slot06UpdateGroundImpactRecovery(unsigned short, unsigned short, EffectSpawn *);

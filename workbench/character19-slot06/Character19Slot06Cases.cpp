@@ -273,72 +273,6 @@ void Character19::Slot06UpdateDefeatWait(
 
 
 // Shared horizontal recovery/braking for native selectors 0x3a-0x3d.
-// Airborne knockback/impact variants for native selectors 0x40-0x42.
-void Character19::Slot06UpdateAirborneKnockdown(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    EffectSpawn *spawn,
-    double horizontalVelocity,
-    double initialVerticalVelocity,
-    double gravityValue,
-    short meterGain,
-    int effectType,
-    int clearDashMomentumFlag,
-    int gravitySetEveryFrame,
-    int skipGravityOnFirstFrame)
-{
-    const int firstFrame = (field000a == 0) && (field000c == 0);
-
-    velocityX = horizontalVelocity;
-    if (clearDashMomentumFlag) {
-        dashMomentumFlag = 0;
-    }
-    if (gravitySetEveryFrame) {
-        gravity = gravityValue;
-    }
-
-    if (firstFrame) {
-        velocityY = initialVerticalVelocity;
-        if (meterGain != 0) {
-            meter = meter + meterGain;
-        }
-        if (!gravitySetEveryFrame) {
-            gravity = gravityValue;
-        }
-        if (effectType != 0) {
-            spawn->type = (unsigned short)effectType;
-            spawn->x = (double)(int)positionX;
-            spawn->y = (double)(int)positionY;
-            spawn->group = 2;
-            spawn->layer = 0;
-            contextOwner->EmitEffect(spawn);
-        }
-    }
-
-    if (!firstFrame || !skipGravityOnFirstFrame) {
-        velocityY = velocityY + gravity;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (frameCount <= field000a) {
-            field0008 = 9;
-            ResetPose();
-        }
-    }
-
-    if ((positionY + velocityY) >= 0.0) {
-        positionY = 0.0;
-        pendingContextSoundSlot = 9;
-        FaceOpponent();
-        field0008 = 0x0d;
-        ResetPose();
-    }
-}
-
-
 // Trail-assisted airborne bounce/recovery for native selectors 0x43 and 0x44.
 
 
@@ -388,49 +322,7 @@ void Character19::Slot06UpdateKnockbackImpactFinish(
 
 
 // Airborne hitstun release with scaled velocity restoration (selector 0x4a).
-void Character19::Slot06UpdateAirborneHitstunRestore(
-    unsigned short frameDuration,
-    unsigned short frameCount)
-{
-    if ((field000a == 0) && (field000c == 0)) {
-        field3138 = (int)(velocityX * 100.0);
-        field313c = (int)(velocityY * 100.0);
-        velocityX = 0.0;
-        velocityY = 0.0;
-        if (gravity == 0.0) {
-            gravity = 0.035;
-        }
-        guardInputFrames = 0;
-        outgoingPushbackVelocityX = 0.0;
-        hitstunFrames = 60;
-    }
 
-    if ((hitstunFrames == 0) && (field3140 == 0)) {
-        field3140 = 1;
-        velocityX = (double)field3138 * 0.01;
-        velocityY = (double)field313c * 0.01;
-    }
-
-    if (hitstunFrames == 0) {
-        velocityY = velocityY + gravity;
-    }
-
-    if ((positionY + velocityY) > 0.0) {
-        ResetFrame();
-        positionY = 0.0;
-        field0008 = 0xa9;
-    } else {
-        field000c = field000c + 1;
-        if (frameDuration <= field000c) {
-            field000c = 0;
-            field000a = field000a + 1;
-            if (frameCount <= field000a) {
-                field0008 = 9;
-                ResetPose();
-            }
-        }
-    }
-}
 
 // Defeat impact flash followed by restoration of the stored launch velocity (0x4b).
 
@@ -484,58 +376,7 @@ void Character19::Slot06UpdateDashRecovery(
 
 
 // Multi-phase aerial launch: hold at phase 4 until the phase-5 ground test succeeds.
-void Character19::Slot06UpdateAerialLaunchLanding(
-    unsigned short frameDuration,
-    unsigned short frameCount)
-{
-    if ((field000a == 0) && (field000c == 0)) {
-        velocityX = 0.0;
-        velocityY = 0.0;
-    }
 
-    if ((field000a == 1) && (field000c == 0)) {
-        velocityX = 1.4;
-        velocityY = -1.5;
-        gravity = 0.08;
-    }
-
-    if ((field000a == 2) && (field000c == 0)) {
-        meter = meter + 15;
-        pendingContextSoundSlot = 0x14;
-        remainingHitCount = 1;
-    }
-
-    if ((field000a == 5) && (field000c == 0)) {
-        velocityX = 0.0;
-        velocityY = 0.0;
-        gravity = 0.0;
-    }
-
-    if (field000a > 0) {
-        velocityY = velocityY + gravity;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        attackCollisionResult = 0;
-
-        if (field000a == 5) {
-            if ((positionY + velocityY) < 0.0) {
-                field000a = field000a - 1;
-            } else {
-                positionY = 0.0;
-            }
-        }
-
-        if (frameCount <= field000a) {
-            field0008 = 0;
-            FaceOpponent();
-            ResetPose();
-        }
-    }
-}
 
 // Ground dash follow-up with a down-input cancel window and a late meter event.
 void Character19::Slot06UpdateDashFollowupCancel(

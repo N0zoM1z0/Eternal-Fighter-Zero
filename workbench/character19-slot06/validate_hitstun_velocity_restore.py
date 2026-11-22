@@ -142,10 +142,8 @@ for address, expected_value in constants.items():
     actual = struct.unpack("<d", target_bytes(pe, address, 8))[0]
     assert actual == expected_value, (hex(address), actual, expected_value)
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-start = source.index("void Character19::Slot06UpdateAirborneHitstunRestore")
-mid = source.index("\n}\n", start) + 3
-hitstun_source = source[start:mid]
+source = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+hitstun_source = (ROOT / "workbench/character19-slot06/Character19Slot06Case4A.inc").read_text()
 for expression in (
     "field3138 = (int)(velocityX * 100.0);",
     "field313c = (int)(velocityY * 100.0);",
@@ -157,7 +155,7 @@ for expression in (
     "outgoingPushbackVelocityX = 0.0;",
     "hitstunFrames = 60;",
     "if ((hitstunFrames == 0) && (field3140 == 0))",
-    "field3140 = 1;",
+    "field3140 = field3140 + 1;",
     "velocityX = (double)field3138 * 0.01;",
     "velocityY = (double)field313c * 0.01;",
     "if (hitstunFrames == 0)",
@@ -249,8 +247,9 @@ assert "(0x4a" in renderer
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 170)
 assert_selector_case(dispatcher, 171)
-assert "Slot06UpdateAirborneHitstunRestore" in dispatcher
+assert '#include "Character19Slot06Case4A.inc"' in dispatcher
 assert '#include "Character19Slot06Case4B.inc"' in dispatcher
+assert "Slot06UpdateAirborneHitstunRestore" not in dispatcher
 assert "Slot06UpdateDefeatImpactVelocityRestore" not in dispatcher
 
 print({

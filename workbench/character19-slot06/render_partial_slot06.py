@@ -56,7 +56,7 @@ lines += [
     "    }",
     "",
     "    EffectSpawn spawn;",
-    "    unsigned int stateIndex;",
+    "    int stateIndex;",
     "    unsigned char selectorCase;",
     "    struct FrameTiming {",
     "        __declspec(align(4)) unsigned short animationFrameCount;",
@@ -67,10 +67,10 @@ lines += [
     "    timing.animationFrameCount = patterns[field0008].count;",
     "    ResetLocalEffectSpawn(&spawn);",
     "    selectorCase = 0x75;",
-    "    stateIndex = field0008;",
+    "    stateIndex = (int)field0008;",
     "    if (stateIndex != 0) {",
     "        --stateIndex;",
-    "        if (stateIndex <= 0x135) {",
+    "        if ((unsigned int)stateIndex <= 0x135) {",
     "            selectorCase = Character19Slot06SelectorCases[stateIndex];",
     "        }",
     "    }",
@@ -433,18 +433,62 @@ lines += [
     "",
 ]
 
-for case, config in [
-    (0x40, (-1.2, -2.6, 0.06, 15, 0, 0, 0, 0)),
-    (0x41, (1.0, -2.3, 0.045, 0, 8, 1, 1, 1)),
-    (0x42, (-1.0, -2.3, 0.045, 0, 8, 1, 1, 1)),
-]:
-    horizontal_velocity, initial_vertical_velocity, gravity_value, meter_gain, effect_type, clear_dash, gravity_each_frame, skip_first_gravity = config
+for case, horizontal_velocity in (
+    (0x40, -1.2),
+    (0x41, 1.0),
+    (0x42, -1.0),
+):
     lines += labels(case)
+    lines += ["        {"]
+
+    if case == 0x40:
+        lines += [
+            "            if ((field000a == 0) && (field000c == 0)) {",
+            "                velocityY = -2.6;",
+            "                meter = meter + 15;",
+            "                gravity = 0.06;",
+            "            }",
+            "            velocityX = -1.2;",
+            "            velocityY = velocityY + gravity;",
+        ]
+    else:
+        lines += [
+            f"            velocityX = {horizontal_velocity};",
+            "            gravity = 0.045;",
+            "            dashMomentumFlag = 0;",
+            "            if ((field000a == 0) && (field000c == 0)) {",
+            "                velocityY = -2.3;",
+            "                spawn.type = 8;",
+            "                stateIndex = (int)positionX;",
+            "                spawn.x = (double)stateIndex;",
+            "                stateIndex = (int)positionY;",
+            "                spawn.y = (double)stateIndex;",
+            "                spawn.group = 2;",
+            "                spawn.layer = 0;",
+            "                contextOwner->EmitEffect(&spawn);",
+            "            } else {",
+            "                velocityY = velocityY + gravity;",
+            "            }",
+        ]
+
     lines += [
-        "        Slot06UpdateAirborneKnockdown(",
-        "            timing.frameDuration, timing.animationFrameCount, &spawn,",
-        f"            {horizontal_velocity}, {initial_vertical_velocity}, {gravity_value},",
-        f"            {meter_gain}, {effect_type}, {clear_dash}, {gravity_each_frame}, {skip_first_gravity});",
+        "            ++field000c;",
+        "            if (field000c >= timing.frameDuration) {",
+        "                field000c = 0;",
+        "                ++field000a;",
+        "                if (field000a >= timing.animationFrameCount) {",
+        "                    field0008 = 9;",
+        "                    ResetPose();",
+        "                }",
+        "            }",
+        "            if ((positionY + velocityY) >= 0.0) {",
+        "                positionY = 0.0;",
+        "                pendingContextSoundSlot = 9;",
+        "                FaceOpponent();",
+        "                field0008 = 0x0d;",
+        "                ResetPose();",
+        "            }",
+        "        }",
         "        break;",
         "",
     ]
@@ -490,8 +534,9 @@ for case, completion_state in ((0x48, 0), (0x49, 3)):
 
 lines += labels(0x4a)
 lines += [
-    "        Slot06UpdateAirborneHitstunRestore(",
-    "            timing.frameDuration, timing.animationFrameCount);",
+    "        {",
+    '#include "Character19Slot06Case4A.inc"',
+    "        }",
     "        break;",
     "",
 ]
@@ -540,8 +585,9 @@ for case in (0x54, 0x55, 0x56):
 
 lines += labels(0x57)
 lines += [
-    "        Slot06UpdateAerialLaunchLanding(",
-    "            timing.frameDuration, timing.animationFrameCount);",
+    "        {",
+    '#include "Character19Slot06Case57.inc"',
+    "        }",
     "        break;",
     "",
 ]
@@ -791,7 +837,7 @@ field0008 field000a field000c patterns positionX positionY velocityX velocityY h
 opponentSlot contextOwner videoOwner inputOwner audioOwner player characterId paletteIndex resourceName cpuControlled field00a8 field00ac velocityXCorrection outgoingPushbackVelocityX knockbackVelocityX knockbackVelocityY outgoingPushbackActive field00dc field00de comboDisplayHitCount comboDamageScaleDisplay comboDamage comboDisplayTimer health damageTrailHealth animatedHealth field0118 field0120 airActionLockFrames airActionDisabled knockdownOnLanding throwInvulnerabilityFrames airActionGauge field0138 field013a hitInvulnerabilityFrames field013e koDelayFrames field0144 meter hitstopFrames hitstunFrames guardInputFrames guardInputLatched field0154 dashMomentumFlag airDashCount airActionCount field015c field0160 sequences attackCollisionResult remainingHitCount attackWasGuarded comboHitCount comboDamageScale field0180 inputX inputY buttonPulse buttonHeld cpuMoveRightFrames cpuMoveLeftFrames actionBufferedInput stateGroupCBufferedInput stateGroupCBufferFrames history inputHistoryWriteIndex recognizedCommand soundSlots pendingCharacterSoundSlot pendingContextSoundSlot effectWrite effectRead effectOwner effectActive effects field2ad0 field2af8 trail tint30b8 field30bc field30c0 field30c4 field30c8 field30cc field30d0 field30d4 field30d8 field30dc field30e0 field30e4 field30e8 field30ec field30ee field30f0 commandCount commands field3110 field3114 statistics
 field3138 field313c field3140 field3144 field3148 field314c field3150 field3154 field3254 field3354 unknown_3454
 EmitLocalEffect RemoveLocalEffect InitializeState UpdateLocomotionState
-Slot06OpponentWithinKnockbackRange Slot06UpdateKnockbackLanding Slot06UpdateGroundRecovery Slot06UpdateLocalEffectRecovery Slot06UpdateFaceRecovery Slot06UpdateDefeatImpact Slot06UpdateDefeatWait Slot06UpdateAirborneKnockdown Slot06UpdateKnockbackImpactFinish Slot06UpdateAirborneHitstunRestore Slot06UpdateDashRecovery Slot06UpdateAerialLaunchLanding Slot06UpdateDashFollowupCancel Slot06UpdateAerialKickback Slot06UpdateGroundImpactRecovery Slot06UpdateDashTrailCharge Slot06UpdateAirborneTrailDash Slot06UpdateStunEffectRecovery Slot06UpdateDampedImpactFinish Slot06UpdateLoopingAerialBounce Slot06UpdateFinalFaceTransition Slot06UpdateLocalEffectFinish
+Slot06OpponentWithinKnockbackRange Slot06UpdateKnockbackLanding Slot06UpdateGroundRecovery Slot06UpdateLocalEffectRecovery Slot06UpdateFaceRecovery Slot06UpdateDefeatImpact Slot06UpdateDefeatWait Slot06UpdateKnockbackImpactFinish Slot06UpdateDashRecovery Slot06UpdateDashFollowupCancel Slot06UpdateAerialKickback Slot06UpdateGroundImpactRecovery Slot06UpdateDashTrailCharge Slot06UpdateAirborneTrailDash Slot06UpdateStunEffectRecovery Slot06UpdateDampedImpactFinish Slot06UpdateLoopingAerialBounce Slot06UpdateFinalFaceTransition Slot06UpdateLocalEffectFinish
 ResetPose ResetFrame ResetLocalEffectSpawn RandomRange SetTint SetCharacterTint SetVerticalShake SetHorizontalShake SetHorizontalOffset FaceOpponent FacePosition StartTrail
 """.split()
 self_member_pattern = re.compile(
