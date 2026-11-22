@@ -1649,8 +1649,8 @@ access throughout the dispatcher and all case fragments. This places the
 frequently used self pointer at [ebp-0x54], matching the native this-pointer
 operand, and the local EffectSpawn at [ebp-0x50]. The compiler still stores the
 incoming this pointer separately at [ebp-0x88], so the candidate stack
-allocation is 0x2a4 versus native 0x244. The COFF symbol is 56,945 bytes
-(56,163 code + 782 switch data), while the native owner is 58,363 code + 782
+allocation is 0x2a8 versus native 0x244. The COFF symbol is 57,356 bytes
+(56,574 code + 782 switch data), while the native owner is 58,363 code + 782
 switch data. The large selector 0x73 body is 2,302 bytes versus 2,400 native
 bytes; its normalized instruction-shape diagnostic is 624/643 instructions
 with 0.93923 similarity. The six horizontal-recovery cases remain inline and
@@ -1701,10 +1701,17 @@ context effect, preserves the opening invulnerability/guard/hitstun fields
 and palette-0x13 payload, and retains native 16-bit frame progression. Its
 former 334-byte helper and class declaration were removed. The candidate
 matches the native 320-byte interval and all 80/80 normalized instructions.
-All 38 targeted Slot06 validators pass after normalizing the explicit self
-alias in source-text assertions. This remains a partial natural-C++
-reconstruction, not Exact; the remaining code-size and stack-frame
-differences need further source-level reconstruction.
+
+Selector 0x60 (state 232, trail-backed dash charge) is now inline natural C++.
+It restores the native dashMomentumFlag-gated early 0.06 horizontal decay,
+frame-3 3.0 speed burst and meter/sound event, then the separate
+bool-to-double 0.07 decay and negative-velocity clamp. Its former 322-byte
+helper and class declaration were removed. The candidate matches the native
+434-byte interval and all 116/116 normalized instructions. All 38 targeted
+Slot06 validators pass after normalizing the explicit self alias in
+source-text assertions. This remains a partial natural-C++ reconstruction,
+not Exact; the remaining code-size and stack-frame differences need further
+source-level reconstruction.
 
 ## Kanna (Character19) CPU Slot07 — natural C++ port started — 2026-11-18
 

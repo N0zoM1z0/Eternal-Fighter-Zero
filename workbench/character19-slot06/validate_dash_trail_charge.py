@@ -73,29 +73,22 @@ for address, expected in (
     actual = struct.unpack("<d", target_bytes(pe, address, 8))[0]
     assert actual == expected, (hex(address), actual, expected)
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-start = source.index("void Character19::Slot06UpdateDashTrailCharge")
-end = source.index("\n}\n", start) + 3
-helper = source[start:end]
+helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case60.inc").read_text()
 for expression in (
-    "StartTrail(3);",
-    "dashMomentumFlag = 0;",
-    "if (field000a < 3)",
-    "velocityX = 0.0;",
-    "field000a == 3",
-    "pendingContextSoundSlot = 0x14;",
-    "velocityX = 3.0;",
-    "remainingHitCount = 1;",
-    "meter = meter + 35;",
-    "if (velocityX > 0.0)",
-    "velocityX = velocityX - 0.07;",
-    "if (velocityX < 0.0)",
-    "attackCollisionResult = 0;",
-    "field0008 = 0;",
-    "ResetPose();",
+    "StartTrail(3);", "dashMomentumFlag = 0;", "if (field000a < 3)",
+    "(unsigned char)dashMomentumFlag == 0", "velocityX = 0.0;",
+    "velocityX > 0.0", "(unsigned char)dashMomentumFlag == 1",
+    "velocityX = velocityX - 0.06;", "dashMomentumFlag = 0;",
+    "field000a == 3", "pendingContextSoundSlot = 0x14;",
+    "velocityX = 3.0;", "remainingHitCount = 1;", "meter = meter + 35;",
+    "(double)(velocityX > 0.0) * 0.07", "velocityX < 0.0",
+    "++field000c;", "++field000a;", "attackCollisionResult = 0;",
+    "field0008 = 0;", "ResetPose();",
 ):
     assert expression in helper, expression
 assert "FaceOpponent" not in helper
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
-assert_selector_case(dispatcher, 232) and "Slot06UpdateDashTrailCharge(" in dispatcher
+assert_selector_case(dispatcher, 232)
+assert '#include "Character19Slot06Case60.inc"' in dispatcher
+assert "Slot06UpdateDashTrailCharge(" not in dispatcher
 print({"selector":"0x60","native_bytes":434,"state_id":232,"trail_spacing":3,"burst":3.0,"meter":35})

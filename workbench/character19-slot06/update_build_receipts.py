@@ -52,7 +52,6 @@ assert any(symbol.startswith("?Slot06UpdateKnockbackImpactFinish@Character19@@")
 assert any(symbol.startswith("?Slot06UpdateDashRecovery@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateGroundImpactRecovery@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateDashTrailCharge@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateFinalFaceTransition@Character19@@") for symbol in helper_members)
 
 
@@ -995,10 +994,6 @@ ground_impact_helper = next(
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-dash_trail_charge_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateDashTrailCharge@")
-)
 (workbench / "dash-trail-charge-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
@@ -1008,6 +1003,7 @@ dash_trail_charge_helper = next(
         "state_id": 232,
         "trail_spacing": 3,
         "frame_3_velocity_x": 3.0,
+        "early_dash_momentum_decay": 0.06,
         "post_burst_decay": 0.07,
         "meter_frame": 3,
         "meter_gain": 35,
@@ -1015,17 +1011,23 @@ dash_trail_charge_helper = next(
         "completion_state": 0,
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": dash_trail_charge_helper,
-        **helper_members[dash_trail_charge_helper],
-        "status": "semantic-workbench-only-not-exact",
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "symbol": "?Slot06@Character19@@UAEXXZ",
+        "symbol_size": len(main_body),
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case60.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case60.inc").read_bytes()
+            ).hexdigest()
+        },
+        "status": "inlined-natural-cpp-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
 }, indent=2) + "\n")
+
 
 (workbench / "airborne-trail-dash-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",

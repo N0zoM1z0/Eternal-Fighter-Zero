@@ -432,44 +432,7 @@ void Character19::Slot06UpdateGroundImpactRecovery(
 
 
 // Trail-backed dash strike with a frame-3 speed burst and sustained 0.07 decay.
-void Character19::Slot06UpdateDashTrailCharge(
-    unsigned short frameDuration,
-    unsigned short frameCount)
-{
-    StartTrail(3);
-    dashMomentumFlag = 0;
 
-    if (field000a < 3) {
-        velocityX = 0.0;
-    }
-
-    if ((field000a == 3) && (field000c == 0)) {
-        pendingContextSoundSlot = 0x14;
-        velocityX = 3.0;
-        remainingHitCount = 1;
-        meter = meter + 35;
-    }
-
-    if (velocityX > 0.0) {
-        velocityX = velocityX - 0.07;
-    }
-    if (velocityX < 0.0) {
-        velocityX = 0.0;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (field000a < 3) {
-            attackCollisionResult = 0;
-        }
-        if (frameCount <= field000a) {
-            field0008 = 0;
-            ResetPose();
-        }
-    }
-}
 
 // Trail-backed airborne dash: frame 3 launches, then gravity runs until a
 // strict ground crossing moves the animation to its terminal frame 15.

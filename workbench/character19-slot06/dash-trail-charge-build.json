@@ -7,6 +7,7 @@
     "state_id": 232,
     "trail_spacing": 3,
     "frame_3_velocity_x": 3.0,
+    "early_dash_momentum_decay": 0.06,
     "post_burst_decay": 0.07,
     "meter_frame": 3,
     "meter_gain": 35,
@@ -14,23 +15,25 @@
     "completion_state": 0
   },
   "candidate": {
-    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-    "source_sha256": "d552fad83f76ae967457505fd271fab576512fc19007beadede7dcacb3916147",
-    "object": "build/character19-slot06/Character19Slot06Cases.obj",
-    "object_sha256": "0df91c813fc98b426b3372841efea1105d2dfd7d83d4e98407cea38bc5369ac0",
-    "symbol": "?Slot06UpdateDashTrailCharge@Character19@@QAEXGG@Z",
-    "candidate_size": 322,
-    "relocations": 7,
-    "status": "semantic-workbench-only-not-exact"
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "36cf37202069748671c37e436f9d0e79025f67f77a6f67b5930d7225e71a2d83",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "97eafb69a7823e46a7fa578187eb005df365aaaba6939a21425708c46112f791",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 57356,
+    "inlined_case_sources": {
+      "workbench/character19-slot06/Character19Slot06Case60.inc": "9cb9901bd4200ccb657c9f2c4fc0ccb049de572fa07092df85deb920ac5d90a5"
+    },
+    "status": "inlined-natural-cpp-not-exact"
   },
   "dispatcher": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "a250d9b45cb532883bdd5888fe51379a82aedc9bccf9e8cbf1bf4d95716306b5",
+    "source_sha256": "36cf37202069748671c37e436f9d0e79025f67f77a6f67b5930d7225e71a2d83",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "ceaa350925d568160babddb08d1bd19aa7958ecd06f8b9f722246211df917327",
+    "object_sha256": "97eafb69a7823e46a7fa578187eb005df365aaaba6939a21425708c46112f791",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 56945,
-    "relocation_count": 1164,
+    "symbol_size": 57356,
+    "relocation_count": 1173,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0,
     "included_sources": {

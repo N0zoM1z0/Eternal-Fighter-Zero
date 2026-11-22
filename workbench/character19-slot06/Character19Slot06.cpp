@@ -857,8 +857,9 @@ void Character19::Slot06()
         break;
 
     case 96:
-        self->Slot06UpdateDashTrailCharge(
-            timing.frameDuration, timing.animationFrameCount);
+        {
+#include "Character19Slot06Case60.inc"
+        }
         break;
 
     case 99:
