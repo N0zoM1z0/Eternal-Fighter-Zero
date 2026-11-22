@@ -1649,8 +1649,8 @@ access throughout the dispatcher and all case fragments. This places the
 frequently used self pointer at [ebp-0x54], matching the native this-pointer
 operand, and the local EffectSpawn at [ebp-0x50]. The compiler still stores the
 incoming this pointer separately at [ebp-0x88], so the candidate stack
-allocation is 0x278 versus native 0x244. The COFF symbol is 54,747 bytes
-(53,965 code + 782 switch data), while the native owner is 58,363 code + 782
+allocation is 0x284 versus native 0x244. The COFF symbol is 55,671 bytes
+(54,889 code + 782 switch data), while the native owner is 58,363 code + 782
 switch data. The large selector 0x73 body is 2,302 bytes versus 2,400 native
 bytes; its normalized instruction-shape diagnostic is 624/643 instructions
 with 0.93923 similarity. The six horizontal-recovery cases remain inline and
@@ -1676,12 +1676,20 @@ Selectors 0x58 and 0x63 are now inline natural-C++ case bodies as well; their
 The early return in 0x58 is represented as a scoped if/else. Both cases match
 native lengths and normalized instruction shapes: 387/387 bytes and 104/104
 instructions for 0x58, 483/483 bytes and 133/133 instructions for 0x63. The
-0x63 path now uses the actual dashMomentumFlag byte and the native negated
-x87 velocity predicate, including unordered behavior. All 38 targeted Slot06
-validators pass after normalizing the explicit self alias in source-text
-assertions. This remains a partial natural-C++ reconstruction, not Exact;
-the remaining code-size and stack-frame differences need further source-level
-reconstruction.
+0x63 path uses the actual dashMomentumFlag byte and preserves native unsigned
+byte reads, x87 unordered comparison and branch polarity.
+
+The ground-recovery variants 0x29-0x2b (states 72-74) are now three inline
+switch bodies, replacing the shared 346-byte helper. All three match their
+native case lengths and normalized instruction shapes exactly: 341/341 bytes
+and 88/88 instructions for 0x29, 341/341 and 88/88 for 0x2a, and 317/317 and
+82/82 for 0x2b. Cases 0x29/0x2a retain the inputY==1 standing transition;
+0x2b directly selects state 3. The x87 screen-edge predicate, opponent-height
+pushback scale, dash-flag clear and 16-bit frame progression are preserved.
+All 38 targeted Slot06 validators pass after normalizing the explicit self
+alias in source-text assertions. This remains a partial natural-C++
+reconstruction, not Exact; the remaining code-size and stack-frame
+differences need further source-level reconstruction.
 
 ## Kanna (Character19) CPU Slot07 — natural C++ port started — 2026-11-18
 

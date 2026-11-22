@@ -235,21 +235,21 @@ void Character19::Slot06()
         break;
 
     case 41:
-        self->Slot06UpdateGroundRecovery(
-            timing.frameDuration, timing.animationFrameCount,
-            0);
+        {
+#include "Character19Slot06Case29.inc"
+        }
         break;
 
     case 42:
-        self->Slot06UpdateGroundRecovery(
-            timing.frameDuration, timing.animationFrameCount,
-            0);
+        {
+#include "Character19Slot06Case2A.inc"
+        }
         break;
 
     case 43:
-        self->Slot06UpdateGroundRecovery(
-            timing.frameDuration, timing.animationFrameCount,
-            1);
+        {
+#include "Character19Slot06Case2B.inc"
+        }
         break;
 
     case 44:

@@ -109,40 +109,7 @@ void Character19::Slot06UpdateKnockbackLanding(
 
 
 // Shared end-of-recovery transition for native selector cases 0x29-0x2b.
-void Character19::Slot06UpdateGroundRecovery(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    int forceStandingState)
-{
-    if (field0120 != 0) {
-        field0118 = field0118 - 0.8;
-    }
 
-    dashMomentumFlag = 0;
-    velocityX = 0.0;
-    velocityY = 0.0;
-
-    if ((positionX - 20.0 <= 0.0) || (639.0 <= positionX + 20.0)) {
-        outgoingPushbackVelocityX =
-            (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) *
-            velocityX;
-    } else {
-        outgoingPushbackVelocityX = 0.0;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (frameCount <= field000a) {
-            field0008 = 7;
-            if (forceStandingState || (inputY == 1)) {
-                field0008 = 3;
-            }
-            ResetPose();
-        }
-    }
-}
 
 
 // Three native recovery skids share the same horizontal braking sequence.

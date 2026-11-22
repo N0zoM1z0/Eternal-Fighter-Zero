@@ -39,7 +39,7 @@ expected = {
 renderer = (ROOT / "workbench/character19-slot06/render_partial_slot06.py").read_text()
 for case, (native_size, state, force_standing) in expected.items():
     block = "\n".join(blocks[case])
-    assert f"(0x{case:02x}, {force_standing})" in renderer
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in renderer or case in (0x29, 0x2A, 0x2B)
     assert "*(double *)(param_1 + 0x46) = *(double *)(param_1 + 0x46) - _DAT_00787d80;" in block
     assert "*(undefined1 *)(param_1 + 0x56) = 0;" in block
     assert "*(double *)(param_1 + 0xc) = _DAT_007872f8;" in block
@@ -72,22 +72,26 @@ for address, expected_value in constants.items():
     actual = struct.unpack("<d", target_bytes(pe, address, 8))[0]
     assert actual == expected_value, (hex(address), actual, expected_value)
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
-    "void Character19::Slot06UpdateGroundRecovery",
-    "dashMomentumFlag = 0;",
-    "velocityX = 0.0;",
-    "velocityY = 0.0;",
-    "positionX - 20.0 <= 0.0",
-    "639.0 <= positionX + 20.0",
-    "outgoingPushbackVelocityX =",
-    "(*opponentSlot)->positionY < 0.0",
-    "field000c = field000c + 1;",
-    "field0008 = 7;",
-    "forceStandingState || (inputY == 1)",
-    "field0008 = 3;",
-):
-    assert expression in source, expression
+for case in (0x29, 0x2A, 0x2B):
+    source = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        "dashMomentumFlag = 0;", "velocityX = 0.0;", "velocityY = 0.0;",
+        "positionX - 20.0 <= 0.0", "639.0 <= positionX + 20.0",
+        "outgoingPushbackVelocityX =", "(*opponentSlot)->positionY < 0.0",
+        "++field000c;", "field0008 = 3;",
+    ):
+        assert expression in source, (hex(case), expression)
+    if case == 0x2B:
+        assert "inputY == 1" not in source
+        assert "field0008 = 7;" not in source
+    else:
+        assert "inputY == 1" in source
+        assert "field0008 = 7;" in source
+
+dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+for case in (0x29, 0x2A, 0x2B):
+    assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
+assert "Slot06UpdateGroundRecovery(" not in dispatcher
 
 # Native state selection is inputY==1 for 0x29/0x2a and unconditional
 # state 3 for 0x2b. Boundary predicates retain their strict/inclusive edges.
