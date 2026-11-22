@@ -74,35 +74,23 @@ for address, expected in (
     actual = struct.unpack("<d", target_bytes(pe, address, 8))[0]
     assert actual == expected, (hex(address), actual, expected)
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-start = source.index("void Character19::Slot06UpdateAirborneTrailDash")
-end = source.index("\n}\n", start) + 3
-helper = source[start:end]
+helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case63.inc").read_text()
 for expression in (
-    "StartTrail(3);",
-    "dashMomentumFlag = 0;",
-    "if (field000a < 3)",
-    "velocityX = 0.0;",
+    "StartTrail(3);", "dashMomentumFlag = 0;", "if (field000a < 3)",
+    "(unsigned char)dashMomentumFlag == 0", "velocityX = 0.0;", "velocityX > 0.0",
+    "(unsigned char)dashMomentumFlag == 1", "dashMomentumFlag = 0;", "velocityX = velocityX - 0.07;",
     "(field000a > 2) && (field000a < 0xf)",
-    "velocityY = velocityY + gravity;",
-    "(positionY + velocityY) > 0.0",
-    "field000c = 0;",
-    "ResetFrame();",
-    "positionY = 0.0;",
-    "field000a = 0xf;",
-    "field000a == 7",
-    "pendingContextSoundSlot = 0x14;",
-    "meter = meter + 35;",
-    "field000a == 3",
-    "velocityX = 1.5;",
-    "velocityY = -1.5;",
-    "gravity = 0.032;",
-    "field0008 = 0;",
-    "ResetPose();",
+    "velocityY = velocityY + gravity;", "(positionY + velocityY) > 0.0",
+    "field000c = 0;", "ResetFrame();", "positionY = 0.0;",
+    "field000a = 0xf;", "field000a == 7", "pendingContextSoundSlot = 0x14;",
+    "meter = meter + 35;", "field000a == 3", "velocityX = 1.5;",
+    "velocityY = -1.5;", "gravity = 0.032;", "field0008 = 0;", "ResetPose();",
+    "++field000c;", "++field000a;",
 ):
     assert expression in helper, expression
 assert "FaceOpponent" not in helper
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 235)
-assert "Slot06UpdateAirborneTrailDash(" in dispatcher
+assert '#include "Character19Slot06Case63.inc"' in dispatcher
+assert "Slot06UpdateAirborneTrailDash(" not in dispatcher
 print({"selector":"0x63","native_bytes":483,"state_id":235,"launch":[1.5,-1.5],"gravity":0.032,"landing_frame":15})

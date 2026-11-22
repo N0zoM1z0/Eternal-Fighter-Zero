@@ -77,15 +77,12 @@ disasm = subprocess.run(
 assert "call   0x40e630" in disasm
 assert "mov    WORD PTR [edx+0x8],0x0" in disasm
 
-source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-start = source.index("void Character19::Slot06UpdateDashFollowupCancel")
-end = source.index("\n}\n", start) + 3
-helper = source[start:end]
+helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case58.inc").read_text()
 for expression in (
     "inputY == -1",
     "field000a > 0",
     "field015c < 3",
-    "attackCollisionResult > 1",
+    "attackCollisionResult >= 2",
     "field0008 = 4;",
     "field0008 = 5;",
     "field0008 = 6;",
@@ -98,7 +95,7 @@ for expression in (
     "meter = meter + 30;",
     "pendingContextSoundSlot = 0x14;",
     "remainingHitCount = 1;",
-    "field000c = field000c + 1;",
+    "++field000c;",
     "field0008 = 0;",
     "FaceOpponent();",
 ):
@@ -108,5 +105,7 @@ assert "positionY" not in helper
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 211)
-assert "Slot06UpdateDashFollowupCancel(" in dispatcher
+assert '#include "Character19Slot06Case58.inc"' in dispatcher
+assert "Slot06UpdateDashFollowupCancel(" not in dispatcher
+assert "return;" not in helper
 print({"selector": "0x58", "native_bytes": 387, "state_id": 211, "meter_gain": 30, "cancel_states": [4,5,6], "gravity_integration": False})

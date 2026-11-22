@@ -379,47 +379,7 @@ void Character19::Slot06UpdateDashRecovery(
 
 
 // Ground dash follow-up with a down-input cancel window and a late meter event.
-void Character19::Slot06UpdateDashFollowupCancel(
-    unsigned short frameDuration,
-    unsigned short frameCount)
-{
-    if ((inputY == -1) && (field000a > 0) &&
-        (field015c < 3) && (attackCollisionResult > 1)) {
-        field0008 = 4;
-        if (inputX == facing) {
-            field0008 = 5;
-        }
-        if (inputX == -facing) {
-            field0008 = 6;
-        }
-        attackCollisionResult = 0;
-        ResetPose();
-        return;
-    }
 
-    if ((field000a == 0) && (field000c == 0)) {
-        velocityX = 0.0;
-        velocityY = 0.0;
-    }
-
-    if ((field000a == 3) && (field000c == 0)) {
-        meter = meter + 30;
-        pendingContextSoundSlot = 0x14;
-        remainingHitCount = 1;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        attackCollisionResult = 0;
-        if (frameCount <= field000a) {
-            field0008 = 0;
-            FaceOpponent();
-            ResetPose();
-        }
-    }
-}
 
 
 // Repeating aerial ground-slam: collision can force the D5 exit; landing emits
@@ -546,51 +506,7 @@ void Character19::Slot06UpdateDashTrailCharge(
 
 // Trail-backed airborne dash: frame 3 launches, then gravity runs until a
 // strict ground crossing moves the animation to its terminal frame 15.
-void Character19::Slot06UpdateAirborneTrailDash(
-    unsigned short frameDuration,
-    unsigned short frameCount)
-{
-    StartTrail(3);
-    dashMomentumFlag = 0;
 
-    if (field000a < 3) {
-        velocityX = 0.0;
-    }
-
-    if ((field000a > 2) && (field000a < 0xf)) {
-        velocityY = velocityY + gravity;
-        if ((positionY + velocityY) > 0.0) {
-            field000c = 0;
-            ResetFrame();
-            positionY = 0.0;
-            field000a = 0xf;
-        }
-    }
-
-    if ((field000a == 7) && (field000c == 0)) {
-        pendingContextSoundSlot = 0x14;
-        remainingHitCount = 1;
-        meter = meter + 35;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (field000a < 3) {
-            attackCollisionResult = 0;
-        }
-        if (field000a == 3) {
-            velocityX = 1.5;
-            velocityY = -1.5;
-            gravity = 0.032;
-        }
-        if (frameCount <= field000a) {
-            field0008 = 0;
-            ResetPose();
-        }
-    }
-}
 
 
 // Stun/effect recovery: configure the short invulnerability and guard windows,

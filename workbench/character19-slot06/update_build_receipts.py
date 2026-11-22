@@ -51,11 +51,9 @@ assert any(symbol.startswith("?Slot06UpdateDefeatImpact@Character19@@") for symb
 assert "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateKnockbackImpactFinish@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashRecovery@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateDashFollowupCancel@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateGroundImpactRecovery@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateDashTrailCharge@Character19@@") for symbol in helper_members)
-assert any(symbol.startswith("?Slot06UpdateAirborneTrailDash@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateStunEffectRecovery@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateFinalFaceTransition@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateLocalEffectFinish@Character19@@") for symbol in helper_members)
@@ -785,10 +783,6 @@ dash_recovery_helper = next(
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-dash_followup_cancel_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateDashFollowupCancel@")
-)
 (workbench / "dash-followup-cancel-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
@@ -804,13 +798,18 @@ dash_followup_cancel_helper = next(
         "completion_state": 0,
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": dash_followup_cancel_helper,
-        **helper_members[dash_followup_cancel_helper],
-        "status": "semantic-workbench-only-not-exact",
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "symbol": "?Slot06@Character19@@UAEXXZ",
+        "symbol_size": len(main_body),
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case58.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case58.inc").read_bytes()
+            ).hexdigest()
+        },
+        "status": "inlined-natural-cpp-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
@@ -1028,10 +1027,6 @@ dash_trail_charge_helper = next(
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-airborne_trail_dash_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateAirborneTrailDash@")
-)
 (workbench / "airborne-trail-dash-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
@@ -1051,13 +1046,18 @@ airborne_trail_dash_helper = next(
         "completion_state": 0,
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": airborne_trail_dash_helper,
-        **helper_members[airborne_trail_dash_helper],
-        "status": "semantic-workbench-only-not-exact",
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "symbol": "?Slot06@Character19@@UAEXXZ",
+        "symbol_size": len(main_body),
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case63.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case63.inc").read_bytes()
+            ).hexdigest()
+        },
+        "status": "inlined-natural-cpp-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,

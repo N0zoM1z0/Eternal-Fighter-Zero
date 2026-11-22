@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "fb42ceb02e4366e9e29e39e7bc162d3c54ede1ec01c62c949d29f5459b394699",
+  "source_sha256": "8e0817b9d6db12e2682d0196d44d6c41760214d0cfe6c3bf79fa1fd5908d0b95",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "30e73b090693d2f44ea7f9a1e55e2cf7c8cf1a1dee029e75365ce9f8f711bcac",
+  "object_sha256": "4dfe3174537428041fc862ea904e61213d4ad5bb0bdc3ea1e6fe6baa0632b666",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -20,14 +20,6 @@
     },
     "?Slot06UpdateAerialKickback@Character19@@QAEXGG@Z": {
       "candidate_size": 194,
-      "relocations": 3
-    },
-    "?Slot06UpdateAirborneTrailDash@Character19@@QAEXGG@Z": {
-      "candidate_size": 399,
-      "relocations": 8
-    },
-    "?Slot06UpdateDashFollowupCancel@Character19@@QAEXGG@Z": {
-      "candidate_size": 393,
       "relocations": 3
     },
     "?Slot06UpdateDashRecovery@Character19@@QAEXGG@Z": {

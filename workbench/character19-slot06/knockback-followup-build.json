@@ -34,11 +34,11 @@
   },
   "candidate": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "71b5a390948eb6321629cfd5708ffb3da9b9551c91614ae1cfb77ee7243abfdf",
+    "source_sha256": "8fbb0a36487a2ac7f2c427924ad3fca92ce8eb96b32e0917e2759b2441acc3c7",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "44966914553270f0b9af27ac6cf4268f39ed1b0ec1dce4c05a01802b9b479822",
+    "object_sha256": "68b9c0bc01b2261c174ce4e9883463cd97c2b90f2f59e165cadacaa54b945a31",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 53923,
+    "symbol_size": 54747,
     "status": "inlined-natural-cpp-not-exact",
     "inline_cases": [
       "0x40",
@@ -48,12 +48,12 @@
   },
   "dispatcher": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "71b5a390948eb6321629cfd5708ffb3da9b9551c91614ae1cfb77ee7243abfdf",
+    "source_sha256": "8fbb0a36487a2ac7f2c427924ad3fca92ce8eb96b32e0917e2759b2441acc3c7",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "44966914553270f0b9af27ac6cf4268f39ed1b0ec1dce4c05a01802b9b479822",
+    "object_sha256": "68b9c0bc01b2261c174ce4e9883463cd97c2b90f2f59e165cadacaa54b945a31",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 53923,
-    "relocation_count": 1112,
+    "symbol_size": 54747,
+    "relocation_count": 1124,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0,
     "included_sources": {

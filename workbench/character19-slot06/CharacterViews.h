@@ -418,11 +418,9 @@ public:
     void Slot06UpdateDefeatWait(unsigned short, unsigned short);
     void Slot06UpdateKnockbackImpactFinish(unsigned short, unsigned short, EffectSpawn *, unsigned short);
     void Slot06UpdateDashRecovery(unsigned short, unsigned short);
-    void Slot06UpdateDashFollowupCancel(unsigned short, unsigned short);
     void Slot06UpdateAerialKickback(unsigned short, unsigned short);
     void Slot06UpdateGroundImpactRecovery(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateDashTrailCharge(unsigned short, unsigned short);
-    void Slot06UpdateAirborneTrailDash(unsigned short, unsigned short);
     void Slot06UpdateStunEffectRecovery(unsigned short, unsigned short, EffectSpawn *);
     void Slot06UpdateFinalFaceTransition(unsigned short, unsigned short);
     void Slot06UpdateLocalEffectFinish(unsigned short, unsigned short, unsigned short);

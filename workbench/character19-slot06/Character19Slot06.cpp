@@ -799,8 +799,9 @@ void Character19::Slot06()
         break;
 
     case 88:
-        self->Slot06UpdateDashFollowupCancel(
-            timing.frameDuration, timing.animationFrameCount);
+        {
+#include "Character19Slot06Case58.inc"
+        }
         break;
 
     case 89:
@@ -861,8 +862,9 @@ void Character19::Slot06()
         break;
 
     case 99:
-        self->Slot06UpdateAirborneTrailDash(
-            timing.frameDuration, timing.animationFrameCount);
+        {
+#include "Character19Slot06Case63.inc"
+        }
         break;
 
     case 100:
