@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "312d8bc4a1e10055a72d632efc3795dd0b9c28e22d1792b5278b8225354b9c6e",
+  "source_sha256": "8e19bf242251d6c12a0d1eeb51444a442dfc71d370916e026e54a5de79441aac",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "7182901dc7c36632c21f5bd69d389547c13a70a74489c1f9fe161f9343778cb9",
+  "object_sha256": "0c1a29127236d75994205fe4cdac956abafb96c871d71c4b662f0aab6836787d",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -26,17 +26,9 @@
       "candidate_size": 192,
       "relocations": 1
     },
-    "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z": {
-      "candidate_size": 155,
-      "relocations": 1
-    },
     "?Slot06UpdateFinalFaceTransition@Character19@@QAEXGG@Z": {
       "candidate_size": 126,
       "relocations": 1
-    },
-    "?Slot06UpdateLocalEffectRecovery@Character19@@QAEXGGPAUSecondaryEffectSpawn@@@Z": {
-      "candidate_size": 206,
-      "relocations": 2
     }
   },
   "status": "semantic-workbench-only-not-exact"

@@ -410,8 +410,6 @@ public:
     virtual void InitializeState();
     void UpdateLocomotionState();
     signed char Slot06OpponentWithinKnockbackRange();
-    void Slot06UpdateLocalEffectRecovery(unsigned short, unsigned short, SecondaryEffectSpawn *);
-    void Slot06UpdateFaceRecovery(unsigned short, unsigned short);
     void Slot06UpdateDefeatWait(unsigned short, unsigned short);
     void Slot06UpdateAerialKickback(unsigned short, unsigned short);
     void Slot06UpdateFinalFaceTransition(unsigned short, unsigned short);

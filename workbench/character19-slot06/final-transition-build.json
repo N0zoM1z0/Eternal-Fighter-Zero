@@ -19,31 +19,28 @@
       "end_state": 99
     }
   },
-  "candidates": {
-    "?Slot06UpdateLocalEffectRecovery@Character19@@QAEXGGPAUSecondaryEffectSpawn@@@Z": {
-      "candidate_size": 206,
-      "relocations": 2
+  "candidate": {
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "279fd60b365f6e96cce8a4bb9c01770566f1eabad5c5c2b0e3c6a0b5d36cd877",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "d84aff2c16aae9f6366b559a5b14f6f123e0cb8a9e49f8c253edc5ab8e9fd7ac",
+    "symbol": "?Slot06@Character19@@UAEXXZ",
+    "symbol_size": 59782,
+    "inlined_case_sources": {
+      "workbench/character19-slot06/Character19Slot06Case35.inc": "5dd82cf45b219ff6a664fd12fc25662c32f736799719210777d304e624290d4c",
+      "workbench/character19-slot06/Character19Slot06Case36.inc": "0a7b5a11d5267133788cd987422a3a1260c4388929c0ff511c0e3fd78899db49",
+      "workbench/character19-slot06/Character19Slot06Case37.inc": "0cb37eac3a9d1f3250c42e67f9f5d9de61ee352f8faec799b462b48ee07b0c74"
     },
-    "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z": {
-      "candidate_size": 155,
-      "relocations": 1
-    },
-    "case_0x37": {
-      "source": "workbench/character19-slot06/Character19Slot06Case37.inc",
-      "source_sha256": "0cb37eac3a9d1f3250c42e67f9f5d9de61ee352f8faec799b462b48ee07b0c74",
-      "status": "inline-natural-cpp"
-    }
+    "status": "inlined-natural-cpp-not-exact"
   },
-  "source_sha256": "312d8bc4a1e10055a72d632efc3795dd0b9c28e22d1792b5278b8225354b9c6e",
-  "object_sha256": "7182901dc7c36632c21f5bd69d389547c13a70a74489c1f9fe161f9343778cb9",
   "dispatcher": {
     "source": "workbench/character19-slot06/Character19Slot06.cpp",
-    "source_sha256": "9a157f71eecdfe427eea4824868dbfd89845dbc4895536773fbf5bef566bb3ff",
+    "source_sha256": "279fd60b365f6e96cce8a4bb9c01770566f1eabad5c5c2b0e3c6a0b5d36cd877",
     "object": "build/character19-slot06/Character19Slot06.obj",
-    "object_sha256": "8ae02c00447c9d33a90a396ac03f7e24577467821d1d499cad36795f076d0331",
+    "object_sha256": "d84aff2c16aae9f6366b559a5b14f6f123e0cb8a9e49f8c253edc5ab8e9fd7ac",
     "symbol": "?Slot06@Character19@@UAEXXZ",
-    "symbol_size": 59504,
-    "relocation_count": 1214,
+    "symbol_size": 59782,
+    "relocation_count": 1215,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0,
     "included_sources": {
@@ -124,6 +121,5 @@
     "/W3",
     "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/workbench/character19-slot06",
     "/I/home/pentester/coding/codex_ida/Eternal-Fight-Zero-Reconstruction/Eternal-Fight-Zero/src"
-  ],
-  "status": "semantic-workbench-only-not-exact"
+  ]
 }

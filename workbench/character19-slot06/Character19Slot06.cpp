@@ -307,13 +307,15 @@ void Character19::Slot06()
         break;
 
     case 53:
-        self->Slot06UpdateLocalEffectRecovery(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case35.inc"
+        }
         break;
 
     case 54:
-        self->Slot06UpdateFaceRecovery(
-            timing.frameDuration, timing.animationFrameCount);
+        {
+#include "Character19Slot06Case36.inc"
+        }
         break;
 
     case 55:

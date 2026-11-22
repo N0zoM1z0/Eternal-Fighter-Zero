@@ -95,23 +95,29 @@ for address,expected_value in constants.items():
 
 source=(ROOT/"workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
 for expression in (
-    "void Character19::Slot06UpdateLocalEffectRecovery",
-    "spawn->type = 0x1ef;",
-    "spawn->x = 60.0;",
-    "spawn->y = 40.0;",
-    "spawn->payload = 1;",
-    "spawn->flag0018 = 1;",
-    "EmitLocalEffect(spawn);",
-    "void Character19::Slot06UpdateFaceRecovery",
-    "field000a == frameCount - 1",
-    "field0008 = 7;",
-    "field0008 = 3;",
     "void Character19::Slot06UpdateDefeatWait",
     "(health > 0) && (field000c > 60) && (field000a == 0)",
     "dashMomentumFlag = 0;",
     "field0008 = 0x60;",
 ):
     assert expression in source,expression
+
+local_effect = (ROOT / "workbench/character19-slot06/Character19Slot06Case35.inc").read_text()
+for expression in (
+    "spawn.type = 0x1ef;", "spawn.x = 60.0;", "spawn.y = 40.0;",
+    "spawn.payload = 1;", "spawn.flag0018 = 1;", "spawn.group = 0;",
+    "spawn.layer = 0;", "EmitLocalEffect(&spawn);", "++field000c;",
+    "++field000a;", "field0008 = 0;", "ResetPose();",
+):
+    assert expression in local_effect, expression
+
+face = (ROOT / "workbench/character19-slot06/Character19Slot06Case36.inc").read_text()
+for expression in (
+    "field000a == timing.animationFrameCount - 1", "FaceOpponent();",
+    "field0008 = 7;", "inputY == 1", "field0008 = 3;", "ResetPose();",
+    "++field000c;", "++field000a;",
+):
+    assert expression in face, expression
 
 impact = (ROOT / "workbench/character19-slot06/Character19Slot06Case37.inc").read_text()
 for expression in (
@@ -124,7 +130,11 @@ for expression in (
 ):
     assert expression in impact, expression
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+assert '#include "Character19Slot06Case35.inc"' in dispatcher
+assert '#include "Character19Slot06Case36.inc"' in dispatcher
 assert dispatcher.count('#include "Character19Slot06Case37.inc"') == 2
+assert "Slot06UpdateLocalEffectRecovery(" not in dispatcher
+assert "Slot06UpdateFaceRecovery(" not in dispatcher
 assert "Slot06UpdateDefeatImpact(" not in dispatcher
 
 shake=(ROOT/"src/SecondaryEffectControls.cpp").read_text()
