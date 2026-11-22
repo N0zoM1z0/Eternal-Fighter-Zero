@@ -46,7 +46,6 @@ for symbol in helper_symbols:
     }
 assert any(symbol.startswith("?Slot06UpdateLocalEffectRecovery@Character19@@") for symbol in helper_members)
 assert "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z" in helper_members
-assert any(symbol.startswith("?Slot06UpdateDefeatImpact@Character19@@") for symbol in helper_members)
 assert "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z" in helper_members
 assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateFinalFaceTransition@Character19@@") for symbol in helper_members)
@@ -373,10 +372,6 @@ local_effect_helper = next(
     if symbol.startswith("?Slot06UpdateLocalEffectRecovery@")
 )
 face_helper = "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z"
-defeat_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateDefeatImpact@")
-)
 (workbench / "final-transition-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_cases": {
@@ -387,35 +382,13 @@ defeat_helper = next(
     "candidates": {
         local_effect_helper: helper_members[local_effect_helper],
         face_helper: helper_members[face_helper],
-        defeat_helper: helper_members[defeat_helper],
-    },
-    "source_sha256": helper_receipt["source_sha256"],
-    "object_sha256": helper_receipt["object_sha256"],
-    "dispatcher": dispatcher_record,
-    "compiler_flags": flags,
-    "status": "semantic-workbench-only-not-exact",
-}, indent=2) + "\n")
-
-local_effect_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateLocalEffectRecovery@")
-)
-face_helper = "?Slot06UpdateFaceRecovery@Character19@@QAEXGG@Z"
-defeat_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateDefeatImpact@")
-)
-(workbench / "final-transition-build.json").write_text(json.dumps({
-    "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-    "native_cases": {
-        "0x35": {"entry": "0x0066E3F2", "bytes": 179, "state_id": 87, "effect_type": 0x1ef},
-        "0x36": {"entry": "0x0066E4A5", "bytes": 149, "state_id": 96},
-        "0x37": {"entry": "0x0066E53A", "bytes": 248, "state_id": 97, "end_state": 99},
-    },
-    "candidates": {
-        local_effect_helper: helper_members[local_effect_helper],
-        face_helper: helper_members[face_helper],
-        defeat_helper: helper_members[defeat_helper],
+        "case_0x37": {
+            "source": "workbench/character19-slot06/Character19Slot06Case37.inc",
+            "source_sha256": hashlib.sha256(
+                (workbench / "Character19Slot06Case37.inc").read_bytes()
+            ).hexdigest(),
+            "status": "inline-natural-cpp",
+        },
     },
     "source_sha256": helper_receipt["source_sha256"],
     "object_sha256": helper_receipt["object_sha256"],
@@ -432,13 +405,22 @@ defeat_wait_helper = "?Slot06UpdateDefeatWait@Character19@@QAEXGG@Z"
         "0x39": {"entry": "0x0066E72A", "bytes": 186, "state_id": 99, "transition_state": 0x60, "health_timeout_frames": 60},
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": defeat_wait_helper,
-        **helper_members[defeat_wait_helper],
-        "status": "semantic-workbench-only-not-exact",
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "symbol": "?Slot06@Character19@@UAEXXZ",
+        "symbol_size": len(main_body),
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case37.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case37.inc").read_bytes()
+            ).hexdigest()
+        },
+        "retained_leaf": {
+            "symbol": defeat_wait_helper,
+            **helper_members[defeat_wait_helper],
+        },
+        "status": "inline-natural-cpp-with-retained-defeat-wait-leaf-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,

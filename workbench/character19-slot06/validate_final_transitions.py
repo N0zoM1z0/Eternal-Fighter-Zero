@@ -106,18 +106,26 @@ for expression in (
     "field000a == frameCount - 1",
     "field0008 = 7;",
     "field0008 = 3;",
-    "void Character19::Slot06UpdateDefeatImpact",
-    "SetVerticalShake(3, 0);",
-    "spawn->type = 3;",
-    "contextOwner->EmitEffect(spawn);",
-    "pendingContextSoundSlot = 7;",
-    "field0008 = 99;",
     "void Character19::Slot06UpdateDefeatWait",
     "(health > 0) && (field000c > 60) && (field000a == 0)",
     "dashMomentumFlag = 0;",
     "field0008 = 0x60;",
 ):
     assert expression in source,expression
+
+impact = (ROOT / "workbench/character19-slot06/Character19Slot06Case37.inc").read_text()
+for expression in (
+    "velocityX = 0.0;", "velocityY = 0.0;",
+    "SetVerticalShake(3, 0);", "spawn.type = 3;",
+    "spawn.x = (double)(int)positionX;", "spawn.y = (double)(int)positionY;",
+    "spawn.group = 2;", "spawn.layer = 0;",
+    "contextOwner->EmitEffect(&spawn);", "pendingContextSoundSlot = 7;",
+    "++field000c;", "++field000a;", "field0008 = 99;", "ResetPose();",
+):
+    assert expression in impact, expression
+dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
+assert dispatcher.count('#include "Character19Slot06Case37.inc"') == 2
+assert "Slot06UpdateDefeatImpact(" not in dispatcher
 
 shake=(ROOT/"src/SecondaryEffectControls.cpp").read_text()
 assert "contextOwner->state14210 = magnitude;" in shake

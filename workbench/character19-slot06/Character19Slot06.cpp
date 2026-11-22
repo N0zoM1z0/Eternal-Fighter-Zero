@@ -317,13 +317,15 @@ void Character19::Slot06()
         break;
 
     case 55:
-        self->Slot06UpdateDefeatImpact(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case37.inc"
+        }
         break;
 
     case 56:
-        self->Slot06UpdateDefeatImpact(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case37.inc"
+        }
         break;
 
     case 57:

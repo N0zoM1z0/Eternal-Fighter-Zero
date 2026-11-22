@@ -146,34 +146,7 @@ void Character19::Slot06UpdateFaceRecovery(
 }
 
 // Defeat-impact transition with a camera shake and a context-owned effect (0x37).
-void Character19::Slot06UpdateDefeatImpact(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    EffectSpawn *spawn)
-{
-    velocityX = 0.0;
-    velocityY = 0.0;
-    if ((field000a == 0) && (field000c == 0)) {
-        SetVerticalShake(3, 0);
-        spawn->type = 3;
-        spawn->x = (double)(int)positionX;
-        spawn->y = (double)(int)positionY;
-        spawn->group = 2;
-        spawn->layer = 0;
-        contextOwner->EmitEffect(spawn);
-        pendingContextSoundSlot = 7;
-    }
 
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (frameCount <= field000a) {
-            field0008 = 99;
-            ResetPose();
-        }
-    }
-}
 
 
 // Post-impact defeat wait; transitions to the standing recovery state 0x60.

@@ -48,10 +48,6 @@ for expression in (
 
 source=(ROOT/"workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
 for expression in (
-    "void Character19::Slot06UpdateDefeatImpact",
-    "SetVerticalShake(3, 0);",
-    "pendingContextSoundSlot = 7;",
-    "field0008 = 99;",
     "void Character19::Slot06UpdateDefeatWait",
     "(health > 0) && (field000c > 60) && (field000a == 0)",
     "field0008 = 0x60;",
@@ -61,10 +57,21 @@ for expression in (
 ):
     assert expression in source,expression
 
+impact=(ROOT/"workbench/character19-slot06/Character19Slot06Case37.inc").read_text()
+for expression in (
+    "SetVerticalShake(3, 0);", "spawn.type = 3;",
+    "spawn.x = (double)(int)positionX;", "spawn.y = (double)(int)positionY;",
+    "spawn.group = 2;", "spawn.layer = 0;",
+    "contextOwner->EmitEffect(&spawn);", "pendingContextSoundSlot = 7;",
+    "field0008 = 99;", "++field000c;", "++field000a;",
+):
+    assert expression in impact, expression
+
 dispatcher=(ROOT/"workbench/character19-slot06/Character19Slot06.cpp").read_text()
 assert_selector_case(dispatcher, 98)
 assert_selector_case(dispatcher, 99)
-assert dispatcher.count("Slot06UpdateDefeatImpact(") >= 2
+assert dispatcher.count('#include "Character19Slot06Case37.inc"') == 2
+assert "Slot06UpdateDefeatImpact(" not in dispatcher
 assert "Slot06UpdateDefeatWait(" in dispatcher
 
 print({

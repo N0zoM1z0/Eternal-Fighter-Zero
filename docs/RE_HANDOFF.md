@@ -1649,8 +1649,8 @@ access throughout the dispatcher and all case fragments. This places the
 frequently used self pointer at [ebp-0x54], matching the native this-pointer
 operand, and the local EffectSpawn at [ebp-0x50]. The compiler still stores the
 incoming this pointer separately at [ebp-0x88], so the candidate stack
-allocation is 0x2c0 versus native 0x244. The COFF symbol is 59,062 bytes
-(58,280 code + 782 switch data), while the native owner is 58,363 code + 782
+allocation is 0x2d0 versus native 0x244. The COFF symbol is 59,504 bytes
+(58,722 code + 782 switch data), while the native owner is 58,363 code + 782
 switch data. The large selector 0x73 body is 2,302 bytes versus 2,400 native
 bytes; its normalized instruction-shape diagnostic is 624/643 instructions
 with 0.93923 similarity. The six horizontal-recovery cases remain inline and
@@ -1746,6 +1746,14 @@ validators pass after normalizing the explicit self alias in source-text
 assertions. This remains a partial natural-C++ reconstruction, not Exact;
 the remaining code-size and stack-frame differences need further source-level
 reconstruction.
+
+Selectors 0x37/0x38 (states 97/98) now share one inline natural-C++ case
+fragment while retaining independent switch entries. Both native bodies are
+identical: they zero horizontal/vertical velocity, issue the frame-0 vertical
+shake, emit the owner-0 type-3 context effect at integer-truncated position,
+request context sound 7, and finish in state 99. Each arm matches its 248-byte
+native interval and all 69/69 normalized instructions. The former 259-byte
+helper and class declaration were removed.
 
 ## Kanna (Character19) CPU Slot07 — natural C++ port started — 2026-11-18
 
