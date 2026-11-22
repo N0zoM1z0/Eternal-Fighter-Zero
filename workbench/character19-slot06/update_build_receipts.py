@@ -44,7 +44,6 @@ for symbol in helper_symbols:
         "candidate_size": len(body),
         "relocations": len(relocations),
     }
-assert any(symbol.startswith("?Slot06UpdateAerialKickback@Character19@@") for symbol in helper_members)
 assert any(symbol.startswith("?Slot06UpdateFinalFaceTransition@Character19@@") for symbol in helper_members)
 
 
@@ -837,10 +836,6 @@ for filename in (
     "compiler_flags": flags,
 }, indent=2) + "\n")
 
-aerial_kickback_helper = next(
-    symbol for symbol in helper_members
-    if symbol.startswith("?Slot06UpdateAerialKickback@")
-)
 (workbench / "aerial-kickback-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "native_case": {
@@ -854,17 +849,23 @@ aerial_kickback_helper = next(
         "completion_state": 9,
     },
     "candidate": {
-        "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-        "source_sha256": helper_receipt["source_sha256"],
-        "object": "build/character19-slot06/Character19Slot06Cases.obj",
-        "object_sha256": helper_receipt["object_sha256"],
-        "symbol": aerial_kickback_helper,
-        **helper_members[aerial_kickback_helper],
-        "status": "semantic-workbench-only-not-exact",
+        "source": "workbench/character19-slot06/Character19Slot06.cpp",
+        "source_sha256": main_receipt["source_sha256"],
+        "object": "build/character19-slot06/Character19Slot06.obj",
+        "object_sha256": main_receipt["object_sha256"],
+        "symbol": "?Slot06@Character19@@UAEXXZ",
+        "symbol_size": len(main_body),
+        "inlined_case_sources": {
+            "workbench/character19-slot06/Character19Slot06Case5A.inc": hashlib.sha256(
+                (workbench / "Character19Slot06Case5A.inc").read_bytes()
+            ).hexdigest()
+        },
+        "status": "inlined-natural-cpp-not-exact",
     },
     "dispatcher": dispatcher_record,
     "compiler_flags": flags,
 }, indent=2) + "\n")
+
 
 (workbench / "ground-impact-recovery-build.json").write_text(json.dumps({
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",

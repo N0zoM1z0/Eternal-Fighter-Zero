@@ -816,8 +816,9 @@ void Character19::Slot06()
         break;
 
     case 90:
-        self->Slot06UpdateAerialKickback(
-            timing.frameDuration, timing.animationFrameCount);
+        {
+#include "Character19Slot06Case5A.inc"
+        }
         break;
 
     case 91:

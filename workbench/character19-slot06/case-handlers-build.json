@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "a1de87e313ad634bb4fb5b876ecf81208d915d36a291c97a23820ac3f868f18c",
+  "source_sha256": "e90fa322b0b4005ce664b24f25b89f55e793912f51a1ddbb5af20d02c59c0888",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "23799ed71bab221d68e0d9cf38f84927d77e2281815a575e3309117db1157b33",
+  "object_sha256": "c823bc1947e02fa590a3aa48bd39299ed300211e4d5df25b213edb7cbe341398",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -17,10 +17,6 @@
     "?Slot06OpponentWithinKnockbackRange@Character19@@QAECXZ": {
       "candidate_size": 223,
       "relocations": 11
-    },
-    "?Slot06UpdateAerialKickback@Character19@@QAEXGG@Z": {
-      "candidate_size": 194,
-      "relocations": 3
     },
     "?Slot06UpdateFinalFaceTransition@Character19@@QAEXGG@Z": {
       "candidate_size": 126,

@@ -1649,8 +1649,8 @@ access throughout the dispatcher and all case fragments. This places the
 frequently used self pointer at [ebp-0x54], matching the native this-pointer
 operand, and the local EffectSpawn at [ebp-0x50]. The compiler still stores the
 incoming this pointer separately at [ebp-0x88], so the candidate stack
-allocation is 0x2d0 versus native 0x244. The COFF symbol is 59,945 bytes
-(59,163 code + 782 switch data), while the native owner is 58,363 code + 782
+allocation is 0x2d0 versus native 0x244. The COFF symbol is 60,110 bytes
+(59,328 code + 782 switch data), while the native owner is 58,363 code + 782
 switch data. The large selector 0x73 body is 2,302 bytes versus 2,400 native
 bytes; its normalized instruction-shape diagnostic is 624/643 instructions
 with 0.93923 similarity. The six horizontal-recovery cases remain inline and
@@ -1771,6 +1771,13 @@ frame-count face-opponent event and completion reset. The case matches its
 validators pass. The dispatcher is still not Exact: its current code extent
 is 59,163 bytes versus the native 58,363-byte extent, with the remaining
 difference requiring further source-level/codegen work.
+
+Selector 0x5A (state 213, aerial kickback) is now inline natural C++. It
+preserves gravity integration before the frame-0 launch override, the
+-1.0/-2.4 launch velocities, collision-result clearing at frame boundaries
+and state-9 completion. It matches the native 188-byte interval and all
+54/54 normalized instructions; the former 194-byte helper and class
+declaration were removed. All 38 targeted Slot06 validators pass.
 
 ## Kanna (Character19) CPU Slot07 — natural C++ port started — 2026-11-18
 

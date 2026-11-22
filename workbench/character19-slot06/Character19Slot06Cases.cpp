@@ -159,29 +159,7 @@ signed char Character19::Slot06OpponentWithinKnockbackRange()
 
 
 // Short descending aerial kickback with fixed launch velocity and gravity.
-void Character19::Slot06UpdateAerialKickback(
-    unsigned short frameDuration,
-    unsigned short frameCount)
-{
-    gravity = 0.042;
-    velocityY = velocityY + gravity;
 
-    if ((field000a == 0) && (field000c == 0)) {
-        velocityX = -1.0;
-        velocityY = -2.4;
-    }
-
-    field000c = field000c + 1;
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        attackCollisionResult = 0;
-        if (frameCount <= field000a) {
-            field0008 = 9;
-            ResetPose();
-        }
-    }
-}
 
 // Stationary ground impact with camera shake and a one-shot context effect.
 

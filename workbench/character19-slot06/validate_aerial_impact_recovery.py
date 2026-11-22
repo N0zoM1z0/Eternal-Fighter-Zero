@@ -121,15 +121,7 @@ for address, expected_value in constants.items():
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
 assert "Slot06UpdateAerialGroundSlam" not in source
-helpers = {
-    "kickback": "Slot06UpdateAerialKickback",
-}
-helper_text = {}
-for key, name in helpers.items():
-    start = source.index(f"void Character19::{name}")
-    end = source.index("\n}\n", start) + 3
-    helper_text[key] = source[start:end]
-
+kickback = (ROOT / "workbench/character19-slot06/Character19Slot06Case5A.inc").read_text()
 slam_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case59.inc").read_text()
 
 for expression in (
@@ -171,7 +163,7 @@ for expression in (
     "field0008 = 9;",
     "ResetPose();",
 ):
-    assert expression in helper_text["kickback"], expression
+    assert expression in kickback, expression
 
 ground = (ROOT / "workbench/character19-slot06/Character19Slot06Case5B.inc").read_text()
 for expression in (
@@ -228,11 +220,15 @@ assert_selector_case(dispatcher, 212)
 assert '#include "Character19Slot06Case59.inc"' in dispatcher
 assert "Slot06UpdateAerialGroundSlam(" not in dispatcher
 for state, helper in (
-    (213, "Slot06UpdateAerialKickback"),
+    (213, "Character19Slot06Case5A.inc"),
     (214, "Character19Slot06Case5B.inc"),
 ):
     assert_selector_case(dispatcher, state)
-    assert helper in dispatcher
+    if state == 213:
+        assert '#include "Character19Slot06Case5A.inc"' in dispatcher
+        assert "Slot06UpdateAerialKickback(" not in dispatcher
+    else:
+        assert helper in dispatcher
 
 print({
     "variants": 3,
