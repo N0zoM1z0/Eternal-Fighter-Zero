@@ -409,8 +409,7 @@ public:
     virtual void RemoveLocalEffect(short);
     virtual void InitializeState();
     void UpdateLocomotionState();
-    int Slot06OpponentWithinKnockbackRange();
-    void Slot06UpdateKnockbackLanding(unsigned short, unsigned short, int);
+    signed char Slot06OpponentWithinKnockbackRange();
     void Slot06UpdateLocalEffectRecovery(unsigned short, unsigned short, SecondaryEffectSpawn *);
     void Slot06UpdateFaceRecovery(unsigned short, unsigned short);
     void Slot06UpdateDefeatImpact(unsigned short, unsigned short, EffectSpawn *);

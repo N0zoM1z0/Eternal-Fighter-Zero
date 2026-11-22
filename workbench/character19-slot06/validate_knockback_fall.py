@@ -94,7 +94,7 @@ for address, expected_value in constants.items():
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
 assert "Slot06UpdateKnockbackFall(" not in source
-assert "int Character19::Slot06OpponentWithinKnockbackRange()" in source
+assert "signed char Character19::Slot06OpponentWithinKnockbackRange()" in source
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 for case, (lower, clamp, blend, gravity, interrupt, native_size, state) in expected.items():
     fragment = (ROOT / f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
@@ -130,7 +130,7 @@ for case, (lower, clamp, blend, gravity, interrupt, native_size, state) in expec
         assert "velocityY = -0.5;" not in fragment
     if interrupt:
         assert "(field000a != 0)" in fragment
-        assert "!Slot06OpponentWithinKnockbackRange()" in fragment
+        assert "Slot06OpponentWithinKnockbackRange()" in fragment
         assert "field0008 = 0x46;" in fragment
         assert "return;" in fragment
     else:
@@ -138,6 +138,8 @@ for case, (lower, clamp, blend, gravity, interrupt, native_size, state) in expec
     assert f'#include "Character19Slot06Case{case:02X}.inc"' in dispatcher
 assert "Slot06UpdateKnockbackFall(" not in dispatcher
 
+# Native signed-byte predicate: zero means inside range; nonzero means outside.
+assert "return 1;" in source
 # Boundary probes for the translated FUN_0040ff70 zero/nonzero predicate.
 def within(self_x, opponent_x):
     left_adjust = 1.0 if opponent_x <= 20.0 else 0.0

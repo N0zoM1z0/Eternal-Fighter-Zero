@@ -43,69 +43,32 @@
 // Natural-C++ reconstruction of the 0x0040ff70 opponent-range predicate.
 // The native helper returns zero only while the two characters are within
 // 280 units and both have the required 20-unit stage-edge clearance.
-int Character19::Slot06OpponentWithinKnockbackRange()
+signed char Character19::Slot06OpponentWithinKnockbackRange()
 {
     double opponentX = (*opponentSlot)->positionX;
     double leftEdgeAdjustment = (opponentX <= 20.0) ? 1.0 : 0.0;
     if (!(leftEdgeAdjustment < positionX - 20.0)) {
-        return 0;
+        return 1;
     }
     if (opponentX - positionX > 280.0) {
-        return 0;
+        return 1;
     }
 
     double rightEdgeLimit = 639.0 - ((opponentX >= 619.0) ? 1.0 : 0.0);
     if (!(rightEdgeLimit > positionX + 20.0)) {
-        return 0;
+        return 1;
     }
     if (positionX - opponentX > 280.0) {
-        return 0;
+        return 1;
     }
-    return 1;
+    return 0;
 }
 
 
 
 
 // Follow-up knockback landing path for native selector cases 0x25 and 0x26.
-void Character19::Slot06UpdateKnockbackLanding(
-    unsigned short frameDuration,
-    unsigned short frameCount,
-    int interruptOutsideRange)
-{
-    if (field0120 != 0) {
-        field0118 = field0118 - 1.5;
-    }
 
-    meter = meter + 3;
-    velocityX = knockbackVelocityX;
-    velocityY = knockbackVelocityY;
-    field000c = field000c + 1;
-
-    if (interruptOutsideRange && !Slot06OpponentWithinKnockbackRange()) {
-        field0008 = 0x46;
-        ResetPose();
-        return;
-    }
-
-    if (frameDuration <= field000c) {
-        field000c = 0;
-        field000a = field000a + 1;
-        if (frameCount <= field000a) {
-            field000a = field000a - 2;
-        }
-    }
-
-    if ((positionY + velocityY) >= 0.0) {
-        positionY = 0.0;
-        if (knockdownOnLanding == 0) {
-            field0008 = 0x62;
-        } else {
-            field0008 = 0x61;
-        }
-        ResetPose();
-    }
-}
 
 
 // Shared end-of-recovery transition for native selector cases 0x29-0x2b.

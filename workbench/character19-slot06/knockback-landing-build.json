@@ -13,20 +13,25 @@
     }
   },
   "candidate": {
-    "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-    "source_sha256": "5cc022c0ea12596a8543f7448e7bb1be38295a7461b4569c18451186c3a1c280",
-    "object": "build/character19-slot06/Character19Slot06Cases.obj",
-    "object_sha256": "d8492e077dcbd916c28f687462acbce5e3210d51f521753b7008cfb0660aed2e",
-    "symbol": "?Slot06UpdateKnockbackLanding@Character19@@QAEXGGH@Z",
-    "symbol_size": 315,
-    "relocations": 4,
-    "status": "semantic-workbench-only-not-exact"
+    "source": "workbench/character19-slot06/Character19Slot06.cpp",
+    "source_sha256": "e72e5e4af94b4e75939d793f029b3989f484e3026ca5b363dba18c518d2f2797",
+    "object": "build/character19-slot06/Character19Slot06.obj",
+    "object_sha256": "4545454c910e7ad7ebd66d4d7ba799a29ef81af37fb2568656af340839e3d118",
+    "inlined_case_sources": {
+      "workbench/character19-slot06/Character19Slot06Case25.inc": "a5c636953cf03da21188d73c5af5ddd8470ee31953552dfcb1db86b889f8ff69",
+      "workbench/character19-slot06/Character19Slot06Case26.inc": "5f3360e1e6b725e934acde827def426b7803fed594bc5f5be9ddbad774c665d6"
+    },
+    "range_helper": {
+      "symbol": "?Slot06OpponentWithinKnockbackRange@Character19@@QAECXZ",
+      "status": "shared-natural-cpp-leaf-retained-for-selector-0x25"
+    },
+    "status": "inlined-natural-cpp-not-exact"
   },
   "dispatcher": {
-    "source_sha256": "e8293ad6ee6a4125c27b95a74de435a94eb0c633e370231f8fb1c03b815e9932",
-    "object_sha256": "6670974c0f3e15c4876c7cae5b9818331337932068e2c42c264328c600f92643",
-    "symbol_size": 57616,
-    "relocations": 1179,
+    "source_sha256": "e72e5e4af94b4e75939d793f029b3989f484e3026ca5b363dba18c518d2f2797",
+    "object_sha256": "4545454c910e7ad7ebd66d4d7ba799a29ef81af37fb2568656af340839e3d118",
+    "symbol_size": 58171,
+    "relocations": 1184,
     "implemented_state_ids": 310,
     "unimplemented_state_ids": 0
   },

@@ -13,6 +13,8 @@ def _read_text_without_slot06_self_alias(self, *args, **kwargs):
 Path.read_text = _read_text_without_slot06_self_alias
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
+from selector_support import assert_selector_case
 native = (ROOT / ".analysis/kanna-slot06/native.c").read_text()
 lines = native.splitlines()
 starts = []
@@ -53,17 +55,28 @@ value=struct.unpack("<d",target_bytes(pe,0x00787d48,8))[0]
 assert value==1.5
 
 source=(ROOT/"workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
-for expression in (
- "field0118 = field0118 - 1.5",
- "meter = meter + 3",
- "velocityX = knockbackVelocityX",
- "velocityY = knockbackVelocityY",
- "field000c = field000c + 1",
- "if (interruptOutsideRange && !Slot06OpponentWithinKnockbackRange())",
- "if (frameDuration <= field000c)",
- "if ((positionY + velocityY) >= 0.0)",
- "if (knockdownOnLanding == 0)",
-):
- assert expression in source,expression
+assert "signed char Character19::Slot06OpponentWithinKnockbackRange()" in source
+for case, interrupt in ((0x25, True), (0x26, False)):
+    body=(ROOT/f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc").read_text()
+    for expression in (
+        "field0118 = field0118 - 1.5;", "meter = meter + 3;",
+        "velocityX = knockbackVelocityX;", "velocityY = knockbackVelocityY;",
+        "++field000c;", "field000c >= timing.frameDuration",
+        "++field000a;", "field000a >= timing.animationFrameCount",
+        "field000a = field000a - 2;", "positionY + velocityY) >= 0.0",
+        "positionY = 0.0;", "knockdownOnLanding != 0",
+        "field0008 = 0x62;", "field0008 = 0x61;", "ResetPose();",
+    ):
+        assert expression in body, (hex(case), expression)
+    assert ("Slot06OpponentWithinKnockbackRange()" in body) == interrupt
+    assert body.count("ResetPose();") == (3 if interrupt else 2)
+    if interrupt:
+        assert "return;" not in body
+        assert body.index("++field000c;") < body.index("Slot06OpponentWithinKnockbackRange()")
+dispatcher=(ROOT/"workbench/character19-slot06/Character19Slot06.cpp").read_text()
+for state, include in ((68,"Character19Slot06Case25.inc"),(69,"Character19Slot06Case26.inc")):
+    assert_selector_case(dispatcher,state)
+    assert f'#include "{include}"' in dispatcher
+assert "Slot06UpdateKnockbackLanding(" not in dispatcher
 
 print({"variants":2,"decay_constant":value,"state_ids":[68,69]})

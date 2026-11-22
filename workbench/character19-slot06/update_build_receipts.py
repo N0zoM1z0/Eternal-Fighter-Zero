@@ -189,6 +189,24 @@ for filename in (
         "implemented_state_ids": len(implemented_states),
         "unimplemented_state_ids": 310 - len(implemented_states),
     })
+    if filename == "knockback-landing-build.json":
+        data["candidate"] = {
+            "source": "workbench/character19-slot06/Character19Slot06.cpp",
+            "source_sha256": main_receipt["source_sha256"],
+            "object": "build/character19-slot06/Character19Slot06.obj",
+            "object_sha256": main_receipt["object_sha256"],
+            "inlined_case_sources": {
+                f"workbench/character19-slot06/Character19Slot06Case{case:02X}.inc": hashlib.sha256(
+                    (workbench / f"Character19Slot06Case{case:02X}.inc").read_bytes()
+                ).hexdigest()
+                for case in (0x25, 0x26)
+            },
+            "range_helper": {
+                "symbol": "?Slot06OpponentWithinKnockbackRange@Character19@@QAECXZ",
+                "status": "shared-natural-cpp-leaf-retained-for-selector-0x25",
+            },
+            "status": "inlined-natural-cpp-not-exact",
+        }
     if filename == "knockback-fall-build.json":
         data["candidate"] = {
             "source": "workbench/character19-slot06/Character19Slot06.cpp",
@@ -202,7 +220,7 @@ for filename in (
                 for case in (0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x28)
             },
             "range_helper": {
-                "symbol": "?Slot06OpponentWithinKnockbackRange@Character19@@QAEHXZ",
+                "symbol": "?Slot06OpponentWithinKnockbackRange@Character19@@QAECXZ",
                 "status": "shared-natural-cpp-leaf-retained-for-selector-0x25-0x26",
             },
             "status": "semantic-workbench-only-not-exact",

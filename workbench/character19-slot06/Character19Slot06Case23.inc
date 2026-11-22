@@ -3,7 +3,7 @@ if (self->field0120 != 0) {
 }
 
 if ((self->field000a != 0) &&
-    !self->Slot06OpponentWithinKnockbackRange()) {
+    self->Slot06OpponentWithinKnockbackRange()) {
     self->field0008 = 0x46;
     self->ResetPose();
     return;

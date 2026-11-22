@@ -1649,8 +1649,8 @@ access throughout the dispatcher and all case fragments. This places the
 frequently used self pointer at [ebp-0x54], matching the native this-pointer
 operand, and the local EffectSpawn at [ebp-0x50]. The compiler still stores the
 incoming this pointer separately at [ebp-0x88], so the candidate stack
-allocation is 0x2b0 versus native 0x244. The COFF symbol is 57,616 bytes
-(56,834 code + 782 switch data), while the native owner is 58,363 code + 782
+allocation is 0x2b0 versus native 0x244. The COFF symbol is 58,171 bytes
+(57,389 code + 782 switch data), while the native owner is 58,363 code + 782
 switch data. The large selector 0x73 body is 2,302 bytes versus 2,400 native
 bytes; its normalized instruction-shape diagnostic is 624/643 instructions
 with 0.93923 similarity. The six horizontal-recovery cases remain inline and
@@ -1714,10 +1714,21 @@ natural-C++ case. It keeps the owner-0 context effect in Slot06's shared
 spawn record, preserves the 3/0 vertical shake and palette-7 ground effect,
 and restores native 16-bit frame counters. The former 301-byte helper and
 class declaration were removed. It matches the native 287-byte interval and
-all 78/78 normalized instructions. All 38 targeted Slot06 validators pass
-after normalizing the explicit self alias in source-text assertions. This
-remains a partial natural-C++ reconstruction, not Exact; the remaining
-code-size and stack-frame differences need further source-level reconstruction.
+all 78/78 normalized instructions.
+
+Selectors 0x25/0x26 (states 68/69) now inline the knockback landing flow.
+Case 0x25 preserves the range-guard interrupt after tick increment; case
+0x26 deliberately omits that guard. They match their native intervals
+exactly: 316/316 bytes and 89/89 normalized instructions for 0x25, 277/277
+bytes and 77/77 for 0x26. The shared 223-byte
+Slot06OpponentWithinKnockbackRange leaf now uses the native signed-byte
+convention (zero means in range, nonzero means out of range); callers branch
+directly on its nonzero result. Both landing-state branches keep their two
+separate virtual ResetPose calls in native order. All 38 targeted Slot06
+validators pass after normalizing the explicit self alias in source-text
+assertions. This remains a partial natural-C++ reconstruction, not Exact;
+the remaining code-size and stack-frame differences need further source-level
+reconstruction.
 
 ## Kanna (Character19) CPU Slot07 — natural C++ port started — 2026-11-18
 

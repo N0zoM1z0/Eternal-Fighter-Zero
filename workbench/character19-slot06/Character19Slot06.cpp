@@ -223,15 +223,15 @@ void Character19::Slot06()
         break;
 
     case 37:
-        self->Slot06UpdateKnockbackLanding(
-            timing.frameDuration, timing.animationFrameCount,
-            1);
+        {
+#include "Character19Slot06Case25.inc"
+        }
         break;
 
     case 38:
-        self->Slot06UpdateKnockbackLanding(
-            timing.frameDuration, timing.animationFrameCount,
-            0);
+        {
+#include "Character19Slot06Case26.inc"
+        }
         break;
 
     case 41:
