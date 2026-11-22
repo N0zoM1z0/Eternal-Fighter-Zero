@@ -1,9 +1,9 @@
 {
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "source": "workbench/character19-slot06/Character19Slot06Cases.cpp",
-  "source_sha256": "ab6b0c512e6fdf0445c0b984f65cdbb3de89777efa74fbf552344da68f18435f",
+  "source_sha256": "fb42ceb02e4366e9e29e39e7bc162d3c54ede1ec01c62c949d29f5459b394699",
   "object": "build/character19-slot06/Character19Slot06Cases.obj",
-  "object_sha256": "235e8f9e93e6c3898d27448f907aa83cd3e8554bf57f089c5ac01354ef87eccf",
+  "object_sha256": "30e73b090693d2f44ea7f9a1e55e2cf7c8cf1a1dee029e75365ce9f8f711bcac",
   "compiler_flags": [
     "/Od",
     "/G6",
@@ -25,10 +25,6 @@
     "?Slot06UpdateAirborneTrailDash@Character19@@QAEXGG@Z": {
       "candidate_size": 399,
       "relocations": 8
-    },
-    "?Slot06UpdateDampedImpactFinish@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
-      "candidate_size": 435,
-      "relocations": 7
     },
     "?Slot06UpdateDashFollowupCancel@Character19@@QAEXGG@Z": {
       "candidate_size": 393,
@@ -81,10 +77,6 @@
     "?Slot06UpdateLocalEffectRecovery@Character19@@QAEXGGPAUSecondaryEffectSpawn@@@Z": {
       "candidate_size": 206,
       "relocations": 2
-    },
-    "?Slot06UpdateLoopingAerialBounce@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
-      "candidate_size": 414,
-      "relocations": 8
     },
     "?Slot06UpdateStunEffectRecovery@Character19@@QAEXGGPAUEffectSpawn@@@Z": {
       "candidate_size": 334,

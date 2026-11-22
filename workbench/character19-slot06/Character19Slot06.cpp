@@ -883,13 +883,15 @@ void Character19::Slot06()
         break;
 
     case 103:
-        self->Slot06UpdateDampedImpactFinish(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case67.inc"
+        }
         break;
 
     case 104:
-        self->Slot06UpdateLoopingAerialBounce(
-            timing.frameDuration, timing.animationFrameCount, &spawn);
+        {
+#include "Character19Slot06Case68.inc"
+        }
         break;
 
     case 105:

@@ -157,16 +157,6 @@ for address, expected_value in (
 
 source = (ROOT / "workbench/character19-slot06/Character19Slot06Cases.cpp").read_text()
 helpers = {
-    "bounce": ("Slot06UpdateLoopingAerialBounce", (
-        "ResetFrame();", "remainingHitCount = 2;", "positionY < 0.0",
-        "velocityY = velocityY + gravity;", "(positionY >= 0.0)",
-        "(positionY + velocityY) < 0.0", "field000a == 3",
-        "velocityY = -2.5;", "gravity = 0.045;", "spawn->owner = 1;",
-        "spawn->type = 0x1b9;", "spawn->flag0018 = (unsigned char)facing;",
-        "spawn->group = 2;", "spawn->layer = 1;", "EmitLocalEffect(spawn);",
-        "attackCollisionResult = 0;", "field000a = field000a - 2;",
-        "positionY = 0.0;", "ResetPose();", "ResetFrame();", "field0008 = 0x103;",
-    )),
     "face": ("Slot06UpdateFinalFaceTransition", (
         "field000c = field000c + 1;", "field000a = field000a + 1;",
         "attackCollisionResult = 0;", "field0008 = 3;",
@@ -189,6 +179,24 @@ for key, (name, expressions) in helpers.items():
     helper = source[start:end]
     for expression in expressions:
         assert expression in helper, (key, expression)
+
+bounce = (ROOT / "workbench/character19-slot06/Character19Slot06Case68.inc").read_text()
+for expression in (
+    "field000a == 0", "field000c == 0", "ResetFrame();", "remainingHitCount = 2;",
+    "positionY < 0.0", "velocityY = velocityY + gravity",
+    "positionY + velocityY) >= 0.0", "ResetPose();", "ResetFrame();",
+    "field0008 = 0x103;", "++field000c;", "++field000a;",
+    "field000a == 3", "velocityY = -2.5;", "gravity = 0.045;",
+    "spawn.type = 0x1b9;", "spawn.x = positionX;", "spawn.y = positionY;",
+    "spawn.owner = 1;", "spawn.flag0018 = (unsigned char)facing;",
+    "spawn.group = 2;", "spawn.layer = 1;", "EmitLocalEffect(&spawn);",
+    "field000a = field000a - 2;",
+):
+    assert expression in bounce, expression
+assert bounce.index("++field000c;") < bounce.index("++field000a;")
+assert bounce.index("++field000a;") < bounce.index("if (field000a == 3)")
+assert bounce.index("if (field000a == 3)") < bounce.index("if (field000a >= timing.animationFrameCount)")
+assert bounce.index("spawn.type = 0x1b9;") < bounce.index("spawn.owner = 1;")
 
 # Native FUN_00405490 zeroes the shared 0x48-byte spawn record before dispatch.
 native_init = (ROOT / ".analysis/kanna-slot06/helpers/405490.c").read_text()
@@ -236,7 +244,7 @@ assert combo_helper.count("EmitLocalEffect(&spawn);") == 1
 
 dispatcher = (ROOT / "workbench/character19-slot06/Character19Slot06.cpp").read_text()
 for state, name in (
-    (256, "Slot06UpdateLoopingAerialBounce"),
+    (256, "Character19Slot06Case68.inc"),
     (257, "Character19Slot06Case69.inc"),
     (259, "Slot06UpdateFinalFaceTransition"),
     (263, "Slot06UpdateLocalEffectFinish"),

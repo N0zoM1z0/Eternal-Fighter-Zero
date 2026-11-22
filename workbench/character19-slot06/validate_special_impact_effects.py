@@ -164,15 +164,6 @@ helpers = {
         "spawn->layer = 1;", "spawn->palette = 0x13;", "contextOwner->EmitEffect(spawn);",
         "attackCollisionResult = 0;", "FaceOpponent();", "ResetPose();",
     )),
-    "damped": ("Slot06UpdateDampedImpactFinish", (
-        "velocityX = velocityX * 0.3;", "velocityY = velocityY * 0.3;",
-        "velocityY = velocityY + 0.01;", "velocityY > 0.3", "velocityY = 0.3;",
-        "field000a == 4", "meter = meter + 45;", "pendingCharacterSoundSlot = 1;",
-        "spawn->type = 0x194;", "spawn->x = (double)((int)positionX - (int)facing * 0x50);",
-        "spawn->y = (double)((int)positionY - 0x28);", "spawn->group = 2;",
-        "spawn->layer = 1;", "spawn->flag0018 = (unsigned char)facing;",
-        "EmitLocalEffect(spawn);", "field000a < 5)", "field0008 = 9;", "ResetPose();",
-    )),
 }
 for key, (name, expressions) in helpers.items():
     start = source.index(f"void Character19::{name}")
@@ -180,6 +171,19 @@ for key, (name, expressions) in helpers.items():
     helper = source[start:end]
     for expression in expressions:
         assert expression in helper, (key, expression)
+
+damped = (ROOT / "workbench/character19-slot06/Character19Slot06Case67.inc").read_text()
+for expression in (
+    "velocityX = velocityX * 0.3;", "velocityY = velocityY * 0.3;",
+    "velocityY = velocityY + 0.01;", "velocityY > 0.3", "velocityY = 0.3;",
+    "field000a == 4", "meter = meter + 45;", "pendingCharacterSoundSlot = 1;",
+    "spawn.type = 0x194;", "spawn.x = (double)((int)positionX - (int)facing * 0x50);",
+    "spawn.y = (double)((int)positionY - 0x28);", "spawn.group = 2;",
+    "spawn.layer = 1;", "spawn.flag0018 = (unsigned char)facing;",
+    "EmitLocalEffect(&spawn);", "field000a < 5)", "field0008 = 9;", "ResetPose();",
+    "++field000c;", "++field000a;",
+):
+    assert expression in damped, expression
 
 pair_helper = (ROOT / "workbench/character19-slot06/Character19Slot06Case65.inc").read_text()
 for expression in (
@@ -303,7 +307,7 @@ for state, name in (
     (249, "Slot06UpdateStunEffectRecovery"),
     (250, "Character19Slot06Case65.inc"),
     (251, "Character19Slot06Case66.inc"),
-    (253, "Slot06UpdateDampedImpactFinish"),
+    (253, "Character19Slot06Case67.inc"),
 ):
     assert_selector_case(dispatcher, state)
     if name.endswith(".inc"):
